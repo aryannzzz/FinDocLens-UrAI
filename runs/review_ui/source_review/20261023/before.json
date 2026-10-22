@@ -1,5 +1,7 @@
 {
   "images": 0,
   "broken": [],
-  "url": "chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html"
+  "url": "chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html",
+  "status": "inconclusive_wrong_browser_target",
+  "note": "Initial diagnostic attached a Chrome extension background page. This is not evidence about the review UI; the valid 103-image failure reproduction is browser_before.json. The browser test now selects only targets with type=page."
 }
