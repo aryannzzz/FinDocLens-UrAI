@@ -10,9 +10,10 @@ REGISTRY = {
     "native_grid": ("findoclens.backends.native_grid", "extract"),
     "docling": ("findoclens.backends.docling_backend", "extract"),
     "ocr_rapid": ("findoclens.backends.docling_backend", "extract_ocr"),
+    "docling_regions": ("findoclens.backends.docling_backend", "extract_regions"),
 }
 # Backends that need the optional model environment
-MODEL_BACKENDS = {"docling", "ocr_rapid"}
+MODEL_BACKENDS = {"docling", "ocr_rapid", "docling_regions"}
 
 
 def get(name):

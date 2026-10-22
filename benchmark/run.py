@@ -70,7 +70,8 @@ def run_one(entry, backend, entrypoint, warm, timeout, run_id, environment, resu
     metadata['command'] = command
     start = time.perf_counter()
     try:
-        process = subprocess.run(command, cwd=ROOT, text=True, capture_output=True, timeout=timeout)
+        process = subprocess.run(command, cwd=ROOT, text=True, capture_output=True, timeout=timeout,
+                                 env={**os.environ, 'BENCHMARK_RUN_DIR': str(folder)})
         metadata.update(returncode=process.returncode, worker_status='completed' if process.returncode == 0 else 'error')
         (folder/'stdout.txt').write_text(process.stdout)
         (folder/'stderr.txt').write_text(process.stderr)

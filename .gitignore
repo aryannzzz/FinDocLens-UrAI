@@ -14,3 +14,8 @@ runs/**/stderr.txt
 runs/**/stdout.txt
 runs/**/*.png
 runs/**/evidence*.png
+.venv-docling
+.cache
+viewer/pages/
+viewer/data.js
+results/

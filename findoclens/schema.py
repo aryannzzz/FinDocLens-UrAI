@@ -37,6 +37,7 @@ class Header:
     row_start: Optional[int] = None
     col_start: Optional[int] = None
     column_indices: List[int] = field(default_factory=list)  # data columns this header governs
+    span_note: Optional[str] = None                          # set when colspan was inferred rather than read from text geometry
 
 
 @dataclass

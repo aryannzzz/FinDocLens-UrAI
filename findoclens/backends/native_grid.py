@@ -3,12 +3,14 @@
 Unlike frozen v2 it does not assume two columns or a balance-sheet hierarchy.
 Method (all geometry from the PDF text layer, no OCR):
   1. numeric tokens = words matching exact amount/percent grammar (sign glyphs merged),
-  2. right edges of numeric tokens are clustered into columns,
+  2. alignment edges of numeric tokens are clustered into columns (right edges; left or centre edges are tried too and
+     used only if they explain strictly more numeric tokens, so right-aligned pages are unaffected),
   3. each text row is split into *segments* (label + numeric tokens); a non-numeric word after
      numbers starts a new segment, which is how side-by-side tables are separated,
   4. segments with >=2 numerics seed tables keyed by their column set; other rows are attached
      afterwards; headers are collected above the first data row (colspan from word extent).
-Limits (declared in `capabilities`): right-aligned numeric columns only; no rotated text; no ruling-line use.
+Limits (declared in `capabilities`): numeric columns must share one alignment edge (right, left or centre); no rotated text;
+no ruling-line use.
 """
 from __future__ import annotations
 import re
@@ -116,7 +118,9 @@ def split_segments(row):
         if w["numeric"]:
             cur["nums"].append(w)
         elif not LETTER.search(w["text"]) and FRAGMENT_RE.fullmatch(w["text"]) is None:
-            cur["notes"].append(w)          # separator glyphs such as → : kept, not dropped
+            # separator glyphs such as → : kept, not dropped. Before the first number the glyph belongs to the
+            # label (footnote markers like "*1" printed after the label are part of the exact label text).
+            (cur["notes"] if cur["nums"] else cur["label"]).append(w)
         else:
             if cur["nums"]:
                 segs.append(cur)
@@ -124,6 +128,22 @@ def split_segments(row):
             cur["label"].append(w)
     segs.append(cur)
     return [s for s in segs if s["label"] or s["nums"]]
+
+
+def anchor(w, mode):
+    b = w["bbox"]
+    return b[2] if mode == "right" else b[0] if mode == "left" else (b[0] + b[2]) / 2
+
+
+def column_bounds(edges, mode):
+    """Cell x-extents per column. right: (prev edge, edge]; left: [edge, next edge); centre: midpoints."""
+    step = (edges[1] - edges[0]) if len(edges) > 1 else 60
+    if mode == "right":
+        return [edges[0] - step] + edges
+    if mode == "left":
+        return edges + [edges[-1] + step]
+    mids = [(a + b) / 2 for a, b in zip(edges, edges[1:])]
+    return [edges[0] - step / 2] + mids + [edges[-1] + step / 2]
 
 
 def cluster_edges(values, tol):
@@ -136,11 +156,12 @@ def cluster_edges(values, tol):
     return [{"edge": statistics.median(g), "n": len(g)} for g in groups]
 
 
-def _header_between(rows, cols, y0, y1, colset):
+def _header_between(rows, cols, y0, y1, colset, mode="right"):
     """True if a row strictly between y0 and y1 has non-numeric text centred over the data columns."""
     edges = sorted(cols[j]["edge"] for j in colset)
     step = edges[1] - edges[0] if len(edges) > 1 else 60
-    lo, hi = edges[0] - step * .45, edges[-1] + 12
+    bounds = column_bounds(edges, mode)
+    lo, hi = (edges[0] - step * .45 if mode == "right" else bounds[0]), bounds[-1] + 12
     for r in rows:
         if y0 + 1 < r["cy"] < y1 - 1:
             hw = [w for w in r["words"] if not w["numeric"] and lo <= (w["bbox"][0] + w["bbox"][2]) / 2 <= hi
@@ -174,12 +195,19 @@ def extract(pdf, page_index=0, **_):
     rows = group_rows(words)
     nums = [w for w in words if w["numeric"]]
     tol = max(3.0, W * .006)
-    cols = [c for c in cluster_edges([w["bbox"][2] for w in nums], tol) if c["n"] >= 3]
+    mode, cols = "right", []
+    best = -1
+    for m in ("right", "left", "center"):
+        cl = [c for c in cluster_edges([anchor(w, m) for w in nums], tol) if c["n"] >= 3]
+        score = sum(c["n"] for c in cl)
+        if score > best:            # strict: right alignment wins ties
+            best, mode, cols = score, m, cl
+    pred.meta["column_alignment"] = mode
     for r in rows:
         r["segs"] = split_segments(r)
         for s in r["segs"]:
             for n in s["nums"]:
-                d = [abs(n["bbox"][2] - c["edge"]) for c in cols]
+                d = [abs(anchor(n, mode) - c["edge"]) for c in cols]
                 j = min(range(len(cols)), key=d.__getitem__) if cols else None
                 n["col"] = j if j is not None and d[j] <= tol else None
     # ---- pass 1: seed tables from segments with >=2 columned numerics
@@ -208,7 +236,7 @@ def extract(pdf, page_index=0, **_):
                     # sparse wide tables (equity statements): identical >=4-column set may bridge a long run of
                     # single-value rows, but never across a header-like text line (that starts a new table)
                     if not (cs == t["cols"] and len(cs) >= 4 and gap <= pitch_guess * 14
-                            and not _header_between(rows, cols, t["last_y"], r["cy"], cs)):
+                            and not _header_between(rows, cols, t["last_y"], r["cy"], cs, mode)):
                         continue
                 if not (x0 <= t["x1"] + 5 and x1 >= t["x0"] - 5):
                     continue
@@ -235,6 +263,7 @@ def extract(pdf, page_index=0, **_):
         ys = [r["cy"] for r, _ in t["rows"]]
         pitch = statistics.median([b - a for a, b in zip(ys, ys[1:]) if b - a > 2] or [pitch_guess])
         t["pitch"] = pitch
+        t["lead"] = column_bounds(sorted(cols[j]["edge"] for j in t["cols"]), mode)[0]   # left extent of the first numeric column
         for r in rows:
             if not (t["first_y"] - pitch * .9 <= r["cy"] <= t["last_y"] + pitch * .9):
                 continue
@@ -251,6 +280,8 @@ def extract(pdf, page_index=0, **_):
                     continue
                 if not cs and not s["label"]:
                     continue
+                if not cs and not s["nums"] and x0 >= t["lead"] - 1:
+                    continue        # text that starts inside the numeric columns is a column header, never a row label
                 t["rows"].append((r, s))
                 used_ids.add(id(s))
         t["rows"].sort(key=lambda rs: rs[0]["cy"])
@@ -272,7 +303,7 @@ def extract(pdf, page_index=0, **_):
         pred.meta["unassigned_numeric_tokens"] = stray
         pred.issues.append({"severity": "info", "code": "unassigned_numeric_tokens", "count": len(stray)})
     for ti, t in enumerate(tables):
-        pred.tables.append(build_table(t, ti, rows, cols, words, tables, W))
+        pred.tables.append(build_table(t, ti, rows, cols, words, tables, W, mode))
     pred.status = "ok" if pred.tables else "no_tables"
     if not pred.tables:
         pred.issues.append({"severity": "warning", "code": "no_tables_found",
@@ -281,13 +312,13 @@ def extract(pdf, page_index=0, **_):
     return pred
 
 
-def build_table(t, ti, rows, cols, words, all_tables, W):
+def build_table(t, ti, rows, cols, words, all_tables, W, mode="right"):
     colids = sorted(t["cols"], key=lambda j: cols[j]["edge"])
     edges = [cols[j]["edge"] for j in colids]
     # column cells span (previous right edge, own right edge]; header text is centred over the *cell*, not the
     # right-aligned number, so the first cell is extended left by one column step.
     step = (edges[1] - edges[0]) if len(edges) > 1 else 60
-    bounds = [edges[0] - step] + edges
+    bounds = column_bounds(edges, mode)
     pitch = t["pitch"]
     body = t["rows"]
     first_y = t["first_y"]
@@ -333,11 +364,24 @@ def build_table(t, ti, rows, cols, words, all_tables, W):
                 pieces[-1][0].append(w)
             else:
                 pieces.append(([w], covered))
-        for ws, covered in pieces:
+        extended = set()
+        gaps = [j for j in range(ncol) if not any(j in cv for _, cv in pieces)]
+        if pieces and gaps and li < len(hdr_lines) - 1:
+            # An upper header line over a finer lower line: columns it leaves uncovered belong to the nearest header
+            # text on that line (ties go left). Text geometry alone cannot show true spans, so this is flagged.
+            for j in gaps:
+                k = min(range(len(pieces)), key=lambda k: (min(abs(j - c) for c in pieces[k][1]), k))
+                pieces[k] = (pieces[k][0], sorted(pieces[k][1] + [j]))
+                extended.add(k)
+        for pk, (ws, covered) in enumerate(pieces):
             text = _join([w["text"] for w in ws])
             h = Header(header_id=f"t{ti}h{hid}", text=text, period=parse_period(text),
                        role=None, bbox=_union([w["bbox"] for w in ws]), colspan=len(covered), rowspan=1,
-                       row_start=li, col_start=covered[0], column_indices=covered)
+                       row_start=li, col_start=covered[0], column_indices=covered,
+                       span_note="extended_to_uncovered_columns" if pk in extended else None)
+            if pk in extended:
+                tbl.issues.append({"severity": "info", "code": "header_span_inferred", "header": h.header_id, "text": text,
+                                   "columns": covered, "message": "span extended over columns with no header text on this line"})
             hid += 1
             tbl.headers.append(h)
             for j in covered:
@@ -367,8 +411,9 @@ def build_table(t, ti, rows, cols, words, all_tables, W):
             col_inferred[k] = col_role[k] is not None
     for h in tbl.headers:
         h.role = next((col_role[j] for j in h.column_indices if col_role[j]), "amount" if h.text else None)
-        if h.period is None:
-            h.period = next((col_period[j] for j in h.column_indices if col_period[j]), None)
+        if h.period is None:        # a header spanning columns of different periods has no single period
+            ps = {col_period[j] for j in h.column_indices if col_period[j]}
+            h.period = next(iter(ps)) if len(ps) == 1 else None
     if not tbl.headers:
         tbl.issues.append({"severity": "warning", "code": "no_header_cells_found"})
     if tbl.unit is None:
@@ -486,7 +531,9 @@ def _hierarchy(tbl, label_x):
     xs = sorted(x for _, x in label_x)
     levels = cluster_edges(xs, 2.0)
     has_sections = any(r.type == "section" for r in tbl.rows)
-    if len(levels) > 6 or len(levels) < 2 or not has_sections:
+    if len(levels) < 2:
+        return              # a single label indent: the table is flat, there is no hierarchy to infer
+    if len(levels) > 6 or not has_sections:
         tbl.issues.append({"severity": "info", "code": "hierarchy_not_inferred",
                            "message": f"{len(levels)} label indents, section rows={has_sections}; "
                                       "indentation hierarchy needs heading rows as anchors; parent_path left empty"})
@@ -500,4 +547,9 @@ def _hierarchy(tbl, label_x):
         while stack and stack[-1][0] >= x - 2.0:
             stack.pop()
         row.parent_path = [lbl for _, lbl in stack]
+        # Convention of the frozen v2 / benchmark references: "XXX合計" is a sibling of its heading "XXX",
+        # not one of its children (so its parent_path excludes XXX).
+        stem = re.sub(r"(?:合計|総計|小計)$", "", row.label or "")
+        if row.type == "total" and stem and stem in row.parent_path:
+            row.parent_path = row.parent_path[:len(row.parent_path) - row.parent_path[::-1].index(stem) - 1]
         stack.append((x, row.label))

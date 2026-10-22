@@ -16,6 +16,7 @@ import os
 os.environ.setdefault("HF_HOME", str(Path(__file__).resolve().parents[2] / ".cache" / "hf"))   # keep weights repo-local/removable
 
 from ..amounts import looks_numeric, parse_token
+from ..ocr_flags import suspect_variant_chars
 from ..schema import Cell, DocumentPrediction, Header, Row, Table, sha256_file
 from .native_grid import CHANGE_RE, PCT_RE, UNIT_RE, UNIT_CTX, parse_period
 
@@ -34,8 +35,8 @@ def _versions():
     return out
 
 
-def get_converter(cell_matching=True, ocr=None, mode="accurate", threads=None):
-    key = (cell_matching, ocr, mode, threads)
+def get_converter(cell_matching=True, ocr=None, mode="accurate", threads=None, ocr_model_size=None):
+    key = (cell_matching, ocr, mode, threads, ocr_model_size)
     if key in _CONVERTERS:
         return _CONVERTERS[key], 0.0
     t0 = time.perf_counter()
@@ -49,6 +50,8 @@ def get_converter(cell_matching=True, ocr=None, mode="accurate", threads=None):
     opts.do_ocr = bool(ocr)
     if ocr:
         opts.ocr_options = _ocr_options(ocr)
+        if ocr_model_size:
+            opts.ocr_options.model_size = ocr_model_size
         opts.ocr_options.force_full_page_ocr = True
     if threads:
         from docling.datamodel.accelerator_options import AcceleratorOptions
@@ -86,7 +89,7 @@ def _box(bb, page_h):
     return [round(float(bb.l), 2), round(float(bb.t), 2), round(float(bb.r), 2), round(float(bb.b), 2)]
 
 
-def extract(pdf, page_index=0, out_dir=None, cell_matching=True, ocr=None, mode="accurate", threads=None, **_):
+def extract(pdf, page_index=0, out_dir=None, cell_matching=True, ocr=None, mode="accurate", threads=None, ocr_model_size=None, **_):
     pdf = str(pdf)
     t_all = time.perf_counter()
     import fitz
@@ -96,14 +99,14 @@ def extract(pdf, page_index=0, out_dir=None, cell_matching=True, ocr=None, mode=
         model_revision=None, page=page_index, page_bbox=[0.0, 0.0, round(page_rect.width, 2), round(page_rect.height, 2)],
         capabilities={"cell_bbox": True, "headers": "tableformer column_header flags", "multi_table": True,
                       "ocr": bool(ocr), "n_columns": "any", "cell_matching": cell_matching})
-    conv, load_ms = get_converter(cell_matching, ocr, mode, threads)
+    conv, load_ms = get_converter(cell_matching, ocr, mode, threads, ocr_model_size)
     t0 = time.perf_counter()
     res = conv.convert(pdf, page_range=(page_index + 1, page_index + 1))
     infer_ms = (time.perf_counter() - t0) * 1000
     doc = res.document
     pred.meta.update({"device": "cpu", "converter_load_ms": round(load_ms, 1), "convert_ms": round(infer_ms, 1),
                       "versions": _versions(), "table_structure_mode": mode, "do_cell_matching": cell_matching,
-                      "ocr_engine": ocr, "docling_status": str(getattr(res, "status", None))})
+                      "ocr_engine": ocr, "ocr_model_size": ocr_model_size, "docling_status": str(getattr(res, "status", None))})
     if out_dir:
         out_dir = Path(out_dir)
         (out_dir / "docling_document.json").write_text(json.dumps(doc.export_to_dict(), ensure_ascii=False), encoding="utf-8")
@@ -112,11 +115,17 @@ def extract(pdf, page_index=0, out_dir=None, cell_matching=True, ocr=None, mode=
             md.append(f"## docling table {i}\n\n" + t.export_to_markdown(doc))
         (out_dir / "docling_tables.md").write_text("\n\n".join(md), encoding="utf-8")
         pred.meta["raw_artifacts"] = ["docling_document.json", "docling_tables.md"]
+    gray, gscale = (None, 1.0)
+    if ocr:
+        try:
+            gray, gscale = _page_gray(pdf, page_index)
+        except Exception as exc:      # the ink check is optional evidence; its absence is recorded
+            pred.issues.append({"severity": "info", "code": "ink_check_unavailable", "message": repr(exc)[:200]})
     for ti, item in enumerate(doc.tables):
         prov = item.prov[0] if item.prov else None
         page_no = prov.page_no if prov else 1
         page_h = doc.pages[page_no].size.height if page_no in doc.pages else page_rect.height
-        pred.tables.append(_map_table(item, ti, page_h, ocr))
+        pred.tables.append(_map_table(item, ti, page_h, ocr, gray, gscale))
     pred.status = "ok" if pred.tables else "no_tables"
     empty = [t.table_id for t in pred.tables if not any(c.status != "absent_text_cell" and c.column_index >= 0 for r in t.rows for c in r.cells)]
     if empty:
@@ -132,7 +141,54 @@ def extract_ocr(pdf, page_index=0, out_dir=None, engine="rapidocr", **kw):
     return extract(pdf, page_index, out_dir=out_dir, ocr=engine, **kw)
 
 
-def _map_table(item, ti, page_h, ocr):
+def _page_gray(pdf, page_index, dpi=200):
+    import fitz
+    import numpy as np
+    pix = fitz.open(pdf)[page_index].get_pixmap(dpi=dpi, colorspace=fitz.csGRAY, alpha=False)
+    return np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.h, pix.w), dpi / 72.0
+
+
+def _flag_ink_in_empty_slots(tbl, gray, scale):
+    """OCR detectors do not box a lone thin `－`, so a printed placeholder looks like an empty cell. For an empty slot in a row
+    that has data, look at the page pixels where the slot should be (column x-extent from the other cells of that column,
+    row y-extent from the other cells of that row, 20 % trimmed top/bottom to avoid rules). Ink there turns the slot from
+    `absent_text_cell` into `uncertain` with a review issue. No glyph is guessed: raw stays null."""
+    import statistics
+    col_boxes = {}
+    for r in tbl.rows:
+        for c in r.cells:
+            if c.column_index >= 0 and c.bbox:
+                col_boxes.setdefault(c.column_index, []).append(c.bbox)
+    for r in tbl.rows:
+        row_boxes = [c.bbox for c in r.cells if c.column_index >= 0 and c.bbox]
+        if r.type == "section" or not row_boxes:
+            continue
+        top, bot = statistics.median(b[1] for b in row_boxes), statistics.median(b[3] for b in row_boxes)
+        flagged = []
+        for c in r.cells:
+            if c.column_index < 0 or c.status != "absent_text_cell" or c.column_index not in col_boxes:
+                continue
+            x0 = statistics.median(b[0] for b in col_boxes[c.column_index])
+            x1 = statistics.median(b[2] for b in col_boxes[c.column_index])
+            y0, y1 = top + .2 * (bot - top), bot - .2 * (bot - top)
+            crop = gray[int(y0 * scale):int(y1 * scale) + 1, int(x0 * scale):int(x1 * scale) + 1]
+            if crop.size and int((crop < 200).sum()) >= 8:      # thin anti-aliased strokes are light grey, not black
+                c.status = "uncertain"
+                c.bbox = [round(x0, 2), round(y0, 2), round(x1, 2), round(y1, 2)]
+                c.notes.append("ink_in_empty_ocr_slot:possible_dropped_placeholder; bbox derived from sibling cells")
+                flagged.append(c.column_index)
+        if flagged:
+            for i in list(tbl.issues):      # the slot is no longer "absent": it is reported by the ink issue instead
+                if i.get("code") == "partial_data_row" and i.get("row_index") == r.row_index:
+                    i["absent_columns"] = [k for k in i["absent_columns"] if k not in flagged]
+                    if not i["absent_columns"]:
+                        tbl.issues.remove(i)
+            tbl.issues.append({"severity": "warning", "code": "ocr_possible_dropped_placeholder", "row_index": r.row_index,
+                               "label": r.label, "columns": flagged,
+                               "message": "page pixels show ink where OCR returned no text (e.g. a thin － placeholder); verify against the image"})
+
+
+def _map_table(item, ti, page_h, ocr, gray=None, gscale=1.0):
     data = item.data
     nr, nc = data.num_rows, data.num_cols
     ek = "ocr" if ocr else "native_pdf"
@@ -181,6 +237,8 @@ def _map_table(item, ti, page_h, ocr):
         col_role[c] = "change_amount" if CHANGE_RE.search(txt) else ("composition_pct" if PCT_RE.search(txt) else None)
     for h in tbl.headers:
         h.role = next((col_role[data_cols[k]] for k in h.column_indices if col_role[data_cols[k]]), "amount")
+    tbl.issues.append({"severity": "info", "code": "hierarchy_not_inferred",
+                       "message": "Docling/TableFormer output carries no account hierarchy; parent_path left empty"})
     if not tbl.headers:
         tbl.issues.append({"severity": "warning", "code": "no_header_cells_found"})
     htexts = [h.text for h in tbl.headers if h.row_start == (min(h2.row_start for h2 in tbl.headers))]
@@ -219,4 +277,85 @@ def _map_table(item, ti, page_h, ocr):
         boxes = [x.bbox for x in out if x.bbox]
         tbl.rows.append(Row(r - first_body, label or None, label or None, [], None, typ, out))
         del boxes
+        absent = [c.column_index for c in out if c.status == "absent_text_cell"]
+        if has and typ != "section" and absent:       # same explicit signal native_grid gives for a row with an empty slot
+            tbl.issues.append({"severity": "warning", "code": "partial_data_row", "row_index": r - first_body, "label": label,
+                               "absent_columns": absent})
+        flagged = suspect_variant_chars(label) if ocr else {}
+        if flagged:
+            tbl.issues.append({"severity": "warning", "code": "ocr_suspect_variant_glyph", "row_index": r - first_body, "label": label,
+                               "suspected_japanese_forms": flagged,
+                               "message": "recognised glyph is a non-Japanese kanji form; raw text left unchanged for review"})
+    if ocr and gray is not None:
+        _flag_ink_in_empty_slots(tbl, gray, gscale)
     return tbl
+
+
+def _shift(box, dx, dy):
+    return None if box is None else [round(box[0] + dx, 2), round(box[1] + dy, 2), round(box[2] + dx, 2), round(box[3] + dy, 2)]
+
+
+def extract_regions(pdf, page_index=0, out_dir=None, cell_matching=True, pad=6.0, **kw):
+    """Hybrid ablation: native_grid proposes table regions from the text layer; Docling TableFormer runs once per region.
+
+    Tests whether Docling's table *flattening* comes from page-level region detection (one layout box over several tables)
+    or from the structure model. Needs a text layer for proposals; without one it falls back to the whole page and says so.
+    Region crops keep the vector text layer (`show_pdf_page(clip=...)`); all coordinates are shifted back to page space.
+    """
+    import tempfile
+    import fitz
+    from . import native_grid
+    pdf = str(pdf)
+    t_all = time.perf_counter()
+    src = fitz.open(pdf)
+    page = src[page_index]
+    props = native_grid.extract(pdf, page_index)
+    pred = DocumentPrediction(
+        document_id=Path(pdf).stem, source_sha256=sha256_file(pdf), backend="docling_regions", model_revision=None, page=page_index,
+        page_bbox=[0.0, 0.0, round(page.rect.width, 2), round(page.rect.height, 2)],
+        capabilities={"cell_bbox": True, "headers": "tableformer column_header flags", "multi_table": True, "ocr": False,
+                      "region_proposals": "native_grid text-layer tables (needs a text layer)", "cell_matching": cell_matching})
+    regions = [t.bbox for t in props.tables if t.bbox]
+    pred.meta.update({"device": "cpu", "versions": _versions(), "region_proposals": regions, "proposal_backend": "native_grid"})
+    if not regions:
+        pred.issues.append({"severity": "warning", "code": "no_region_proposals_whole_page_fallback"})
+        sub = extract(pdf, page_index, out_dir=out_dir, cell_matching=cell_matching, **kw)
+        sub.backend, sub.issues = "docling_regions", pred.issues + sub.issues
+        return sub
+    with tempfile.TemporaryDirectory(prefix="fdl-regions-") as tmp:
+        for k, bb in enumerate(regions):
+            r = fitz.Rect(bb) + (-pad, -pad, pad, pad)
+            r &= page.rect
+            dst = fitz.open()
+            p = dst.new_page(width=r.width, height=r.height)
+            p.show_pdf_page(p.rect, src, page_index, clip=r)
+            path = Path(tmp) / f"region_{k}.pdf"
+            dst.save(path)
+            sub_out = None
+            if out_dir:
+                sub_out = Path(out_dir) / f"region_{k}"
+                sub_out.mkdir(parents=True, exist_ok=True)
+            sub = extract(path, 0, out_dir=sub_out, cell_matching=cell_matching, **kw)
+            for j, t in enumerate(sub.tables):
+                t.table_id = f"r{k}t{j}"
+                t.reading_order = len(pred.tables)
+                t.bbox = _shift(t.bbox, r.x0, r.y0)
+                for h in t.headers:
+                    h.bbox = _shift(h.bbox, r.x0, r.y0)
+                for row in t.rows:
+                    for c in row.cells:
+                        c.bbox = _shift(c.bbox, r.x0, r.y0)
+                for g in t.grid or []:
+                    g["bbox"] = _shift(g["bbox"], r.x0, r.y0)
+                pred.tables.append(t)
+            if not sub.tables:
+                pred.issues.append({"severity": "warning", "code": "omitted_table", "region": k, "bbox": [round(v, 2) for v in r],
+                                    "message": "text-layer table region proposed by native_grid; Docling returned no table for it"})
+            pred.issues += [dict(i, region=k) for i in sub.issues]
+            pred.meta.setdefault("region_runs", []).append({"region": k, "bbox": [round(v, 2) for v in r], "convert_ms": sub.meta.get("convert_ms"),
+                                                              "tables_returned": len(sub.tables)})
+    pred.status = "ok" if pred.tables else "no_tables"
+    if any(i["code"] == "table_without_numeric_cells" for i in pred.issues):
+        pred.status = "partial"
+    pred.meta["elapsed_ms"] = round((time.perf_counter() - t_all) * 1000, 1)
+    return pred

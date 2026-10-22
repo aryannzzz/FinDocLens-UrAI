@@ -1,0 +1,60 @@
+{
+ "cell_matching=False": {
+  "page_size_docling": [
+   960.0,
+   540.0
+  ],
+  "page_size_pdf": [
+   960.0,
+   540.0
+  ],
+  "n_cells": 100,
+  "n_text": 12,
+  "n_table_prov": 1,
+  "table_bbox": "l=46.93605422973633 t=474.7561264038086 r=912.9751586914062 b=17.12530517578125 coord_origin=<CoordOrigin.BOTTOMLEFT: 'BOTTOMLEFT'>",
+  "cells_with_a_pdf_word_inside[as_reported_topleft]": "95/100",
+  "cells_with_a_pdf_word_inside[raw]": "95/100",
+  "sample_cell_boxes": [
+   "l=59.632913030683994 t=75.82255650684237 r=132.17014798521996 b=96.73289074003696 coord_origin=<CoordOrigin.TOPLEFT: 'TOPLEFT'>",
+   "l=205.44207268953323 t=74.84513803571463 r=268.43487697839737 b=97.25740891695023 coord_origin=<CoordOrigin.TOPLEFT: 'TOPLEFT'>",
+   "l=293.78243309259415 t=73.96297661215067 r=365.3838695883751 b=96.46644979715347 coord_origin=<CoordOrigin.TOPLEFT: 'TOPLEFT'>"
+  ],
+  "sample_texts": [
+   "（百万円）",
+   "2025/3",
+   "流動資産",
+   "流動負債",
+   "固定負債",
+   "有形固定資産"
+  ]
+ },
+ "cell_matching=True": {
+  "page_size_docling": [
+   960.0,
+   540.0
+  ],
+  "page_size_pdf": [
+   960.0,
+   540.0
+  ],
+  "n_cells": 95,
+  "n_text": 95,
+  "n_table_prov": 1,
+  "table_bbox": "l=46.93605422973633 t=474.7561264038086 r=912.9751586914062 b=17.12530517578125 coord_origin=<CoordOrigin.BOTTOMLEFT: 'BOTTOMLEFT'>",
+  "cells_with_a_pdf_word_inside[as_reported_topleft]": "95/95",
+  "cells_with_a_pdf_word_inside[raw]": "95/95",
+  "sample_cell_boxes": [
+   "l=129.0755 t=423.46984 r=224.83550000000005 b=440.09233056603773 coord_origin=<CoordOrigin.TOPLEFT: 'TOPLEFT'>",
+   "l=316.30226000000005 t=422.75164 r=371.57014400000014 b=439.3741305660377 coord_origin=<CoordOrigin.TOPLEFT: 'TOPLEFT'>",
+   "l=391.36214000000007 t=422.75164 r=499.791188 b=440.09233056603773 coord_origin=<CoordOrigin.TOPLEFT: 'TOPLEFT'>"
+  ],
+  "sample_texts": [
+   "現金及び預金",
+   "55,421",
+   "→ 12,410",
+   "△43,010",
+   "主に商品在庫の増加に伴う減少",
+   "受取手形及び売掛金"
+  ]
+ }
+}

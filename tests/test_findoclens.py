@@ -90,9 +90,13 @@ class Perturbations(unittest.TestCase):
     """Same-source transformations from the frozen baseline benchmark (not independent-template evidence)."""
     @classmethod
     def setUpClass(cls):
+        # The repo-level `benchmark/` package (evaluation harness) shadows baseline_v2/benchmark.py, so load the
+        # frozen generators by file path under a distinct module name.
+        import importlib.util
         sys.path.insert(0, str(ROOT / "baseline_v2"))
-        import benchmark
-        cls.b = benchmark
+        spec = importlib.util.spec_from_file_location("frozen_v2_benchmark", ROOT / "baseline_v2" / "benchmark.py")
+        cls.b = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.b)
 
     def test_missing_cell_is_reported_not_dropped(self):
         p = native_grid.extract(self.b.remove_one_cell(), 0).to_dict()

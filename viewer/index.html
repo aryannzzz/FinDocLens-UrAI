@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinDocLens Viewer</title>
+<style>
+:root{--bg:#f6f7f9;--panel:#fff;--ink:#1c2230;--mute:#667085;--line:#d9dde5;--accent:#2457d6;
+--obs:#2457d6;--neg:#8a3ffc;--nr:#6b7280;--absent:#e07b00;--bad:#d1242f;--ref:#1a7f37;--hl:#ffcc00}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#12151b;--panel:#1b2029;--ink:#e6e9ef;--mute:#9aa4b2;--line:#2c3340;--accent:#7aa2ff;
+--obs:#7aa2ff;--neg:#b99cff;--nr:#9aa4b2;--absent:#ffa94d;--bad:#ff7b72;--ref:#56d364;--hl:#ffd33d}}
+:root[data-theme=dark]{--bg:#12151b;--panel:#1b2029;--ink:#e6e9ef;--mute:#9aa4b2;--line:#2c3340;--accent:#7aa2ff;--obs:#7aa2ff;--neg:#b99cff;--nr:#9aa4b2;--absent:#ffa94d;--bad:#ff7b72;--ref:#56d364;--hl:#ffd33d}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;padding:10px 16px;background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+header h1{font-size:15px;margin:0 8px 0 0}
+label{color:var(--mute);font-size:12px;display:flex;align-items:center;gap:6px}
+select,button,input[type=range]{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:4px 8px}
+button{cursor:pointer}button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.pill{display:inline-block;padding:1px 8px;border-radius:99px;font-size:12px;border:1px solid var(--line)}
+.pill.success{color:#1a7f37;border-color:#1a7f37}.pill.partial{color:var(--absent);border-color:var(--absent)}.pill.abstained,.pill.error{color:var(--bad);border-color:var(--bad)}
+main{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:12px;padding:12px 16px}
+@media (max-width:980px){main{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.card>h2{font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--mute);margin:0;padding:8px 12px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:8px;align-items:center}
+#pagewrap{overflow:auto;max-height:calc(100vh - 150px)}
+#stage{position:relative;transform-origin:0 0}
+#stage img{display:block;width:100%;height:auto;user-select:none}
+#stage svg{position:absolute;inset:0;width:100%;height:100%}
+.box{fill:transparent;stroke-width:1.4;vector-effect:non-scaling-stroke;cursor:pointer}
+.box:hover{fill:rgba(255,204,0,.28)}
+.box.sel{stroke:var(--hl)!important;stroke-width:3.2;fill:rgba(255,204,0,.30)}
+.tbox{stroke:var(--accent);stroke-dasharray:6 3;stroke-width:1.6}
+.rbox{stroke:var(--mute);stroke-width:.8;opacity:.8}
+.refbox{stroke:var(--ref);stroke-dasharray:3 3;stroke-width:1;fill:transparent;pointer-events:none}
+.tabs{display:flex;gap:4px;padding:6px 8px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.tabs button{border-radius:6px;padding:3px 10px}
+.pane{padding:10px 12px;max-height:calc(100vh - 230px);overflow:auto}
+table.t{border-collapse:collapse;font-size:12.5px;margin:6px 0 14px;min-width:100%}
+table.t th,table.t td{border:1px solid var(--line);padding:2px 6px;text-align:right;white-space:nowrap}
+table.t td.l,table.t th.l{text-align:left}table.t th{background:var(--bg);font-weight:600}
+table.t td.c{cursor:pointer}table.t td.c:hover{outline:2px solid var(--hl)}
+td.c.sel{outline:3px solid var(--hl);background:rgba(255,204,0,.2)}
+td.s-negative_zero{color:var(--neg)}td.s-not_reported{color:var(--nr)}td.s-absent_text_cell{background:rgba(224,123,0,.15)}
+td.s-unreadable,td.s-uncertain,td.s-unparseable{background:rgba(209,36,47,.15)}
+pre{margin:0;white-space:pre-wrap;word-break:break-word;font:12px/1.4 ui-monospace,Menlo,Consolas,monospace}
+.w{display:flex;gap:8px;align-items:flex-start;padding:6px 0;border-bottom:1px solid var(--line);cursor:default}
+.w[data-box]{cursor:pointer}.w .sev{flex:none}
+.sev{font-size:11px;padding:0 7px;border-radius:99px;border:1px solid var(--line);color:var(--mute)}
+.sev.error{color:var(--bad);border-color:var(--bad)}.sev.warning{color:var(--absent);border-color:var(--absent)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;font-size:12.5px}.kv b{color:var(--mute);font-weight:500}
+.legend{display:flex;gap:12px;flex-wrap:wrap;padding:6px 12px;font-size:12px;color:var(--mute);border-top:1px solid var(--line)}
+.legend i{display:inline-block;width:12px;height:12px;border:2px solid;border-radius:2px;margin-right:4px;vertical-align:-2px}
+.note{color:var(--mute);font-size:12px;padding:6px 12px}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace}
+</style>
+</head>
+<body>
+<header>
+  <h1>FinDocLens viewer</h1>
+  <label>Document <select id="doc"></select></label>
+  <label>Backend <select id="backend"></select></label>
+  <span id="status"></span>
+  <label><input type="checkbox" id="lTables" checked> tables</label>
+  <label><input type="checkbox" id="lRows"> rows</label>
+  <label><input type="checkbox" id="lCells" checked> cells</label>
+  <label><input type="checkbox" id="lRef"> AI-draft reference</label>
+  <label>Zoom <input type="range" id="zoom" min="60" max="300" value="100" step="10"></label>
+  <button id="theme" title="Toggle light/dark">◐</button>
+</header>
+<main>
+  <section class="card">
+    <h2><span id="docTitle"></span><span id="pageInfo" class="mono"></span></h2>
+    <div id="pagewrap"><div id="stage"><img id="img" alt="source page"><svg id="svg"></svg></div></div>
+    <div class="legend">
+      <span><i style="border-color:var(--obs)"></i>observed</span><span><i style="border-color:var(--neg)"></i>△0 (negative zero)</span>
+      <span><i style="border-color:var(--nr)"></i>－ not reported</span><span><i style="border-color:var(--absent)"></i>absent slot</span>
+      <span><i style="border-color:var(--bad)"></i>uncertain / unreadable</span><span><i style="border-color:var(--ref)"></i>reference (unverified)</span>
+    </div>
+  </section>
+  <section class="card">
+    <div class="tabs" id="tabs"></div>
+    <div class="pane" id="pane"></div>
+  </section>
+</main>
+<script src="data.js"></script>
+<script>
+const $=s=>document.querySelector(s), el=(t,a={},...k)=>{const e=document.createElement(t);for(const[x,y]of Object.entries(a))x==='class'?e.className=y:x.startsWith('on')?e.addEventListener(x.slice(2),y):e.setAttribute(x,y);k.flat().forEach(c=>e.append(c));return e};
+const NS='http://www.w3.org/2000/svg';
+const COL={observed:'var(--obs)',negative_zero:'var(--neg)',not_reported:'var(--nr)',absent_text_cell:'var(--absent)',uncertain:'var(--bad)',unreadable:'var(--bad)',unparseable:'var(--bad)'};
+const state={doc:null,be:null,tab:'table',sel:null};
+const D=window.DATA;
+
+function fmt(v){return v===null||v===undefined?'':String(v)}
+function init(){
+  const ds=$('#doc');D.docs.forEach((d,i)=>ds.append(el('option',{value:i},d.title)));
+  const saved=(()=>{try{return localStorage.getItem('fdl-theme')}catch(e){return null}})();if(saved)document.documentElement.dataset.theme=saved;
+  ds.onchange=()=>loadDoc(+ds.value);
+  $('#backend').onchange=()=>{state.be=$('#backend').value;state.sel=null;render()};
+  ['lTables','lRows','lCells','lRef'].forEach(i=>$('#'+i).onchange=drawOverlay);
+  $('#zoom').oninput=()=>{$('#stage').style.width=$('#zoom').value+'%'};
+  $('#theme').onclick=()=>{const r=document.documentElement,n=(r.dataset.theme==='dark'||(!r.dataset.theme&&matchMedia('(prefers-color-scheme:dark)').matches))?'light':'dark';r.dataset.theme=n;try{localStorage.setItem('fdl-theme',n)}catch(e){}};
+  const tabs=[['table','Tables'],['md','Markdown'],['warn','Review warnings'],['metrics','Scores vs AI-draft'],['json','JSON']];
+  tabs.forEach(([k,t])=>$('#tabs').append(el('button',{'data-k':k,onclick:()=>{state.tab=k;renderPane()}},t)));
+  loadDoc(0);
+}
+function loadDoc(i){
+  state.doc=D.docs[i];$('#img').src=state.doc.img;$('#stage').style.width=$('#zoom').value+'%';
+  const bs=$('#backend');bs.innerHTML='';Object.keys(state.doc.backends).forEach(b=>bs.append(el('option',{value:b},b)));
+  state.be=bs.value;state.sel=null;render();
+}
+const B=()=>state.doc.backends[state.be];
+function render(){
+  const d=state.doc,b=B();
+  $('#docTitle').textContent=d.title;$('#pageInfo').textContent=`${d.pageW.toFixed(0)}×${d.pageH.toFixed(0)} pt · ref: ${d.reference?d.reference.status:'none'}`;
+  $('#status').innerHTML='';$('#status').append(el('span',{class:'pill '+b.status},b.status),' ',el('span',{class:'mono',style:'color:var(--mute);font-size:12px'},`${b.tables.length} table(s) · cold ${b.cold_ms==null?'–':(b.cold_ms/1000).toFixed(2)+' s'} · warm ${b.warm_ms==null?'–':(b.warm_ms/1000).toFixed(2)+' s'} · RSS ${b.rss_mb==null?'–':b.rss_mb.toFixed(0)+' MB'} · GPU n/a`));
+  drawOverlay();renderPane();
+}
+function rect(b,cls,onclick,title,color,key){
+  const d=state.doc,r=document.createElementNS(NS,'rect');
+  r.setAttribute('x',b[0]/d.pageW*1000);r.setAttribute('y',b[1]/d.pageH*(1000*d.pageH/d.pageW));
+  r.setAttribute('width',(b[2]-b[0])/d.pageW*1000);r.setAttribute('height',(b[3]-b[1])/d.pageW*1000);
+  r.setAttribute('class',cls);if(color)r.style.stroke=color;if(key)r.dataset.key=key;
+  if(onclick)r.addEventListener('click',e=>{e.stopPropagation();onclick()});
+  if(title){const t=document.createElementNS(NS,'title');t.textContent=title;r.append(t)}
+  return r;
+}
+function drawOverlay(){
+  const d=state.doc,svg=$('#svg');svg.innerHTML='';svg.setAttribute('viewBox',`0 0 1000 ${1000*d.pageH/d.pageW}`);svg.setAttribute('preserveAspectRatio','none');
+  if($('#lRef').checked&&d.reference)d.reference.tables.forEach(t=>t.rows.forEach(r=>r.cells.forEach(c=>c.bbox&&svg.append(rect(c.bbox,'box refbox',null,null)))));
+  B().tables.forEach((t,ti)=>{
+    if($('#lTables').checked&&t.bbox)svg.append(rect(t.bbox,'box tbox',()=>select({kind:'table',ti}),`${t.table_id} · ${t.rows.length} rows`));
+    t.rows.forEach((r,ri)=>{
+      if($('#lRows').checked&&r.bbox)svg.append(rect(r.bbox,'box rbox',()=>select({kind:'row',ti,ri}),r.label));
+      if($('#lCells').checked)r.cells.forEach((c,ci)=>c.bbox&&svg.append(rect(c.bbox,'box',()=>select({kind:'cell',ti,ri,ci}),`${r.label||''} · col ${c.column_index}: ${fmt(c.raw)} [${c.status}]`,COL[c.status]||'var(--obs)',`${ti}.${ri}.${ci}`)));
+    });
+  });
+  markSel();
+}
+function select(s){state.sel=s;markSel();if(s.kind==='cell'&&state.tab==='table'){const td=document.querySelector(`td[data-key="${s.ti}.${s.ri}.${s.ci}"]`);td&&td.scrollIntoView({block:'center'})}renderPane(true)}
+function markSel(){
+  document.querySelectorAll('.box.sel,td.sel').forEach(e=>e.classList.remove('sel'));
+  const s=state.sel;if(!s)return;
+  if(s.kind==='cell'){const k=`${s.ti}.${s.ri}.${s.ci}`;document.querySelectorAll(`[data-key="${k}"]`).forEach(e=>e.classList.add('sel'))}
+}
+function boxFocus(b){if(!b)return;const d=state.doc,w=$('#pagewrap'),k=$('#stage').clientWidth/d.pageW;w.scrollTo({left:Math.max(0,b[0]*k-80),top:Math.max(0,b[1]*k-80),behavior:'smooth'})}
+function renderPane(keepScroll){
+  document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.k===state.tab));
+  const p=$('#pane'),y=p.scrollTop;p.innerHTML='';
+  ({table:paneTables,md:paneMd,warn:paneWarn,metrics:paneMetrics,json:paneJson})[state.tab](p);
+  markSel();if(keepScroll)p.scrollTop=y;
+  const s=state.sel;if(s&&s.kind==='cell'){boxFocus(B().tables[s.ti].rows[s.ri].cells[s.ci].bbox)}
+}
+function selDetail(){
+  const s=state.sel;if(!s||s.kind!=='cell')return el('div',{class:'note'},'Click a box on the page or a cell to inspect it.');
+  const t=B().tables[s.ti],r=t.rows[s.ri],c=r.cells[s.ci];
+  const kv=el('div',{class:'kv'});
+  [['row',`${r.label} (parent: ${(r.parent_path||[]).join(' › ')||'–'})`],['column',`${c.column_index} · ${c.role} · ${c.period||'no period'}`],['raw (exact glyphs)',JSON.stringify(c.raw)],['typed value',JSON.stringify(c.value)],['status',c.status],['evidence',`${c.evidence_kind} via ${c.backend}`],['bbox',JSON.stringify(c.bbox)],['notes',(c.notes||[]).join('; ')||'–']]
+   .forEach(([k,v])=>kv.append(el('b',{},k),el('span',{class:'mono'},v)));
+  return el('div',{class:'card',style:'padding:8px 12px;margin-bottom:10px'},kv);
+}
+function paneTables(p){
+  p.append(selDetail());
+  const b=B();if(!b.tables.length)p.append(el('div',{class:'note'},'No table returned. This is an explicit abstention/failure, not an empty success.'));
+  b.tables.forEach((t,ti)=>{
+    const leaves=t.headers.filter(h=>h.kind==='leaf').sort((a,c)=>a.column_index-c.column_index),groups=t.headers.filter(h=>h.kind==='group');
+    p.append(el('div',{class:'note'},`${t.table_id} · ${t.rows.length} rows · unit ${t.unit||'not detected'}`+(t.issues.length?` · ${t.issues.length} table issue(s)`:'')));
+    const nc=Math.max(0,...t.rows.flatMap(r=>r.cells.map(c=>c.column_index+1)),leaves.length);
+    const tb=el('table',{class:'t'}),thead=el('thead');
+    if(groups.length){const tr=el('tr',{},el('th',{class:'l'},'group'));let c=0;groups.sort((a,x)=>a.column_index-x.column_index).forEach(g=>{while(c<g.column_index){tr.append(el('th'));c++}tr.append(el('th',{colspan:g.colspan},g.text||''));c+=g.colspan});thead.append(tr)}
+    const tr=el('tr',{},el('th',{class:'l'},'label'));for(let k=0;k<nc;k++){const h=leaves.find(x=>x.column_index===k);tr.append(el('th',{title:h?`${h.role} ${h.period||''}`:'no header cell found'},h&&h.text!=null?h.text:`c${k}`))}
+    thead.append(tr);tb.append(thead);const tbody=el('tbody');
+    t.rows.forEach((r,ri)=>{const row=el('tr',{},el('td',{class:'l',style:'padding-left:'+(6+10*(r.parent_path||[]).length)+'px'},r.label==null?'∅':r.label));
+      for(let k=0;k<nc;k++){const ci=r.cells.findIndex(c=>c.column_index===k),c=r.cells[ci];
+        row.append(c?el('td',{class:`c s-${c.status}`,'data-key':`${ti}.${ri}.${ci}`,title:`${c.status} · ${c.role}`,onclick:()=>select({kind:'cell',ti,ri,ci})},c.raw==null?(c.status==='absent_text_cell'?'∅ absent':''):c.raw):el('td',{class:'s-absent_text_cell',title:'no cell slot returned'},'—'))}
+      tbody.append(row)});
+    tb.append(tbody);p.append(el('div',{style:'overflow:auto'},tb));
+  });
+}
+function toMd(b){
+  if(!b.tables.length)return '_no tables returned_';
+  return b.tables.map(t=>{
+    const leaves=t.headers.filter(h=>h.kind==='leaf').sort((a,c)=>a.column_index-c.column_index);
+    const nc=Math.max(leaves.length,...t.rows.map(r=>Math.max(0,...r.cells.map(c=>c.column_index+1))));
+    const head=['label',...Array.from({length:nc},(_,k)=>{const h=leaves.find(x=>x.column_index===k);return h&&h.text?h.text:`c${k}`})];
+    const lines=[`### ${t.table_id}${t.unit?` (${t.unit})`:''}`,'','| '+head.join(' | ')+' |','|'+head.map(()=>'---').join('|')+'|'];
+    t.rows.forEach(r=>{const cs=Array.from({length:nc},(_,k)=>{const c=r.cells.find(c=>c.column_index===k);return c?(c.raw==null?`∅(${c.status})`:c.raw):'—'});
+      lines.push('| '+['　'.repeat((r.parent_path||[]).length)+(r.label==null?'∅':r.label),...cs].join(' | ')+' |')});
+    return lines.join('\n')}).join('\n\n');
+}
+function paneMd(p){p.append(el('pre',{},toMd(B())))}
+function paneJson(p){
+  const b=B();p.append(el('div',{class:'note'},'Canonical benchmark-1.0 prediction (raw backend output stays in runs/…/raw/ and original_result.json).'));
+  const s=state.sel;const obj=s&&s.kind==='cell'?b.tables[s.ti].rows[s.ri].cells[s.ci]:s&&s.kind==='row'?b.tables[s.ti].rows[s.ri]:s&&s.kind==='table'?(({rows,...r})=>r)(b.tables[s.ti]):{...b,tables:b.tables.map(t=>({...t,rows:`[${t.rows.length} rows]`}))};
+  p.append(el('pre',{},JSON.stringify(obj,null,1)));
+}
+function paneWarn(p){
+  const b=B(),items=[];
+  const add=(sev,scope,msg,box)=>items.push({sev,scope,msg,box});
+  if(b.status!=='success')add(b.status==='abstained'?'error':'warning','run',`status = ${b.status}${b.backend_status?` (backend: ${b.backend_status})`:''}`);
+  (b.issues||[]).forEach(i=>add(i.severity||'info','document',`${i.code||JSON.stringify(i)}${i.message?': '+i.message:''}`));
+  b.tables.forEach((t,ti)=>{(t.issues||[]).forEach(i=>add(i.severity||'info',t.table_id,`${i.code||JSON.stringify(i)}${i.label?' ['+i.label+']':''}${i.message?': '+i.message:''}`,i.bbox));
+    t.rows.forEach((r,ri)=>r.cells.forEach((c,ci)=>{
+      const f=[];if(['absent_text_cell','uncertain','unreadable','unparseable'].includes(c.status))f.push(c.status);(c.notes||[]).forEach(n=>f.push(n));
+      if(f.length&&c.role!=='other')add(c.status==='observed'?'info':'warning',`${t.table_id} · ${r.label||'∅'} · col ${c.column_index}`,`${fmt(c.raw)||'∅'}: ${f.join('; ')}`,c.bbox)}))});
+  if(!items.length)p.append(el('div',{class:'note'},'No warnings. Absence of warnings is not evidence of correctness: compare against the page.'));
+  const order={error:0,warning:1,info:2};items.sort((a,c)=>(order[a.sev]??3)-(order[c.sev]??3));
+  items.forEach(w=>{const r=el('div',{class:'w'},el('span',{class:'sev '+w.sev},w.sev),el('div',{},el('b',{},w.scope),el('div',{class:'mono'},w.msg)));
+    if(w.box){r.dataset.box=1;r.onclick=()=>boxFocus(w.box)}p.append(r)});
+}
+function paneMetrics(p){
+  const b=B(),m=b.metrics;
+  if(!m){p.append(el('div',{class:'note'},'No reference for this document.'));return}
+  p.append(el('div',{class:'note'},`Scored against an ${state.doc.reference.status} reference with ${state.doc.reference.human_checked_cells} human-checked cells. These are agreement scores with an unverified draft, not accuracy.`));
+  const rows=[['numeric cells exact (raw)',m.numeric_raw_exact],['numeric typed value/status',m.numeric_semantic_exact],['cell coverage',m.cell_coverage],['row recall (label match)',{correct:m.rows.matched,total:m.rows.gold}],['row order',m.row_order_accuracy],['raw labels exact',m.raw_label_exact],['tables matched',{correct:m.tables.matched,total:m.tables.gold}],['leaf header period+role',m.header_role_accuracy],['hierarchy edges',{correct:m.hierarchy_edges.matched,total:m.hierarchy_edges.gold}],['silent omissions',m.silent_omission_rate]];
+  const tb=el('table',{class:'t'},el('tr',{},el('th',{class:'l'},'metric'),el('th',{},'correct'),el('th',{},'of'),el('th',{},'rate')));
+  rows.forEach(([k,v])=>tb.append(el('tr',{},el('td',{class:'l'},k),el('td',{},v.correct),el('td',{},v.total),el('td',{},v.total?(100*v.correct/v.total).toFixed(1)+'%':'n/a'))));
+  p.append(tb,el('div',{class:'note'},`extra tables ${m.extra_tables} · spurious rows ${m.spurious_rows} · false assurance: ${m.false_assurance?'YES (status success but errors found)':'no'}`));
+  p.append(el('h3',{style:'font-size:13px'},`Cell errors (${b.errors.length})`));
+  b.errors.slice(0,200).forEach(e=>{const w=el('div',{class:'w','data-box':1},el('span',{class:'sev error'},e.kind),el('div',{class:'mono'},`${e.label} · col ${e.column_index}: expected ${JSON.stringify(e.expected_raw)} → got ${JSON.stringify(e.predicted_raw)}${e.predicted_status?' ['+e.predicted_status+']':''}`));
+    w.onclick=()=>boxFocus(e.bbox);p.append(w)});
+}
+init();
+</script>
+</body>
+</html>
