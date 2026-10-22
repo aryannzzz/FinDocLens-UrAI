@@ -75,16 +75,18 @@ def _leaf_and_groups(table, ncols, col_meta):
                        period=month_end(g.get("period")), role=None, bbox=g.get("bbox"), colspan=len(g["column_indices"]),
                        rowspan=g.get("rowspan", 1), native_header_id=g["header_id"],
                        _cols=set(g["column_indices"]), _row=g.get("row_start") or 0))
-    def parent_of(cols, row):
-        enclosing = [x for x in gh if cols <= x["_cols"] and cols != x["_cols"] and x["_row"] < row]
-        return min(enclosing, key=lambda x: len(x["_cols"]))["header_id"] if enclosing else None
+    def parent_of(cols, row, own=None):
+        # smallest enclosing group above `row`; groups over the same columns (outer group + year group) nest by header row,
+        # so among equal spans the nearest row above wins (never the group itself)
+        enclosing = [x for x in gh if cols <= x["_cols"] and x["_row"] < row and x is not own]
+        return min(enclosing, key=lambda x: (len(x["_cols"]), -x["_row"]))["header_id"] if enclosing else None
     for k, leaf in leaf_by_col.items():
         src = next((h for h in cand if h["header_id"] == leaf.get("native_header_id")), None)
         pid = parent_of({k}, (src.get("row_start") or 0) if src else 10**6)
         if pid:
             leaf["parent_id"] = pid
     for g in gh:
-        pid = parent_of(g["_cols"], g["_row"])
+        pid = parent_of(g["_cols"], g["_row"], own=g)
         if pid:
             g["parent_id"] = pid
     for g in gh:
@@ -153,9 +155,19 @@ def convert(native, context, *, backend, page_bbox=None, provenance=None):
         status = "partial"      # the backend itself declares part of the contract (account hierarchy) was not produced
     if not any(t["rows"] for t in tables):
         status = "abstained"
+    # Explicit review-required marker. The contract's run statuses have no "needs review" value, so `partial` carries it and
+    # these two extra fields say why; `success` means no warning/error issue and no declared limitation was raised.
+    reasons = sorted({i["code"] for i in doc_issues + t_issues if i.get("severity") in ("warning", "error")})
+    if native.get("status") == "needs_visual_review":
+        reasons.append("needs_visual_review")
+    if any(i.get("code") == "hierarchy_not_inferred" for i in t_issues):
+        reasons.append("hierarchy_not_inferred(declared limitation)")
+    if status != "success" and not reasons:
+        reasons.append(f"backend_status:{native.get('status')}")
     return dict(schema_version=SCHEMA_VERSION, document_id=context["document_id"], source_sha256=context["source_sha256"],
                 input_sha256=context["input_sha256"], backend=backend, model_revision=native.get("model_revision"),
                 page_bbox=page_bbox or native.get("page_bbox"), status=status, backend_status=native.get("status"),
+                review_required=status != "success", review_reasons=reasons if status != "success" else [],
                 issues=doc_issues, tables=tables, capabilities=native.get("capabilities"), provenance=provenance or {})
 
 

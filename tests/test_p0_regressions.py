@@ -61,6 +61,28 @@ class YearLikeAmounts(unittest.TestCase):
         self.assertEqual([(c["column_index"], c["value"], c["status"]) for c in row["cells"]],
                          [(0, 2025, "observed"), (1, 2026, "observed")])
 
+    def test_year_like_amounts_in_middle_and_last_rows_and_a_single_column(self):
+        rows = default_rows(2)
+        rows[2] = (rows[2][0], ["1999", "2000"])        # middle row
+        rows[3] = (rows[3][0], ["2099", "345"])         # last row, one year-like and one ordinary amount
+        p, _ = pdf("year_mid_last", [dict(x0=25, ncol=2, headers=list(PERIODS), rows=rows)])
+        got = cells_by_label(native_grid.extract(p).to_dict())
+        self.assertEqual((got["棚卸資産"], got["その他"]), (["1999", "2000"], ["2099", "345"]))
+        rows = default_rows(1)
+        rows[1] = (rows[1][0], ["2024"])
+        p, _ = pdf("year_one_col", [dict(x0=25, ncol=1, headers=["2025/3"], rows=rows)])
+        self.assertEqual(cells_by_label(native_grid.extract(p).to_dict())["売掛金"], ["2024"])
+
+    def test_page_text_years_outside_tables_are_left_alone(self):
+        p, _ = pdf("year_in_title", [two_col()])
+        import fitz
+        d = fitz.open(p)
+        d[0].insert_text((300, 30), "2025", fontname="japan", fontsize=11)
+        d.saveIncr()
+        n = native_grid.extract(p).to_dict()
+        self.assertEqual(len(n["tables"][0]["rows"]), 4)
+        self.assertFalse(any(i["severity"] == "warning" for i in n["issues"]))
+
     def test_bare_year_header_line_remains_header_not_data(self):
         t = two_col()
         t.update(headers=None, extra_header=["2025", "2026"])

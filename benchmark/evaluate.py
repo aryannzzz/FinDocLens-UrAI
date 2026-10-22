@@ -16,6 +16,8 @@ from benchmark.common import read_json, sha256, utc, write_json
 
 ABSTAIN = {'absent_text_cell', 'unreadable', 'uncertain', 'unparseable'}
 STATUSES = ABSTAIN | {'observed', 'negative_zero', 'not_reported'}
+LOCALIZATION_IOU = .3       # predicted evidence box vs gold evidence box
+EVALUATOR_VERSION = 2       # 2: structure/localization axes, scoped omission warnings, predicted-header denominators over all tables
 
 
 def norm(value):
@@ -125,18 +127,57 @@ def row_scores(gold, pred):
              for pi, p in enumerate(pred)] for gi, g in enumerate(gold)]
 
 
-def omission_alert(pred, table, row, label):
+# Issue codes that declare the whole extraction unusable: they cover every gold cell.
+GLOBAL_FAILURE_CODES = {'empty_extraction', 'needs_visual_fallback', 'no_verified_data_rows', 'worker_failure', 'backend_exception'}
+# Issue codes that declare "something is missing". They only cover a gold cell they can be tied to: by the row label, by a box
+# (issue['bbox'] or the boxes of issue['tokens']) that overlaps the gold cell/row, or by being attached to the matched row itself.
+OMISSION_CODES = {'partial_data_row', 'missing_displayed_cell', 'missing_cell', 'omitted_row', 'omitted_table',
+                  'unassigned_numeric_tokens', 'source_numeric_tokens_not_in_output'}
+
+
+def issue_code(issue):
+    return issue.get('code') if isinstance(issue, dict) else issue
+
+
+def issue_boxes(issue):
+    if not isinstance(issue, dict):
+        return []
+    boxes = [issue['bbox']] if isinstance(issue.get('bbox'), list) and len(issue['bbox']) == 4 else []
+    boxes += [t['bbox'] for t in issue.get('tokens', []) if isinstance(t, dict) and isinstance(t.get('bbox'), list) and len(t['bbox']) == 4]
+    return boxes
+
+
+def overlaps(a, b):
+    return min(a[2], b[2]) > max(a[0], b[0]) and min(a[3], b[3]) > max(a[1], b[1])
+
+
+def unscoped_omission_warnings(pred):
+    """Omission warnings that name no row label, no box and no row: they say 'something is missing' but not what."""
+    scopes = [pred] + [t for t in pred.get('tables', [])]
+    return sum(1 for scope in scopes for i in scope.get('issues', [])
+               if issue_code(i) in OMISSION_CODES and isinstance(i, dict) and i.get('label') is None and not issue_boxes(i))
+
+
+def omission_alert(pred, table, row, label, boxes=()):
+    """True when the prediction itself flags THIS gold cell/row as missing. A warning about another row, another region, or one
+    that cannot be localised does not count; run-level failure statuses/codes cover everything."""
     if pred.get('status') in {'error', 'timeout', 'oom', 'abstained', 'unavailable'}:
         return True
+    boxes = [b for b in boxes if isinstance(b, list) and len(b) == 4]
     for scope in (pred, table, row):
         for issue in scope.get('issues', []):
-            code = issue.get('code') if isinstance(issue, dict) else issue
-            if code in {'empty_extraction', 'needs_visual_fallback', 'no_verified_data_rows', 'worker_failure', 'backend_exception'}:
+            code = issue_code(issue)
+            if code in GLOBAL_FAILURE_CODES:
                 return True
-            if code in {'partial_data_row', 'missing_displayed_cell', 'missing_cell', 'omitted_row', 'omitted_table'}:
-                target = issue.get('label') if isinstance(issue, dict) else None
-                if target is None or norm(target) == norm(label):
-                    return True
+            if code not in OMISSION_CODES:
+                continue
+            target = issue.get('label') if isinstance(issue, dict) else None
+            if target is not None and norm(target) == norm(label):
+                return True
+            if any(overlaps(a, b) for a in issue_boxes(issue) for b in boxes):
+                return True
+            if scope is row and row and target is None and not issue_boxes(issue):
+                return True         # attached to the matched predicted row itself
     return False
 
 
@@ -224,12 +265,31 @@ def evaluate(gold, pred):
             prow = pr[rm[gi]] if gi in rm else {}
             alignment.append(dict(table_id=table['table_id'], row_id=row['row_id'],
                                   predicted_row_index=prow.get('row_index'), matched=gi in rm))
-            alert = omission_alert(pred, predicted, prow, row['label'])
             for cell in row['cells']:
+                alert = omission_alert(pred, predicted, prow, row['label'], [cell.get('bbox'), row.get('bbox')] if not cell.get('bbox') else [cell['bbox']])
                 is_numeric = cell.get('role') != 'other'
                 count['numeric_gold'] += is_numeric
                 candidates = [c for c in prow.get('cells', []) if c.get('column_index') == cell['column_index']]
                 pc = candidates[0] if len(candidates) == 1 else None
+                # structure axes (denominators are all gold cells, so a missing cell earns nothing on any of them)
+                gold_link = gold_ids.get(cell.get('header_id')) if cell.get('header_id') is not None else None
+                count['link_gold'] += is_numeric and gold_link is not None
+                count['evidence_gold'] += bool(cell.get('bbox'))
+                if pc is not None:
+                    period_ok = pc.get('period') == cell.get('period')
+                    role_ok = pc.get('role') == cell.get('role')
+                    linked = pred_ids.get(pc.get('header_id'))
+                    link_ok = gold_link is None or bool(linked is not None and linked.get('kind', 'leaf') == 'leaf' and
+                                                        linked.get('column_index') == gold_link.get('column_index'))
+                    count['period_correct'] += period_ok and is_numeric
+                    count['role_correct'] += role_ok and is_numeric
+                    count['link_correct'] += link_ok and is_numeric and gold_link is not None
+                    count['structure_correct'] += period_ok and role_ok and link_ok and is_numeric
+                    count['structure_errors'] += is_numeric and not (period_ok and role_ok and link_ok)
+                    if cell.get('bbox'):
+                        good = bool(pc.get('bbox')) and iou(cell['bbox'], pc['bbox']) >= LOCALIZATION_IOU
+                        count['evidence_correct'] += good
+                        count['evidence_misleading'] += bool(pc.get('bbox')) and not good
                 event = dict(table_id=table['table_id'], row_id=row['row_id'], label=row['label'],
                              column_index=cell['column_index'], expected_raw=cell['raw'],
                              expected_status=cell['status'], bbox=cell.get('bbox'))
@@ -251,9 +311,25 @@ def evaluate(gold, pred):
                 if not exact or not sem:
                     errors.append(dict(event, kind='cell_mismatch', predicted_raw=pc.get('raw'),
                                        predicted_value=pc.get('value'), predicted_status=pc.get('status')))
+    for pi, p in enumerate(pt):         # headers of predicted tables that match no gold table are extra, not free
+        if pi not in set(table_map.values()):
+            count['headers_predicted'] += sum(h.get('kind', 'leaf') == 'leaf' for h in p.get('headers', []))
+            count['groups_predicted'] += sum(h.get('kind') == 'group' for h in p.get('headers', []))
     # Include explicit abstentions in extraneous rows/cells in prediction-level rate.
     abstentions = sum(c.get('status') in ABSTAIN for t in pt for r in t.get('rows', []) for c in r.get('cells', []))
     expected_abstentions = sum(c['status'] in ABSTAIN for t in gt for r in t['rows'] for c in r['cells'])
+    checks = dict(
+        cell_errors=bool(errors), missing_tables=len(table_pairs) < len(gt), missing_rows=count['rows_matched'] < total_rows,
+        extra_tables=len(pt) > len(table_pairs), extra_rows=pred_rows > count['rows_matched'],
+        header_errors=count['headers_correct'] < count['headers_gold'],
+        extra_headers=count['headers_predicted'] > count['headers_gold'],
+        group_errors=count['groups_correct'] < count['groups_gold'] or count['groups_predicted'] > count['groups_gold'],
+        header_parent_errors=count['header_parents_correct'] < count['header_parents_gold'],
+        hierarchy_errors=count['hierarchy_correct'] < gold_edges,
+        cell_structure_errors=bool(count['structure_errors']),
+        row_order_errors=count['row_order_correct'] < count['rows_matched'],
+        misleading_evidence_boxes=bool(count['evidence_misleading']))
+    false_reasons = [k for k, v in checks.items() if v]
     metrics = dict(
         tables=prf(len(table_pairs), len(gt), len(pt)), extra_tables=len(pt)-len(table_pairs),
         unlocalizable_predicted_tables=sum(not t.get('bbox') for t in pt),
@@ -279,15 +355,16 @@ def evaluate(gold, pred):
         missing_cells=ratio(count['missing_cells'], total_cells),
         silent_omission_rate=ratio(count['silent_omissions'], total_cells),
         invalid_matched_cells=count['invalid_cells'],
-        false_assurance=bool(pred.get('status') == 'success' and
-                             (errors or len(table_pairs) < len(gt) or count['rows_matched'] < total_rows or
-                              len(pt) > len(table_pairs) or pred_rows > count['rows_matched'] or
-                              count['headers_correct'] < count['headers_gold'] or
-                              count['groups_correct'] < count['groups_gold'] or
-                              count['header_parents_correct'] < count['header_parents_gold'] or
-                              count['hierarchy_correct'] < gold_edges)),
+        cell_period_accuracy=ratio(count['period_correct'], count['numeric_gold']),
+        cell_role_accuracy=ratio(count['role_correct'], count['numeric_gold']),
+        cell_header_link_accuracy=ratio(count['link_correct'], count['link_gold']),
+        cell_structure_exact=ratio(count['structure_correct'], count['numeric_gold']),
+        cell_evidence_localization=ratio(count['evidence_correct'], count['evidence_gold']),
+        unscoped_omission_warnings=unscoped_omission_warnings(pred),
+        false_assurance=bool(pred.get('status') == 'success' and false_reasons),
+        false_assurance_reasons=false_reasons if pred.get('status') == 'success' else [],
         warnings=pred.get('issues', []), gold_cells=total_cells, predicted_cells=pred_cells)
-    return dict(document_id=gold['document_id'], evaluated_at=utc(),
+    return dict(document_id=gold['document_id'], evaluated_at=utc(), evaluator_version=EVALUATOR_VERSION,
                 reference_status=gold.get('annotation_status', 'unknown'),
                 human_checked_cells=gold.get('human_checked_cells', 0),
                 scope=gold['scope'], run_status=pred.get('status', 'unspecified'),
@@ -307,6 +384,9 @@ def aggregate(reports):
                              sum(r['metrics'][name]['total'] for r in reports))
     for name in ('tables', 'rows', 'hierarchy_edges', 'grouped_headers'):
         result[name] = prf(*(sum(r['metrics'][name][key] for r in reports) for key in ('matched', 'gold', 'predicted')))
+    for name in ('cell_period_accuracy', 'cell_role_accuracy', 'cell_header_link_accuracy', 'cell_structure_exact', 'cell_evidence_localization'):
+        if all(name in r['metrics'] for r in reports):       # reports scored by evaluator v1 do not have these axes
+            result[name] = ratio(sum(r['metrics'][name]['correct'] for r in reports), sum(r['metrics'][name]['total'] for r in reports))
     result['false_assurance_rate'] = ratio(sum(r['metrics']['false_assurance'] for r in reports), len(reports))
     return result
 

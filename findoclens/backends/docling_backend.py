@@ -215,6 +215,17 @@ def _map_table(item, ti, page_h, ocr, gray=None, gscale=1.0):
             n, tot = ncount.get(c, (0, 0))
             ncount[c] = (n + looks_numeric(cell.text), tot + 1)
     data_cols = [c for c in range(nc) if ncount.get(c, (0, 0))[1] and ncount[c][0] / ncount[c][1] >= .5]
+    # A numeric body cell merged over several columns/rows only has its start slot in the grid. The columns it covers are
+    # data columns too (otherwise the merged value would silently shrink the table); the covered slots stay empty + flagged.
+    owner = {}
+    for c in cells:
+        for rr in range(c.start_row_offset_idx, c.end_row_offset_idx):
+            for cc in range(c.start_col_offset_idx, c.end_col_offset_idx):
+                if (rr, cc) != (c.start_row_offset_idx, c.start_col_offset_idx):
+                    owner[(rr, cc)] = c
+    for c in cells:
+        if c.start_row_offset_idx >= first_body and c.text.strip() and looks_numeric(c.text) and c.start_col_offset_idx in data_cols:
+            data_cols = sorted(set(data_cols) | set(range(c.start_col_offset_idx, c.end_col_offset_idx)))
     label_cols = [c for c in range(nc) if c not in data_cols and c < (data_cols[0] if data_cols else nc)]
     tbl.n_data_columns = len(data_cols)
     col_hdr = {c: [] for c in data_cols}
@@ -246,9 +257,30 @@ def _map_table(item, ti, page_h, ocr, gray=None, gscale=1.0):
         tbl.issues.append({"severity": "warning", "code": "repeated_header_text_possible_side_by_side_tables",
                            "message": "identical header text appears more than once in the top header row"})
     other_cols = [c for c in range(nc) if c not in data_cols and c not in label_cols]
+    # merged body cells: report every span explicitly. A label merged over rows is inherited by the covered rows (marked, raw_label
+    # null: the covered row does not print it); a merged data cell is NOT copied into the covered slots (they stay empty) and is flagged.
+    for c in cells:
+        if c.start_row_offset_idx < first_body or not c.text.strip():
+            continue
+        rows_span = list(range(c.start_row_offset_idx, c.end_row_offset_idx))
+        cols_span = list(range(c.start_col_offset_idx, c.end_col_offset_idx))
+        if len(rows_span) == 1 and len(cols_span) == 1:
+            continue
+        if any(x in label_cols for x in cols_span) and len(rows_span) > 1:
+            tbl.issues.append({"severity": "warning", "code": "body_rowspan_label_inherited", "label": c.text.strip(),
+                               "rows": [x - first_body for x in rows_span],
+                               "message": "label cell merged over several rows: covered rows inherit the label text (raw_label null); association inferred from the grid span"})
+        if any(x in data_cols for x in cols_span):
+            tbl.issues.append({"severity": "warning", "code": "body_cell_span_unsupported", "text": c.text.strip(),
+                               "rows": [x - first_body for x in rows_span], "columns": [data_cols.index(x) for x in cols_span if x in data_cols],
+                               "message": "data cell merged over several rows/columns: the value is kept in its first slot only; covered slots are left empty, not copied"})
     for r in range(first_body, nr):
         row_cells = [grid.get((r, c)) for c in range(nc)]
-        label = "".join(grid[(r, c)].text.strip() for c in label_cols if (r, c) in grid)
+        own = [grid[(r, c)].text.strip() for c in label_cols if (r, c) in grid]
+        inherited = [owner[(r, c)].text.strip() for c in label_cols if (r, c) not in grid and (r, c) in owner
+                     and owner[(r, c)].start_row_offset_idx >= first_body]
+        label = "".join(own + inherited) if inherited else "".join(own)
+        raw_label = "".join(own) or None
         out = []
         for k, c in enumerate(data_cols):
             cell = grid.get((r, c))
@@ -275,7 +307,7 @@ def _map_table(item, ti, page_h, ocr, gray=None, gscale=1.0):
         has = n_data_cells > 0
         typ = "section" if not has else ("total" if re.search(r"合計$|総計$|小計$", label) else "item")
         boxes = [x.bbox for x in out if x.bbox]
-        tbl.rows.append(Row(r - first_body, label or None, label or None, [], None, typ, out))
+        tbl.rows.append(Row(r - first_body, label or None, raw_label, [], None, typ, out))
         del boxes
         absent = [c.column_index for c in out if c.status == "absent_text_cell"]
         if has and typ != "section" and absent:       # same explicit signal native_grid gives for a row with an empty slot

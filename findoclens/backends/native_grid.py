@@ -31,6 +31,7 @@ UNIT_RE = re.compile(r"(百万円|千円|万円|円|million\s*yen|thousand\s*yen
 UNIT_CTX = re.compile(r"単位|[（(]\s*(?:百万円|千円|万円|円)\s*[）)]|million|thousand", re.I)
 CHANGE_RE = re.compile(r"増減|差異|前期比|前年同期比|前年比|変動|change|diff", re.I)
 PCT_RE = re.compile(r"構成比|[%％]|比率|composition", re.I)
+YEAR_LIKE = re.compile(r"(?:19|20)\d{2}")
 
 
 def _norm(s):
@@ -91,7 +92,10 @@ def read_words(page):
                 continue
         merged.append(w)
     for w in merged:
-        w["numeric"] = looks_numeric(w["text"]) and not re.fullmatch(r"(?:19|20)\d{2}", w["text"])
+        # A bare 1900-2099 integer reads either as a period header ("2025") or as an amount. Token content cannot decide, so it
+        # is numeric here (never dropped) and `_resolve_year_like` demotes it to header text only where table structure says so.
+        w["yearlike"] = bool(YEAR_LIKE.fullmatch(w["text"]))
+        w["numeric"] = looks_numeric(w["text"])
     return merged
 
 
@@ -135,9 +139,10 @@ def anchor(w, mode):
     return b[2] if mode == "right" else b[0] if mode == "left" else (b[0] + b[2]) / 2
 
 
-def column_bounds(edges, mode):
-    """Cell x-extents per column. right: (prev edge, edge]; left: [edge, next edge); centre: midpoints."""
-    step = (edges[1] - edges[0]) if len(edges) > 1 else 60
+def column_bounds(edges, mode, single_step=60):
+    """Cell x-extents per column. right: (prev edge, edge]; left: [edge, next edge); centre: midpoints.
+    A one-column table has no neighbouring edge to give the column width; `single_step` stands in for it."""
+    step = (edges[1] - edges[0]) if len(edges) > 1 else single_step
     if mode == "right":
         return [edges[0] - step] + edges
     if mode == "left":
@@ -171,28 +176,82 @@ def _header_between(rows, cols, y0, y1, colset, mode="right"):
     return False
 
 
-def extract(pdf, page_index=0, **_):
-    t0 = time.perf_counter()
-    pdf = str(pdf)
-    doc = fitz.open(pdf)
-    page = doc[page_index]
-    W, H = page.rect.width, page.rect.height
-    pred = DocumentPrediction(
-        document_id=Path(pdf).stem, source_sha256=sha256_file(pdf), backend=BACKEND,
-        model_revision="findoclens native_grid 0.1, PyMuPDF " + fitz.__version__, page=page_index,
-        page_bbox=[0.0, 0.0, round(W, 2), round(H, 2)],
-        capabilities={"cell_bbox": True, "headers": "text+period+role+colspan", "multi_table": True, "ocr": False,
-                      "n_columns": "any (right-aligned numeric)", "hierarchy": "indentation heuristic, optional"})
-    words = read_words(page)
-    n_glyphs = sum(len(w["text"]) for w in words)
-    pred.meta["native_glyph_count"] = n_glyphs
-    if n_glyphs < 20:
-        pred.status = "failed"
-        pred.issues.append({"severity": "error", "code": "needs_visual_fallback",
-                            "message": f"only {n_glyphs} extractable glyphs; OCR/visual backend required"})
-        pred.meta["elapsed_ms"] = round((time.perf_counter() - t0) * 1000, 1)
-        return pred
-    rows = group_rows(words)
+def _single_column_tables(rows, tables, seg_cols, seg_x, pitch_guess):
+    """Pass 1b: a table with ONE numeric column has no segment with >=2 columned numerics, so pass 1 cannot seed it.
+    Seed it from runs (>=3 rows, one column, regular pitch) of labelled single-value segments that are not already inside
+    the body of a table found by pass 1 (a row with one value inside a wider table is that table's partial row, not a new table).
+    The 3-row minimum keeps stray figures (page numbers, a lone footnote amount) from becoming tables; they are reported as
+    unassigned tokens instead."""
+    def inside_existing(r, s):
+        x0, _ = seg_x(s)
+        for t in tables:
+            ys = [rr["cy"] for rr, _ in t["rows"]]
+            pitch = statistics.median([b - a for a, b in zip(ys, ys[1:]) if b - a > 2] or [pitch_guess])
+            if t["first_y"] - pitch * .9 <= r["cy"] <= t["last_y"] + pitch * .9 and t["x0"] - 5 <= x0 <= t["x1"] + 5:
+                return True
+        return False
+
+    by_col = {}
+    for r in rows:
+        for s in r["segs"]:
+            cs = seg_cols(s)
+            if len(cs) != 1 or len(s["nums"]) != 1 or any(n["col"] is None for n in s["nums"]):
+                continue
+            if not any(LETTER.search(w["text"]) for w in s["label"]) or inside_existing(r, s):
+                continue
+            by_col.setdefault(next(iter(cs)), []).append((r, s))
+    found = []
+    for j, items in by_col.items():
+        items.sort(key=lambda rs: rs[0]["cy"])
+        run = []
+        for r, s in items + [(None, None)]:
+            x0, x1 = seg_x(s) if s else (0, 0)
+            if run and r is not None and r["cy"] - run[-1][0]["cy"] <= pitch_guess * 3.5 and \
+                    x0 <= max(seg_x(q)[1] for _, q in run) + 5 and x1 >= min(seg_x(q)[0] for _, q in run) - 5:
+                run.append((r, s))
+                continue
+            if len(run) >= 3:
+                xs = [seg_x(q) for _, q in run]
+                widest = max(n["bbox"][2] - n["bbox"][0] for _, q in run for n in q["nums"])
+                found.append({"cols": {j}, "x0": min(a for a, _ in xs), "x1": max(b for _, b in xs), "rows": list(run),
+                              "first_y": run[0][0]["cy"], "last_y": run[-1][0]["cy"], "single_column": True,
+                              "single_step": max(60.0, 2.2 * widest + 12)})   # headers are commonly up to ~2x as wide as the amounts
+            run = [(r, s)] if r is not None else []
+    return found
+
+
+def _resolve_year_like(words, rows, tables):
+    """Decide, from table structure, which bare 1900-2099 integers are period headers. Everything starts as an amount.
+    The first row of a table whose only numerics are bare years is
+      * label-less (a unit note does not count as a label): a period header line (a data row always has a label) -> header text;
+      * labelled and directly under a real header line ("2025/3", "当期"): a body row -> amounts, not ambiguous;
+      * labelled with no header line above ("科目 2025 2026"): cannot be told from a data row by the tokens -> kept as data, flagged.
+    Year-like tokens anywhere else in a table (later rows) are amounts; tokens outside every table are page text."""
+    out = []
+    for t in tables:
+        r, s = next(((r, s) for r, s in t["rows"] if s["nums"]), (None, None))      # first row that carries numbers
+        if s is None or not all(n.get("yearlike") for n in s["nums"]):
+            continue
+        nums = s["nums"]
+        labelled = any(LETTER.search(w["text"]) and not UNIT_CTX.search(w["text"]) for w in s["label"])
+        # a real period header line (text such as "2025/3" or "当期") directly above this row means the row is body, not a header
+        lo, hi = min(n["bbox"][0] for n in nums) - 40, max(n["bbox"][2] for n in nums) + 12
+        header_above = any(
+            r["cy"] < nums[0]["cy"] - t["pitch"] * .3 and nums[0]["cy"] - r["cy"] <= t["pitch"] * 2.2 and
+            any(not w["numeric"] and lo <= (w["bbox"][0] + w["bbox"][2]) / 2 <= hi and not UNIT_CTX.search(w["text"]) and
+                (LETTER.search(w["text"]) or parse_period(w["text"])) for w in r["words"])
+            for r in rows)
+        if labelled and header_above:
+            continue                                    # body row under a real header line: amounts, no ambiguity
+        for n in nums:
+            out.append({"word": n, "header": not labelled, "ambiguous": labelled})
+            if not labelled:
+                n["numeric"] = False
+    return out
+
+
+def _find_tables(rows, words, W, issues):
+    """Detect tables from the numeric tokens currently flagged `numeric`. Returns (tables, cols, mode, pitch_guess, tol)."""
     nums = [w for w in words if w["numeric"]]
     tol = max(3.0, W * .006)
     mode, cols = "right", []
@@ -202,7 +261,6 @@ def extract(pdf, page_index=0, **_):
         score = sum(c["n"] for c in cl)
         if score > best:            # strict: right alignment wins ties
             best, mode, cols = score, m, cl
-    pred.meta["column_alignment"] = mode
     for r in rows:
         r["segs"] = split_segments(r)
         for s in r["segs"]:
@@ -257,13 +315,15 @@ def extract(pdf, page_index=0, **_):
     # candidates are re-checked (>=3 rows) after attachment and every drop is reported, never silent
     kept = [t for t in tables if len(t["rows"]) >= 3 or (len(t["cols"]) >= 4 and len(t["rows"]) >= 1)]
     tables = sorted(kept, key=lambda t: (round(t["first_y"] / (pitch_guess * 2)), t["x0"]))
+    tables += _single_column_tables(rows, tables, seg_cols, seg_x, pitch_guess)
+    tables = sorted(tables, key=lambda t: (round(t["first_y"] / (pitch_guess * 2)), t["x0"]))
     # ---- pass 2: attach other rows (single-value rows, label-only rows) that fall inside the table body
     used_ids = {id(s) for t in tables for _, s in t["rows"]}
     for t in tables:
         ys = [r["cy"] for r, _ in t["rows"]]
         pitch = statistics.median([b - a for a, b in zip(ys, ys[1:]) if b - a > 2] or [pitch_guess])
         t["pitch"] = pitch
-        t["lead"] = column_bounds(sorted(cols[j]["edge"] for j in t["cols"]), mode)[0]   # left extent of the first numeric column
+        t["lead"] = column_bounds(sorted(cols[j]["edge"] for j in t["cols"]), mode, t.get("single_step", 60))[0]   # left extent of the first numeric column
         for r in rows:
             if not (t["first_y"] - pitch * .9 <= r["cy"] <= t["last_y"] + pitch * .9):
                 continue
@@ -293,15 +353,70 @@ def extract(pdf, page_index=0, **_):
         if len(t["rows"]) >= 3:
             final.append(t)
         else:
-            pred.issues.append({"severity": "info", "code": "discarded_small_candidate", "rows": len(t["rows"]),
+            issues.append({"severity": "info", "code": "discarded_small_candidate", "rows": len(t["rows"]),
                                 "bbox": [round(t["x0"], 1), round(t["first_y"], 1), round(t["x1"], 1), round(t["last_y"], 1)]})
     tables = sorted(final, key=lambda t: (round(t["first_y"] / (pitch_guess * 2)), t["x0"]))
-    # unassigned numerics are reported, never dropped silently
+    return tables, cols, mode, pitch_guess, tol
+
+
+def extract(pdf, page_index=0, **_):
+    t0 = time.perf_counter()
+    pdf = str(pdf)
+    doc = fitz.open(pdf)
+    page = doc[page_index]
+    W, H = page.rect.width, page.rect.height
+    pred = DocumentPrediction(
+        document_id=Path(pdf).stem, source_sha256=sha256_file(pdf), backend=BACKEND,
+        model_revision="findoclens native_grid 0.1, PyMuPDF " + fitz.__version__, page=page_index,
+        page_bbox=[0.0, 0.0, round(W, 2), round(H, 2)],
+        capabilities={"cell_bbox": True, "headers": "text+period+role+colspan", "multi_table": True, "ocr": False,
+                      "n_columns": "any (right-aligned numeric)", "hierarchy": "indentation heuristic, optional"})
+    words = read_words(page)
+    n_glyphs = sum(len(w["text"]) for w in words)
+    pred.meta["native_glyph_count"] = n_glyphs
+    if n_glyphs < 20:
+        pred.status = "failed"
+        pred.issues.append({"severity": "error", "code": "needs_visual_fallback",
+                            "message": f"only {n_glyphs} extractable glyphs; OCR/visual backend required"})
+        pred.meta["elapsed_ms"] = round((time.perf_counter() - t0) * 1000, 1)
+        return pred
+    rows = group_rows(words)
+    detect_issues = []
+    tables, cols, mode, pitch_guess, tol = _find_tables(rows, words, W, detect_issues)
+    ambiguous = []
+    for _ in range(4):                      # demoting a header line changes the tables, which may expose the next header line
+        decided = _resolve_year_like(words, rows, tables)
+        if not any(d["header"] for d in decided):
+            ambiguous = [d for d in decided if d["ambiguous"]]
+            break
+        detect_issues = []
+        tables, cols, mode, pitch_guess, tol = _find_tables(rows, words, W, detect_issues)
+    pred.meta["column_alignment"] = mode
+    pred.issues += detect_issues
+    amb = ambiguous
+    if amb:
+        pred.issues.append({"severity": "warning", "code": "year_like_tokens_ambiguous",
+                            "message": "a label followed by bare 1900-2099 integers is the first row of a table: period header or amounts "
+                                       "cannot be decided from the tokens; they were kept as data cells, verify against the page",
+                            "count": len(amb), "tokens": [{"raw": d["word"]["text"], "bbox": [round(v, 2) for v in d["word"]["bbox"]]} for d in amb]})
+    nums = [w for w in words if w["numeric"]]
+    # Unassigned numerics are reported, never dropped silently. Tokens that are structurally table-like (inside a table's
+    # footprint, a column stack, or sharing a row) are a warning; isolated ones (page numbers, prose amounts) are info.
+    from ..coverage import classify_unassigned
     assigned = {id(n) for t in tables for _, s in t["rows"] for n in s["nums"]}
-    stray = [{"raw": n["text"], "bbox": [round(v, 2) for v in n["bbox"]]} for n in nums if id(n) not in assigned]
+    feet = [[t["x0"], t["first_y"] - pitch_guess * .5, t["x1"], t["last_y"] + pitch_guess * .5] for t in tables]
+    in_feet = lambda n: any(f[0] - 5 <= (n["bbox"][0] + n["bbox"][2]) / 2 <= f[2] + 5 and f[1] - pitch_guess <= n["cy"] <= f[3] + pitch_guess for f in feet)
+    # a bare year outside every table is page text (title, date), not an unplaced amount
+    stray = [{"raw": n["text"], "bbox": [round(v, 2) for v in n["bbox"]], "cy": n["cy"], "h": n["h"]} for n in nums
+             if id(n) not in assigned and not (n.get("yearlike") and not in_feet(n))]
     if stray:
-        pred.meta["unassigned_numeric_tokens"] = stray
-        pred.issues.append({"severity": "info", "code": "unassigned_numeric_tokens", "count": len(stray)})
+        significant, isolated = classify_unassigned(stray, feet, pitch_guess, tol)
+        pred.meta["unassigned_numeric_tokens"] = significant + isolated
+        pred.issues.append({"severity": "warning" if significant else "info", "code": "unassigned_numeric_tokens",
+                            "count": len(significant) or len(isolated), "tokens": significant or isolated,
+                            "isolated_count": len(isolated) if significant else 0,
+                            **({"message": "numeric tokens that look like table content (inside a table, a column stack or a row) were not "
+                                           "placed in any table; completeness is not established, review the page"} if significant else {})})
     for ti, t in enumerate(tables):
         pred.tables.append(build_table(t, ti, rows, cols, words, tables, W, mode))
     pred.status = "ok" if pred.tables else "no_tables"
@@ -317,8 +432,8 @@ def build_table(t, ti, rows, cols, words, all_tables, W, mode="right"):
     edges = [cols[j]["edge"] for j in colids]
     # column cells span (previous right edge, own right edge]; header text is centred over the *cell*, not the
     # right-aligned number, so the first cell is extended left by one column step.
-    step = (edges[1] - edges[0]) if len(edges) > 1 else 60
-    bounds = column_bounds(edges, mode)
+    step = (edges[1] - edges[0]) if len(edges) > 1 else t.get("single_step", 60)
+    bounds = column_bounds(edges, mode, t.get("single_step", 60))
     pitch = t["pitch"]
     body = t["rows"]
     first_y = t["first_y"]
@@ -352,6 +467,12 @@ def build_table(t, ti, rows, cols, words, all_tables, W, mode="right"):
     ncol = len(colids)
     col_header_text = [[] for _ in range(ncol)]
     hid = 0
+    # x-extent of the numbers actually printed in each column: a header that overlaps a column's cell but not its numbers
+    # (e.g. a left-aligned header wider than its amounts running into the next cell) has an uncertain span
+    numext = []
+    for j in colids:
+        toks = [n for _, sg in body for n in sg["nums"] if n["col"] == j]
+        numext.append((statistics.median(n["bbox"][0] for n in toks), statistics.median(n["bbox"][2] for n in toks)) if toks else None)
     for li, line in enumerate(hdr_lines):
         pieces = []   # (words, covered)
         for w in line["words"]:
@@ -379,6 +500,14 @@ def build_table(t, ti, rows, cols, words, all_tables, W, mode="right"):
                        role=None, bbox=_union([w["bbox"] for w in ws]), colspan=len(covered), rowspan=1,
                        row_start=li, col_start=covered[0], column_indices=covered,
                        span_note="extended_to_uncovered_columns" if pk in extended else None)
+            if len(covered) > 1 and pk not in extended:
+                x0, x1 = h.bbox[0], h.bbox[2]
+                strict = [j for j in covered if numext[j] and x1 > numext[j][0] and x0 < numext[j][1]]
+                if strict and len(strict) < len(covered):
+                    tbl.issues.append({"severity": "warning", "code": "header_span_ambiguous", "header": h.header_id, "text": text,
+                                       "columns": covered, "columns_overlapping_numbers": strict,
+                                       "message": "header text overlaps the cells of several columns but the printed numbers of only some of them; "
+                                                  "its column span is uncertain"})
             if pk in extended:
                 tbl.issues.append({"severity": "info", "code": "header_span_inferred", "header": h.header_id, "text": text,
                                    "columns": covered, "message": "span extended over columns with no header text on this line"})
@@ -414,6 +543,9 @@ def build_table(t, ti, rows, cols, words, all_tables, W, mode="right"):
         if h.period is None:        # a header spanning columns of different periods has no single period
             ps = {col_period[j] for j in h.column_indices if col_period[j]}
             h.period = next(iter(ps)) if len(ps) == 1 else None
+    if t.get("single_column"):
+        tbl.issues.append({"severity": "info", "code": "single_column_table_inferred",
+                           "message": "one numeric column: seeded from a run of >=3 labelled single-value rows (pass 1 needs >=2 columns)"})
     if not tbl.headers:
         tbl.issues.append({"severity": "warning", "code": "no_header_cells_found"})
     if tbl.unit is None:
@@ -460,9 +592,11 @@ def build_table(t, ti, rows, cols, words, all_tables, W, mode="right"):
                 val, status, hint = parse_token(n["text"])
                 has_hdr = bool(col_header_text[k])
                 role = col_role[k] or ("composition_pct" if hint == "composition_pct" else None) or "amount"
+                flags = (["role_inferred_from_column_signs"] if col_inferred[k] else []) if (col_role[k] or has_hdr) else ["role_default_amount"]
+                if n.get("yearlike"):
+                    flags = flags + ["year_like_amount_classified_by_table_position"]
                 cells.append(Cell(k, hid_, col_period[k], role, n["text"], val, status,
-                                  [round(v, 2) for v in n["bbox"]], BACKEND, "native_pdf",
-                                  (["role_inferred_from_column_signs"] if col_inferred[k] else []) if (col_role[k] or has_hdr) else ["role_default_amount"]))
+                                  [round(v, 2) for v in n["bbox"]], BACKEND, "native_pdf", flags))
             else:
                 cells.append(Cell(k, hid_, col_period[k], col_role[k] or "amount", None, None, "absent_text_cell", None,
                                   BACKEND, "native_pdf"))

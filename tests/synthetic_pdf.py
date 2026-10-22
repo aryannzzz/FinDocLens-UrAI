@@ -29,7 +29,7 @@ def make_pdf(path, tables, width=800, height=500):
     font = fitz.Font("japan")
 
     def put(x_right_or_left, y, s, right=False):
-        w = font.text_length(s, fontsize=11)
+        w = fitz.get_text_length(s, fontname="japan", fontsize=11)     # width as drawn (fitz.Font reports narrower digits)
         x = x_right_or_left - w if right else x_right_or_left
         page.insert_text((x, y), s, fontname="japan", fontsize=11)
         return [x, y - 11 * font.ascender, x + w, y - 11 * font.descender]

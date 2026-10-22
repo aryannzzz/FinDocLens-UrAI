@@ -29,6 +29,8 @@ from .schema import sha256_file
 from .validator import validate_prediction
 
 MODEL_PYTHON = os.environ.get("FINDOCLENS_MODEL_PYTHON", str(ROOT / ".venv-docling" / "bin" / "python"))
+# issues that say "table content may be missing or mis-classified"; a native result carrying one is never accepted silently
+COMPLETENESS_CODES = {"unassigned_numeric_tokens", "year_like_tokens_ambiguous", "omitted_table", "source_numeric_tokens_not_in_output"}
 NUMERIC_IN_LABEL = re.compile(r"[△▲+＋]?\d{1,3}(?:,\d{3})+|[+＋△▲]\d")
 
 
@@ -63,6 +65,9 @@ def native_flags(pred):
                 flags.append(f"many_absent_cells:{t['table_id']}")
     if any(i["code"] == "arithmetic_violation" for i in pred["issues"]):
         flags.append("arithmetic_violation")
+    for i in pred["issues"] + [i for t in pred["tables"] for i in t.get("issues", [])]:
+        if i.get("code") in COMPLETENESS_CODES and i.get("severity") in ("warning", "error"):
+            flags.append(f"completeness:{i['code']}")
     return flags
 
 
@@ -180,6 +185,24 @@ def route(pdf, page_index=0, out_root="runs", verify=False, allow_models=True, v
                             log["decisions"].append("docling agrees with native on all compared cells")
         else:
             final["status"] = "needs_visual_review" if flags else final["status"]
+    if not raster_like:
+        # Independent completeness check on whatever is returned (native_grid, native_v2 or a model result): reconcile the text
+        # layer's numeric tokens with the cells/headers of the final prediction. Significant tokens that are in no cell are never
+        # accepted silently; where the page has no text layer this check is impossible and the OCR branch above already withholds success.
+        from .coverage import reconcile_prediction
+        rec = reconcile_prediction(pdf, final, page_index)
+        final["meta"]["source_token_coverage"] = {k: rec[k] for k in ("total", "covered", "unassigned")} | {
+            "significant": rec["significant"][:60], "isolated_count": len(rec["isolated"])}
+        if rec["significant"]:
+            final["status"] = "needs_visual_review"
+            final["issues"].append({"severity": "warning", "code": "source_numeric_tokens_not_in_output",
+                                    "count": len(rec["significant"]), "tokens": rec["significant"][:60],
+                                    "message": "numeric tokens of the text layer that look like table content are in no extracted cell or header; "
+                                               "completeness is not established"})
+            log["decisions"].append(f"coverage check: {len(rec['significant'])} significant source numeric tokens not in output -> needs_visual_review")
+        else:
+            log["decisions"].append(f"coverage check: {rec['covered']}/{rec['total']} source numeric tokens in cells/headers; "
+                                    f"{len(rec['isolated'])} isolated unassigned")
     final["meta"]["routing"] = log
     final["meta"]["routing"]["elapsed_ms"] = round((time.perf_counter() - t0) * 1000, 1)
     return final
