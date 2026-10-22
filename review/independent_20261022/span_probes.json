@@ -1,0 +1,147 @@
+{
+  "body_rowspan": {
+    "raw_grid": [
+      {
+        "r0": 0,
+        "r1": 1,
+        "c0": 0,
+        "c1": 1,
+        "text": "科目",
+        "header": true,
+        "bbox": null
+      },
+      {
+        "r0": 0,
+        "r1": 1,
+        "c0": 1,
+        "c1": 2,
+        "text": "2025/3",
+        "header": true,
+        "bbox": null
+      },
+      {
+        "r0": 0,
+        "r1": 1,
+        "c0": 2,
+        "c1": 3,
+        "text": "2026/3",
+        "header": true,
+        "bbox": null
+      },
+      {
+        "r0": 1,
+        "r1": 3,
+        "c0": 0,
+        "c1": 1,
+        "text": "現金",
+        "header": false,
+        "bbox": null
+      },
+      {
+        "r0": 1,
+        "r1": 2,
+        "c0": 1,
+        "c1": 2,
+        "text": "10",
+        "header": false,
+        "bbox": null
+      },
+      {
+        "r0": 1,
+        "r1": 2,
+        "c0": 2,
+        "c1": 3,
+        "text": "20",
+        "header": false,
+        "bbox": null
+      },
+      {
+        "r0": 2,
+        "r1": 3,
+        "c0": 1,
+        "c1": 2,
+        "text": "30",
+        "header": false,
+        "bbox": null
+      },
+      {
+        "r0": 2,
+        "r1": 3,
+        "c0": 2,
+        "c1": 3,
+        "text": "40",
+        "header": false,
+        "bbox": null
+      }
+    ],
+    "mapped_rows": [
+      {
+        "label": "現金",
+        "cells": [
+          "10",
+          "20"
+        ]
+      },
+      {
+        "label": null,
+        "cells": [
+          "30",
+          "40"
+        ]
+      }
+    ]
+  },
+  "equal_span_header_groups": [
+    {
+      "header_id": "t_c0",
+      "kind": "leaf",
+      "column_index": 0,
+      "text": "金額",
+      "period": "2025-03-31",
+      "role": "amount",
+      "bbox": null,
+      "colspan": 1,
+      "rowspan": 1,
+      "native_header_id": "amount",
+      "parent_id": "t_gouter"
+    },
+    {
+      "header_id": "t_c1",
+      "kind": "leaf",
+      "column_index": 1,
+      "text": "構成比",
+      "period": "2025-03-31",
+      "role": "composition_pct",
+      "bbox": null,
+      "colspan": 1,
+      "rowspan": 1,
+      "native_header_id": "pct",
+      "parent_id": "t_gouter"
+    },
+    {
+      "header_id": "t_gouter",
+      "kind": "group",
+      "column_index": 0,
+      "text": "連結",
+      "period": null,
+      "role": null,
+      "bbox": null,
+      "colspan": 2,
+      "rowspan": 1,
+      "native_header_id": "outer"
+    },
+    {
+      "header_id": "t_ginner",
+      "kind": "group",
+      "column_index": 0,
+      "text": "2025年3月期",
+      "period": "2025-03-31",
+      "role": null,
+      "bbox": null,
+      "colspan": 2,
+      "rowspan": 1,
+      "native_header_id": "inner"
+    }
+  ],
+  "reference_headers_with_rowspan_gt_one": []
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "daiwabo_p10_scan200",
+  "source_sha256": "87bacae538ff048d3fba1361a3cd84cb7f2c55318c577fee20ad7553850132cd",
+  "input_sha256": "87bacae538ff048d3fba1361a3cd84cb7f2c55318c577fee20ad7553850132cd",
+  "backend": "native_grid",
+  "model_revision": "findoclens native_grid 0.1, PyMuPDF 1.27.2.3",
+  "page_bbox": [
+    0.0,
+    0.0,
+    960.0,
+    540.0
+  ],
+  "status": "abstained",
+  "backend_status": "failed",
+  "issues": [
+    {
+      "severity": "error",
+      "code": "needs_visual_fallback",
+      "message": "only 0 extractable glyphs; OCR/visual backend required"
+    }
+  ],
+  "tables": [],
+  "capabilities": {
+    "cell_bbox": true,
+    "headers": "text+period+role+colspan",
+    "multi_table": true,
+    "ocr": false,
+    "n_columns": "any (right-aligned numeric)",
+    "hierarchy": "indentation heuristic, optional"
+  },
+  "provenance": {
+    "adapter": "adapters.canonical.convert",
+    "native_schema": "findoclens-0.1",
+    "native_backend": "native_grid",
+    "native_prediction_sha256": "8114186149f785cda0b44ea25bb550106a8023fe90fbde7ce8596e481ca10296",
+    "native_options": {},
+    "raw_artifacts": {
+      "native_findoclens_prediction.json": {
+        "path": "raw/cold/native_findoclens_prediction.json",
+        "sha256": "c44a33767ed8bc186fcec5e5bc03b8862b04c064e06a47eac15ac5ef26417523"
+      }
+    },
+    "code": {
+      "commit": "36950304419878eb2c1ec82f743869554354e46b",
+      "code_dirty": true,
+      "code_dirty_paths": [
+        "M benchmark/raster_variants.py",
+        "?? tests/test_raster_reproduction.py"
+      ]
+    },
+    "lazy_load_on_first_call": false,
+    "backend_meta": {
+      "native_glyph_count": 0,
+      "elapsed_ms": 1.6
+    },
+    "native_status": "failed",
+    "trial": "cold"
+  }
+}

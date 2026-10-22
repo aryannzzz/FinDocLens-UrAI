@@ -1,0 +1,8 @@
+test_missing_rasters_rebuild_and_existing_corruption_is_retained (tests.test_raster_reproduction.RasterReproduction.test_missing_rasters_rebuild_and_existing_corruption_is_retained) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.474s
+
+OK
+Materialized/verified 2 raster inputs; references and manifests unchanged
+Materialized/verified 2 raster inputs; references and manifests unchanged

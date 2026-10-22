@@ -1,0 +1,7 @@
+usage: make_results.py [-h] [--set SET] [--before BEFORE] [--out OUT]
+
+options:
+  -h, --help       show this help message and exit
+  --set SET        backend=run_prefix (final results)
+  --before BEFORE  backend=run_prefix (earlier code state, for before/after)
+  --out OUT

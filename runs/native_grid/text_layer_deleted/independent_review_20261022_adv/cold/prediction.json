@@ -1,0 +1,64 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "text_layer_deleted",
+  "source_sha256": "68be2ed8959f3a7bb98d28eb467aa970c25c6653ee8cfc55e3158ddc570de6c4",
+  "input_sha256": "68be2ed8959f3a7bb98d28eb467aa970c25c6653ee8cfc55e3158ddc570de6c4",
+  "backend": "native_grid",
+  "model_revision": "findoclens native_grid 0.1, PyMuPDF 1.27.2.3",
+  "page_bbox": [
+    0.0,
+    0.0,
+    595.2,
+    841.8
+  ],
+  "status": "abstained",
+  "backend_status": "failed",
+  "issues": [
+    {
+      "severity": "error",
+      "code": "needs_visual_fallback",
+      "message": "only 0 extractable glyphs; OCR/visual backend required"
+    },
+    {
+      "code": "empty_extraction",
+      "severity": "error"
+    }
+  ],
+  "tables": [],
+  "capabilities": {
+    "cell_bbox": true,
+    "headers": "text+period+role+colspan",
+    "multi_table": true,
+    "ocr": false,
+    "n_columns": "any (right-aligned numeric)",
+    "hierarchy": "indentation heuristic, optional"
+  },
+  "provenance": {
+    "adapter": "adapters.canonical.convert",
+    "native_schema": "findoclens-0.1",
+    "native_backend": "native_grid",
+    "native_prediction_sha256": "ab5c98c3a5f2323933e94de876691ebc1cd85f5a25b840f8088d9914c2618258",
+    "native_options": {},
+    "raw_artifacts": {
+      "native_findoclens_prediction.json": {
+        "path": "raw/cold/native_findoclens_prediction.json",
+        "sha256": "b89756ffe4321c448719c1ab241852bee0d43482e21fe6543ae1e02cc08984be"
+      }
+    },
+    "code": {
+      "commit": "36950304419878eb2c1ec82f743869554354e46b",
+      "code_dirty": true,
+      "code_dirty_paths": [
+        "M benchmark/raster_variants.py",
+        "?? tests/test_raster_reproduction.py"
+      ]
+    },
+    "lazy_load_on_first_call": false,
+    "backend_meta": {
+      "native_glyph_count": 0,
+      "elapsed_ms": 1.8
+    },
+    "native_status": "failed",
+    "trial": "cold"
+  }
+}

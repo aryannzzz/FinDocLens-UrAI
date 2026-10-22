@@ -1,0 +1,1491 @@
+{
+  "timestamp": "2026-10-22T14:09:18.718488+00:00",
+  "git_commit": "36950304419878eb2c1ec82f743869554354e46b",
+  "frozen_changes": [],
+  "environment": {
+    "platform": "Linux-7.0.11-76070011-generic-x86_64-with-glibc2.35",
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:09:02) [GCC 11.2.0]",
+    "python_executable": "/home/aryannzzz/ur_ai_RnD_agent_starter/.venv/bin/python",
+    "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+    "logical_cpus": 12,
+    "packages": {
+      "PyMuPDF": "1.27.2.3",
+      "pdfplumber": null,
+      "numpy": "2.2.6",
+      "Pillow": "12.0.0",
+      "torch": "2.8.0",
+      "docling": null,
+      "transformers": "4.49.0"
+    },
+    "ram_mb": 15676.2890625,
+    "gpu_probe": {
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,uuid,driver_version,memory.total",
+        "--format=csv,noheader"
+      ],
+      "returncode": 9,
+      "stdout": "NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.\n\n",
+      "stderr": ""
+    }
+  },
+  "reference_status": "AI draft; independent AI review is not human certification",
+  "saved": {
+    "predictions": 450,
+    "metric_mismatches": [],
+    "contract_violations": [],
+    "hash_errors": [],
+    "raw_artifact_hashes_checked": 264,
+    "nondeterministic": []
+  },
+  "evaluator_probes": {
+    "all_cell_periods_roles_links_wrong": {
+      "tables": {
+        "matched": 1,
+        "gold": 1,
+        "predicted": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "extra_tables": 0,
+      "unlocalizable_predicted_tables": 0,
+      "rows": {
+        "matched": 43,
+        "gold": 43,
+        "predicted": 43,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "missed_rows": 0,
+      "spurious_rows": 0,
+      "raw_label_exact": {
+        "correct": 43,
+        "total": 43,
+        "rate": 1.0
+      },
+      "extraneous_row_rate": {
+        "correct": 0,
+        "total": 43,
+        "rate": 0.0
+      },
+      "row_order_accuracy": {
+        "correct": 43,
+        "total": 43,
+        "rate": 1.0
+      },
+      "cell_coverage": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "raw_cell_exact": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "raw_precision_on_matched": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "raw_precision_all_predicted": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "semantic_cell_exact": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "numeric_raw_exact": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "numeric_semantic_exact": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "header_role_accuracy": {
+        "correct": 2,
+        "total": 2,
+        "rate": 1.0
+      },
+      "header_role_precision": {
+        "correct": 2,
+        "total": 2,
+        "rate": 1.0
+      },
+      "grouped_headers": {
+        "matched": 0,
+        "gold": 0,
+        "predicted": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "header_parent_accuracy": {
+        "correct": 0,
+        "total": 0,
+        "rate": null
+      },
+      "hierarchy_edges": {
+        "matched": 42,
+        "gold": 42,
+        "predicted": 42,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "abstention_rate": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "correct_abstention": {
+        "correct": 0,
+        "total": 0,
+        "rate": null
+      },
+      "missing_cells": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_omission_rate": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "invalid_matched_cells": 0,
+      "false_assurance": false,
+      "warnings": [],
+      "gold_cells": 74,
+      "predicted_cells": 74
+    },
+    "rows_reversed_and_reindexed": {
+      "tables": {
+        "matched": 1,
+        "gold": 1,
+        "predicted": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "extra_tables": 0,
+      "unlocalizable_predicted_tables": 0,
+      "rows": {
+        "matched": 43,
+        "gold": 43,
+        "predicted": 43,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "missed_rows": 0,
+      "spurious_rows": 0,
+      "raw_label_exact": {
+        "correct": 43,
+        "total": 43,
+        "rate": 1.0
+      },
+      "extraneous_row_rate": {
+        "correct": 0,
+        "total": 43,
+        "rate": 0.0
+      },
+      "row_order_accuracy": {
+        "correct": 1,
+        "total": 43,
+        "rate": 0.023255813953488372
+      },
+      "cell_coverage": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "raw_cell_exact": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "raw_precision_on_matched": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "raw_precision_all_predicted": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "semantic_cell_exact": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "numeric_raw_exact": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "numeric_semantic_exact": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "header_role_accuracy": {
+        "correct": 2,
+        "total": 2,
+        "rate": 1.0
+      },
+      "header_role_precision": {
+        "correct": 2,
+        "total": 2,
+        "rate": 1.0
+      },
+      "grouped_headers": {
+        "matched": 0,
+        "gold": 0,
+        "predicted": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "header_parent_accuracy": {
+        "correct": 0,
+        "total": 0,
+        "rate": null
+      },
+      "hierarchy_edges": {
+        "matched": 42,
+        "gold": 42,
+        "predicted": 42,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "abstention_rate": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "correct_abstention": {
+        "correct": 0,
+        "total": 0,
+        "rate": null
+      },
+      "missing_cells": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_omission_rate": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "invalid_matched_cells": 0,
+      "false_assurance": false,
+      "warnings": [],
+      "gold_cells": 74,
+      "predicted_cells": 74
+    },
+    "invalid_evidence_and_extra_header": {
+      "tables": {
+        "matched": 1,
+        "gold": 1,
+        "predicted": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "extra_tables": 0,
+      "unlocalizable_predicted_tables": 0,
+      "rows": {
+        "matched": 43,
+        "gold": 43,
+        "predicted": 43,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "missed_rows": 0,
+      "spurious_rows": 0,
+      "raw_label_exact": {
+        "correct": 43,
+        "total": 43,
+        "rate": 1.0
+      },
+      "extraneous_row_rate": {
+        "correct": 0,
+        "total": 43,
+        "rate": 0.0
+      },
+      "row_order_accuracy": {
+        "correct": 43,
+        "total": 43,
+        "rate": 1.0
+      },
+      "cell_coverage": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "raw_cell_exact": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "raw_precision_on_matched": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "raw_precision_all_predicted": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "semantic_cell_exact": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "numeric_raw_exact": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "numeric_semantic_exact": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "header_role_accuracy": {
+        "correct": 2,
+        "total": 2,
+        "rate": 1.0
+      },
+      "header_role_precision": {
+        "correct": 2,
+        "total": 3,
+        "rate": 0.6666666666666666
+      },
+      "grouped_headers": {
+        "matched": 0,
+        "gold": 0,
+        "predicted": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "header_parent_accuracy": {
+        "correct": 0,
+        "total": 0,
+        "rate": null
+      },
+      "hierarchy_edges": {
+        "matched": 42,
+        "gold": 42,
+        "predicted": 42,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "abstention_rate": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "correct_abstention": {
+        "correct": 0,
+        "total": 0,
+        "rate": null
+      },
+      "missing_cells": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_omission_rate": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "invalid_matched_cells": 0,
+      "false_assurance": false,
+      "warnings": [],
+      "gold_cells": 74,
+      "predicted_cells": 74
+    },
+    "tail_row_deleted": {
+      "tables": {
+        "matched": 1,
+        "gold": 1,
+        "predicted": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "extra_tables": 0,
+      "unlocalizable_predicted_tables": 0,
+      "rows": {
+        "matched": 42,
+        "gold": 43,
+        "predicted": 42,
+        "precision": 1.0,
+        "recall": 0.9767441860465116,
+        "f1": 0.9882352941176471
+      },
+      "missed_rows": 1,
+      "spurious_rows": 0,
+      "raw_label_exact": {
+        "correct": 42,
+        "total": 43,
+        "rate": 0.9767441860465116
+      },
+      "extraneous_row_rate": {
+        "correct": 0,
+        "total": 42,
+        "rate": 0.0
+      },
+      "row_order_accuracy": {
+        "correct": 42,
+        "total": 43,
+        "rate": 0.9767441860465116
+      },
+      "cell_coverage": {
+        "correct": 72,
+        "total": 74,
+        "rate": 0.972972972972973
+      },
+      "raw_cell_exact": {
+        "correct": 72,
+        "total": 74,
+        "rate": 0.972972972972973
+      },
+      "raw_precision_on_matched": {
+        "correct": 72,
+        "total": 72,
+        "rate": 1.0
+      },
+      "raw_precision_all_predicted": {
+        "correct": 72,
+        "total": 72,
+        "rate": 1.0
+      },
+      "semantic_cell_exact": {
+        "correct": 72,
+        "total": 74,
+        "rate": 0.972972972972973
+      },
+      "numeric_raw_exact": {
+        "correct": 72,
+        "total": 74,
+        "rate": 0.972972972972973
+      },
+      "numeric_semantic_exact": {
+        "correct": 72,
+        "total": 74,
+        "rate": 0.972972972972973
+      },
+      "header_role_accuracy": {
+        "correct": 2,
+        "total": 2,
+        "rate": 1.0
+      },
+      "header_role_precision": {
+        "correct": 2,
+        "total": 2,
+        "rate": 1.0
+      },
+      "grouped_headers": {
+        "matched": 0,
+        "gold": 0,
+        "predicted": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "header_parent_accuracy": {
+        "correct": 0,
+        "total": 0,
+        "rate": null
+      },
+      "hierarchy_edges": {
+        "matched": 41,
+        "gold": 42,
+        "predicted": 41,
+        "precision": 1.0,
+        "recall": 0.9761904761904762,
+        "f1": 0.9879518072289156
+      },
+      "abstention_rate": {
+        "correct": 0,
+        "total": 72,
+        "rate": 0.0
+      },
+      "correct_abstention": {
+        "correct": 0,
+        "total": 0,
+        "rate": null
+      },
+      "missing_cells": {
+        "correct": 2,
+        "total": 74,
+        "rate": 0.02702702702702703
+      },
+      "silent_omission_rate": {
+        "correct": 2,
+        "total": 74,
+        "rate": 0.02702702702702703
+      },
+      "invalid_matched_cells": 0,
+      "false_assurance": true,
+      "warnings": [],
+      "gold_cells": 74,
+      "predicted_cells": 72
+    },
+    "tail_deleted_unrelated_region_warning": {
+      "tables": {
+        "matched": 1,
+        "gold": 1,
+        "predicted": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "extra_tables": 0,
+      "unlocalizable_predicted_tables": 0,
+      "rows": {
+        "matched": 42,
+        "gold": 43,
+        "predicted": 42,
+        "precision": 1.0,
+        "recall": 0.9767441860465116,
+        "f1": 0.9882352941176471
+      },
+      "missed_rows": 1,
+      "spurious_rows": 0,
+      "raw_label_exact": {
+        "correct": 42,
+        "total": 43,
+        "rate": 0.9767441860465116
+      },
+      "extraneous_row_rate": {
+        "correct": 0,
+        "total": 42,
+        "rate": 0.0
+      },
+      "row_order_accuracy": {
+        "correct": 42,
+        "total": 43,
+        "rate": 0.9767441860465116
+      },
+      "cell_coverage": {
+        "correct": 72,
+        "total": 74,
+        "rate": 0.972972972972973
+      },
+      "raw_cell_exact": {
+        "correct": 72,
+        "total": 74,
+        "rate": 0.972972972972973
+      },
+      "raw_precision_on_matched": {
+        "correct": 72,
+        "total": 72,
+        "rate": 1.0
+      },
+      "raw_precision_all_predicted": {
+        "correct": 72,
+        "total": 72,
+        "rate": 1.0
+      },
+      "semantic_cell_exact": {
+        "correct": 72,
+        "total": 74,
+        "rate": 0.972972972972973
+      },
+      "numeric_raw_exact": {
+        "correct": 72,
+        "total": 74,
+        "rate": 0.972972972972973
+      },
+      "numeric_semantic_exact": {
+        "correct": 72,
+        "total": 74,
+        "rate": 0.972972972972973
+      },
+      "header_role_accuracy": {
+        "correct": 2,
+        "total": 2,
+        "rate": 1.0
+      },
+      "header_role_precision": {
+        "correct": 2,
+        "total": 2,
+        "rate": 1.0
+      },
+      "grouped_headers": {
+        "matched": 0,
+        "gold": 0,
+        "predicted": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "header_parent_accuracy": {
+        "correct": 0,
+        "total": 0,
+        "rate": null
+      },
+      "hierarchy_edges": {
+        "matched": 41,
+        "gold": 42,
+        "predicted": 41,
+        "precision": 1.0,
+        "recall": 0.9761904761904762,
+        "f1": 0.9879518072289156
+      },
+      "abstention_rate": {
+        "correct": 0,
+        "total": 72,
+        "rate": 0.0
+      },
+      "correct_abstention": {
+        "correct": 0,
+        "total": 0,
+        "rate": null
+      },
+      "missing_cells": {
+        "correct": 2,
+        "total": 74,
+        "rate": 0.02702702702702703
+      },
+      "silent_omission_rate": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "invalid_matched_cells": 0,
+      "false_assurance": true,
+      "warnings": [
+        {
+          "code": "omitted_table",
+          "region": 999,
+          "bbox": [
+            0,
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "gold_cells": 74,
+      "predicted_cells": 72
+    },
+    "extra_unmatched_table_headers": {
+      "tables": {
+        "matched": 1,
+        "gold": 1,
+        "predicted": 2,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666
+      },
+      "extra_tables": 1,
+      "unlocalizable_predicted_tables": 0,
+      "rows": {
+        "matched": 43,
+        "gold": 43,
+        "predicted": 86,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666
+      },
+      "missed_rows": 0,
+      "spurious_rows": 43,
+      "raw_label_exact": {
+        "correct": 43,
+        "total": 43,
+        "rate": 1.0
+      },
+      "extraneous_row_rate": {
+        "correct": 43,
+        "total": 86,
+        "rate": 0.5
+      },
+      "row_order_accuracy": {
+        "correct": 43,
+        "total": 43,
+        "rate": 1.0
+      },
+      "cell_coverage": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "raw_cell_exact": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "raw_precision_on_matched": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "raw_precision_all_predicted": {
+        "correct": 74,
+        "total": 148,
+        "rate": 0.5
+      },
+      "semantic_cell_exact": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "numeric_raw_exact": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "numeric_semantic_exact": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "header_role_accuracy": {
+        "correct": 2,
+        "total": 2,
+        "rate": 1.0
+      },
+      "header_role_precision": {
+        "correct": 2,
+        "total": 2,
+        "rate": 1.0
+      },
+      "grouped_headers": {
+        "matched": 0,
+        "gold": 0,
+        "predicted": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "header_parent_accuracy": {
+        "correct": 0,
+        "total": 0,
+        "rate": null
+      },
+      "hierarchy_edges": {
+        "matched": 42,
+        "gold": 42,
+        "predicted": 84,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666
+      },
+      "abstention_rate": {
+        "correct": 0,
+        "total": 148,
+        "rate": 0.0
+      },
+      "correct_abstention": {
+        "correct": 0,
+        "total": 0,
+        "rate": null
+      },
+      "missing_cells": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_omission_rate": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "invalid_matched_cells": 0,
+      "false_assurance": true,
+      "warnings": [],
+      "gold_cells": 74,
+      "predicted_cells": 148
+    }
+  },
+  "native_probes": {
+    "review_two_columns": {
+      "metrics": {
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "extra_tables": 0,
+        "unlocalizable_predicted_tables": 0,
+        "rows": {
+          "matched": 4,
+          "gold": 4,
+          "predicted": 4,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "missed_rows": 0,
+        "spurious_rows": 0,
+        "raw_label_exact": {
+          "correct": 4,
+          "total": 4,
+          "rate": 1.0
+        },
+        "extraneous_row_rate": {
+          "correct": 0,
+          "total": 4,
+          "rate": 0.0
+        },
+        "row_order_accuracy": {
+          "correct": 4,
+          "total": 4,
+          "rate": 1.0
+        },
+        "cell_coverage": {
+          "correct": 8,
+          "total": 8,
+          "rate": 1.0
+        },
+        "raw_cell_exact": {
+          "correct": 8,
+          "total": 8,
+          "rate": 1.0
+        },
+        "raw_precision_on_matched": {
+          "correct": 8,
+          "total": 8,
+          "rate": 1.0
+        },
+        "raw_precision_all_predicted": {
+          "correct": 8,
+          "total": 8,
+          "rate": 1.0
+        },
+        "semantic_cell_exact": {
+          "correct": 8,
+          "total": 8,
+          "rate": 1.0
+        },
+        "numeric_raw_exact": {
+          "correct": 8,
+          "total": 8,
+          "rate": 1.0
+        },
+        "numeric_semantic_exact": {
+          "correct": 8,
+          "total": 8,
+          "rate": 1.0
+        },
+        "header_role_accuracy": {
+          "correct": 1,
+          "total": 2,
+          "rate": 0.5
+        },
+        "header_role_precision": {
+          "correct": 1,
+          "total": 2,
+          "rate": 0.5
+        },
+        "grouped_headers": {
+          "matched": 0,
+          "gold": 0,
+          "predicted": 1,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0
+        },
+        "header_parent_accuracy": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "hierarchy_edges": {
+          "matched": 0,
+          "gold": 0,
+          "predicted": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "abstention_rate": {
+          "correct": 0,
+          "total": 8,
+          "rate": 0.0
+        },
+        "correct_abstention": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "missing_cells": {
+          "correct": 0,
+          "total": 8,
+          "rate": 0.0
+        },
+        "silent_omission_rate": {
+          "correct": 0,
+          "total": 8,
+          "rate": 0.0
+        },
+        "invalid_matched_cells": 0,
+        "false_assurance": true,
+        "warnings": [],
+        "gold_cells": 8,
+        "predicted_cells": 8
+      },
+      "status": "success",
+      "elapsed_ms": 6.157669995445758,
+      "input_sha256": "241c50d8af76a703eb5dee8e314c9507de4c9e34d3a3ff7db2aa5c0dded11e26",
+      "issues": [],
+      "native_meta": {
+        "native_glyph_count": 53,
+        "column_alignment": "right",
+        "elapsed_ms": 5.5
+      }
+    },
+    "review_year_amount": {
+      "metrics": {
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "extra_tables": 0,
+        "unlocalizable_predicted_tables": 0,
+        "rows": {
+          "matched": 3,
+          "gold": 4,
+          "predicted": 3,
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571
+        },
+        "missed_rows": 1,
+        "spurious_rows": 0,
+        "raw_label_exact": {
+          "correct": 3,
+          "total": 4,
+          "rate": 0.75
+        },
+        "extraneous_row_rate": {
+          "correct": 0,
+          "total": 3,
+          "rate": 0.0
+        },
+        "row_order_accuracy": {
+          "correct": 0,
+          "total": 4,
+          "rate": 0.0
+        },
+        "cell_coverage": {
+          "correct": 6,
+          "total": 8,
+          "rate": 0.75
+        },
+        "raw_cell_exact": {
+          "correct": 6,
+          "total": 8,
+          "rate": 0.75
+        },
+        "raw_precision_on_matched": {
+          "correct": 6,
+          "total": 6,
+          "rate": 1.0
+        },
+        "raw_precision_all_predicted": {
+          "correct": 6,
+          "total": 6,
+          "rate": 1.0
+        },
+        "semantic_cell_exact": {
+          "correct": 6,
+          "total": 8,
+          "rate": 0.75
+        },
+        "numeric_raw_exact": {
+          "correct": 6,
+          "total": 8,
+          "rate": 0.75
+        },
+        "numeric_semantic_exact": {
+          "correct": 6,
+          "total": 8,
+          "rate": 0.75
+        },
+        "header_role_accuracy": {
+          "correct": 1,
+          "total": 2,
+          "rate": 0.5
+        },
+        "header_role_precision": {
+          "correct": 1,
+          "total": 2,
+          "rate": 0.5
+        },
+        "grouped_headers": {
+          "matched": 0,
+          "gold": 0,
+          "predicted": 1,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0
+        },
+        "header_parent_accuracy": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "hierarchy_edges": {
+          "matched": 0,
+          "gold": 0,
+          "predicted": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "abstention_rate": {
+          "correct": 0,
+          "total": 6,
+          "rate": 0.0
+        },
+        "correct_abstention": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "missing_cells": {
+          "correct": 2,
+          "total": 8,
+          "rate": 0.25
+        },
+        "silent_omission_rate": {
+          "correct": 2,
+          "total": 8,
+          "rate": 0.25
+        },
+        "invalid_matched_cells": 0,
+        "false_assurance": true,
+        "warnings": [],
+        "gold_cells": 8,
+        "predicted_cells": 6
+      },
+      "status": "success",
+      "elapsed_ms": 3.6683419602923095,
+      "input_sha256": "e58efd78de8104e984d69537e8676500c16a1540e62b0615f5b818822793a5a0",
+      "issues": [],
+      "native_meta": {
+        "native_glyph_count": 55,
+        "column_alignment": "right",
+        "elapsed_ms": 2.6
+      }
+    },
+    "review_one_column": {
+      "metrics": {
+        "tables": {
+          "matched": 0,
+          "gold": 1,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "extra_tables": 0,
+        "unlocalizable_predicted_tables": 0,
+        "rows": {
+          "matched": 0,
+          "gold": 4,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "missed_rows": 4,
+        "spurious_rows": 0,
+        "raw_label_exact": {
+          "correct": 0,
+          "total": 4,
+          "rate": 0.0
+        },
+        "extraneous_row_rate": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "row_order_accuracy": {
+          "correct": 0,
+          "total": 4,
+          "rate": 0.0
+        },
+        "cell_coverage": {
+          "correct": 0,
+          "total": 4,
+          "rate": 0.0
+        },
+        "raw_cell_exact": {
+          "correct": 0,
+          "total": 4,
+          "rate": 0.0
+        },
+        "raw_precision_on_matched": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "raw_precision_all_predicted": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "semantic_cell_exact": {
+          "correct": 0,
+          "total": 4,
+          "rate": 0.0
+        },
+        "numeric_raw_exact": {
+          "correct": 0,
+          "total": 4,
+          "rate": 0.0
+        },
+        "numeric_semantic_exact": {
+          "correct": 0,
+          "total": 4,
+          "rate": 0.0
+        },
+        "header_role_accuracy": {
+          "correct": 0,
+          "total": 1,
+          "rate": 0.0
+        },
+        "header_role_precision": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "grouped_headers": {
+          "matched": 0,
+          "gold": 0,
+          "predicted": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "header_parent_accuracy": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "hierarchy_edges": {
+          "matched": 0,
+          "gold": 0,
+          "predicted": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "abstention_rate": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "correct_abstention": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "missing_cells": {
+          "correct": 4,
+          "total": 4,
+          "rate": 1.0
+        },
+        "silent_omission_rate": {
+          "correct": 0,
+          "total": 4,
+          "rate": 0.0
+        },
+        "invalid_matched_cells": 0,
+        "false_assurance": false,
+        "warnings": [
+          {
+            "severity": "info",
+            "code": "unassigned_numeric_tokens",
+            "count": 4
+          },
+          {
+            "severity": "warning",
+            "code": "no_tables_found",
+            "message": "text layer present but no right-aligned multi-column numeric table found"
+          }
+        ],
+        "gold_cells": 4,
+        "predicted_cells": 0
+      },
+      "status": "abstained",
+      "elapsed_ms": 1.519651967100799,
+      "input_sha256": "c8ad7975117314b145c8062c983e29a2165d9e3cbbad56a392656e96809617bd",
+      "issues": [
+        {
+          "severity": "info",
+          "code": "unassigned_numeric_tokens",
+          "count": 4
+        },
+        {
+          "severity": "warning",
+          "code": "no_tables_found",
+          "message": "text layer present but no right-aligned multi-column numeric table found"
+        }
+      ],
+      "native_meta": {
+        "native_glyph_count": 35,
+        "column_alignment": "right",
+        "unassigned_numeric_tokens": [
+          {
+            "raw": "310",
+            "bbox": [
+              185.0,
+              109.0,
+              218.0,
+              122.2
+            ]
+          },
+          {
+            "raw": "340",
+            "bbox": [
+              185.0,
+              164.0,
+              218.0,
+              177.2
+            ]
+          },
+          {
+            "raw": "370",
+            "bbox": [
+              185.0,
+              219.0,
+              218.0,
+              232.2
+            ]
+          },
+          {
+            "raw": "400",
+            "bbox": [
+              185.0,
+              274.0,
+              218.0,
+              287.2
+            ]
+          }
+        ],
+        "elapsed_ms": 1.3
+      }
+    },
+    "review_mixed_columns": {
+      "metrics": {
+        "tables": {
+          "matched": 1,
+          "gold": 2,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        },
+        "extra_tables": 0,
+        "unlocalizable_predicted_tables": 0,
+        "rows": {
+          "matched": 4,
+          "gold": 8,
+          "predicted": 4,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        },
+        "missed_rows": 4,
+        "spurious_rows": 0,
+        "raw_label_exact": {
+          "correct": 4,
+          "total": 8,
+          "rate": 0.5
+        },
+        "extraneous_row_rate": {
+          "correct": 0,
+          "total": 4,
+          "rate": 0.0
+        },
+        "row_order_accuracy": {
+          "correct": 4,
+          "total": 8,
+          "rate": 0.5
+        },
+        "cell_coverage": {
+          "correct": 8,
+          "total": 12,
+          "rate": 0.6666666666666666
+        },
+        "raw_cell_exact": {
+          "correct": 8,
+          "total": 12,
+          "rate": 0.6666666666666666
+        },
+        "raw_precision_on_matched": {
+          "correct": 8,
+          "total": 8,
+          "rate": 1.0
+        },
+        "raw_precision_all_predicted": {
+          "correct": 8,
+          "total": 8,
+          "rate": 1.0
+        },
+        "semantic_cell_exact": {
+          "correct": 8,
+          "total": 12,
+          "rate": 0.6666666666666666
+        },
+        "numeric_raw_exact": {
+          "correct": 8,
+          "total": 12,
+          "rate": 0.6666666666666666
+        },
+        "numeric_semantic_exact": {
+          "correct": 8,
+          "total": 12,
+          "rate": 0.6666666666666666
+        },
+        "header_role_accuracy": {
+          "correct": 1,
+          "total": 3,
+          "rate": 0.3333333333333333
+        },
+        "header_role_precision": {
+          "correct": 1,
+          "total": 2,
+          "rate": 0.5
+        },
+        "grouped_headers": {
+          "matched": 0,
+          "gold": 0,
+          "predicted": 1,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0
+        },
+        "header_parent_accuracy": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "hierarchy_edges": {
+          "matched": 0,
+          "gold": 0,
+          "predicted": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "abstention_rate": {
+          "correct": 0,
+          "total": 8,
+          "rate": 0.0
+        },
+        "correct_abstention": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "missing_cells": {
+          "correct": 4,
+          "total": 12,
+          "rate": 0.3333333333333333
+        },
+        "silent_omission_rate": {
+          "correct": 4,
+          "total": 12,
+          "rate": 0.3333333333333333
+        },
+        "invalid_matched_cells": 0,
+        "false_assurance": true,
+        "warnings": [
+          {
+            "severity": "info",
+            "code": "unassigned_numeric_tokens",
+            "count": 4
+          }
+        ],
+        "gold_cells": 12,
+        "predicted_cells": 8
+      },
+      "status": "success",
+      "elapsed_ms": 2.7696519973687828,
+      "input_sha256": "0dbbd3dd4df779f28e7dc2fc1215f5b6317f6de643b9ff1fc440e0f85523e117",
+      "issues": [
+        {
+          "severity": "info",
+          "code": "unassigned_numeric_tokens",
+          "count": 4
+        }
+      ],
+      "native_meta": {
+        "native_glyph_count": 88,
+        "column_alignment": "right",
+        "unassigned_numeric_tokens": [
+          {
+            "raw": "310",
+            "bbox": [
+              590.0,
+              109.0,
+              623.0,
+              122.2
+            ]
+          },
+          {
+            "raw": "340",
+            "bbox": [
+              590.0,
+              164.0,
+              623.0,
+              177.2
+            ]
+          },
+          {
+            "raw": "370",
+            "bbox": [
+              590.0,
+              219.0,
+              623.0,
+              232.2
+            ]
+          },
+          {
+            "raw": "400",
+            "bbox": [
+              590.0,
+              274.0,
+              623.0,
+              287.2
+            ]
+          }
+        ],
+        "elapsed_ms": 1.9
+      }
+    }
+  },
+  "elapsed_ms": 2683.5149559774436
+}

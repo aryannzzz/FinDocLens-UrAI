@@ -1,0 +1,255 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "review_year_amount",
+  "source_sha256": "e58efd78de8104e984d69537e8676500c16a1540e62b0615f5b818822793a5a0",
+  "input_sha256": "e58efd78de8104e984d69537e8676500c16a1540e62b0615f5b818822793a5a0",
+  "backend": "native_grid",
+  "model_revision": "findoclens native_grid 0.1, PyMuPDF 1.27.2.3",
+  "page_bbox": [
+    0.0,
+    0.0,
+    800.0,
+    500.0
+  ],
+  "status": "success",
+  "backend_status": "ok",
+  "issues": [],
+  "tables": [
+    {
+      "table_id": "t0",
+      "page": 1,
+      "bbox": [
+        25.0,
+        64.0,
+        336.0,
+        287.2
+      ],
+      "reading_order": 0,
+      "headers": [
+        {
+          "header_id": "t0_c0",
+          "kind": "leaf",
+          "column_index": 0,
+          "text": "2025",
+          "period": "2025-03-31",
+          "role": "amount",
+          "bbox": [
+            185.0,
+            109.0,
+            229.0,
+            122.2
+          ],
+          "colspan": 1,
+          "rowspan": 1,
+          "native_header_id": "t0h2",
+          "parent_id": "t0_gt0h0"
+        },
+        {
+          "header_id": "t0_c1",
+          "kind": "leaf",
+          "column_index": 1,
+          "text": "2026",
+          "period": "2025-03-31",
+          "role": "amount",
+          "bbox": [
+            270.0,
+            109.0,
+            314.0,
+            122.2
+          ],
+          "colspan": 1,
+          "rowspan": 1,
+          "native_header_id": "t0h3",
+          "parent_id": "t0_gt0h0"
+        },
+        {
+          "header_id": "t0_gt0h0",
+          "kind": "group",
+          "column_index": 0,
+          "text": "2025/3",
+          "period": "2025-03-31",
+          "role": null,
+          "bbox": [
+            185.0,
+            64.0,
+            251.0,
+            77.2
+          ],
+          "colspan": 2,
+          "rowspan": 1,
+          "native_header_id": "t0h0"
+        }
+      ],
+      "rows": [
+        {
+          "row_id": "t0_r0",
+          "row_index": 0,
+          "label": "売掛金",
+          "raw_label": "売掛金",
+          "parent_path": [],
+          "bbox": [
+            25.0,
+            164.0,
+            303.0,
+            177.2
+          ],
+          "bbox_status": null,
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "t0_c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "340",
+              "value": 340,
+              "status": "observed",
+              "bbox": [
+                185.0,
+                164.0,
+                218.0,
+                177.2
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 1,
+              "header_id": "t0_c1",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "351",
+              "value": 351,
+              "status": "observed",
+              "bbox": [
+                270.0,
+                164.0,
+                303.0,
+                177.2
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf"
+            }
+          ]
+        },
+        {
+          "row_id": "t0_r1",
+          "row_index": 1,
+          "label": "棚卸資産",
+          "raw_label": "棚卸資産",
+          "parent_path": [],
+          "bbox": [
+            25.0,
+            219.0,
+            303.0,
+            232.2
+          ],
+          "bbox_status": null,
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "t0_c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "370",
+              "value": 370,
+              "status": "observed",
+              "bbox": [
+                185.0,
+                219.0,
+                218.0,
+                232.2
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 1,
+              "header_id": "t0_c1",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "381",
+              "value": 381,
+              "status": "observed",
+              "bbox": [
+                270.0,
+                219.0,
+                303.0,
+                232.2
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf"
+            }
+          ]
+        },
+        {
+          "row_id": "t0_r2",
+          "row_index": 2,
+          "label": "その他",
+          "raw_label": "その他",
+          "parent_path": [],
+          "bbox": [
+            25.0,
+            274.0,
+            303.0,
+            287.2
+          ],
+          "bbox_status": null,
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "t0_c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "400",
+              "value": 400,
+              "status": "observed",
+              "bbox": [
+                185.0,
+                274.0,
+                218.0,
+                287.2
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 1,
+              "header_id": "t0_c1",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "411",
+              "value": 411,
+              "status": "observed",
+              "bbox": [
+                270.0,
+                274.0,
+                303.0,
+                287.2
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf"
+            }
+          ]
+        }
+      ],
+      "issues": [],
+      "unit": "百万円",
+      "capability_status": {
+        "cell_bbox": true,
+        "headers": "text+period+role+colspan"
+      }
+    }
+  ],
+  "capabilities": {
+    "cell_bbox": true,
+    "headers": "text+period+role+colspan",
+    "multi_table": true,
+    "ocr": false,
+    "n_columns": "any (right-aligned numeric)",
+    "hierarchy": "indentation heuristic, optional"
+  },
+  "provenance": {}
+}

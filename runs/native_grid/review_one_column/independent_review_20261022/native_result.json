@@ -1,0 +1,79 @@
+{
+  "document_id": "page",
+  "source_sha256": "c8ad7975117314b145c8062c983e29a2165d9e3cbbad56a392656e96809617bd",
+  "backend": "native_grid",
+  "model_revision": "findoclens native_grid 0.1, PyMuPDF 1.27.2.3",
+  "page": 0,
+  "page_bbox": [
+    0.0,
+    0.0,
+    800.0,
+    500.0
+  ],
+  "tables": [],
+  "status": "no_tables",
+  "issues": [
+    {
+      "severity": "info",
+      "code": "unassigned_numeric_tokens",
+      "count": 4
+    },
+    {
+      "severity": "warning",
+      "code": "no_tables_found",
+      "message": "text layer present but no right-aligned multi-column numeric table found"
+    }
+  ],
+  "capabilities": {
+    "cell_bbox": true,
+    "headers": "text+period+role+colspan",
+    "multi_table": true,
+    "ocr": false,
+    "n_columns": "any (right-aligned numeric)",
+    "hierarchy": "indentation heuristic, optional"
+  },
+  "meta": {
+    "native_glyph_count": 35,
+    "column_alignment": "right",
+    "unassigned_numeric_tokens": [
+      {
+        "raw": "310",
+        "bbox": [
+          185.0,
+          109.0,
+          218.0,
+          122.2
+        ]
+      },
+      {
+        "raw": "340",
+        "bbox": [
+          185.0,
+          164.0,
+          218.0,
+          177.2
+        ]
+      },
+      {
+        "raw": "370",
+        "bbox": [
+          185.0,
+          219.0,
+          218.0,
+          232.2
+        ]
+      },
+      {
+        "raw": "400",
+        "bbox": [
+          185.0,
+          274.0,
+          218.0,
+          287.2
+        ]
+      }
+    ],
+    "elapsed_ms": 1.3
+  },
+  "schema_version": "findoclens-0.1"
+}

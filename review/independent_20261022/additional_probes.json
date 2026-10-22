@@ -1,0 +1,1753 @@
+{
+  "timestamp": "2026-10-22T16:23:03.713861+00:00",
+  "git_commit": "fb8481d5b1ce8e032e1fc34bda332860e56457f1",
+  "router": {
+    "review_year_amount": {
+      "status": "ok",
+      "decisions": [
+        "native_grid clean: accepted without model backend (route=native_accept)"
+      ],
+      "issues": []
+    },
+    "review_mixed_columns": {
+      "status": "ok",
+      "decisions": [
+        "native_v2 disagrees with native_grid (8 mismatches, 1 vs 1 tables); see meta.cmp_native_v2",
+        "native_grid clean: accepted without model backend (route=native_accept)"
+      ],
+      "issues": [
+        {
+          "severity": "info",
+          "code": "unassigned_numeric_tokens",
+          "count": 4
+        }
+      ]
+    }
+  },
+  "spans": {
+    "body_rowspan": {
+      "raw_grid": [
+        {
+          "r0": 0,
+          "r1": 1,
+          "c0": 0,
+          "c1": 1,
+          "text": "科目",
+          "header": true,
+          "bbox": null
+        },
+        {
+          "r0": 0,
+          "r1": 1,
+          "c0": 1,
+          "c1": 2,
+          "text": "2025/3",
+          "header": true,
+          "bbox": null
+        },
+        {
+          "r0": 0,
+          "r1": 1,
+          "c0": 2,
+          "c1": 3,
+          "text": "2026/3",
+          "header": true,
+          "bbox": null
+        },
+        {
+          "r0": 1,
+          "r1": 3,
+          "c0": 0,
+          "c1": 1,
+          "text": "現金",
+          "header": false,
+          "bbox": null
+        },
+        {
+          "r0": 1,
+          "r1": 2,
+          "c0": 1,
+          "c1": 2,
+          "text": "10",
+          "header": false,
+          "bbox": null
+        },
+        {
+          "r0": 1,
+          "r1": 2,
+          "c0": 2,
+          "c1": 3,
+          "text": "20",
+          "header": false,
+          "bbox": null
+        },
+        {
+          "r0": 2,
+          "r1": 3,
+          "c0": 1,
+          "c1": 2,
+          "text": "30",
+          "header": false,
+          "bbox": null
+        },
+        {
+          "r0": 2,
+          "r1": 3,
+          "c0": 2,
+          "c1": 3,
+          "text": "40",
+          "header": false,
+          "bbox": null
+        }
+      ],
+      "mapped_rows": [
+        {
+          "label": "現金",
+          "cells": [
+            "10",
+            "20"
+          ]
+        },
+        {
+          "label": null,
+          "cells": [
+            "30",
+            "40"
+          ]
+        }
+      ]
+    },
+    "equal_span_header_groups": [
+      {
+        "header_id": "t_c0",
+        "kind": "leaf",
+        "column_index": 0,
+        "text": "金額",
+        "period": "2025-03-31",
+        "role": "amount",
+        "bbox": null,
+        "colspan": 1,
+        "rowspan": 1,
+        "native_header_id": "amount",
+        "parent_id": "t_gouter"
+      },
+      {
+        "header_id": "t_c1",
+        "kind": "leaf",
+        "column_index": 1,
+        "text": "構成比",
+        "period": "2025-03-31",
+        "role": "composition_pct",
+        "bbox": null,
+        "colspan": 1,
+        "rowspan": 1,
+        "native_header_id": "pct",
+        "parent_id": "t_gouter"
+      },
+      {
+        "header_id": "t_gouter",
+        "kind": "group",
+        "column_index": 0,
+        "text": "連結",
+        "period": null,
+        "role": null,
+        "bbox": null,
+        "colspan": 2,
+        "rowspan": 1,
+        "native_header_id": "outer"
+      },
+      {
+        "header_id": "t_ginner",
+        "kind": "group",
+        "column_index": 0,
+        "text": "2025年3月期",
+        "period": "2025-03-31",
+        "role": null,
+        "bbox": null,
+        "colspan": 2,
+        "rowspan": 1,
+        "native_header_id": "inner"
+      }
+    ],
+    "reference_headers_with_rowspan_gt_one": []
+  },
+  "cohorts": {
+    "summaries": 25,
+    "cohort_mismatches": []
+  },
+  "fresh": {
+    "pages": 32,
+    "metric_differences": [],
+    "extraction_differences": [],
+    "rows": [
+      {
+        "backend": "auto",
+        "document": "daiwabo_p10",
+        "set": "main",
+        "status": "partial",
+        "raw": {
+          "correct": 63,
+          "total": 63,
+          "rate": 1.0
+        },
+        "all_raw": {
+          "correct": 63,
+          "total": 67,
+          "rate": 0.9402985074626866
+        },
+        "rows": {
+          "matched": 21,
+          "gold": 21,
+          "predicted": 21,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tables": {
+          "matched": 3,
+          "gold": 3,
+          "predicted": 3,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 6,
+          "total": 10,
+          "rate": 0.6
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 7,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 381.2990140286274,
+        "warm_median_ms": null,
+        "rss_mb": 84.171875,
+        "artifact": "runs/auto/daiwabo_p10/independent_review_20261022_main/cold/metrics.json"
+      },
+      {
+        "backend": "auto",
+        "document": "elecom_p9_scan200",
+        "set": "raster",
+        "status": "partial",
+        "raw": {
+          "correct": 34,
+          "total": 56,
+          "rate": 0.6071428571428571
+        },
+        "all_raw": {
+          "correct": 34,
+          "total": 56,
+          "rate": 0.6071428571428571
+        },
+        "rows": {
+          "matched": 19,
+          "gold": 34,
+          "predicted": 34,
+          "precision": 0.5588235294117647,
+          "recall": 0.5588235294117647,
+          "f1": 0.5588235294117647
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 2,
+          "total": 2,
+          "rate": 1.0
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 33,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 21766.72791899182,
+        "warm_median_ms": null,
+        "rss_mb": 112.51953125,
+        "artifact": "runs/auto/elecom_p9_scan200/independent_review_20261022_raster/cold/metrics.json"
+      },
+      {
+        "backend": "docling_cmfalse",
+        "document": "daiwabo_p10",
+        "set": "main",
+        "status": "abstained",
+        "raw": {
+          "correct": 0,
+          "total": 63,
+          "rate": 0.0
+        },
+        "all_raw": {
+          "correct": 0,
+          "total": 67,
+          "rate": 0.0
+        },
+        "rows": {
+          "matched": 1,
+          "gold": 21,
+          "predicted": 13,
+          "precision": 0.07692307692307693,
+          "recall": 0.047619047619047616,
+          "f1": 0.058823529411764705
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 3,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5
+        },
+        "headers": {
+          "correct": 0,
+          "total": 10,
+          "rate": 0.0
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 7,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 11115.12000800576,
+        "warm_median_ms": 5818.624458042905,
+        "rss_mb": 1318.70703125,
+        "artifact": "runs/docling_cmfalse/daiwabo_p10/independent_review_20261022_main/cold/metrics.json"
+      },
+      {
+        "backend": "docling_cmfalse",
+        "document": "elecom_p9",
+        "set": "main",
+        "status": "partial",
+        "raw": {
+          "correct": 56,
+          "total": 56,
+          "rate": 1.0
+        },
+        "all_raw": {
+          "correct": 56,
+          "total": 56,
+          "rate": 1.0
+        },
+        "rows": {
+          "matched": 34,
+          "gold": 34,
+          "predicted": 34,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 2,
+          "total": 2,
+          "rate": 1.0
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 33,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 11323.382284957916,
+        "warm_median_ms": 6187.842335028108,
+        "rss_mb": 1343.140625,
+        "artifact": "runs/docling_cmfalse/elecom_p9/independent_review_20261022_main/cold/metrics.json"
+      },
+      {
+        "backend": "docling_cmfalse",
+        "document": "original",
+        "set": "main",
+        "status": "partial",
+        "raw": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "all_raw": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "rows": {
+          "matched": 43,
+          "gold": 43,
+          "predicted": 43,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 2,
+          "total": 2,
+          "rate": 1.0
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 42,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 12208.595466974657,
+        "warm_median_ms": 7545.828684989829,
+        "rss_mb": 1385.4296875,
+        "artifact": "runs/docling_cmfalse/original/independent_review_20261022_main/cold/metrics.json"
+      },
+      {
+        "backend": "docling_cmtrue",
+        "document": "daiwabo_p10",
+        "set": "main",
+        "status": "partial",
+        "raw": {
+          "correct": 0,
+          "total": 63,
+          "rate": 0.0
+        },
+        "all_raw": {
+          "correct": 0,
+          "total": 67,
+          "rate": 0.0
+        },
+        "rows": {
+          "matched": 0,
+          "gold": 21,
+          "predicted": 13,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 3,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5
+        },
+        "headers": {
+          "correct": 3,
+          "total": 10,
+          "rate": 0.3
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 7,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 15503.09405697044,
+        "warm_median_ms": 5859.225069987588,
+        "rss_mb": 1262.15234375,
+        "artifact": "runs/docling_cmtrue/daiwabo_p10/independent_review_20261022_main/cold/metrics.json"
+      },
+      {
+        "backend": "docling_cmtrue",
+        "document": "elecom_p9",
+        "set": "main",
+        "status": "partial",
+        "raw": {
+          "correct": 56,
+          "total": 56,
+          "rate": 1.0
+        },
+        "all_raw": {
+          "correct": 56,
+          "total": 56,
+          "rate": 1.0
+        },
+        "rows": {
+          "matched": 34,
+          "gold": 34,
+          "predicted": 34,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 2,
+          "total": 2,
+          "rate": 1.0
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 33,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 12747.856935020536,
+        "warm_median_ms": 5992.9566939827055,
+        "rss_mb": 1354.9453125,
+        "artifact": "runs/docling_cmtrue/elecom_p9/independent_review_20261022_main/cold/metrics.json"
+      },
+      {
+        "backend": "docling_cmtrue",
+        "document": "original",
+        "set": "main",
+        "status": "partial",
+        "raw": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "all_raw": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "rows": {
+          "matched": 43,
+          "gold": 43,
+          "predicted": 43,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 2,
+          "total": 2,
+          "rate": 1.0
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 42,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 15126.06224999763,
+        "warm_median_ms": 7328.467217972502,
+        "rss_mb": 1442.97265625,
+        "artifact": "runs/docling_cmtrue/original/independent_review_20261022_main/cold/metrics.json"
+      },
+      {
+        "backend": "docling_rapidocr",
+        "document": "daiwabo_p10",
+        "set": "main",
+        "status": "partial",
+        "raw": {
+          "correct": 0,
+          "total": 63,
+          "rate": 0.0
+        },
+        "all_raw": {
+          "correct": 0,
+          "total": 67,
+          "rate": 0.0
+        },
+        "rows": {
+          "matched": 0,
+          "gold": 21,
+          "predicted": 13,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 3,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5
+        },
+        "headers": {
+          "correct": 3,
+          "total": 10,
+          "rate": 0.3
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 7,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 15090.825572027825,
+        "warm_median_ms": 9408.667901006993,
+        "rss_mb": 1821.3125,
+        "artifact": "runs/docling_rapidocr/daiwabo_p10/independent_review_20261022_main/cold/metrics.json"
+      },
+      {
+        "backend": "docling_rapidocr",
+        "document": "daiwabo_p10_scan200",
+        "set": "raster",
+        "status": "partial",
+        "raw": {
+          "correct": 0,
+          "total": 63,
+          "rate": 0.0
+        },
+        "all_raw": {
+          "correct": 0,
+          "total": 67,
+          "rate": 0.0
+        },
+        "rows": {
+          "matched": 0,
+          "gold": 21,
+          "predicted": 13,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 3,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5
+        },
+        "headers": {
+          "correct": 2,
+          "total": 10,
+          "rate": 0.2
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 7,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 15769.276202947367,
+        "warm_median_ms": 9705.749977030791,
+        "rss_mb": 1896.4140625,
+        "artifact": "runs/docling_rapidocr/daiwabo_p10_scan200/independent_review_20261022_raster/cold/metrics.json"
+      },
+      {
+        "backend": "docling_rapidocr",
+        "document": "elecom_p9",
+        "set": "main",
+        "status": "partial",
+        "raw": {
+          "correct": 56,
+          "total": 56,
+          "rate": 1.0
+        },
+        "all_raw": {
+          "correct": 56,
+          "total": 56,
+          "rate": 1.0
+        },
+        "rows": {
+          "matched": 34,
+          "gold": 34,
+          "predicted": 34,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 2,
+          "total": 2,
+          "rate": 1.0
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 33,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 22710.3115299833,
+        "warm_median_ms": 10257.750796969049,
+        "rss_mb": 1872.69921875,
+        "artifact": "runs/docling_rapidocr/elecom_p9/independent_review_20261022_main/cold/metrics.json"
+      },
+      {
+        "backend": "docling_rapidocr",
+        "document": "elecom_p9_scan200",
+        "set": "raster",
+        "status": "partial",
+        "raw": {
+          "correct": 34,
+          "total": 56,
+          "rate": 0.6071428571428571
+        },
+        "all_raw": {
+          "correct": 34,
+          "total": 56,
+          "rate": 0.6071428571428571
+        },
+        "rows": {
+          "matched": 19,
+          "gold": 34,
+          "predicted": 34,
+          "precision": 0.5588235294117647,
+          "recall": 0.5588235294117647,
+          "f1": 0.5588235294117647
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 2,
+          "total": 2,
+          "rate": 1.0
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 33,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 16958.60586699564,
+        "warm_median_ms": 10253.48302704515,
+        "rss_mb": 1992.78125,
+        "artifact": "runs/docling_rapidocr/elecom_p9_scan200/independent_review_20261022_raster/cold/metrics.json"
+      },
+      {
+        "backend": "docling_rapidocr",
+        "document": "original",
+        "set": "main",
+        "status": "partial",
+        "raw": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "all_raw": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "rows": {
+          "matched": 43,
+          "gold": 43,
+          "predicted": 43,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 2,
+          "total": 2,
+          "rate": 1.0
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 42,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 19068.59948404599,
+        "warm_median_ms": 13833.392662985716,
+        "rss_mb": 1959.22265625,
+        "artifact": "runs/docling_rapidocr/original/independent_review_20261022_main/cold/metrics.json"
+      },
+      {
+        "backend": "docling_regions",
+        "document": "daiwabo_p10",
+        "set": "main",
+        "status": "partial",
+        "raw": {
+          "correct": 51,
+          "total": 63,
+          "rate": 0.8095238095238095
+        },
+        "all_raw": {
+          "correct": 51,
+          "total": 67,
+          "rate": 0.7611940298507462
+        },
+        "rows": {
+          "matched": 17,
+          "gold": 21,
+          "predicted": 17,
+          "precision": 1.0,
+          "recall": 0.8095238095238095,
+          "f1": 0.8947368421052632
+        },
+        "tables": {
+          "matched": 2,
+          "gold": 3,
+          "predicted": 2,
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8
+        },
+        "headers": {
+          "correct": 6,
+          "total": 10,
+          "rate": 0.6
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 7,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 24507.65619694721,
+        "warm_median_ms": 9800.510812026914,
+        "rss_mb": 1424.9375,
+        "artifact": "runs/docling_regions/daiwabo_p10/independent_review_20261022_main/cold/metrics.json"
+      },
+      {
+        "backend": "native_grid",
+        "document": "daiwabo_p10",
+        "set": "main",
+        "status": "partial",
+        "raw": {
+          "correct": 63,
+          "total": 63,
+          "rate": 1.0
+        },
+        "all_raw": {
+          "correct": 63,
+          "total": 67,
+          "rate": 0.9402985074626866
+        },
+        "rows": {
+          "matched": 21,
+          "gold": 21,
+          "predicted": 21,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tables": {
+          "matched": 3,
+          "gold": 3,
+          "predicted": 3,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 6,
+          "total": 10,
+          "rate": 0.6
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 7,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 342.27158298017457,
+        "warm_median_ms": 72.00388499768451,
+        "rss_mb": 84.51171875,
+        "artifact": "runs/native_grid/daiwabo_p10/independent_review_20261022_main/cold/metrics.json"
+      },
+      {
+        "backend": "native_grid",
+        "document": "daiwabo_p10_scan200",
+        "set": "raster",
+        "status": "abstained",
+        "raw": {
+          "correct": 0,
+          "total": 63,
+          "rate": 0.0
+        },
+        "all_raw": {
+          "correct": 0,
+          "total": 67,
+          "rate": 0.0
+        },
+        "rows": {
+          "matched": 0,
+          "gold": 21,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "tables": {
+          "matched": 0,
+          "gold": 3,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "headers": {
+          "correct": 0,
+          "total": 10,
+          "rate": 0.0
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 7,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 388.58985691331327,
+        "warm_median_ms": 45.617639960255474,
+        "rss_mb": 90.05078125,
+        "artifact": "runs/native_grid/daiwabo_p10_scan200/independent_review_20261022_raster/cold/metrics.json"
+      },
+      {
+        "backend": "native_grid",
+        "document": "elecom_p9",
+        "set": "main",
+        "status": "success",
+        "raw": {
+          "correct": 56,
+          "total": 56,
+          "rate": 1.0
+        },
+        "all_raw": {
+          "correct": 56,
+          "total": 56,
+          "rate": 1.0
+        },
+        "rows": {
+          "matched": 34,
+          "gold": 34,
+          "predicted": 34,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 2,
+          "total": 2,
+          "rate": 1.0
+        },
+        "hierarchy": {
+          "matched": 33,
+          "gold": 33,
+          "predicted": 33,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "cold_ms": 275.9002349921502,
+        "warm_median_ms": 33.33836002275348,
+        "rss_mb": 79.29296875,
+        "artifact": "runs/native_grid/elecom_p9/independent_review_20261022_main/cold/metrics.json"
+      },
+      {
+        "backend": "native_grid",
+        "document": "elecom_p9_scan200",
+        "set": "raster",
+        "status": "abstained",
+        "raw": {
+          "correct": 0,
+          "total": 56,
+          "rate": 0.0
+        },
+        "all_raw": {
+          "correct": 0,
+          "total": 56,
+          "rate": 0.0
+        },
+        "rows": {
+          "matched": 0,
+          "gold": 34,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "tables": {
+          "matched": 0,
+          "gold": 1,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "headers": {
+          "correct": 0,
+          "total": 2,
+          "rate": 0.0
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 33,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 291.35344101814553,
+        "warm_median_ms": 63.706870016176254,
+        "rss_mb": 88.234375,
+        "artifact": "runs/native_grid/elecom_p9_scan200/independent_review_20261022_raster/cold/metrics.json"
+      },
+      {
+        "backend": "native_grid",
+        "document": "footnote_marker",
+        "set": "adv",
+        "status": "success",
+        "raw": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "all_raw": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "rows": {
+          "matched": 43,
+          "gold": 43,
+          "predicted": 43,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 2,
+          "total": 2,
+          "rate": 1.0
+        },
+        "hierarchy": {
+          "matched": 42,
+          "gold": 42,
+          "predicted": 42,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "cold_ms": 303.95199701888487,
+        "warm_median_ms": 44.25272799562663,
+        "rss_mb": 79.44140625,
+        "artifact": "runs/native_grid/footnote_marker/independent_review_20261022_adv/cold/metrics.json"
+      },
+      {
+        "backend": "native_grid",
+        "document": "grouped_three",
+        "set": "adv",
+        "status": "partial",
+        "raw": {
+          "correct": 24,
+          "total": 24,
+          "rate": 1.0
+        },
+        "all_raw": {
+          "correct": 24,
+          "total": 24,
+          "rate": 1.0
+        },
+        "rows": {
+          "matched": 4,
+          "gold": 4,
+          "predicted": 4,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 6,
+          "total": 6,
+          "rate": 1.0
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 0,
+          "predicted": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "cold_ms": 269.9952300172299,
+        "warm_median_ms": 15.262864995747805,
+        "rss_mb": 73.328125,
+        "artifact": "runs/native_grid/grouped_three/independent_review_20261022_adv/cold/metrics.json"
+      },
+      {
+        "backend": "native_grid",
+        "document": "grouped_two",
+        "set": "adv",
+        "status": "partial",
+        "raw": {
+          "correct": 16,
+          "total": 16,
+          "rate": 1.0
+        },
+        "all_raw": {
+          "correct": 16,
+          "total": 16,
+          "rate": 1.0
+        },
+        "rows": {
+          "matched": 4,
+          "gold": 4,
+          "predicted": 4,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 4,
+          "total": 4,
+          "rate": 1.0
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 0,
+          "predicted": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "cold_ms": 287.89068799233064,
+        "warm_median_ms": 14.171638002153486,
+        "rss_mb": 73.16015625,
+        "artifact": "runs/native_grid/grouped_two/independent_review_20261022_adv/cold/metrics.json"
+      },
+      {
+        "backend": "native_grid",
+        "document": "merged_headers",
+        "set": "adv",
+        "status": "partial",
+        "raw": {
+          "correct": 16,
+          "total": 16,
+          "rate": 1.0
+        },
+        "all_raw": {
+          "correct": 16,
+          "total": 16,
+          "rate": 1.0
+        },
+        "rows": {
+          "matched": 4,
+          "gold": 4,
+          "predicted": 4,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 4,
+          "total": 4,
+          "rate": 1.0
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 0,
+          "predicted": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "cold_ms": 208.65029899869114,
+        "warm_median_ms": 10.482039011549205,
+        "rss_mb": 73.31640625,
+        "artifact": "runs/native_grid/merged_headers/independent_review_20261022_adv/cold/metrics.json"
+      },
+      {
+        "backend": "native_grid",
+        "document": "missing_cell",
+        "set": "adv",
+        "status": "partial",
+        "raw": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "all_raw": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "rows": {
+          "matched": 43,
+          "gold": 43,
+          "predicted": 43,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 2,
+          "total": 2,
+          "rate": 1.0
+        },
+        "hierarchy": {
+          "matched": 42,
+          "gold": 42,
+          "predicted": 42,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "cold_ms": 277.37341198371723,
+        "warm_median_ms": 68.35294899065048,
+        "rss_mb": 79.39453125,
+        "artifact": "runs/native_grid/missing_cell/independent_review_20261022_adv/cold/metrics.json"
+      },
+      {
+        "backend": "native_grid",
+        "document": "original",
+        "set": "main",
+        "status": "success",
+        "raw": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "all_raw": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "rows": {
+          "matched": 43,
+          "gold": 43,
+          "predicted": 43,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 2,
+          "total": 2,
+          "rate": 1.0
+        },
+        "hierarchy": {
+          "matched": 42,
+          "gold": 42,
+          "predicted": 42,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "cold_ms": 275.5059239570983,
+        "warm_median_ms": 43.79446298116818,
+        "rss_mb": 79.4296875,
+        "artifact": "runs/native_grid/original/independent_review_20261022_main/cold/metrics.json"
+      },
+      {
+        "backend": "native_grid",
+        "document": "rotation_90",
+        "set": "adv",
+        "status": "success",
+        "raw": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "all_raw": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "rows": {
+          "matched": 43,
+          "gold": 43,
+          "predicted": 43,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 2,
+          "total": 2,
+          "rate": 1.0
+        },
+        "hierarchy": {
+          "matched": 42,
+          "gold": 42,
+          "predicted": 42,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "cold_ms": 399.28529399912804,
+        "warm_median_ms": 56.128941010683775,
+        "rss_mb": 79.08984375,
+        "artifact": "runs/native_grid/rotation_90/independent_review_20261022_adv/cold/metrics.json"
+      },
+      {
+        "backend": "native_grid",
+        "document": "scan_150",
+        "set": "adv",
+        "status": "abstained",
+        "raw": {
+          "correct": 0,
+          "total": 74,
+          "rate": 0.0
+        },
+        "all_raw": {
+          "correct": 0,
+          "total": 74,
+          "rate": 0.0
+        },
+        "rows": {
+          "matched": 0,
+          "gold": 43,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "tables": {
+          "matched": 0,
+          "gold": 1,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "headers": {
+          "correct": 0,
+          "total": 2,
+          "rate": 0.0
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 42,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 332.41175703005865,
+        "warm_median_ms": 75.90163697022945,
+        "rss_mb": 83.6640625,
+        "artifact": "runs/native_grid/scan_150/independent_review_20261022_adv/cold/metrics.json"
+      },
+      {
+        "backend": "native_grid",
+        "document": "scan_200",
+        "set": "adv",
+        "status": "abstained",
+        "raw": {
+          "correct": 0,
+          "total": 74,
+          "rate": 0.0
+        },
+        "all_raw": {
+          "correct": 0,
+          "total": 74,
+          "rate": 0.0
+        },
+        "rows": {
+          "matched": 0,
+          "gold": 43,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "tables": {
+          "matched": 0,
+          "gold": 1,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "headers": {
+          "correct": 0,
+          "total": 2,
+          "rate": 0.0
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 42,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 407.26037899730727,
+        "warm_median_ms": 69.11737698828802,
+        "rss_mb": 88.44921875,
+        "artifact": "runs/native_grid/scan_200/independent_review_20261022_adv/cold/metrics.json"
+      },
+      {
+        "backend": "native_grid",
+        "document": "side_by_side",
+        "set": "adv",
+        "status": "partial",
+        "raw": {
+          "correct": 32,
+          "total": 32,
+          "rate": 1.0
+        },
+        "all_raw": {
+          "correct": 32,
+          "total": 32,
+          "rate": 1.0
+        },
+        "rows": {
+          "matched": 8,
+          "gold": 8,
+          "predicted": 8,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tables": {
+          "matched": 2,
+          "gold": 2,
+          "predicted": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 8,
+          "total": 8,
+          "rate": 1.0
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 0,
+          "predicted": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "cold_ms": 264.61840502452105,
+        "warm_median_ms": 19.80432600248605,
+        "rss_mb": 76.90234375,
+        "artifact": "runs/native_grid/side_by_side/independent_review_20261022_adv/cold/metrics.json"
+      },
+      {
+        "backend": "native_grid",
+        "document": "sign_erasure",
+        "set": "adv",
+        "status": "partial",
+        "raw": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "all_raw": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "rows": {
+          "matched": 43,
+          "gold": 43,
+          "predicted": 43,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 2,
+          "total": 2,
+          "rate": 1.0
+        },
+        "hierarchy": {
+          "matched": 42,
+          "gold": 42,
+          "predicted": 42,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "cold_ms": 305.2668400341645,
+        "warm_median_ms": 48.877348948735744,
+        "rss_mb": 79.015625,
+        "artifact": "runs/native_grid/sign_erasure/independent_review_20261022_adv/cold/metrics.json"
+      },
+      {
+        "backend": "native_grid",
+        "document": "text_layer_deleted",
+        "set": "adv",
+        "status": "abstained",
+        "raw": {
+          "correct": 0,
+          "total": 74,
+          "rate": 0.0
+        },
+        "all_raw": {
+          "correct": 0,
+          "total": 74,
+          "rate": 0.0
+        },
+        "rows": {
+          "matched": 0,
+          "gold": 43,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "tables": {
+          "matched": 0,
+          "gold": 1,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "headers": {
+          "correct": 0,
+          "total": 2,
+          "rate": 0.0
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 42,
+          "predicted": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "cold_ms": 367.21594899427146,
+        "warm_median_ms": 125.1952099846676,
+        "rss_mb": 113.16796875,
+        "artifact": "runs/native_grid/text_layer_deleted/independent_review_20261022_adv/cold/metrics.json"
+      },
+      {
+        "backend": "native_grid",
+        "document": "tiny_cjk",
+        "set": "adv",
+        "status": "success",
+        "raw": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "all_raw": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "rows": {
+          "matched": 43,
+          "gold": 43,
+          "predicted": 43,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 2,
+          "total": 2,
+          "rate": 1.0
+        },
+        "hierarchy": {
+          "matched": 42,
+          "gold": 42,
+          "predicted": 42,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "cold_ms": 392.6568939932622,
+        "warm_median_ms": 58.34873404819518,
+        "rss_mb": 78.953125,
+        "artifact": "runs/native_grid/tiny_cjk/independent_review_20261022_adv/cold/metrics.json"
+      },
+      {
+        "backend": "native_grid",
+        "document": "vertical_spacing",
+        "set": "adv",
+        "status": "partial",
+        "raw": {
+          "correct": 0,
+          "total": 16,
+          "rate": 0.0
+        },
+        "all_raw": {
+          "correct": 0,
+          "total": 16,
+          "rate": 0.0
+        },
+        "rows": {
+          "matched": 0,
+          "gold": 4,
+          "predicted": 15,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "tables": {
+          "matched": 1,
+          "gold": 1,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "headers": {
+          "correct": 0,
+          "total": 4,
+          "rate": 0.0
+        },
+        "hierarchy": {
+          "matched": 0,
+          "gold": 0,
+          "predicted": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "cold_ms": 206.63556299405172,
+        "warm_median_ms": 13.531612989027053,
+        "rss_mb": 72.6171875,
+        "artifact": "runs/native_grid/vertical_spacing/independent_review_20261022_adv/cold/metrics.json"
+      }
+    ]
+  }
+}

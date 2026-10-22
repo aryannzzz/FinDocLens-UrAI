@@ -1,0 +1,132 @@
+PASS: frozen v2, reference hashes, complete reference cell slots, evidence boxes, source-family split isolation
+test_change_period_only_inferred_when_unambiguous (test_adapters.Conversion.test_change_period_only_inferred_when_unambiguous) ... ok
+test_declared_missing_hierarchy_downgrades_success_to_partial (test_adapters.Conversion.test_declared_missing_hierarchy_downgrades_success_to_partial) ... ok
+test_empty_extraction_abstains (test_adapters.Conversion.test_empty_extraction_abstains) ... ok
+test_glyphs_and_null_statuses_pass_through_unchanged (test_adapters.Conversion.test_glyphs_and_null_statuses_pass_through_unchanged) ... ok
+test_grouped_headers_have_leaf_per_column_and_parent_links (test_adapters.Conversion.test_grouped_headers_have_leaf_per_column_and_parent_links) ... ok
+test_missing_header_is_not_guessed (test_adapters.Conversion.test_missing_header_is_not_guessed) ... ok
+test_month_end (test_adapters.Conversion.test_month_end) ... ok
+test_section_rows_forward_no_placeholder_slots (test_adapters.Conversion.test_section_rows_forward_no_placeholder_slots) ... ok
+test_status_mapping_never_upgrades_failures (test_adapters.Conversion.test_status_mapping_never_upgrades_failures) ... ok
+test_text_outside_columns_is_kept_after_last_data_column (test_adapters.Conversion.test_text_outside_columns_is_kept_after_last_data_column) ... ok
+test_identity_mismatch_is_rejected_by_the_evaluator (test_adapters.EndToEndNative.test_identity_mismatch_is_rejected_by_the_evaluator) ... ok
+test_native_grid_original_is_contract_compliant_and_scores_all_cells (test_adapters.EndToEndNative.test_native_grid_original_is_contract_compliant_and_scores_all_cells) ... ok
+test_native_v2_original_is_contract_compliant (test_adapters.EndToEndNative.test_native_v2_original_is_contract_compliant) ... ok
+test_variant_glyphs_are_flagged_not_rewritten (test_adapters.OcrFlags.test_variant_glyphs_are_flagged_not_rewritten) ... ok
+test_footnote_marker_stays_in_the_label (test_adapters.Regression.test_footnote_marker_stays_in_the_label) ... ok
+test_left_aligned_grouped_headers_are_read_with_flagged_spans (test_adapters.Regression.test_left_aligned_grouped_headers_are_read_with_flagged_spans) ... ok
+test_right_aligned_pages_keep_right_alignment (test_adapters.Regression.test_right_aligned_pages_keep_right_alignment) ... ok
+test_total_is_sibling_of_its_heading (test_adapters.Regression.test_total_is_sibling_of_its_heading) ... ok
+test_derived_missing_cell_and_sign_have_new_truth (test_artifacts.ArtifactTests.test_derived_missing_cell_and_sign_have_new_truth) ... ok
+test_draft_hashes_and_reference_completeness (test_artifacts.ArtifactTests.test_draft_hashes_and_reference_completeness) ... ok
+test_frozen_source_outputs_unchanged (test_artifacts.ArtifactTests.test_frozen_source_outputs_unchanged) ... ok
+test_human_status_requires_reviewer (test_artifacts.ArtifactTests.test_human_status_requires_reviewer) ... ok
+test_source_families_have_no_split_leakage (test_artifacts.ArtifactTests.test_source_families_have_no_split_leakage) ... ok
+test_timeout_stays_in_gold_denominator (test_artifacts.ArtifactTests.test_timeout_stays_in_gold_denominator) ... ok
+test_worker_does_not_accept_empty_table_as_success (test_artifacts.ArtifactTests.test_worker_does_not_accept_empty_table_as_success) ... ok
+test_worker_records_backend_exception (test_artifacts.ArtifactTests.test_worker_records_backend_exception) ... ok
+test_worker_records_oom (test_artifacts.ArtifactTests.test_worker_records_oom) ... ok
+test_assignment_against_exhaustive_small_matrices (test_benchmark.EvaluatorTests.test_assignment_against_exhaustive_small_matrices) ... ok
+test_correct_abstention_on_injected_missing (test_benchmark.EvaluatorTests.test_correct_abstention_on_injected_missing) ... ok
+test_dash_never_equals_zero (test_benchmark.EvaluatorTests.test_dash_never_equals_zero) ... ok
+test_decimal_value_and_plus_glyph_are_separate (test_benchmark.EvaluatorTests.test_decimal_value_and_plus_glyph_are_separate) ... ok
+test_duplicate_cell_column_is_ambiguous (test_benchmark.EvaluatorTests.test_duplicate_cell_column_is_ambiguous) ... ok
+test_duplicate_prediction_cannot_reuse_gold (test_benchmark.EvaluatorTests.test_duplicate_prediction_cannot_reuse_gold) ... ok
+test_empty_failure_counts_all_cells (test_benchmark.EvaluatorTests.test_empty_failure_counts_all_cells) ... ok
+test_empty_success_is_false_assurance (test_benchmark.EvaluatorTests.test_empty_success_is_false_assurance) ... ok
+test_extra_table_count (test_benchmark.EvaluatorTests.test_extra_table_count) ... ok
+test_group_parent_assignment_is_assessed (test_benchmark.EvaluatorTests.test_group_parent_assignment_is_assessed) ... ok
+test_group_span_is_not_approximated_from_values (test_benchmark.EvaluatorTests.test_group_span_is_not_approximated_from_values) ... ok
+test_head_deletion_does_not_shift_following_rows (test_benchmark.EvaluatorTests.test_head_deletion_does_not_shift_following_rows) ... ok
+test_header_wrong_does_not_reassign_numeric_cells (test_benchmark.EvaluatorTests.test_header_wrong_does_not_reassign_numeric_cells) ... ok
+test_hierarchy_edges_distinguish_identical_labels (test_benchmark.EvaluatorTests.test_hierarchy_edges_distinguish_identical_labels) ... ok
+test_malformed_prediction_is_rejected_explicitly (test_benchmark.EvaluatorTests.test_malformed_prediction_is_rejected_explicitly) ... ok
+test_merged_side_by_side_table_only_matches_one (test_benchmark.EvaluatorTests.test_merged_side_by_side_table_only_matches_one) ... ok
+test_micro_aggregate_counts_failed_page (test_benchmark.EvaluatorTests.test_micro_aggregate_counts_failed_page) ... ok
+test_missing_status_invalid (test_benchmark.EvaluatorTests.test_missing_status_invalid) ... ok
+test_page_identity_prevents_matching (test_benchmark.EvaluatorTests.test_page_identity_prevents_matching) ... ok
+test_perfect_draft_remains_draft (test_benchmark.EvaluatorTests.test_perfect_draft_remains_draft) ... ok
+test_provenance_mismatch_rejected (test_benchmark.EvaluatorTests.test_provenance_mismatch_rejected) ... ok
+test_reordered_duplicates_match_context_geometry (test_benchmark.EvaluatorTests.test_reordered_duplicates_match_context_geometry) ... ok
+test_row_order_assessed_separately (test_benchmark.EvaluatorTests.test_row_order_assessed_separately) ... ok
+test_sign_erasure_not_semantically_equal (test_benchmark.EvaluatorTests.test_sign_erasure_not_semantically_equal) ... ok
+test_tail_deletion_keeps_denominator (test_benchmark.EvaluatorTests.test_tail_deletion_keeps_denominator) ... ok
+test_typed_value_not_rederived_from_correct_raw (test_benchmark.EvaluatorTests.test_typed_value_not_rederived_from_correct_raw) ... ok
+test_unrelated_warning_cannot_hide_silent_omissions (test_benchmark.EvaluatorTests.test_unrelated_warning_cannot_hide_silent_omissions) ... ok
+test_whitespace_policy_keeps_signs_and_labels (test_benchmark.EvaluatorTests.test_whitespace_policy_keeps_signs_and_labels) ... ok
+test_zero_gold_does_not_count_as_success (test_benchmark.EvaluatorTests.test_zero_gold_does_not_count_as_success) ... ok
+test_dash_is_not_zero (test_findoclens.Amounts.test_dash_is_not_zero) ... ok
+test_negative_triangle (test_findoclens.Amounts.test_negative_triangle) ... ok
+test_negative_zero_is_not_plain_zero (test_findoclens.Amounts.test_negative_zero_is_not_plain_zero) ... ok
+test_non_numeric_is_unreadable_not_zero (test_findoclens.Amounts.test_non_numeric_is_unreadable_not_zero) ... ok
+test_plus_and_decimal_and_percent (test_findoclens.Amounts.test_plus_and_decimal_and_percent) ... ok
+test_delta_and_identity_checks_run_without_violation (test_findoclens.Daiwabo.test_delta_and_identity_checks_run_without_violation) ... skipped 'Daiwabo holdout PDF not downloaded'
+test_explanatory_text_is_kept_not_dropped (test_findoclens.Daiwabo.test_explanatory_text_is_kept_not_dropped) ... skipped 'Daiwabo holdout PDF not downloaded'
+test_frozen_v2_is_detected_as_false_assurance (test_findoclens.Daiwabo.test_frozen_v2_is_detected_as_false_assurance) ... skipped 'Daiwabo holdout PDF not downloaded'
+test_roles_periods_and_signs (test_findoclens.Daiwabo.test_roles_periods_and_signs) ... skipped 'Daiwabo holdout PDF not downloaded'
+test_three_separate_tables (test_findoclens.Daiwabo.test_three_separate_tables) ... skipped 'Daiwabo holdout PDF not downloaded'
+test_two_columns_hierarchy_and_unit (test_findoclens.Elecom.test_two_columns_hierarchy_and_unit) ... skipped 'ELECOM holdout PDF not downloaded'
+test_every_cell_has_evidence_and_glyph_fidelity (test_findoclens.NativeOnOriginal.test_every_cell_has_evidence_and_glyph_fidelity) ... ok
+test_gold_74_of_74 (test_findoclens.NativeOnOriginal.test_gold_74_of_74) ... ok
+test_grid_agrees_with_v2_exactly (test_findoclens.NativeOnOriginal.test_grid_agrees_with_v2_exactly) ... ok
+test_header_periods_and_unit (test_findoclens.NativeOnOriginal.test_header_periods_and_unit) ... ok
+test_v2_adapter_unchanged_behaviour (test_findoclens.NativeOnOriginal.test_v2_adapter_unchanged_behaviour) ... ok
+test_validator_never_changes_cells (test_findoclens.NativeOnOriginal.test_validator_never_changes_cells) ... ok
+test_lost_negative_sign_raises_arithmetic_alarm (test_findoclens.Perturbations.test_lost_negative_sign_raises_arithmetic_alarm) ... ok
+test_missing_cell_is_reported_not_dropped (test_findoclens.Perturbations.test_missing_cell_is_reported_not_dropped) ... ok
+test_scaled_and_noisy_pages_keep_all_74_cells (test_findoclens.Perturbations.test_scaled_and_noisy_pages_keep_all_74_cells) ... ok
+test_raster_fails_closed_for_native_backends (test_findoclens.Raster.test_raster_fails_closed_for_native_backends) ... ok
+test_clean_native_page_is_accepted_without_models (test_findoclens.Router.test_clean_native_page_is_accepted_without_models) ... ok
+test_raster_without_models_needs_visual_review_and_invents_nothing (test_findoclens.Router.test_raster_without_models_needs_visual_review_and_invents_nothing) ... ok
+test_text_layer_reference_ignores_page_number_footer (test_findoclens.Router.test_text_layer_reference_ignores_page_number_footer) ... ok
+test_v2_false_assurance_is_logged (test_findoclens.RouterDaiwabo.test_v2_false_assurance_is_logged) ... skipped 'Daiwabo holdout PDF not downloaded'
+test_original_25_tests_in_unchanged_copy (test_frozen.FrozenRegressionTests.test_original_25_tests_in_unchanged_copy) ... ok
+
+----------------------------------------------------------------------
+Ran 82 tests in 1.534s
+
+OK (skipped=7)
+
+----------------------------------------------------------------------
+Ran 82 tests in 1.481s
+
+OK (skipped=7)
+original success 199.71412897575647 None
+elecom_p9 partial 202.3038620245643 None
+omron_p13 unavailable None None
+daiwabo_p10 partial 199.89705097395927 None
+missing_cell partial 213.58572598546743 None
+sign_erasure partial 213.62905902788043 None
+text_layer_deleted abstained 473.2022020034492 None
+rotation_90 success 214.3513030023314 None
+scan_150 abstained 298.5962000093423 None
+scan_200 abstained 301.7731780419126 None
+tiny_cjk success 196.2280499865301 None
+footnote_marker success 210.53322299849242 None
+grouped_two abstained 142.14178000111133 None
+grouped_three abstained 144.79163906071335 None
+merged_headers abstained 142.44518103078008 None
+side_by_side abstained 151.05433494318277 None
+vertical_spacing abstained 148.55008595623076 None
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/tmp/findoclens-review-clean-20261022/benchmark/run.py", line 174, in <module>
+    main()
+    ~~~~^^
+  File "/tmp/findoclens-review-clean-20261022/benchmark/run.py", line 157, in main
+    result, scores = run_one(entry, args.backend, args.entrypoint, args.warm, args.timeout, args.run_id, environment, args.resume)
+                     ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/findoclens-review-clean-20261022/benchmark/run.py", line 62, in run_one
+    if sha256(source_path) != entry['input_sha256']:
+       ~~~~~~^^^^^^^^^^^^^
+  File "/tmp/findoclens-review-clean-20261022/benchmark/common.py", line 12, in sha256
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+                          ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/aryannzzz/miniconda3/lib/python3.13/pathlib/_abc.py", line 625, in read_bytes
+    with self.open(mode='rb') as f:
+         ~~~~~~~~~^^^^^^^^^^^
+  File "/home/aryannzzz/miniconda3/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/findoclens-review-clean-20261022/benchmark/data/raster/elecom_p9_scan200/page.pdf'

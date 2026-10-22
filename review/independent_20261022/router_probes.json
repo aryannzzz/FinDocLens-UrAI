@@ -1,0 +1,23 @@
+{
+  "review_year_amount": {
+    "status": "ok",
+    "decisions": [
+      "native_grid clean: accepted without model backend (route=native_accept)"
+    ],
+    "issues": []
+  },
+  "review_mixed_columns": {
+    "status": "ok",
+    "decisions": [
+      "native_v2 disagrees with native_grid (8 mismatches, 1 vs 1 tables); see meta.cmp_native_v2",
+      "native_grid clean: accepted without model backend (route=native_accept)"
+    ],
+    "issues": [
+      {
+        "severity": "info",
+        "code": "unassigned_numeric_tokens",
+        "count": 4
+      }
+    ]
+  }
+}

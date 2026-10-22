@@ -1,0 +1,163 @@
+Materialized 13 synthetic cases; none are independent issuer holdouts
+Materialized/verified 2 raster inputs; references and manifests unchanged
+PASS: frozen v2, reference hashes, complete reference cell slots, evidence boxes, source-family split isolation
+Materialized/verified 2 raster inputs; references and manifests unchanged
+Materialized/verified 2 raster inputs; references and manifests unchanged
+test_change_period_only_inferred_when_unambiguous (test_adapters.Conversion.test_change_period_only_inferred_when_unambiguous) ... ok
+test_declared_missing_hierarchy_downgrades_success_to_partial (test_adapters.Conversion.test_declared_missing_hierarchy_downgrades_success_to_partial) ... ok
+test_empty_extraction_abstains (test_adapters.Conversion.test_empty_extraction_abstains) ... ok
+test_glyphs_and_null_statuses_pass_through_unchanged (test_adapters.Conversion.test_glyphs_and_null_statuses_pass_through_unchanged) ... ok
+test_grouped_headers_have_leaf_per_column_and_parent_links (test_adapters.Conversion.test_grouped_headers_have_leaf_per_column_and_parent_links) ... ok
+test_missing_header_is_not_guessed (test_adapters.Conversion.test_missing_header_is_not_guessed) ... ok
+test_month_end (test_adapters.Conversion.test_month_end) ... ok
+test_section_rows_forward_no_placeholder_slots (test_adapters.Conversion.test_section_rows_forward_no_placeholder_slots) ... ok
+test_status_mapping_never_upgrades_failures (test_adapters.Conversion.test_status_mapping_never_upgrades_failures) ... ok
+test_text_outside_columns_is_kept_after_last_data_column (test_adapters.Conversion.test_text_outside_columns_is_kept_after_last_data_column) ... ok
+test_identity_mismatch_is_rejected_by_the_evaluator (test_adapters.EndToEndNative.test_identity_mismatch_is_rejected_by_the_evaluator) ... ok
+test_native_grid_original_is_contract_compliant_and_scores_all_cells (test_adapters.EndToEndNative.test_native_grid_original_is_contract_compliant_and_scores_all_cells) ... ok
+test_native_v2_original_is_contract_compliant (test_adapters.EndToEndNative.test_native_v2_original_is_contract_compliant) ... ok
+test_variant_glyphs_are_flagged_not_rewritten (test_adapters.OcrFlags.test_variant_glyphs_are_flagged_not_rewritten) ... ok
+test_footnote_marker_stays_in_the_label (test_adapters.Regression.test_footnote_marker_stays_in_the_label) ... ok
+test_left_aligned_grouped_headers_are_read_with_flagged_spans (test_adapters.Regression.test_left_aligned_grouped_headers_are_read_with_flagged_spans) ... ok
+test_right_aligned_pages_keep_right_alignment (test_adapters.Regression.test_right_aligned_pages_keep_right_alignment) ... ok
+test_total_is_sibling_of_its_heading (test_adapters.Regression.test_total_is_sibling_of_its_heading) ... ok
+test_derived_missing_cell_and_sign_have_new_truth (test_artifacts.ArtifactTests.test_derived_missing_cell_and_sign_have_new_truth) ... ok
+test_draft_hashes_and_reference_completeness (test_artifacts.ArtifactTests.test_draft_hashes_and_reference_completeness) ... ok
+test_frozen_source_outputs_unchanged (test_artifacts.ArtifactTests.test_frozen_source_outputs_unchanged) ... ok
+test_human_status_requires_reviewer (test_artifacts.ArtifactTests.test_human_status_requires_reviewer) ... ok
+test_source_families_have_no_split_leakage (test_artifacts.ArtifactTests.test_source_families_have_no_split_leakage) ... ok
+test_timeout_stays_in_gold_denominator (test_artifacts.ArtifactTests.test_timeout_stays_in_gold_denominator) ... ok
+test_worker_does_not_accept_empty_table_as_success (test_artifacts.ArtifactTests.test_worker_does_not_accept_empty_table_as_success) ... ok
+test_worker_records_backend_exception (test_artifacts.ArtifactTests.test_worker_records_backend_exception) ... ok
+test_worker_records_oom (test_artifacts.ArtifactTests.test_worker_records_oom) ... ok
+test_assignment_against_exhaustive_small_matrices (test_benchmark.EvaluatorTests.test_assignment_against_exhaustive_small_matrices) ... ok
+test_correct_abstention_on_injected_missing (test_benchmark.EvaluatorTests.test_correct_abstention_on_injected_missing) ... ok
+test_dash_never_equals_zero (test_benchmark.EvaluatorTests.test_dash_never_equals_zero) ... ok
+test_decimal_value_and_plus_glyph_are_separate (test_benchmark.EvaluatorTests.test_decimal_value_and_plus_glyph_are_separate) ... ok
+test_duplicate_cell_column_is_ambiguous (test_benchmark.EvaluatorTests.test_duplicate_cell_column_is_ambiguous) ... ok
+test_duplicate_prediction_cannot_reuse_gold (test_benchmark.EvaluatorTests.test_duplicate_prediction_cannot_reuse_gold) ... ok
+test_empty_failure_counts_all_cells (test_benchmark.EvaluatorTests.test_empty_failure_counts_all_cells) ... ok
+test_empty_success_is_false_assurance (test_benchmark.EvaluatorTests.test_empty_success_is_false_assurance) ... ok
+test_extra_table_count (test_benchmark.EvaluatorTests.test_extra_table_count) ... ok
+test_group_parent_assignment_is_assessed (test_benchmark.EvaluatorTests.test_group_parent_assignment_is_assessed) ... ok
+test_group_span_is_not_approximated_from_values (test_benchmark.EvaluatorTests.test_group_span_is_not_approximated_from_values) ... ok
+test_head_deletion_does_not_shift_following_rows (test_benchmark.EvaluatorTests.test_head_deletion_does_not_shift_following_rows) ... ok
+test_header_wrong_does_not_reassign_numeric_cells (test_benchmark.EvaluatorTests.test_header_wrong_does_not_reassign_numeric_cells) ... ok
+test_hierarchy_edges_distinguish_identical_labels (test_benchmark.EvaluatorTests.test_hierarchy_edges_distinguish_identical_labels) ... ok
+test_malformed_prediction_is_rejected_explicitly (test_benchmark.EvaluatorTests.test_malformed_prediction_is_rejected_explicitly) ... ok
+test_merged_side_by_side_table_only_matches_one (test_benchmark.EvaluatorTests.test_merged_side_by_side_table_only_matches_one) ... ok
+test_micro_aggregate_counts_failed_page (test_benchmark.EvaluatorTests.test_micro_aggregate_counts_failed_page) ... ok
+test_missing_status_invalid (test_benchmark.EvaluatorTests.test_missing_status_invalid) ... ok
+test_page_identity_prevents_matching (test_benchmark.EvaluatorTests.test_page_identity_prevents_matching) ... ok
+test_perfect_draft_remains_draft (test_benchmark.EvaluatorTests.test_perfect_draft_remains_draft) ... ok
+test_provenance_mismatch_rejected (test_benchmark.EvaluatorTests.test_provenance_mismatch_rejected) ... ok
+test_reordered_duplicates_match_context_geometry (test_benchmark.EvaluatorTests.test_reordered_duplicates_match_context_geometry) ... ok
+test_row_order_assessed_separately (test_benchmark.EvaluatorTests.test_row_order_assessed_separately) ... ok
+test_sign_erasure_not_semantically_equal (test_benchmark.EvaluatorTests.test_sign_erasure_not_semantically_equal) ... ok
+test_tail_deletion_keeps_denominator (test_benchmark.EvaluatorTests.test_tail_deletion_keeps_denominator) ... ok
+test_typed_value_not_rederived_from_correct_raw (test_benchmark.EvaluatorTests.test_typed_value_not_rederived_from_correct_raw) ... ok
+test_unrelated_warning_cannot_hide_silent_omissions (test_benchmark.EvaluatorTests.test_unrelated_warning_cannot_hide_silent_omissions) ... ok
+test_whitespace_policy_keeps_signs_and_labels (test_benchmark.EvaluatorTests.test_whitespace_policy_keeps_signs_and_labels) ... ok
+test_zero_gold_does_not_count_as_success (test_benchmark.EvaluatorTests.test_zero_gold_does_not_count_as_success) ... ok
+test_dash_is_not_zero (test_findoclens.Amounts.test_dash_is_not_zero) ... ok
+test_negative_triangle (test_findoclens.Amounts.test_negative_triangle) ... ok
+test_negative_zero_is_not_plain_zero (test_findoclens.Amounts.test_negative_zero_is_not_plain_zero) ... ok
+test_non_numeric_is_unreadable_not_zero (test_findoclens.Amounts.test_non_numeric_is_unreadable_not_zero) ... ok
+test_plus_and_decimal_and_percent (test_findoclens.Amounts.test_plus_and_decimal_and_percent) ... ok
+test_delta_and_identity_checks_run_without_violation (test_findoclens.Daiwabo.test_delta_and_identity_checks_run_without_violation) ... skipped 'Daiwabo holdout PDF not downloaded'
+test_explanatory_text_is_kept_not_dropped (test_findoclens.Daiwabo.test_explanatory_text_is_kept_not_dropped) ... skipped 'Daiwabo holdout PDF not downloaded'
+test_frozen_v2_is_detected_as_false_assurance (test_findoclens.Daiwabo.test_frozen_v2_is_detected_as_false_assurance) ... skipped 'Daiwabo holdout PDF not downloaded'
+test_roles_periods_and_signs (test_findoclens.Daiwabo.test_roles_periods_and_signs) ... skipped 'Daiwabo holdout PDF not downloaded'
+test_three_separate_tables (test_findoclens.Daiwabo.test_three_separate_tables) ... skipped 'Daiwabo holdout PDF not downloaded'
+test_two_columns_hierarchy_and_unit (test_findoclens.Elecom.test_two_columns_hierarchy_and_unit) ... skipped 'ELECOM holdout PDF not downloaded'
+test_every_cell_has_evidence_and_glyph_fidelity (test_findoclens.NativeOnOriginal.test_every_cell_has_evidence_and_glyph_fidelity) ... ok
+test_gold_74_of_74 (test_findoclens.NativeOnOriginal.test_gold_74_of_74) ... ok
+test_grid_agrees_with_v2_exactly (test_findoclens.NativeOnOriginal.test_grid_agrees_with_v2_exactly) ... ok
+test_header_periods_and_unit (test_findoclens.NativeOnOriginal.test_header_periods_and_unit) ... ok
+test_v2_adapter_unchanged_behaviour (test_findoclens.NativeOnOriginal.test_v2_adapter_unchanged_behaviour) ... ok
+test_validator_never_changes_cells (test_findoclens.NativeOnOriginal.test_validator_never_changes_cells) ... ok
+test_lost_negative_sign_raises_arithmetic_alarm (test_findoclens.Perturbations.test_lost_negative_sign_raises_arithmetic_alarm) ... ok
+test_missing_cell_is_reported_not_dropped (test_findoclens.Perturbations.test_missing_cell_is_reported_not_dropped) ... ok
+test_scaled_and_noisy_pages_keep_all_74_cells (test_findoclens.Perturbations.test_scaled_and_noisy_pages_keep_all_74_cells) ... ok
+test_raster_fails_closed_for_native_backends (test_findoclens.Raster.test_raster_fails_closed_for_native_backends) ... ok
+test_clean_native_page_is_accepted_without_models (test_findoclens.Router.test_clean_native_page_is_accepted_without_models) ... ok
+test_raster_without_models_needs_visual_review_and_invents_nothing (test_findoclens.Router.test_raster_without_models_needs_visual_review_and_invents_nothing) ... ok
+test_text_layer_reference_ignores_page_number_footer (test_findoclens.Router.test_text_layer_reference_ignores_page_number_footer) ... ok
+test_v2_false_assurance_is_logged (test_findoclens.RouterDaiwabo.test_v2_false_assurance_is_logged) ... skipped 'Daiwabo holdout PDF not downloaded'
+test_original_25_tests_in_unchanged_copy (test_frozen.FrozenRegressionTests.test_original_25_tests_in_unchanged_copy) ... ok
+test_missing_rasters_rebuild_and_existing_corruption_is_retained (test_raster_reproduction.RasterReproduction.test_missing_rasters_rebuild_and_existing_corruption_is_retained) ... ok
+
+----------------------------------------------------------------------
+Ran 83 tests in 3.423s
+
+OK (skipped=7)
+
+----------------------------------------------------------------------
+Ran 83 tests in 3.069s
+
+OK (skipped=7)
+Materialized/verified 2 raster inputs; references and manifests unchanged
+Materialized/verified 2 raster inputs; references and manifests unchanged
+original success 311.12230697181076 None
+elecom_p9 partial 253.25100898044184 None
+omron_p13 unavailable None None
+daiwabo_p10 partial 378.36667301598936 None
+missing_cell partial 385.98976598586887 None
+sign_erasure partial 378.7059970200062 None
+text_layer_deleted abstained 1006.8941779900342 None
+rotation_90 success 288.59416802879423 None
+scan_150 abstained 580.0104980007745 None
+scan_200 abstained 356.3659630017355 None
+tiny_cjk success 230.15852901153266 None
+footnote_marker success 301.08478001784533 None
+grouped_two abstained 232.4524299474433 None
+grouped_three abstained 163.9336819644086 None
+merged_headers abstained 190.54270000196993 None
+side_by_side abstained 222.34846494393423 None
+vertical_spacing abstained 250.66307600354776 None
+elecom_p9_scan200 abstained 307.4619820108637 None
+daiwabo_p10_scan200 abstained 342.609147017356 None
+original success 477.0108919474296 None
+elecom_p9 partial 423.55741502251476 None
+omron_p13 unavailable None None
+daiwabo_p10 partial 336.67845698073506 None
+missing_cell partial 401.9320760271512 None
+sign_erasure partial 188.2159179658629 None
+text_layer_deleted abstained 590.4951569973491 None
+rotation_90 success 266.41281304182485 None
+scan_150 abstained 304.5757859945297 None
+scan_200 abstained 298.3964530285448 None
+tiny_cjk success 237.44189995341003 None
+footnote_marker success 254.981137055438 None
+grouped_two abstained 174.5201619924046 None
+grouped_three abstained 188.52695095119998 None
+merged_headers abstained 154.2952120071277 None
+side_by_side abstained 299.22756605083123 None
+vertical_spacing abstained 207.67078001517802 None
+elecom_p9_scan200 abstained 579.7816980048083 None
+daiwabo_p10_scan200 abstained 366.1872650263831 None
+original success 362.445839040447 None
+elecom_p9 success 336.1541330232285 None
+omron_p13 unavailable None None
+daiwabo_p10 partial 486.0058900085278 None
+missing_cell partial 414.2309030285105 None
+sign_erasure partial 313.08078701840714 None
+text_layer_deleted abstained 571.5732829412445 None
+rotation_90 success 321.18544197874144 None
+scan_150 abstained 330.6256329524331 None
+scan_200 abstained 366.5254170191474 None
+tiny_cjk success 286.31543199298903 None
+footnote_marker success 320.5392630188726 None
+grouped_two partial 226.75509203691036 None
+grouped_three partial 267.3418269841932 None
+merged_headers partial 334.28477600682527 None
+side_by_side partial 294.7896279511042 None
+vertical_spacing partial 324.8198210494593 None
+elecom_p9_scan200 abstained 351.1481560417451 None
+daiwabo_p10_scan200 abstained 437.5975500443019 None
+backend                    predictions compliant  nondeterministic  failed runs
+native_grid                         36        36                 0  0
+native_v2                           36        36                 0  0
+v2                                  36        36                 0  0
+10 documents, 30 backend views, data.js 0.7 MB
+Viewer: open viewer/index.html (local file; no server needed)

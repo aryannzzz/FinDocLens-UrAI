@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/tmp/findoclens-review-clean-20261022/scripts/contract_report.py", line 11, in <module>
+    from adapters.contract import check_prediction
+ModuleNotFoundError: No module named 'adapters'

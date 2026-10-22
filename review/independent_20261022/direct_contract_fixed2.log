@@ -1,0 +1,10 @@
+backend                    predictions compliant  nondeterministic  failed runs
+auto                                46        46                 0  0
+docling_cmfalse                     46        46                 0  0
+docling_cmtrue                      46        46                 0  0
+docling_rapidocr                    46        46                 0  0
+docling_rapidocr_medium              4         4                 0  0
+docling_regions                     46        46                 0  0
+native_grid                         72        72                 0  0
+native_v2                           72        72                 0  0
+v2                                  72        72                 0  0
