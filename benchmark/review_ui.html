@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FinDocLens — source reference review</title>
+<style>
+*{box-sizing:border-box}body{margin:0;color:#162736;background:#f3f5f7;font:15px system-ui,sans-serif}button,input,select,textarea{font:inherit}button,select{cursor:pointer}button,a{touch-action:manipulation}button{border:1px solid #9aaebd;border-radius:5px;background:white;padding:6px 10px;color:#173b56}button:hover{background:#e7f1f8}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #1578bf}header{padding:14px 22px;background:#17384b;color:white}h1{font-size:22px;margin:0 0 6px}header p{margin:4px 0;font-size:14px}header a{color:#d2efff}.controls{padding:12px 22px;display:flex;gap:12px;flex-wrap:wrap;align-items:end;background:white;border-bottom:1px solid #b7c5cf}.controls label{display:grid;gap:4px}.controls input{padding:6px;max-width:100%}#scope{width:320px}#export{background:#116590;color:white;padding:9px 15px}#progress{padding:6px;color:#355169}.alert{padding:12px 22px;background:#fff0d3;border:1px solid #ce931e;color:#503300}.alert[hidden]{display:none}.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(400px,1fr);gap:14px;padding:14px}.panel{min-width:0;background:white;border:1px solid #c7d2da;border-radius:7px}.source-panel{position:sticky;top:12px;align-self:start;height:calc(100vh - 225px);min-height:570px;display:flex;flex-direction:column}.toolbar{display:flex;flex-wrap:wrap;gap:7px;align-items:center;padding:9px;border-bottom:1px solid #d5dfe6}.toolbar input[type=range]{width:125px}.toolbar a{color:#116590;font-size:13px}#page-viewport{overflow:auto;flex:1;min-height:160px;background:#dde4e9;padding:10px}#page-surface{position:relative;line-height:0;background:white}#source-page{display:block;max-width:none;height:auto}#selection-box{position:absolute;border:2px solid #d65a00;background:#ffad2222;pointer-events:none;display:none}#detail-title{font-weight:600;font-size:14px;margin:0}#detail-viewport{overflow:auto;max-height:210px;min-height:95px;padding:8px;background:white}#detail{display:block;max-width:none}#source-status{font-size:13px;color:#385365;padding:5px 10px}.annotations{height:calc(100vh - 225px);min-height:570px;overflow:auto;padding:15px}.annotations h2{margin:0;font-size:21px}.metadata{font-size:12px;overflow-wrap:anywhere;line-height:1.6;color:#456174}.table-heading{margin:22px 0 10px;border-top:2px solid #53798f;padding-top:12px}.table-heading h3{margin:0 0 6px}.row-card{margin:12px 0;border:1px solid #bfcdd7;border-radius:5px;overflow:hidden}.row-title{display:block;width:100%;text-align:left;border:0;border-bottom:1px solid #d5dfe6;border-radius:0;background:#edf3f7;padding:10px;font-weight:600}.row-meta{padding:6px 10px;color:#4b6372;font-size:12px;overflow-wrap:anywhere}.cell{padding:10px;border-top:1px solid #d5dfe6;display:grid;grid-template-columns:minmax(120px,1fr) minmax(160px,1fr);gap:8px}.cell.selected{background:#fff6dc;box-shadow:inset 4px 0 #d65a00}.cell-info{font-size:12px;color:#3a5264;overflow-wrap:anywhere}.cell-raw{font-family:ui-monospace,monospace;font-size:19px;display:block;margin-bottom:6px;text-align:left;overflow-wrap:anywhere;max-width:100%}.decision-fields{display:grid;gap:6px}.decision-fields select,.decision-fields input{width:100%;min-width:0;padding:5px}.decision-fields input{font-size:13px}.decision-fields label{font-size:12px}.header-item{margin:6px 0;padding:8px;background:#f4f6f8;font-size:13px}.header-item pre{white-space:pre-wrap;margin:6px 0}.badge{font-size:12px;padding:3px 6px;border-radius:3px;background:#fff0cf;color:#694100}.small{font-size:12px}details summary{cursor:pointer}#empty-source{padding:20px;line-height:1.5}
+@media(max-width:1000px){.layout{grid-template-columns:1fr}.source-panel{position:relative;top:0;height:620px;min-height:0}.annotations{height:auto;min-height:0}.controls{padding:10px}#scope{width:250px}}
+</style>
+<header>
+<h1>Source reference review</h1>
+<p>Compare each annotation with the actual PDF image. These references remain AI drafts until you review them personally.</p>
+<p>Click a row, raw value, or header to highlight its source region. Zoom and scroll both image panels to inspect Japanese glyphs, △, －, signs, and digits.</p>
+</header>
+<div class="controls">
+<label>Source document <select id="document" aria-label="Source document"></select></label>
+<label>Your reviewer name <input id="reviewer" autocomplete="name" placeholder="Enter your name"></label>
+<label>Review scope / structural notes <input id="scope" placeholder="Table boundaries, labels, headers, units…"></label>
+<button id="export" type="button">Export decisions as JSON</button>
+<output id="progress" aria-live="polite"></output>
+</div>
+<div id="image-error" class="alert" role="alert" hidden></div>
+<div id="storage-error" class="alert" role="status" hidden></div>
+<div class="layout">
+<section class="panel source-panel" aria-label="Source evidence">
+<div class="toolbar"><strong>Actual source page</strong><button id="fit-page">Fit page width</button><label>Zoom <input id="page-zoom" aria-label="Source page zoom" type="range" min="10" max="400" value="100"></label><output id="page-zoom-value"></output><a id="open-image" target="_blank" rel="noopener">Open image</a><a id="open-pdf" target="_blank" rel="noopener">Open selected PDF</a></div>
+<div id="page-viewport"><div id="page-surface"><img id="source-page" alt="Actual PDF source page"><div id="selection-box"></div></div><p id="empty-source" hidden>Source image unavailable. Rebuild it with <code>.venv/bin/python -m benchmark.review --serve</code>.</p></div>
+<div id="source-status" role="status"></div>
+<div class="toolbar"><p id="detail-title">Selected source region</p><label>Detail zoom <input id="detail-zoom" aria-label="Selected region zoom" type="range" min="100" max="400" step="25" value="100"></label><output id="detail-zoom-value">100%</output></div>
+<div id="detail-viewport"><canvas id="detail" aria-label="Magnified source row or cell"></canvas></div>
+</section>
+<section id="annotations" class="panel annotations" aria-label="Reference annotations"></section>
+</div>
+<script id="review-data" type="application/json"><!-- REVIEW_DATA --></script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('review-data').textContent);
+const $=id=>document.getElementById(id);
+const documents=data.documents, images={}, imageErrors={}, changes={};
+let current=documents[0], selectedBox=null, pageScale=1, detailBaseWidth=1;
+const storeKey='findoclens-source-review-v1:'+documents.map(d=>d.gold_sha256+':'+d.input_sha256).join('|');
+const labels={original:'Original · source page 1',elecom_p9:'ELECOM · source page 9',daiwabo_p10:'Daiwabo · source page 10'};
+function el(tag,text,className){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(className)n.className=className;return n;}
+function keyFor(doc,row,cell){return doc.id+':'+row.row_id+':'+cell.column_index;}
+function storageWarning(){ $('storage-error').hidden=false;$('storage-error').textContent='Browser draft storage is unavailable. Export JSON before closing this page; references are never changed.'; }
+function persist(){try{localStorage.setItem(storeKey,JSON.stringify({reviewer:$('reviewer').value,scope:$('scope').value,changes}));}catch(_){storageWarning();}}
+try{const saved=JSON.parse(localStorage.getItem(storeKey)||'null');if(saved){$('reviewer').value=saved.reviewer||'';$('scope').value=saved.scope||'';Object.assign(changes,saved.changes||{});}}catch(_){storageWarning();}
+function progress(){const counts={accepted:0,correction_needed:0,unreadable:0};for(const base of data.decisions){const s=changes[base.key]?.decision;if(Object.hasOwn(counts,s))counts[s]++;}const n=Object.values(counts).reduce((a,b)=>a+b,0);$('progress').textContent=`${n} / ${data.decisions.length} decisions recorded · ${counts.accepted} accepted · ${counts.correction_needed} corrections · ${counts.unreadable} unreadable`;}
+function showErrors(){const failed=Object.entries(imageErrors);$('image-error').hidden=!failed.length;if(failed.length)$('image-error').textContent='Missing/unreadable source image: '+failed.map(([id,url])=>id+' ('+url+')').join(', ')+'. Run .venv/bin/python -m benchmark.review --serve from the repository root. Decisions for unavailable evidence are disabled.';}
+function rotatedBox(box){if(!box)return current.page_bbox;const [x0,y0,x1,y1]=box,W=current.page_bbox[2],H=current.page_bbox[3];if(current.rotation===90)return [W-y1,x0,W-y0,x1];if(current.rotation===180)return [W-x1,H-y1,W-x0,H-y0];if(current.rotation===270)return [y0,H-x1,y1,H-x0];return box;}
+function highlight(){const b=$('selection-box');if(!selectedBox||!images[current.id]?.naturalWidth){b.style.display='none';return;}const r=rotatedBox(selectedBox),im=images[current.id],sx=im.naturalWidth/current.page_bbox[2]*pageScale,sy=im.naturalHeight/current.page_bbox[3]*pageScale;b.style.display='block';b.style.left=r[0]*sx+'px';b.style.top=r[1]*sy+'px';b.style.width=(r[2]-r[0])*sx+'px';b.style.height=(r[3]-r[1])*sy+'px';}
+function setPageZoom(scale){const im=images[current.id];if(!im?.naturalWidth)return;pageScale=scale;$('source-page').style.width=im.naturalWidth*scale+'px';$('page-surface').style.width=im.naturalWidth*scale+'px';$('page-zoom').value=Math.round(scale*100);$('page-zoom-value').textContent=Math.round(scale*100)+'%';highlight();}
+function fitPage(){const im=images[current.id];if(im?.naturalWidth)setPageZoom(Math.min(1,($('page-viewport').clientWidth-24)/im.naturalWidth));}
+function detailZoom(){const z=Number($('detail-zoom').value)/100;$('detail').style.width=detailBaseWidth*z+'px';$('detail').style.height='auto';$('detail-zoom-value').textContent=Math.round(z*100)+'%';}
+function focusEvidence(box,title,cellKey=null){
+ selectedBox=box;$('detail-title').textContent=title;document.querySelectorAll('.cell.selected').forEach(n=>n.classList.remove('selected'));if(cellKey){const n=[...document.querySelectorAll('.cell')].find(n=>n.dataset.key===cellKey);if(n){n.classList.add('selected');n.scrollIntoView({block:'nearest'});}}
+ const im=images[current.id];if(!im?.naturalWidth||!box)return;const b=rotatedBox(box),sx=im.naturalWidth/current.page_bbox[2],sy=im.naturalHeight/current.page_bbox[3];
+ const x=Math.max(0,Math.floor((b[0]-4)*sx)),y=Math.max(0,Math.floor((b[1]-4)*sy)),w=Math.max(1,Math.min(im.naturalWidth-x,Math.ceil((b[2]+4)*sx)-x)),h=Math.max(1,Math.min(im.naturalHeight-y,Math.ceil((b[3]+4)*sy)-y));
+ const canvas=$('detail');canvas.width=w;canvas.height=h;canvas.getContext('2d').drawImage(im,x,y,w,h,0,0,w,h);detailBaseWidth=Math.min(w,$('detail-viewport').clientWidth-20);detailZoom();highlight();
+ $('page-viewport').scrollLeft=Math.max(0,(b[0]+b[2])/2*sx*pageScale-$('page-viewport').clientWidth/2);$('page-viewport').scrollTop=Math.max(0,(b[1]+b[3])/2*sy*pageScale-$('page-viewport').clientHeight/2);
+ $('detail-viewport').scrollLeft=0;$('detail-viewport').scrollTop=0;
+}
+function renderAnnotations(){
+ const host=$('annotations');host.replaceChildren();host.append(el('h2',labels[current.id]||current.id));host.append(el('p',`${current.annotation_status} · human_checked_cells=${current.human_checked_cells}`,'badge'));
+ host.append(el('p',`Original PDF page ${current.source_page_index+1} (index ${current.source_page_index}); selected PDF page 1. Unit annotation: ${current.unit??'not specified'}.`,'small'));
+ const meta=el('details');meta.append(el('summary','Source and reference identity'));meta.append(el('p',`Source SHA-256: ${current.source_sha256}\nSelected PDF SHA-256: ${current.input_sha256}\nReference SHA-256: ${current.gold_sha256}`,'metadata'));host.append(meta);
+ for(const table of current.tables){
+  const head=el('section',undefined,'table-heading');head.append(el('h3',table.table_id));const tb=el('button','Show table extent');tb.onclick=()=>focusEvidence(table.bbox,'Table '+table.table_id);head.append(tb);
+  const hs=el('details');hs.append(el('summary',`${table.headers.length} header annotations and spans (read-only)`));for(const h of table.headers){const item=el('div',undefined,'header-item');const btn=el('button',h.text??'Implicit / unprinted header');btn.onclick=()=>focusEvidence(h.bbox||table.bbox,`Header ${h.header_id}${h.bbox?'':' · no printed header box'}`);item.append(btn,el('pre',JSON.stringify(h,null,2)));hs.append(item);}head.append(hs);host.append(head);
+  for(const row of table.rows){
+   const card=el('article',undefined,'row-card');const title=el('button',`${row.row_id} · ${row.raw_label}`,'row-title');title.onclick=()=>focusEvidence(row.bbox,'Row '+row.row_id+' · '+row.raw_label);card.append(title,el('div',`${row.type} · Parent: ${row.parent_path.join(' / ')||'(root)'}`,'row-meta'));
+   if(!row.cells.length)card.append(el('p','Section label; no annotated values. Record label/structure corrections in scope notes.','row-meta'));
+   for(const cell of row.cells){
+    const key=keyFor(current,row,cell),change=changes[key]||{};const item=el('div',undefined,'cell');item.dataset.key=key;const info=el('div');const raw=el('button',cell.raw===null?'null':String(cell.raw),'cell-raw');raw.setAttribute('aria-label','Inspect source '+key);raw.onclick=()=>focusEvidence(cell.bbox||row.bbox,`${row.raw_label} · column ${cell.column_index} · raw ${cell.raw}`,key);info.append(raw,el('div',`Column ${cell.column_index} · ${cell.period??'period null'}\n${cell.role} · typed ${JSON.stringify(cell.value)} · ${cell.status}`,'cell-info'));
+    const fields=el('div',undefined,'decision-fields'),select=el('select');select.setAttribute('aria-label','Decision '+key);for(const v of ['unreviewed','accepted','correction_needed','unreadable']){const option=el('option',v);option.value=v;select.append(option);}select.value=change.decision||'unreviewed';select.disabled=!images[current.id]?.naturalWidth;const label=el('label','Your decision');label.append(select);const note=el('input');note.type='text';note.placeholder='Correction / reason / note';note.setAttribute('aria-label','Correction '+key);note.value=change.correction||'';
+    function update(){changes[key]={decision:select.value,correction:note.value||null,reviewed_at:select.value==='unreviewed'?null:new Date().toISOString()};persist();progress();}
+    select.onchange=update;note.oninput=update;fields.append(label,note);item.append(info,fields);card.append(item);
+   }host.append(card);
+  }
+ }
+ if(data.unavailable.length)host.append(el('p','Unavailable sources: '+data.unavailable.map(d=>d.id+' — '+d.reason).join('; '),'small'));
+}
+function selectDocument(id){
+ current=documents.find(d=>d.id===id)||documents[0];$('document').value=current.id;selectedBox=null;$('selection-box').style.display='none';$('source-page').src=current.image;$('source-page').alt=`Actual ${current.id} source PDF page ${current.source_page_index+1}`;$('open-image').href=current.image;$('open-pdf').href=current.pdf;
+ $('annotations').scrollTop=0;$('page-viewport').scrollTop=0;$('page-viewport').scrollLeft=0;renderAnnotations();sourceReady();
+}
+function sourceReady(){const im=images[current.id];const ready=Boolean(im?.naturalWidth);$('source-page').hidden=!ready;$('empty-source').hidden=ready;$('source-status').textContent=ready?`${current.id}: source image loaded · ${im.naturalWidth} × ${im.naturalHeight} · 200 dpi`:'Loading source image…';if(imageErrors[current.id])$('source-status').textContent='Source image failed to load';if(ready){fitPage();const first=current.tables[0];focusEvidence(first.bbox,'Table '+first.table_id);$('page-viewport').scrollTop=0;$('page-viewport').scrollLeft=0;}else{$('detail').width=1;$('detail').height=1;$('detail-title').textContent='Source region unavailable until the image loads';}}
+function exportDecisions(){
+ const reviewer=$('reviewer').value.trim();if(!reviewer){alert('Enter your reviewer name before exporting.');$('reviewer').focus();return;}
+ const out={reviewer,reviewed_at:new Date().toISOString(),type:'human_review_decisions',human_verification_applied:false,scope_note:$('scope').value,note:'Export records decisions only. Gold and human verification counts are unchanged. Unreviewed cells are not certified.',decisions:data.decisions.map(d=>({...d,...(changes[d.key]||{})}))};
+ const a=el('a');const url=URL.createObjectURL(new Blob([JSON.stringify(out,null,2)+'\n'],{type:'application/json'}));a.href=url;a.download='human_review_decisions.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);persist();
+}
+for(const doc of documents){const option=el('option',labels[doc.id]||doc.id);option.value=doc.id;$('document').append(option);const im=new Image();images[doc.id]=im;im.onload=()=>{delete imageErrors[doc.id];showErrors();if(current.id===doc.id){renderAnnotations();sourceReady();}};im.onerror=()=>{imageErrors[doc.id]=doc.image;showErrors();if(current.id===doc.id){renderAnnotations();sourceReady();}};im.src=doc.image;}
+function sizePanels(){const desktop=window.innerWidth>1000;const height=desktop?Math.max(570,window.innerHeight-document.querySelector('.layout').offsetTop-30)+'px':'';document.querySelector('.source-panel').style.height=height;$('annotations').style.height=height;fitPage();}
+$('document').onchange=()=>selectDocument($('document').value);$('page-zoom').oninput=()=>setPageZoom(Number($('page-zoom').value)/100);$('detail-zoom').oninput=detailZoom;$('fit-page').onclick=()=>{fitPage();$('page-viewport').scrollTop=0;$('page-viewport').scrollLeft=0;};$('export').onclick=exportDecisions;$('reviewer').oninput=persist;$('scope').oninput=persist;window.addEventListener('resize',sizePanels);
+window.reviewApp={documents,images,selectDocument,focusEvidence};selectDocument(location.hash.slice(1));progress();sizePanels();
+</script>
+</html>

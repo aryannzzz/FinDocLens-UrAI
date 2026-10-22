@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "documents": [
+    {
+      "document_id": "original",
+      "image": "assets/original_page.png",
+      "image_sha256": "eae758c836fffc252b92157c878b7692592d47f9bb89fdeac5f3af052b525183",
+      "input_path": "baseline_v2/source.pdf",
+      "input_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "gold_path": "benchmark/gold/original.json",
+      "gold_sha256": "c9b802301e59416405340dcb047d62d02623cba9ad0648ed8606d178ddd6acd7",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "source_page_index": 0,
+      "selected_page_index": 0,
+      "dpi": 200,
+      "image_width": 1654,
+      "image_height": 2339
+    },
+    {
+      "document_id": "elecom_p9",
+      "image": "assets/elecom_p9_page.png",
+      "image_sha256": "872502824951e45d45ed4b2f025809cac81f9d785037454ff1a4780e10b88565",
+      "input_path": "benchmark/data/elecom_p9/page.pdf",
+      "input_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "gold_path": "benchmark/gold/elecom_p9.json",
+      "gold_sha256": "6a1baa82b9fefdeaae075a21ad03491ce5b377a9ed527fd260da685906f897b5",
+      "source_sha256": "4bdb7bb0022a63e459ec35ef4e571a8fcf4796b0b776b5fe2f7e4ee217fb0d78",
+      "source_page_index": 8,
+      "selected_page_index": 0,
+      "dpi": 200,
+      "image_width": 1654,
+      "image_height": 2339
+    },
+    {
+      "document_id": "daiwabo_p10",
+      "image": "assets/daiwabo_p10_page.png",
+      "image_sha256": "a6d53ae58cf9e2a6934fe1aaf77395e223e477104ed41d37f7f82de244ec7eff",
+      "input_path": "benchmark/data/daiwabo_p10/page.pdf",
+      "input_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "gold_path": "benchmark/gold/daiwabo_p10.json",
+      "gold_sha256": "b700644f50dc23f7c4a738c8d711f5386c77f5d2a7d0618d898c3a66b17917b2",
+      "source_sha256": "b8d238aed3ec8deeb80675dcb1d6442ef9a89e3d876c42ade44543e2166125e8",
+      "source_page_index": 9,
+      "selected_page_index": 0,
+      "dpi": 200,
+      "image_width": 2667,
+      "image_height": 1500
+    }
+  ]
+}

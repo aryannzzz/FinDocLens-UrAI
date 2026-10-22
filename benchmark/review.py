@@ -1,6 +1,5 @@
 """Render source-only HTML check sheets and real measured failure contact sheets."""
 import argparse
-from html import escape
 import json
 from pathlib import Path
 
@@ -20,63 +19,11 @@ def crop(page, box, target, padding=3):
 
 
 def sheet(entries, failures=None):
-    folder = ROOT/'benchmark/review'
-    assets = folder/'assets'
-    assets.mkdir(parents=True, exist_ok=True)
-    rows, decisions = [], []
-    for entry in entries:
-        gold_path = ROOT/entry.get('gold_path', f"benchmark/gold/{entry['document_id']}.json")
-        if entry['status'] != 'available' or not gold_path.exists():
-            rows.append(f"<h2>{escape(entry['document_id'])}: unavailable / unannotated</h2><p>{escape(entry.get('error', ''))}</p>")
-            continue
-        gold = read_json(gold_path)
-        digest = sha256(gold_path)
-        rows.append(f"<h2>{escape(entry['document_id'])} — AI DRAFT, human_checked_cells=0</h2><p>Original page index {entry['source_page_index']}; source SHA {entry['source_sha256']}; reference SHA {digest}</p>")
-        with fitz.open(ROOT/entry['input_path']) as doc:
-            page = doc[0]
-            page_name = f"{entry['document_id']}_page.png"
-            page.get_pixmap(dpi=200, alpha=False).save(assets/page_name)
-            rows.append(f'<a href="assets/{page_name}">Open full 200dpi source page</a>')
-            for table in gold['tables']:
-                name = f"{entry['document_id']}_{table['table_id']}_table.png"
-                crop(page, table['bbox'], assets/name)
-                rows.append(f"<h3>{escape(table['table_id'])}</h3><p>Verify table count, extent, row order, hierarchy, headers and printed units.</p><img class='table' src='assets/{name}'><pre>{escape(json.dumps(table['headers'], ensure_ascii=False, indent=2))}</pre>")
-                for row in table['rows']:
-                    name = f"{entry['document_id']}_{row['row_id']}.png"
-                    crop(page, row['bbox'], assets/name)
-                    rows.append(f"<div class='row'><h4>{escape(row['row_id'])}: {escape(row['raw_label'])}</h4><p>Parent: {escape('/'.join(row['parent_path']))}</p><img src='assets/{name}'><table><tr><th>Column</th><th>Period / role</th><th>Raw (exact)</th><th>Typed / status</th><th>Human decision</th><th>Correction / note</th></tr>")
-                    for cell in row['cells']:
-                        key = f"{entry['document_id']}:{row['row_id']}:{cell['column_index']}"
-                        decisions.append(dict(key=key, document_id=entry['document_id'], gold_sha256=digest,
-                                              source_sha256=entry['source_sha256'], row_id=row['row_id'],
-                                              column_index=cell['column_index'], evidence=f'assets/{name}',
-                                              decision='unreviewed', correction=None))
-                        rows.append(f"<tr data-key='{escape(key)}'><td>{cell['column_index']}</td><td>{escape(str(cell['period']))} / {escape(cell['role'])}</td><td><code>{escape(str(cell['raw']))}</code></td><td>{escape(str(cell['value']))} / {cell['status']}</td><td><select><option>unreviewed</option><option>accepted</option><option>correction_needed</option><option>unreadable</option></select></td><td><input aria-label='Correction note'></td></tr>")
-                    rows.append('</table></div>')
-    script = """<script>
-const base = DECISIONS;
-function save(){
-  const reviewer=document.getElementById('reviewer').value.trim();
-  if(!reviewer){alert('Enter the human reviewer name.');return;}
-  const out={reviewer,reviewed_at:new Date().toISOString(),type:'human_review_decisions',scope_note:document.getElementById('scope').value,decisions:base.map(d=>{
-    const row=[...document.querySelectorAll('tr[data-key]')].find(r=>r.dataset.key===d.key);
-    return {...d,decision:row.querySelector('select').value,correction:row.querySelector('input').value||null};
-  })};
-  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(out,null,2)],{type:'application/json'}));a.download='human_review_decisions.json';a.click();
-}
-</script>""".replace('DECISIONS', json.dumps(decisions, ensure_ascii=False).replace('<', '\\u003c'))
-    html = """<!doctype html><html lang='en'><meta charset='utf-8'><title>FinDocLens source reference review</title>
-<style>body{font:16px sans-serif;margin:28px;max-width:1500px}img{max-width:100%;image-rendering:auto}img.table{max-height:650px}table{border-collapse:collapse}td,th{border:1px solid #aaa;padding:6px}code{font-size:19px}.row{margin:24px 0;padding:12px;border:1px solid #bbb}pre{white-space:pre-wrap}input{min-width:160px}</style>
-<h1>Source reference review — all annotations AI-drafted</h1><p>Inspect the source images independently. These draft tokens are not model predictions and have not been human certified. At least 20 numeric cells per holdout, signs/dashes, all headers, table boundaries and omissions need review; full verification is preferable. An AI image inspection does not constitute human verification.</p>
-<p>Reviewer: <input id='reviewer'> Scope / table-header-label checks: <input id='scope' style='width:60%'></p><button onclick='save()'>Export review decisions</button>
-<p>Export does not modify gold or certify unreviewed cells. Preserve corrections as a new version with source crop, reason, old/new token and reference hash.</p>
-""" + '\n'.join(rows) + script + '</html>'
-    (folder/'index.html').write_text(html, encoding='utf-8')
-    write_json(folder/'audit_template.json', dict(reviewer=None, decisions=decisions,
-                                                 note='Unreviewed template; never a human verification record'))
+    from benchmark.review_site import build
+    build(entries)
     if failures:
-        failure_sheet(entries, failures, folder, assets)
-    print('Review sheet:', folder/'index.html', len(decisions), 'cell decisions; all unreviewed')
+        folder = ROOT/'benchmark/review'
+        failure_sheet(entries, failures, folder, folder/'assets')
 
 
 def failure_sheet(entries, summary_path, folder, assets):
@@ -119,10 +66,39 @@ def failure_sheet(entries, summary_path, folder, assets):
     write_json(folder/'failure_contact_sheet.json', evidence)
 
 
-if __name__ == '__main__':
+def main():
+    from functools import partial
+    from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+    from benchmark.review_site import check
+
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--manifest', default='benchmark/manifest.jsonl')
     parser.add_argument('--failures', help='A measured benchmark summary JSON')
+    parser.add_argument('--check', action='store_true', help='Check generated images, source hashes and UI assets without writing')
+    parser.add_argument('--serve', action='store_true', help='Build/check the review and serve it offline on localhost')
+    parser.add_argument('--port', type=int, default=8765)
     args = parser.parse_args()
-    entries = [json.loads(s) for s in Path(args.manifest).read_text().splitlines() if s.strip()]
-    sheet(entries, args.failures)
+    if args.check:
+        problems = check()
+        if problems:
+            parser.exit(1, '\n'.join(problems)+'\nRun .venv/bin/python -m benchmark.review --serve to rebuild.\n')
+        print('PASS: review images, source/reference hashes and offline UI assets')
+    else:
+        manifest = Path(args.manifest)
+        if not manifest.is_absolute():
+            manifest = ROOT/manifest
+        entries = [json.loads(s) for s in manifest.read_text().splitlines() if s.strip()]
+        sheet(entries, args.failures)
+    if args.serve:
+        handler = partial(SimpleHTTPRequestHandler, directory=str(ROOT))
+        with ThreadingHTTPServer(('127.0.0.1', args.port), handler) as server:
+            print(f'Review URL: http://127.0.0.1:{server.server_port}/benchmark/review/', flush=True)
+            print('Local files only; Ctrl+C stops the server. Reference files are never edited.', flush=True)
+            try:
+                server.serve_forever()
+            except KeyboardInterrupt:
+                pass
+
+
+if __name__ == '__main__':
+    main()

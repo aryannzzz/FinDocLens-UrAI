@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-10-22T19:07:13.642597+00:00",
+  "documents": [
+    {
+      "document_id": "original",
+      "source_pdf": "baseline_v2/source.pdf",
+      "source_page_1based": 1,
+      "selected_page_1based": 1,
+      "source_hash_matches": true,
+      "selected_hash_matches": true,
+      "selected_pixels_match_original_source": true,
+      "asset_pixels_match_original_source": true,
+      "image": "benchmark/review/assets/original_page.png",
+      "image_sha256": "eae758c836fffc252b92157c878b7692592d47f9bb89fdeac5f3af052b525183"
+    },
+    {
+      "document_id": "elecom_p9",
+      "source_pdf": "benchmark/data/elecom_p9/original.pdf",
+      "source_page_1based": 9,
+      "selected_page_1based": 1,
+      "source_hash_matches": true,
+      "selected_hash_matches": true,
+      "selected_pixels_match_original_source": true,
+      "asset_pixels_match_original_source": true,
+      "image": "benchmark/review/assets/elecom_p9_page.png",
+      "image_sha256": "872502824951e45d45ed4b2f025809cac81f9d785037454ff1a4780e10b88565"
+    },
+    {
+      "document_id": "daiwabo_p10",
+      "source_pdf": "benchmark/data/daiwabo_p10/original.pdf",
+      "source_page_1based": 10,
+      "selected_page_1based": 1,
+      "source_hash_matches": true,
+      "selected_hash_matches": true,
+      "selected_pixels_match_original_source": true,
+      "asset_pixels_match_original_source": true,
+      "image": "benchmark/review/assets/daiwabo_p10_page.png",
+      "image_sha256": "a6d53ae58cf9e2a6934fe1aaf77395e223e477104ed41d37f7f82de244ec7eff"
+    }
+  ]
+}

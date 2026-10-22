@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "output": "runs/review_ui/source_review/20261023/browser_http_complete.json",
+  "checks": {
+    "japanese_row_zoom": true,
+    "dash_zoom": true,
+    "draft_survives_reload": true,
+    "json_download": true,
+    "all_197_cells_exported": true,
+    "all_decision_types": true,
+    "original_glyphs_preserved": true,
+    "evidence_identity_exported": true,
+    "human_verification_applied": false,
+    "missing_image_visible_and_decisions_disabled": true
+  },
+  "pages": 3
+}

@@ -1,0 +1,16 @@
+test_changed_reference_and_broken_embedded_image_url_are_detected (tests.test_review_site.SourceReviewAssets.test_changed_reference_and_broken_embedded_image_url_are_detected) ... ok
+test_corrupt_image_is_detected_and_unrelated_rendering_is_not_reused (tests.test_review_site.SourceReviewAssets.test_corrupt_image_is_detected_and_unrelated_rendering_is_not_reused) ... ok
+test_missing_image_fails_integrity_check_and_rebuild_repairs_it (tests.test_review_site.SourceReviewAssets.test_missing_image_fails_integrity_check_and_rebuild_repairs_it) ... ok
+test_real_source_and_exact_annotations_with_unreviewed_decisions (tests.test_review_site.SourceReviewAssets.test_real_source_and_exact_annotations_with_unreviewed_decisions) ... ok
+test_wrong_pdf_identity_is_rejected_before_annotations_are_presented (tests.test_review_site.SourceReviewAssets.test_wrong_pdf_identity_is_rejected_before_annotations_are_presented) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.497s
+
+OK
+Review ready: 1 source pages, 74 unreviewed cells; assets verified
+Review ready: 1 source pages, 74 unreviewed cells; assets verified
+Review ready: 1 source pages, 74 unreviewed cells; assets verified
+Review ready: 1 source pages, 74 unreviewed cells; assets verified
+Review ready: 1 source pages, 74 unreviewed cells; assets verified
+Review ready: 1 source pages, 74 unreviewed cells; assets verified

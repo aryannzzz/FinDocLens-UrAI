@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-10-22T19:12:54.005642+00:00",
+  "base_commit": "bc9df9ae5bff3e8af201972796f764409073b22c",
+  "branch": "fix/offline-reference-review",
+  "code_sha256": {
+    "benchmark/review.py": "1e1fce7d5fe3d6ef807c62adb795fe42adfec984f1bf835905f49a1f721e6237",
+    "benchmark/review_site.py": "4e6139fc93b444c24882a5536a68f6d2117dfbc76196b8d01cc84d9bf93b9f63",
+    "benchmark/review_ui.html": "4173a4992195b0801b7b285f71a65fcbbfab24362fb5b138f3f00d41d5ad0643",
+    "scripts/check_review_browser.py": "28166ebfd31e6de1ba4bf7f480748f0c99b9abc7e8ea1016c79ba8d258743a97",
+    "tests/test_review_site.py": "81a11c83e79fe0d6486e3d3cde8c17f3995ac6607659bf86e02eb1624f2146fc"
+  },
+  "device": "cpu",
+  "model_revision": null,
+  "checkpoint_id": null,
+  "model_status": "not applicable: source rendering and browser UI only; no model benchmarks run",
+  "python": "3.13.5",
+  "package_versions": {
+    "PyMuPDF": "1.27.2.3",
+    "Pillow": "12.0.0",
+    "websocket-client": "1.9.0"
+  },
+  "browser": "Chrome/150.0.7871.46",
+  "peak_gpu_allocation_mb": null,
+  "memory_status": "No GPU used; browser/CPU peak memory not measured; no performance claims",
+  "disk_before": "97G total, 1.7G available, 99% used",
+  "generated_source_image_bytes": 867605,
+  "source_images": "source_identity.json",
+  "http_test": "browser_http_complete.json",
+  "file_test": "browser_file_complete.json",
+  "test_result": "133 root tests pass, including 25 frozen baseline tests in an isolated subprocess",
+  "frozen_mismatches": [],
+  "reference_changes": false,
+  "benchmark_result_changes": false,
+  "human_verification_applied": false,
+  "commands": [
+    "df -h /",
+    ".venv/bin/python -m benchmark.review --serve --port 8765",
+    ".venv/bin/python -m benchmark.review --check",
+    ".venv/bin/python -m unittest discover -s tests -v",
+    ".venv/bin/python -m benchmark.validate",
+    ".venv/bin/python scripts/check_review_browser.py --out runs/review_ui/source_review/20261023/browser_http_complete.json",
+    ".venv/bin/python scripts/check_review_browser.py --url file:///home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/review/index.html --out runs/review_ui/source_review/20261023/browser_file_complete.json"
+  ]
+}

@@ -41,6 +41,11 @@ python scripts/build_viewer.py --run native_grid=RUNID ... && xdg-open viewer/in
 ```
 Single page, any backend: `python -m findoclens parse <pdf> --page <zero-based> --backend auto|native_grid|docling|ocr_rapid --format json,md,png`.
 
+## Manually verify the reference annotations
+
+Run `.venv/bin/python -m benchmark.review --serve` from the repository root, then open **http://127.0.0.1:8765/benchmark/review/**.
+The launcher regenerates/checks local source images from the cached PDFs; it downloads nothing. View the original, ELECOM and Daiwabo pages beside their annotations, click rows/cells to zoom, record decisions, and export JSON. Neither generation nor export changes references or human verification counts. Images are intentionally Git-ignored, so use this launcher after switching worktrees. See [`benchmark/review/README.md`](benchmark/review/README.md).
+
 ## P0 correctness pass (after the independent review)
 Silent-loss, evaluator, merged-cell and exposure fixes with before/after evidence: [`docs/P0_FIXES.md`](docs/P0_FIXES.md); the generated table is
 [`docs/P0_BEFORE_AFTER.md`](docs/P0_BEFORE_AFTER.md) (`python scripts/p0_before_after.py --out-json … --out-md …`); regression tests `tests/test_p0_regressions.py`.

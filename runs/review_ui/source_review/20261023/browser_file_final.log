@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "output": "runs/review_ui/source_review/20261023/browser_file_final.json",
+  "checks": {
+    "draft_survives_reload": true,
+    "json_download": true,
+    "all_197_cells_exported": true,
+    "all_decision_types": true,
+    "original_glyphs_preserved": true,
+    "evidence_identity_exported": true,
+    "human_verification_applied": false
+  },
+  "pages": 3
+}
