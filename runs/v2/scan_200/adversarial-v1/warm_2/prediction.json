@@ -1,0 +1,28 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "scan_200",
+  "source_sha256": "d5d3ebfa1ba6808bf82fcf1bc16af0a54031285327aed2e3f532dc4ecb525560",
+  "input_sha256": "d5d3ebfa1ba6808bf82fcf1bc16af0a54031285327aed2e3f532dc4ecb525560",
+  "backend": "v2",
+  "model_revision": null,
+  "status": "abstained",
+  "tables": [],
+  "issues": [
+    {
+      "page": 1,
+      "severity": "error",
+      "code": "needs_visual_fallback",
+      "message": "No stable native text columns: OCR/VLM is required and not run."
+    },
+    {
+      "code": "empty_extraction",
+      "severity": "error"
+    }
+  ],
+  "capabilities": {
+    "table_detection": false,
+    "grouped_headers": false,
+    "grid_spans": false
+  },
+  "provenance": "Evaluation-only projection; original_result.json retains unchanged v2 output"
+}

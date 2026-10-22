@@ -1,0 +1,613 @@
+{
+  "document_id": "grouped_three",
+  "evaluated_at": "2026-10-22T10:37:41.973427+00:00",
+  "reference_status": "ai_draft",
+  "human_checked_cells": 0,
+  "scope": {
+    "tables_complete": true,
+    "rows_complete": true,
+    "cells_complete": true
+  },
+  "run_status": "abstained",
+  "whitespace_policy": "remove Unicode whitespace only; preserve glyphs, signs, punctuation and decimals",
+  "matching_policy": "One-to-one evaluation with fixed gold denominators and explicit failures.\n\nOnly whitespace is removed for label/raw matching. Raw tokens are never rewritten.\nTable matching uses page + bbox IoU >= .1 (maximum weight assignment). Rows\nrequire equal whitespace-normalized labels; geometry/context/order break ties.\nFinancial cells align by physical column_index, never by predicted value or role.\n",
+  "metrics": {
+    "tables": {
+      "matched": 0,
+      "gold": 1,
+      "predicted": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "extra_tables": 0,
+    "unlocalizable_predicted_tables": 0,
+    "rows": {
+      "matched": 0,
+      "gold": 4,
+      "predicted": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "missed_rows": 4,
+    "spurious_rows": 0,
+    "raw_label_exact": {
+      "correct": 0,
+      "total": 4,
+      "rate": 0.0
+    },
+    "extraneous_row_rate": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "row_order_accuracy": {
+      "correct": 0,
+      "total": 4,
+      "rate": 0.0
+    },
+    "cell_coverage": {
+      "correct": 0,
+      "total": 24,
+      "rate": 0.0
+    },
+    "raw_cell_exact": {
+      "correct": 0,
+      "total": 24,
+      "rate": 0.0
+    },
+    "raw_precision_on_matched": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "raw_precision_all_predicted": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "semantic_cell_exact": {
+      "correct": 0,
+      "total": 24,
+      "rate": 0.0
+    },
+    "numeric_raw_exact": {
+      "correct": 0,
+      "total": 24,
+      "rate": 0.0
+    },
+    "numeric_semantic_exact": {
+      "correct": 0,
+      "total": 24,
+      "rate": 0.0
+    },
+    "header_role_accuracy": {
+      "correct": 0,
+      "total": 6,
+      "rate": 0.0
+    },
+    "header_role_precision": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "grouped_headers": {
+      "matched": 0,
+      "gold": 2,
+      "predicted": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "header_parent_accuracy": {
+      "correct": 0,
+      "total": 6,
+      "rate": 0.0
+    },
+    "hierarchy_edges": {
+      "matched": 0,
+      "gold": 0,
+      "predicted": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "abstention_rate": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "correct_abstention": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "missing_cells": {
+      "correct": 24,
+      "total": 24,
+      "rate": 1.0
+    },
+    "silent_omission_rate": {
+      "correct": 0,
+      "total": 24,
+      "rate": 0.0
+    },
+    "invalid_matched_cells": 0,
+    "false_assurance": false,
+    "warnings": [
+      {
+        "page": 1,
+        "severity": "error",
+        "code": "needs_visual_fallback",
+        "message": "No stable native text columns: OCR/VLM is required and not run."
+      },
+      {
+        "code": "empty_extraction",
+        "severity": "error"
+      }
+    ],
+    "gold_cells": 24,
+    "predicted_cells": 0
+  },
+  "errors": [
+    {
+      "table_id": "t0",
+      "row_id": "t0_r0",
+      "label": "現金及び預金",
+      "column_index": 0,
+      "expected_raw": "1,234",
+      "expected_status": "observed",
+      "bbox": [
+        233.0,
+        125.61328125,
+        255.078125,
+        137.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r0",
+      "label": "現金及び預金",
+      "column_index": 1,
+      "expected_raw": "+2.5",
+      "expected_status": "observed",
+      "bbox": [
+        324.6666666666667,
+        125.61328125,
+        341.9635416666667,
+        137.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r0",
+      "label": "現金及び預金",
+      "column_index": 2,
+      "expected_raw": "△0",
+      "expected_status": "negative_zero",
+      "bbox": [
+        416.33333333333337,
+        125.61328125,
+        426.70442708333337,
+        137.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r0",
+      "label": "現金及び預金",
+      "column_index": 3,
+      "expected_raw": "1,234",
+      "expected_status": "observed",
+      "bbox": [
+        508.0,
+        125.61328125,
+        530.078125,
+        137.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r0",
+      "label": "現金及び預金",
+      "column_index": 4,
+      "expected_raw": "+2.5",
+      "expected_status": "observed",
+      "bbox": [
+        599.6666666666667,
+        125.61328125,
+        616.9635416666667,
+        137.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r0",
+      "label": "現金及び預金",
+      "column_index": 5,
+      "expected_raw": "△0",
+      "expected_status": "negative_zero",
+      "bbox": [
+        691.3333333333334,
+        125.61328125,
+        701.7044270833334,
+        137.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r1",
+      "label": "貸倒引当金",
+      "column_index": 0,
+      "expected_raw": "△0",
+      "expected_status": "negative_zero",
+      "bbox": [
+        233.0,
+        190.61328125,
+        243.37109375,
+        202.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r1",
+      "label": "貸倒引当金",
+      "column_index": 1,
+      "expected_raw": "－",
+      "expected_status": "not_reported",
+      "bbox": [
+        324.6666666666667,
+        190.61328125,
+        333.6666666666667,
+        202.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r1",
+      "label": "貸倒引当金",
+      "column_index": 2,
+      "expected_raw": "+0.5",
+      "expected_status": "observed",
+      "bbox": [
+        416.33333333333337,
+        190.61328125,
+        433.63020833333337,
+        202.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r1",
+      "label": "貸倒引当金",
+      "column_index": 3,
+      "expected_raw": "△0",
+      "expected_status": "negative_zero",
+      "bbox": [
+        508.0,
+        190.61328125,
+        518.37109375,
+        202.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r1",
+      "label": "貸倒引当金",
+      "column_index": 4,
+      "expected_raw": "－",
+      "expected_status": "not_reported",
+      "bbox": [
+        599.6666666666667,
+        190.61328125,
+        608.6666666666667,
+        202.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r1",
+      "label": "貸倒引当金",
+      "column_index": 5,
+      "expected_raw": "+0.5",
+      "expected_status": "observed",
+      "bbox": [
+        691.3333333333334,
+        190.61328125,
+        708.6302083333334,
+        202.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r2",
+      "label": "その他",
+      "column_index": 0,
+      "expected_raw": "－",
+      "expected_status": "not_reported",
+      "bbox": [
+        233.0,
+        255.61328125,
+        242.0,
+        267.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r2",
+      "label": "その他",
+      "column_index": 1,
+      "expected_raw": "10.25",
+      "expected_status": "observed",
+      "bbox": [
+        324.6666666666667,
+        255.61328125,
+        346.9205729166667,
+        267.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r2",
+      "label": "その他",
+      "column_index": 2,
+      "expected_raw": "△2.5",
+      "expected_status": "observed",
+      "bbox": [
+        416.33333333333337,
+        255.61328125,
+        434.08723958333337,
+        267.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r2",
+      "label": "その他",
+      "column_index": 3,
+      "expected_raw": "－",
+      "expected_status": "not_reported",
+      "bbox": [
+        508.0,
+        255.61328125,
+        517.0,
+        267.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r2",
+      "label": "その他",
+      "column_index": 4,
+      "expected_raw": "10.25",
+      "expected_status": "observed",
+      "bbox": [
+        599.6666666666667,
+        255.61328125,
+        621.9205729166667,
+        267.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r2",
+      "label": "その他",
+      "column_index": 5,
+      "expected_raw": "△2.5",
+      "expected_status": "observed",
+      "bbox": [
+        691.3333333333334,
+        255.61328125,
+        709.0872395833334,
+        267.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r3",
+      "label": "資産合計",
+      "column_index": 0,
+      "expected_raw": "+1,234",
+      "expected_status": "observed",
+      "bbox": [
+        233.0,
+        320.61328125,
+        260.03515625,
+        332.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r3",
+      "label": "資産合計",
+      "column_index": 1,
+      "expected_raw": "100.0",
+      "expected_status": "observed",
+      "bbox": [
+        324.6666666666667,
+        320.61328125,
+        346.9205729166667,
+        332.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r3",
+      "label": "資産合計",
+      "column_index": 2,
+      "expected_raw": "+0",
+      "expected_status": "observed",
+      "bbox": [
+        416.33333333333337,
+        320.61328125,
+        426.24739583333337,
+        332.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r3",
+      "label": "資産合計",
+      "column_index": 3,
+      "expected_raw": "+1,234",
+      "expected_status": "observed",
+      "bbox": [
+        508.0,
+        320.61328125,
+        535.03515625,
+        332.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r3",
+      "label": "資産合計",
+      "column_index": 4,
+      "expected_raw": "100.0",
+      "expected_status": "observed",
+      "bbox": [
+        599.6666666666667,
+        320.61328125,
+        621.9205729166667,
+        332.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r3",
+      "label": "資産合計",
+      "column_index": 5,
+      "expected_raw": "+0",
+      "expected_status": "observed",
+      "bbox": [
+        691.3333333333334,
+        320.61328125,
+        701.2473958333334,
+        332.390625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    }
+  ],
+  "alignment": [
+    {
+      "table_id": "t0",
+      "row_id": "t0_r0",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r1",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r2",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r3",
+      "predicted_row_index": null,
+      "matched": false
+    }
+  ],
+  "gold_sha256": "2cfbc94cabb66b748d9d1fa4a195082803ee803a807a41680d4df16512f3e4d5",
+  "prediction_sha256": "fc0b51c5ead01ccf1caa3cdcdf8e75628e69020042de8afc68d2188f307a22ac",
+  "prediction_path": "runs/v2/grouped_three/adversarial_final-v1/warm_2/prediction.json",
+  "source": {
+    "document_id": "grouped_three",
+    "company": "Synthetic control",
+    "source_url": null,
+    "source_page_index": 0,
+    "page": 1,
+    "source_sha256": "52aaafa765af6025875c1cba45546a7e0012b3e3b369db62771033a41b92469a",
+    "input_sha256": "52aaafa765af6025875c1cba45546a7e0012b3e3b369db62771033a41b92469a",
+    "input_path": "benchmark/data/adversarial/grouped_three/page.pdf",
+    "gold_path": "benchmark/gold/adversarial/grouped_three.json",
+    "source_kind": "synthetic",
+    "source_family": "synthetic_layout_controls",
+    "issuer_relation": "not_applicable_synthetic",
+    "split": "development",
+    "domain": "synthetic_financial_table",
+    "status": "available",
+    "human_audit_status": "ai_draft",
+    "human_checked_cells": 0,
+    "difficulty": "grouped_three",
+    "visual_truth": "new synthetic visual truth; no company generalization claim",
+    "license_note": "Local synthetic derivative; source-family rights apply"
+  },
+  "measurement": {
+    "mode": "warm_same_process",
+    "iteration": 2,
+    "status": "abstained",
+    "error": null,
+    "device": "cpu",
+    "model_revision": null,
+    "checkpoint_id": null,
+    "model_metadata": {},
+    "stages": {
+      "load_ms": 0.0,
+      "render_ms": 3.9026860031299293,
+      "inference_ms": 0.9806710004340857,
+      "normalization_ms": 0.01607899321243167,
+      "serialize_ms": 0.2537200052756816
+    },
+    "time_ms": 5.160180997336283,
+    "cold_image_export_included": false,
+    "peak_memory_mb": 73.98828125,
+    "memory_method": "Linux ru_maxrss: process lifetime high-water RSS; warm peaks are cumulative, not deltas",
+    "peak_gpu_allocation_mb": null,
+    "gpu_memory_status": "unmeasured: worker does not import or reset framework GPU allocator"
+  }
+}

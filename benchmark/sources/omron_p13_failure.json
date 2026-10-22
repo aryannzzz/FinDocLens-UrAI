@@ -15,7 +15,7 @@
   "human_checked_cells": 0,
   "status": "unavailable",
   "error": "RuntimeError: HTTPError: HTTP Error 403: Forbidden",
-  "attempted_at": "2026-10-22T09:35:19.391403+00:00",
+  "attempted_at": "2026-10-22T10:37:33.730303+00:00",
   "source_sha256": null,
   "input_path": null
 }

@@ -1,0 +1,6 @@
+{
+  "url": "https://www.omron.com/jp/ja/ir/irlib/pdfs/20260513_tanshin.pdf",
+  "error": "HTTPError: HTTP Error 403: Forbidden",
+  "at": "2026-10-22T09:17:51.273002+00:00",
+  "earlier_attempt": "HTTP 403 with research user agent"
+}
