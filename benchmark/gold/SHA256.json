@@ -1,0 +1,18 @@
+{
+  "benchmark/gold/adversarial/footnote_marker.json": "2a7b19939b615819b6317462f460a37d81612a9df28d4d165038c79912363958",
+  "benchmark/gold/adversarial/grouped_three.json": "2cfbc94cabb66b748d9d1fa4a195082803ee803a807a41680d4df16512f3e4d5",
+  "benchmark/gold/adversarial/grouped_two.json": "26acfa7c641d55fbfafa6c155c679b591fd8f7eaea88c7afee8a63b63ebddb25",
+  "benchmark/gold/adversarial/merged_headers.json": "fa0691faafce815b0b4a03586db2b739a92bfc5286a955dbc50f1e696f925707",
+  "benchmark/gold/adversarial/missing_cell.json": "43b8f6a1620aaa91a7f7045e8d42f8c81c99b71819afcba9b4ca7da740cbbe70",
+  "benchmark/gold/adversarial/rotation_90.json": "0f039a70d6974f91c9e87ec4cf7212c12fc15c960e1c83821971cc57c0612557",
+  "benchmark/gold/adversarial/scan_150.json": "31ad5ac91d376dd23fee63cabd94486c4d0de45e40eed9ee4546226e471706ea",
+  "benchmark/gold/adversarial/scan_200.json": "4f355fe73b4840e44b68558cf4e7f0ea1086ea41129be719f193af3177cbd905",
+  "benchmark/gold/adversarial/side_by_side.json": "f686941d0c4b66d5a01c064887effcacc3b116d4782005e3d2a5d6772c573af5",
+  "benchmark/gold/adversarial/sign_erasure.json": "f947c06710c3aa96ebbbd747c21dd5b2507bb6b45849bbc51ee9eb0a359fd487",
+  "benchmark/gold/adversarial/text_layer_deleted.json": "ffbf5c6e3a446b8e7d464eddf69c6d6cde87e5afb12e4edc4346d6e1fbae60e5",
+  "benchmark/gold/adversarial/tiny_cjk.json": "f1afe5427828e6106a5dbb8dd9786eb324ce175a47ddf67a6ec96737adee3e36",
+  "benchmark/gold/adversarial/vertical_spacing.json": "b496b0573c8baa391345d45a910c0129884b8ab14d3b209b0281c9274c5e9f54",
+  "benchmark/gold/daiwabo_p10.json": "b700644f50dc23f7c4a738c8d711f5386c77f5d2a7d0618d898c3a66b17917b2",
+  "benchmark/gold/elecom_p9.json": "6a1baa82b9fefdeaae075a21ad03491ce5b377a9ed527fd260da685906f897b5",
+  "benchmark/gold/original.json": "c9b802301e59416405340dcb047d62d02623cba9ad0648ed8606d178ddd6acd7"
+}

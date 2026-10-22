@@ -1,0 +1,71 @@
+elecom_p9 available None
+omron_p13 unavailable RuntimeError: HTTPError: HTTP Error 403: Forbidden
+MuPDF error: format error: No common ancestor in structure tree
+
+daiwabo_p10 available None
+Materialized 13 synthetic cases; none are independent issuer holdouts
+PASS: frozen v2, reference hashes, complete reference cell slots, evidence boxes, source-family split isolation
+test_derived_missing_cell_and_sign_have_new_truth (test_artifacts.ArtifactTests.test_derived_missing_cell_and_sign_have_new_truth) ... ok
+test_draft_hashes_and_reference_completeness (test_artifacts.ArtifactTests.test_draft_hashes_and_reference_completeness) ... ok
+test_frozen_source_outputs_unchanged (test_artifacts.ArtifactTests.test_frozen_source_outputs_unchanged) ... ok
+test_human_status_requires_reviewer (test_artifacts.ArtifactTests.test_human_status_requires_reviewer) ... ok
+test_source_families_have_no_split_leakage (test_artifacts.ArtifactTests.test_source_families_have_no_split_leakage) ... ok
+test_timeout_stays_in_gold_denominator (test_artifacts.ArtifactTests.test_timeout_stays_in_gold_denominator) ... ok
+test_worker_does_not_accept_empty_table_as_success (test_artifacts.ArtifactTests.test_worker_does_not_accept_empty_table_as_success) ... ok
+test_worker_records_backend_exception (test_artifacts.ArtifactTests.test_worker_records_backend_exception) ... ok
+test_worker_records_oom (test_artifacts.ArtifactTests.test_worker_records_oom) ... ok
+test_assignment_against_exhaustive_small_matrices (test_benchmark.EvaluatorTests.test_assignment_against_exhaustive_small_matrices) ... ok
+test_correct_abstention_on_injected_missing (test_benchmark.EvaluatorTests.test_correct_abstention_on_injected_missing) ... ok
+test_dash_never_equals_zero (test_benchmark.EvaluatorTests.test_dash_never_equals_zero) ... ok
+test_decimal_value_and_plus_glyph_are_separate (test_benchmark.EvaluatorTests.test_decimal_value_and_plus_glyph_are_separate) ... ok
+test_duplicate_cell_column_is_ambiguous (test_benchmark.EvaluatorTests.test_duplicate_cell_column_is_ambiguous) ... ok
+test_duplicate_prediction_cannot_reuse_gold (test_benchmark.EvaluatorTests.test_duplicate_prediction_cannot_reuse_gold) ... ok
+test_empty_failure_counts_all_cells (test_benchmark.EvaluatorTests.test_empty_failure_counts_all_cells) ... ok
+test_empty_success_is_false_assurance (test_benchmark.EvaluatorTests.test_empty_success_is_false_assurance) ... ok
+test_extra_table_count (test_benchmark.EvaluatorTests.test_extra_table_count) ... ok
+test_group_parent_assignment_is_assessed (test_benchmark.EvaluatorTests.test_group_parent_assignment_is_assessed) ... ok
+test_group_span_is_not_approximated_from_values (test_benchmark.EvaluatorTests.test_group_span_is_not_approximated_from_values) ... ok
+test_head_deletion_does_not_shift_following_rows (test_benchmark.EvaluatorTests.test_head_deletion_does_not_shift_following_rows) ... ok
+test_header_wrong_does_not_reassign_numeric_cells (test_benchmark.EvaluatorTests.test_header_wrong_does_not_reassign_numeric_cells) ... ok
+test_hierarchy_edges_distinguish_identical_labels (test_benchmark.EvaluatorTests.test_hierarchy_edges_distinguish_identical_labels) ... ok
+test_malformed_prediction_is_rejected_explicitly (test_benchmark.EvaluatorTests.test_malformed_prediction_is_rejected_explicitly) ... ok
+test_merged_side_by_side_table_only_matches_one (test_benchmark.EvaluatorTests.test_merged_side_by_side_table_only_matches_one) ... ok
+test_micro_aggregate_counts_failed_page (test_benchmark.EvaluatorTests.test_micro_aggregate_counts_failed_page) ... ok
+test_missing_status_invalid (test_benchmark.EvaluatorTests.test_missing_status_invalid) ... ok
+test_page_identity_prevents_matching (test_benchmark.EvaluatorTests.test_page_identity_prevents_matching) ... ok
+test_perfect_draft_remains_draft (test_benchmark.EvaluatorTests.test_perfect_draft_remains_draft) ... ok
+test_provenance_mismatch_rejected (test_benchmark.EvaluatorTests.test_provenance_mismatch_rejected) ... ok
+test_reordered_duplicates_match_context_geometry (test_benchmark.EvaluatorTests.test_reordered_duplicates_match_context_geometry) ... ok
+test_row_order_assessed_separately (test_benchmark.EvaluatorTests.test_row_order_assessed_separately) ... ok
+test_sign_erasure_not_semantically_equal (test_benchmark.EvaluatorTests.test_sign_erasure_not_semantically_equal) ... ok
+test_tail_deletion_keeps_denominator (test_benchmark.EvaluatorTests.test_tail_deletion_keeps_denominator) ... ok
+test_typed_value_not_rederived_from_correct_raw (test_benchmark.EvaluatorTests.test_typed_value_not_rederived_from_correct_raw) ... ok
+test_unrelated_warning_cannot_hide_silent_omissions (test_benchmark.EvaluatorTests.test_unrelated_warning_cannot_hide_silent_omissions) ... ok
+test_whitespace_policy_keeps_signs_and_labels (test_benchmark.EvaluatorTests.test_whitespace_policy_keeps_signs_and_labels) ... ok
+test_zero_gold_does_not_count_as_success (test_benchmark.EvaluatorTests.test_zero_gold_does_not_count_as_success) ... ok
+test_original_25_tests_in_unchanged_copy (test_frozen.FrozenRegressionTests.test_original_25_tests_in_unchanged_copy) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 0.963s
+
+OK
+
+original success 183.79890301730484 31.47843200713396
+elecom_p9 partial 190.1607940089889 22.2245620097965
+omron_p13 unavailable None None
+daiwabo_p10 partial 184.42283297190443 40.98506100126542
+missing_cell partial 166.69002900016494 34.20911598368548
+sign_erasure partial 183.48323195823468 34.07441399758682
+text_layer_deleted abstained 435.3983839682769 266.2665820098482
+rotation_90 success 193.74891099869274 40.47647601692006
+scan_150 abstained 255.18716100486927 112.3580590065103
+scan_200 abstained 231.59177898196504 112.29863000335172
+tiny_cjk success 143.91582997632213 28.02330401027575
+footnote_marker success 182.66971298726276 32.52980299293995
+grouped_two abstained 117.81350799719803 5.824364983709529
+grouped_three abstained 121.66923101176508 5.160180997336283
+merged_headers abstained 106.88305599614978 5.405061994679272
+side_by_side abstained 127.50700701144524 8.789417013758793
+vertical_spacing abstained 125.29139799880795 5.131351004820317
+Review sheet: /home/aryannzzz/findoclens-codex/benchmark/review/index.html 197 cell decisions; all unreviewed
+benchmark/reports/measured.md

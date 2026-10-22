@@ -1,0 +1,86 @@
+[
+  {
+    "table_id": "assets",
+    "row_id": "assets_r001",
+    "label": "流動資産",
+    "column_index": 0,
+    "expected_raw": "407,778",
+    "expected_status": "observed",
+    "bbox": [
+      206.8341064453125,
+      105.43658447265625,
+      272.0594482421875,
+      129.3765869140625
+    ],
+    "kind": "missing_cell",
+    "predicted_raw": null,
+    "document_id": "daiwabo_p10",
+    "crop": "assets/failure_01.png",
+    "metrics_path": "runs/v2/daiwabo_p10/independent_final-v1/cold/metrics.json",
+    "source_sha256": "b8d238aed3ec8deeb80675dcb1d6442ef9a89e3d876c42ade44543e2166125e8",
+    "reference_status": "ai_draft"
+  },
+  {
+    "table_id": "assets",
+    "row_id": "assets_r002",
+    "label": "現金及び預金",
+    "column_index": 0,
+    "expected_raw": "55,421",
+    "expected_status": "observed",
+    "bbox": [
+      216.79409790039062,
+      140.38128662109375,
+      272.06201171875,
+      164.3212890625
+    ],
+    "kind": "missing_cell",
+    "predicted_raw": null,
+    "document_id": "daiwabo_p10",
+    "crop": "assets/failure_02.png",
+    "metrics_path": "runs/v2/daiwabo_p10/independent_final-v1/cold/metrics.json",
+    "source_sha256": "b8d238aed3ec8deeb80675dcb1d6442ef9a89e3d876c42ade44543e2166125e8",
+    "reference_status": "ai_draft"
+  },
+  {
+    "table_id": "assets",
+    "row_id": "assets_r003",
+    "label": "受取手形及び売掛金",
+    "column_index": 0,
+    "expected_raw": "288,495",
+    "expected_status": "observed",
+    "bbox": [
+      206.8341064453125,
+      175.32598876953125,
+      272.0594482421875,
+      199.2659912109375
+    ],
+    "kind": "missing_cell",
+    "predicted_raw": null,
+    "document_id": "daiwabo_p10",
+    "crop": "assets/failure_03.png",
+    "metrics_path": "runs/v2/daiwabo_p10/independent_final-v1/cold/metrics.json",
+    "source_sha256": "b8d238aed3ec8deeb80675dcb1d6442ef9a89e3d876c42ade44543e2166125e8",
+    "reference_status": "ai_draft"
+  },
+  {
+    "table_id": "assets",
+    "row_id": "assets_r004",
+    "label": "商品及び製品",
+    "column_index": 0,
+    "expected_raw": "45,495",
+    "expected_status": "observed",
+    "bbox": [
+      216.79409790039062,
+      210.27078247070312,
+      272.06201171875,
+      234.21078491210938
+    ],
+    "kind": "missing_cell",
+    "predicted_raw": null,
+    "document_id": "daiwabo_p10",
+    "crop": "assets/failure_04.png",
+    "metrics_path": "runs/v2/daiwabo_p10/independent_final-v1/cold/metrics.json",
+    "source_sha256": "b8d238aed3ec8deeb80675dcb1d6442ef9a89e3d876c42ade44543e2166125e8",
+    "reference_status": "ai_draft"
+  }
+]

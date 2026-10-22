@@ -1,0 +1,30 @@
+test_01_all_monetary_rows (test_v2.FinancialTableTests.test_01_all_monetary_rows) ... ok
+test_02_sections (test_v2.FinancialTableTests.test_02_sections) ... ok
+test_03_raw_cell_gold (test_v2.FinancialTableTests.test_03_raw_cell_gold) ... ok
+test_04_hierarchy_gold (test_v2.FinancialTableTests.test_04_hierarchy_gold) ... ok
+test_05_dates (test_v2.FinancialTableTests.test_05_dates) ... ok
+test_06_unit (test_v2.FinancialTableTests.test_06_unit) ... ok
+test_07_anchors (test_v2.FinancialTableTests.test_07_anchors) ... ok
+test_08_negative (test_v2.FinancialTableTests.test_08_negative) ... ok
+test_09_negative_zero (test_v2.FinancialTableTests.test_09_negative_zero) ... ok
+test_10_missing_dash (test_v2.FinancialTableTests.test_10_missing_dash) ... ok
+test_11_numeric_total (test_v2.FinancialTableTests.test_11_numeric_total) ... ok
+test_12_local_depreciation_associations (test_v2.FinancialTableTests.test_12_local_depreciation_associations) ... ok
+test_13_hierarchy_fixed_assets_total (test_v2.FinancialTableTests.test_13_hierarchy_fixed_assets_total) ... ok
+test_14_negative_amount_evidence_box (test_v2.FinancialTableTests.test_14_negative_amount_evidence_box) ... ok
+test_15_nonzero_small_reconciliations_reported (test_v2.FinancialTableTests.test_15_nonzero_small_reconciliations_reported) ... ok
+test_16_scale_down (test_v2.FinancialTableTests.test_16_scale_down) ... ok
+test_17_scale_up (test_v2.FinancialTableTests.test_17_scale_up) ... ok
+test_18_horizontal_translate (test_v2.FinancialTableTests.test_18_horizontal_translate) ... ok
+test_19_distractor_footer (test_v2.FinancialTableTests.test_19_distractor_footer) ... ok
+test_20_multipage (test_v2.FinancialTableTests.test_20_multipage) ... ok
+test_21_one_deleted_cell_flagged (test_v2.FinancialTableTests.test_21_one_deleted_cell_flagged) ... ok
+test_22_lost_sign_accounting_alarm (test_v2.FinancialTableTests.test_22_lost_sign_accounting_alarm) ... ok
+test_23_raster_fails_closed (test_v2.FinancialTableTests.test_23_raster_fails_closed) ... ok
+test_24_cells_include_source_coordinates (test_v2.FinancialTableTests.test_24_cells_include_source_coordinates) ... ok
+test_25_all_issues_empty_on_original (test_v2.FinancialTableTests.test_25_all_issues_empty_on_original) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.211s
+
+OK

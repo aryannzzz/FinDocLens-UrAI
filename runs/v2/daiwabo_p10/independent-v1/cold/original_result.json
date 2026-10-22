@@ -1,0 +1,1110 @@
+{
+  "schema_version": "2.0",
+  "source_file": "/home/aryannzzz/findoclens-codex/benchmark/data/daiwabo_p10/page.pdf",
+  "method": "adaptive_pdf_native_no_ocr_or_vlm",
+  "pages": [
+    {
+      "page": 1,
+      "page_size": [
+        960.0,
+        540.0
+      ],
+      "source": "pymupdf_pdf_text",
+      "column_anchors": [
+        702.2,
+        815.75
+      ],
+      "anchor_diagnostics": {
+        "candidate_rows": 13,
+        "endpoint_clusters": [
+          [
+            9,
+            815.75
+          ],
+          [
+            6,
+            702.2
+          ],
+          [
+            4,
+            499.79
+          ],
+          [
+            3,
+            903.46
+          ],
+          [
+            3,
+            371.57
+          ],
+          [
+            1,
+            598.47
+          ]
+        ]
+      },
+      "periods": [
+        null,
+        null
+      ],
+      "unit": null,
+      "rows": [
+        {
+          "page": 1,
+          "row": 1,
+          "type": "item",
+          "label": "流動資産+17,426流動負債",
+          "path": [
+            "流動資産+17,426流動負債"
+          ],
+          "association": null,
+          "indent_x": 57.05,
+          "bbox": [
+            57.05,
+            103.58,
+            903.46,
+            130.87
+          ],
+          "label_bbox": [
+            57.05,
+            105.44,
+            543.36,
+            129.38
+          ],
+          "cells": [
+            {
+              "column": 0,
+              "period": null,
+              "raw": "267,779",
+              "value": 267779,
+              "status": "observed",
+              "bbox": [
+                636.97,
+                105.58,
+                702.2,
+                129.52
+              ],
+              "anchor_residual_pt": 0.0,
+              "evidence": "embedded_pdf_text"
+            },
+            {
+              "column": 1,
+              "period": null,
+              "raw": "282,903",
+              "value": 282903,
+              "status": "observed",
+              "bbox": [
+                736.37,
+                103.72,
+                815.75,
+                130.87
+              ],
+              "anchor_residual_pt": 0.0,
+              "evidence": "embedded_pdf_text"
+            }
+          ],
+          "review": []
+        },
+        {
+          "page": 1,
+          "row": 2,
+          "type": "item",
+          "label": "現金及び預金支払手形及び買掛金",
+          "path": [
+            "現金及び預金支払手形及び買掛金"
+          ],
+          "association": null,
+          "indent_x": 106.5,
+          "bbox": [
+            106.5,
+            138.52,
+            903.46,
+            165.79
+          ],
+          "label_bbox": [
+            106.5,
+            142.95,
+            614.4,
+            162.51
+          ],
+          "cells": [
+            {
+              "column": 0,
+              "period": null,
+              "raw": "228,422",
+              "value": 228422,
+              "status": "observed",
+              "bbox": [
+                636.97,
+                140.51,
+                702.2,
+                164.45
+              ],
+              "anchor_residual_pt": 0.0,
+              "evidence": "embedded_pdf_text"
+            },
+            {
+              "column": 1,
+              "period": null,
+              "raw": "213,595",
+              "value": 213595,
+              "status": "observed",
+              "bbox": [
+                736.37,
+                138.65,
+                815.75,
+                165.79
+              ],
+              "anchor_residual_pt": 0.0,
+              "evidence": "embedded_pdf_text"
+            }
+          ],
+          "review": [
+            "extra_numeric_tokens"
+          ]
+        },
+        {
+          "page": 1,
+          "row": 3,
+          "type": "item",
+          "label": "受取手形及び売掛金+31,130短期借入金",
+          "path": [
+            "受取手形及び売掛金+31,130短期借入金"
+          ],
+          "association": null,
+          "indent_x": 67.62,
+          "bbox": [
+            67.62,
+            173.47,
+            903.46,
+            200.72
+          ],
+          "label_bbox": [
+            67.62,
+            175.33,
+            614.4,
+            199.27
+          ],
+          "cells": [
+            {
+              "column": 0,
+              "period": null,
+              "raw": "8,904",
+              "value": 8904,
+              "status": "observed",
+              "bbox": [
+                656.89,
+                175.43,
+                702.2,
+                199.37
+              ],
+              "anchor_residual_pt": 0.0,
+              "evidence": "embedded_pdf_text"
+            },
+            {
+              "column": 1,
+              "period": null,
+              "raw": "42,704",
+              "value": 42704,
+              "status": "observed",
+              "bbox": [
+                748.49,
+                173.58,
+                815.75,
+                200.72
+              ],
+              "anchor_residual_pt": 0.0,
+              "evidence": "embedded_pdf_text"
+            }
+          ],
+          "review": []
+        },
+        {
+          "page": 1,
+          "row": 4,
+          "type": "item",
+          "label": "商品及び製品+22,808固定負債",
+          "path": [
+            "商品及び製品+22,808固定負債"
+          ],
+          "association": null,
+          "indent_x": 106.5,
+          "bbox": [
+            106.5,
+            208.41,
+            903.46,
+            235.65
+          ],
+          "label_bbox": [
+            106.5,
+            210.27,
+            543.36,
+            234.21
+          ],
+          "cells": [
+            {
+              "column": 0,
+              "period": null,
+              "raw": "20,032",
+              "value": 20032,
+              "status": "observed",
+              "bbox": [
+                646.93,
+                210.36,
+                702.2,
+                234.3
+              ],
+              "anchor_residual_pt": 0.0,
+              "evidence": "embedded_pdf_text"
+            },
+            {
+              "column": 1,
+              "period": null,
+              "raw": "15,653",
+              "value": 15653,
+              "status": "observed",
+              "bbox": [
+                748.49,
+                208.51,
+                815.75,
+                235.65
+              ],
+              "anchor_residual_pt": 0.0,
+              "evidence": "embedded_pdf_text"
+            }
+          ],
+          "review": [
+            "extra_numeric_tokens"
+          ]
+        },
+        {
+          "page": 1,
+          "row": 5,
+          "type": "item",
+          "label": "有形固定資産+1,280長期借入金",
+          "path": [
+            "有形固定資産+1,280長期借入金"
+          ],
+          "association": null,
+          "indent_x": 57.06,
+          "bbox": [
+            57.06,
+            243.36,
+            903.46,
+            270.58
+          ],
+          "label_bbox": [
+            57.06,
+            245.22,
+            614.4,
+            269.16
+          ],
+          "cells": [
+            {
+              "column": 0,
+              "period": null,
+              "raw": "11,799",
+              "value": 11799,
+              "status": "observed",
+              "bbox": [
+                646.93,
+                245.29,
+                702.2,
+                269.23
+              ],
+              "anchor_residual_pt": 0.0,
+              "evidence": "embedded_pdf_text"
+            },
+            {
+              "column": 1,
+              "period": null,
+              "raw": "8,232",
+              "value": 8232,
+              "status": "observed",
+              "bbox": [
+                760.61,
+                243.43,
+                815.75,
+                270.58
+              ],
+              "anchor_residual_pt": 0.0,
+              "evidence": "embedded_pdf_text"
+            }
+          ],
+          "review": [
+            "extra_numeric_tokens"
+          ]
+        },
+        {
+          "page": 1,
+          "row": 6,
+          "type": "total",
+          "label": "無形固定資産+1,554負債合計",
+          "path": [
+            "無形固定資産+1,554負債合計"
+          ],
+          "association": null,
+          "indent_x": 57.06,
+          "bbox": [
+            57.06,
+            278.3,
+            903.46,
+            305.51
+          ],
+          "label_bbox": [
+            57.06,
+            280.16,
+            578.92,
+            304.1
+          ],
+          "cells": [
+            {
+              "column": 0,
+              "period": null,
+              "raw": "287,811",
+              "value": 287811,
+              "status": "observed",
+              "bbox": [
+                636.97,
+                280.22,
+                702.2,
+                304.16
+              ],
+              "anchor_residual_pt": 0.0,
+              "evidence": "embedded_pdf_text"
+            },
+            {
+              "column": 1,
+              "period": null,
+              "raw": "298,557",
+              "value": 298557,
+              "status": "observed",
+              "bbox": [
+                736.37,
+                278.36,
+                815.75,
+                305.51
+              ],
+              "anchor_residual_pt": 0.0,
+              "evidence": "embedded_pdf_text"
+            }
+          ],
+          "review": []
+        },
+        {
+          "page": 1,
+          "row": 7,
+          "type": "total",
+          "label": "投資その他の資産純資産合計",
+          "path": [
+            "投資その他の資産純資産合計"
+          ],
+          "association": null,
+          "indent_x": 57.06,
+          "bbox": [
+            57.06,
+            313.25,
+            903.46,
+            340.43
+          ],
+          "label_bbox": [
+            57.06,
+            316.58,
+            585.88,
+            337.79
+          ],
+          "cells": [
+            {
+              "column": 0,
+              "period": null,
+              "raw": "152,310",
+              "value": 152310,
+              "status": "observed",
+              "bbox": [
+                636.97,
+                315.15,
+                702.2,
+                339.09
+              ],
+              "anchor_residual_pt": 0.0,
+              "evidence": "embedded_pdf_text"
+            },
+            {
+              "column": 1,
+              "period": null,
+              "raw": "160,719",
+              "value": 160719,
+              "status": "observed",
+              "bbox": [
+                736.37,
+                313.29,
+                815.75,
+                340.43
+              ],
+              "anchor_residual_pt": 0.0,
+              "evidence": "embedded_pdf_text"
+            }
+          ],
+          "review": []
+        },
+        {
+          "page": 1,
+          "row": 8,
+          "type": "item",
+          "label": "自己株式",
+          "path": [
+            "自己株式"
+          ],
+          "association": null,
+          "indent_x": 562.56,
+          "bbox": [
+            562.56,
+            348.22,
+            903.46,
+            375.36
+          ],
+          "label_bbox": [
+            562.56,
+            352.64,
+            614.4,
+            372.08
+          ],
+          "cells": [
+            {
+              "column": 0,
+              "period": null,
+              "raw": "△15,088",
+              "value": -15088,
+              "status": "observed",
+              "bbox": [
+                630.97,
+                350.07,
+                702.2,
+                374.01
+              ],
+              "anchor_residual_pt": 0.0,
+              "evidence": "embedded_pdf_text"
+            },
+            {
+              "column": 1,
+              "period": null,
+              "raw": "△2,667",
+              "value": -2667,
+              "status": "observed",
+              "bbox": [
+                742.61,
+                348.22,
+                815.75,
+                375.36
+              ],
+              "anchor_residual_pt": 0.0,
+              "evidence": "embedded_pdf_text"
+            }
+          ],
+          "review": []
+        },
+        {
+          "page": 1,
+          "row": 9,
+          "type": "total",
+          "label": "資産合計+19,155負債純資産合計",
+          "path": [
+            "資産合計+19,155負債純資産合計"
+          ],
+          "association": null,
+          "indent_x": 92.62,
+          "bbox": [
+            92.62,
+            383.14,
+            903.46,
+            410.29
+          ],
+          "label_bbox": [
+            92.62,
+            384.99,
+            599.92,
+            408.93
+          ],
+          "cells": [
+            {
+              "column": 0,
+              "period": null,
+              "raw": "440,122",
+              "value": 440122,
+              "status": "observed",
+              "bbox": [
+                636.97,
+                385.0,
+                702.2,
+                408.94
+              ],
+              "anchor_residual_pt": 0.0,
+              "evidence": "embedded_pdf_text"
+            },
+            {
+              "column": 1,
+              "period": null,
+              "raw": "459,277",
+              "value": 459277,
+              "status": "observed",
+              "bbox": [
+                736.37,
+                383.15,
+                815.75,
+                410.29
+              ],
+              "anchor_residual_pt": 0.0,
+              "evidence": "embedded_pdf_text"
+            }
+          ],
+          "review": []
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "missing_period_header"
+        },
+        {
+          "severity": "warning",
+          "code": "unit_not_detected"
+        }
+      ],
+      "checks": []
+    }
+  ],
+  "rows": [
+    {
+      "page": 1,
+      "row": 1,
+      "type": "item",
+      "label": "流動資産+17,426流動負債",
+      "path": [
+        "流動資産+17,426流動負債"
+      ],
+      "association": null,
+      "indent_x": 57.05,
+      "bbox": [
+        57.05,
+        103.58,
+        903.46,
+        130.87
+      ],
+      "label_bbox": [
+        57.05,
+        105.44,
+        543.36,
+        129.38
+      ],
+      "cells": [
+        {
+          "column": 0,
+          "period": null,
+          "raw": "267,779",
+          "value": 267779,
+          "status": "observed",
+          "bbox": [
+            636.97,
+            105.58,
+            702.2,
+            129.52
+          ],
+          "anchor_residual_pt": 0.0,
+          "evidence": "embedded_pdf_text"
+        },
+        {
+          "column": 1,
+          "period": null,
+          "raw": "282,903",
+          "value": 282903,
+          "status": "observed",
+          "bbox": [
+            736.37,
+            103.72,
+            815.75,
+            130.87
+          ],
+          "anchor_residual_pt": 0.0,
+          "evidence": "embedded_pdf_text"
+        }
+      ],
+      "review": []
+    },
+    {
+      "page": 1,
+      "row": 2,
+      "type": "item",
+      "label": "現金及び預金支払手形及び買掛金",
+      "path": [
+        "現金及び預金支払手形及び買掛金"
+      ],
+      "association": null,
+      "indent_x": 106.5,
+      "bbox": [
+        106.5,
+        138.52,
+        903.46,
+        165.79
+      ],
+      "label_bbox": [
+        106.5,
+        142.95,
+        614.4,
+        162.51
+      ],
+      "cells": [
+        {
+          "column": 0,
+          "period": null,
+          "raw": "228,422",
+          "value": 228422,
+          "status": "observed",
+          "bbox": [
+            636.97,
+            140.51,
+            702.2,
+            164.45
+          ],
+          "anchor_residual_pt": 0.0,
+          "evidence": "embedded_pdf_text"
+        },
+        {
+          "column": 1,
+          "period": null,
+          "raw": "213,595",
+          "value": 213595,
+          "status": "observed",
+          "bbox": [
+            736.37,
+            138.65,
+            815.75,
+            165.79
+          ],
+          "anchor_residual_pt": 0.0,
+          "evidence": "embedded_pdf_text"
+        }
+      ],
+      "review": [
+        "extra_numeric_tokens"
+      ]
+    },
+    {
+      "page": 1,
+      "row": 3,
+      "type": "item",
+      "label": "受取手形及び売掛金+31,130短期借入金",
+      "path": [
+        "受取手形及び売掛金+31,130短期借入金"
+      ],
+      "association": null,
+      "indent_x": 67.62,
+      "bbox": [
+        67.62,
+        173.47,
+        903.46,
+        200.72
+      ],
+      "label_bbox": [
+        67.62,
+        175.33,
+        614.4,
+        199.27
+      ],
+      "cells": [
+        {
+          "column": 0,
+          "period": null,
+          "raw": "8,904",
+          "value": 8904,
+          "status": "observed",
+          "bbox": [
+            656.89,
+            175.43,
+            702.2,
+            199.37
+          ],
+          "anchor_residual_pt": 0.0,
+          "evidence": "embedded_pdf_text"
+        },
+        {
+          "column": 1,
+          "period": null,
+          "raw": "42,704",
+          "value": 42704,
+          "status": "observed",
+          "bbox": [
+            748.49,
+            173.58,
+            815.75,
+            200.72
+          ],
+          "anchor_residual_pt": 0.0,
+          "evidence": "embedded_pdf_text"
+        }
+      ],
+      "review": []
+    },
+    {
+      "page": 1,
+      "row": 4,
+      "type": "item",
+      "label": "商品及び製品+22,808固定負債",
+      "path": [
+        "商品及び製品+22,808固定負債"
+      ],
+      "association": null,
+      "indent_x": 106.5,
+      "bbox": [
+        106.5,
+        208.41,
+        903.46,
+        235.65
+      ],
+      "label_bbox": [
+        106.5,
+        210.27,
+        543.36,
+        234.21
+      ],
+      "cells": [
+        {
+          "column": 0,
+          "period": null,
+          "raw": "20,032",
+          "value": 20032,
+          "status": "observed",
+          "bbox": [
+            646.93,
+            210.36,
+            702.2,
+            234.3
+          ],
+          "anchor_residual_pt": 0.0,
+          "evidence": "embedded_pdf_text"
+        },
+        {
+          "column": 1,
+          "period": null,
+          "raw": "15,653",
+          "value": 15653,
+          "status": "observed",
+          "bbox": [
+            748.49,
+            208.51,
+            815.75,
+            235.65
+          ],
+          "anchor_residual_pt": 0.0,
+          "evidence": "embedded_pdf_text"
+        }
+      ],
+      "review": [
+        "extra_numeric_tokens"
+      ]
+    },
+    {
+      "page": 1,
+      "row": 5,
+      "type": "item",
+      "label": "有形固定資産+1,280長期借入金",
+      "path": [
+        "有形固定資産+1,280長期借入金"
+      ],
+      "association": null,
+      "indent_x": 57.06,
+      "bbox": [
+        57.06,
+        243.36,
+        903.46,
+        270.58
+      ],
+      "label_bbox": [
+        57.06,
+        245.22,
+        614.4,
+        269.16
+      ],
+      "cells": [
+        {
+          "column": 0,
+          "period": null,
+          "raw": "11,799",
+          "value": 11799,
+          "status": "observed",
+          "bbox": [
+            646.93,
+            245.29,
+            702.2,
+            269.23
+          ],
+          "anchor_residual_pt": 0.0,
+          "evidence": "embedded_pdf_text"
+        },
+        {
+          "column": 1,
+          "period": null,
+          "raw": "8,232",
+          "value": 8232,
+          "status": "observed",
+          "bbox": [
+            760.61,
+            243.43,
+            815.75,
+            270.58
+          ],
+          "anchor_residual_pt": 0.0,
+          "evidence": "embedded_pdf_text"
+        }
+      ],
+      "review": [
+        "extra_numeric_tokens"
+      ]
+    },
+    {
+      "page": 1,
+      "row": 6,
+      "type": "total",
+      "label": "無形固定資産+1,554負債合計",
+      "path": [
+        "無形固定資産+1,554負債合計"
+      ],
+      "association": null,
+      "indent_x": 57.06,
+      "bbox": [
+        57.06,
+        278.3,
+        903.46,
+        305.51
+      ],
+      "label_bbox": [
+        57.06,
+        280.16,
+        578.92,
+        304.1
+      ],
+      "cells": [
+        {
+          "column": 0,
+          "period": null,
+          "raw": "287,811",
+          "value": 287811,
+          "status": "observed",
+          "bbox": [
+            636.97,
+            280.22,
+            702.2,
+            304.16
+          ],
+          "anchor_residual_pt": 0.0,
+          "evidence": "embedded_pdf_text"
+        },
+        {
+          "column": 1,
+          "period": null,
+          "raw": "298,557",
+          "value": 298557,
+          "status": "observed",
+          "bbox": [
+            736.37,
+            278.36,
+            815.75,
+            305.51
+          ],
+          "anchor_residual_pt": 0.0,
+          "evidence": "embedded_pdf_text"
+        }
+      ],
+      "review": []
+    },
+    {
+      "page": 1,
+      "row": 7,
+      "type": "total",
+      "label": "投資その他の資産純資産合計",
+      "path": [
+        "投資その他の資産純資産合計"
+      ],
+      "association": null,
+      "indent_x": 57.06,
+      "bbox": [
+        57.06,
+        313.25,
+        903.46,
+        340.43
+      ],
+      "label_bbox": [
+        57.06,
+        316.58,
+        585.88,
+        337.79
+      ],
+      "cells": [
+        {
+          "column": 0,
+          "period": null,
+          "raw": "152,310",
+          "value": 152310,
+          "status": "observed",
+          "bbox": [
+            636.97,
+            315.15,
+            702.2,
+            339.09
+          ],
+          "anchor_residual_pt": 0.0,
+          "evidence": "embedded_pdf_text"
+        },
+        {
+          "column": 1,
+          "period": null,
+          "raw": "160,719",
+          "value": 160719,
+          "status": "observed",
+          "bbox": [
+            736.37,
+            313.29,
+            815.75,
+            340.43
+          ],
+          "anchor_residual_pt": 0.0,
+          "evidence": "embedded_pdf_text"
+        }
+      ],
+      "review": []
+    },
+    {
+      "page": 1,
+      "row": 8,
+      "type": "item",
+      "label": "自己株式",
+      "path": [
+        "自己株式"
+      ],
+      "association": null,
+      "indent_x": 562.56,
+      "bbox": [
+        562.56,
+        348.22,
+        903.46,
+        375.36
+      ],
+      "label_bbox": [
+        562.56,
+        352.64,
+        614.4,
+        372.08
+      ],
+      "cells": [
+        {
+          "column": 0,
+          "period": null,
+          "raw": "△15,088",
+          "value": -15088,
+          "status": "observed",
+          "bbox": [
+            630.97,
+            350.07,
+            702.2,
+            374.01
+          ],
+          "anchor_residual_pt": 0.0,
+          "evidence": "embedded_pdf_text"
+        },
+        {
+          "column": 1,
+          "period": null,
+          "raw": "△2,667",
+          "value": -2667,
+          "status": "observed",
+          "bbox": [
+            742.61,
+            348.22,
+            815.75,
+            375.36
+          ],
+          "anchor_residual_pt": 0.0,
+          "evidence": "embedded_pdf_text"
+        }
+      ],
+      "review": []
+    },
+    {
+      "page": 1,
+      "row": 9,
+      "type": "total",
+      "label": "資産合計+19,155負債純資産合計",
+      "path": [
+        "資産合計+19,155負債純資産合計"
+      ],
+      "association": null,
+      "indent_x": 92.62,
+      "bbox": [
+        92.62,
+        383.14,
+        903.46,
+        410.29
+      ],
+      "label_bbox": [
+        92.62,
+        384.99,
+        599.92,
+        408.93
+      ],
+      "cells": [
+        {
+          "column": 0,
+          "period": null,
+          "raw": "440,122",
+          "value": 440122,
+          "status": "observed",
+          "bbox": [
+            636.97,
+            385.0,
+            702.2,
+            408.94
+          ],
+          "anchor_residual_pt": 0.0,
+          "evidence": "embedded_pdf_text"
+        },
+        {
+          "column": 1,
+          "period": null,
+          "raw": "459,277",
+          "value": 459277,
+          "status": "observed",
+          "bbox": [
+            736.37,
+            383.15,
+            815.75,
+            410.29
+          ],
+          "anchor_residual_pt": 0.0,
+          "evidence": "embedded_pdf_text"
+        }
+      ],
+      "review": []
+    }
+  ],
+  "issues": [
+    {
+      "page": 1,
+      "severity": "warning",
+      "code": "missing_period_header"
+    },
+    {
+      "page": 1,
+      "severity": "warning",
+      "code": "unit_not_detected"
+    }
+  ],
+  "checks": [],
+  "stats": {
+    "pages": 1,
+    "sections": 0,
+    "monetary_rows": 9,
+    "complete_rows": 9,
+    "reported_cell_count": 18,
+    "issues": 2,
+    "nonzero_reconciliation_differences": 0
+  }
+}

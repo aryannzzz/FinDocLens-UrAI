@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+benchmark/data/
+benchmark/review/assets/
+benchmark/review/failure_contact_sheet.png
+runs/**/stderr.txt
+runs/**/stdout.txt
+runs/**/evidence_page_*.png

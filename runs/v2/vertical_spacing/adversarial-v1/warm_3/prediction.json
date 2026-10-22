@@ -1,0 +1,28 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "vertical_spacing",
+  "source_sha256": "71ee675de67ededcc023c573e4a553d0f7f954d906b312d3dd18f71a3547091f",
+  "input_sha256": "71ee675de67ededcc023c573e4a553d0f7f954d906b312d3dd18f71a3547091f",
+  "backend": "v2",
+  "model_revision": null,
+  "status": "abstained",
+  "tables": [],
+  "issues": [
+    {
+      "page": 1,
+      "severity": "error",
+      "code": "needs_visual_fallback",
+      "message": "No stable native text columns: OCR/VLM is required and not run."
+    },
+    {
+      "code": "empty_extraction",
+      "severity": "error"
+    }
+  ],
+  "capabilities": {
+    "table_detection": false,
+    "grouped_headers": false,
+    "grid_spans": false
+  },
+  "provenance": "Evaluation-only projection; original_result.json retains unchanged v2 output"
+}
