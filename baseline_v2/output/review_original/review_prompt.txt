@@ -1,0 +1,5 @@
+You are reviewing a Japanese financial-table extraction. Use ONLY the supplied page crop as evidence.
+Return JSON containing {"transcription": [{"label":...,"previous_raw":...,"current_raw":...}], "uncertain":true|false,"reason":...}.
+Preserve △ (negative), △0, － (not reported), column associations and thousands-of-yen units verbatim.
+If any glyph is invisible/ambiguous, mark uncertain. Do not recompute or edit numbers to force totals.
+A human must confirm proposed changes against the PDF image; these proposals are never automatically merged.

@@ -1,0 +1,152 @@
+{
+  "description": "Single-source transformations; NOT independent company/template generalization",
+  "results": [
+    {
+      "variant": "original",
+      "runtime_ms": 9.9,
+      "pages": 1,
+      "monetary_rows": 37,
+      "reported_cells": 74,
+      "section_rows": 6,
+      "raw_cell_accuracy_first_page": 1.0,
+      "hierarchy_exact_first_page": 1.0,
+      "dates_first_page": [
+        "2025-03-31",
+        "2026-03-31"
+      ],
+      "issues": [],
+      "unexpected_financial_check_failures": 0
+    },
+    {
+      "variant": "scaled_79",
+      "runtime_ms": 9.3,
+      "pages": 1,
+      "monetary_rows": 37,
+      "reported_cells": 74,
+      "section_rows": 6,
+      "raw_cell_accuracy_first_page": 1.0,
+      "hierarchy_exact_first_page": 1.0,
+      "dates_first_page": [
+        "2025-03-31",
+        "2026-03-31"
+      ],
+      "issues": [],
+      "unexpected_financial_check_failures": 0
+    },
+    {
+      "variant": "scaled_123",
+      "runtime_ms": 9.1,
+      "pages": 1,
+      "monetary_rows": 37,
+      "reported_cells": 74,
+      "section_rows": 6,
+      "raw_cell_accuracy_first_page": 1.0,
+      "hierarchy_exact_first_page": 1.0,
+      "dates_first_page": [
+        "2025-03-31",
+        "2026-03-31"
+      ],
+      "issues": [],
+      "unexpected_financial_check_failures": 0
+    },
+    {
+      "variant": "translated",
+      "runtime_ms": 9.2,
+      "pages": 1,
+      "monetary_rows": 37,
+      "reported_cells": 74,
+      "section_rows": 6,
+      "raw_cell_accuracy_first_page": 1.0,
+      "hierarchy_exact_first_page": 1.0,
+      "dates_first_page": [
+        "2025-03-31",
+        "2026-03-31"
+      ],
+      "issues": [],
+      "unexpected_financial_check_failures": 0
+    },
+    {
+      "variant": "distractor_footer",
+      "runtime_ms": 10.0,
+      "pages": 1,
+      "monetary_rows": 37,
+      "reported_cells": 74,
+      "section_rows": 6,
+      "raw_cell_accuracy_first_page": 1.0,
+      "hierarchy_exact_first_page": 1.0,
+      "dates_first_page": [
+        "2025-03-31",
+        "2026-03-31"
+      ],
+      "issues": [],
+      "unexpected_financial_check_failures": 0
+    },
+    {
+      "variant": "two_pages",
+      "runtime_ms": 21.0,
+      "pages": 2,
+      "monetary_rows": 74,
+      "reported_cells": 148,
+      "section_rows": 12,
+      "raw_cell_accuracy_first_page": 1.0,
+      "hierarchy_exact_first_page": 1.0,
+      "dates_first_page": [
+        "2025-03-31",
+        "2026-03-31"
+      ],
+      "issues": [],
+      "unexpected_financial_check_failures": 0
+    },
+    {
+      "variant": "missing_value",
+      "runtime_ms": 10.0,
+      "pages": 1,
+      "monetary_rows": 37,
+      "reported_cells": 73,
+      "section_rows": 6,
+      "raw_cell_accuracy_first_page": 0.9865,
+      "hierarchy_exact_first_page": 1.0,
+      "dates_first_page": [
+        "2025-03-31",
+        "2026-03-31"
+      ],
+      "issues": [
+        "partial_data_row"
+      ],
+      "unexpected_financial_check_failures": 0
+    },
+    {
+      "variant": "lost_negative_sign",
+      "runtime_ms": 9.4,
+      "pages": 1,
+      "monetary_rows": 37,
+      "reported_cells": 74,
+      "section_rows": 6,
+      "raw_cell_accuracy_first_page": 0.9865,
+      "hierarchy_exact_first_page": 1.0,
+      "dates_first_page": [
+        "2025-03-31",
+        "2026-03-31"
+      ],
+      "issues": [
+        "financial_reconciliation_failure"
+      ],
+      "unexpected_financial_check_failures": 1
+    },
+    {
+      "variant": "raster_only",
+      "runtime_ms": 28.7,
+      "pages": 1,
+      "monetary_rows": 0,
+      "reported_cells": 0,
+      "section_rows": 0,
+      "raw_cell_accuracy_first_page": null,
+      "hierarchy_exact_first_page": null,
+      "dates_first_page": [],
+      "issues": [
+        "needs_visual_fallback"
+      ],
+      "unexpected_financial_check_failures": 0
+    }
+  ]
+}

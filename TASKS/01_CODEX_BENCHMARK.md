@@ -1,0 +1,17 @@
+# Codex — Independent benchmark, tests and evaluation (track A)
+
+You are the evaluation and red-team owner. Claude Code in a separate worktree owns extraction backends. Do NOT modify model/backend implementation files or change its output in place. Work from `baseline_v2` and shared contract in `docs/EVAL_PROTOCOL.md`.
+
+Read `00_START_HERE.md`, `AGENTS.md`, `baseline_v2/evaluate.py`, `baseline_v2/benchmark.py`, `baseline_v2/tests/gold_rows.tsv`.
+
+Tasks in priority order:
+1. **Audit** existing evaluation for gold leakage and metric pitfalls. Freeze original source PDF, 43-row gold and v2 outputs with SHA-256. Verify tests; write `benchmark/audit.md` with concrete limitations, not vague remarks.
+2. **Dataset discovery**: source independent PDFs from ELECOM/OMRON/Daiwabo URLs in `docs/SOURCE_MANIFEST.md`; store original download metadata and SHA, extract selected pages with PyMuPDF. On network failure, record and continue with available sources instead of claiming success. Create a `manifest.jsonl` with doc/company/source_url/source_page_index/license_note/difficulty/domain split. Do not place related pages from a single company in train and holdout sets.
+3. **Reference transcription**: create annotation template for table bbox, row id, row order, exact Japanese label, parent path, group headers, cell role, raw token, explicit null status and evidence bbox. Bootstrapping from PDF text/OCR allowed, but mark annotations `ai_draft` and do NOT claim human verified. Produce a visual gold-check sheet with crops so Aryan can sign off independently. Prioritize 15+ financially meaningful rows and 30+ numeric cells across independently sourced pages; full-page gold is preferable if feasible.
+4. **Evaluator**: compare predictions to gold without positional assumptions; report table/row/cell coverage, exact raw token accuracy, normalized numeric accuracy, header-role accuracy, hierarchy edge F1 and matched-row F1, with false-positive/extraneous row rate and abstention. Page-level aggregation must distinguish missing/abstained from ignored. TEDS/GriTS optional ONLY if actual grid/span gold exists; do not compute made-up approximate values.
+5. **Adversarial cases**: digital text deletion, sign erasure, merged headers, separate side-by-side tables, two-column/three-column group headers, 90-degree rotation, 150-dpi scan, 200-dpi scan, tiny CJK font, footnote marker, vertical letter spacing. Separate synthetic from independently sourced pages. Label whether perturbation preserves visual truth; a text-layer deletion may or may not preserve glyphs.
+6. **Resource harness**: benchmark end-to-end runtime, cold/warm starts, per-page memory where possible, command, backend version, device, GPU config, status. Failure/OOM/timeouts MUST be counted, not hidden.
+
+Deliverables: `benchmark/manifest.jsonl`, `benchmark/gold/`, `benchmark/evaluate.py`, `benchmark/run.py`, `benchmark/reports/`, evidence audit contact sheet, tests, clear `README`. Do not download huge frameworks just to complete this track. Implement minimally and test repeatedly. Finish by handing Claude a definitive common schema + CLI adapter contract, or ask to use the shared contract already in the repo.
+
+Done when: original regression still passes; evaluator can consume v2 results; at least one independent PDF produces a **measured** report or is documented as unavailable; each metric has explicit denominator; dataset/gold confidence fully disclosed; command and output are reproducible.

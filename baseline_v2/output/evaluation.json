@@ -1,0 +1,16 @@
+{
+  "gold_rows": 43,
+  "pred_rows": 43,
+  "sequence_complete": true,
+  "label_exact": 43,
+  "path_exact": 43,
+  "row_type_exact": 43,
+  "gold_monetary_cells": 74,
+  "matched_cells": 74,
+  "evaluated_cells": 74,
+  "raw_cell_exact": 74,
+  "semantic_cell_exact": 74,
+  "label_accuracy": 1.0,
+  "path_accuracy": 1.0,
+  "raw_cell_accuracy": 1.0
+}

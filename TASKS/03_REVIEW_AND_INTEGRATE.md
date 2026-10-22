@@ -1,0 +1,10 @@
+# Cross-review, integration, optional demo and submission polish
+
+1. Review each agent branch against `AGENTS.md`. Codex red-teams model/backend output, especially omitted rows, amounts misread as percent, `△` vs missing sign, numeric changes under arithmetic constraints, and table blending. Claude reviews metric denominators, gold matching, and split leakage. Neither changes gold in response to a model error.
+2. Merge only tests-passing changes. Run frozen v2 plus independent gold and both model/geometry backends from a clean environment. Compare identical input pages and normalized output with raw backend outputs also saved. Keep failed runs in output report.
+3. Produce `RESULTS.md` with: doc_id, layout category, exact-cell accuracy, row F1, table count, structural/headers metric, completeness/abstention, cold/warm time, peak GPU memory (or N/A), CPU/RAM notes and independent-filing status. Include errors and evidence snapshots.
+4. Optional demo (only if benchmarks and backend work): Streamlit local app with upload public PDF, page viewer, overlay clickable source boxes, side-by-side original/model candidate values and accounting warnings, manual verify button, export reviewed JSON/CSV and unchanged source. Use simple local storage only. No auth, cloud deployment or user PII.
+5. Provide `run_demo.sh`, minimal reproducible environment(s), pinned package+model versions, setup README, 2-minute screencast script (record it only if actually made), visual failure gallery, a 1–2 page technical memo, and an honest AI_COLLABORATION.md. The take-home requires the FULL AI CHAT LOG separately. Do not falsely imply notes summarize all chat activity.
+6. Final narrative should state a narrow measured conclusion, e.g. "native extraction preserves glyphs on clean text-layer PDFs; TableFormer adds structure on a more complex layout; raster pages require OCR; routing avoids expensive vision calls on clear native pages", but say this only if run evidence actually supports it.
+
+Stop expanding scope if you cannot produce complete clean reruns. Smaller factual output beats untested features.

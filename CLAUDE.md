@@ -1,0 +1,2 @@
+# Claude Code context
+Follow all repo-level `AGENTS.md` instructions. Read `TASKS/02_CLAUDE_BACKENDS.md` for your workstream and preserve independent Codex benchmark files. Start with a technical audit and an experiment matrix, then implement only the highest-payoff feasible backends. Do not train a model or overpromise scan support. Finish with measured comparisons and an evidence-backed handoff.

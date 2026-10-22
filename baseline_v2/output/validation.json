@@ -1,0 +1,212 @@
+{
+  "stats": {
+    "pages": 1,
+    "sections": 6,
+    "monetary_rows": 37,
+    "complete_rows": 37,
+    "reported_cell_count": 74,
+    "issues": 0,
+    "nonzero_reconciliation_differences": 11
+  },
+  "checks": [
+    {
+      "page": 1,
+      "name": "流動資産 subtotal",
+      "period": "2025-03-31",
+      "column": 0,
+      "reported": 5863684,
+      "calculated": 5863681,
+      "difference": 3,
+      "plausibly_rounded": true,
+      "kind": "subtotal"
+    },
+    {
+      "page": 1,
+      "name": "流動資産 subtotal",
+      "period": "2026-03-31",
+      "column": 1,
+      "reported": 3377407,
+      "calculated": 3377405,
+      "difference": 2,
+      "plausibly_rounded": true,
+      "kind": "subtotal"
+    },
+    {
+      "page": 1,
+      "name": "有形固定資産 subtotal",
+      "period": "2026-03-31",
+      "column": 1,
+      "reported": 1352610,
+      "calculated": 1352607,
+      "difference": 3,
+      "plausibly_rounded": true,
+      "kind": "subtotal"
+    },
+    {
+      "page": 1,
+      "name": "無形固定資産 subtotal",
+      "period": "2025-03-31",
+      "column": 0,
+      "reported": 44261,
+      "calculated": 44260,
+      "difference": 1,
+      "plausibly_rounded": true,
+      "kind": "subtotal"
+    },
+    {
+      "page": 1,
+      "name": "無形固定資産 subtotal",
+      "period": "2026-03-31",
+      "column": 1,
+      "reported": 35869,
+      "calculated": 35868,
+      "difference": 1,
+      "plausibly_rounded": true,
+      "kind": "subtotal"
+    },
+    {
+      "page": 1,
+      "name": "投資その他の資産 subtotal",
+      "period": "2026-03-31",
+      "column": 1,
+      "reported": 369362,
+      "calculated": 369361,
+      "difference": 1,
+      "plausibly_rounded": true,
+      "kind": "subtotal"
+    },
+    {
+      "page": 1,
+      "name": "固定資産 child totals",
+      "period": "2025-03-31",
+      "column": 0,
+      "reported": 1670426,
+      "calculated": 1670424,
+      "difference": 2,
+      "plausibly_rounded": true,
+      "kind": "subtotal"
+    },
+    {
+      "page": 1,
+      "name": "固定資産 child totals",
+      "period": "2026-03-31",
+      "column": 1,
+      "reported": 1757841,
+      "calculated": 1757841,
+      "difference": 0,
+      "plausibly_rounded": true,
+      "kind": "subtotal"
+    },
+    {
+      "page": 1,
+      "name": "gross + depreciation = net: 建物及び構築物",
+      "period": "2025-03-31",
+      "column": 0,
+      "reported": 197775,
+      "calculated": 197775,
+      "difference": 0,
+      "plausibly_rounded": true,
+      "kind": "net_asset"
+    },
+    {
+      "page": 1,
+      "name": "gross + depreciation = net: 建物及び構築物",
+      "period": "2026-03-31",
+      "column": 1,
+      "reported": 239828,
+      "calculated": 239829,
+      "difference": -1,
+      "plausibly_rounded": true,
+      "kind": "net_asset"
+    },
+    {
+      "page": 1,
+      "name": "gross + depreciation = net: 機械装置及び運搬具",
+      "period": "2025-03-31",
+      "column": 0,
+      "reported": 390757,
+      "calculated": 390757,
+      "difference": 0,
+      "plausibly_rounded": true,
+      "kind": "net_asset"
+    },
+    {
+      "page": 1,
+      "name": "gross + depreciation = net: 機械装置及び運搬具",
+      "period": "2026-03-31",
+      "column": 1,
+      "reported": 336708,
+      "calculated": 336708,
+      "difference": 0,
+      "plausibly_rounded": true,
+      "kind": "net_asset"
+    },
+    {
+      "page": 1,
+      "name": "gross + depreciation = net: リース資産",
+      "period": "2025-03-31",
+      "column": 0,
+      "reported": 63146,
+      "calculated": 63147,
+      "difference": -1,
+      "plausibly_rounded": true,
+      "kind": "net_asset"
+    },
+    {
+      "page": 1,
+      "name": "gross + depreciation = net: リース資産",
+      "period": "2026-03-31",
+      "column": 1,
+      "reported": 41872,
+      "calculated": 41873,
+      "difference": -1,
+      "plausibly_rounded": true,
+      "kind": "net_asset"
+    },
+    {
+      "page": 1,
+      "name": "gross + depreciation = net: その他",
+      "period": "2025-03-31",
+      "column": 0,
+      "reported": 8439,
+      "calculated": 8439,
+      "difference": 0,
+      "plausibly_rounded": true,
+      "kind": "net_asset"
+    },
+    {
+      "page": 1,
+      "name": "gross + depreciation = net: その他",
+      "period": "2026-03-31",
+      "column": 1,
+      "reported": 24243,
+      "calculated": 24243,
+      "difference": 0,
+      "plausibly_rounded": true,
+      "kind": "net_asset"
+    },
+    {
+      "page": 1,
+      "name": "total assets",
+      "period": "2025-03-31",
+      "column": 0,
+      "reported": 7534110,
+      "calculated": 7534110,
+      "difference": 0,
+      "plausibly_rounded": true,
+      "kind": "subtotal"
+    },
+    {
+      "page": 1,
+      "name": "total assets",
+      "period": "2026-03-31",
+      "column": 1,
+      "reported": 5135249,
+      "calculated": 5135248,
+      "difference": 1,
+      "plausibly_rounded": true,
+      "kind": "subtotal"
+    }
+  ],
+  "issues": []
+}

@@ -1,0 +1,106 @@
+{
+  "methodology": "v1 frozen baseline vs v2 on the same transformed page; no out-of-distribution accuracy claim",
+  "results": [
+    {
+      "variant": "original",
+      "v1_monetary_rows": 37,
+      "v2_monetary_rows": 37,
+      "v1_issues": 0,
+      "v2_issues": 0,
+      "v1_periods": [
+        "2025-03-31"
+      ],
+      "v2_periods": [
+        [
+          "2025-03-31",
+          "2026-03-31"
+        ]
+      ]
+    },
+    {
+      "variant": "scaled_79",
+      "v1_monetary_rows": 37,
+      "v2_monetary_rows": 37,
+      "v1_issues": 0,
+      "v2_issues": 0,
+      "v1_periods": [
+        "2025-03-31"
+      ],
+      "v2_periods": [
+        [
+          "2025-03-31",
+          "2026-03-31"
+        ]
+      ]
+    },
+    {
+      "variant": "scaled_123",
+      "v1_monetary_rows": 0,
+      "v2_monetary_rows": 37,
+      "v1_issues": 26,
+      "v2_issues": 0,
+      "v1_periods": [
+        "2025-03-31"
+      ],
+      "v2_periods": [
+        [
+          "2025-03-31",
+          "2026-03-31"
+        ]
+      ]
+    },
+    {
+      "variant": "translated",
+      "v1_monetary_rows": 0,
+      "v2_monetary_rows": 37,
+      "v1_issues": 27,
+      "v2_issues": 0,
+      "v1_periods": [
+        "2025-03-31"
+      ],
+      "v2_periods": [
+        [
+          "2025-03-31",
+          "2026-03-31"
+        ]
+      ]
+    },
+    {
+      "variant": "distractor_footer",
+      "v1_monetary_rows": 10,
+      "v2_monetary_rows": 37,
+      "v1_issues": 22,
+      "v2_issues": 0,
+      "v1_periods": [
+        "2025-03-31"
+      ],
+      "v2_periods": [
+        [
+          "2025-03-31",
+          "2026-03-31"
+        ]
+      ]
+    },
+    {
+      "variant": "two_pages",
+      "v1_monetary_rows": 74,
+      "v2_monetary_rows": 74,
+      "v1_issues": 0,
+      "v2_issues": 0,
+      "v1_periods": [
+        "2025-03-31",
+        "2025-03-31"
+      ],
+      "v2_periods": [
+        [
+          "2025-03-31",
+          "2026-03-31"
+        ],
+        [
+          "2025-03-31",
+          "2026-03-31"
+        ]
+      ]
+    }
+  ]
+}
