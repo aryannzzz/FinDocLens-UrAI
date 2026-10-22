@@ -12,6 +12,9 @@ import re
 import time
 from pathlib import Path
 
+import os
+os.environ.setdefault("HF_HOME", str(Path(__file__).resolve().parents[2] / ".cache" / "hf"))   # keep weights repo-local/removable
+
 from ..amounts import looks_numeric, parse_token
 from ..schema import Cell, DocumentPrediction, Header, Row, Table, sha256_file
 from .native_grid import CHANGE_RE, PCT_RE, UNIT_RE, UNIT_CTX, parse_period
@@ -55,10 +58,15 @@ def get_converter(cell_matching=True, ocr=None, mode="accurate", threads=None):
     return conv, (time.perf_counter() - t0) * 1000
 
 
+def _arrow_numeric(text):
+    parts = text.split()
+    return len(parts) > 1 and looks_numeric(parts[-1]) and all(not re.search(r"[\w\u3040-\u9fff]", p) for p in parts[:-1])
+
+
 def _ocr_options(engine):
     if engine == "rapidocr":
         from docling.datamodel.pipeline_options import RapidOcrOptions
-        return RapidOcrOptions()
+        return RapidOcrOptions(lang=[os.environ.get("FINDOCLENS_RAPID_LANG", "iso:ja")])
     if engine == "easyocr":
         from docling.datamodel.pipeline_options import EasyOcrOptions
         return EasyOcrOptions(lang=["ja", "en"])
@@ -110,6 +118,10 @@ def extract(pdf, page_index=0, out_dir=None, cell_matching=True, ocr=None, mode=
         page_h = doc.pages[page_no].size.height if page_no in doc.pages else page_rect.height
         pred.tables.append(_map_table(item, ti, page_h, ocr))
     pred.status = "ok" if pred.tables else "no_tables"
+    empty = [t.table_id for t in pred.tables if not any(c.status != "absent_text_cell" and c.column_index >= 0 for r in t.rows for c in r.cells)]
+    if empty:
+        pred.issues.append({"severity": "error", "code": "table_without_numeric_cells", "tables": empty})
+        pred.status = "failed" if len(empty) == len(pred.tables) else "partial"
     if not pred.tables:
         pred.issues.append({"severity": "warning", "code": "no_tables_found", "message": "Docling layout/TableFormer found no table"})
     pred.meta["elapsed_ms"] = round((time.perf_counter() - t_all) * 1000, 1)
@@ -138,6 +150,8 @@ def _map_table(item, ti, page_h, ocr):
     first_body = (max(hdr_rows) + 1) if hdr_rows else 0
     tbl = Table(table_id=f"t{ti}", bbox=_box(item.prov[0].bbox, page_h) if item.prov else None, reading_order=ti,
                 capabilities={"cell_bbox": True, "headers": "tableformer column_header flags", "raw_grid": f"{nr}x{nc}"})
+    tbl.grid = [{"r0": c.start_row_offset_idx, "r1": c.end_row_offset_idx, "c0": c.start_col_offset_idx, "c1": c.end_col_offset_idx,
+                 "text": c.text, "header": bool(getattr(c, "column_header", False)), "bbox": _box(c.bbox, page_h)} for c in cells]
     # which columns are numeric data columns?
     ncount = {}
     for (r, c), cell in grid.items():
@@ -169,6 +183,11 @@ def _map_table(item, ti, page_h, ocr):
         h.role = next((col_role[data_cols[k]] for k in h.column_indices if col_role[data_cols[k]]), "amount")
     if not tbl.headers:
         tbl.issues.append({"severity": "warning", "code": "no_header_cells_found"})
+    htexts = [h.text for h in tbl.headers if h.row_start == (min(h2.row_start for h2 in tbl.headers))]
+    if len(htexts) != len(set(htexts)):
+        tbl.issues.append({"severity": "warning", "code": "repeated_header_text_possible_side_by_side_tables",
+                           "message": "identical header text appears more than once in the top header row"})
+    other_cols = [c for c in range(nc) if c not in data_cols and c not in label_cols]
     for r in range(first_body, nr):
         row_cells = [grid.get((r, c)) for c in range(nc)]
         label = "".join(grid[(r, c)].text.strip() for c in label_cols if (r, c) in grid)
@@ -180,14 +199,22 @@ def _map_table(item, ti, page_h, ocr):
             if not text:
                 out.append(Cell(k, hid_, col_period[c], col_role[c] or "amount", None, None, "absent_text_cell",
                                 _box(cell.bbox, page_h) if cell else None, "docling", ek))
-            elif looks_numeric(text):
-                v, st, hint = parse_token(text)
+            elif looks_numeric(text) or _arrow_numeric(text):
+                core = text if looks_numeric(text) else text.split()[-1]
+                v, st, hint = parse_token(core)
                 out.append(Cell(k, hid_, col_period[c], col_role[c] or ("composition_pct" if hint == "composition_pct" else "amount"),
-                                text, v, st, _box(cell.bbox, page_h), "docling", ek))
+                                text, v, st, _box(cell.bbox, page_h), "docling", ek,
+                                [] if core == text else ["raw_has_non_numeric_prefix_glyph"]))
             else:
                 out.append(Cell(k, hid_, col_period[c], col_role[c] or "amount", text, None, "uncertain",
                                 _box(cell.bbox, page_h), "docling", ek, ["non_numeric_text_in_data_column"]))
-        has = any(c.status != "absent_text_cell" for c in out)
+        n_data_cells = sum(c.status != "absent_text_cell" for c in out)
+        for c in other_cols:        # text outside label/data columns is kept, never dropped
+            cell = grid.get((r, c))
+            if cell and cell.text.strip():
+                out.append(Cell(-1, None, None, "other", cell.text.strip(), None, "observed", _box(cell.bbox, page_h), "docling", ek,
+                                [f"grid_col={c}"]))
+        has = n_data_cells > 0
         typ = "section" if not has else ("total" if re.search(r"合計$|総計$|小計$", label) else "item")
         boxes = [x.bbox for x in out if x.bbox]
         tbl.rows.append(Row(r - first_body, label or None, label or None, [], None, typ, out))

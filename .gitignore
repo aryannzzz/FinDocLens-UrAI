@@ -6,3 +6,4 @@ __pycache__/
 data/variants/
 runs/**/evidence*.png
 baseline_v2/tests/generated/
+.cache/

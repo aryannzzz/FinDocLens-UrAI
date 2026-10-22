@@ -62,6 +62,9 @@ class Table:
     n_data_columns: int = 0
     capabilities: dict = field(default_factory=dict)   # e.g. {"cell_bbox": true, "headers": "partial"}
     checks: List[dict] = field(default_factory=list)
+    # lossless table grid as produced by the engine (independent of financial semantics):
+    # [{"r0","r1","c0","c1","text","header","bbox"}]; None when the backend has no explicit grid
+    grid: Optional[List[dict]] = None
 
 
 @dataclass

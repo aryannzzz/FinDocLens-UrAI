@@ -14,6 +14,18 @@ def norm_raw(s):
     return None if s is None else re.sub(r"\s+", "", s)
 
 
+_PREFIX = re.compile(r"^[→⇒➔➡▶>＞]+")
+
+
+def numeric_token(raw):
+    """Whitespace-free numeric string (leading arrow glyphs ignored) or None if the text is not numeric."""
+    from .amounts import looks_numeric
+    if raw is None:
+        return None
+    t = _PREFIX.sub("", norm_raw(raw))
+    return t if t and looks_numeric(t) else None
+
+
 def norm_label(s):
     return re.sub(r"[\s　・]", "", unicodedata.normalize("NFKC", s or ""))
 
@@ -24,9 +36,9 @@ def numeric_cells(pred):
     for t in pred["tables"]:
         for r in t["rows"]:
             for c in r["cells"]:
-                if c["column_index"] >= 0 and c["raw"] is not None and c["status"] in ("observed", "negative_zero", "not_reported", "uncertain") \
-                        and c["role"] != "other":
-                    out.append((t["table_id"], r["row_index"], r["label"], c["column_index"], norm_raw(c["raw"])))
+                tok = numeric_token(c["raw"]) if c["column_index"] >= 0 and c["role"] != "other" else None
+                if tok is not None and c["status"] in ("observed", "negative_zero", "not_reported", "uncertain"):
+                    out.append((t["table_id"], r["row_index"], r["label"], c["column_index"], tok))
     return out
 
 

@@ -153,11 +153,31 @@ def route(pdf, page_index=0, out_root="runs", verify=False, allow_models=True, v
                     p["status"] = "partial"
                     final = validate_prediction(p)
                     log["decisions"].append("native found no tables; using docling result as partial")
-                elif c["n_value_mismatch"]:
-                    final["status"] = "needs_visual_review"
-                    log["decisions"].append(f"docling disagrees on {c['n_value_mismatch']} items; native glyphs kept, flagged for review")
                 else:
-                    log["decisions"].append("docling agrees with native on all compared cells")
+                    from .compare import reference_tokens, text_layer_reference
+                    ga, gb = reference_tokens(g), reference_tokens(p)
+                    layer = text_layer_reference(pdf, page_index)         # exact glyph strings, independent of both grids
+                    only_native, only_checker = ga - gb, gb - ga
+                    checker_in_layer_not_native = only_checker & (layer - ga)   # tokens native may have omitted
+                    checker_not_in_layer = only_checker - layer                  # checker artefacts (not in the PDF text)
+                    final["meta"]["token_agreement_docling"] = {
+                        "native_tokens": sum(ga.values()), "docling_tokens": sum(gb.values()),
+                        "only_native": sorted(only_native.elements())[:40], "only_docling": sorted(only_checker.elements())[:40],
+                        "docling_only_present_in_text_layer": sorted(checker_in_layer_not_native.elements())[:40],
+                        "docling_only_absent_from_text_layer": sorted(checker_not_in_layer.elements())[:40]}
+                    if checker_in_layer_not_native:
+                        final["status"] = "needs_visual_review"
+                        log["decisions"].append(f"docling found {sum(checker_in_layer_not_native.values())} numeric tokens present in the "
+                                                "text layer that native_grid did not place in a table -> possible native omission")
+                    else:
+                        if only_native or checker_not_in_layer or c["n_value_mismatch"]:
+                            final["issues"].append({"severity": "info", "code": "checker_differs_native_glyphs_kept",
+                                                    "message": f"docling omitted {sum(only_native.values())} native tokens, produced "
+                                                               f"{sum(checker_not_in_layer.values())} tokens absent from the text layer, "
+                                                               f"{len(p['tables'])} vs {len(g['tables'])} tables; native glyphs are verified text-layer strings"})
+                            log["decisions"].append("docling differs but every docling token is explained by the text layer; native kept (status unchanged)")
+                        else:
+                            log["decisions"].append("docling agrees with native on all compared cells")
         else:
             final["status"] = "needs_visual_review" if flags else final["status"]
     final["meta"]["routing"] = log

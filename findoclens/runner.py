@@ -17,7 +17,7 @@ from pathlib import Path
 from . import backends
 from .render import to_markdown
 from .runinfo import ROOT, git_commit, hardware, load_source_manifest, peak_rss_mb, pkg_versions, utc_now
-from .schema import DocumentPrediction, sha256_file
+from .schema import DocumentPrediction, n_numeric_cells, sha256_file
 from .validator import validate_prediction
 
 PKGS = ["PyMuPDF", "docling", "docling-core", "docling-ibm-models", "docling-parse", "torch", "torchvision", "rapidocr",
@@ -46,6 +46,9 @@ def run_backend(backend, pdf, page_index, out_root="runs", repeat=1, opts=None, 
                                       issues=[{"severity": "error", "code": "backend_exception", "message": err[:400]}])
         timings.append({"run": k + 1, "kind": "cold" if k == 0 else "warm", "time_ms": round((time.perf_counter() - t0) * 1000, 1)})
     d = validate_prediction(pred.to_dict())
+    if d["status"] in ("ok", "partial") and n_numeric_cells(d) == 0:      # an empty extraction is never a success
+        d["status"] = "failed"
+        d["issues"].append({"severity": "error", "code": "empty_extraction", "message": "no numeric cells extracted"})
     src = next((v for v in load_source_manifest().get("documents", {}).values() if v.get("sha256") == d["source_sha256"]), {})
     manifest = {
         "run_id": uuid.uuid4().hex[:12], "timestamp_utc": utc_now(), "git_commit": git_commit(),
