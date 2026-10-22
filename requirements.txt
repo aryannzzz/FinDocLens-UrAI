@@ -1,0 +1,5 @@
+# Native backends + benchmark harness. Versions used for the reported runs (system-site-packages venv, Python 3.13.5).
+# baseline_v2/requirements.txt also lists pdfplumber (cross-engine check); it was NOT installed for the reported runs and the 25 frozen tests pass without it.
+PyMuPDF==1.27.2.3
+Pillow==12.0.0
+numpy>=2,<3

@@ -1,0 +1,241 @@
+[
+ {
+  "backend": "docling_rapidocr",
+  "doc": "scan_200",
+  "rows_paired_by_numeric_tuple": 35,
+  "label_wrong": 9,
+  "wrong_and_flagged": 5,
+  "flagged_suggestion_equals_reference": 5,
+  "wrong_not_flagged": [
+   [
+    "建物及び構築物（純額）",
+    "建物及び構築物(純額)"
+   ],
+   [
+    "機械装置及び運搬具（純額）",
+    "機械装置及び運搬具 (純額)"
+   ],
+   [
+    "リース資産（純額）",
+    "リース資産 (純額)"
+   ],
+   [
+    "その他（純額）",
+    "その他 (純額)"
+   ]
+  ],
+  "variant_flags_total": 9,
+  "ink_flags": [
+   [
+    "建設仮勘定",
+    [
+     0
+    ]
+   ],
+   [
+    "長期貸付金",
+    [
+     0
+    ]
+   ]
+  ]
+ },
+ {
+  "backend": "docling_rapidocr",
+  "doc": "scan_150",
+  "rows_paired_by_numeric_tuple": 35,
+  "label_wrong": 10,
+  "wrong_and_flagged": 5,
+  "flagged_suggestion_equals_reference": 5,
+  "wrong_not_flagged": [
+   [
+    "建物及び構築物（純額）",
+    "建物及び構築物(純額)"
+   ],
+   [
+    "機械装置及び運搬具",
+    "機械裝置及び運搬具"
+   ],
+   [
+    "機械装置及び運搬具（純額）",
+    "機械装置及び運搬具(純額)"
+   ],
+   [
+    "リース資産（純額）",
+    "リース資産 (純額)"
+   ],
+   [
+    "その他（純額）",
+    "その他 (純額)"
+   ]
+  ],
+  "variant_flags_total": 9,
+  "ink_flags": [
+   [
+    "建設仮勘定",
+    [
+     0
+    ]
+   ],
+   [
+    "長期貸付金",
+    [
+     0
+    ]
+   ]
+  ]
+ },
+ {
+  "backend": "docling_rapidocr",
+  "doc": "text_layer_deleted",
+  "rows_paired_by_numeric_tuple": 35,
+  "label_wrong": 9,
+  "wrong_and_flagged": 5,
+  "flagged_suggestion_equals_reference": 5,
+  "wrong_not_flagged": [
+   [
+    "建物及び構築物（純額）",
+    "建物及び構築物(純額)"
+   ],
+   [
+    "機械装置及び運搬具（純額）",
+    "機械装置及び運搬具 (純額)"
+   ],
+   [
+    "リース資産（純額）",
+    "リース資産 (純額)"
+   ],
+   [
+    "その他（純額）",
+    "その他 (純額)"
+   ]
+  ],
+  "variant_flags_total": 8,
+  "ink_flags": [
+   [
+    "建設仮勘定",
+    [
+     0
+    ]
+   ],
+   [
+    "長期貸付金",
+    [
+     0
+    ]
+   ]
+  ]
+ },
+ {
+  "backend": "docling_rapidocr",
+  "doc": "elecom_p9_scan200",
+  "rows_paired_by_numeric_tuple": 28,
+  "label_wrong": 11,
+  "wrong_and_flagged": 8,
+  "flagged_suggestion_equals_reference": 8,
+  "wrong_not_flagged": [
+   [
+    "建物及び構築物（純額）",
+    "建物及び構築物 (純額)"
+   ],
+   [
+    "機械装置及び運搬具（純額）",
+    "機械装置及び運搬具（純額)"
+   ],
+   [
+    "その他（純額）",
+    "その他 (純額)"
+   ]
+  ],
+  "variant_flags_total": 12,
+  "ink_flags": []
+ },
+ {
+  "backend": "docling_rapidocr",
+  "doc": "daiwabo_p10_scan200",
+  "rows_paired_by_numeric_tuple": 0,
+  "label_wrong": 0,
+  "wrong_and_flagged": 0,
+  "flagged_suggestion_equals_reference": 0,
+  "wrong_not_flagged": [],
+  "variant_flags_total": 0,
+  "ink_flags": [
+   [
+    "現金及び預金",
+    [
+     0,
+     4
+    ]
+   ],
+   [
+    "受取手形及び売掛金",
+    [
+     0,
+     4
+    ]
+   ],
+   [
+    "商品及び製品",
+    [
+     0,
+     4,
+     5
+    ]
+   ]
+  ]
+ },
+ {
+  "backend": "docling_rapidocr_medium",
+  "doc": "elecom_p9_scan200",
+  "rows_paired_by_numeric_tuple": 28,
+  "label_wrong": 10,
+  "wrong_and_flagged": 8,
+  "flagged_suggestion_equals_reference": 8,
+  "wrong_not_flagged": [
+   [
+    "建物及び構築物（純額）",
+    "建物及び構築物 （純額)"
+   ],
+   [
+    "その他（純額）",
+    "その他 (純額)"
+   ]
+  ],
+  "variant_flags_total": 12,
+  "ink_flags": []
+ },
+ {
+  "backend": "docling_rapidocr_medium",
+  "doc": "daiwabo_p10_scan200",
+  "rows_paired_by_numeric_tuple": 0,
+  "label_wrong": 0,
+  "wrong_and_flagged": 0,
+  "flagged_suggestion_equals_reference": 0,
+  "wrong_not_flagged": [],
+  "variant_flags_total": 4,
+  "ink_flags": [
+   [
+    "現金及び預金",
+    [
+     0,
+     4
+    ]
+   ],
+   [
+    "受取手形及び売掛金",
+    [
+     0,
+     4
+    ]
+   ],
+   [
+    "商品及び製品",
+    [
+     0,
+     4,
+     5
+    ]
+   ]
+  ]
+ }
+]

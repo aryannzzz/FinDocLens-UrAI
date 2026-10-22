@@ -61,7 +61,7 @@ def main():
         for spec in a.run:
             backend, prefix = spec.split("=")
             folder = ROOT / "runs" / backend / did / f"{prefix}_{split}"
-            if not (folder / "cold/prediction.json").exists():
+            if not (folder / "cold/prediction.json").exists() or not (folder / "metadata.json").exists():
                 continue
             pred = load(folder / "cold/prediction.json")
             meta = load(folder / "metadata.json")

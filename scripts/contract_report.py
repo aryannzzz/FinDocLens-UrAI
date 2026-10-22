@@ -22,7 +22,7 @@ def core(p):
 def main(prefixes):
     report = defaultdict(lambda: dict(predictions=0, compliant=0, violations={}, nondeterministic=[], raw_missing=[], failed_runs=[]))
     for runs in sorted((ROOT / "runs").iterdir()):
-        if not runs.is_dir() or runs.name in ("auto", "auto_verify", "_test"):
+        if not runs.is_dir() or runs.name in ("auto_verify", "_test"):
             continue
         for doc in sorted(runs.iterdir()):
             if not doc.is_dir():

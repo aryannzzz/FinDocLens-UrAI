@@ -102,7 +102,14 @@ function init(){
   $('#theme').onclick=()=>{const r=document.documentElement,n=(r.dataset.theme==='dark'||(!r.dataset.theme&&matchMedia('(prefers-color-scheme:dark)').matches))?'light':'dark';r.dataset.theme=n;try{localStorage.setItem('fdl-theme',n)}catch(e){}};
   const tabs=[['table','Tables'],['md','Markdown'],['warn','Review warnings'],['metrics','Scores vs AI-draft'],['json','JSON']];
   tabs.forEach(([k,t])=>$('#tabs').append(el('button',{'data-k':k,onclick:()=>{state.tab=k;renderPane()}},t)));
-  loadDoc(0);
+  // deep links: ?doc=<id>&backend=<name>&tab=table|md|warn|metrics|json&cell=ti.ri.ci&ref=1
+  const q=new URLSearchParams(location.search);
+  const di=Math.max(0,D.docs.findIndex(d=>d.id===q.get('doc')));ds.value=di;loadDoc(di);
+  if(q.get('backend')&&state.doc.backends[q.get('backend')]){$('#backend').value=q.get('backend');state.be=q.get('backend')}
+  if(q.get('tab'))state.tab=q.get('tab');
+  if(q.get('ref')==='1')$('#lRef').checked=true;
+  if(q.get('cell')){const [ti,ri,ci]=q.get('cell').split('.').map(Number);state.sel={kind:'cell',ti,ri,ci}}
+  render();
 }
 function loadDoc(i){
   state.doc=D.docs[i];$('#img').src=state.doc.img;$('#stage').style.width=$('#zoom').value+'%';
