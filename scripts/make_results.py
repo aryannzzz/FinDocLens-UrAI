@@ -9,11 +9,12 @@ import argparse
 import csv
 import json
 import statistics
+import sys
 from pathlib import Path
 
-from benchmark.diagnostics import diagnose
-
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from benchmark.diagnostics import diagnose
 MANIFESTS = {"main": "benchmark/manifest.jsonl", "adv": "benchmark/adversarial_manifest.jsonl", "raster": "benchmark/raster_manifest.jsonl"}
 LAYOUT = {
     "original": "native text; 1 table, 2 columns; development page",

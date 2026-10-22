@@ -8,9 +8,9 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-from adapters.contract import check_prediction
-
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from adapters.contract import check_prediction
 
 
 def core(p):
