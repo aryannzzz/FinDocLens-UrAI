@@ -1,0 +1,5384 @@
+{
+  "before": "fin1",
+  "after": "p0fix2",
+  "pages": 144,
+  "not_available": [
+    "v2/omron_p13",
+    "native_v2/omron_p13",
+    "native_grid/omron_p13",
+    "docling_cmtrue/omron_p13",
+    "docling_cmfalse/omron_p13",
+    "docling_rapidocr/omron_p13",
+    "docling_regions/omron_p13",
+    "auto/omron_p13"
+  ],
+  "rows": [
+    {
+      "backend": "v2",
+      "document": "original",
+      "set": "main",
+      "status_before": "success",
+      "status_after": "success",
+      "review_required_after": null,
+      "review_reasons_after": null,
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_v2",
+      "document": "original",
+      "set": "main",
+      "status_before": "success",
+      "status_after": "success",
+      "review_required_after": false,
+      "review_reasons_after": [],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_grid",
+      "document": "original",
+      "set": "main",
+      "status_before": "success",
+      "status_after": "success",
+      "review_required_after": false,
+      "review_reasons_after": [],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmtrue",
+      "document": "original",
+      "set": "main",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmfalse",
+      "document": "original",
+      "set": "main",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_rapidocr",
+      "document": "original",
+      "set": "main",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_regions",
+      "document": "original",
+      "set": "main",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "auto",
+      "document": "original",
+      "set": "main",
+      "status_before": "success",
+      "status_after": "success",
+      "review_required_after": false,
+      "review_reasons_after": [],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "v2",
+      "document": "elecom_p9",
+      "set": "main",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": null,
+      "review_reasons_after": null,
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_v2",
+      "document": "elecom_p9",
+      "set": "main",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "arithmetic_violation",
+        "financial_reconciliation_failure",
+        "unit_not_detected"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_grid",
+      "document": "elecom_p9",
+      "set": "main",
+      "status_before": "success",
+      "status_after": "success",
+      "review_required_after": false,
+      "review_reasons_after": [],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmtrue",
+      "document": "elecom_p9",
+      "set": "main",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmfalse",
+      "document": "elecom_p9",
+      "set": "main",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_rapidocr",
+      "document": "elecom_p9",
+      "set": "main",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_regions",
+      "document": "elecom_p9",
+      "set": "main",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "auto",
+      "document": "elecom_p9",
+      "set": "main",
+      "status_before": "success",
+      "status_after": "success",
+      "review_required_after": false,
+      "review_reasons_after": [],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "v2",
+      "document": "daiwabo_p10",
+      "set": "main",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": null,
+      "review_reasons_after": null,
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "silent_before": 65,
+      "silent_after": 65
+    },
+    {
+      "backend": "native_v2",
+      "document": "daiwabo_p10",
+      "set": "main",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "missing_period_header",
+        "unit_not_detected"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "silent_before": 65,
+      "silent_after": 65
+    },
+    {
+      "backend": "native_grid",
+      "document": "daiwabo_p10",
+      "set": "main",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "unit_not_detected",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 34,
+        "total": 63,
+        "rate": 0.5396825396825397
+      },
+      "structure_after": {
+        "correct": 51,
+        "total": 63,
+        "rate": 0.8095238095238095
+      },
+      "period_before_v2": {
+        "correct": 34,
+        "total": 63,
+        "rate": 0.5396825396825397
+      },
+      "period_after": {
+        "correct": 51,
+        "total": 63,
+        "rate": 0.8095238095238095
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmtrue",
+      "document": "daiwabo_p10",
+      "set": "main",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "body_cell_span_unsupported",
+        "partial_data_row",
+        "repeated_header_text_possible_side_by_side_tables",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "silent_before": 67,
+      "silent_after": 67
+    },
+    {
+      "backend": "docling_cmfalse",
+      "document": "daiwabo_p10",
+      "set": "main",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "table_without_numeric_cells",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": false,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_rapidocr",
+      "document": "daiwabo_p10",
+      "set": "main",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "body_cell_span_unsupported",
+        "ocr_possible_dropped_placeholder",
+        "partial_data_row",
+        "repeated_header_text_possible_side_by_side_tables",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "silent_before": 67,
+      "silent_after": 67
+    },
+    {
+      "backend": "docling_regions",
+      "document": "daiwabo_p10",
+      "set": "main",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_tables_found",
+        "omitted_table",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 34,
+        "total": 63,
+        "rate": 0.5396825396825397
+      },
+      "structure_after": {
+        "correct": 51,
+        "total": 63,
+        "rate": 0.8095238095238095
+      },
+      "period_before_v2": {
+        "correct": 34,
+        "total": 63,
+        "rate": 0.5396825396825397
+      },
+      "period_after": {
+        "correct": 51,
+        "total": 63,
+        "rate": 0.8095238095238095
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "auto",
+      "document": "daiwabo_p10",
+      "set": "main",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "unit_not_detected",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 34,
+        "total": 63,
+        "rate": 0.5396825396825397
+      },
+      "structure_after": {
+        "correct": 51,
+        "total": 63,
+        "rate": 0.8095238095238095
+      },
+      "period_before_v2": {
+        "correct": 34,
+        "total": 63,
+        "rate": 0.5396825396825397
+      },
+      "period_after": {
+        "correct": 51,
+        "total": 63,
+        "rate": 0.8095238095238095
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "v2",
+      "document": "missing_cell",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": null,
+      "review_reasons_after": null,
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_v2",
+      "document": "missing_cell",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "partial_data_row"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_grid",
+      "document": "missing_cell",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "partial_data_row"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmtrue",
+      "document": "missing_cell",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "partial_data_row",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmfalse",
+      "document": "missing_cell",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "partial_data_row",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_rapidocr",
+      "document": "missing_cell",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "partial_data_row",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_regions",
+      "document": "missing_cell",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "partial_data_row",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "auto",
+      "document": "missing_cell",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "partial_data_row"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "v2",
+      "document": "sign_erasure",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": null,
+      "review_reasons_after": null,
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_v2",
+      "document": "sign_erasure",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "arithmetic_violation",
+        "financial_reconciliation_failure"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_grid",
+      "document": "sign_erasure",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "arithmetic_violation"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmtrue",
+      "document": "sign_erasure",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmfalse",
+      "document": "sign_erasure",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_rapidocr",
+      "document": "sign_erasure",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_regions",
+      "document": "sign_erasure",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "auto",
+      "document": "sign_erasure",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "arithmetic_violation"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "v2",
+      "document": "text_layer_deleted",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": null,
+      "review_reasons_after": null,
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_v2",
+      "document": "text_layer_deleted",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "needs_visual_fallback"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_grid",
+      "document": "text_layer_deleted",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "needs_visual_fallback"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmtrue",
+      "document": "text_layer_deleted",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "table_without_numeric_cells",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmfalse",
+      "document": "text_layer_deleted",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "table_without_numeric_cells",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_rapidocr",
+      "document": "text_layer_deleted",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "ocr_possible_dropped_placeholder",
+        "ocr_suspect_variant_glyph",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 56,
+        "total": 74,
+        "rate": 0.7567567567567568
+      },
+      "structure_after": {
+        "correct": 56,
+        "total": 74,
+        "rate": 0.7567567567567568
+      },
+      "period_before_v2": {
+        "correct": 56,
+        "total": 74,
+        "rate": 0.7567567567567568
+      },
+      "period_after": {
+        "correct": 56,
+        "total": 74,
+        "rate": 0.7567567567567568
+      },
+      "silent_before": 18,
+      "silent_after": 18
+    },
+    {
+      "backend": "docling_regions",
+      "document": "text_layer_deleted",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "no_region_proposals_whole_page_fallback",
+        "table_without_numeric_cells",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "auto",
+      "document": "text_layer_deleted",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "ocr_possible_dropped_placeholder",
+        "ocr_suspect_variant_glyph",
+        "single_visual_source",
+        "needs_visual_review",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 56,
+        "total": 74,
+        "rate": 0.7567567567567568
+      },
+      "structure_after": {
+        "correct": 56,
+        "total": 74,
+        "rate": 0.7567567567567568
+      },
+      "period_before_v2": {
+        "correct": 56,
+        "total": 74,
+        "rate": 0.7567567567567568
+      },
+      "period_after": {
+        "correct": 56,
+        "total": 74,
+        "rate": 0.7567567567567568
+      },
+      "silent_before": 18,
+      "silent_after": 18
+    },
+    {
+      "backend": "v2",
+      "document": "rotation_90",
+      "set": "adv",
+      "status_before": "success",
+      "status_after": "success",
+      "review_required_after": null,
+      "review_reasons_after": null,
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_v2",
+      "document": "rotation_90",
+      "set": "adv",
+      "status_before": "success",
+      "status_after": "success",
+      "review_required_after": false,
+      "review_reasons_after": [],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_grid",
+      "document": "rotation_90",
+      "set": "adv",
+      "status_before": "success",
+      "status_after": "success",
+      "review_required_after": false,
+      "review_reasons_after": [],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmtrue",
+      "document": "rotation_90",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 74,
+      "silent_after": 74
+    },
+    {
+      "backend": "docling_cmfalse",
+      "document": "rotation_90",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "repeated_header_text_possible_side_by_side_tables",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 74,
+      "silent_after": 74
+    },
+    {
+      "backend": "docling_rapidocr",
+      "document": "rotation_90",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 74,
+      "silent_after": 74
+    },
+    {
+      "backend": "docling_regions",
+      "document": "rotation_90",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 60,
+        "total": 74,
+        "rate": 0.8108108108108109
+      },
+      "structure_after": {
+        "correct": 60,
+        "total": 74,
+        "rate": 0.8108108108108109
+      },
+      "period_before_v2": {
+        "correct": 60,
+        "total": 74,
+        "rate": 0.8108108108108109
+      },
+      "period_after": {
+        "correct": 60,
+        "total": 74,
+        "rate": 0.8108108108108109
+      },
+      "silent_before": 14,
+      "silent_after": 14
+    },
+    {
+      "backend": "auto",
+      "document": "rotation_90",
+      "set": "adv",
+      "status_before": "success",
+      "status_after": "success",
+      "review_required_after": false,
+      "review_reasons_after": [],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "v2",
+      "document": "scan_150",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": null,
+      "review_reasons_after": null,
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_v2",
+      "document": "scan_150",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "needs_visual_fallback"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_grid",
+      "document": "scan_150",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "needs_visual_fallback"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmtrue",
+      "document": "scan_150",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "table_without_numeric_cells",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmfalse",
+      "document": "scan_150",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "table_without_numeric_cells",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_rapidocr",
+      "document": "scan_150",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "ocr_possible_dropped_placeholder",
+        "ocr_suspect_variant_glyph",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 54,
+        "total": 74,
+        "rate": 0.7297297297297297
+      },
+      "structure_after": {
+        "correct": 54,
+        "total": 74,
+        "rate": 0.7297297297297297
+      },
+      "period_before_v2": {
+        "correct": 54,
+        "total": 74,
+        "rate": 0.7297297297297297
+      },
+      "period_after": {
+        "correct": 54,
+        "total": 74,
+        "rate": 0.7297297297297297
+      },
+      "silent_before": 20,
+      "silent_after": 20
+    },
+    {
+      "backend": "docling_regions",
+      "document": "scan_150",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "no_region_proposals_whole_page_fallback",
+        "table_without_numeric_cells",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "auto",
+      "document": "scan_150",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "ocr_possible_dropped_placeholder",
+        "ocr_suspect_variant_glyph",
+        "single_visual_source",
+        "needs_visual_review",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 54,
+        "total": 74,
+        "rate": 0.7297297297297297
+      },
+      "structure_after": {
+        "correct": 54,
+        "total": 74,
+        "rate": 0.7297297297297297
+      },
+      "period_before_v2": {
+        "correct": 54,
+        "total": 74,
+        "rate": 0.7297297297297297
+      },
+      "period_after": {
+        "correct": 54,
+        "total": 74,
+        "rate": 0.7297297297297297
+      },
+      "silent_before": 20,
+      "silent_after": 20
+    },
+    {
+      "backend": "v2",
+      "document": "scan_200",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": null,
+      "review_reasons_after": null,
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_v2",
+      "document": "scan_200",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "needs_visual_fallback"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_grid",
+      "document": "scan_200",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "needs_visual_fallback"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmtrue",
+      "document": "scan_200",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "table_without_numeric_cells",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmfalse",
+      "document": "scan_200",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "table_without_numeric_cells",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_rapidocr",
+      "document": "scan_200",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "ocr_possible_dropped_placeholder",
+        "ocr_suspect_variant_glyph",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 56,
+        "total": 74,
+        "rate": 0.7567567567567568
+      },
+      "structure_after": {
+        "correct": 56,
+        "total": 74,
+        "rate": 0.7567567567567568
+      },
+      "period_before_v2": {
+        "correct": 56,
+        "total": 74,
+        "rate": 0.7567567567567568
+      },
+      "period_after": {
+        "correct": 56,
+        "total": 74,
+        "rate": 0.7567567567567568
+      },
+      "silent_before": 18,
+      "silent_after": 18
+    },
+    {
+      "backend": "docling_regions",
+      "document": "scan_200",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "no_region_proposals_whole_page_fallback",
+        "table_without_numeric_cells",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 74,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "auto",
+      "document": "scan_200",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "ocr_possible_dropped_placeholder",
+        "ocr_suspect_variant_glyph",
+        "single_visual_source",
+        "needs_visual_review",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 56,
+        "total": 74,
+        "rate": 0.7567567567567568
+      },
+      "structure_after": {
+        "correct": 56,
+        "total": 74,
+        "rate": 0.7567567567567568
+      },
+      "period_before_v2": {
+        "correct": 56,
+        "total": 74,
+        "rate": 0.7567567567567568
+      },
+      "period_after": {
+        "correct": 56,
+        "total": 74,
+        "rate": 0.7567567567567568
+      },
+      "silent_before": 18,
+      "silent_after": 18
+    },
+    {
+      "backend": "v2",
+      "document": "tiny_cjk",
+      "set": "adv",
+      "status_before": "success",
+      "status_after": "success",
+      "review_required_after": null,
+      "review_reasons_after": null,
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_v2",
+      "document": "tiny_cjk",
+      "set": "adv",
+      "status_before": "success",
+      "status_after": "success",
+      "review_required_after": false,
+      "review_reasons_after": [],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_grid",
+      "document": "tiny_cjk",
+      "set": "adv",
+      "status_before": "success",
+      "status_after": "success",
+      "review_required_after": false,
+      "review_reasons_after": [],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmtrue",
+      "document": "tiny_cjk",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmfalse",
+      "document": "tiny_cjk",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_rapidocr",
+      "document": "tiny_cjk",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_regions",
+      "document": "tiny_cjk",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "auto",
+      "document": "tiny_cjk",
+      "set": "adv",
+      "status_before": "success",
+      "status_after": "success",
+      "review_required_after": false,
+      "review_reasons_after": [],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "v2",
+      "document": "footnote_marker",
+      "set": "adv",
+      "status_before": "success",
+      "status_after": "success",
+      "review_required_after": null,
+      "review_reasons_after": null,
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_v2",
+      "document": "footnote_marker",
+      "set": "adv",
+      "status_before": "success",
+      "status_after": "success",
+      "review_required_after": false,
+      "review_reasons_after": [],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_grid",
+      "document": "footnote_marker",
+      "set": "adv",
+      "status_before": "success",
+      "status_after": "success",
+      "review_required_after": false,
+      "review_reasons_after": [],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmtrue",
+      "document": "footnote_marker",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmfalse",
+      "document": "footnote_marker",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_rapidocr",
+      "document": "footnote_marker",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_regions",
+      "document": "footnote_marker",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "auto",
+      "document": "footnote_marker",
+      "set": "adv",
+      "status_before": "success",
+      "status_after": "success",
+      "review_required_after": false,
+      "review_reasons_after": [],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 74,
+        "total": 74,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "v2",
+      "document": "grouped_two",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": null,
+      "review_reasons_after": null,
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_v2",
+      "document": "grouped_two",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "needs_visual_fallback"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_grid",
+      "document": "grouped_two",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "unit_not_detected"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmtrue",
+      "document": "grouped_two",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "structure_after": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "period_before_v2": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "period_after": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmfalse",
+      "document": "grouped_two",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "structure_after": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "period_before_v2": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "period_after": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_rapidocr",
+      "document": "grouped_two",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "structure_after": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "period_before_v2": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "period_after": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_regions",
+      "document": "grouped_two",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "auto",
+      "document": "grouped_two",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "unit_not_detected"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "v2",
+      "document": "grouped_three",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": null,
+      "review_reasons_after": null,
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 24,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 24,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 24,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 24,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_v2",
+      "document": "grouped_three",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "needs_visual_fallback"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 24,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 24,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 24,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 24,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_grid",
+      "document": "grouped_three",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "unit_not_detected"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmtrue",
+      "document": "grouped_three",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmfalse",
+      "document": "grouped_three",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_rapidocr",
+      "document": "grouped_three",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_regions",
+      "document": "grouped_three",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 20,
+        "total": 24,
+        "rate": 0.8333333333333334
+      },
+      "structure_after": {
+        "correct": 20,
+        "total": 24,
+        "rate": 0.8333333333333334
+      },
+      "period_before_v2": {
+        "correct": 20,
+        "total": 24,
+        "rate": 0.8333333333333334
+      },
+      "period_after": {
+        "correct": 20,
+        "total": 24,
+        "rate": 0.8333333333333334
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "auto",
+      "document": "grouped_three",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "unit_not_detected"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 24,
+        "total": 24,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "v2",
+      "document": "merged_headers",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": null,
+      "review_reasons_after": null,
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_v2",
+      "document": "merged_headers",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "needs_visual_fallback"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_grid",
+      "document": "merged_headers",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "unit_not_detected"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmtrue",
+      "document": "merged_headers",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "structure_after": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "period_before_v2": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "period_after": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmfalse",
+      "document": "merged_headers",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "structure_after": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "period_before_v2": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "period_after": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_rapidocr",
+      "document": "merged_headers",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "structure_after": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "period_before_v2": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "period_after": {
+        "correct": 12,
+        "total": 16,
+        "rate": 0.75
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_regions",
+      "document": "merged_headers",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "auto",
+      "document": "merged_headers",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "unit_not_detected"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "v2",
+      "document": "side_by_side",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": null,
+      "review_reasons_after": null,
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 32,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 32,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 32,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 32,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_v2",
+      "document": "side_by_side",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "needs_visual_fallback"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 32,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 32,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 32,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 32,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_grid",
+      "document": "side_by_side",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "unit_not_detected"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 32,
+        "total": 32,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 32,
+        "total": 32,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 32,
+        "total": 32,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 32,
+        "total": 32,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmtrue",
+      "document": "side_by_side",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "repeated_header_text_possible_side_by_side_tables",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 16,
+        "total": 32,
+        "rate": 0.5
+      },
+      "structure_after": {
+        "correct": 16,
+        "total": 32,
+        "rate": 0.5
+      },
+      "period_before_v2": {
+        "correct": 16,
+        "total": 32,
+        "rate": 0.5
+      },
+      "period_after": {
+        "correct": 16,
+        "total": 32,
+        "rate": 0.5
+      },
+      "silent_before": 16,
+      "silent_after": 16
+    },
+    {
+      "backend": "docling_cmfalse",
+      "document": "side_by_side",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "partial_data_row",
+        "repeated_header_text_possible_side_by_side_tables",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 8,
+        "total": 32,
+        "rate": 0.25
+      },
+      "structure_after": {
+        "correct": 8,
+        "total": 32,
+        "rate": 0.25
+      },
+      "period_before_v2": {
+        "correct": 8,
+        "total": 32,
+        "rate": 0.25
+      },
+      "period_after": {
+        "correct": 8,
+        "total": 32,
+        "rate": 0.25
+      },
+      "silent_before": 24,
+      "silent_after": 24
+    },
+    {
+      "backend": "docling_rapidocr",
+      "document": "side_by_side",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "repeated_header_text_possible_side_by_side_tables",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 16,
+        "total": 32,
+        "rate": 0.5
+      },
+      "structure_after": {
+        "correct": 16,
+        "total": 32,
+        "rate": 0.5
+      },
+      "period_before_v2": {
+        "correct": 16,
+        "total": 32,
+        "rate": 0.5
+      },
+      "period_after": {
+        "correct": 16,
+        "total": 32,
+        "rate": 0.5
+      },
+      "silent_before": 16,
+      "silent_after": 16
+    },
+    {
+      "backend": "docling_regions",
+      "document": "side_by_side",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 32,
+        "total": 32,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 32,
+        "total": 32,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 32,
+        "total": 32,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 32,
+        "total": 32,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "auto",
+      "document": "side_by_side",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "unit_not_detected"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 32,
+        "total": 32,
+        "rate": 1.0
+      },
+      "structure_after": {
+        "correct": 32,
+        "total": 32,
+        "rate": 1.0
+      },
+      "period_before_v2": {
+        "correct": 32,
+        "total": 32,
+        "rate": 1.0
+      },
+      "period_after": {
+        "correct": 32,
+        "total": 32,
+        "rate": 1.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "v2",
+      "document": "vertical_spacing",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": null,
+      "review_reasons_after": null,
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_v2",
+      "document": "vertical_spacing",
+      "set": "adv",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "needs_visual_fallback"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_grid",
+      "document": "vertical_spacing",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "unit_not_detected"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "silent_before": 16,
+      "silent_after": 16
+    },
+    {
+      "backend": "docling_cmtrue",
+      "document": "vertical_spacing",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 8,
+        "total": 16,
+        "rate": 0.5
+      },
+      "structure_after": {
+        "correct": 8,
+        "total": 16,
+        "rate": 0.5
+      },
+      "period_before_v2": {
+        "correct": 8,
+        "total": 16,
+        "rate": 0.5
+      },
+      "period_after": {
+        "correct": 8,
+        "total": 16,
+        "rate": 0.5
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmfalse",
+      "document": "vertical_spacing",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "repeated_header_text_possible_side_by_side_tables",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 8,
+        "total": 16,
+        "rate": 0.5
+      },
+      "structure_after": {
+        "correct": 8,
+        "total": 16,
+        "rate": 0.5
+      },
+      "period_before_v2": {
+        "correct": 8,
+        "total": 16,
+        "rate": 0.5
+      },
+      "period_after": {
+        "correct": 8,
+        "total": 16,
+        "rate": 0.5
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_rapidocr",
+      "document": "vertical_spacing",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 8,
+        "total": 16,
+        "rate": 0.5
+      },
+      "structure_after": {
+        "correct": 8,
+        "total": 16,
+        "rate": 0.5
+      },
+      "period_before_v2": {
+        "correct": 8,
+        "total": 16,
+        "rate": 0.5
+      },
+      "period_after": {
+        "correct": 8,
+        "total": 16,
+        "rate": 0.5
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_regions",
+      "document": "vertical_spacing",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "auto",
+      "document": "vertical_spacing",
+      "set": "adv",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "unit_not_detected"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 16,
+        "rate": 0.0
+      },
+      "silent_before": 16,
+      "silent_after": 16
+    },
+    {
+      "backend": "v2",
+      "document": "elecom_p9_scan200",
+      "set": "raster",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": null,
+      "review_reasons_after": null,
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_v2",
+      "document": "elecom_p9_scan200",
+      "set": "raster",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "needs_visual_fallback"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_grid",
+      "document": "elecom_p9_scan200",
+      "set": "raster",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "needs_visual_fallback"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmtrue",
+      "document": "elecom_p9_scan200",
+      "set": "raster",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "table_without_numeric_cells",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmfalse",
+      "document": "elecom_p9_scan200",
+      "set": "raster",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "table_without_numeric_cells",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_rapidocr",
+      "document": "elecom_p9_scan200",
+      "set": "raster",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "ocr_suspect_variant_glyph",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 34,
+        "total": 56,
+        "rate": 0.6071428571428571
+      },
+      "structure_after": {
+        "correct": 34,
+        "total": 56,
+        "rate": 0.6071428571428571
+      },
+      "period_before_v2": {
+        "correct": 34,
+        "total": 56,
+        "rate": 0.6071428571428571
+      },
+      "period_after": {
+        "correct": 34,
+        "total": 56,
+        "rate": 0.6071428571428571
+      },
+      "silent_before": 22,
+      "silent_after": 22
+    },
+    {
+      "backend": "docling_regions",
+      "document": "elecom_p9_scan200",
+      "set": "raster",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "no_region_proposals_whole_page_fallback",
+        "table_without_numeric_cells",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 56,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "auto",
+      "document": "elecom_p9_scan200",
+      "set": "raster",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "ocr_suspect_variant_glyph",
+        "single_visual_source",
+        "needs_visual_review",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 34,
+        "total": 56,
+        "rate": 0.6071428571428571
+      },
+      "structure_after": {
+        "correct": 34,
+        "total": 56,
+        "rate": 0.6071428571428571
+      },
+      "period_before_v2": {
+        "correct": 34,
+        "total": 56,
+        "rate": 0.6071428571428571
+      },
+      "period_after": {
+        "correct": 34,
+        "total": 56,
+        "rate": 0.6071428571428571
+      },
+      "silent_before": 22,
+      "silent_after": 22
+    },
+    {
+      "backend": "v2",
+      "document": "daiwabo_p10_scan200",
+      "set": "raster",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": null,
+      "review_reasons_after": null,
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_v2",
+      "document": "daiwabo_p10_scan200",
+      "set": "raster",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "needs_visual_fallback"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "native_grid",
+      "document": "daiwabo_p10_scan200",
+      "set": "raster",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "needs_visual_fallback"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmtrue",
+      "document": "daiwabo_p10_scan200",
+      "set": "raster",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "table_without_numeric_cells",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_cmfalse",
+      "document": "daiwabo_p10_scan200",
+      "set": "raster",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "table_without_numeric_cells",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "docling_rapidocr",
+      "document": "daiwabo_p10_scan200",
+      "set": "raster",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "body_cell_span_unsupported",
+        "ocr_possible_dropped_placeholder",
+        "partial_data_row",
+        "repeated_header_text_possible_side_by_side_tables",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "silent_before": 67,
+      "silent_after": 67
+    },
+    {
+      "backend": "docling_regions",
+      "document": "daiwabo_p10_scan200",
+      "set": "raster",
+      "status_before": "abstained",
+      "status_after": "abstained",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "no_header_cells_found",
+        "no_region_proposals_whole_page_fallback",
+        "table_without_numeric_cells",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "silent_before": 0,
+      "silent_after": 0
+    },
+    {
+      "backend": "auto",
+      "document": "daiwabo_p10_scan200",
+      "set": "raster",
+      "status_before": "partial",
+      "status_after": "partial",
+      "review_required_after": true,
+      "review_reasons_after": [
+        "body_cell_span_unsupported",
+        "ocr_possible_dropped_placeholder",
+        "partial_data_row",
+        "repeated_header_text_possible_side_by_side_tables",
+        "single_visual_source",
+        "needs_visual_review",
+        "hierarchy_not_inferred(declared limitation)"
+      ],
+      "extraction_identical": true,
+      "value_axes_that_differ": [],
+      "false_assurance_before_v2": false,
+      "false_assurance_after": false,
+      "structure_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "structure_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_before_v2": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "period_after": {
+        "correct": 0,
+        "total": 63,
+        "rate": 0.0
+      },
+      "silent_before": 67,
+      "silent_after": 67
+    }
+  ],
+  "changed_extraction": [
+    "docling_cmfalse/daiwabo_p10"
+  ],
+  "changed_status": [],
+  "changed_value_axes": []
+}

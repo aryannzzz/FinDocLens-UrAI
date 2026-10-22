@@ -1,0 +1,50 @@
+{
+  "schema_version": "2.0",
+  "source_file": "/home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/data/adversarial/text_layer_deleted/page.pdf",
+  "method": "adaptive_pdf_native_no_ocr_or_vlm",
+  "pages": [
+    {
+      "page": 1,
+      "page_size": [
+        595.2,
+        841.8
+      ],
+      "source": "pymupdf_pdf_text",
+      "column_anchors": null,
+      "anchor_diagnostics": {
+        "reason": "insufficient_tabular_evidence",
+        "candidate_rows": 0
+      },
+      "periods": [],
+      "unit": null,
+      "rows": [],
+      "issues": [
+        {
+          "severity": "error",
+          "code": "needs_visual_fallback",
+          "message": "No stable native text columns: OCR/VLM is required and not run."
+        }
+      ],
+      "checks": []
+    }
+  ],
+  "rows": [],
+  "issues": [
+    {
+      "page": 1,
+      "severity": "error",
+      "code": "needs_visual_fallback",
+      "message": "No stable native text columns: OCR/VLM is required and not run."
+    }
+  ],
+  "checks": [],
+  "stats": {
+    "pages": 1,
+    "sections": 0,
+    "monetary_rows": 0,
+    "complete_rows": 0,
+    "reported_cell_count": 0,
+    "issues": 1,
+    "nonzero_reconciliation_differences": 0
+  }
+}

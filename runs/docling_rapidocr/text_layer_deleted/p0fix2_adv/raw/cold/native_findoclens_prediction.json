@@ -1,0 +1,3780 @@
+{
+ "document_id": "page",
+ "source_sha256": "68be2ed8959f3a7bb98d28eb467aa970c25c6653ee8cfc55e3158ddc570de6c4",
+ "backend": "docling_ocr",
+ "model_revision": null,
+ "page": 0,
+ "page_bbox": [
+  0.0,
+  0.0,
+  595.2,
+  841.8
+ ],
+ "tables": [
+  {
+   "table_id": "t0",
+   "bbox": [
+    53.93,
+    113.87,
+    525.23,
+    676.51
+   ],
+   "reading_order": 0,
+   "headers": [
+    {
+     "header_id": "t0h0",
+     "text": "前連結会計年度 (2025年3月31日）",
+     "period": "2025-03-31",
+     "role": "amount",
+     "bbox": [
+      297.67,
+      120.53,
+      376.31,
+      141.32
+     ],
+     "colspan": 1,
+     "rowspan": 1,
+     "row_start": 0,
+     "col_start": 1,
+     "column_indices": [
+      0
+     ],
+     "span_note": null
+    },
+    {
+     "header_id": "t0h1",
+     "text": "当連結会計年度 (2026年3月31日)",
+     "period": "2026-03-31",
+     "role": "amount",
+     "bbox": [
+      423.24,
+      120.95,
+      501.89,
+      141.75
+     ],
+     "colspan": 1,
+     "rowspan": 1,
+     "row_start": 0,
+     "col_start": 2,
+     "column_indices": [
+      1
+     ],
+     "span_note": null
+    }
+   ],
+   "rows": [
+    {
+     "row_index": 0,
+     "label": "資産の部",
+     "raw_label": "資産の部",
+     "parent_path": [],
+     "bbox": null,
+     "type": "section",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": null,
+       "value": null,
+       "status": "absent_text_cell",
+       "bbox": null,
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": null,
+       "value": null,
+       "status": "absent_text_cell",
+       "bbox": null,
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 1,
+     "label": "流動資產",
+     "raw_label": "流動資產",
+     "parent_path": [],
+     "bbox": null,
+     "type": "section",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": null,
+       "value": null,
+       "status": "absent_text_cell",
+       "bbox": null,
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": null,
+       "value": null,
+       "status": "absent_text_cell",
+       "bbox": null,
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 2,
+     "label": "現金及び預金",
+     "raw_label": "現金及び預金",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "2,002,429",
+       "value": 2002429,
+       "status": "observed",
+       "bbox": [
+        353.9,
+        170.18,
+        399.57,
+        182.49
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "608,281",
+       "value": 608281,
+       "status": "observed",
+       "bbox": [
+        488.78,
+        169.76,
+        525.57,
+        182.91
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 3,
+     "label": "受取手形",
+     "raw_label": "受取手形",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "20,659",
+       "value": 20659,
+       "status": "observed",
+       "bbox": [
+        368.28,
+        182.91,
+        399.14,
+        195.22
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "26,333",
+       "value": 26333,
+       "status": "observed",
+       "bbox": [
+        492.59,
+        182.07,
+        525.14,
+        195.22
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 4,
+     "label": "売掛金",
+     "raw_label": "売掛金",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "2,019,476",
+       "value": 2019476,
+       "status": "observed",
+       "bbox": [
+        354.75,
+        194.8,
+        399.57,
+        206.68
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "884,339",
+       "value": 884339,
+       "status": "observed",
+       "bbox": [
+        488.78,
+        193.95,
+        525.99,
+        207.1
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 5,
+     "label": "電子記録債権",
+     "raw_label": "電子記録債権",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "564,667",
+       "value": 564667,
+       "status": "observed",
+       "bbox": [
+        363.63,
+        206.26,
+        399.57,
+        219.41
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "370,468",
+       "value": 370468,
+       "status": "observed",
+       "bbox": [
+        488.78,
+        206.26,
+        525.14,
+        219.41
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 6,
+     "label": "商品及び製品",
+     "raw_label": "商品及び製品",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "589,488",
+       "value": 589488,
+       "status": "observed",
+       "bbox": [
+        364.05,
+        218.99,
+        399.14,
+        230.87
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "1,019,663",
+       "value": 1019663,
+       "status": "observed",
+       "bbox": [
+        479.9,
+        218.14,
+        525.57,
+        230.45
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 7,
+     "label": "仕掛品",
+     "raw_label": "仕掛品",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "186,748",
+       "value": 186748,
+       "status": "observed",
+       "bbox": [
+        364.47,
+        230.87,
+        399.57,
+        242.75
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "55,344",
+       "value": 55344,
+       "status": "observed",
+       "bbox": [
+        493.01,
+        230.02,
+        525.57,
+        243.18
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 8,
+     "label": "原材料及び貯蔵品",
+     "raw_label": "原材料及び貯蔵品",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "370,403",
+       "value": 370403,
+       "status": "observed",
+       "bbox": [
+        363.63,
+        242.75,
+        399.14,
+        254.64
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "136,082",
+       "value": 136082,
+       "status": "observed",
+       "bbox": [
+        489.2,
+        241.91,
+        525.99,
+        255.49
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 9,
+     "label": "短期貸付金",
+     "raw_label": "短期貸付金",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "7,530",
+       "value": 7530,
+       "status": "observed",
+       "bbox": [
+        372.51,
+        254.64,
+        399.57,
+        266.94
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "30,000",
+       "value": 30000,
+       "status": "observed",
+       "bbox": [
+        492.59,
+        253.79,
+        525.14,
+        267.37
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 10,
+     "label": "その他",
+     "raw_label": "その他",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "105,260",
+       "value": 105260,
+       "status": "observed",
+       "bbox": [
+        364.05,
+        266.1,
+        399.57,
+        279.25
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "246,895",
+       "value": 246895,
+       "status": "observed",
+       "bbox": [
+        489.2,
+        265.67,
+        525.99,
+        279.25
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 11,
+     "label": "貸倒引当金",
+     "raw_label": "貸倒引当金",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "△2,979",
+       "value": -2979,
+       "status": "observed",
+       "bbox": [
+        364.9,
+        278.83,
+        399.14,
+        290.71
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "△0",
+       "value": 0,
+       "status": "negative_zero",
+       "bbox": [
+        507.81,
+        278.83,
+        525.14,
+        290.71
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 12,
+     "label": "流動資產合計",
+     "raw_label": "流動資產合計",
+     "parent_path": [],
+     "bbox": null,
+     "type": "total",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "5,863,684",
+       "value": 5863684,
+       "status": "observed",
+       "bbox": [
+        355.59,
+        292.41,
+        399.14,
+        302.59
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "3,377,407",
+       "value": 3377407,
+       "status": "observed",
+       "bbox": [
+        479.06,
+        290.29,
+        525.57,
+        303.44
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 13,
+     "label": "固定資産",
+     "raw_label": "固定資産",
+     "parent_path": [],
+     "bbox": null,
+     "type": "section",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": null,
+       "value": null,
+       "status": "absent_text_cell",
+       "bbox": null,
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": null,
+       "value": null,
+       "status": "absent_text_cell",
+       "bbox": null,
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 14,
+     "label": "有形固定資產",
+     "raw_label": "有形固定資產",
+     "parent_path": [],
+     "bbox": null,
+     "type": "section",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": null,
+       "value": null,
+       "status": "absent_text_cell",
+       "bbox": null,
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": null,
+       "value": null,
+       "status": "absent_text_cell",
+       "bbox": null,
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 15,
+     "label": "建物及び構築物",
+     "raw_label": "建物及び構築物",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "2,121,360",
+       "value": 2121360,
+       "status": "observed",
+       "bbox": [
+        354.75,
+        328.48,
+        399.14,
+        339.94
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "1,880,082",
+       "value": 1880082,
+       "status": "observed",
+       "bbox": [
+        480.75,
+        328.06,
+        524.3,
+        339.94
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 16,
+     "label": "減価償却累計額",
+     "raw_label": "減価償却累計額",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "△1,923,585",
+       "value": -1923585,
+       "status": "observed",
+       "bbox": [
+        347.56,
+        340.36,
+        399.14,
+        351.82
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "△1,640,253",
+       "value": -1640253,
+       "status": "observed",
+       "bbox": [
+        472.71,
+        340.36,
+        525.14,
+        351.82
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 17,
+     "label": "建物及び構築物(純額)",
+     "raw_label": "建物及び構築物(純額)",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "197,775",
+       "value": 197775,
+       "status": "observed",
+       "bbox": [
+        364.05,
+        353.1,
+        399.57,
+        364.98
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "239,828",
+       "value": 239828,
+       "status": "observed",
+       "bbox": [
+        488.78,
+        353.1,
+        525.14,
+        364.98
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 18,
+     "label": "機械装置及び運搬具",
+     "raw_label": "機械装置及び運搬具",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "4,024,922",
+       "value": 4024922,
+       "status": "observed",
+       "bbox": [
+        355.17,
+        366.25,
+        399.14,
+        377.71
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "2,250,799",
+       "value": 2250799,
+       "status": "observed",
+       "bbox": [
+        479.9,
+        365.83,
+        525.57,
+        377.71
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 19,
+     "label": "減価償却累計額",
+     "raw_label": "減価償却累計額",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "△3,634,165",
+       "value": -3634165,
+       "status": "observed",
+       "bbox": [
+        347.56,
+        377.71,
+        399.14,
+        389.17
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "△1,914,091",
+       "value": -1914091,
+       "status": "observed",
+       "bbox": [
+        471.87,
+        377.71,
+        524.3,
+        389.17
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 20,
+     "label": "機械装置及び運搬具 (純額)",
+     "raw_label": "機械装置及び運搬具 (純額)",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "390,757",
+       "value": 390757,
+       "status": "observed",
+       "bbox": [
+        364.05,
+        390.44,
+        398.72,
+        402.33
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "336,708",
+       "value": 336708,
+       "status": "observed",
+       "bbox": [
+        488.78,
+        389.59,
+        525.99,
+        402.75
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 21,
+     "label": "土地",
+     "raw_label": "土地",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "768,976",
+       "value": 768976,
+       "status": "observed",
+       "bbox": [
+        363.63,
+        402.75,
+        399.99,
+        415.91
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "705,403",
+       "value": 705403,
+       "status": "observed",
+       "bbox": [
+        488.78,
+        402.75,
+        525.14,
+        415.91
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 22,
+     "label": "リース資産",
+     "raw_label": "リース資産",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "210,746",
+       "value": 210746,
+       "status": "observed",
+       "bbox": [
+        364.05,
+        415.48,
+        399.57,
+        427.37
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "213,939",
+       "value": 213939,
+       "status": "observed",
+       "bbox": [
+        488.36,
+        414.63,
+        525.57,
+        427.79
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 23,
+     "label": "減価償却累計額",
+     "raw_label": "減価償却累計額",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "△147,599",
+       "value": -147599,
+       "status": "observed",
+       "bbox": [
+        356.02,
+        427.37,
+        399.14,
+        439.25
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "△172,066",
+       "value": -172066,
+       "status": "observed",
+       "bbox": [
+        481.17,
+        427.37,
+        525.14,
+        439.25
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 24,
+     "label": "リース資産 (純額)",
+     "raw_label": "リース資産 (純額)",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "63,146",
+       "value": 63146,
+       "status": "observed",
+       "bbox": [
+        368.28,
+        440.1,
+        399.57,
+        451.98
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "41,872",
+       "value": 41872,
+       "status": "observed",
+       "bbox": [
+        493.43,
+        439.25,
+        525.99,
+        452.83
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 25,
+     "label": "建設仮勘定",
+     "raw_label": "建設仮勘定",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": null,
+       "value": null,
+       "status": "uncertain",
+       "bbox": [
+        364.05,
+        454.7,
+        399.57,
+        462.84
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": [
+        "ink_in_empty_ocr_slot:possible_dropped_placeholder; bbox derived from sibling cells"
+       ]
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "4,553",
+       "value": 4553,
+       "status": "observed",
+       "bbox": [
+        496.82,
+        451.98,
+        525.57,
+        465.56
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 26,
+     "label": "その他",
+     "raw_label": "その他",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "848,814",
+       "value": 848814,
+       "status": "observed",
+       "bbox": [
+        364.05,
+        465.56,
+        399.57,
+        477.44
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "446,126",
+       "value": 446126,
+       "status": "observed",
+       "bbox": [
+        489.2,
+        464.71,
+        525.99,
+        477.87
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 27,
+     "label": "減価償却累計額",
+     "raw_label": "減価償却累計額",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "△840,375",
+       "value": -840375,
+       "status": "observed",
+       "bbox": [
+        356.02,
+        477.44,
+        399.14,
+        489.33
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "△421,883",
+       "value": -421883,
+       "status": "observed",
+       "bbox": [
+        481.17,
+        477.44,
+        524.72,
+        489.33
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 28,
+     "label": "その他 (純額)",
+     "raw_label": "その他 (純額)",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "8,439",
+       "value": 8439,
+       "status": "observed",
+       "bbox": [
+        372.51,
+        489.75,
+        399.57,
+        502.06
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "24,243",
+       "value": 24243,
+       "status": "observed",
+       "bbox": [
+        492.16,
+        488.9,
+        525.99,
+        503.76
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 29,
+     "label": "有形固定資產合計",
+     "raw_label": "有形固定資產合計",
+     "parent_path": [],
+     "bbox": null,
+     "type": "total",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "1,429,094",
+       "value": 1429094,
+       "status": "observed",
+       "bbox": [
+        355.17,
+        503.33,
+        399.57,
+        515.22
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "1,352,610",
+       "value": 1352610,
+       "status": "observed",
+       "bbox": [
+        480.75,
+        503.33,
+        525.14,
+        515.22
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 30,
+     "label": "無形固定資產",
+     "raw_label": "無形固定資產",
+     "parent_path": [],
+     "bbox": null,
+     "type": "section",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": null,
+       "value": null,
+       "status": "absent_text_cell",
+       "bbox": null,
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": null,
+       "value": null,
+       "status": "absent_text_cell",
+       "bbox": null,
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 31,
+     "label": "リース資産",
+     "raw_label": "リース資産",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "34,190",
+       "value": 34190,
+       "status": "observed",
+       "bbox": [
+        367.43,
+        527.1,
+        399.99,
+        540.68
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "21,402",
+       "value": 21402,
+       "status": "observed",
+       "bbox": [
+        492.59,
+        527.1,
+        525.57,
+        540.68
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 32,
+     "label": "その他",
+     "raw_label": "その他",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "10,070",
+       "value": 10070,
+       "status": "observed",
+       "bbox": [
+        368.7,
+        539.83,
+        399.57,
+        552.14
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "14,466",
+       "value": 14466,
+       "status": "observed",
+       "bbox": [
+        493.43,
+        538.98,
+        525.99,
+        552.56
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 33,
+     "label": "無形固定資產合計",
+     "raw_label": "無形固定資產合計",
+     "parent_path": [],
+     "bbox": null,
+     "type": "total",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "44,261",
+       "value": 44261,
+       "status": "observed",
+       "bbox": [
+        367.86,
+        552.14,
+        399.57,
+        565.72
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "35,869",
+       "value": 35869,
+       "status": "observed",
+       "bbox": [
+        492.59,
+        552.14,
+        525.14,
+        565.29
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 34,
+     "label": "投資その他の資産",
+     "raw_label": "投資その他の資産",
+     "parent_path": [],
+     "bbox": null,
+     "type": "section",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": null,
+       "value": null,
+       "status": "absent_text_cell",
+       "bbox": null,
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": null,
+       "value": null,
+       "status": "absent_text_cell",
+       "bbox": null,
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 35,
+     "label": "投資有価証券",
+     "raw_label": "投資有価証券",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "44,180",
+       "value": 44180,
+       "status": "observed",
+       "bbox": [
+        368.28,
+        576.75,
+        399.99,
+        590.33
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "218,836",
+       "value": 218836,
+       "status": "observed",
+       "bbox": [
+        488.78,
+        576.75,
+        525.14,
+        589.91
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 36,
+     "label": "関係会社株式",
+     "raw_label": "関係会社株式",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "1,123",
+       "value": 1123,
+       "status": "observed",
+       "bbox": [
+        372.51,
+        589.48,
+        399.57,
+        601.79
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "1,123",
+       "value": 1123,
+       "status": "observed",
+       "bbox": [
+        496.82,
+        587.79,
+        525.57,
+        601.79
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 37,
+     "label": "長期貸付金",
+     "raw_label": "長期貸付金",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": null,
+       "value": null,
+       "status": "uncertain",
+       "bbox": [
+        364.05,
+        603.24,
+        399.57,
+        611.38
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": [
+        "ink_in_empty_ocr_slot:possible_dropped_placeholder; bbox derived from sibling cells"
+       ]
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "62,000",
+       "value": 62000,
+       "status": "observed",
+       "bbox": [
+        492.59,
+        600.52,
+        525.14,
+        614.1
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 38,
+     "label": "退職給付に係る資産",
+     "raw_label": "退職給付に係る資産",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "18,404",
+       "value": 18404,
+       "status": "observed",
+       "bbox": [
+        368.7,
+        613.25,
+        399.57,
+        625.56
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "16,435",
+       "value": 16435,
+       "status": "observed",
+       "bbox": [
+        493.86,
+        612.4,
+        525.99,
+        625.98
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 39,
+     "label": "その他",
+     "raw_label": "その他",
+     "parent_path": [],
+     "bbox": null,
+     "type": "item",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "133,361",
+       "value": 133361,
+       "status": "observed",
+       "bbox": [
+        364.05,
+        624.71,
+        399.57,
+        637.87
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "70,967",
+       "value": 70967,
+       "status": "observed",
+       "bbox": [
+        493.01,
+        624.71,
+        525.57,
+        637.87
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 40,
+     "label": "投資その他の資産合計",
+     "raw_label": "投資その他の資産合計",
+     "parent_path": [],
+     "bbox": null,
+     "type": "total",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "197,069",
+       "value": 197069,
+       "status": "observed",
+       "bbox": [
+        364.47,
+        638.29,
+        399.14,
+        650.17
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "369,362",
+       "value": 369362,
+       "status": "observed",
+       "bbox": [
+        488.36,
+        637.02,
+        525.99,
+        650.6
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 41,
+     "label": "固定資產合計",
+     "raw_label": "固定資產合計",
+     "parent_path": [],
+     "bbox": null,
+     "type": "total",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "1,670,426",
+       "value": 1670426,
+       "status": "observed",
+       "bbox": [
+        355.59,
+        651.02,
+        399.14,
+        662.48
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "1,757,841",
+       "value": 1757841,
+       "status": "observed",
+       "bbox": [
+        480.75,
+        651.02,
+        524.72,
+        662.48
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    },
+    {
+     "row_index": 42,
+     "label": "資產合計",
+     "raw_label": "資產合計",
+     "parent_path": [],
+     "bbox": null,
+     "type": "total",
+     "cells": [
+      {
+       "column_index": 0,
+       "header_id": "t0h0",
+       "period": "2025-03-31",
+       "role": "amount",
+       "raw": "7,534,110",
+       "value": 7534110,
+       "status": "observed",
+       "bbox": [
+        355.59,
+        663.75,
+        399.14,
+        675.21
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      },
+      {
+       "column_index": 1,
+       "header_id": "t0h1",
+       "period": "2026-03-31",
+       "role": "amount",
+       "raw": "5,135,249",
+       "value": 5135249,
+       "status": "observed",
+       "bbox": [
+        480.33,
+        663.33,
+        525.14,
+        675.21
+       ],
+       "backend": "docling",
+       "evidence_kind": "ocr",
+       "notes": []
+      }
+     ]
+    }
+   ],
+   "issues": [
+    {
+     "severity": "info",
+     "code": "hierarchy_not_inferred",
+     "message": "Docling/TableFormer output carries no account hierarchy; parent_path left empty"
+    },
+    {
+     "severity": "warning",
+     "code": "ocr_suspect_variant_glyph",
+     "row_index": 1,
+     "label": "流動資產",
+     "suspected_japanese_forms": {
+      "產": "産"
+     },
+     "message": "recognised glyph is a non-Japanese kanji form; raw text left unchanged for review"
+    },
+    {
+     "severity": "warning",
+     "code": "ocr_suspect_variant_glyph",
+     "row_index": 12,
+     "label": "流動資產合計",
+     "suspected_japanese_forms": {
+      "產": "産"
+     },
+     "message": "recognised glyph is a non-Japanese kanji form; raw text left unchanged for review"
+    },
+    {
+     "severity": "warning",
+     "code": "ocr_suspect_variant_glyph",
+     "row_index": 14,
+     "label": "有形固定資產",
+     "suspected_japanese_forms": {
+      "產": "産"
+     },
+     "message": "recognised glyph is a non-Japanese kanji form; raw text left unchanged for review"
+    },
+    {
+     "severity": "warning",
+     "code": "ocr_suspect_variant_glyph",
+     "row_index": 29,
+     "label": "有形固定資產合計",
+     "suspected_japanese_forms": {
+      "產": "産"
+     },
+     "message": "recognised glyph is a non-Japanese kanji form; raw text left unchanged for review"
+    },
+    {
+     "severity": "warning",
+     "code": "ocr_suspect_variant_glyph",
+     "row_index": 30,
+     "label": "無形固定資產",
+     "suspected_japanese_forms": {
+      "產": "産"
+     },
+     "message": "recognised glyph is a non-Japanese kanji form; raw text left unchanged for review"
+    },
+    {
+     "severity": "warning",
+     "code": "ocr_suspect_variant_glyph",
+     "row_index": 33,
+     "label": "無形固定資產合計",
+     "suspected_japanese_forms": {
+      "產": "産"
+     },
+     "message": "recognised glyph is a non-Japanese kanji form; raw text left unchanged for review"
+    },
+    {
+     "severity": "warning",
+     "code": "ocr_suspect_variant_glyph",
+     "row_index": 41,
+     "label": "固定資產合計",
+     "suspected_japanese_forms": {
+      "產": "産"
+     },
+     "message": "recognised glyph is a non-Japanese kanji form; raw text left unchanged for review"
+    },
+    {
+     "severity": "warning",
+     "code": "ocr_suspect_variant_glyph",
+     "row_index": 42,
+     "label": "資產合計",
+     "suspected_japanese_forms": {
+      "產": "産"
+     },
+     "message": "recognised glyph is a non-Japanese kanji form; raw text left unchanged for review"
+    },
+    {
+     "severity": "warning",
+     "code": "ocr_possible_dropped_placeholder",
+     "row_index": 25,
+     "label": "建設仮勘定",
+     "columns": [
+      0
+     ],
+     "message": "page pixels show ink where OCR returned no text (e.g. a thin － placeholder); verify against the image"
+    },
+    {
+     "severity": "warning",
+     "code": "ocr_possible_dropped_placeholder",
+     "row_index": 37,
+     "label": "長期貸付金",
+     "columns": [
+      0
+     ],
+     "message": "page pixels show ink where OCR returned no text (e.g. a thin － placeholder); verify against the image"
+    }
+   ],
+   "unit": null,
+   "n_data_columns": 2,
+   "capabilities": {
+    "cell_bbox": true,
+    "headers": "tableformer column_header flags",
+    "raw_grid": "44x3"
+   },
+   "checks": [],
+   "grid": [
+    {
+     "r0": 0,
+     "r1": 1,
+     "c0": 1,
+     "c1": 2,
+     "text": "前連結会計年度 (2025年3月31日）",
+     "header": true,
+     "bbox": [
+      297.67,
+      120.53,
+      376.31,
+      141.32
+     ]
+    },
+    {
+     "r0": 0,
+     "r1": 1,
+     "c0": 2,
+     "c1": 3,
+     "text": "当連結会計年度 (2026年3月31日)",
+     "header": true,
+     "bbox": [
+      423.24,
+      120.95,
+      501.89,
+      141.75
+     ]
+    },
+    {
+     "r0": 1,
+     "r1": 2,
+     "c0": 0,
+     "c1": 1,
+     "text": "資産の部",
+     "header": false,
+     "bbox": [
+      57.08,
+      145.99,
+      100.21,
+      159.15
+     ]
+    },
+    {
+     "r0": 2,
+     "r1": 3,
+     "c0": 0,
+     "c1": 1,
+     "text": "流動資產",
+     "header": false,
+     "bbox": [
+      73.57,
+      157.88,
+      113.32,
+      171.03
+     ]
+    },
+    {
+     "r0": 3,
+     "r1": 4,
+     "c0": 0,
+     "c1": 1,
+     "text": "現金及び預金",
+     "header": false,
+     "bbox": [
+      85.83,
+      170.18,
+      143.76,
+      182.91
+     ]
+    },
+    {
+     "r0": 3,
+     "r1": 4,
+     "c0": 1,
+     "c1": 2,
+     "text": "2,002,429",
+     "header": false,
+     "bbox": [
+      353.9,
+      170.18,
+      399.57,
+      182.49
+     ]
+    },
+    {
+     "r0": 3,
+     "r1": 4,
+     "c0": 2,
+     "c1": 3,
+     "text": "608,281",
+     "header": false,
+     "bbox": [
+      488.78,
+      169.76,
+      525.57,
+      182.91
+     ]
+    },
+    {
+     "r0": 4,
+     "r1": 5,
+     "c0": 0,
+     "c1": 1,
+     "text": "受取手形",
+     "header": false,
+     "bbox": [
+      85.83,
+      182.07,
+      126.42,
+      195.22
+     ]
+    },
+    {
+     "r0": 4,
+     "r1": 5,
+     "c0": 1,
+     "c1": 2,
+     "text": "20,659",
+     "header": false,
+     "bbox": [
+      368.28,
+      182.91,
+      399.14,
+      195.22
+     ]
+    },
+    {
+     "r0": 4,
+     "r1": 5,
+     "c0": 2,
+     "c1": 3,
+     "text": "26,333",
+     "header": false,
+     "bbox": [
+      492.59,
+      182.07,
+      525.14,
+      195.22
+     ]
+    },
+    {
+     "r0": 5,
+     "r1": 6,
+     "c0": 0,
+     "c1": 1,
+     "text": "売掛金",
+     "header": false,
+     "bbox": [
+      86.26,
+      193.52,
+      117.54,
+      207.53
+     ]
+    },
+    {
+     "r0": 5,
+     "r1": 6,
+     "c0": 1,
+     "c1": 2,
+     "text": "2,019,476",
+     "header": false,
+     "bbox": [
+      354.75,
+      194.8,
+      399.57,
+      206.68
+     ]
+    },
+    {
+     "r0": 5,
+     "r1": 6,
+     "c0": 2,
+     "c1": 3,
+     "text": "884,339",
+     "header": false,
+     "bbox": [
+      488.78,
+      193.95,
+      525.99,
+      207.1
+     ]
+    },
+    {
+     "r0": 6,
+     "r1": 7,
+     "c0": 0,
+     "c1": 1,
+     "text": "電子記録債権",
+     "header": false,
+     "bbox": [
+      86.68,
+      206.26,
+      143.76,
+      218.99
+     ]
+    },
+    {
+     "r0": 6,
+     "r1": 7,
+     "c0": 1,
+     "c1": 2,
+     "text": "564,667",
+     "header": false,
+     "bbox": [
+      363.63,
+      206.26,
+      399.57,
+      219.41
+     ]
+    },
+    {
+     "r0": 6,
+     "r1": 7,
+     "c0": 2,
+     "c1": 3,
+     "text": "370,468",
+     "header": false,
+     "bbox": [
+      488.78,
+      206.26,
+      525.14,
+      219.41
+     ]
+    },
+    {
+     "r0": 7,
+     "r1": 8,
+     "c0": 0,
+     "c1": 1,
+     "text": "商品及び製品",
+     "header": false,
+     "bbox": [
+      86.68,
+      218.14,
+      143.34,
+      230.87
+     ]
+    },
+    {
+     "r0": 7,
+     "r1": 8,
+     "c0": 1,
+     "c1": 2,
+     "text": "589,488",
+     "header": false,
+     "bbox": [
+      364.05,
+      218.99,
+      399.14,
+      230.87
+     ]
+    },
+    {
+     "r0": 7,
+     "r1": 8,
+     "c0": 2,
+     "c1": 3,
+     "text": "1,019,663",
+     "header": false,
+     "bbox": [
+      479.9,
+      218.14,
+      525.57,
+      230.45
+     ]
+    },
+    {
+     "r0": 8,
+     "r1": 9,
+     "c0": 0,
+     "c1": 1,
+     "text": "仕掛品",
+     "header": false,
+     "bbox": [
+      86.26,
+      230.02,
+      117.54,
+      243.6
+     ]
+    },
+    {
+     "r0": 8,
+     "r1": 9,
+     "c0": 1,
+     "c1": 2,
+     "text": "186,748",
+     "header": false,
+     "bbox": [
+      364.47,
+      230.87,
+      399.57,
+      242.75
+     ]
+    },
+    {
+     "r0": 8,
+     "r1": 9,
+     "c0": 2,
+     "c1": 3,
+     "text": "55,344",
+     "header": false,
+     "bbox": [
+      493.01,
+      230.02,
+      525.57,
+      243.18
+     ]
+    },
+    {
+     "r0": 9,
+     "r1": 10,
+     "c0": 0,
+     "c1": 1,
+     "text": "原材料及び貯蔵品",
+     "header": false,
+     "bbox": [
+      86.68,
+      241.91,
+      161.1,
+      254.64
+     ]
+    },
+    {
+     "r0": 9,
+     "r1": 10,
+     "c0": 1,
+     "c1": 2,
+     "text": "370,403",
+     "header": false,
+     "bbox": [
+      363.63,
+      242.75,
+      399.14,
+      254.64
+     ]
+    },
+    {
+     "r0": 9,
+     "r1": 10,
+     "c0": 2,
+     "c1": 3,
+     "text": "136,082",
+     "header": false,
+     "bbox": [
+      489.2,
+      241.91,
+      525.99,
+      255.49
+     ]
+    },
+    {
+     "r0": 10,
+     "r1": 11,
+     "c0": 0,
+     "c1": 1,
+     "text": "短期貸付金",
+     "header": false,
+     "bbox": [
+      86.68,
+      254.21,
+      134.88,
+      266.94
+     ]
+    },
+    {
+     "r0": 10,
+     "r1": 11,
+     "c0": 1,
+     "c1": 2,
+     "text": "7,530",
+     "header": false,
+     "bbox": [
+      372.51,
+      254.64,
+      399.57,
+      266.94
+     ]
+    },
+    {
+     "r0": 10,
+     "r1": 11,
+     "c0": 2,
+     "c1": 3,
+     "text": "30,000",
+     "header": false,
+     "bbox": [
+      492.59,
+      253.79,
+      525.14,
+      267.37
+     ]
+    },
+    {
+     "r0": 11,
+     "r1": 12,
+     "c0": 0,
+     "c1": 1,
+     "text": "その他",
+     "header": false,
+     "bbox": [
+      86.68,
+      265.67,
+      117.12,
+      279.25
+     ]
+    },
+    {
+     "r0": 11,
+     "r1": 12,
+     "c0": 1,
+     "c1": 2,
+     "text": "105,260",
+     "header": false,
+     "bbox": [
+      364.05,
+      266.1,
+      399.57,
+      279.25
+     ]
+    },
+    {
+     "r0": 11,
+     "r1": 12,
+     "c0": 2,
+     "c1": 3,
+     "text": "246,895",
+     "header": false,
+     "bbox": [
+      489.2,
+      265.67,
+      525.99,
+      279.25
+     ]
+    },
+    {
+     "r0": 12,
+     "r1": 13,
+     "c0": 0,
+     "c1": 1,
+     "text": "貸倒引当金",
+     "header": false,
+     "bbox": [
+      86.68,
+      277.98,
+      135.3,
+      290.71
+     ]
+    },
+    {
+     "r0": 12,
+     "r1": 13,
+     "c0": 1,
+     "c1": 2,
+     "text": "△2,979",
+     "header": false,
+     "bbox": [
+      364.9,
+      278.83,
+      399.14,
+      290.71
+     ]
+    },
+    {
+     "r0": 12,
+     "r1": 13,
+     "c0": 2,
+     "c1": 3,
+     "text": "△0",
+     "header": false,
+     "bbox": [
+      507.81,
+      278.83,
+      525.14,
+      290.71
+     ]
+    },
+    {
+     "r0": 13,
+     "r1": 14,
+     "c0": 0,
+     "c1": 1,
+     "text": "流動資產合計",
+     "header": false,
+     "bbox": [
+      87.1,
+      291.56,
+      143.34,
+      303.02
+     ]
+    },
+    {
+     "r0": 13,
+     "r1": 14,
+     "c0": 1,
+     "c1": 2,
+     "text": "5,863,684",
+     "header": false,
+     "bbox": [
+      355.59,
+      292.41,
+      399.14,
+      302.59
+     ]
+    },
+    {
+     "r0": 13,
+     "r1": 14,
+     "c0": 2,
+     "c1": 3,
+     "text": "3,377,407",
+     "header": false,
+     "bbox": [
+      479.06,
+      290.29,
+      525.57,
+      303.44
+     ]
+    },
+    {
+     "r0": 14,
+     "r1": 15,
+     "c0": 0,
+     "c1": 1,
+     "text": "固定資産",
+     "header": false,
+     "bbox": [
+      73.99,
+      304.29,
+      113.32,
+      316.17
+     ]
+    },
+    {
+     "r0": 15,
+     "r1": 16,
+     "c0": 0,
+     "c1": 1,
+     "text": "有形固定資產",
+     "header": false,
+     "bbox": [
+      86.68,
+      316.17,
+      143.34,
+      328.91
+     ]
+    },
+    {
+     "r0": 16,
+     "r1": 17,
+     "c0": 0,
+     "c1": 1,
+     "text": "建物及び構築物",
+     "header": false,
+     "bbox": [
+      99.79,
+      328.06,
+      164.9,
+      339.52
+     ]
+    },
+    {
+     "r0": 16,
+     "r1": 17,
+     "c0": 1,
+     "c1": 2,
+     "text": "2,121,360",
+     "header": false,
+     "bbox": [
+      354.75,
+      328.48,
+      399.14,
+      339.94
+     ]
+    },
+    {
+     "r0": 16,
+     "r1": 17,
+     "c0": 2,
+     "c1": 3,
+     "text": "1,880,082",
+     "header": false,
+     "bbox": [
+      480.75,
+      328.06,
+      524.3,
+      339.94
+     ]
+    },
+    {
+     "r0": 17,
+     "r1": 18,
+     "c0": 0,
+     "c1": 1,
+     "text": "減価償却累計額",
+     "header": false,
+     "bbox": [
+      113.32,
+      340.36,
+      178.43,
+      351.82
+     ]
+    },
+    {
+     "r0": 17,
+     "r1": 18,
+     "c0": 1,
+     "c1": 2,
+     "text": "△1,923,585",
+     "header": false,
+     "bbox": [
+      347.56,
+      340.36,
+      399.14,
+      351.82
+     ]
+    },
+    {
+     "r0": 17,
+     "r1": 18,
+     "c0": 2,
+     "c1": 3,
+     "text": "△1,640,253",
+     "header": false,
+     "bbox": [
+      472.71,
+      340.36,
+      525.14,
+      351.82
+     ]
+    },
+    {
+     "r0": 18,
+     "r1": 19,
+     "c0": 0,
+     "c1": 1,
+     "text": "建物及び構築物(純額)",
+     "header": false,
+     "bbox": [
+      113.32,
+      353.1,
+      208.03,
+      364.13
+     ]
+    },
+    {
+     "r0": 18,
+     "r1": 19,
+     "c0": 1,
+     "c1": 2,
+     "text": "197,775",
+     "header": false,
+     "bbox": [
+      364.05,
+      353.1,
+      399.57,
+      364.98
+     ]
+    },
+    {
+     "r0": 18,
+     "r1": 19,
+     "c0": 2,
+     "c1": 3,
+     "text": "239,828",
+     "header": false,
+     "bbox": [
+      488.78,
+      353.1,
+      525.14,
+      364.98
+     ]
+    },
+    {
+     "r0": 19,
+     "r1": 20,
+     "c0": 0,
+     "c1": 1,
+     "text": "機械装置及び運搬具",
+     "header": false,
+     "bbox": [
+      100.21,
+      365.83,
+      183.08,
+      376.86
+     ]
+    },
+    {
+     "r0": 19,
+     "r1": 20,
+     "c0": 1,
+     "c1": 2,
+     "text": "4,024,922",
+     "header": false,
+     "bbox": [
+      355.17,
+      366.25,
+      399.14,
+      377.71
+     ]
+    },
+    {
+     "r0": 19,
+     "r1": 20,
+     "c0": 2,
+     "c1": 3,
+     "text": "2,250,799",
+     "header": false,
+     "bbox": [
+      479.9,
+      365.83,
+      525.57,
+      377.71
+     ]
+    },
+    {
+     "r0": 20,
+     "r1": 21,
+     "c0": 0,
+     "c1": 1,
+     "text": "減価償却累計額",
+     "header": false,
+     "bbox": [
+      113.32,
+      377.71,
+      178.43,
+      389.17
+     ]
+    },
+    {
+     "r0": 20,
+     "r1": 21,
+     "c0": 1,
+     "c1": 2,
+     "text": "△3,634,165",
+     "header": false,
+     "bbox": [
+      347.56,
+      377.71,
+      399.14,
+      389.17
+     ]
+    },
+    {
+     "r0": 20,
+     "r1": 21,
+     "c0": 2,
+     "c1": 3,
+     "text": "△1,914,091",
+     "header": false,
+     "bbox": [
+      471.87,
+      377.71,
+      524.3,
+      389.17
+     ]
+    },
+    {
+     "r0": 21,
+     "r1": 22,
+     "c0": 0,
+     "c1": 1,
+     "text": "機械装置及び運搬具 (純額)",
+     "header": false,
+     "bbox": [
+      112.89,
+      390.44,
+      225.36,
+      401.9
+     ]
+    },
+    {
+     "r0": 21,
+     "r1": 22,
+     "c0": 1,
+     "c1": 2,
+     "text": "390,757",
+     "header": false,
+     "bbox": [
+      364.05,
+      390.44,
+      398.72,
+      402.33
+     ]
+    },
+    {
+     "r0": 21,
+     "r1": 22,
+     "c0": 2,
+     "c1": 3,
+     "text": "336,708",
+     "header": false,
+     "bbox": [
+      488.78,
+      389.59,
+      525.99,
+      402.75
+     ]
+    },
+    {
+     "r0": 22,
+     "r1": 23,
+     "c0": 0,
+     "c1": 1,
+     "text": "土地",
+     "header": false,
+     "bbox": [
+      99.79,
+      402.75,
+      121.77,
+      415.91
+     ]
+    },
+    {
+     "r0": 22,
+     "r1": 23,
+     "c0": 1,
+     "c1": 2,
+     "text": "768,976",
+     "header": false,
+     "bbox": [
+      363.63,
+      402.75,
+      399.99,
+      415.91
+     ]
+    },
+    {
+     "r0": 22,
+     "r1": 23,
+     "c0": 2,
+     "c1": 3,
+     "text": "705,403",
+     "header": false,
+     "bbox": [
+      488.78,
+      402.75,
+      525.14,
+      415.91
+     ]
+    },
+    {
+     "r0": 23,
+     "r1": 24,
+     "c0": 0,
+     "c1": 1,
+     "text": "リース資産",
+     "header": false,
+     "bbox": [
+      100.21,
+      414.21,
+      148.41,
+      427.37
+     ]
+    },
+    {
+     "r0": 23,
+     "r1": 24,
+     "c0": 1,
+     "c1": 2,
+     "text": "210,746",
+     "header": false,
+     "bbox": [
+      364.05,
+      415.48,
+      399.57,
+      427.37
+     ]
+    },
+    {
+     "r0": 23,
+     "r1": 24,
+     "c0": 2,
+     "c1": 3,
+     "text": "213,939",
+     "header": false,
+     "bbox": [
+      488.36,
+      414.63,
+      525.57,
+      427.79
+     ]
+    },
+    {
+     "r0": 24,
+     "r1": 25,
+     "c0": 0,
+     "c1": 1,
+     "text": "減価償却累計額",
+     "header": false,
+     "bbox": [
+      112.89,
+      427.37,
+      178.43,
+      438.82
+     ]
+    },
+    {
+     "r0": 24,
+     "r1": 25,
+     "c0": 1,
+     "c1": 2,
+     "text": "△147,599",
+     "header": false,
+     "bbox": [
+      356.02,
+      427.37,
+      399.14,
+      439.25
+     ]
+    },
+    {
+     "r0": 24,
+     "r1": 25,
+     "c0": 2,
+     "c1": 3,
+     "text": "△172,066",
+     "header": false,
+     "bbox": [
+      481.17,
+      427.37,
+      525.14,
+      439.25
+     ]
+    },
+    {
+     "r0": 25,
+     "r1": 26,
+     "c0": 0,
+     "c1": 1,
+     "text": "リース資産 (純額)",
+     "header": false,
+     "bbox": [
+      114.58,
+      440.1,
+      189.42,
+      451.56
+     ]
+    },
+    {
+     "r0": 25,
+     "r1": 26,
+     "c0": 1,
+     "c1": 2,
+     "text": "63,146",
+     "header": false,
+     "bbox": [
+      368.28,
+      440.1,
+      399.57,
+      451.98
+     ]
+    },
+    {
+     "r0": 25,
+     "r1": 26,
+     "c0": 2,
+     "c1": 3,
+     "text": "41,872",
+     "header": false,
+     "bbox": [
+      493.43,
+      439.25,
+      525.99,
+      452.83
+     ]
+    },
+    {
+     "r0": 26,
+     "r1": 27,
+     "c0": 0,
+     "c1": 1,
+     "text": "建設仮勘定",
+     "header": false,
+     "bbox": [
+      99.36,
+      451.98,
+      147.99,
+      465.14
+     ]
+    },
+    {
+     "r0": 26,
+     "r1": 27,
+     "c0": 2,
+     "c1": 3,
+     "text": "4,553",
+     "header": false,
+     "bbox": [
+      496.82,
+      451.98,
+      525.57,
+      465.56
+     ]
+    },
+    {
+     "r0": 27,
+     "r1": 28,
+     "c0": 0,
+     "c1": 1,
+     "text": "その他",
+     "header": false,
+     "bbox": [
+      99.36,
+      464.71,
+      130.23,
+      478.29
+     ]
+    },
+    {
+     "r0": 27,
+     "r1": 28,
+     "c0": 1,
+     "c1": 2,
+     "text": "848,814",
+     "header": false,
+     "bbox": [
+      364.05,
+      465.56,
+      399.57,
+      477.44
+     ]
+    },
+    {
+     "r0": 27,
+     "r1": 28,
+     "c0": 2,
+     "c1": 3,
+     "text": "446,126",
+     "header": false,
+     "bbox": [
+      489.2,
+      464.71,
+      525.99,
+      477.87
+     ]
+    },
+    {
+     "r0": 28,
+     "r1": 29,
+     "c0": 0,
+     "c1": 1,
+     "text": "減価償却累計額",
+     "header": false,
+     "bbox": [
+      112.89,
+      477.44,
+      178.43,
+      488.9
+     ]
+    },
+    {
+     "r0": 28,
+     "r1": 29,
+     "c0": 1,
+     "c1": 2,
+     "text": "△840,375",
+     "header": false,
+     "bbox": [
+      356.02,
+      477.44,
+      399.14,
+      489.33
+     ]
+    },
+    {
+     "r0": 28,
+     "r1": 29,
+     "c0": 2,
+     "c1": 3,
+     "text": "△421,883",
+     "header": false,
+     "bbox": [
+      481.17,
+      477.44,
+      524.72,
+      489.33
+     ]
+    },
+    {
+     "r0": 29,
+     "r1": 30,
+     "c0": 0,
+     "c1": 1,
+     "text": "その他 (純額)",
+     "header": false,
+     "bbox": [
+      113.74,
+      490.6,
+      171.67,
+      502.06
+     ]
+    },
+    {
+     "r0": 29,
+     "r1": 30,
+     "c0": 1,
+     "c1": 2,
+     "text": "8,439",
+     "header": false,
+     "bbox": [
+      372.51,
+      489.75,
+      399.57,
+      502.06
+     ]
+    },
+    {
+     "r0": 29,
+     "r1": 30,
+     "c0": 2,
+     "c1": 3,
+     "text": "24,243",
+     "header": false,
+     "bbox": [
+      492.16,
+      488.9,
+      525.99,
+      503.76
+     ]
+    },
+    {
+     "r0": 30,
+     "r1": 31,
+     "c0": 0,
+     "c1": 1,
+     "text": "有形固定資產合計",
+     "header": false,
+     "bbox": [
+      100.63,
+      503.33,
+      174.63,
+      514.79
+     ]
+    },
+    {
+     "r0": 30,
+     "r1": 31,
+     "c0": 1,
+     "c1": 2,
+     "text": "1,429,094",
+     "header": false,
+     "bbox": [
+      355.17,
+      503.33,
+      399.57,
+      515.22
+     ]
+    },
+    {
+     "r0": 30,
+     "r1": 31,
+     "c0": 2,
+     "c1": 3,
+     "text": "1,352,610",
+     "header": false,
+     "bbox": [
+      480.75,
+      503.33,
+      525.14,
+      515.22
+     ]
+    },
+    {
+     "r0": 31,
+     "r1": 32,
+     "c0": 0,
+     "c1": 1,
+     "text": "無形固定資產",
+     "header": false,
+     "bbox": [
+      87.52,
+      516.06,
+      143.76,
+      527.52
+     ]
+    },
+    {
+     "r0": 32,
+     "r1": 33,
+     "c0": 0,
+     "c1": 1,
+     "text": "リース資産",
+     "header": false,
+     "bbox": [
+      100.21,
+      526.67,
+      148.41,
+      540.68
+     ]
+    },
+    {
+     "r0": 32,
+     "r1": 33,
+     "c0": 1,
+     "c1": 2,
+     "text": "34,190",
+     "header": false,
+     "bbox": [
+      367.43,
+      527.1,
+      399.99,
+      540.68
+     ]
+    },
+    {
+     "r0": 32,
+     "r1": 33,
+     "c0": 2,
+     "c1": 3,
+     "text": "21,402",
+     "header": false,
+     "bbox": [
+      492.59,
+      527.1,
+      525.57,
+      540.68
+     ]
+    },
+    {
+     "r0": 33,
+     "r1": 34,
+     "c0": 0,
+     "c1": 1,
+     "text": "その他",
+     "header": false,
+     "bbox": [
+      99.79,
+      538.98,
+      130.23,
+      552.56
+     ]
+    },
+    {
+     "r0": 33,
+     "r1": 34,
+     "c0": 1,
+     "c1": 2,
+     "text": "10,070",
+     "header": false,
+     "bbox": [
+      368.7,
+      539.83,
+      399.57,
+      552.14
+     ]
+    },
+    {
+     "r0": 33,
+     "r1": 34,
+     "c0": 2,
+     "c1": 3,
+     "text": "14,466",
+     "header": false,
+     "bbox": [
+      493.43,
+      538.98,
+      525.99,
+      552.56
+     ]
+    },
+    {
+     "r0": 34,
+     "r1": 35,
+     "c0": 0,
+     "c1": 1,
+     "text": "無形固定資產合計",
+     "header": false,
+     "bbox": [
+      100.21,
+      552.56,
+      174.2,
+      564.02
+     ]
+    },
+    {
+     "r0": 34,
+     "r1": 35,
+     "c0": 1,
+     "c1": 2,
+     "text": "44,261",
+     "header": false,
+     "bbox": [
+      367.86,
+      552.14,
+      399.57,
+      565.72
+     ]
+    },
+    {
+     "r0": 34,
+     "r1": 35,
+     "c0": 2,
+     "c1": 3,
+     "text": "35,869",
+     "header": false,
+     "bbox": [
+      492.59,
+      552.14,
+      525.14,
+      565.29
+     ]
+    },
+    {
+     "r0": 35,
+     "r1": 36,
+     "c0": 0,
+     "c1": 1,
+     "text": "投資その他の資産",
+     "header": false,
+     "bbox": [
+      87.1,
+      565.29,
+      161.52,
+      576.75
+     ]
+    },
+    {
+     "r0": 36,
+     "r1": 37,
+     "c0": 0,
+     "c1": 1,
+     "text": "投資有価証券",
+     "header": false,
+     "bbox": [
+      99.79,
+      577.6,
+      156.44,
+      589.06
+     ]
+    },
+    {
+     "r0": 36,
+     "r1": 37,
+     "c0": 1,
+     "c1": 2,
+     "text": "44,180",
+     "header": false,
+     "bbox": [
+      368.28,
+      576.75,
+      399.99,
+      590.33
+     ]
+    },
+    {
+     "r0": 36,
+     "r1": 37,
+     "c0": 2,
+     "c1": 3,
+     "text": "218,836",
+     "header": false,
+     "bbox": [
+      488.78,
+      576.75,
+      525.14,
+      589.91
+     ]
+    },
+    {
+     "r0": 37,
+     "r1": 38,
+     "c0": 0,
+     "c1": 1,
+     "text": "関係会社株式",
+     "header": false,
+     "bbox": [
+      100.21,
+      588.21,
+      157.29,
+      600.94
+     ]
+    },
+    {
+     "r0": 37,
+     "r1": 38,
+     "c0": 1,
+     "c1": 2,
+     "text": "1,123",
+     "header": false,
+     "bbox": [
+      372.51,
+      589.48,
+      399.57,
+      601.79
+     ]
+    },
+    {
+     "r0": 37,
+     "r1": 38,
+     "c0": 2,
+     "c1": 3,
+     "text": "1,123",
+     "header": false,
+     "bbox": [
+      496.82,
+      587.79,
+      525.57,
+      601.79
+     ]
+    },
+    {
+     "r0": 38,
+     "r1": 39,
+     "c0": 0,
+     "c1": 1,
+     "text": "長期貸付金",
+     "header": false,
+     "bbox": [
+      99.79,
+      600.94,
+      147.99,
+      613.68
+     ]
+    },
+    {
+     "r0": 38,
+     "r1": 39,
+     "c0": 2,
+     "c1": 3,
+     "text": "62,000",
+     "header": false,
+     "bbox": [
+      492.59,
+      600.52,
+      525.14,
+      614.1
+     ]
+    },
+    {
+     "r0": 39,
+     "r1": 40,
+     "c0": 0,
+     "c1": 1,
+     "text": "退職給付に係る資産",
+     "header": false,
+     "bbox": [
+      100.21,
+      613.68,
+      183.5,
+      624.71
+     ]
+    },
+    {
+     "r0": 39,
+     "r1": 40,
+     "c0": 1,
+     "c1": 2,
+     "text": "18,404",
+     "header": false,
+     "bbox": [
+      368.7,
+      613.25,
+      399.57,
+      625.56
+     ]
+    },
+    {
+     "r0": 39,
+     "r1": 40,
+     "c0": 2,
+     "c1": 3,
+     "text": "16,435",
+     "header": false,
+     "bbox": [
+      493.86,
+      612.4,
+      525.99,
+      625.98
+     ]
+    },
+    {
+     "r0": 40,
+     "r1": 41,
+     "c0": 0,
+     "c1": 1,
+     "text": "その他",
+     "header": false,
+     "bbox": [
+      100.21,
+      625.13,
+      129.81,
+      637.44
+     ]
+    },
+    {
+     "r0": 40,
+     "r1": 41,
+     "c0": 1,
+     "c1": 2,
+     "text": "133,361",
+     "header": false,
+     "bbox": [
+      364.05,
+      624.71,
+      399.57,
+      637.87
+     ]
+    },
+    {
+     "r0": 40,
+     "r1": 41,
+     "c0": 2,
+     "c1": 3,
+     "text": "70,967",
+     "header": false,
+     "bbox": [
+      493.01,
+      624.71,
+      525.57,
+      637.87
+     ]
+    },
+    {
+     "r0": 41,
+     "r1": 42,
+     "c0": 0,
+     "c1": 1,
+     "text": "投資その他の資産合計",
+     "header": false,
+     "bbox": [
+      99.79,
+      638.29,
+      192.38,
+      649.75
+     ]
+    },
+    {
+     "r0": 41,
+     "r1": 42,
+     "c0": 1,
+     "c1": 2,
+     "text": "197,069",
+     "header": false,
+     "bbox": [
+      364.47,
+      638.29,
+      399.14,
+      650.17
+     ]
+    },
+    {
+     "r0": 41,
+     "r1": 42,
+     "c0": 2,
+     "c1": 3,
+     "text": "369,362",
+     "header": false,
+     "bbox": [
+      488.36,
+      637.02,
+      525.99,
+      650.6
+     ]
+    },
+    {
+     "r0": 42,
+     "r1": 43,
+     "c0": 0,
+     "c1": 1,
+     "text": "固定資產合計",
+     "header": false,
+     "bbox": [
+      87.1,
+      651.02,
+      143.34,
+      662.48
+     ]
+    },
+    {
+     "r0": 42,
+     "r1": 43,
+     "c0": 1,
+     "c1": 2,
+     "text": "1,670,426",
+     "header": false,
+     "bbox": [
+      355.59,
+      651.02,
+      399.14,
+      662.48
+     ]
+    },
+    {
+     "r0": 42,
+     "r1": 43,
+     "c0": 2,
+     "c1": 3,
+     "text": "1,757,841",
+     "header": false,
+     "bbox": [
+      480.75,
+      651.02,
+      524.72,
+      662.48
+     ]
+    },
+    {
+     "r0": 43,
+     "r1": 44,
+     "c0": 0,
+     "c1": 1,
+     "text": "資產合計",
+     "header": false,
+     "bbox": [
+      73.57,
+      662.06,
+      112.89,
+      676.49
+     ]
+    },
+    {
+     "r0": 43,
+     "r1": 44,
+     "c0": 1,
+     "c1": 2,
+     "text": "7,534,110",
+     "header": false,
+     "bbox": [
+      355.59,
+      663.75,
+      399.14,
+      675.21
+     ]
+    },
+    {
+     "r0": 43,
+     "r1": 44,
+     "c0": 2,
+     "c1": 3,
+     "text": "5,135,249",
+     "header": false,
+     "bbox": [
+      480.33,
+      663.33,
+      525.14,
+      675.21
+     ]
+    }
+   ]
+  }
+ ],
+ "status": "ok",
+ "issues": [],
+ "capabilities": {
+  "cell_bbox": true,
+  "headers": "tableformer column_header flags",
+  "multi_table": true,
+  "ocr": true,
+  "n_columns": "any",
+  "cell_matching": true
+ },
+ "meta": {
+  "device": "cpu",
+  "converter_load_ms": 4279.7,
+  "convert_ms": 33945.7,
+  "versions": {
+   "docling": "2.141.0",
+   "docling-core": "2.103.1",
+   "docling-ibm-models": "4.0.4",
+   "docling-parse": "7.22.4",
+   "torch": "2.14.1+cpu",
+   "rapidocr": "3.10.0"
+  },
+  "table_structure_mode": "accurate",
+  "do_cell_matching": true,
+  "ocr_engine": "rapidocr",
+  "ocr_model_size": null,
+  "docling_status": "ConversionStatus.SUCCESS",
+  "raw_artifacts": [
+   "docling_document.json",
+   "docling_tables.md"
+  ],
+  "elapsed_ms": 38371.8
+ },
+ "schema_version": "findoclens-0.1"
+}

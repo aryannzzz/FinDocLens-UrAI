@@ -33,13 +33,18 @@ Source pages are downloaded locally and are **not** redistributed (`data/`, `ben
 ## Reproduce
 ```bash
 bash run_demo.sh                                   # tests, native runs on every page, viewer build (≈1 min, no models needed)
-python -m unittest discover -s tests -q            # 82 tests; includes the 25 frozen baseline tests in a temp copy
+python -m unittest discover -s tests -q            # includes the 25 frozen baseline tests in a temp copy and the P0 regression tests
 scripts/run_integration.sh native_grid RUNID       # one backend over main + adversarial + raster manifests (create-only run ids)
 scripts/run_integration.sh docling_cmtrue RUNID .venv-docling/bin/python 3 1 3
 python scripts/make_results.py --set native_grid=RUNID ...      # tables → results/ ; see RESULTS.md §10 for the exact command used
 python scripts/build_viewer.py --run native_grid=RUNID ... && xdg-open viewer/index.html
 ```
 Single page, any backend: `python -m findoclens parse <pdf> --page <zero-based> --backend auto|native_grid|docling|ocr_rapid --format json,md,png`.
+
+## P0 correctness pass (after the independent review)
+Silent-loss, evaluator, merged-cell and exposure fixes with before/after evidence: [`docs/P0_FIXES.md`](docs/P0_FIXES.md); the generated table is
+[`docs/P0_BEFORE_AFTER.md`](docs/P0_BEFORE_AFTER.md) (`python scripts/p0_before_after.py --out-json … --out-md …`); regression tests `tests/test_p0_regressions.py`.
+`RESULTS.md` keeps the pre-fix `fin1` numbers as the development record; post-fix runs are `p0fix2_*`.
 
 ## Layout
 `baseline_v2/` frozen · `findoclens/` backends, router, validator · `adapters/` projection to the benchmark contract + per-backend entrypoints + contract checker ·

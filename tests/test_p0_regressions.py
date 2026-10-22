@@ -403,6 +403,15 @@ class MergedCells(unittest.TestCase):
         issue = next(i for i in t.issues if i["code"] == "body_rowspan_label_inherited")
         self.assertEqual((issue["severity"], issue["rows"], issue["label"]), ("warning", [0, 1], "現金"))
 
+    def test_label_merged_over_two_label_columns_is_not_duplicated(self):
+        """Regression of my own first span fix (seen on the Daiwabo cm=False re-run: '借入金借入金'): a label that spans COLUMNS
+        is printed once; only a label spanning ROWS is inherited by the covered rows."""
+        head = [cell(0, 0, "科目", c1=2, header=True), cell(0, 2, "2025/3", header=True), cell(0, 3, "2026/3", header=True)]
+        t = table(head + [cell(1, 0, "借入金", c1=2), cell(1, 2, "10"), cell(1, 3, "20")], 2, 4)
+        self.assertEqual([r.label for r in t.rows], ["借入金"])
+        self.assertEqual(t.rows[0].raw_label, "借入金")
+        self.assertFalse(any("inherited" in i["code"] for i in t.issues))
+
     def test_numeric_body_cell_with_rowspan_is_flagged_and_not_copied(self):
         t = table(self.head() + [cell(1, 0, "現金"), cell(1, 1, "10", r1=3), cell(1, 2, "20"), cell(2, 0, "預金"), cell(2, 2, "40")], 3, 3)
         self.assertEqual(t.rows[1].cells[0].status, "absent_text_cell")       # nothing printed there; never invented

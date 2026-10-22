@@ -1,0 +1,18 @@
+{
+ "pages": 144,
+ "not_available": [
+  "v2/omron_p13",
+  "native_v2/omron_p13",
+  "native_grid/omron_p13",
+  "docling_cmtrue/omron_p13",
+  "docling_cmfalse/omron_p13",
+  "docling_rapidocr/omron_p13",
+  "docling_regions/omron_p13",
+  "auto/omron_p13"
+ ],
+ "changed_extraction": [
+  "docling_cmfalse/daiwabo_p10"
+ ],
+ "changed_status": [],
+ "changed_value_axes": []
+}

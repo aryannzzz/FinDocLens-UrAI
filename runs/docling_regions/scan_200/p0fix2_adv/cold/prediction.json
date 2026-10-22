@@ -1,0 +1,138 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "scan_200",
+  "source_sha256": "d5d3ebfa1ba6808bf82fcf1bc16af0a54031285327aed2e3f532dc4ecb525560",
+  "input_sha256": "d5d3ebfa1ba6808bf82fcf1bc16af0a54031285327aed2e3f532dc4ecb525560",
+  "backend": "docling_regions",
+  "model_revision": null,
+  "page_bbox": [
+    0.0,
+    0.0,
+    595.2,
+    841.8
+  ],
+  "status": "abstained",
+  "backend_status": "failed",
+  "review_required": true,
+  "review_reasons": [
+    "no_header_cells_found",
+    "no_region_proposals_whole_page_fallback",
+    "table_without_numeric_cells",
+    "hierarchy_not_inferred(declared limitation)"
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "no_region_proposals_whole_page_fallback"
+    },
+    {
+      "severity": "error",
+      "code": "table_without_numeric_cells",
+      "tables": [
+        "t0"
+      ]
+    },
+    {
+      "code": "empty_extraction",
+      "severity": "error"
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "t0",
+      "page": 1,
+      "bbox": [
+        54.04,
+        113.7,
+        524.94,
+        676.72
+      ],
+      "reading_order": 0,
+      "headers": [],
+      "rows": [],
+      "issues": [
+        {
+          "severity": "info",
+          "code": "hierarchy_not_inferred",
+          "message": "Docling/TableFormer output carries no account hierarchy; parent_path left empty"
+        },
+        {
+          "severity": "warning",
+          "code": "no_header_cells_found"
+        }
+      ],
+      "unit": null,
+      "capability_status": {
+        "cell_bbox": true,
+        "headers": "tableformer column_header flags",
+        "raw_grid": "0x0"
+      },
+      "native_grid_cells": 0
+    }
+  ],
+  "capabilities": {
+    "cell_bbox": true,
+    "headers": "tableformer column_header flags",
+    "multi_table": true,
+    "ocr": false,
+    "n_columns": "any",
+    "cell_matching": true
+  },
+  "provenance": {
+    "adapter": "adapters.canonical.convert",
+    "native_schema": "findoclens-0.1",
+    "native_backend": "docling_regions",
+    "native_prediction_sha256": "33cf8b7919e506ce6c87728b8776cc07b3281df69ad63ca323794734f10ba295",
+    "native_options": {
+      "cell_matching": true
+    },
+    "raw_artifacts": {
+      "docling_document.json": {
+        "path": "raw/cold/docling_document.json",
+        "sha256": "96f749be3102b681582186a9803a3243ac1bf68f7abef1a04eb0e0f7715fb4d4"
+      },
+      "docling_tables.md": {
+        "path": "raw/cold/docling_tables.md",
+        "sha256": "881bd66cb6d8fa10f4f97593483a15503fc7eb022098a23f5ff6d07ecdf2284f"
+      },
+      "native_findoclens_prediction.json": {
+        "path": "raw/cold/native_findoclens_prediction.json",
+        "sha256": "21207ea3b0708e1209da0c8e720747ff8269a813aae7a96010e2fc5da48875f2"
+      }
+    },
+    "code": {
+      "commit": "0803f65c40adf4cc971dbd9e7b806a8cbe97a475",
+      "code_dirty": true,
+      "code_dirty_paths": [
+        "?? benchmark/exposure.json",
+        "?? tests/test_exposure.py"
+      ]
+    },
+    "lazy_load_on_first_call": true,
+    "backend_meta": {
+      "device": "cpu",
+      "converter_load_ms": 3712.9,
+      "convert_ms": 21561.0,
+      "versions": {
+        "docling": "2.141.0",
+        "docling-core": "2.103.1",
+        "docling-ibm-models": "4.0.4",
+        "docling-parse": "7.22.4",
+        "torch": "2.14.1+cpu",
+        "rapidocr": "3.10.0"
+      },
+      "table_structure_mode": "accurate",
+      "do_cell_matching": true,
+      "ocr_engine": null,
+      "ocr_model_size": null,
+      "docling_status": "ConversionStatus.SUCCESS",
+      "raw_artifacts": [
+        "docling_document.json",
+        "docling_tables.md"
+      ],
+      "elapsed_ms": 25286.3
+    },
+    "native_status": "failed",
+    "trial": "cold"
+  }
+}

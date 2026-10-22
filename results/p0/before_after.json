@@ -1,0 +1,411 @@
+{
+  "finding1": [
+    {
+      "case": "review_two_columns",
+      "gold_cells": 8,
+      "gold_tables": 1,
+      "before": {
+        "cells": "8/8",
+        "tables": "1/1 (predicted 1)",
+        "status": "success",
+        "issues": [],
+        "router": null,
+        "route": null
+      },
+      "after": {
+        "cells": "8/8",
+        "tables": "1/1 (predicted 1)",
+        "status": "partial",
+        "review_required": true,
+        "review_reasons": [
+          "header_span_ambiguous"
+        ],
+        "warnings": [
+          "header_span_ambiguous"
+        ],
+        "silent": "0/8",
+        "router": "ok",
+        "route": "coverage check: 8/8 source numeric tokens in cells/headers; 0 isolated unassigned",
+        "structure": "4/8",
+        "localization": "8/8",
+        "prefix_output_reconciliation": "8/8 covered, nothing significant missing"
+      }
+    },
+    {
+      "case": "review_year_amount",
+      "gold_cells": 8,
+      "gold_tables": 1,
+      "before": {
+        "cells": "6/8",
+        "tables": "1/1 (predicted 1)",
+        "status": "success",
+        "issues": [],
+        "router": "ok",
+        "route": "native_grid clean: accepted without model backend (route=native_accept)"
+      },
+      "after": {
+        "cells": "8/8",
+        "tables": "1/1 (predicted 1)",
+        "status": "partial",
+        "review_required": true,
+        "review_reasons": [
+          "unit_not_detected"
+        ],
+        "warnings": [
+          "unit_not_detected"
+        ],
+        "silent": "0/8",
+        "router": "ok",
+        "route": "coverage check: 8/8 source numeric tokens in cells/headers; 0 isolated unassigned",
+        "structure": "8/8",
+        "localization": "8/8",
+        "prefix_output_reconciliation": "8/8 covered, nothing significant missing"
+      }
+    },
+    {
+      "case": "review_one_column",
+      "gold_cells": 4,
+      "gold_tables": 1,
+      "before": {
+        "cells": "0/4",
+        "tables": "0/1 (predicted 0)",
+        "status": "abstained",
+        "issues": [
+          "unassigned_numeric_tokens",
+          "no_tables_found"
+        ],
+        "router": null,
+        "route": null
+      },
+      "after": {
+        "cells": "4/4",
+        "tables": "1/1 (predicted 1)",
+        "status": "success",
+        "review_required": false,
+        "review_reasons": [],
+        "warnings": [],
+        "silent": "0/4",
+        "router": "ok",
+        "route": "coverage check: 4/4 source numeric tokens in cells/headers; 0 isolated unassigned",
+        "structure": "4/4",
+        "localization": "4/4",
+        "prefix_output_reconciliation": "4 significant source numeric tokens in no cell (0/4 covered) -> router would return needs_visual_review"
+      }
+    },
+    {
+      "case": "review_mixed_columns",
+      "gold_cells": 12,
+      "gold_tables": 2,
+      "before": {
+        "cells": "8/12",
+        "tables": "1/2 (predicted 1)",
+        "status": "success",
+        "issues": [
+          "unassigned_numeric_tokens"
+        ],
+        "router": "ok",
+        "route": "native_grid clean: accepted without model backend (route=native_accept)"
+      },
+      "after": {
+        "cells": "12/12",
+        "tables": "2/2 (predicted 2)",
+        "status": "partial",
+        "review_required": true,
+        "review_reasons": [
+          "header_span_ambiguous"
+        ],
+        "warnings": [
+          "header_span_ambiguous"
+        ],
+        "silent": "0/12",
+        "router": "ok",
+        "route": "coverage check: 12/12 source numeric tokens in cells/headers; 0 isolated unassigned",
+        "structure": "8/12",
+        "localization": "12/12",
+        "prefix_output_reconciliation": "4 significant source numeric tokens in no cell (8/12 covered) -> router would return needs_visual_review"
+      }
+    }
+  ],
+  "finding2": [
+    {
+      "variant": "all periods wrong, roles wrong, header links dangling",
+      "before": {
+        "raw": "74/74",
+        "order": "43/43",
+        "silent": 0,
+        "header_precision": "2/2",
+        "false_assurance": false
+      },
+      "after": {
+        "raw": "74/74",
+        "order": "43/43",
+        "silent": 0,
+        "header_precision": "2/2",
+        "period": "0/74",
+        "role": "0/74",
+        "link": "0/74",
+        "structure": "0/74",
+        "localization": "74/74",
+        "false_assurance": true,
+        "reasons": [
+          "cell_structure_errors"
+        ],
+        "unscoped_warnings": 0
+      }
+    },
+    {
+      "variant": "rows reversed and re-indexed",
+      "before": {
+        "raw": "74/74",
+        "order": "1/43",
+        "silent": 0,
+        "header_precision": "2/2",
+        "false_assurance": false
+      },
+      "after": {
+        "raw": "74/74",
+        "order": "1/43",
+        "silent": 0,
+        "header_precision": "2/2",
+        "period": "74/74",
+        "role": "74/74",
+        "link": "74/74",
+        "structure": "74/74",
+        "localization": "74/74",
+        "false_assurance": true,
+        "reasons": [
+          "row_order_errors"
+        ],
+        "unscoped_warnings": 0
+      }
+    },
+    {
+      "variant": "every evidence box [0,0,1,1] + an extra header",
+      "before": {
+        "raw": "74/74",
+        "order": "43/43",
+        "silent": 0,
+        "header_precision": "2/3",
+        "false_assurance": false
+      },
+      "after": {
+        "raw": "74/74",
+        "order": "43/43",
+        "silent": 0,
+        "header_precision": "2/3",
+        "period": "74/74",
+        "role": "74/74",
+        "link": "74/74",
+        "structure": "74/74",
+        "localization": "0/74",
+        "false_assurance": true,
+        "reasons": [
+          "extra_headers",
+          "misleading_evidence_boxes"
+        ],
+        "unscoped_warnings": 0
+      }
+    },
+    {
+      "variant": "last row deleted (no warning)",
+      "before": {
+        "raw": "72/74",
+        "order": "42/43",
+        "silent": 2,
+        "header_precision": "2/2",
+        "false_assurance": true
+      },
+      "after": {
+        "raw": "72/74",
+        "order": "42/43",
+        "silent": 2,
+        "header_precision": "2/2",
+        "period": "72/74",
+        "role": "72/74",
+        "link": "72/74",
+        "structure": "72/74",
+        "localization": "72/74",
+        "false_assurance": true,
+        "reasons": [
+          "cell_errors",
+          "missing_rows",
+          "hierarchy_errors"
+        ],
+        "unscoped_warnings": 0
+      }
+    },
+    {
+      "variant": "last row deleted + omitted_table warning for an unrelated region",
+      "before": {
+        "raw": "72/74",
+        "order": "42/43",
+        "silent": 0,
+        "header_precision": "2/2",
+        "false_assurance": true
+      },
+      "after": {
+        "raw": "72/74",
+        "order": "42/43",
+        "silent": 2,
+        "header_precision": "2/2",
+        "period": "72/74",
+        "role": "72/74",
+        "link": "72/74",
+        "structure": "72/74",
+        "localization": "72/74",
+        "false_assurance": true,
+        "reasons": [
+          "cell_errors",
+          "missing_rows",
+          "hierarchy_errors"
+        ],
+        "unscoped_warnings": 0
+      }
+    },
+    {
+      "variant": "last row deleted + unlabelled, unlocated partial_data_row warning",
+      "before": {
+        "raw": "72/74",
+        "order": "42/43",
+        "silent": 0,
+        "header_precision": "2/2",
+        "false_assurance": true
+      },
+      "after": {
+        "raw": "72/74",
+        "order": "42/43",
+        "silent": 2,
+        "header_precision": "2/2",
+        "period": "72/74",
+        "role": "72/74",
+        "link": "72/74",
+        "structure": "72/74",
+        "localization": "72/74",
+        "false_assurance": true,
+        "reasons": [
+          "cell_errors",
+          "missing_rows",
+          "hierarchy_errors"
+        ],
+        "unscoped_warnings": 1
+      }
+    },
+    {
+      "variant": "unmatched duplicate table (with its 2 headers)",
+      "before": {
+        "raw": "74/74",
+        "order": "43/43",
+        "silent": 0,
+        "header_precision": "2/2",
+        "false_assurance": true
+      },
+      "after": {
+        "raw": "74/74",
+        "order": "43/43",
+        "silent": 0,
+        "header_precision": "2/4",
+        "period": "74/74",
+        "role": "74/74",
+        "link": "74/74",
+        "structure": "74/74",
+        "localization": "74/74",
+        "false_assurance": true,
+        "reasons": [
+          "extra_tables",
+          "extra_rows",
+          "extra_headers"
+        ],
+        "unscoped_warnings": 0
+      }
+    },
+    {
+      "variant": "one cell removed, same value + context placed in another row's extra slot",
+      "before": {
+        "raw": "73/74",
+        "order": "43/43",
+        "silent": 1,
+        "header_precision": "2/2",
+        "false_assurance": true
+      },
+      "after": {
+        "raw": "73/74",
+        "order": "43/43",
+        "silent": 1,
+        "header_precision": "2/2",
+        "period": "73/74",
+        "role": "73/74",
+        "link": "73/74",
+        "structure": "73/74",
+        "localization": "73/74",
+        "false_assurance": true,
+        "reasons": [
+          "cell_errors"
+        ],
+        "unscoped_warnings": 0
+      }
+    }
+  ],
+  "finding4": {
+    "body_rowspan": {
+      "before": [
+        {
+          "label": "現金",
+          "cells": [
+            "10",
+            "20"
+          ]
+        },
+        {
+          "label": null,
+          "cells": [
+            "30",
+            "40"
+          ]
+        }
+      ],
+      "after": [
+        {
+          "label": "現金",
+          "raw_label": "現金",
+          "cells": [
+            "10",
+            "20"
+          ]
+        },
+        {
+          "label": "現金",
+          "raw_label": null,
+          "cells": [
+            "30",
+            "40"
+          ]
+        }
+      ],
+      "issues": [
+        {
+          "code": "body_rowspan_label_inherited",
+          "severity": "warning",
+          "rows": [
+            0,
+            1
+          ],
+          "label": "現金"
+        }
+      ]
+    },
+    "equal_span_headers": {
+      "before_parent_ids": {
+        "amount": "t_gouter",
+        "pct": "t_gouter",
+        "outer": null,
+        "inner": null
+      },
+      "after_parent_ids": {
+        "amount": "inner",
+        "pct": "inner",
+        "outer": null,
+        "inner": "outer"
+      }
+    }
+  }
+}

@@ -277,8 +277,13 @@ def _map_table(item, ti, page_h, ocr, gray=None, gscale=1.0):
     for r in range(first_body, nr):
         row_cells = [grid.get((r, c)) for c in range(nc)]
         own = [grid[(r, c)].text.strip() for c in label_cols if (r, c) in grid]
-        inherited = [owner[(r, c)].text.strip() for c in label_cols if (r, c) not in grid and (r, c) in owner
-                     and owner[(r, c)].start_row_offset_idx >= first_body]
+        # only a label that STARTS ABOVE this row (a row span) is inherited; a column span in this same row is already in `own`
+        inherited, seen_owner = [], set()
+        for c in label_cols:
+            o = owner.get((r, c))
+            if (r, c) not in grid and o is not None and first_body <= o.start_row_offset_idx < r and id(o) not in seen_owner:
+                seen_owner.add(id(o))
+                inherited.append(o.text.strip())
         label = "".join(own + inherited) if inherited else "".join(own)
         raw_label = "".join(own) or None
         out = []

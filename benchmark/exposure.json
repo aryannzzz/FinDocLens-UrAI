@@ -1,0 +1,22 @@
+{
+  "_purpose": "Design-time exposure of the pages whose manifest split is 'holdout'. The split label only keeps source families apart for leakage control; it is NOT a claim that the pages were unseen by the code under test. Read by tests and quoted in reports; no metric uses it.",
+  "elecom_p9": {
+    "manifest_split": "holdout",
+    "status": "design_exposed",
+    "evidence": "native_grid was designed with ELECOM p9 (and another ELECOM page) in view; integration tuned the 'XXX合計' sibling convention and hierarchy against this page's AI-drafted reference (RESULTS.md section 5, change #2).",
+    "blind_test": false
+  },
+  "daiwabo_p10": {
+    "manifest_split": "holdout",
+    "status": "design_exposed",
+    "evidence": "native_grid multi-table segmentation, the Docling region ablation and the omitted_table warning were motivated by this slide (RESULTS.md section 5, changes #3 and #5).",
+    "blind_test": false
+  },
+  "omron_p13": {
+    "manifest_split": "holdout",
+    "status": "never_available",
+    "evidence": "source download failed (HTTP 403); no backend has seen or scored it.",
+    "blind_test": false
+  },
+  "next_credible_estimate": "needs human-adjudicated references and a new issuer/template frozen before any code change; see docs/MANUAL_REVIEW_QUEUE.md"
+}

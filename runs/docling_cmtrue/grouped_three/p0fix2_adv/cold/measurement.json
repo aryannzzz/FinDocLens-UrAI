@@ -1,0 +1,40 @@
+{
+  "mode": "cold_process",
+  "iteration": 0,
+  "status": "partial",
+  "error": null,
+  "device": "cpu",
+  "model_revision": "layout=8f39ad3c0b4c58e9c2d2c84a38465abf757272d8; tableformer=fc0f2d45e2218ea24bce5045f58a389aed16dc23",
+  "checkpoint_id": "docling-project/docling-layout-heron + docling-project/docling-models (TableFormer ACCURATE)",
+  "model_metadata": {
+    "device": "cpu",
+    "backend_version": "docling 2.141.0 / docling-ibm-models 4.0.4",
+    "model_revision": "layout=8f39ad3c0b4c58e9c2d2c84a38465abf757272d8; tableformer=fc0f2d45e2218ea24bce5045f58a389aed16dc23",
+    "checkpoint_id": "docling-project/docling-layout-heron + docling-project/docling-models (TableFormer ACCURATE)",
+    "packages": {
+      "docling": "2.141.0",
+      "docling-core": "2.103.1",
+      "docling-ibm-models": "4.0.4",
+      "docling-parse": "7.22.4",
+      "torch": "2.14.1+cpu",
+      "rapidocr": "3.10.0",
+      "onnxruntime": "1.31.0",
+      "PyMuPDF": "1.28.2"
+    },
+    "do_cell_matching": true
+  },
+  "backend_version": "docling 2.141.0 / docling-ibm-models 4.0.4",
+  "stages": {
+    "load_ms": 90.90207604458556,
+    "render_ms": 37.66321099828929,
+    "inference_ms": 9595.591576013248,
+    "normalization_ms": 0.4886089591309428,
+    "serialize_ms": 1.3703799922950566
+  },
+  "time_ms": 9726.027646043804,
+  "cold_image_export_included": true,
+  "peak_memory_mb": 1275.546875,
+  "memory_method": "Linux ru_maxrss: process lifetime high-water RSS; warm peaks are cumulative, not deltas",
+  "peak_gpu_allocation_mb": null,
+  "gpu_memory_status": "unmeasured: worker does not import or reset framework GPU allocator"
+}

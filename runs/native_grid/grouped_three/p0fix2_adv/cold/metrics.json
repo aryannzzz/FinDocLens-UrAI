@@ -1,0 +1,255 @@
+{
+  "document_id": "grouped_three",
+  "evaluated_at": "2026-10-22T17:24:44.572683+00:00",
+  "evaluator_version": 2,
+  "reference_status": "ai_draft",
+  "human_checked_cells": 0,
+  "scope": {
+    "tables_complete": true,
+    "rows_complete": true,
+    "cells_complete": true
+  },
+  "run_status": "partial",
+  "whitespace_policy": "remove Unicode whitespace only; preserve glyphs, signs, punctuation and decimals",
+  "matching_policy": "One-to-one evaluation with fixed gold denominators and explicit failures.\n\nOnly whitespace is removed for label/raw matching. Raw tokens are never rewritten.\nTable matching uses page + bbox IoU >= .1 (maximum weight assignment). Rows\nrequire equal whitespace-normalized labels; geometry/context/order break ties.\nFinancial cells align by physical column_index, never by predicted value or role.\n",
+  "metrics": {
+    "tables": {
+      "matched": 1,
+      "gold": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "extra_tables": 0,
+    "unlocalizable_predicted_tables": 0,
+    "rows": {
+      "matched": 4,
+      "gold": 4,
+      "predicted": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "missed_rows": 0,
+    "spurious_rows": 0,
+    "raw_label_exact": {
+      "correct": 4,
+      "total": 4,
+      "rate": 1.0
+    },
+    "extraneous_row_rate": {
+      "correct": 0,
+      "total": 4,
+      "rate": 0.0
+    },
+    "row_order_accuracy": {
+      "correct": 4,
+      "total": 4,
+      "rate": 1.0
+    },
+    "cell_coverage": {
+      "correct": 24,
+      "total": 24,
+      "rate": 1.0
+    },
+    "raw_cell_exact": {
+      "correct": 24,
+      "total": 24,
+      "rate": 1.0
+    },
+    "raw_precision_on_matched": {
+      "correct": 24,
+      "total": 24,
+      "rate": 1.0
+    },
+    "raw_precision_all_predicted": {
+      "correct": 24,
+      "total": 24,
+      "rate": 1.0
+    },
+    "semantic_cell_exact": {
+      "correct": 24,
+      "total": 24,
+      "rate": 1.0
+    },
+    "numeric_raw_exact": {
+      "correct": 24,
+      "total": 24,
+      "rate": 1.0
+    },
+    "numeric_semantic_exact": {
+      "correct": 24,
+      "total": 24,
+      "rate": 1.0
+    },
+    "header_role_accuracy": {
+      "correct": 6,
+      "total": 6,
+      "rate": 1.0
+    },
+    "header_role_precision": {
+      "correct": 6,
+      "total": 6,
+      "rate": 1.0
+    },
+    "grouped_headers": {
+      "matched": 2,
+      "gold": 2,
+      "predicted": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "header_parent_accuracy": {
+      "correct": 6,
+      "total": 6,
+      "rate": 1.0
+    },
+    "hierarchy_edges": {
+      "matched": 0,
+      "gold": 0,
+      "predicted": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "abstention_rate": {
+      "correct": 0,
+      "total": 24,
+      "rate": 0.0
+    },
+    "correct_abstention": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "missing_cells": {
+      "correct": 0,
+      "total": 24,
+      "rate": 0.0
+    },
+    "silent_omission_rate": {
+      "correct": 0,
+      "total": 24,
+      "rate": 0.0
+    },
+    "invalid_matched_cells": 0,
+    "cell_period_accuracy": {
+      "correct": 24,
+      "total": 24,
+      "rate": 1.0
+    },
+    "cell_role_accuracy": {
+      "correct": 24,
+      "total": 24,
+      "rate": 1.0
+    },
+    "cell_header_link_accuracy": {
+      "correct": 24,
+      "total": 24,
+      "rate": 1.0
+    },
+    "cell_structure_exact": {
+      "correct": 24,
+      "total": 24,
+      "rate": 1.0
+    },
+    "cell_evidence_localization": {
+      "correct": 24,
+      "total": 24,
+      "rate": 1.0
+    },
+    "unscoped_omission_warnings": 0,
+    "false_assurance": false,
+    "false_assurance_reasons": [],
+    "warnings": [],
+    "gold_cells": 24,
+    "predicted_cells": 24
+  },
+  "errors": [],
+  "alignment": [
+    {
+      "table_id": "t0",
+      "row_id": "t0_r0",
+      "predicted_row_index": 0,
+      "matched": true
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r1",
+      "predicted_row_index": 1,
+      "matched": true
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r2",
+      "predicted_row_index": 2,
+      "matched": true
+    },
+    {
+      "table_id": "t0",
+      "row_id": "t0_r3",
+      "predicted_row_index": 3,
+      "matched": true
+    }
+  ],
+  "gold_sha256": "2cfbc94cabb66b748d9d1fa4a195082803ee803a807a41680d4df16512f3e4d5",
+  "prediction_sha256": "f3b633dff6c06dcdf52d30df4a245fcfb935fe4aadc4260346b4715e5c1c62d2",
+  "prediction_path": "runs/native_grid/grouped_three/p0fix2_adv/cold/prediction.json",
+  "source": {
+    "document_id": "grouped_three",
+    "company": "Synthetic control",
+    "source_url": null,
+    "source_page_index": 0,
+    "page": 1,
+    "source_sha256": "52aaafa765af6025875c1cba45546a7e0012b3e3b369db62771033a41b92469a",
+    "input_sha256": "52aaafa765af6025875c1cba45546a7e0012b3e3b369db62771033a41b92469a",
+    "input_path": "benchmark/data/adversarial/grouped_three/page.pdf",
+    "gold_path": "benchmark/gold/adversarial/grouped_three.json",
+    "source_kind": "synthetic",
+    "source_family": "synthetic_layout_controls",
+    "issuer_relation": "not_applicable_synthetic",
+    "split": "development",
+    "domain": "synthetic_financial_table",
+    "status": "available",
+    "human_audit_status": "ai_draft",
+    "human_checked_cells": 0,
+    "difficulty": "grouped_three",
+    "visual_truth": "new synthetic visual truth; no company generalization claim",
+    "license_note": "Local synthetic derivative; source-family rights apply"
+  },
+  "measurement": {
+    "mode": "cold_process",
+    "iteration": 0,
+    "status": "partial",
+    "error": null,
+    "device": "cpu",
+    "model_revision": null,
+    "checkpoint_id": null,
+    "model_metadata": {
+      "device": "cpu",
+      "backend_version": "findoclens-0.1 (native_grid)",
+      "model_revision": null,
+      "checkpoint_id": null,
+      "null_reason": "rule-based native backend: no model checkpoint",
+      "findoclens_packages": {
+        "PyMuPDF": "1.27.2.3"
+      }
+    },
+    "backend_version": "findoclens-0.1 (native_grid)",
+    "stages": {
+      "load_ms": 80.36802802234888,
+      "render_ms": 30.59090202441439,
+      "inference_ms": 11.419086018577218,
+      "normalization_ms": 0.1882470096461475,
+      "serialize_ms": 0.33438001992180943
+    },
+    "time_ms": 122.90976400254294,
+    "cold_image_export_included": true,
+    "peak_memory_mb": 73.24609375,
+    "memory_method": "Linux ru_maxrss: process lifetime high-water RSS; warm peaks are cumulative, not deltas",
+    "peak_gpu_allocation_mb": null,
+    "gpu_memory_status": "unmeasured: worker does not import or reset framework GPU allocator"
+  }
+}

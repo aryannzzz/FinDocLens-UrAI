@@ -1,0 +1,66 @@
+{
+ "auto": {
+  "predictions": 36,
+  "compliant": 36,
+  "violations": {},
+  "nondeterministic": [],
+  "raw_missing": [],
+  "failed_runs": []
+ },
+ "docling_cmfalse": {
+  "predictions": 36,
+  "compliant": 36,
+  "violations": {},
+  "nondeterministic": [],
+  "raw_missing": [],
+  "failed_runs": []
+ },
+ "docling_cmtrue": {
+  "predictions": 36,
+  "compliant": 36,
+  "violations": {},
+  "nondeterministic": [],
+  "raw_missing": [],
+  "failed_runs": []
+ },
+ "docling_rapidocr": {
+  "predictions": 36,
+  "compliant": 36,
+  "violations": {},
+  "nondeterministic": [],
+  "raw_missing": [],
+  "failed_runs": []
+ },
+ "docling_regions": {
+  "predictions": 36,
+  "compliant": 36,
+  "violations": {},
+  "nondeterministic": [],
+  "raw_missing": [],
+  "failed_runs": []
+ },
+ "native_grid": {
+  "predictions": 72,
+  "compliant": 72,
+  "violations": {},
+  "nondeterministic": [],
+  "raw_missing": [],
+  "failed_runs": []
+ },
+ "native_v2": {
+  "predictions": 72,
+  "compliant": 72,
+  "violations": {},
+  "nondeterministic": [],
+  "raw_missing": [],
+  "failed_runs": []
+ },
+ "v2": {
+  "predictions": 72,
+  "compliant": 72,
+  "violations": {},
+  "nondeterministic": [],
+  "raw_missing": [],
+  "failed_runs": []
+ }
+}
