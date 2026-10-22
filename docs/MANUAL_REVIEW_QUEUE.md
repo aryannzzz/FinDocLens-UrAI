@@ -60,6 +60,7 @@ Counts: original 12, elecom_p9 2, daiwabo_p10 23 (total 37). Plain digits are in
 | B6 | daiwabo_p10 | Unit `million_JPY` for all three tables. | Printed once (`（百万円）`, above table 1 only). Tables 2–3 inherit it in the draft. | page crop |
 | B7 | elecom_p9 | `その他（純額）` is a child of `有形固定資産`, not of `建設仮勘定`. | Frozen v2 (a text-geometry parser) attaches it elsewhere; the draft follows the source layout. Only the indentation in the crop can settle it (1 hierarchy edge). | `benchmark/reports/measured.md` |
 | B8 | original | `建設仮勘定` and `長期貸付金` have a `－` in the prior-period column (status `not_reported`, value null); `貸倒引当金` has `△0` (negative zero). | These are the three cells where a human must confirm that the page really prints a dash / a triangle-zero (an OCR engine cannot see the dash at all, see `docs/FAILURE_GALLERY.md` G6). | section A |
+| B9 | daiwabo_p10 | (added in the P0 pass) Whether the lower explanation table should carry the periods/roles of the tables above (`c0..c3`: 2025-03-31, 2025-12-31, change, text). | Under evaluator v2 this decides 12 of the 63 Daiwabo cell-period scores: the slide prints no header there, `native_grid` leaves period null, the draft inherited them. Neither side is repaired; it needs a human decision. | `docs/P0_FIXES.md` §5 |
 
 ## C. Where an image-based reader disagrees with the draft (label-independent)
 

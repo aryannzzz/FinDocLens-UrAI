@@ -3,6 +3,11 @@
 > **Read first.** Every reference is an AI draft (`ai_draft`, **0 human-verified cells**). Scores are *agreement with unverified drafts*, never
 > "accuracy". Human-verified scores: **none exist** (so that table is empty by construction); AI-draft scores are reported throughout and labelled as such.
 > CPU only; **no GPU measurement exists**. OMRON could not be downloaded and is absent. No model was trained; no VLM / PaddleOCR-VL was run.
+> **P0 pass (after the independent review).** The tables below are the pre-fix `fin1` development record and are unchanged. Four review findings were addressed afterwards
+> (silent loss of year-like amounts and one-column tables, evaluator blind spots, merged-cell mapping; finding 3, independent validation, remains open): see
+> [`docs/P0_FIXES.md`](docs/P0_FIXES.md) and `docs/P0_BEFORE_AFTER.md`. A complete re-run (`p0fix2`) changed no status and no value/alignment score on the 18 reference pages; the new structure
+> axes (cell period/role/header link) show Daiwabo `native_grid` at 51/63 periods (34/63 before an adapter fix), the rest being a reference-convention question (B1/B9). The "holdout" pages are
+> design-exposed, not blind tests (`benchmark/exposure.json`).
 > `native_grid` was developed and again modified during integration while looking at these pages, so its scores on them are **in-sample** (§5).
 
 Code under test: commit `afcfb56` (branch `integration-v1`); all `fin1_*` runs were produced from it (`provenance.code` in every prediction; the only
@@ -12,7 +17,7 @@ predictions, per-trial metrics and measurements are immutable under `runs/<backe
 ## 1. What was run
 * **Backends** (all through the same harness, `adapters/<name>.py`, projected to `benchmark-1.0`): `v2` (Codex's projection of the frozen parser), `native_v2` (findoclens projection
   of the same parser), `native_grid`, `docling_cmtrue`, `docling_cmfalse`, `docling_rapidocr`, plus the router `auto` and two ablations (`docling_regions`, `docling_rapidocr_medium`).
-* **Pages with a reference (18)**: original (development), ELECOM p9 and Daiwabo p10 (independent issuers, holdout), 3 raster controls of the original (150/200 dpi, text layer deleted),
+* **Pages with a reference (18)**: original (development), ELECOM p9 and Daiwabo p10 (independent issuers; manifest split `holdout`, but design-exposed, not blind tests), 3 raster controls of the original (150/200 dpi, text layer deleted),
   5 digital perturbations of the original, 5 synthetic layouts (development), and — added in this stage — 200-dpi raster derivatives of ELECOM p9 and Daiwabo p10
   (`benchmark/raster_variants.py`, own lock file; same split/family as the parent). OMRON p13: unavailable.
 * **Trials**: cold (fresh process) + 3 warm on the main and raster sets; cold + 1 warm on the adversarial set for Docling backends (3 warm for native ones).
