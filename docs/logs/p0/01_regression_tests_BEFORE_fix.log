@@ -1,0 +1,287 @@
+FEF...FF.FFEEEEFEFFF.E..F..FFEFE.FFF
+======================================================================
+ERROR: test_isolated_page_numbers_do_not_trigger_review (tests.test_p0_regressions.CompletenessReconciliation.test_isolated_page_numbers_do_not_trigger_review)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 149, in test_isolated_page_numbers_do_not_trigger_review
+    self.assertFalse(canonical(p, n)["review_required"])
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'review_required'
+
+======================================================================
+ERROR: test_header_link_to_the_wrong_existing_column_is_wrong (tests.test_p0_regressions.EvaluatorStructure.test_header_link_to_the_wrong_existing_column_is_wrong)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 227, in test_header_link_to_the_wrong_existing_column_is_wrong
+    self.assertEqual(m["cell_header_link_accuracy"]["correct"], 4)
+                     ~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'cell_header_link_accuracy'
+
+======================================================================
+ERROR: test_link_credit_follows_the_header_not_its_id_spelling (tests.test_p0_regressions.EvaluatorStructure.test_link_credit_follows_the_header_not_its_id_spelling)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 237, in test_link_credit_follows_the_header_not_its_id_spelling
+    self.assertEqual(metrics(g, p)["cell_header_link_accuracy"]["correct"], 8)
+                     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'cell_header_link_accuracy'
+
+======================================================================
+ERROR: test_missing_cell_gets_no_credit_on_any_axis_even_if_its_value_appears_elsewhere (tests.test_p0_regressions.EvaluatorStructure.test_missing_cell_gets_no_credit_on_any_axis_even_if_its_value_appears_elsewhere)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 247, in test_missing_cell_gets_no_credit_on_any_axis_even_if_its_value_appears_elsewhere
+    self.assertEqual(m[k]["correct"], 7, k)
+                     ~^^^
+KeyError: 'cell_period_accuracy'
+
+======================================================================
+ERROR: test_perfect_prediction_scores_full_on_every_axis (tests.test_p0_regressions.EvaluatorStructure.test_perfect_prediction_scores_full_on_every_axis)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 205, in test_perfect_prediction_scores_full_on_every_axis
+    self.assertEqual((m[k]["correct"], m[k]["total"]), (8, 8), k)
+                      ~^^^
+KeyError: 'cell_period_accuracy'
+
+======================================================================
+ERROR: test_wrong_periods_roles_and_links_hit_structure_not_value_scores (tests.test_p0_regressions.EvaluatorStructure.test_wrong_periods_roles_and_links_hit_structure_not_value_scores)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 216, in test_wrong_periods_roles_and_links_hit_structure_not_value_scores
+    self.assertEqual(m["cell_period_accuracy"]["correct"], 0)
+                     ~^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'cell_period_accuracy'
+
+======================================================================
+ERROR: test_equal_span_groups_chain_outer_to_inner_to_leaf (tests.test_p0_regressions.NestedHeaders.test_equal_span_groups_chain_outer_to_inner_to_leaf)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 379, in test_equal_span_groups_chain_outer_to_inner_to_leaf
+    self.assertEqual(by_native["inner"]["parent_id"], gid("outer"))
+                     ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'parent_id'
+
+======================================================================
+ERROR: test_router_reconciles_tokens_of_whatever_backend_it_returns (tests.test_p0_regressions.RouterCompleteness.test_router_reconciles_tokens_of_whatever_backend_it_returns)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 161, in test_router_reconciles_tokens_of_whatever_backend_it_returns
+    from findoclens.coverage import reconcile_prediction
+ModuleNotFoundError: No module named 'findoclens.coverage'
+
+======================================================================
+ERROR: test_amounts_2025_2026_are_not_dropped (tests.test_p0_regressions.YearLikeAmounts.test_amounts_2025_2026_are_not_dropped)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 55, in test_amounts_2025_2026_are_not_dropped
+    self.assertEqual(cells_by_label(n)["現金"], ["2025", "2026"])
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^
+KeyError: '現金'
+
+======================================================================
+FAIL: test_canonical_status_is_not_success_and_names_the_review_reason (tests.test_p0_regressions.CompletenessReconciliation.test_canonical_status_is_not_success_and_names_the_review_reason)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 139, in test_canonical_status_is_not_success_and_names_the_review_reason
+    self.assertEqual(out["status"], "partial")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'success' != 'partial'
+- success
++ partial
+
+
+======================================================================
+FAIL: test_unassigned_numeric_tokens_in_a_column_stack_are_a_warning_with_locations (tests.test_p0_regressions.CompletenessReconciliation.test_unassigned_numeric_tokens_in_a_column_stack_are_a_warning_with_locations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 132, in test_unassigned_numeric_tokens_in_a_column_stack_are_a_warning_with_locations
+    self.assertEqual(issue["severity"], "warning")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'info' != 'warning'
+- info
++ warning
+
+
+======================================================================
+FAIL: test_unlocated_and_unlabelled_omission_warning_does_not_suppress_but_is_reported (tests.test_p0_regressions.EvaluatorOmissionScope.test_unlocated_and_unlabelled_omission_warning_does_not_suppress_but_is_reported)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 301, in test_unlocated_and_unlabelled_omission_warning_does_not_suppress_but_is_reported
+    self.assertEqual(m["silent_omission_rate"]["correct"], 2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2
+
+======================================================================
+FAIL: test_unrelated_region_warning_does_not_suppress (tests.test_p0_regressions.EvaluatorOmissionScope.test_unrelated_region_warning_does_not_suppress)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 295, in test_unrelated_region_warning_does_not_suppress
+    self.assertEqual(self.silent(g, p), 2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2
+
+======================================================================
+FAIL: test_warning_located_on_the_missing_row_does_suppress (tests.test_p0_regressions.EvaluatorOmissionScope.test_warning_located_on_the_missing_row_does_suppress)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 316, in test_warning_located_on_the_missing_row_does_suppress
+    self.assertEqual(self.silent(g, p), 0)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0
+
+======================================================================
+FAIL: test_extra_headers_count_against_precision_even_in_unmatched_tables (tests.test_p0_regressions.EvaluatorStructure.test_extra_headers_count_against_precision_even_in_unmatched_tables)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 276, in test_extra_headers_count_against_precision_even_in_unmatched_tables
+    self.assertEqual((m["header_role_precision"]["correct"], m["header_role_precision"]["total"]), (2, 4))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (2, 2) != (2, 4)
+
+First differing element 1:
+2
+4
+
+- (2, 2)
+?     ^
+
++ (2, 4)
+?     ^
+
+
+======================================================================
+FAIL: test_row_order_and_localization_errors_are_false_assurance (tests.test_p0_regressions.EvaluatorStructure.test_row_order_and_localization_errors_are_false_assurance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 259, in test_row_order_and_localization_errors_are_false_assurance
+    self.assertTrue(m["false_assurance"])
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_body_label_spanning_two_rows_reaches_both_rows (tests.test_p0_regressions.MergedCells.test_body_label_spanning_two_rows_reaches_both_rows)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 345, in test_body_label_spanning_two_rows_reaches_both_rows
+    self.assertEqual([r.label for r in t.rows], ["現金", "現金"])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['現金', None] != ['現金', '現金']
+
+First differing element 1:
+None
+'現金'
+
+- ['現金', None]
++ ['現金', '現金']
+
+======================================================================
+FAIL: test_numeric_body_cell_with_colspan_is_flagged (tests.test_p0_regressions.MergedCells.test_numeric_body_cell_with_colspan_is_flagged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 359, in test_numeric_body_cell_with_colspan_is_flagged
+    self.assertTrue(any(i["code"] == "body_cell_span_unsupported" and i["columns"] == [0, 1] for i in t.issues))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_numeric_body_cell_with_rowspan_is_flagged_and_not_copied (tests.test_p0_regressions.MergedCells.test_numeric_body_cell_with_rowspan_is_flagged_and_not_copied)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 354, in test_numeric_body_cell_with_rowspan_is_flagged_and_not_copied
+    self.assertTrue(any(i["code"] == "body_cell_span_unsupported" and i["rows"] == [0, 1] and i["columns"] == [0]
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        for i in t.issues))
+                        ^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_one_column_beside_two_column_table_neither_merged_nor_omitted (tests.test_p0_regressions.OneColumnTables.test_one_column_beside_two_column_table_neither_merged_nor_omitted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 100, in test_one_column_beside_two_column_table_neither_merged_nor_omitted
+    self.assertEqual([t["n_data_columns"] for t in n["tables"]], [2, 1])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [2] != [2, 1]
+
+Second list contains 1 additional elements.
+First extra element 1:
+1
+
+- [2]
++ [2, 1]
+
+======================================================================
+FAIL: test_standalone_one_column_table (tests.test_p0_regressions.OneColumnTables.test_standalone_one_column_table)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 93, in test_standalone_one_column_table
+    self.assertEqual(len(n["tables"]), 1)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_router_does_not_accept_a_page_with_unassigned_table_content (tests.test_p0_regressions.RouterCompleteness.test_router_does_not_accept_a_page_with_unassigned_table_content)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 157, in test_router_does_not_accept_a_page_with_unassigned_table_content
+    self.assertEqual(r["status"], "needs_visual_review")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ok' != 'needs_visual_review'
+- ok
++ needs_visual_review
+
+
+======================================================================
+FAIL: test_router_still_accepts_a_clean_page_and_the_mixed_page (tests.test_p0_regressions.RouterCompleteness.test_router_still_accepts_a_clean_page_and_the_mixed_page)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 173, in test_router_still_accepts_a_clean_page_and_the_mixed_page
+    self.assertEqual(len(r["tables"]), 2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 2
+
+======================================================================
+FAIL: test_labelled_year_like_row_next_to_header_is_flagged_not_silent (tests.test_p0_regressions.YearLikeAmounts.test_labelled_year_like_row_next_to_header_is_flagged_not_silent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 79, in test_labelled_year_like_row_next_to_header_is_flagged_not_silent
+    self.assertTrue(flagged, "a label + bare-year row above the data cannot be classified from tokens alone; it must be flagged")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [] is not true : a label + bare-year row above the data cannot be classified from tokens alone; it must be flagged
+
+======================================================================
+FAIL: test_year_amount_page_is_not_reported_as_success_if_anything_is_missing (tests.test_p0_regressions.YearLikeAmounts.test_year_amount_page_is_not_reported_as_success_if_anything_is_missing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 86, in test_year_amount_page_is_not_reported_as_success_if_anything_is_missing
+    self.assertEqual(sum(len(r["cells"]) for r in out["tables"][0]["rows"]), 8)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 6 != 8
+
+======================================================================
+FAIL: test_year_amounts_keep_numeric_type_and_physical_columns (tests.test_p0_regressions.YearLikeAmounts.test_year_amounts_keep_numeric_type_and_physical_columns)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/tests/test_p0_regressions.py", line 61, in test_year_amounts_keep_numeric_type_and_physical_columns
+    self.assertEqual([(c["column_index"], c["value"], c["status"]) for c in row["cells"]],
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     [(0, 2025, "observed"), (1, 2026, "observed")])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [(0, 340, 'observed'), (1, 351, 'observed')] != [(0, 2025, 'observed'), (1, 2026, 'observed')]
+
+First differing element 0:
+(0, 340, 'observed')
+(0, 2025, 'observed')
+
+- [(0, 340, 'observed'), (1, 351, 'observed')]
+?      ^^                    ^^^
+
++ [(0, 2025, 'observed'), (1, 2026, 'observed')]
+?      ^ ++                   ^^^^
+
+
+----------------------------------------------------------------------
+Ran 36 tests in 0.219s
+
+FAILED (failures=17, errors=9)
