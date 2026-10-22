@@ -1,6 +1,6 @@
 {
   "command": [
-    "/home/aryannzzz/findoclens-codex/.venv/bin/python",
+    "/home/aryannzzz/ur_ai_RnD_agent_starter/.venv/bin/python",
     "-m",
     "unittest",
     "discover",
@@ -8,16 +8,18 @@
     "tests",
     "-v"
   ],
-  "git_commit": "7369ec36197b7adc425981833e679c8e445aa358",
-  "timestamp": "2026-10-22T10:37:35.873712+00:00",
-  "elapsed_ms": 1064.1096370236482,
+  "git_commit": "afcfb5687e655e759432c8a7b8279c083ab272ea",
+  "timestamp": "2026-10-22T13:27:40.095735+00:00",
+  "elapsed_ms": 1551.3051000016276,
   "returncode": 0,
   "status": "pass",
   "test_files": {
     "tests/__init__.py": "5ecadd8fce2f8f292fd20fd2b4615fd6bf6729dd9114ba38aed3de1c3624e5d6",
+    "tests/test_findoclens.py": "91a597898903aaa712731a93848fcd99c8980c618996516fa14da2dc54d81afc",
     "tests/worker_backends.py": "6b17078abdc004b73a899e32d16034979a00455f348a36fb8a6da76048c6acf0",
     "tests/test_benchmark.py": "beee9e8f955097f700e05b0814ff89da90aad43b3e56b565704a93eed655531b",
     "tests/test_artifacts.py": "c862a23ff3fe7b32684421c5a2ea22d0e39167534cf18d4a62532ddbd74eb9b1",
+    "tests/test_adapters.py": "128620c682250243d176f39b6d9bec2aed438f9318b640950af9881f70d84a5d",
     "tests/test_frozen.py": "b768cc8c34bc3fe4d5f445e73cebebb8c60d7f9e6f6a77d09ccbf2a99f58063f"
   },
   "note": "Root suite includes original 25 tests executed in isolated temporary copy."

@@ -1,0 +1,1307 @@
+{
+  "document_id": "elecom_p9_scan200",
+  "evaluated_at": "2026-10-22T12:44:46.909454+00:00",
+  "reference_status": "ai_draft",
+  "human_checked_cells": 0,
+  "scope": {
+    "tables_complete": true,
+    "rows_complete": true,
+    "cells_complete": true,
+    "note": "Selected page only. Completeness and hierarchy are AI draft assertions pending human verification."
+  },
+  "run_status": "abstained",
+  "whitespace_policy": "remove Unicode whitespace only; preserve glyphs, signs, punctuation and decimals",
+  "matching_policy": "One-to-one evaluation with fixed gold denominators and explicit failures.\n\nOnly whitespace is removed for label/raw matching. Raw tokens are never rewritten.\nTable matching uses page + bbox IoU >= .1 (maximum weight assignment). Rows\nrequire equal whitespace-normalized labels; geometry/context/order break ties.\nFinancial cells align by physical column_index, never by predicted value or role.\n",
+  "metrics": {
+    "tables": {
+      "matched": 0,
+      "gold": 1,
+      "predicted": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "extra_tables": 0,
+    "unlocalizable_predicted_tables": 0,
+    "rows": {
+      "matched": 0,
+      "gold": 34,
+      "predicted": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "missed_rows": 34,
+    "spurious_rows": 0,
+    "raw_label_exact": {
+      "correct": 0,
+      "total": 34,
+      "rate": 0.0
+    },
+    "extraneous_row_rate": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "row_order_accuracy": {
+      "correct": 0,
+      "total": 34,
+      "rate": 0.0
+    },
+    "cell_coverage": {
+      "correct": 0,
+      "total": 56,
+      "rate": 0.0
+    },
+    "raw_cell_exact": {
+      "correct": 0,
+      "total": 56,
+      "rate": 0.0
+    },
+    "raw_precision_on_matched": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "raw_precision_all_predicted": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "semantic_cell_exact": {
+      "correct": 0,
+      "total": 56,
+      "rate": 0.0
+    },
+    "numeric_raw_exact": {
+      "correct": 0,
+      "total": 56,
+      "rate": 0.0
+    },
+    "numeric_semantic_exact": {
+      "correct": 0,
+      "total": 56,
+      "rate": 0.0
+    },
+    "header_role_accuracy": {
+      "correct": 0,
+      "total": 2,
+      "rate": 0.0
+    },
+    "header_role_precision": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "grouped_headers": {
+      "matched": 0,
+      "gold": 0,
+      "predicted": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "header_parent_accuracy": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "hierarchy_edges": {
+      "matched": 0,
+      "gold": 33,
+      "predicted": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "abstention_rate": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "correct_abstention": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "missing_cells": {
+      "correct": 56,
+      "total": 56,
+      "rate": 1.0
+    },
+    "silent_omission_rate": {
+      "correct": 0,
+      "total": 56,
+      "rate": 0.0
+    },
+    "invalid_matched_cells": 0,
+    "false_assurance": false,
+    "warnings": [
+      {
+        "page": 1,
+        "severity": "error",
+        "code": "needs_visual_fallback",
+        "message": "No stable native text columns: OCR/VLM is required and not run."
+      },
+      {
+        "code": "empty_extraction",
+        "severity": "error"
+      }
+    ],
+    "gold_cells": 56,
+    "predicted_cells": 0
+  },
+  "errors": [
+    {
+      "table_id": "assets",
+      "row_id": "assets_r003",
+      "label": "現金及び預金",
+      "column_index": 0,
+      "expected_raw": "43,718",
+      "expected_status": "observed",
+      "bbox": [
+        369.05621337890625,
+        154.5677490234375,
+        395.9339294433594,
+        163.5267333984375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r003",
+      "label": "現金及び預金",
+      "column_index": 1,
+      "expected_raw": "58,497",
+      "expected_status": "observed",
+      "bbox": [
+        493.49005126953125,
+        154.5677490234375,
+        520.3677368164062,
+        163.5267333984375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r004",
+      "label": "受取手形及び売掛金",
+      "column_index": 0,
+      "expected_raw": "21,033",
+      "expected_status": "observed",
+      "bbox": [
+        369.05621337890625,
+        166.51312255859375,
+        395.9339294433594,
+        175.47210693359375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r004",
+      "label": "受取手形及び売掛金",
+      "column_index": 1,
+      "expected_raw": "27,294",
+      "expected_status": "observed",
+      "bbox": [
+        493.49005126953125,
+        166.51312255859375,
+        520.3677368164062,
+        175.47210693359375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r005",
+      "label": "有価証券",
+      "column_index": 0,
+      "expected_raw": "11,199",
+      "expected_status": "observed",
+      "bbox": [
+        369.05621337890625,
+        178.45843505859375,
+        395.9339294433594,
+        187.41741943359375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r005",
+      "label": "有価証券",
+      "column_index": 1,
+      "expected_raw": "12,387",
+      "expected_status": "observed",
+      "bbox": [
+        493.49005126953125,
+        178.45843505859375,
+        520.3677368164062,
+        187.41741943359375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r006",
+      "label": "商品及び製品",
+      "column_index": 0,
+      "expected_raw": "11,937",
+      "expected_status": "observed",
+      "bbox": [
+        369.05621337890625,
+        190.40380859375,
+        395.9339294433594,
+        199.36279296875
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r006",
+      "label": "商品及び製品",
+      "column_index": 1,
+      "expected_raw": "15,339",
+      "expected_status": "observed",
+      "bbox": [
+        493.49005126953125,
+        190.40380859375,
+        520.3677368164062,
+        199.36279296875
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r007",
+      "label": "仕掛品",
+      "column_index": 0,
+      "expected_raw": "498",
+      "expected_status": "observed",
+      "bbox": [
+        382.49505615234375,
+        202.34906005859375,
+        395.93389892578125,
+        211.30804443359375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r007",
+      "label": "仕掛品",
+      "column_index": 1,
+      "expected_raw": "662",
+      "expected_status": "observed",
+      "bbox": [
+        506.92889404296875,
+        202.34906005859375,
+        520.3677368164062,
+        211.30804443359375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r008",
+      "label": "原材料及び貯蔵品",
+      "column_index": 0,
+      "expected_raw": "1,603",
+      "expected_status": "observed",
+      "bbox": [
+        373.53582763671875,
+        214.29437255859375,
+        395.9339294433594,
+        223.25335693359375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r008",
+      "label": "原材料及び貯蔵品",
+      "column_index": 1,
+      "expected_raw": "2,190",
+      "expected_status": "observed",
+      "bbox": [
+        497.96966552734375,
+        214.29437255859375,
+        520.3677368164062,
+        223.25335693359375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r009",
+      "label": "返品資産",
+      "column_index": 0,
+      "expected_raw": "380",
+      "expected_status": "observed",
+      "bbox": [
+        382.49505615234375,
+        226.23968505859375,
+        395.93389892578125,
+        235.19866943359375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r009",
+      "label": "返品資産",
+      "column_index": 1,
+      "expected_raw": "378",
+      "expected_status": "observed",
+      "bbox": [
+        506.92889404296875,
+        226.23968505859375,
+        520.3677368164062,
+        235.19866943359375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r010",
+      "label": "為替予約",
+      "column_index": 0,
+      "expected_raw": "2,292",
+      "expected_status": "observed",
+      "bbox": [
+        373.53582763671875,
+        238.18499755859375,
+        395.9339294433594,
+        247.14398193359375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r010",
+      "label": "為替予約",
+      "column_index": 1,
+      "expected_raw": "2,782",
+      "expected_status": "observed",
+      "bbox": [
+        497.96966552734375,
+        238.18499755859375,
+        520.3677368164062,
+        247.14398193359375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r011",
+      "label": "その他",
+      "column_index": 0,
+      "expected_raw": "1,558",
+      "expected_status": "observed",
+      "bbox": [
+        373.53582763671875,
+        250.1302490234375,
+        395.9339294433594,
+        259.0892333984375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r011",
+      "label": "その他",
+      "column_index": 1,
+      "expected_raw": "1,769",
+      "expected_status": "observed",
+      "bbox": [
+        497.96966552734375,
+        250.1302490234375,
+        520.3677368164062,
+        259.0892333984375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r012",
+      "label": "流動資産合計",
+      "column_index": 0,
+      "expected_raw": "94,222",
+      "expected_status": "observed",
+      "bbox": [
+        369.05621337890625,
+        262.82220458984375,
+        395.9339294433594,
+        271.78118896484375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r012",
+      "label": "流動資産合計",
+      "column_index": 1,
+      "expected_raw": "121,302",
+      "expected_status": "observed",
+      "bbox": [
+        489.01043701171875,
+        262.82220458984375,
+        520.3677368164062,
+        271.78118896484375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r015",
+      "label": "建物及び構築物（純額）",
+      "column_index": 0,
+      "expected_raw": "4,311",
+      "expected_status": "observed",
+      "bbox": [
+        373.53582763671875,
+        299.40478515625,
+        395.9339294433594,
+        308.36376953125
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r015",
+      "label": "建物及び構築物（純額）",
+      "column_index": 1,
+      "expected_raw": "4,617",
+      "expected_status": "observed",
+      "bbox": [
+        497.96966552734375,
+        299.40478515625,
+        520.3677368164062,
+        308.36376953125
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r016",
+      "label": "機械装置及び運搬具（純額）",
+      "column_index": 0,
+      "expected_raw": "2,578",
+      "expected_status": "observed",
+      "bbox": [
+        373.53582763671875,
+        311.35009765625,
+        395.9339294433594,
+        320.30908203125
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r016",
+      "label": "機械装置及び運搬具（純額）",
+      "column_index": 1,
+      "expected_raw": "2,236",
+      "expected_status": "observed",
+      "bbox": [
+        497.96966552734375,
+        311.35009765625,
+        520.3677368164062,
+        320.30908203125
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r017",
+      "label": "土地",
+      "column_index": 0,
+      "expected_raw": "1,829",
+      "expected_status": "observed",
+      "bbox": [
+        373.53582763671875,
+        323.29534912109375,
+        395.9339294433594,
+        332.25433349609375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r017",
+      "label": "土地",
+      "column_index": 1,
+      "expected_raw": "2,269",
+      "expected_status": "observed",
+      "bbox": [
+        497.96966552734375,
+        323.29534912109375,
+        520.3677368164062,
+        332.25433349609375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r018",
+      "label": "建設仮勘定",
+      "column_index": 0,
+      "expected_raw": "491",
+      "expected_status": "observed",
+      "bbox": [
+        382.4950866699219,
+        335.2406921386719,
+        395.9339294433594,
+        344.1996765136719
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r018",
+      "label": "建設仮勘定",
+      "column_index": 1,
+      "expected_raw": "2,945",
+      "expected_status": "observed",
+      "bbox": [
+        497.96966552734375,
+        335.2406921386719,
+        520.3677368164062,
+        344.1996765136719
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r019",
+      "label": "その他（純額）",
+      "column_index": 0,
+      "expected_raw": "2,390",
+      "expected_status": "observed",
+      "bbox": [
+        373.53582763671875,
+        347.18597412109375,
+        395.9339294433594,
+        356.14495849609375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r019",
+      "label": "その他（純額）",
+      "column_index": 1,
+      "expected_raw": "1,996",
+      "expected_status": "observed",
+      "bbox": [
+        497.96966552734375,
+        347.18597412109375,
+        520.3677368164062,
+        356.14495849609375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r020",
+      "label": "有形固定資産合計",
+      "column_index": 0,
+      "expected_raw": "11,602",
+      "expected_status": "observed",
+      "bbox": [
+        369.05621337890625,
+        359.8778991699219,
+        395.9339294433594,
+        368.8368835449219
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r020",
+      "label": "有形固定資産合計",
+      "column_index": 1,
+      "expected_raw": "14,065",
+      "expected_status": "observed",
+      "bbox": [
+        493.49005126953125,
+        359.8778991699219,
+        520.3677368164062,
+        368.8368835449219
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r022",
+      "label": "ソフトウエア",
+      "column_index": 0,
+      "expected_raw": "1,454",
+      "expected_status": "observed",
+      "bbox": [
+        373.53582763671875,
+        384.51513671875,
+        395.9339294433594,
+        393.47412109375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r022",
+      "label": "ソフトウエア",
+      "column_index": 1,
+      "expected_raw": "1,149",
+      "expected_status": "observed",
+      "bbox": [
+        497.96966552734375,
+        384.51513671875,
+        520.3677368164062,
+        393.47412109375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r023",
+      "label": "ソフトウエア仮勘定",
+      "column_index": 0,
+      "expected_raw": "101",
+      "expected_status": "observed",
+      "bbox": [
+        382.4950866699219,
+        396.4604187011719,
+        395.9339294433594,
+        405.4194030761719
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r023",
+      "label": "ソフトウエア仮勘定",
+      "column_index": 1,
+      "expected_raw": "122",
+      "expected_status": "observed",
+      "bbox": [
+        506.92889404296875,
+        396.4604187011719,
+        520.3677368164062,
+        405.4194030761719
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r024",
+      "label": "のれん",
+      "column_index": 0,
+      "expected_raw": "1,277",
+      "expected_status": "observed",
+      "bbox": [
+        373.53582763671875,
+        408.40570068359375,
+        395.9339294433594,
+        417.36468505859375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r024",
+      "label": "のれん",
+      "column_index": 1,
+      "expected_raw": "842",
+      "expected_status": "observed",
+      "bbox": [
+        506.92889404296875,
+        408.40570068359375,
+        520.3677368164062,
+        417.36468505859375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r025",
+      "label": "その他",
+      "column_index": 0,
+      "expected_raw": "530",
+      "expected_status": "observed",
+      "bbox": [
+        382.4950866699219,
+        420.35101318359375,
+        395.9339294433594,
+        429.30999755859375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r025",
+      "label": "その他",
+      "column_index": 1,
+      "expected_raw": "453",
+      "expected_status": "observed",
+      "bbox": [
+        506.92889404296875,
+        420.35101318359375,
+        520.3677368164062,
+        429.30999755859375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r026",
+      "label": "無形固定資産合計",
+      "column_index": 0,
+      "expected_raw": "3,364",
+      "expected_status": "observed",
+      "bbox": [
+        373.53582763671875,
+        433.04290771484375,
+        395.9339294433594,
+        442.00189208984375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r026",
+      "label": "無形固定資産合計",
+      "column_index": 1,
+      "expected_raw": "2,567",
+      "expected_status": "observed",
+      "bbox": [
+        497.96966552734375,
+        433.04290771484375,
+        520.3677368164062,
+        442.00189208984375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r028",
+      "label": "投資有価証券",
+      "column_index": 0,
+      "expected_raw": "2,639",
+      "expected_status": "observed",
+      "bbox": [
+        373.53582763671875,
+        457.6801452636719,
+        395.9339294433594,
+        466.6391296386719
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r028",
+      "label": "投資有価証券",
+      "column_index": 1,
+      "expected_raw": "4,481",
+      "expected_status": "observed",
+      "bbox": [
+        497.96966552734375,
+        457.6801452636719,
+        520.3677368164062,
+        466.6391296386719
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r029",
+      "label": "繰延税金資産",
+      "column_index": 0,
+      "expected_raw": "1,462",
+      "expected_status": "observed",
+      "bbox": [
+        373.53582763671875,
+        469.6254577636719,
+        395.9339294433594,
+        478.5844421386719
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r029",
+      "label": "繰延税金資産",
+      "column_index": 1,
+      "expected_raw": "1,180",
+      "expected_status": "observed",
+      "bbox": [
+        497.96966552734375,
+        469.6254577636719,
+        520.3677368164062,
+        478.5844421386719
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r030",
+      "label": "その他",
+      "column_index": 0,
+      "expected_raw": "1,453",
+      "expected_status": "observed",
+      "bbox": [
+        373.53582763671875,
+        481.57073974609375,
+        395.9339294433594,
+        490.52972412109375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r030",
+      "label": "その他",
+      "column_index": 1,
+      "expected_raw": "1,612",
+      "expected_status": "observed",
+      "bbox": [
+        497.96966552734375,
+        481.57073974609375,
+        520.3677368164062,
+        490.52972412109375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r031",
+      "label": "貸倒引当金",
+      "column_index": 0,
+      "expected_raw": "△4",
+      "expected_status": "observed",
+      "bbox": [
+        382.4950866699219,
+        493.51605224609375,
+        395.9339294433594,
+        502.47503662109375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r031",
+      "label": "貸倒引当金",
+      "column_index": 1,
+      "expected_raw": "△4",
+      "expected_status": "observed",
+      "bbox": [
+        506.92889404296875,
+        493.51605224609375,
+        520.3677368164062,
+        502.47503662109375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r032",
+      "label": "投資その他の資産合計",
+      "column_index": 0,
+      "expected_raw": "5,551",
+      "expected_status": "observed",
+      "bbox": [
+        373.53582763671875,
+        506.2079162597656,
+        395.9339294433594,
+        515.1669311523438
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r032",
+      "label": "投資その他の資産合計",
+      "column_index": 1,
+      "expected_raw": "7,270",
+      "expected_status": "observed",
+      "bbox": [
+        497.96966552734375,
+        506.2079162597656,
+        520.3677368164062,
+        515.1669311523438
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r033",
+      "label": "固定資産合計",
+      "column_index": 0,
+      "expected_raw": "20,518",
+      "expected_status": "observed",
+      "bbox": [
+        369.05621337890625,
+        518.8998413085938,
+        395.9339294433594,
+        527.8588256835938
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r033",
+      "label": "固定資産合計",
+      "column_index": 1,
+      "expected_raw": "23,903",
+      "expected_status": "observed",
+      "bbox": [
+        493.4901428222656,
+        518.8998413085938,
+        520.3677978515625,
+        527.8588256835938
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r034",
+      "label": "資産合計",
+      "column_index": 0,
+      "expected_raw": "114,740",
+      "expected_status": "observed",
+      "bbox": [
+        364.57659912109375,
+        531.591796875,
+        395.9339294433594,
+        540.55078125
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r034",
+      "label": "資産合計",
+      "column_index": 1,
+      "expected_raw": "145,205",
+      "expected_status": "observed",
+      "bbox": [
+        489.01043701171875,
+        531.591796875,
+        520.3677368164062,
+        540.55078125
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    }
+  ],
+  "alignment": [
+    {
+      "table_id": "assets",
+      "row_id": "assets_r001",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r002",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r003",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r004",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r005",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r006",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r007",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r008",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r009",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r010",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r011",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r012",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r013",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r014",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r015",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r016",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r017",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r018",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r019",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r020",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r021",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r022",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r023",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r024",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r025",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r026",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r027",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r028",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r029",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r030",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r031",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r032",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r033",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r034",
+      "predicted_row_index": null,
+      "matched": false
+    }
+  ],
+  "gold_sha256": "f7b903805b408bb025fd82e2e82610d382c04ba0db80b11faee612a1bf6c289d",
+  "prediction_sha256": "727a5f1dfa6082e2df0de90611c3b7610e584ed9b8ad7e333f978b5812127019",
+  "prediction_path": "runs/v2/elecom_p9_scan200/fin1_raster/warm_1/prediction.json",
+  "source": {
+    "document_id": "elecom_p9_scan200",
+    "company": "ELECOM",
+    "source_url": null,
+    "source_page_index": 0,
+    "page": 1,
+    "source_sha256": "25beb3d17a0d0215e5b7352749e4c0a3beb4419284e889f8bc521f3793c80848",
+    "input_sha256": "25beb3d17a0d0215e5b7352749e4c0a3beb4419284e889f8bc521f3793c80848",
+    "input_path": "benchmark/data/raster/elecom_p9_scan200/page.pdf",
+    "gold_path": "benchmark/gold/raster/elecom_p9_scan200.json",
+    "source_kind": "source_derivative",
+    "source_family": "ELECOM",
+    "issuer_relation": "independent_issuer",
+    "split": "holdout",
+    "domain": "financial_statement",
+    "status": "available",
+    "human_audit_status": "ai_draft",
+    "human_checked_cells": 0,
+    "difficulty": "200dpi raster scan of an independent-issuer page",
+    "visual_truth": "visible content retained through 200dpi rasterization; all native text removed; not pixel-identical",
+    "license_note": "Local synthetic derivative; source-family rights apply",
+    "derived_from_document": "elecom_p9"
+  },
+  "measurement": {
+    "mode": "warm_same_process",
+    "iteration": 1,
+    "status": "abstained",
+    "error": null,
+    "device": "cpu",
+    "model_revision": null,
+    "checkpoint_id": null,
+    "model_metadata": {},
+    "stages": {
+      "load_ms": 0.0,
+      "render_ms": 24.27615999476984,
+      "inference_ms": 59.33474499033764,
+      "normalization_ms": 0.02085999585688114,
+      "serialize_ms": 0.28280101832933724
+    },
+    "time_ms": 83.92681300756522,
+    "cold_image_export_included": false,
+    "peak_memory_mb": 133.86328125,
+    "memory_method": "Linux ru_maxrss: process lifetime high-water RSS; warm peaks are cumulative, not deltas",
+    "peak_gpu_allocation_mb": null,
+    "gpu_memory_status": "unmeasured: worker does not import or reset framework GPU allocator"
+  }
+}

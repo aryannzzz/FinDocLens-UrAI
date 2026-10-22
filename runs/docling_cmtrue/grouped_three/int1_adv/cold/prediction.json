@@ -1,0 +1,696 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "grouped_three",
+  "source_sha256": "52aaafa765af6025875c1cba45546a7e0012b3e3b369db62771033a41b92469a",
+  "input_sha256": "52aaafa765af6025875c1cba45546a7e0012b3e3b369db62771033a41b92469a",
+  "backend": "docling_cmtrue",
+  "model_revision": null,
+  "page_bbox": [
+    0.0,
+    0.0,
+    800.0,
+    430.0
+  ],
+  "status": "success",
+  "backend_status": "ok",
+  "issues": [],
+  "tables": [
+    {
+      "table_id": "t0",
+      "page": 1,
+      "bbox": [
+        19.37,
+        39.01,
+        781.58,
+        371.11
+      ],
+      "reading_order": 0,
+      "headers": [
+        {
+          "header_id": "t0_c0",
+          "kind": "leaf",
+          "column_index": 0,
+          "text": "金額",
+          "period": "2025-03-31",
+          "role": "amount",
+          "bbox": [
+            233.0,
+            82.0,
+            251.0,
+            92.8
+          ],
+          "colspan": 1,
+          "rowspan": 1,
+          "native_header_id": "t0h2",
+          "parent_id": "t0_gt0h0"
+        },
+        {
+          "header_id": "t0_c1",
+          "kind": "leaf",
+          "column_index": 1,
+          "text": "構成比",
+          "period": "2025-03-31",
+          "role": "composition_pct",
+          "bbox": [
+            324.67,
+            82.0,
+            351.67,
+            92.8
+          ],
+          "colspan": 1,
+          "rowspan": 1,
+          "native_header_id": "t0h3",
+          "parent_id": "t0_gt0h0"
+        },
+        {
+          "header_id": "t0_c2",
+          "kind": "leaf",
+          "column_index": 2,
+          "text": "増減",
+          "period": "2025-03-31",
+          "role": "change_amount",
+          "bbox": [
+            416.33,
+            82.0,
+            434.33,
+            92.8
+          ],
+          "colspan": 1,
+          "rowspan": 1,
+          "native_header_id": "t0h4",
+          "parent_id": "t0_gt0h0"
+        },
+        {
+          "header_id": "t0_c3",
+          "kind": "leaf",
+          "column_index": 3,
+          "text": "金額",
+          "period": "2026-03-31",
+          "role": "amount",
+          "bbox": [
+            508.0,
+            82.0,
+            526.0,
+            92.8
+          ],
+          "colspan": 1,
+          "rowspan": 1,
+          "native_header_id": "t0h5",
+          "parent_id": "t0_gt0h1"
+        },
+        {
+          "header_id": "t0_c4",
+          "kind": "leaf",
+          "column_index": 4,
+          "text": "構成比",
+          "period": "2026-03-31",
+          "role": "composition_pct",
+          "bbox": [
+            599.67,
+            82.0,
+            626.67,
+            92.8
+          ],
+          "colspan": 1,
+          "rowspan": 1,
+          "native_header_id": "t0h6",
+          "parent_id": "t0_gt0h1"
+        },
+        {
+          "header_id": "t0_c5",
+          "kind": "leaf",
+          "column_index": 5,
+          "text": "増減",
+          "period": "2026-03-31",
+          "role": "change_amount",
+          "bbox": [
+            691.33,
+            82.0,
+            709.33,
+            92.8
+          ],
+          "colspan": 1,
+          "rowspan": 1,
+          "native_header_id": "t0h7",
+          "parent_id": "t0_gt0h1"
+        },
+        {
+          "header_id": "t0_gt0h0",
+          "kind": "group",
+          "column_index": 0,
+          "text": "2025年3月期",
+          "period": "2025-03-31",
+          "role": null,
+          "bbox": [
+            234.0,
+            55.0,
+            314.0,
+            67.0
+          ],
+          "colspan": 3,
+          "rowspan": 1,
+          "native_header_id": "t0h0"
+        },
+        {
+          "header_id": "t0_gt0h1",
+          "kind": "group",
+          "column_index": 3,
+          "text": "2026年3月期",
+          "period": "2026-03-31",
+          "role": null,
+          "bbox": [
+            509.0,
+            55.0,
+            589.0,
+            67.0
+          ],
+          "colspan": 3,
+          "rowspan": 1,
+          "native_header_id": "t0h1"
+        }
+      ],
+      "rows": [
+        {
+          "row_id": "t0_r0",
+          "row_index": 0,
+          "label": "現金及び預金",
+          "raw_label": "現金及び預金",
+          "parent_path": [],
+          "bbox": null,
+          "bbox_status": "backend supplies no row geometry",
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "t0_c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "1,234",
+              "value": 1234,
+              "status": "observed",
+              "bbox": [
+                233.0,
+                126.0,
+                278.0,
+                136.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 1,
+              "header_id": "t0_c1",
+              "period": "2025-03-31",
+              "role": "composition_pct",
+              "raw": "+2.5",
+              "value": 2.5,
+              "status": "observed",
+              "bbox": [
+                324.67,
+                126.0,
+                360.67,
+                136.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 2,
+              "header_id": "t0_c2",
+              "period": "2025-03-31",
+              "role": "change_amount",
+              "raw": "△0",
+              "value": 0,
+              "status": "negative_zero",
+              "bbox": [
+                416.33,
+                126.0,
+                434.33,
+                136.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 3,
+              "header_id": "t0_c3",
+              "period": "2026-03-31",
+              "role": "amount",
+              "raw": "1,234",
+              "value": 1234,
+              "status": "observed",
+              "bbox": [
+                508.0,
+                126.0,
+                553.0,
+                136.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 4,
+              "header_id": "t0_c4",
+              "period": "2026-03-31",
+              "role": "composition_pct",
+              "raw": "+2.5",
+              "value": 2.5,
+              "status": "observed",
+              "bbox": [
+                599.67,
+                126.0,
+                635.67,
+                136.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 5,
+              "header_id": "t0_c5",
+              "period": "2026-03-31",
+              "role": "change_amount",
+              "raw": "△0",
+              "value": 0,
+              "status": "negative_zero",
+              "bbox": [
+                691.33,
+                126.0,
+                709.33,
+                136.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            }
+          ]
+        },
+        {
+          "row_id": "t0_r1",
+          "row_index": 1,
+          "label": "貸倒引当金",
+          "raw_label": "貸倒引当金",
+          "parent_path": [],
+          "bbox": null,
+          "bbox_status": "backend supplies no row geometry",
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "t0_c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "△0",
+              "value": 0,
+              "status": "negative_zero",
+              "bbox": [
+                233.0,
+                191.0,
+                251.0,
+                201.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 1,
+              "header_id": "t0_c1",
+              "period": "2025-03-31",
+              "role": "composition_pct",
+              "raw": "-",
+              "value": null,
+              "status": "not_reported",
+              "bbox": [
+                324.67,
+                191.0,
+                333.67,
+                201.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 2,
+              "header_id": "t0_c2",
+              "period": "2025-03-31",
+              "role": "change_amount",
+              "raw": "+0.5",
+              "value": 0.5,
+              "status": "observed",
+              "bbox": [
+                416.33,
+                191.0,
+                452.33,
+                201.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 3,
+              "header_id": "t0_c3",
+              "period": "2026-03-31",
+              "role": "amount",
+              "raw": "△0",
+              "value": 0,
+              "status": "negative_zero",
+              "bbox": [
+                508.0,
+                191.0,
+                526.0,
+                201.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 4,
+              "header_id": "t0_c4",
+              "period": "2026-03-31",
+              "role": "composition_pct",
+              "raw": "-",
+              "value": null,
+              "status": "not_reported",
+              "bbox": [
+                599.67,
+                191.0,
+                608.67,
+                201.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 5,
+              "header_id": "t0_c5",
+              "period": "2026-03-31",
+              "role": "change_amount",
+              "raw": "+0.5",
+              "value": 0.5,
+              "status": "observed",
+              "bbox": [
+                691.33,
+                191.0,
+                727.33,
+                201.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            }
+          ]
+        },
+        {
+          "row_id": "t0_r2",
+          "row_index": 2,
+          "label": "その他",
+          "raw_label": "その他",
+          "parent_path": [],
+          "bbox": null,
+          "bbox_status": "backend supplies no row geometry",
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "t0_c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "-",
+              "value": null,
+              "status": "not_reported",
+              "bbox": [
+                233.0,
+                256.0,
+                242.0,
+                266.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 1,
+              "header_id": "t0_c1",
+              "period": "2025-03-31",
+              "role": "composition_pct",
+              "raw": "10.25",
+              "value": 10.25,
+              "status": "observed",
+              "bbox": [
+                324.67,
+                256.0,
+                369.67,
+                266.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 2,
+              "header_id": "t0_c2",
+              "period": "2025-03-31",
+              "role": "change_amount",
+              "raw": "△2.5",
+              "value": -2.5,
+              "status": "observed",
+              "bbox": [
+                416.33,
+                256.0,
+                452.33,
+                266.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 3,
+              "header_id": "t0_c3",
+              "period": "2026-03-31",
+              "role": "amount",
+              "raw": "-",
+              "value": null,
+              "status": "not_reported",
+              "bbox": [
+                508.0,
+                256.0,
+                517.0,
+                266.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 4,
+              "header_id": "t0_c4",
+              "period": "2026-03-31",
+              "role": "composition_pct",
+              "raw": "10.25",
+              "value": 10.25,
+              "status": "observed",
+              "bbox": [
+                599.67,
+                256.0,
+                644.67,
+                266.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 5,
+              "header_id": "t0_c5",
+              "period": "2026-03-31",
+              "role": "change_amount",
+              "raw": "△2.5",
+              "value": -2.5,
+              "status": "observed",
+              "bbox": [
+                691.33,
+                256.0,
+                727.33,
+                266.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            }
+          ]
+        },
+        {
+          "row_id": "t0_r3",
+          "row_index": 3,
+          "label": "資産合計",
+          "raw_label": "資産合計",
+          "parent_path": [],
+          "bbox": null,
+          "bbox_status": "backend supplies no row geometry",
+          "type": "total",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "t0_c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "+1,234",
+              "value": 1234,
+              "status": "observed",
+              "bbox": [
+                233.0,
+                321.0,
+                287.0,
+                331.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 1,
+              "header_id": "t0_c1",
+              "period": "2025-03-31",
+              "role": "composition_pct",
+              "raw": "100.0",
+              "value": 100.0,
+              "status": "observed",
+              "bbox": [
+                324.67,
+                321.0,
+                369.67,
+                331.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 2,
+              "header_id": "t0_c2",
+              "period": "2025-03-31",
+              "role": "change_amount",
+              "raw": "+0",
+              "value": 0,
+              "status": "observed",
+              "bbox": [
+                416.33,
+                321.0,
+                434.33,
+                331.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 3,
+              "header_id": "t0_c3",
+              "period": "2026-03-31",
+              "role": "amount",
+              "raw": "+1,234",
+              "value": 1234,
+              "status": "observed",
+              "bbox": [
+                508.0,
+                321.0,
+                562.0,
+                331.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 4,
+              "header_id": "t0_c4",
+              "period": "2026-03-31",
+              "role": "composition_pct",
+              "raw": "100.0",
+              "value": 100.0,
+              "status": "observed",
+              "bbox": [
+                599.67,
+                321.0,
+                644.67,
+                331.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            },
+            {
+              "column_index": 5,
+              "header_id": "t0_c5",
+              "period": "2026-03-31",
+              "role": "change_amount",
+              "raw": "+0",
+              "value": 0,
+              "status": "observed",
+              "bbox": [
+                691.33,
+                321.0,
+                709.33,
+                331.8
+              ],
+              "backend": "docling",
+              "evidence_kind": "native_pdf"
+            }
+          ]
+        }
+      ],
+      "issues": [],
+      "unit": null,
+      "capability_status": {
+        "cell_bbox": true,
+        "headers": "tableformer column_header flags",
+        "raw_grid": "6x7"
+      },
+      "native_grid_cells": 36
+    }
+  ],
+  "capabilities": {
+    "cell_bbox": true,
+    "headers": "tableformer column_header flags",
+    "multi_table": true,
+    "ocr": false,
+    "n_columns": "any",
+    "cell_matching": true
+  },
+  "provenance": {
+    "adapter": "adapters.canonical.convert",
+    "native_schema": "findoclens-0.1",
+    "native_backend": "docling",
+    "native_prediction_sha256": "21c9503a53ca2e1436787d215d11ef8f253136c01efeda3d51f5eb0883d2d107",
+    "native_options": {
+      "cell_matching": true
+    },
+    "raw_artifacts": {
+      "docling_document.json": {
+        "path": "raw/cold/docling_document.json",
+        "sha256": "a1ffe1f49928fbdc4e479701fbb66030a71528e1198d6397777a09aa23dafc79"
+      },
+      "docling_tables.md": {
+        "path": "raw/cold/docling_tables.md",
+        "sha256": "2fe895a4a52761050a05bc74278b18b5cf9d2db46b3790f4b8ffd0d5d1513c86"
+      },
+      "native_findoclens_prediction.json": {
+        "path": "raw/cold/native_findoclens_prediction.json",
+        "sha256": "67b5c44ac88de02c9034b949b69ac163a55763a87208ddd67a61984a3f69ea11"
+      }
+    },
+    "lazy_load_on_first_call": true,
+    "backend_meta": {
+      "device": "cpu",
+      "converter_load_ms": 2886.4,
+      "convert_ms": 5253.8,
+      "versions": {
+        "docling": "2.141.0",
+        "docling-core": "2.103.1",
+        "docling-ibm-models": "4.0.4",
+        "docling-parse": "7.22.4",
+        "torch": "2.14.1+cpu",
+        "rapidocr": "3.10.0"
+      },
+      "table_structure_mode": "accurate",
+      "do_cell_matching": true,
+      "ocr_engine": null,
+      "docling_status": "ConversionStatus.SUCCESS",
+      "raw_artifacts": [
+        "docling_document.json",
+        "docling_tables.md"
+      ],
+      "elapsed_ms": 8155.6
+    },
+    "native_status": "ok",
+    "trial": "cold"
+  }
+}

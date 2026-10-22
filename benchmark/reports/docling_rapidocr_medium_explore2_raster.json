@@ -1,0 +1,434 @@
+{
+  "run_id": "explore2_raster",
+  "git_commit": "ccbcf45f2b6ea4485ae3e27c00d1c915dfb043c2",
+  "backend": "docling_rapidocr_medium",
+  "documents": [
+    {
+      "run_id": "explore2_raster",
+      "timestamp": "2026-10-22T12:30:21.593805+00:00",
+      "git_commit": "ccbcf45f2b6ea4485ae3e27c00d1c915dfb043c2",
+      "worktree_dirty": true,
+      "code_sha256": {
+        "benchmark/__init__.py": "fa453c993a1ebd7c31cb5233ef10dfa38624305fa4d6a4346cd0bff87cd33010",
+        "benchmark/adversarial.py": "016444e7d72119013cf86632d5e2c85d8d73923de672482c77c3a0b90d6afa9a",
+        "benchmark/annotate.py": "dbe9d88caed95f26542ecd86229ee17d4830e1490e6330707e1477c7574b260c",
+        "benchmark/check.py": "732094ba955c293ce51f21cd74352f38123c15cff3264fb9a58a99719ff453ae",
+        "benchmark/common.py": "2b469cd6cafa5012f14b357d0a8d37dfa6ed444f8817bcd819def19e7a84eeb3",
+        "benchmark/compat.py": "97b7298b517ad23169ffe8a3c860b3f2f2188c6bde644092a17dbb1e0dbf32f4",
+        "benchmark/dataset.py": "d423f2066956ebf11942a893ed4aa44c597daf6c765e89dc7fe9b47b31132f44",
+        "benchmark/evaluate.py": "636a8998d61f8ebd23922e93c3105123167b6d0794c1cf8078f1d1b7731b3125",
+        "benchmark/raster_variants.py": "8292ec0397215bf973bc47a8eba3afd4856fbdd21f086c32eee1efc36216ba75",
+        "benchmark/report.py": "dc26db5807189ba5a2277d5a2cdbac9eef08e5f883ec170faedb4994f8d57118",
+        "benchmark/review.py": "109e7e072988efa73042cbc7caf59f68fa09895ddacd3a42e105421afd69ef3f",
+        "benchmark/run.py": "926d63af323140e792e940adbf81068d5409a4cd6fa73884b82c0cd401b35a10",
+        "benchmark/validate.py": "7adfac5a56fde740cb44b4c23d688100684df0009bbe63dc2e7b195cc493e65d",
+        "benchmark/worker.py": "bc0aa0d4a775ceb4f6c077a7592fef63ae12666f29de2047c022a47046c6311e"
+      },
+      "source": {
+        "document_id": "elecom_p9_scan200",
+        "company": "ELECOM",
+        "source_url": null,
+        "source_page_index": 0,
+        "page": 1,
+        "source_sha256": "25beb3d17a0d0215e5b7352749e4c0a3beb4419284e889f8bc521f3793c80848",
+        "input_sha256": "25beb3d17a0d0215e5b7352749e4c0a3beb4419284e889f8bc521f3793c80848",
+        "input_path": "benchmark/data/raster/elecom_p9_scan200/page.pdf",
+        "gold_path": "benchmark/gold/raster/elecom_p9_scan200.json",
+        "source_kind": "source_derivative",
+        "source_family": "ELECOM",
+        "issuer_relation": "independent_issuer",
+        "split": "holdout",
+        "domain": "financial_statement",
+        "status": "available",
+        "human_audit_status": "ai_draft",
+        "human_checked_cells": 0,
+        "difficulty": "200dpi raster scan of an independent-issuer page",
+        "visual_truth": "visible content retained through 200dpi rasterization; all native text removed; not pixel-identical",
+        "license_note": "Local synthetic derivative; source-family rights apply",
+        "derived_from_document": "elecom_p9"
+      },
+      "backend": "docling_rapidocr_medium",
+      "backend_version": "external_callable",
+      "model_revision": null,
+      "checkpoint_id": null,
+      "environment": {
+        "platform": "Linux-7.0.11-76070011-generic-x86_64-with-glibc2.35",
+        "python": "3.12.13 (main, Mar 24 2026, 22:49:22) [Clang 22.1.1 ]",
+        "python_executable": "/home/aryannzzz/ur_ai_RnD_agent_starter/.venv-docling/bin/python",
+        "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+        "logical_cpus": 12,
+        "packages": {
+          "PyMuPDF": "1.28.2",
+          "pdfplumber": "0.11.10",
+          "numpy": "2.5.4",
+          "Pillow": "12.3.0",
+          "torch": "2.14.1+cpu",
+          "docling": "2.141.0",
+          "transformers": "5.20.2"
+        },
+        "ram_mb": 15676.2890625,
+        "gpu_probe": {
+          "command": [
+            "nvidia-smi",
+            "--query-gpu=name,uuid,driver_version,memory.total",
+            "--format=csv,noheader"
+          ],
+          "returncode": 9,
+          "stdout": "NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.\n\n",
+          "stderr": ""
+        }
+      },
+      "warm_requested": 1,
+      "backend_source_sha256": null,
+      "model_kind": "specified_by_external_backend",
+      "timeout_seconds": 3000.0,
+      "human_audit_status": "ai_draft",
+      "command": [
+        "/home/aryannzzz/ur_ai_RnD_agent_starter/.venv-docling/bin/python",
+        "-m",
+        "benchmark.worker",
+        "--input",
+        "/home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/data/raster/elecom_p9_scan200/page.pdf",
+        "--document-id",
+        "elecom_p9_scan200",
+        "--source-sha256",
+        "25beb3d17a0d0215e5b7352749e4c0a3beb4419284e889f8bc521f3793c80848",
+        "--source-page-index",
+        "0",
+        "--out",
+        "/home/aryannzzz/ur_ai_RnD_agent_starter/runs/docling_rapidocr_medium/elecom_p9_scan200/explore2_raster",
+        "--warm",
+        "1",
+        "--entrypoint",
+        "adapters.docling_rapidocr_medium:extract"
+      ],
+      "returncode": 0,
+      "worker_status": "completed",
+      "process_wall_ms": 123.95558899152093,
+      "measurements": [
+        {
+          "mode": "cold_process",
+          "iteration": 0,
+          "status": "error",
+          "error": "Traceback (most recent call last):\n  File \"/home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/worker.py\", line 58, in main\n    raise RuntimeError(load_error)\nRuntimeError: Traceback (most recent call last):\n  File \"/home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/worker.py\", line 34, in main\n    module = importlib.import_module(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/aryannzzz/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 995, in exec_module\n  File \"<frozen importlib._bootstrap_external>\", line 1133, in get_code\n  File \"<frozen importlib._bootstrap_external>\", line 1063, in source_to_code\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/home/aryannzzz/ur_ai_RnD_agent_starter/adapters/docling_rapidocr_medium.py\", line 5\n    ocr=\"RapidOCR lang=iso:ja, PP-OCRv6 medium det/rec onnx (force_full_page_ocr)\")\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: keyword argument repeated: ocr\n\n",
+          "device": "unspecified",
+          "model_revision": null,
+          "checkpoint_id": null,
+          "model_metadata": {},
+          "stages": {
+            "load_ms": 64.76339799701236
+          },
+          "time_ms": 65.06877698120661,
+          "cold_image_export_included": true,
+          "peak_memory_mb": 51.58984375,
+          "memory_method": "Linux ru_maxrss: process lifetime high-water RSS; warm peaks are cumulative, not deltas",
+          "peak_gpu_allocation_mb": null,
+          "gpu_memory_status": "unmeasured: worker does not import or reset framework GPU allocator"
+        },
+        {
+          "mode": "warm_same_process",
+          "iteration": 1,
+          "status": "error",
+          "error": "Traceback (most recent call last):\n  File \"/home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/worker.py\", line 58, in main\n    raise RuntimeError(load_error)\nRuntimeError: Traceback (most recent call last):\n  File \"/home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/worker.py\", line 34, in main\n    module = importlib.import_module(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/aryannzzz/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 995, in exec_module\n  File \"<frozen importlib._bootstrap_external>\", line 1133, in get_code\n  File \"<frozen importlib._bootstrap_external>\", line 1063, in source_to_code\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/home/aryannzzz/ur_ai_RnD_agent_starter/adapters/docling_rapidocr_medium.py\", line 5\n    ocr=\"RapidOCR lang=iso:ja, PP-OCRv6 medium det/rec onnx (force_full_page_ocr)\")\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: keyword argument repeated: ocr\n\n",
+          "device": "unspecified",
+          "model_revision": null,
+          "checkpoint_id": null,
+          "model_metadata": {},
+          "stages": {
+            "load_ms": 0.0
+          },
+          "time_ms": 0.20260500605218112,
+          "cold_image_export_included": false,
+          "peak_memory_mb": 51.58984375,
+          "memory_method": "Linux ru_maxrss: process lifetime high-water RSS; warm peaks are cumulative, not deltas",
+          "peak_gpu_allocation_mb": null,
+          "gpu_memory_status": "unmeasured: worker does not import or reset framework GPU allocator"
+        }
+      ],
+      "status": "error",
+      "cold_time_ms": 65.06877698120661,
+      "warm_median_ms": null,
+      "warm_completed": 0,
+      "metrics_path": "runs/docling_rapidocr_medium/elecom_p9_scan200/explore2_raster/cold/metrics.json",
+      "reference_status": "ai_draft",
+      "timing_scope": "200dpi evidence render (cold also saves PNG) + backend load/inference + evaluation projection + JSON serialization. Acquisition and scoring excluded; process_wall_ms also includes interpreter startup.",
+      "warm_definition": "same interpreter and loaded backend; PDF reopened/rendered each repetition"
+    },
+    {
+      "run_id": "explore2_raster",
+      "timestamp": "2026-10-22T12:30:21.736374+00:00",
+      "git_commit": "ccbcf45f2b6ea4485ae3e27c00d1c915dfb043c2",
+      "worktree_dirty": true,
+      "code_sha256": {
+        "benchmark/__init__.py": "fa453c993a1ebd7c31cb5233ef10dfa38624305fa4d6a4346cd0bff87cd33010",
+        "benchmark/adversarial.py": "016444e7d72119013cf86632d5e2c85d8d73923de672482c77c3a0b90d6afa9a",
+        "benchmark/annotate.py": "dbe9d88caed95f26542ecd86229ee17d4830e1490e6330707e1477c7574b260c",
+        "benchmark/check.py": "732094ba955c293ce51f21cd74352f38123c15cff3264fb9a58a99719ff453ae",
+        "benchmark/common.py": "2b469cd6cafa5012f14b357d0a8d37dfa6ed444f8817bcd819def19e7a84eeb3",
+        "benchmark/compat.py": "97b7298b517ad23169ffe8a3c860b3f2f2188c6bde644092a17dbb1e0dbf32f4",
+        "benchmark/dataset.py": "d423f2066956ebf11942a893ed4aa44c597daf6c765e89dc7fe9b47b31132f44",
+        "benchmark/evaluate.py": "636a8998d61f8ebd23922e93c3105123167b6d0794c1cf8078f1d1b7731b3125",
+        "benchmark/raster_variants.py": "8292ec0397215bf973bc47a8eba3afd4856fbdd21f086c32eee1efc36216ba75",
+        "benchmark/report.py": "dc26db5807189ba5a2277d5a2cdbac9eef08e5f883ec170faedb4994f8d57118",
+        "benchmark/review.py": "109e7e072988efa73042cbc7caf59f68fa09895ddacd3a42e105421afd69ef3f",
+        "benchmark/run.py": "926d63af323140e792e940adbf81068d5409a4cd6fa73884b82c0cd401b35a10",
+        "benchmark/validate.py": "7adfac5a56fde740cb44b4c23d688100684df0009bbe63dc2e7b195cc493e65d",
+        "benchmark/worker.py": "bc0aa0d4a775ceb4f6c077a7592fef63ae12666f29de2047c022a47046c6311e"
+      },
+      "source": {
+        "document_id": "daiwabo_p10_scan200",
+        "company": "Daiwabo Holdings",
+        "source_url": null,
+        "source_page_index": 0,
+        "page": 1,
+        "source_sha256": "87bacae538ff048d3fba1361a3cd84cb7f2c55318c577fee20ad7553850132cd",
+        "input_sha256": "87bacae538ff048d3fba1361a3cd84cb7f2c55318c577fee20ad7553850132cd",
+        "input_path": "benchmark/data/raster/daiwabo_p10_scan200/page.pdf",
+        "gold_path": "benchmark/gold/raster/daiwabo_p10_scan200.json",
+        "source_kind": "source_derivative",
+        "source_family": "Daiwabo Holdings",
+        "issuer_relation": "independent_issuer",
+        "split": "holdout",
+        "domain": "financial_slide",
+        "status": "available",
+        "human_audit_status": "ai_draft",
+        "human_checked_cells": 0,
+        "difficulty": "200dpi raster scan of an independent-issuer page",
+        "visual_truth": "visible content retained through 200dpi rasterization; all native text removed; not pixel-identical",
+        "license_note": "Local synthetic derivative; source-family rights apply",
+        "derived_from_document": "daiwabo_p10"
+      },
+      "backend": "docling_rapidocr_medium",
+      "backend_version": "external_callable",
+      "model_revision": null,
+      "checkpoint_id": null,
+      "environment": {
+        "platform": "Linux-7.0.11-76070011-generic-x86_64-with-glibc2.35",
+        "python": "3.12.13 (main, Mar 24 2026, 22:49:22) [Clang 22.1.1 ]",
+        "python_executable": "/home/aryannzzz/ur_ai_RnD_agent_starter/.venv-docling/bin/python",
+        "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+        "logical_cpus": 12,
+        "packages": {
+          "PyMuPDF": "1.28.2",
+          "pdfplumber": "0.11.10",
+          "numpy": "2.5.4",
+          "Pillow": "12.3.0",
+          "torch": "2.14.1+cpu",
+          "docling": "2.141.0",
+          "transformers": "5.20.2"
+        },
+        "ram_mb": 15676.2890625,
+        "gpu_probe": {
+          "command": [
+            "nvidia-smi",
+            "--query-gpu=name,uuid,driver_version,memory.total",
+            "--format=csv,noheader"
+          ],
+          "returncode": 9,
+          "stdout": "NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.\n\n",
+          "stderr": ""
+        }
+      },
+      "warm_requested": 1,
+      "backend_source_sha256": null,
+      "model_kind": "specified_by_external_backend",
+      "timeout_seconds": 3000.0,
+      "human_audit_status": "ai_draft",
+      "command": [
+        "/home/aryannzzz/ur_ai_RnD_agent_starter/.venv-docling/bin/python",
+        "-m",
+        "benchmark.worker",
+        "--input",
+        "/home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/data/raster/daiwabo_p10_scan200/page.pdf",
+        "--document-id",
+        "daiwabo_p10_scan200",
+        "--source-sha256",
+        "87bacae538ff048d3fba1361a3cd84cb7f2c55318c577fee20ad7553850132cd",
+        "--source-page-index",
+        "0",
+        "--out",
+        "/home/aryannzzz/ur_ai_RnD_agent_starter/runs/docling_rapidocr_medium/daiwabo_p10_scan200/explore2_raster",
+        "--warm",
+        "1",
+        "--entrypoint",
+        "adapters.docling_rapidocr_medium:extract"
+      ],
+      "returncode": 0,
+      "worker_status": "completed",
+      "process_wall_ms": 123.06651199469343,
+      "measurements": [
+        {
+          "mode": "cold_process",
+          "iteration": 0,
+          "status": "error",
+          "error": "Traceback (most recent call last):\n  File \"/home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/worker.py\", line 58, in main\n    raise RuntimeError(load_error)\nRuntimeError: Traceback (most recent call last):\n  File \"/home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/worker.py\", line 34, in main\n    module = importlib.import_module(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/aryannzzz/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 995, in exec_module\n  File \"<frozen importlib._bootstrap_external>\", line 1133, in get_code\n  File \"<frozen importlib._bootstrap_external>\", line 1063, in source_to_code\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/home/aryannzzz/ur_ai_RnD_agent_starter/adapters/docling_rapidocr_medium.py\", line 5\n    ocr=\"RapidOCR lang=iso:ja, PP-OCRv6 medium det/rec onnx (force_full_page_ocr)\")\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: keyword argument repeated: ocr\n\n",
+          "device": "unspecified",
+          "model_revision": null,
+          "checkpoint_id": null,
+          "model_metadata": {},
+          "stages": {
+            "load_ms": 63.67384298937395
+          },
+          "time_ms": 64.01150897727348,
+          "cold_image_export_included": true,
+          "peak_memory_mb": 51.7578125,
+          "memory_method": "Linux ru_maxrss: process lifetime high-water RSS; warm peaks are cumulative, not deltas",
+          "peak_gpu_allocation_mb": null,
+          "gpu_memory_status": "unmeasured: worker does not import or reset framework GPU allocator"
+        },
+        {
+          "mode": "warm_same_process",
+          "iteration": 1,
+          "status": "error",
+          "error": "Traceback (most recent call last):\n  File \"/home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/worker.py\", line 58, in main\n    raise RuntimeError(load_error)\nRuntimeError: Traceback (most recent call last):\n  File \"/home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/worker.py\", line 34, in main\n    module = importlib.import_module(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/aryannzzz/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 995, in exec_module\n  File \"<frozen importlib._bootstrap_external>\", line 1133, in get_code\n  File \"<frozen importlib._bootstrap_external>\", line 1063, in source_to_code\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/home/aryannzzz/ur_ai_RnD_agent_starter/adapters/docling_rapidocr_medium.py\", line 5\n    ocr=\"RapidOCR lang=iso:ja, PP-OCRv6 medium det/rec onnx (force_full_page_ocr)\")\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: keyword argument repeated: ocr\n\n",
+          "device": "unspecified",
+          "model_revision": null,
+          "checkpoint_id": null,
+          "model_metadata": {},
+          "stages": {
+            "load_ms": 0.0
+          },
+          "time_ms": 0.21396399824880064,
+          "cold_image_export_included": false,
+          "peak_memory_mb": 51.7578125,
+          "memory_method": "Linux ru_maxrss: process lifetime high-water RSS; warm peaks are cumulative, not deltas",
+          "peak_gpu_allocation_mb": null,
+          "gpu_memory_status": "unmeasured: worker does not import or reset framework GPU allocator"
+        }
+      ],
+      "status": "error",
+      "cold_time_ms": 64.01150897727348,
+      "warm_median_ms": null,
+      "warm_completed": 0,
+      "metrics_path": "runs/docling_rapidocr_medium/daiwabo_p10_scan200/explore2_raster/cold/metrics.json",
+      "reference_status": "ai_draft",
+      "timing_scope": "200dpi evidence render (cold also saves PNG) + backend load/inference + evaluation projection + JSON serialization. Acquisition and scoring excluded; process_wall_ms also includes interpreter startup.",
+      "warm_definition": "same interpreter and loaded backend; PDF reopened/rendered each repetition"
+    }
+  ],
+  "cohorts": {
+    "holdout/independent_issuer/source_derivative/ai_draft": {
+      "documents": 2,
+      "run_statuses": {
+        "error": 2
+      },
+      "reference_statuses": {
+        "ai_draft": 2
+      },
+      "raw_cell_exact": {
+        "correct": 0,
+        "total": 123,
+        "rate": 0.0
+      },
+      "semantic_cell_exact": {
+        "correct": 0,
+        "total": 123,
+        "rate": 0.0
+      },
+      "numeric_raw_exact": {
+        "correct": 0,
+        "total": 119,
+        "rate": 0.0
+      },
+      "numeric_semantic_exact": {
+        "correct": 0,
+        "total": 119,
+        "rate": 0.0
+      },
+      "cell_coverage": {
+        "correct": 0,
+        "total": 123,
+        "rate": 0.0
+      },
+      "header_role_accuracy": {
+        "correct": 0,
+        "total": 12,
+        "rate": 0.0
+      },
+      "header_parent_accuracy": {
+        "correct": 0,
+        "total": 0,
+        "rate": null
+      },
+      "raw_label_exact": {
+        "correct": 0,
+        "total": 55,
+        "rate": 0.0
+      },
+      "row_order_accuracy": {
+        "correct": 0,
+        "total": 55,
+        "rate": 0.0
+      },
+      "silent_omission_rate": {
+        "correct": 0,
+        "total": 123,
+        "rate": 0.0
+      },
+      "missing_cells": {
+        "correct": 123,
+        "total": 123,
+        "rate": 1.0
+      },
+      "correct_abstention": {
+        "correct": 0,
+        "total": 0,
+        "rate": null
+      },
+      "abstention_rate": {
+        "correct": 0,
+        "total": 0,
+        "rate": null
+      },
+      "raw_precision_all_predicted": {
+        "correct": 0,
+        "total": 0,
+        "rate": null
+      },
+      "extraneous_row_rate": {
+        "correct": 0,
+        "total": 0,
+        "rate": null
+      },
+      "tables": {
+        "matched": 0,
+        "gold": 4,
+        "predicted": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "rows": {
+        "matched": 0,
+        "gold": 55,
+        "predicted": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "hierarchy_edges": {
+        "matched": 0,
+        "gold": 40,
+        "predicted": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "grouped_headers": {
+        "matched": 0,
+        "gold": 0,
+        "predicted": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "false_assurance_rate": {
+        "correct": 0,
+        "total": 2,
+        "rate": 0.0
+      }
+    }
+  },
+  "unavailable": [],
+  "note": "AI-drafted references are provisional. Failure/abstention outcomes remain in scored gold denominators; unavailable and unannotated inputs listed explicitly."
+}

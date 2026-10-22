@@ -1,0 +1,470 @@
+{
+  "document_id": "tiny_cjk",
+  "evaluated_at": "2026-10-22T13:13:01.009051+00:00",
+  "reference_status": "ai_draft",
+  "human_checked_cells": 0,
+  "scope": {
+    "tables_complete": true,
+    "rows_complete": true,
+    "cells_complete": true,
+    "note": "Selected page only. Completeness and hierarchy are AI draft assertions pending human verification."
+  },
+  "run_status": "partial",
+  "whitespace_policy": "remove Unicode whitespace only; preserve glyphs, signs, punctuation and decimals",
+  "matching_policy": "One-to-one evaluation with fixed gold denominators and explicit failures.\n\nOnly whitespace is removed for label/raw matching. Raw tokens are never rewritten.\nTable matching uses page + bbox IoU >= .1 (maximum weight assignment). Rows\nrequire equal whitespace-normalized labels; geometry/context/order break ties.\nFinancial cells align by physical column_index, never by predicted value or role.\n",
+  "metrics": {
+    "tables": {
+      "matched": 1,
+      "gold": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "extra_tables": 0,
+    "unlocalizable_predicted_tables": 0,
+    "rows": {
+      "matched": 43,
+      "gold": 43,
+      "predicted": 43,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "missed_rows": 0,
+    "spurious_rows": 0,
+    "raw_label_exact": {
+      "correct": 43,
+      "total": 43,
+      "rate": 1.0
+    },
+    "extraneous_row_rate": {
+      "correct": 0,
+      "total": 43,
+      "rate": 0.0
+    },
+    "row_order_accuracy": {
+      "correct": 43,
+      "total": 43,
+      "rate": 1.0
+    },
+    "cell_coverage": {
+      "correct": 74,
+      "total": 74,
+      "rate": 1.0
+    },
+    "raw_cell_exact": {
+      "correct": 74,
+      "total": 74,
+      "rate": 1.0
+    },
+    "raw_precision_on_matched": {
+      "correct": 74,
+      "total": 74,
+      "rate": 1.0
+    },
+    "raw_precision_all_predicted": {
+      "correct": 74,
+      "total": 74,
+      "rate": 1.0
+    },
+    "semantic_cell_exact": {
+      "correct": 74,
+      "total": 74,
+      "rate": 1.0
+    },
+    "numeric_raw_exact": {
+      "correct": 74,
+      "total": 74,
+      "rate": 1.0
+    },
+    "numeric_semantic_exact": {
+      "correct": 74,
+      "total": 74,
+      "rate": 1.0
+    },
+    "header_role_accuracy": {
+      "correct": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    "header_role_precision": {
+      "correct": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    "grouped_headers": {
+      "matched": 0,
+      "gold": 0,
+      "predicted": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "header_parent_accuracy": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "hierarchy_edges": {
+      "matched": 0,
+      "gold": 42,
+      "predicted": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "abstention_rate": {
+      "correct": 0,
+      "total": 74,
+      "rate": 0.0
+    },
+    "correct_abstention": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "missing_cells": {
+      "correct": 0,
+      "total": 74,
+      "rate": 0.0
+    },
+    "silent_omission_rate": {
+      "correct": 0,
+      "total": 74,
+      "rate": 0.0
+    },
+    "invalid_matched_cells": 0,
+    "false_assurance": false,
+    "warnings": [],
+    "gold_cells": 74,
+    "predicted_cells": 74
+  },
+  "errors": [],
+  "alignment": [
+    {
+      "table_id": "assets",
+      "row_id": "assets_r001",
+      "predicted_row_index": 0,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r002",
+      "predicted_row_index": 1,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r003",
+      "predicted_row_index": 2,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r004",
+      "predicted_row_index": 3,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r005",
+      "predicted_row_index": 4,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r006",
+      "predicted_row_index": 5,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r007",
+      "predicted_row_index": 6,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r008",
+      "predicted_row_index": 7,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r009",
+      "predicted_row_index": 8,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r010",
+      "predicted_row_index": 9,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r011",
+      "predicted_row_index": 10,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r012",
+      "predicted_row_index": 11,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r013",
+      "predicted_row_index": 12,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r014",
+      "predicted_row_index": 13,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r015",
+      "predicted_row_index": 14,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r016",
+      "predicted_row_index": 15,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r017",
+      "predicted_row_index": 16,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r018",
+      "predicted_row_index": 17,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r019",
+      "predicted_row_index": 18,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r020",
+      "predicted_row_index": 19,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r021",
+      "predicted_row_index": 20,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r022",
+      "predicted_row_index": 21,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r023",
+      "predicted_row_index": 22,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r024",
+      "predicted_row_index": 23,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r025",
+      "predicted_row_index": 24,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r026",
+      "predicted_row_index": 25,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r027",
+      "predicted_row_index": 26,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r028",
+      "predicted_row_index": 27,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r029",
+      "predicted_row_index": 28,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r030",
+      "predicted_row_index": 29,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r031",
+      "predicted_row_index": 30,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r032",
+      "predicted_row_index": 31,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r033",
+      "predicted_row_index": 32,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r034",
+      "predicted_row_index": 33,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r035",
+      "predicted_row_index": 34,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r036",
+      "predicted_row_index": 35,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r037",
+      "predicted_row_index": 36,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r038",
+      "predicted_row_index": 37,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r039",
+      "predicted_row_index": 38,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r040",
+      "predicted_row_index": 39,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r041",
+      "predicted_row_index": 40,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r042",
+      "predicted_row_index": 41,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r043",
+      "predicted_row_index": 42,
+      "matched": true
+    }
+  ],
+  "gold_sha256": "f1afe5427828e6106a5dbb8dd9786eb324ce175a47ddf67a6ec96737adee3e36",
+  "prediction_sha256": "28e091116e41982235f001b77e959a2954a162a1f7942f67863d6f078e5a2e3d",
+  "prediction_path": "runs/docling_regions/tiny_cjk/fin1_adv/cold/prediction.json",
+  "source": {
+    "document_id": "tiny_cjk",
+    "company": "Synthetic control",
+    "source_url": null,
+    "source_page_index": 0,
+    "page": 1,
+    "source_sha256": "6bf0914dd179a625eae3dc0b9e6ca3a10a3c1a1d793fa99827bb6bdc0e3711be",
+    "input_sha256": "6bf0914dd179a625eae3dc0b9e6ca3a10a3c1a1d793fa99827bb6bdc0e3711be",
+    "input_path": "benchmark/data/adversarial/tiny_cjk/page.pdf",
+    "gold_path": "benchmark/gold/adversarial/tiny_cjk.json",
+    "source_kind": "synthetic",
+    "source_family": "ur_ai_original",
+    "issuer_relation": "same_issuer",
+    "split": "development",
+    "domain": "synthetic_financial_table",
+    "status": "available",
+    "human_audit_status": "ai_draft",
+    "human_checked_cells": 0,
+    "difficulty": "50% scale and translated page",
+    "visual_truth": "content preserved; CJK font size halved, bboxes transformed",
+    "license_note": "Local synthetic derivative; source-family rights apply"
+  },
+  "measurement": {
+    "mode": "cold_process",
+    "iteration": 0,
+    "status": "partial",
+    "error": null,
+    "device": "cpu",
+    "model_revision": "layout=8f39ad3c0b4c58e9c2d2c84a38465abf757272d8; tableformer=fc0f2d45e2218ea24bce5045f58a389aed16dc23",
+    "checkpoint_id": "docling-project/docling-layout-heron + docling-project/docling-models (TableFormer ACCURATE)",
+    "model_metadata": {
+      "device": "cpu",
+      "backend_version": "docling 2.141.0 / docling-ibm-models 4.0.4",
+      "model_revision": "layout=8f39ad3c0b4c58e9c2d2c84a38465abf757272d8; tableformer=fc0f2d45e2218ea24bce5045f58a389aed16dc23",
+      "checkpoint_id": "docling-project/docling-layout-heron + docling-project/docling-models (TableFormer ACCURATE)",
+      "packages": {
+        "docling": "2.141.0",
+        "docling-core": "2.103.1",
+        "docling-ibm-models": "4.0.4",
+        "docling-parse": "7.22.4",
+        "torch": "2.14.1+cpu",
+        "rapidocr": "3.10.0",
+        "onnxruntime": "1.31.0",
+        "PyMuPDF": "1.28.2"
+      },
+      "do_cell_matching": true,
+      "hybrid": "native_grid proposes table regions from the text layer; Docling structure per region"
+    },
+    "backend_version": "docling 2.141.0 / docling-ibm-models 4.0.4",
+    "stages": {
+      "load_ms": 118.27026601531543,
+      "render_ms": 87.09683298366144,
+      "inference_ms": 13925.946225994267,
+      "normalization_ms": 1.4178749988786876,
+      "serialize_ms": 3.3251820132136345
+    },
+    "time_ms": 14136.071711021941,
+    "cold_image_export_included": true,
+    "peak_memory_mb": 1421.59375,
+    "memory_method": "Linux ru_maxrss: process lifetime high-water RSS; warm peaks are cumulative, not deltas",
+    "peak_gpu_allocation_mb": null,
+    "gpu_memory_status": "unmeasured: worker does not import or reset framework GPU allocator"
+  }
+}

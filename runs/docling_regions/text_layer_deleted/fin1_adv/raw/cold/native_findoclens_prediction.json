@@ -1,0 +1,93 @@
+{
+ "document_id": "page",
+ "source_sha256": "68be2ed8959f3a7bb98d28eb467aa970c25c6653ee8cfc55e3158ddc570de6c4",
+ "backend": "docling_regions",
+ "model_revision": null,
+ "page": 0,
+ "page_bbox": [
+  0.0,
+  0.0,
+  595.2,
+  841.8
+ ],
+ "tables": [
+  {
+   "table_id": "t0",
+   "bbox": [
+    53.93,
+    113.87,
+    525.23,
+    676.51
+   ],
+   "reading_order": 0,
+   "headers": [],
+   "rows": [],
+   "issues": [
+    {
+     "severity": "info",
+     "code": "hierarchy_not_inferred",
+     "message": "Docling/TableFormer output carries no account hierarchy; parent_path left empty"
+    },
+    {
+     "severity": "warning",
+     "code": "no_header_cells_found"
+    }
+   ],
+   "unit": null,
+   "n_data_columns": 0,
+   "capabilities": {
+    "cell_bbox": true,
+    "headers": "tableformer column_header flags",
+    "raw_grid": "0x0"
+   },
+   "checks": [],
+   "grid": []
+  }
+ ],
+ "status": "failed",
+ "issues": [
+  {
+   "severity": "warning",
+   "code": "no_region_proposals_whole_page_fallback"
+  },
+  {
+   "severity": "error",
+   "code": "table_without_numeric_cells",
+   "tables": [
+    "t0"
+   ]
+  }
+ ],
+ "capabilities": {
+  "cell_bbox": true,
+  "headers": "tableformer column_header flags",
+  "multi_table": true,
+  "ocr": false,
+  "n_columns": "any",
+  "cell_matching": true
+ },
+ "meta": {
+  "device": "cpu",
+  "converter_load_ms": 3091.4,
+  "convert_ms": 10695.4,
+  "versions": {
+   "docling": "2.141.0",
+   "docling-core": "2.103.1",
+   "docling-ibm-models": "4.0.4",
+   "docling-parse": "7.22.4",
+   "torch": "2.14.1+cpu",
+   "rapidocr": "3.10.0"
+  },
+  "table_structure_mode": "accurate",
+  "do_cell_matching": true,
+  "ocr_engine": null,
+  "ocr_model_size": null,
+  "docling_status": "ConversionStatus.SUCCESS",
+  "raw_artifacts": [
+   "docling_document.json",
+   "docling_tables.md"
+  ],
+  "elapsed_ms": 13797.5
+ },
+ "schema_version": "findoclens-0.1"
+}

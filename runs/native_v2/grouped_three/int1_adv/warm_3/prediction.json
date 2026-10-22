@@ -1,0 +1,85 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "grouped_three",
+  "source_sha256": "52aaafa765af6025875c1cba45546a7e0012b3e3b369db62771033a41b92469a",
+  "input_sha256": "52aaafa765af6025875c1cba45546a7e0012b3e3b369db62771033a41b92469a",
+  "backend": "native_v2",
+  "model_revision": "baseline_v2 (tag v2-frozen), PyMuPDF 1.27.2.3",
+  "page_bbox": [
+    0.0,
+    0.0,
+    800.0,
+    430.0
+  ],
+  "status": "abstained",
+  "backend_status": "failed",
+  "issues": [
+    {
+      "source": "native_v2",
+      "severity": "error",
+      "code": "needs_visual_fallback",
+      "message": "No stable native text columns: OCR/VLM is required and not run."
+    },
+    {
+      "code": "empty_extraction",
+      "severity": "error"
+    }
+  ],
+  "tables": [],
+  "capabilities": {
+    "cell_bbox": true,
+    "headers": "dates_only",
+    "multi_table": false,
+    "ocr": false,
+    "n_columns": "exactly_2",
+    "unit_detection": "thousand_JPY_only"
+  },
+  "provenance": {
+    "adapter": "adapters.canonical.convert",
+    "native_schema": "findoclens-0.1",
+    "native_backend": "native_v2",
+    "native_prediction_sha256": "1966ae32123ab6f4a80ee584cd729d8e7ca2fdd5ede6ae1d9b26dda2fde263b5",
+    "native_options": {},
+    "raw_artifacts": {},
+    "lazy_load_on_first_call": false,
+    "backend_meta": {
+      "native_result_summary": {
+        "column_anchors": null,
+        "periods": [],
+        "unit": null,
+        "anchor_diagnostics": {
+          "reason": "unstable_column_anchors",
+          "endpoint_clusters": [
+            [
+              1,
+              709.33
+            ],
+            [
+              1,
+              608.67
+            ],
+            [
+              1,
+              553.0
+            ],
+            [
+              1,
+              526.0
+            ],
+            [
+              1,
+              517.0
+            ],
+            [
+              1,
+              242.0
+            ]
+          ]
+        }
+      },
+      "elapsed_ms": 0.8
+    },
+    "native_status": "failed",
+    "trial": "warm_3"
+  }
+}

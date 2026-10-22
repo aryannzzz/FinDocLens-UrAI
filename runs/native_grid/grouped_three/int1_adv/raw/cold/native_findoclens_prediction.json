@@ -1,0 +1,258 @@
+{
+ "document_id": "page",
+ "source_sha256": "52aaafa765af6025875c1cba45546a7e0012b3e3b369db62771033a41b92469a",
+ "backend": "native_grid",
+ "model_revision": "findoclens native_grid 0.1, PyMuPDF 1.27.2.3",
+ "page": 0,
+ "page_bbox": [
+  0.0,
+  0.0,
+  800.0,
+  430.0
+ ],
+ "tables": [],
+ "status": "no_tables",
+ "issues": [
+  {
+   "severity": "info",
+   "code": "unassigned_numeric_tokens",
+   "count": 24
+  },
+  {
+   "severity": "warning",
+   "code": "no_tables_found",
+   "message": "text layer present but no right-aligned multi-column numeric table found"
+  }
+ ],
+ "capabilities": {
+  "cell_bbox": true,
+  "headers": "text+period+role+colspan",
+  "multi_table": true,
+  "ocr": false,
+  "n_columns": "any (right-aligned numeric)",
+  "hierarchy": "indentation heuristic, optional"
+ },
+ "meta": {
+  "native_glyph_count": 130,
+  "unassigned_numeric_tokens": [
+   {
+    "raw": "1,234",
+    "bbox": [
+     233.0,
+     126.0,
+     278.0,
+     136.8
+    ]
+   },
+   {
+    "raw": "+2.5",
+    "bbox": [
+     324.67,
+     126.0,
+     360.67,
+     136.8
+    ]
+   },
+   {
+    "raw": "△0",
+    "bbox": [
+     416.33,
+     126.0,
+     434.33,
+     136.8
+    ]
+   },
+   {
+    "raw": "1,234",
+    "bbox": [
+     508.0,
+     126.0,
+     553.0,
+     136.8
+    ]
+   },
+   {
+    "raw": "+2.5",
+    "bbox": [
+     599.67,
+     126.0,
+     635.67,
+     136.8
+    ]
+   },
+   {
+    "raw": "△0",
+    "bbox": [
+     691.33,
+     126.0,
+     709.33,
+     136.8
+    ]
+   },
+   {
+    "raw": "△0",
+    "bbox": [
+     233.0,
+     191.0,
+     251.0,
+     201.8
+    ]
+   },
+   {
+    "raw": "－",
+    "bbox": [
+     324.67,
+     191.0,
+     333.67,
+     201.8
+    ]
+   },
+   {
+    "raw": "+0.5",
+    "bbox": [
+     416.33,
+     191.0,
+     452.33,
+     201.8
+    ]
+   },
+   {
+    "raw": "△0",
+    "bbox": [
+     508.0,
+     191.0,
+     526.0,
+     201.8
+    ]
+   },
+   {
+    "raw": "－",
+    "bbox": [
+     599.67,
+     191.0,
+     608.67,
+     201.8
+    ]
+   },
+   {
+    "raw": "+0.5",
+    "bbox": [
+     691.33,
+     191.0,
+     727.33,
+     201.8
+    ]
+   },
+   {
+    "raw": "－",
+    "bbox": [
+     233.0,
+     256.0,
+     242.0,
+     266.8
+    ]
+   },
+   {
+    "raw": "10.25",
+    "bbox": [
+     324.67,
+     256.0,
+     369.67,
+     266.8
+    ]
+   },
+   {
+    "raw": "△2.5",
+    "bbox": [
+     416.33,
+     256.0,
+     452.33,
+     266.8
+    ]
+   },
+   {
+    "raw": "－",
+    "bbox": [
+     508.0,
+     256.0,
+     517.0,
+     266.8
+    ]
+   },
+   {
+    "raw": "10.25",
+    "bbox": [
+     599.67,
+     256.0,
+     644.67,
+     266.8
+    ]
+   },
+   {
+    "raw": "△2.5",
+    "bbox": [
+     691.33,
+     256.0,
+     727.33,
+     266.8
+    ]
+   },
+   {
+    "raw": "+1,234",
+    "bbox": [
+     233.0,
+     321.0,
+     287.0,
+     331.8
+    ]
+   },
+   {
+    "raw": "100.0",
+    "bbox": [
+     324.67,
+     321.0,
+     369.67,
+     331.8
+    ]
+   },
+   {
+    "raw": "+0",
+    "bbox": [
+     416.33,
+     321.0,
+     434.33,
+     331.8
+    ]
+   },
+   {
+    "raw": "+1,234",
+    "bbox": [
+     508.0,
+     321.0,
+     562.0,
+     331.8
+    ]
+   },
+   {
+    "raw": "100.0",
+    "bbox": [
+     599.67,
+     321.0,
+     644.67,
+     331.8
+    ]
+   },
+   {
+    "raw": "+0",
+    "bbox": [
+     691.33,
+     321.0,
+     709.33,
+     331.8
+    ]
+   }
+  ],
+  "elapsed_ms": 1.4
+ },
+ "schema_version": "findoclens-0.1"
+}

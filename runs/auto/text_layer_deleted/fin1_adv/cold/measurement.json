@@ -1,0 +1,33 @@
+{
+  "mode": "cold_process",
+  "iteration": 0,
+  "status": "partial",
+  "error": null,
+  "device": "cpu",
+  "model_revision": "on demand: see provenance.backend_meta.routing",
+  "checkpoint_id": null,
+  "model_metadata": {
+    "device": "cpu",
+    "backend_version": "findoclens-0.1 router (native_grid, native_v2; Docling / Docling+RapidOCR on demand)",
+    "model_revision": "on demand: see provenance.backend_meta.routing",
+    "checkpoint_id": null,
+    "null_reason": "router; model checkpoints (when invoked) are those of docling / docling_rapidocr",
+    "findoclens_packages": {
+      "PyMuPDF": "1.27.2.3"
+    }
+  },
+  "backend_version": "findoclens-0.1 router (native_grid, native_v2; Docling / Docling+RapidOCR on demand)",
+  "stages": {
+    "load_ms": 94.83132298919372,
+    "render_ms": 173.84271798073314,
+    "inference_ms": 20055.294802004937,
+    "normalization_ms": 0.6580610061064363,
+    "serialize_ms": 0.9515559941064566
+  },
+  "time_ms": 20325.591655971948,
+  "cold_image_export_included": true,
+  "peak_memory_mb": 168.6875,
+  "memory_method": "Linux ru_maxrss: process lifetime high-water RSS; warm peaks are cumulative, not deltas",
+  "peak_gpu_allocation_mb": null,
+  "gpu_memory_status": "unmeasured: worker does not import or reset framework GPU allocator"
+}

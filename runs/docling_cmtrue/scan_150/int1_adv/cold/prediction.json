@@ -1,0 +1,113 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "scan_150",
+  "source_sha256": "8e18ea9f55a1ca086e3ebcabf4a6d43b8e9d2c4b0d77bc53cdfdc8ef7ecdb426",
+  "input_sha256": "8e18ea9f55a1ca086e3ebcabf4a6d43b8e9d2c4b0d77bc53cdfdc8ef7ecdb426",
+  "backend": "docling_cmtrue",
+  "model_revision": null,
+  "page_bbox": [
+    0.0,
+    0.0,
+    595.2,
+    841.8
+  ],
+  "status": "abstained",
+  "backend_status": "failed",
+  "issues": [
+    {
+      "severity": "error",
+      "code": "table_without_numeric_cells",
+      "tables": [
+        "t0"
+      ]
+    },
+    {
+      "code": "empty_extraction",
+      "severity": "error"
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "t0",
+      "page": 1,
+      "bbox": [
+        53.9,
+        114.17,
+        525.2,
+        676.54
+      ],
+      "reading_order": 0,
+      "headers": [],
+      "rows": [],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "no_header_cells_found"
+        }
+      ],
+      "unit": null,
+      "capability_status": {
+        "cell_bbox": true,
+        "headers": "tableformer column_header flags",
+        "raw_grid": "0x0"
+      },
+      "native_grid_cells": 0
+    }
+  ],
+  "capabilities": {
+    "cell_bbox": true,
+    "headers": "tableformer column_header flags",
+    "multi_table": true,
+    "ocr": false,
+    "n_columns": "any",
+    "cell_matching": true
+  },
+  "provenance": {
+    "adapter": "adapters.canonical.convert",
+    "native_schema": "findoclens-0.1",
+    "native_backend": "docling",
+    "native_prediction_sha256": "509ac8b25721a1916f982df15dba2b3d87251f4c3af73975caf7042df5f383dc",
+    "native_options": {
+      "cell_matching": true
+    },
+    "raw_artifacts": {
+      "docling_document.json": {
+        "path": "raw/cold/docling_document.json",
+        "sha256": "970785a0ca0f926388623047f217998aa7e0f4970a89f6b0e67d24eb7bf551bc"
+      },
+      "docling_tables.md": {
+        "path": "raw/cold/docling_tables.md",
+        "sha256": "881bd66cb6d8fa10f4f97593483a15503fc7eb022098a23f5ff6d07ecdf2284f"
+      },
+      "native_findoclens_prediction.json": {
+        "path": "raw/cold/native_findoclens_prediction.json",
+        "sha256": "eb1f72fd26f41d4e1ec44a1ae655af26ee272d6b188373962811a6e69acdf17c"
+      }
+    },
+    "lazy_load_on_first_call": true,
+    "backend_meta": {
+      "device": "cpu",
+      "converter_load_ms": 2930.1,
+      "convert_ms": 9813.7,
+      "versions": {
+        "docling": "2.141.0",
+        "docling-core": "2.103.1",
+        "docling-ibm-models": "4.0.4",
+        "docling-parse": "7.22.4",
+        "torch": "2.14.1+cpu",
+        "rapidocr": "3.10.0"
+      },
+      "table_structure_mode": "accurate",
+      "do_cell_matching": true,
+      "ocr_engine": null,
+      "docling_status": "ConversionStatus.SUCCESS",
+      "raw_artifacts": [
+        "docling_document.json",
+        "docling_tables.md"
+      ],
+      "elapsed_ms": 12754.4
+    },
+    "native_status": "failed",
+    "trial": "cold"
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "side_by_side",
+  "source_sha256": "2745e26c2a397469614b828dc749d36af43bb66f128bc0ffb9b0ff001770a8d3",
+  "input_sha256": "2745e26c2a397469614b828dc749d36af43bb66f128bc0ffb9b0ff001770a8d3",
+  "backend": "native_grid",
+  "model_revision": "findoclens native_grid 0.1, PyMuPDF 1.27.2.3",
+  "page_bbox": [
+    0.0,
+    0.0,
+    1000.0,
+    430.0
+  ],
+  "status": "abstained",
+  "backend_status": "no_tables",
+  "issues": [
+    {
+      "severity": "info",
+      "code": "unassigned_numeric_tokens",
+      "count": 32
+    },
+    {
+      "severity": "warning",
+      "code": "no_tables_found",
+      "message": "text layer present but no right-aligned multi-column numeric table found"
+    },
+    {
+      "code": "empty_extraction",
+      "severity": "error"
+    }
+  ],
+  "tables": [],
+  "capabilities": {
+    "cell_bbox": true,
+    "headers": "text+period+role+colspan",
+    "multi_table": true,
+    "ocr": false,
+    "n_columns": "any (right-aligned numeric)",
+    "hierarchy": "indentation heuristic, optional"
+  },
+  "provenance": {
+    "adapter": "adapters.canonical.convert",
+    "native_schema": "findoclens-0.1",
+    "native_backend": "native_grid",
+    "native_prediction_sha256": "2ba6c7c567e6f0f918ab2b71b5c95223d3780e3a47fef932b3665114fd5c7070",
+    "native_options": {},
+    "raw_artifacts": {},
+    "lazy_load_on_first_call": false,
+    "backend_meta": {
+      "native_glyph_count": 204,
+      "unassigned_numeric_tokens": [
+        {
+          "raw": "1,234",
+          "bbox": [
+            173.0,
+            126.0,
+            218.0,
+            136.8
+          ]
+        },
+        {
+          "raw": "+2.5",
+          "bbox": [
+            250.5,
+            126.0,
+            286.5,
+            136.8
+          ]
+        },
+        {
+          "raw": "1,234",
+          "bbox": [
+            328.0,
+            126.0,
+            373.0,
+            136.8
+          ]
+        },
+        {
+          "raw": "+2.5",
+          "bbox": [
+            405.5,
+            126.0,
+            441.5,
+            136.8
+          ]
+        },
+        {
+          "raw": "1,234",
+          "bbox": [
+            663.0,
+            126.0,
+            708.0,
+            136.8
+          ]
+        },
+        {
+          "raw": "+2.5",
+          "bbox": [
+            740.5,
+            126.0,
+            776.5,
+            136.8
+          ]
+        },
+        {
+          "raw": "1,234",
+          "bbox": [
+            818.0,
+            126.0,
+            863.0,
+            136.8
+          ]
+        },
+        {
+          "raw": "+2.5",
+          "bbox": [
+            895.5,
+            126.0,
+            931.5,
+            136.8
+          ]
+        },
+        {
+          "raw": "△0",
+          "bbox": [
+            173.0,
+            191.0,
+            191.0,
+            201.8
+          ]
+        },
+        {
+          "raw": "－",
+          "bbox": [
+            250.5,
+            191.0,
+            259.5,
+            201.8
+          ]
+        },
+        {
+          "raw": "△0",
+          "bbox": [
+            328.0,
+            191.0,
+            346.0,
+            201.8
+          ]
+        },
+        {
+          "raw": "－",
+          "bbox": [
+            405.5,
+            191.0,
+            414.5,
+            201.8
+          ]
+        },
+        {
+          "raw": "△0",
+          "bbox": [
+            663.0,
+            191.0,
+            681.0,
+            201.8
+          ]
+        },
+        {
+          "raw": "－",
+          "bbox": [
+            740.5,
+            191.0,
+            749.5,
+            201.8
+          ]
+        },
+        {
+          "raw": "△0",
+          "bbox": [
+            818.0,
+            191.0,
+            836.0,
+            201.8
+          ]
+        },
+        {
+          "raw": "－",
+          "bbox": [
+            895.5,
+            191.0,
+            904.5,
+            201.8
+          ]
+        },
+        {
+          "raw": "－",
+          "bbox": [
+            173.0,
+            256.0,
+            182.0,
+            266.8
+          ]
+        },
+        {
+          "raw": "10.25",
+          "bbox": [
+            250.5,
+            256.0,
+            295.5,
+            266.8
+          ]
+        },
+        {
+          "raw": "－",
+          "bbox": [
+            328.0,
+            256.0,
+            337.0,
+            266.8
+          ]
+        },
+        {
+          "raw": "10.25",
+          "bbox": [
+            405.5,
+            256.0,
+            450.5,
+            266.8
+          ]
+        },
+        {
+          "raw": "－",
+          "bbox": [
+            663.0,
+            256.0,
+            672.0,
+            266.8
+          ]
+        },
+        {
+          "raw": "10.25",
+          "bbox": [
+            740.5,
+            256.0,
+            785.5,
+            266.8
+          ]
+        },
+        {
+          "raw": "－",
+          "bbox": [
+            818.0,
+            256.0,
+            827.0,
+            266.8
+          ]
+        },
+        {
+          "raw": "10.25",
+          "bbox": [
+            895.5,
+            256.0,
+            940.5,
+            266.8
+          ]
+        },
+        {
+          "raw": "+1,234",
+          "bbox": [
+            173.0,
+            321.0,
+            227.0,
+            331.8
+          ]
+        },
+        {
+          "raw": "100.0",
+          "bbox": [
+            250.5,
+            321.0,
+            295.5,
+            331.8
+          ]
+        },
+        {
+          "raw": "+1,234",
+          "bbox": [
+            328.0,
+            321.0,
+            382.0,
+            331.8
+          ]
+        },
+        {
+          "raw": "100.0",
+          "bbox": [
+            405.5,
+            321.0,
+            450.5,
+            331.8
+          ]
+        },
+        {
+          "raw": "+1,234",
+          "bbox": [
+            663.0,
+            321.0,
+            717.0,
+            331.8
+          ]
+        },
+        {
+          "raw": "100.0",
+          "bbox": [
+            740.5,
+            321.0,
+            785.5,
+            331.8
+          ]
+        },
+        {
+          "raw": "+1,234",
+          "bbox": [
+            818.0,
+            321.0,
+            872.0,
+            331.8
+          ]
+        },
+        {
+          "raw": "100.0",
+          "bbox": [
+            895.5,
+            321.0,
+            940.5,
+            331.8
+          ]
+        }
+      ],
+      "elapsed_ms": 1.4
+    },
+    "native_status": "no_tables",
+    "trial": "warm_1"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "vertical_spacing",
+  "source_sha256": "71ee675de67ededcc023c573e4a553d0f7f954d906b312d3dd18f71a3547091f",
+  "input_sha256": "71ee675de67ededcc023c573e4a553d0f7f954d906b312d3dd18f71a3547091f",
+  "backend": "native_v2",
+  "model_revision": "baseline_v2 (tag v2-frozen), PyMuPDF 1.27.2.3",
+  "page_bbox": [
+    0.0,
+    0.0,
+    800.0,
+    430.0
+  ],
+  "status": "abstained",
+  "backend_status": "failed",
+  "issues": [
+    {
+      "source": "native_v2",
+      "severity": "error",
+      "code": "needs_visual_fallback",
+      "message": "No stable native text columns: OCR/VLM is required and not run."
+    }
+  ],
+  "tables": [],
+  "capabilities": {
+    "cell_bbox": true,
+    "headers": "dates_only",
+    "multi_table": false,
+    "ocr": false,
+    "n_columns": "exactly_2",
+    "unit_detection": "thousand_JPY_only"
+  },
+  "provenance": {
+    "adapter": "adapters.canonical.convert",
+    "native_schema": "findoclens-0.1",
+    "native_backend": "native_v2",
+    "native_prediction_sha256": "56a9bc81bf6288efeb69bad761ddbcd02fa31a60dc10c57cc05e7385214eb496",
+    "native_options": {},
+    "raw_artifacts": {},
+    "lazy_load_on_first_call": false,
+    "backend_meta": {
+      "native_result_summary": {
+        "column_anchors": null,
+        "periods": [],
+        "unit": null,
+        "anchor_diagnostics": {
+          "reason": "insufficient_tabular_evidence",
+          "candidate_rows": 2
+        }
+      },
+      "elapsed_ms": 0.8
+    },
+    "native_status": "failed",
+    "trial": "warm_2"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "scan_200",
+  "source_sha256": "d5d3ebfa1ba6808bf82fcf1bc16af0a54031285327aed2e3f532dc4ecb525560",
+  "input_sha256": "d5d3ebfa1ba6808bf82fcf1bc16af0a54031285327aed2e3f532dc4ecb525560",
+  "backend": "native_grid",
+  "model_revision": "findoclens native_grid 0.1, PyMuPDF 1.27.2.3",
+  "page_bbox": [
+    0.0,
+    0.0,
+    595.2,
+    841.8
+  ],
+  "status": "abstained",
+  "backend_status": "failed",
+  "issues": [
+    {
+      "severity": "error",
+      "code": "needs_visual_fallback",
+      "message": "only 0 extractable glyphs; OCR/visual backend required"
+    }
+  ],
+  "tables": [],
+  "capabilities": {
+    "cell_bbox": true,
+    "headers": "text+period+role+colspan",
+    "multi_table": true,
+    "ocr": false,
+    "n_columns": "any (right-aligned numeric)",
+    "hierarchy": "indentation heuristic, optional"
+  },
+  "provenance": {
+    "adapter": "adapters.canonical.convert",
+    "native_schema": "findoclens-0.1",
+    "native_backend": "native_grid",
+    "native_prediction_sha256": "41c5b0b0f7c7c04b25be8d0e6fec08f663e53140fff5410a66062d35ff228d82",
+    "native_options": {},
+    "raw_artifacts": {
+      "native_findoclens_prediction.json": {
+        "path": "raw/cold/native_findoclens_prediction.json",
+        "sha256": "4185769cada97fc773c5855dfaa52fa140f14cf9d60946a3609c4948b5fe0210"
+      }
+    },
+    "code": {
+      "commit": "afcfb5687e655e759432c8a7b8279c083ab272ea",
+      "code_dirty": false,
+      "code_dirty_paths": []
+    },
+    "lazy_load_on_first_call": false,
+    "backend_meta": {
+      "native_glyph_count": 0,
+      "elapsed_ms": 1.1
+    },
+    "native_status": "failed",
+    "trial": "cold"
+  }
+}

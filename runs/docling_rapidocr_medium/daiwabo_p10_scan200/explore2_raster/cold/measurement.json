@@ -1,0 +1,19 @@
+{
+  "mode": "cold_process",
+  "iteration": 0,
+  "status": "error",
+  "error": "Traceback (most recent call last):\n  File \"/home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/worker.py\", line 58, in main\n    raise RuntimeError(load_error)\nRuntimeError: Traceback (most recent call last):\n  File \"/home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/worker.py\", line 34, in main\n    module = importlib.import_module(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/aryannzzz/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 995, in exec_module\n  File \"<frozen importlib._bootstrap_external>\", line 1133, in get_code\n  File \"<frozen importlib._bootstrap_external>\", line 1063, in source_to_code\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/home/aryannzzz/ur_ai_RnD_agent_starter/adapters/docling_rapidocr_medium.py\", line 5\n    ocr=\"RapidOCR lang=iso:ja, PP-OCRv6 medium det/rec onnx (force_full_page_ocr)\")\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: keyword argument repeated: ocr\n\n",
+  "device": "unspecified",
+  "model_revision": null,
+  "checkpoint_id": null,
+  "model_metadata": {},
+  "stages": {
+    "load_ms": 63.67384298937395
+  },
+  "time_ms": 64.01150897727348,
+  "cold_image_export_included": true,
+  "peak_memory_mb": 51.7578125,
+  "memory_method": "Linux ru_maxrss: process lifetime high-water RSS; warm peaks are cumulative, not deltas",
+  "peak_gpu_allocation_mb": null,
+  "gpu_memory_status": "unmeasured: worker does not import or reset framework GPU allocator"
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "daiwabo_p10_scan200",
+  "source_sha256": "87bacae538ff048d3fba1361a3cd84cb7f2c55318c577fee20ad7553850132cd",
+  "input_sha256": "87bacae538ff048d3fba1361a3cd84cb7f2c55318c577fee20ad7553850132cd",
+  "backend": "native_v2",
+  "model_revision": "baseline_v2 (tag v2-frozen), PyMuPDF 1.27.2.3",
+  "page_bbox": [
+    0.0,
+    0.0,
+    960.0,
+    540.0
+  ],
+  "status": "abstained",
+  "backend_status": "failed",
+  "issues": [
+    {
+      "source": "native_v2",
+      "severity": "error",
+      "code": "needs_visual_fallback",
+      "message": "No stable native text columns: OCR/VLM is required and not run."
+    },
+    {
+      "code": "empty_extraction",
+      "severity": "error"
+    }
+  ],
+  "tables": [],
+  "capabilities": {
+    "cell_bbox": true,
+    "headers": "dates_only",
+    "multi_table": false,
+    "ocr": false,
+    "n_columns": "exactly_2",
+    "unit_detection": "thousand_JPY_only"
+  },
+  "provenance": {
+    "adapter": "adapters.canonical.convert",
+    "native_schema": "findoclens-0.1",
+    "native_backend": "native_v2",
+    "native_prediction_sha256": "5b25a60d5c670cd24e90a23bed1e9caacca84bb6f6a7b4bf41b8c26d8aacf662",
+    "native_options": {},
+    "raw_artifacts": {},
+    "code": {
+      "commit": "afcfb5687e655e759432c8a7b8279c083ab272ea",
+      "code_dirty": false,
+      "code_dirty_paths": []
+    },
+    "lazy_load_on_first_call": false,
+    "backend_meta": {
+      "native_result_summary": {
+        "column_anchors": null,
+        "periods": [],
+        "unit": null,
+        "anchor_diagnostics": {
+          "reason": "insufficient_tabular_evidence",
+          "candidate_rows": 0
+        }
+      },
+      "elapsed_ms": 73.3
+    },
+    "native_status": "failed",
+    "trial": "warm_2"
+  }
+}

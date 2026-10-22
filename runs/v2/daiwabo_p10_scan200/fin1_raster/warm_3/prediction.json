@@ -1,0 +1,48 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "daiwabo_p10_scan200",
+  "source_sha256": "87bacae538ff048d3fba1361a3cd84cb7f2c55318c577fee20ad7553850132cd",
+  "input_sha256": "87bacae538ff048d3fba1361a3cd84cb7f2c55318c577fee20ad7553850132cd",
+  "backend": "v2",
+  "model_revision": null,
+  "page_bbox": [
+    0.0,
+    0.0,
+    960.0,
+    540.0
+  ],
+  "page_bbox_status": "observed_selected_pdf_cropbox",
+  "status": "abstained",
+  "tables": [],
+  "issues": [
+    {
+      "page": 1,
+      "severity": "error",
+      "code": "needs_visual_fallback",
+      "message": "No stable native text columns: OCR/VLM is required and not run."
+    },
+    {
+      "code": "empty_extraction",
+      "severity": "error"
+    }
+  ],
+  "capabilities": {
+    "table_detection": false,
+    "grouped_headers": false,
+    "grid_spans": false
+  },
+  "provenance": "Evaluation-only projection; original_result.json retains unchanged v2 output",
+  "pages": [
+    {
+      "page": 1,
+      "page_bbox": [
+        0.0,
+        0.0,
+        960.0,
+        540.0
+      ],
+      "page_rotation_degrees": 0
+    }
+  ],
+  "source_page_index": 0
+}

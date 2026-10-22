@@ -1,0 +1,690 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "vertical_spacing",
+  "source_sha256": "71ee675de67ededcc023c573e4a553d0f7f954d906b312d3dd18f71a3547091f",
+  "input_sha256": "71ee675de67ededcc023c573e4a553d0f7f954d906b312d3dd18f71a3547091f",
+  "backend": "native_grid",
+  "model_revision": "findoclens native_grid 0.1, PyMuPDF 1.27.2.3",
+  "page_bbox": [
+    0.0,
+    0.0,
+    800.0,
+    430.0
+  ],
+  "status": "partial",
+  "backend_status": "ok",
+  "issues": [],
+  "tables": [
+    {
+      "table_id": "t0",
+      "page": 1,
+      "bbox": [
+        25.0,
+        109.0,
+        690.5,
+        332.2
+      ],
+      "reading_order": 0,
+      "headers": [
+        {
+          "header_id": "t0_c0",
+          "kind": "leaf",
+          "column_index": 0,
+          "text": null,
+          "period": null,
+          "role": null,
+          "bbox": null,
+          "colspan": null,
+          "rowspan": null,
+          "capability_status": "no_header_cell_found; role and text not inferred at header level"
+        },
+        {
+          "header_id": "t0_c1",
+          "kind": "leaf",
+          "column_index": 1,
+          "text": null,
+          "period": null,
+          "role": null,
+          "bbox": null,
+          "colspan": null,
+          "rowspan": null,
+          "capability_status": "no_header_cell_found; role and text not inferred at header level"
+        },
+        {
+          "header_id": "t0_c2",
+          "kind": "leaf",
+          "column_index": 2,
+          "text": null,
+          "period": null,
+          "role": null,
+          "bbox": null,
+          "colspan": null,
+          "rowspan": null,
+          "capability_status": "no_header_cell_found; role and text not inferred at header level"
+        },
+        {
+          "header_id": "t0_c3",
+          "kind": "leaf",
+          "column_index": 3,
+          "text": null,
+          "period": null,
+          "role": null,
+          "bbox": null,
+          "colspan": null,
+          "rowspan": null,
+          "capability_status": "no_header_cell_found; role and text not inferred at header level"
+        }
+      ],
+      "rows": [
+        {
+          "row_id": "t0_r0",
+          "row_index": 0,
+          "label": "現",
+          "raw_label": "現",
+          "parent_path": [],
+          "bbox": [
+            25.0,
+            109.0,
+            31.0,
+            116.2
+          ],
+          "bbox_status": null,
+          "type": "section",
+          "cells": []
+        },
+        {
+          "row_id": "t0_r1",
+          "row_index": 1,
+          "label": "金",
+          "raw_label": "金",
+          "parent_path": [],
+          "bbox": [
+            25.0,
+            116.0,
+            31.0,
+            123.2
+          ],
+          "bbox_status": null,
+          "type": "section",
+          "cells": []
+        },
+        {
+          "row_id": "t0_r2",
+          "row_index": 2,
+          "label": "及び",
+          "raw_label": "及び",
+          "parent_path": [],
+          "bbox": [
+            25.0,
+            123.0,
+            681.5,
+            137.2
+          ],
+          "bbox_status": null,
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "t0_c0",
+              "period": null,
+              "role": "amount",
+              "raw": "1,234",
+              "value": 1234,
+              "status": "observed",
+              "bbox": [
+                233.0,
+                126.0,
+                278.0,
+                136.8
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf",
+              "notes": [
+                "role_default_amount"
+              ]
+            },
+            {
+              "column_index": 1,
+              "header_id": "t0_c1",
+              "period": null,
+              "role": "amount",
+              "raw": "+2.5",
+              "value": 2.5,
+              "status": "observed",
+              "bbox": [
+                370.5,
+                126.0,
+                406.5,
+                136.8
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf",
+              "notes": [
+                "role_default_amount"
+              ]
+            },
+            {
+              "column_index": 2,
+              "header_id": "t0_c2",
+              "period": null,
+              "role": "amount",
+              "raw": "1,234",
+              "value": 1234,
+              "status": "observed",
+              "bbox": [
+                508.0,
+                126.0,
+                553.0,
+                136.8
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf",
+              "notes": [
+                "role_default_amount"
+              ]
+            },
+            {
+              "column_index": 3,
+              "header_id": "t0_c3",
+              "period": null,
+              "role": "amount",
+              "raw": "+2.5",
+              "value": 2.5,
+              "status": "observed",
+              "bbox": [
+                645.5,
+                126.0,
+                681.5,
+                136.8
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf",
+              "notes": [
+                "role_default_amount"
+              ]
+            }
+          ]
+        },
+        {
+          "row_id": "t0_r3",
+          "row_index": 3,
+          "label": "預",
+          "raw_label": "預",
+          "parent_path": [],
+          "bbox": [
+            25.0,
+            137.0,
+            31.0,
+            144.2
+          ],
+          "bbox_status": null,
+          "type": "section",
+          "cells": []
+        },
+        {
+          "row_id": "t0_r4",
+          "row_index": 4,
+          "label": "金",
+          "raw_label": "金",
+          "parent_path": [],
+          "bbox": [
+            25.0,
+            144.0,
+            31.0,
+            151.2
+          ],
+          "bbox_status": null,
+          "type": "section",
+          "cells": []
+        },
+        {
+          "row_id": "t0_r5",
+          "row_index": 5,
+          "label": "貸",
+          "raw_label": "貸",
+          "parent_path": [],
+          "bbox": [
+            25.0,
+            174.0,
+            31.0,
+            181.2
+          ],
+          "bbox_status": null,
+          "type": "section",
+          "cells": []
+        },
+        {
+          "row_id": "t0_r6",
+          "row_index": 6,
+          "label": "倒",
+          "raw_label": "倒",
+          "parent_path": [],
+          "bbox": [
+            25.0,
+            181.0,
+            31.0,
+            188.2
+          ],
+          "bbox_status": null,
+          "type": "section",
+          "cells": []
+        },
+        {
+          "row_id": "t0_r7",
+          "row_index": 7,
+          "label": "引当",
+          "raw_label": "引当",
+          "parent_path": [],
+          "bbox": [
+            25.0,
+            188.0,
+            654.5,
+            202.2
+          ],
+          "bbox_status": null,
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "t0_c0",
+              "period": null,
+              "role": "amount",
+              "raw": "△0",
+              "value": 0,
+              "status": "negative_zero",
+              "bbox": [
+                233.0,
+                191.0,
+                251.0,
+                201.8
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf",
+              "notes": [
+                "role_default_amount"
+              ]
+            },
+            {
+              "column_index": 1,
+              "header_id": "t0_c1",
+              "period": null,
+              "role": "amount",
+              "raw": "－",
+              "value": null,
+              "status": "not_reported",
+              "bbox": [
+                370.5,
+                191.0,
+                379.5,
+                201.8
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf",
+              "notes": [
+                "role_default_amount"
+              ]
+            },
+            {
+              "column_index": 2,
+              "header_id": "t0_c2",
+              "period": null,
+              "role": "amount",
+              "raw": "△0",
+              "value": 0,
+              "status": "negative_zero",
+              "bbox": [
+                508.0,
+                191.0,
+                526.0,
+                201.8
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf",
+              "notes": [
+                "role_default_amount"
+              ]
+            },
+            {
+              "column_index": 3,
+              "header_id": "t0_c3",
+              "period": null,
+              "role": "amount",
+              "raw": "－",
+              "value": null,
+              "status": "not_reported",
+              "bbox": [
+                645.5,
+                191.0,
+                654.5,
+                201.8
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf",
+              "notes": [
+                "role_default_amount"
+              ]
+            }
+          ]
+        },
+        {
+          "row_id": "t0_r8",
+          "row_index": 8,
+          "label": "金",
+          "raw_label": "金",
+          "parent_path": [],
+          "bbox": [
+            25.0,
+            202.0,
+            31.0,
+            209.2
+          ],
+          "bbox_status": null,
+          "type": "section",
+          "cells": []
+        },
+        {
+          "row_id": "t0_r9",
+          "row_index": 9,
+          "label": "そ",
+          "raw_label": "そ",
+          "parent_path": [],
+          "bbox": [
+            25.0,
+            239.0,
+            31.0,
+            246.2
+          ],
+          "bbox_status": null,
+          "type": "section",
+          "cells": []
+        },
+        {
+          "row_id": "t0_r10",
+          "row_index": 10,
+          "label": "の",
+          "raw_label": "の",
+          "parent_path": [],
+          "bbox": [
+            25.0,
+            246.0,
+            31.0,
+            253.2
+          ],
+          "bbox_status": null,
+          "type": "section",
+          "cells": []
+        },
+        {
+          "row_id": "t0_r11",
+          "row_index": 11,
+          "label": "他",
+          "raw_label": "他",
+          "parent_path": [],
+          "bbox": [
+            25.0,
+            253.0,
+            690.5,
+            266.8
+          ],
+          "bbox_status": null,
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "t0_c0",
+              "period": null,
+              "role": "amount",
+              "raw": "－",
+              "value": null,
+              "status": "not_reported",
+              "bbox": [
+                233.0,
+                256.0,
+                242.0,
+                266.8
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf",
+              "notes": [
+                "role_default_amount"
+              ]
+            },
+            {
+              "column_index": 1,
+              "header_id": "t0_c1",
+              "period": null,
+              "role": "amount",
+              "raw": "10.25",
+              "value": 10.25,
+              "status": "observed",
+              "bbox": [
+                370.5,
+                256.0,
+                415.5,
+                266.8
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf",
+              "notes": [
+                "role_default_amount"
+              ]
+            },
+            {
+              "column_index": 2,
+              "header_id": "t0_c2",
+              "period": null,
+              "role": "amount",
+              "raw": "－",
+              "value": null,
+              "status": "not_reported",
+              "bbox": [
+                508.0,
+                256.0,
+                517.0,
+                266.8
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf",
+              "notes": [
+                "role_default_amount"
+              ]
+            },
+            {
+              "column_index": 3,
+              "header_id": "t0_c3",
+              "period": null,
+              "role": "amount",
+              "raw": "10.25",
+              "value": 10.25,
+              "status": "observed",
+              "bbox": [
+                645.5,
+                256.0,
+                690.5,
+                266.8
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf",
+              "notes": [
+                "role_default_amount"
+              ]
+            }
+          ]
+        },
+        {
+          "row_id": "t0_r12",
+          "row_index": 12,
+          "label": "資",
+          "raw_label": "資",
+          "parent_path": [],
+          "bbox": [
+            25.0,
+            304.0,
+            31.0,
+            311.2
+          ],
+          "bbox_status": null,
+          "type": "section",
+          "cells": []
+        },
+        {
+          "row_id": "t0_r13",
+          "row_index": 13,
+          "label": "産",
+          "raw_label": "産",
+          "parent_path": [],
+          "bbox": [
+            25.0,
+            311.0,
+            31.0,
+            318.2
+          ],
+          "bbox_status": null,
+          "type": "section",
+          "cells": []
+        },
+        {
+          "row_id": "t0_r14",
+          "row_index": 14,
+          "label": "合計",
+          "raw_label": "合計",
+          "parent_path": [],
+          "bbox": [
+            25.0,
+            318.0,
+            690.5,
+            332.2
+          ],
+          "bbox_status": null,
+          "type": "total",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "t0_c0",
+              "period": null,
+              "role": "amount",
+              "raw": "+1,234",
+              "value": 1234,
+              "status": "observed",
+              "bbox": [
+                233.0,
+                321.0,
+                287.0,
+                331.8
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf",
+              "notes": [
+                "role_default_amount"
+              ]
+            },
+            {
+              "column_index": 1,
+              "header_id": "t0_c1",
+              "period": null,
+              "role": "amount",
+              "raw": "100.0",
+              "value": 100.0,
+              "status": "observed",
+              "bbox": [
+                370.5,
+                321.0,
+                415.5,
+                331.8
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf",
+              "notes": [
+                "role_default_amount"
+              ]
+            },
+            {
+              "column_index": 2,
+              "header_id": "t0_c2",
+              "period": null,
+              "role": "amount",
+              "raw": "+1,234",
+              "value": 1234,
+              "status": "observed",
+              "bbox": [
+                508.0,
+                321.0,
+                562.0,
+                331.8
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf",
+              "notes": [
+                "role_default_amount"
+              ]
+            },
+            {
+              "column_index": 3,
+              "header_id": "t0_c3",
+              "period": null,
+              "role": "amount",
+              "raw": "100.0",
+              "value": 100.0,
+              "status": "observed",
+              "bbox": [
+                645.5,
+                321.0,
+                690.5,
+                331.8
+              ],
+              "backend": "native_grid",
+              "evidence_kind": "native_pdf",
+              "notes": [
+                "role_default_amount"
+              ]
+            }
+          ]
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "no_header_cells_found"
+        },
+        {
+          "severity": "warning",
+          "code": "unit_not_detected"
+        }
+      ],
+      "unit": null,
+      "capability_status": {
+        "cell_bbox": true,
+        "headers": "text+period+role+colspan"
+      }
+    }
+  ],
+  "capabilities": {
+    "cell_bbox": true,
+    "headers": "text+period+role+colspan",
+    "multi_table": true,
+    "ocr": false,
+    "n_columns": "any (right-aligned numeric)",
+    "hierarchy": "indentation heuristic, optional"
+  },
+  "provenance": {
+    "adapter": "adapters.canonical.convert",
+    "native_schema": "findoclens-0.1",
+    "native_backend": "native_grid",
+    "native_prediction_sha256": "b734e2f82d67b5a83e8ff55b143a1e1084eccc36bcd7dad090726dff0eb693ed",
+    "native_options": {},
+    "raw_artifacts": {},
+    "code": {
+      "commit": "afcfb5687e655e759432c8a7b8279c083ab272ea",
+      "code_dirty": false,
+      "code_dirty_paths": []
+    },
+    "lazy_load_on_first_call": false,
+    "backend_meta": {
+      "native_glyph_count": 102,
+      "column_alignment": "left",
+      "elapsed_ms": 1.7
+    },
+    "native_status": "ok",
+    "trial": "warm_3"
+  }
+}

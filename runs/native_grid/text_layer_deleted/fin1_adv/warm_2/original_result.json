@@ -1,0 +1,52 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "text_layer_deleted",
+  "source_sha256": "68be2ed8959f3a7bb98d28eb467aa970c25c6653ee8cfc55e3158ddc570de6c4",
+  "input_sha256": "68be2ed8959f3a7bb98d28eb467aa970c25c6653ee8cfc55e3158ddc570de6c4",
+  "backend": "native_grid",
+  "model_revision": "findoclens native_grid 0.1, PyMuPDF 1.27.2.3",
+  "page_bbox": [
+    0.0,
+    0.0,
+    595.2,
+    841.8
+  ],
+  "status": "abstained",
+  "backend_status": "failed",
+  "issues": [
+    {
+      "severity": "error",
+      "code": "needs_visual_fallback",
+      "message": "only 0 extractable glyphs; OCR/visual backend required"
+    }
+  ],
+  "tables": [],
+  "capabilities": {
+    "cell_bbox": true,
+    "headers": "text+period+role+colspan",
+    "multi_table": true,
+    "ocr": false,
+    "n_columns": "any (right-aligned numeric)",
+    "hierarchy": "indentation heuristic, optional"
+  },
+  "provenance": {
+    "adapter": "adapters.canonical.convert",
+    "native_schema": "findoclens-0.1",
+    "native_backend": "native_grid",
+    "native_prediction_sha256": "4f5d1f9d98daa6e9879c1b9789b7b40e3faec9b90bc0fefe98e59d31b2d04548",
+    "native_options": {},
+    "raw_artifacts": {},
+    "code": {
+      "commit": "afcfb5687e655e759432c8a7b8279c083ab272ea",
+      "code_dirty": false,
+      "code_dirty_paths": []
+    },
+    "lazy_load_on_first_call": false,
+    "backend_meta": {
+      "native_glyph_count": 0,
+      "elapsed_ms": 0.9
+    },
+    "native_status": "failed",
+    "trial": "warm_2"
+  }
+}

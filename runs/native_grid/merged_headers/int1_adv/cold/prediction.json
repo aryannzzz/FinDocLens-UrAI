@@ -1,0 +1,207 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "merged_headers",
+  "source_sha256": "903bb51b6c71118d4f59f427fe0d159e9178bd67a4cec93a637ece53eaf79806",
+  "input_sha256": "903bb51b6c71118d4f59f427fe0d159e9178bd67a4cec93a637ece53eaf79806",
+  "backend": "native_grid",
+  "model_revision": "findoclens native_grid 0.1, PyMuPDF 1.27.2.3",
+  "page_bbox": [
+    0.0,
+    0.0,
+    800.0,
+    430.0
+  ],
+  "status": "abstained",
+  "backend_status": "no_tables",
+  "issues": [
+    {
+      "severity": "info",
+      "code": "unassigned_numeric_tokens",
+      "count": 16
+    },
+    {
+      "severity": "warning",
+      "code": "no_tables_found",
+      "message": "text layer present but no right-aligned multi-column numeric table found"
+    },
+    {
+      "code": "empty_extraction",
+      "severity": "error"
+    }
+  ],
+  "tables": [],
+  "capabilities": {
+    "cell_bbox": true,
+    "headers": "text+period+role+colspan",
+    "multi_table": true,
+    "ocr": false,
+    "n_columns": "any (right-aligned numeric)",
+    "hierarchy": "indentation heuristic, optional"
+  },
+  "provenance": {
+    "adapter": "adapters.canonical.convert",
+    "native_schema": "findoclens-0.1",
+    "native_backend": "native_grid",
+    "native_prediction_sha256": "81a47c3bb7623464cb0c3ea1e4478f3f20f4d3ea14dfc58720ac949a835d87b1",
+    "native_options": {},
+    "raw_artifacts": {
+      "native_findoclens_prediction.json": {
+        "path": "raw/cold/native_findoclens_prediction.json",
+        "sha256": "ceb799cdd4f742593076147f6171864270f5ba70b06d939bb759836167755178"
+      }
+    },
+    "lazy_load_on_first_call": false,
+    "backend_meta": {
+      "native_glyph_count": 109,
+      "unassigned_numeric_tokens": [
+        {
+          "raw": "1,234",
+          "bbox": [
+            233.0,
+            126.0,
+            278.0,
+            136.8
+          ]
+        },
+        {
+          "raw": "+2.5",
+          "bbox": [
+            370.5,
+            126.0,
+            406.5,
+            136.8
+          ]
+        },
+        {
+          "raw": "1,234",
+          "bbox": [
+            508.0,
+            126.0,
+            553.0,
+            136.8
+          ]
+        },
+        {
+          "raw": "+2.5",
+          "bbox": [
+            645.5,
+            126.0,
+            681.5,
+            136.8
+          ]
+        },
+        {
+          "raw": "△0",
+          "bbox": [
+            233.0,
+            191.0,
+            251.0,
+            201.8
+          ]
+        },
+        {
+          "raw": "－",
+          "bbox": [
+            370.5,
+            191.0,
+            379.5,
+            201.8
+          ]
+        },
+        {
+          "raw": "△0",
+          "bbox": [
+            508.0,
+            191.0,
+            526.0,
+            201.8
+          ]
+        },
+        {
+          "raw": "－",
+          "bbox": [
+            645.5,
+            191.0,
+            654.5,
+            201.8
+          ]
+        },
+        {
+          "raw": "－",
+          "bbox": [
+            233.0,
+            256.0,
+            242.0,
+            266.8
+          ]
+        },
+        {
+          "raw": "10.25",
+          "bbox": [
+            370.5,
+            256.0,
+            415.5,
+            266.8
+          ]
+        },
+        {
+          "raw": "－",
+          "bbox": [
+            508.0,
+            256.0,
+            517.0,
+            266.8
+          ]
+        },
+        {
+          "raw": "10.25",
+          "bbox": [
+            645.5,
+            256.0,
+            690.5,
+            266.8
+          ]
+        },
+        {
+          "raw": "+1,234",
+          "bbox": [
+            233.0,
+            321.0,
+            287.0,
+            331.8
+          ]
+        },
+        {
+          "raw": "100.0",
+          "bbox": [
+            370.5,
+            321.0,
+            415.5,
+            331.8
+          ]
+        },
+        {
+          "raw": "+1,234",
+          "bbox": [
+            508.0,
+            321.0,
+            562.0,
+            331.8
+          ]
+        },
+        {
+          "raw": "100.0",
+          "bbox": [
+            645.5,
+            321.0,
+            690.5,
+            331.8
+          ]
+        }
+      ],
+      "elapsed_ms": 1.5
+    },
+    "native_status": "no_tables",
+    "trial": "cold"
+  }
+}

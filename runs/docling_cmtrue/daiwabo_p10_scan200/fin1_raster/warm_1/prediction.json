@@ -1,0 +1,109 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "daiwabo_p10_scan200",
+  "source_sha256": "87bacae538ff048d3fba1361a3cd84cb7f2c55318c577fee20ad7553850132cd",
+  "input_sha256": "87bacae538ff048d3fba1361a3cd84cb7f2c55318c577fee20ad7553850132cd",
+  "backend": "docling_cmtrue",
+  "model_revision": null,
+  "page_bbox": [
+    0.0,
+    0.0,
+    960.0,
+    540.0
+  ],
+  "status": "abstained",
+  "backend_status": "failed",
+  "issues": [
+    {
+      "severity": "error",
+      "code": "table_without_numeric_cells",
+      "tables": [
+        "t0"
+      ]
+    },
+    {
+      "code": "empty_extraction",
+      "severity": "error"
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "t0",
+      "page": 1,
+      "bbox": [
+        47.09,
+        65.87,
+        913.15,
+        523.73
+      ],
+      "reading_order": 0,
+      "headers": [],
+      "rows": [],
+      "issues": [
+        {
+          "severity": "info",
+          "code": "hierarchy_not_inferred",
+          "message": "Docling/TableFormer output carries no account hierarchy; parent_path left empty"
+        },
+        {
+          "severity": "warning",
+          "code": "no_header_cells_found"
+        }
+      ],
+      "unit": null,
+      "capability_status": {
+        "cell_bbox": true,
+        "headers": "tableformer column_header flags",
+        "raw_grid": "0x0"
+      },
+      "native_grid_cells": 0
+    }
+  ],
+  "capabilities": {
+    "cell_bbox": true,
+    "headers": "tableformer column_header flags",
+    "multi_table": true,
+    "ocr": false,
+    "n_columns": "any",
+    "cell_matching": true
+  },
+  "provenance": {
+    "adapter": "adapters.canonical.convert",
+    "native_schema": "findoclens-0.1",
+    "native_backend": "docling",
+    "native_prediction_sha256": "c7010d3b2e5bd4634bf2bdb278fca928bd8038f77504e0b438945a5e6bff0929",
+    "native_options": {
+      "cell_matching": true
+    },
+    "raw_artifacts": {},
+    "code": {
+      "commit": "afcfb5687e655e759432c8a7b8279c083ab272ea",
+      "code_dirty": true,
+      "code_dirty_paths": [
+        "?? adapters/auto.py"
+      ]
+    },
+    "lazy_load_on_first_call": true,
+    "backend_meta": {
+      "device": "cpu",
+      "converter_load_ms": 0.0,
+      "convert_ms": 6204.5,
+      "versions": {
+        "docling": "2.141.0",
+        "docling-core": "2.103.1",
+        "docling-ibm-models": "4.0.4",
+        "docling-parse": "7.22.4",
+        "torch": "2.14.1+cpu",
+        "rapidocr": "3.10.0"
+      },
+      "table_structure_mode": "accurate",
+      "do_cell_matching": true,
+      "ocr_engine": null,
+      "ocr_model_size": null,
+      "docling_status": "ConversionStatus.SUCCESS",
+      "elapsed_ms": 6210.1
+    },
+    "native_status": "failed",
+    "trial": "warm_1"
+  }
+}
