@@ -439,6 +439,11 @@ def build_table(t, ti, rows, cols, words, all_tables, W):
         typ = "section" if not has_val else ("total" if re.search(r"合計$|総計$|^計$|小計$", label) else "item")
         row = Row(ri, label or None, label or None, [], _union([w["bbox"] for w in s["label"] + s["nums"] + trailing]),
                   typ, cells)
+        if has_val and typ != "section":
+            absent = [c.column_index for c in cells if c.status == "absent_text_cell"]
+            if absent:
+                tbl.issues.append({"severity": "warning", "code": "partial_data_row", "row_index": ri, "label": label,
+                                   "absent_columns": absent})
         if lb:
             label_x.append((ri, lb[0]))
         if not label:

@@ -86,6 +86,32 @@ class Raster(unittest.TestCase):
             self.assertTrue(any(i["code"] == "needs_visual_fallback" for i in p.issues))
 
 
+class Perturbations(unittest.TestCase):
+    """Same-source transformations from the frozen baseline benchmark (not independent-template evidence)."""
+    @classmethod
+    def setUpClass(cls):
+        sys.path.insert(0, str(ROOT / "baseline_v2"))
+        import benchmark
+        cls.b = benchmark
+
+    def test_missing_cell_is_reported_not_dropped(self):
+        p = native_grid.extract(self.b.remove_one_cell(), 0).to_dict()
+        t = p["tables"][0]
+        row = next(r for r in t["rows"] if r["label"] == "売掛金")
+        self.assertEqual(row["cells"][0]["status"], "absent_text_cell")
+        self.assertTrue(any(i["code"] == "partial_data_row" and i["label"] == "売掛金" for i in t["issues"]))
+
+    def test_lost_negative_sign_raises_arithmetic_alarm(self):
+        p = validate_prediction(native_grid.extract(self.b.remove_negative_marker(), 0).to_dict())
+        self.assertTrue(any(i["code"] == "arithmetic_violation" for i in p["issues"]))
+
+    def test_scaled_and_noisy_pages_keep_all_74_cells(self):
+        for v in (self.b.make_variant("scaled_79", scale=.79, offset=(100, 45)),
+                  self.b.make_variant("distractor_footer", scale=.91, offset=(90, 33), with_noise=True)):
+            s = score_against_gold(native_grid.extract(v, 0).to_dict())
+            self.assertEqual(s["cells_correct"], 74)
+
+
 @unittest.skipUnless(ELECOM.exists(), "ELECOM holdout PDF not downloaded")
 class Elecom(unittest.TestCase):
     def test_two_columns_hierarchy_and_unit(self):
