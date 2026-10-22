@@ -11,6 +11,7 @@ recorded as results, not hidden. Metrics:
 """
 import argparse
 import json
+import types
 import subprocess
 import sys
 from collections import Counter
@@ -37,19 +38,19 @@ CONFIGS = [  # name, backend, extra args, variants
 ]
 
 
-def run_one(cfg, doc, variant, repeat, outdir="runs"):
+def run_one(cfg, doc, variant, repeat, outdir="runs", rescore=False):
     name, backend, extra, _ = cfg
     pdf, page = DOCS[doc]
     if variant == "raster200":
         pdf, page = raster_pdf(pdf, page, 200, doc), 0
     doc_id = f"{doc}_{variant}"
     if backend == "auto":
-        return run_auto(name, doc, variant, pdf, page, extra, outdir)
+        return run_auto(name, doc, variant, pdf, page, extra, outdir, rescore)
     py = MODEL_PYTHON if backend in ("docling", "ocr_rapid") else sys.executable
     cmd = [py, "-m", "findoclens.runner", backend, str(pdf), str(page), "--out", outdir, "--repeat", str(repeat),
            "--doc-id", doc_id, *extra]
     try:
-        r = subprocess.run(cmd, capture_output=True, text=True, cwd=ROOT, timeout=2400, env={"PYTHONPATH": str(ROOT), "PATH": "/usr/bin:/bin"})
+        r = types.SimpleNamespace(returncode=0, stderr="", stdout="") if rescore else subprocess.run(cmd, capture_output=True, text=True, cwd=ROOT, timeout=2400, env={"PYTHONPATH": str(ROOT), "PATH": "/usr/bin:/bin"})
     except subprocess.TimeoutExpired:
         return {"config": name, "doc": doc, "variant": variant, "status": "timeout"}
     tag = None
@@ -77,14 +78,20 @@ def run_one(cfg, doc, variant, repeat, outdir="runs"):
     return row
 
 
-def run_auto(name, doc, variant, pdf, page, extra, outdir):
+def run_auto(name, doc, variant, pdf, page, extra, outdir, rescore=False):
     import time
     out_root = f"{outdir}/{name}"
     t0 = time.perf_counter()
-    r = subprocess.run([sys.executable, "-m", "findoclens", "parse", str(pdf), "--page", str(page), "--backend", "auto",
-                        "--out", out_root, "--format", "json,md", *extra], capture_output=True, text=True, cwd=ROOT, timeout=2400,
-                       env={**__import__("os").environ, "PYTHONPATH": str(ROOT)})
+    if rescore:
+        r = types.SimpleNamespace(stderr="", stdout="")
+    else:
+        r = subprocess.run([sys.executable, "-m", "findoclens", "parse", str(pdf), "--page", str(page), "--backend", "auto",
+                            "--out", out_root, "--format", "json,md", *extra], capture_output=True, text=True, cwd=ROOT, timeout=2400,
+                           env={**__import__("os").environ, "PYTHONPATH": str(ROOT)})
     wall = round((time.perf_counter() - t0) * 1000, 1)
+    if rescore:
+        old = ROOT / out_root / "auto" / f"{Path(pdf).stem}_p{page}" / "prediction.json"
+        wall = (json.loads(old.read_text())["meta"]["routing"]["elapsed_ms"]) if old.exists() else None
     d = ROOT / out_root / "auto" / f"{Path(pdf).stem}_p{page}"
     if not (d / "prediction.json").exists():
         return {"config": name, "doc": doc, "variant": variant, "status": "runner_crash", "error": (r.stderr or r.stdout)[-600:]}
@@ -121,6 +128,7 @@ def main():
     ap.add_argument("--repeat", type=int, default=3)
     ap.add_argument("--out", default="runs")
     ap.add_argument("--summary", default="runs/summary")
+    ap.add_argument("--rescore", action="store_true", help="recompute metrics from stored predictions; run nothing")
     ap.add_argument("--variants", default="", help="restrict to these variants (digital,raster200)")
     a = ap.parse_args()
     only = set(filter(None, a.only.split(",")))
@@ -133,7 +141,7 @@ def main():
                 if a.variants and variant not in a.variants.split(","):
                     continue
                 print("running", cfg[0], doc, variant, flush=True)
-                row = run_one(cfg, doc, variant, a.repeat, a.out)
+                row = run_one(cfg, doc, variant, a.repeat, a.out, a.rescore)
                 print("  ->", {k: row.get(k) for k in ("status", "tables", "rows", "token_recall", "cold_ms", "warm_ms_median", "error")}, flush=True)
                 rows.append(row)
     sj = Path(a.summary + ".json")

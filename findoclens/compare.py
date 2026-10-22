@@ -139,11 +139,19 @@ def compare_pair(a, b):
 
 
 def text_layer_reference(pdf, page_index, footer_frac=0.06):
-    """Independent-of-table-assembly reference: every numeric word in the PDF text layer except the bottom
-    `footer_frac` of the page (page-number zone; declared policy). Valid for digital pages and for
-    rasterisations of them. NOT human gold: it says nothing about structure, labels, roles or hierarchy."""
+    """Independent-of-table-assembly reference: every numeric word in the PDF text layer, except text rows in the bottom
+    `footer_frac` of the page whose numeric words are all <=3 characters (page numbers such as "- 4 -"; declared policy). Valid for digital pages and for rasterisations of them. NOT human gold: it says nothing about
+    structure, labels, roles or hierarchy."""
     import fitz
-    from .backends.native_grid import read_words
+    from .backends.native_grid import read_words, group_rows
     page = fitz.open(str(pdf))[page_index]
     H = page.rect.height
-    return Counter(norm_raw(w["text"]) for w in read_words(page) if w["numeric"] and w["bbox"][3] < H * (1 - footer_frac))
+    out = Counter()
+    for row in group_rows(read_words(page)):
+        nums = [w for w in row["words"] if w["numeric"]]
+        in_footer = bool(nums) and all(w["bbox"][3] >= H * (1 - footer_frac) for w in nums)
+        if in_footer and all(len(w["text"]) <= 3 for w in nums):      # "- 4 -", "9": page numbers
+            continue
+        for w in nums:
+            out[norm_raw(w["text"])] += 1
+    return out

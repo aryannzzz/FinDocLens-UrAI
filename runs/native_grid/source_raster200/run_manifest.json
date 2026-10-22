@@ -1,0 +1,77 @@
+{
+ "run_id": "3927ea08b9ab",
+ "timestamp_utc": "2026-10-22T10:16:42+00:00",
+ "git_commit": "a76d46c366f42f666a38309c7460fd76b9394100+dirty",
+ "source_url": null,
+ "source_sha256": "a62ee265b8d98024b336e04d454631538152b14e20ebaeaceaafaee66306b0e3",
+ "page_index": 0,
+ "split_label": null,
+ "backend": "native_grid",
+ "model_revision": "findoclens native_grid 0.1, PyMuPDF 1.27.2.3",
+ "options": {},
+ "tag": null,
+ "package_versions": {
+  "PyMuPDF": "1.27.2.3",
+  "docling": null,
+  "docling-core": null,
+  "docling-ibm-models": null,
+  "docling-parse": null,
+  "torch": "2.8.0",
+  "torchvision": "0.23.0",
+  "rapidocr": null,
+  "onnxruntime": "1.27.0",
+  "easyocr": null,
+  "paddleocr": null,
+  "paddlepaddle": null,
+  "transformers": "4.49.0",
+  "numpy": "2.2.6",
+  "pdfplumber": null
+ },
+ "hardware": {
+  "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+  "cpu_threads": 12,
+  "mem_MB": {
+   "MemTotal": 15676,
+   "MemFree": 1827,
+   "MemAvailable": 3591
+  },
+  "gpu": {
+   "nvidia_smi": "unavailable (exit 9): NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running."
+  },
+  "platform": "Linux-7.0.11-76070011-generic-x86_64-with-glibc2.35",
+  "python": "3.13.5"
+ },
+ "device": "cpu",
+ "timings": [
+  {
+   "run": 1,
+   "kind": "cold",
+   "time_ms": 39.0
+  },
+  {
+   "run": 2,
+   "kind": "warm",
+   "time_ms": 27.4
+  },
+  {
+   "run": 3,
+   "kind": "warm",
+   "time_ms": 22.4
+  }
+ ],
+ "cold_time_ms": 39.0,
+ "warm_time_ms_median": 27.4,
+ "peak_memory_mb": {
+  "process_peak_rss_mb": 97.3,
+  "gpu_peak_allocated_mb": null
+ },
+ "status": "failed",
+ "error_text": null,
+ "prediction_path": "runs/native_grid/source_raster200/prediction.json",
+ "metrics_path": null,
+ "human_audit_status": "none: automatic extraction, not human-verified",
+ "backend_meta": {
+  "native_glyph_count": 0,
+  "elapsed_ms": 22.3
+ }
+}

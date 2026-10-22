@@ -1,0 +1,916 @@
+[
+ {
+  "config": "native_v2",
+  "doc": "source",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 1,
+  "rows": 37,
+  "numeric_cells": 74,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 74,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {
+   "within_rounding": 5,
+   "skipped": 2
+  },
+  "cold_ms": 44.8,
+  "warm_ms_median": 19.1,
+  "peak_rss_mb": 57.7,
+  "dir": "runs/native_v2/source_digital",
+  "issues": [],
+  "dev_gold_cells_correct": "74/74"
+ },
+ {
+  "config": "native_v2",
+  "doc": "source",
+  "variant": "raster200",
+  "status": "failed",
+  "tables": 0,
+  "rows": 0,
+  "numeric_cells": 0,
+  "token_recall": 0.0,
+  "token_precision": 0.0,
+  "ref_tokens": 74,
+  "missing_sample": [
+   "1,019,663",
+   "1,123",
+   "1,123",
+   "1,352,610",
+   "1,429,094",
+   "1,670,426",
+   "1,757,841",
+   "1,880,082"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 150.0,
+  "warm_ms_median": 128.1,
+  "peak_rss_mb": 143.8,
+  "dir": "runs/native_v2/source_raster200",
+  "issues": [
+   "needs_visual_fallback"
+  ],
+  "dev_gold_cells_correct": "0/74"
+ },
+ {
+  "config": "native_v2",
+  "doc": "elecom",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 1,
+  "rows": 28,
+  "numeric_cells": 56,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 56,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {
+   "within_rounding": 8,
+   "violation": 2
+  },
+  "cold_ms": 59.4,
+  "warm_ms_median": 18.6,
+  "peak_rss_mb": 92.5,
+  "dir": "runs/native_v2/elecom_digital",
+  "issues": [
+   "arithmetic_violation",
+   "financial_reconciliation_failure",
+   "unit_not_detected"
+  ]
+ },
+ {
+  "config": "native_v2",
+  "doc": "elecom",
+  "variant": "raster200",
+  "status": "failed",
+  "tables": 0,
+  "rows": 0,
+  "numeric_cells": 0,
+  "token_recall": 0.0,
+  "token_precision": 0.0,
+  "ref_tokens": 56,
+  "missing_sample": [
+   "1,149",
+   "1,180",
+   "1,277",
+   "1,453",
+   "1,454",
+   "1,462",
+   "1,558",
+   "1,603"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 143.0,
+  "warm_ms_median": 183.7,
+  "peak_rss_mb": 143.1,
+  "dir": "runs/native_v2/elecom_raster200",
+  "issues": [
+   "needs_visual_fallback"
+  ]
+ },
+ {
+  "config": "native_v2",
+  "doc": "daiwabo",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 1,
+  "rows": 9,
+  "numeric_cells": 18,
+  "token_recall": 0.2857,
+  "token_precision": 1.0,
+  "ref_tokens": 63,
+  "missing_sample": [
+   "+1,280",
+   "+1,554",
+   "+10,745",
+   "+12,420",
+   "+15,124",
+   "+17,426",
+   "+19,155",
+   "+19,155"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 68.2,
+  "warm_ms_median": 45.6,
+  "peak_rss_mb": 92.6,
+  "dir": "runs/native_v2/daiwabo_digital",
+  "issues": [
+   "missing_period_header",
+   "unit_not_detected"
+  ]
+ },
+ {
+  "config": "native_v2",
+  "doc": "daiwabo",
+  "variant": "raster200",
+  "status": "failed",
+  "tables": 0,
+  "rows": 0,
+  "numeric_cells": 0,
+  "token_recall": 0.0,
+  "token_precision": 0.0,
+  "ref_tokens": 63,
+  "missing_sample": [
+   "+1,280",
+   "+1,554",
+   "+10,745",
+   "+12,420",
+   "+15,124",
+   "+17,426",
+   "+19,155",
+   "+19,155"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 161.2,
+  "warm_ms_median": 139.3,
+  "peak_rss_mb": 146.5,
+  "dir": "runs/native_v2/daiwabo_raster200",
+  "issues": [
+   "needs_visual_fallback"
+  ]
+ },
+ {
+  "config": "native_grid",
+  "doc": "source",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 1,
+  "rows": 37,
+  "numeric_cells": 74,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 74,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {
+   "within_rounding": 5,
+   "skipped": 1
+  },
+  "cold_ms": 25.5,
+  "warm_ms_median": 35.0,
+  "peak_rss_mb": 97.3,
+  "dir": "runs/native_grid/source_digital",
+  "issues": [
+   "unassigned_numeric_tokens"
+  ],
+  "dev_gold_cells_correct": "74/74"
+ },
+ {
+  "config": "native_grid",
+  "doc": "source",
+  "variant": "raster200",
+  "status": "failed",
+  "tables": 0,
+  "rows": 0,
+  "numeric_cells": 0,
+  "token_recall": 0.0,
+  "token_precision": 0.0,
+  "ref_tokens": 74,
+  "missing_sample": [
+   "1,019,663",
+   "1,123",
+   "1,123",
+   "1,352,610",
+   "1,429,094",
+   "1,670,426",
+   "1,757,841",
+   "1,880,082"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 39.0,
+  "warm_ms_median": 27.4,
+  "peak_rss_mb": 97.3,
+  "dir": "runs/native_grid/source_raster200",
+  "issues": [
+   "needs_visual_fallback"
+  ],
+  "dev_gold_cells_correct": "0/74"
+ },
+ {
+  "config": "native_grid",
+  "doc": "elecom",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 1,
+  "rows": 28,
+  "numeric_cells": 56,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 56,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {
+   "within_rounding": 8
+  },
+  "cold_ms": 49.6,
+  "warm_ms_median": 12.7,
+  "peak_rss_mb": 97.3,
+  "dir": "runs/native_grid/elecom_digital",
+  "issues": [
+   "unassigned_numeric_tokens"
+  ]
+ },
+ {
+  "config": "native_grid",
+  "doc": "elecom",
+  "variant": "raster200",
+  "status": "failed",
+  "tables": 0,
+  "rows": 0,
+  "numeric_cells": 0,
+  "token_recall": 0.0,
+  "token_precision": 0.0,
+  "ref_tokens": 56,
+  "missing_sample": [
+   "1,149",
+   "1,180",
+   "1,277",
+   "1,453",
+   "1,454",
+   "1,462",
+   "1,558",
+   "1,603"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 36.1,
+  "warm_ms_median": 28.3,
+  "peak_rss_mb": 97.3,
+  "dir": "runs/native_grid/elecom_raster200",
+  "issues": [
+   "needs_visual_fallback"
+  ]
+ },
+ {
+  "config": "native_grid",
+  "doc": "daiwabo",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 3,
+  "rows": 21,
+  "numeric_cells": 63,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 63,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {
+   "pass": 14,
+   "within_rounding": 5
+  },
+  "cold_ms": 52.7,
+  "warm_ms_median": 47.9,
+  "peak_rss_mb": 97.3,
+  "dir": "runs/native_grid/daiwabo_digital",
+  "issues": [
+   "unassigned_numeric_tokens"
+  ]
+ },
+ {
+  "config": "native_grid",
+  "doc": "daiwabo",
+  "variant": "raster200",
+  "status": "failed",
+  "tables": 0,
+  "rows": 0,
+  "numeric_cells": 0,
+  "token_recall": 0.0,
+  "token_precision": 0.0,
+  "ref_tokens": 63,
+  "missing_sample": [
+   "+1,280",
+   "+1,554",
+   "+10,745",
+   "+12,420",
+   "+15,124",
+   "+17,426",
+   "+19,155",
+   "+19,155"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 33.8,
+  "warm_ms_median": 33.1,
+  "peak_rss_mb": 100.8,
+  "dir": "runs/native_grid/daiwabo_raster200",
+  "issues": [
+   "needs_visual_fallback"
+  ]
+ },
+ {
+  "config": "docling_cmtrue",
+  "doc": "source",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 1,
+  "rows": 37,
+  "numeric_cells": 74,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 74,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 22633.3,
+  "warm_ms_median": 13483.9,
+  "peak_rss_mb": 1465.5,
+  "dir": "runs/docling_cmtrue/source_digital",
+  "issues": [],
+  "dev_gold_cells_correct": "74/74"
+ },
+ {
+  "config": "docling_cmtrue",
+  "doc": "source",
+  "variant": "raster200",
+  "status": "failed",
+  "tables": 1,
+  "rows": 0,
+  "numeric_cells": 0,
+  "token_recall": 0.0,
+  "token_precision": 0.0,
+  "ref_tokens": 74,
+  "missing_sample": [
+   "1,019,663",
+   "1,123",
+   "1,123",
+   "1,352,610",
+   "1,429,094",
+   "1,670,426",
+   "1,757,841",
+   "1,880,082"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 22859.3,
+  "warm_ms_median": 12378.8,
+  "peak_rss_mb": 1533.5,
+  "dir": "runs/docling_cmtrue/source_raster200",
+  "issues": [
+   "table_without_numeric_cells"
+  ],
+  "dev_gold_cells_correct": "0/74"
+ },
+ {
+  "config": "docling_cmtrue",
+  "doc": "elecom",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 1,
+  "rows": 28,
+  "numeric_cells": 56,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 56,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 17469.2,
+  "warm_ms_median": 11051.3,
+  "peak_rss_mb": 1341.1,
+  "dir": "runs/docling_cmtrue/elecom_digital",
+  "issues": []
+ },
+ {
+  "config": "docling_cmtrue",
+  "doc": "elecom",
+  "variant": "raster200",
+  "status": "failed",
+  "tables": 1,
+  "rows": 0,
+  "numeric_cells": 0,
+  "token_recall": 0.0,
+  "token_precision": 0.0,
+  "ref_tokens": 56,
+  "missing_sample": [
+   "1,149",
+   "1,180",
+   "1,277",
+   "1,453",
+   "1,454",
+   "1,462",
+   "1,558",
+   "1,603"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 17363.3,
+  "warm_ms_median": 13918.1,
+  "peak_rss_mb": 1600.4,
+  "dir": "runs/docling_cmtrue/elecom_raster200",
+  "issues": [
+   "table_without_numeric_cells"
+  ]
+ },
+ {
+  "config": "docling_cmtrue",
+  "doc": "daiwabo",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 1,
+  "rows": 13,
+  "numeric_cells": 59,
+  "token_recall": 0.9365,
+  "token_precision": 1.0,
+  "ref_tokens": 63,
+  "missing_sample": [
+   "+22,808",
+   "+30,233",
+   "+31,130",
+   "△43,010"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 17474.7,
+  "warm_ms_median": 9854.3,
+  "peak_rss_mb": 1485.6,
+  "dir": "runs/docling_cmtrue/daiwabo_digital",
+  "issues": []
+ },
+ {
+  "config": "docling_cmtrue",
+  "doc": "daiwabo",
+  "variant": "raster200",
+  "status": "failed",
+  "tables": 1,
+  "rows": 0,
+  "numeric_cells": 0,
+  "token_recall": 0.0,
+  "token_precision": 0.0,
+  "ref_tokens": 63,
+  "missing_sample": [
+   "+1,280",
+   "+1,554",
+   "+10,745",
+   "+12,420",
+   "+15,124",
+   "+17,426",
+   "+19,155",
+   "+19,155"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 16952.6,
+  "warm_ms_median": 11123.1,
+  "peak_rss_mb": 1599.8,
+  "dir": "runs/docling_cmtrue/daiwabo_raster200",
+  "issues": [
+   "table_without_numeric_cells"
+  ]
+ },
+ {
+  "config": "docling_cmfalse",
+  "doc": "source",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 1,
+  "rows": 37,
+  "numeric_cells": 74,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 74,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 85369.3,
+  "warm_ms_median": 8686.5,
+  "peak_rss_mb": 1387.5,
+  "dir": "runs/docling_cmfalse/source_digital",
+  "issues": [],
+  "dev_gold_cells_correct": "74/74"
+ },
+ {
+  "config": "docling_cmfalse",
+  "doc": "elecom",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 1,
+  "rows": 28,
+  "numeric_cells": 56,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 56,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 12654.3,
+  "warm_ms_median": 7115.4,
+  "peak_rss_mb": 1343.9,
+  "dir": "runs/docling_cmfalse/elecom_digital",
+  "issues": []
+ },
+ {
+  "config": "docling_cmfalse",
+  "doc": "daiwabo",
+  "variant": "digital",
+  "status": "failed",
+  "tables": 1,
+  "rows": 0,
+  "numeric_cells": 0,
+  "token_recall": 0.0,
+  "token_precision": 0.0,
+  "ref_tokens": 63,
+  "missing_sample": [
+   "+1,280",
+   "+1,554",
+   "+10,745",
+   "+12,420",
+   "+15,124",
+   "+17,426",
+   "+19,155",
+   "+19,155"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 12118.5,
+  "warm_ms_median": 7532.0,
+  "peak_rss_mb": 1381.8,
+  "dir": "runs/docling_cmfalse/daiwabo_digital",
+  "issues": [
+   "table_without_numeric_cells"
+  ]
+ },
+ {
+  "config": "docling_ocr_rapid",
+  "doc": "source",
+  "variant": "raster200",
+  "status": "ok",
+  "tables": 1,
+  "rows": 37,
+  "numeric_cells": 72,
+  "token_recall": 0.973,
+  "token_precision": 1.0,
+  "ref_tokens": 74,
+  "missing_sample": [
+   "－",
+   "－"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 24808.7,
+  "warm_ms_median": 15780.4,
+  "peak_rss_mb": 2248.4,
+  "dir": "runs/ocr_rapid_rapid/source_raster200",
+  "issues": [],
+  "dev_gold_cells_correct": "62/74"
+ },
+ {
+  "config": "docling_ocr_rapid",
+  "doc": "elecom",
+  "variant": "raster200",
+  "status": "ok",
+  "tables": 1,
+  "rows": 28,
+  "numeric_cells": 56,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 56,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 21786.2,
+  "warm_ms_median": 14743.2,
+  "peak_rss_mb": 2187.8,
+  "dir": "runs/ocr_rapid_rapid/elecom_raster200",
+  "issues": []
+ },
+ {
+  "config": "docling_ocr_rapid",
+  "doc": "daiwabo",
+  "variant": "raster200",
+  "status": "ok",
+  "tables": 1,
+  "rows": 13,
+  "numeric_cells": 59,
+  "token_recall": 0.9365,
+  "token_precision": 1.0,
+  "ref_tokens": 63,
+  "missing_sample": [
+   "+22,808",
+   "+30,233",
+   "+31,130",
+   "△43,010"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 22234.6,
+  "warm_ms_median": 13752.5,
+  "peak_rss_mb": 2129.7,
+  "dir": "runs/ocr_rapid_rapid/daiwabo_raster200",
+  "issues": []
+ },
+ {
+  "config": "auto",
+  "doc": "source",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 1,
+  "rows": 37,
+  "numeric_cells": 74,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 74,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {
+   "within_rounding": 5,
+   "skipped": 1
+  },
+  "cold_ms": 45.1,
+  "warm_ms_median": null,
+  "peak_rss_mb": null,
+  "dir": "runs/auto/auto/source_p0",
+  "issues": [
+   "unassigned_numeric_tokens"
+  ],
+  "backend_used": "auto",
+  "routing": [
+   "native_grid clean: accepted without model backend (route=native_accept)"
+  ],
+  "dev_gold_cells_correct": "74/74"
+ },
+ {
+  "config": "auto",
+  "doc": "source",
+  "variant": "raster200",
+  "status": "needs_visual_review",
+  "tables": 1,
+  "rows": 37,
+  "numeric_cells": 72,
+  "token_recall": 0.973,
+  "token_precision": 1.0,
+  "ref_tokens": 74,
+  "missing_sample": [
+   "－",
+   "－"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 25893.2,
+  "warm_ms_median": null,
+  "peak_rss_mb": null,
+  "dir": "runs/auto/auto/source_raster200_p0",
+  "issues": [
+   "single_visual_source"
+  ],
+  "backend_used": "auto(ocr_rapid)",
+  "routing": [
+   "raster_like_page: native text absent -> visual backend required",
+   "accepted ocr_rapid output as `needs_visual_review` (arithmetic checks absent or failing)"
+  ],
+  "dev_gold_cells_correct": "62/74"
+ },
+ {
+  "config": "auto",
+  "doc": "elecom",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 1,
+  "rows": 28,
+  "numeric_cells": 56,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 56,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {
+   "within_rounding": 8
+  },
+  "cold_ms": 69.7,
+  "warm_ms_median": null,
+  "peak_rss_mb": null,
+  "dir": "runs/auto/auto/elecom_p8",
+  "issues": [
+   "unassigned_numeric_tokens"
+  ],
+  "backend_used": "auto",
+  "routing": [
+   "native_grid clean: accepted without model backend (route=native_accept)"
+  ]
+ },
+ {
+  "config": "auto",
+  "doc": "elecom",
+  "variant": "raster200",
+  "status": "needs_visual_review",
+  "tables": 1,
+  "rows": 28,
+  "numeric_cells": 56,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 56,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 24811.2,
+  "warm_ms_median": null,
+  "peak_rss_mb": null,
+  "dir": "runs/auto/auto/elecom_raster200_p0",
+  "issues": [
+   "single_visual_source"
+  ],
+  "backend_used": "auto(ocr_rapid)",
+  "routing": [
+   "raster_like_page: native text absent -> visual backend required",
+   "accepted ocr_rapid output as `needs_visual_review` (arithmetic checks absent or failing)"
+  ]
+ },
+ {
+  "config": "auto",
+  "doc": "daiwabo",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 3,
+  "rows": 21,
+  "numeric_cells": 63,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 63,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {
+   "pass": 14,
+   "within_rounding": 5
+  },
+  "cold_ms": 87.7,
+  "warm_ms_median": null,
+  "peak_rss_mb": null,
+  "dir": "runs/auto/auto/daiwabo_p9",
+  "issues": [
+   "unassigned_numeric_tokens"
+  ],
+  "backend_used": "auto",
+  "routing": [
+   "native_v2 disagrees with native_grid (9 mismatches, 1 vs 3 tables); v2 labels contain amounts (false assurance)",
+   "native_grid clean: accepted without model backend (route=native_accept)"
+  ]
+ },
+ {
+  "config": "auto",
+  "doc": "daiwabo",
+  "variant": "raster200",
+  "status": "needs_visual_review",
+  "tables": 1,
+  "rows": 13,
+  "numeric_cells": 59,
+  "token_recall": 0.9365,
+  "token_precision": 1.0,
+  "ref_tokens": 63,
+  "missing_sample": [
+   "+22,808",
+   "+30,233",
+   "+31,130",
+   "△43,010"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 23851.0,
+  "warm_ms_median": null,
+  "peak_rss_mb": null,
+  "dir": "runs/auto/auto/daiwabo_raster200_p0",
+  "issues": [
+   "single_visual_source"
+  ],
+  "backend_used": "auto(ocr_rapid)",
+  "routing": [
+   "raster_like_page: native text absent -> visual backend required",
+   "accepted ocr_rapid output as `needs_visual_review` (arithmetic checks absent or failing)"
+  ]
+ },
+ {
+  "config": "auto_verify",
+  "doc": "source",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 1,
+  "rows": 37,
+  "numeric_cells": 74,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 74,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {
+   "within_rounding": 5,
+   "skipped": 1
+  },
+  "cold_ms": 20703.5,
+  "warm_ms_median": null,
+  "peak_rss_mb": null,
+  "dir": "runs/auto_verify/auto/source_p0",
+  "issues": [
+   "unassigned_numeric_tokens"
+  ],
+  "backend_used": "auto",
+  "routing": [
+   "docling agrees with native on all compared cells"
+  ],
+  "dev_gold_cells_correct": "74/74"
+ },
+ {
+  "config": "auto_verify",
+  "doc": "elecom",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 1,
+  "rows": 28,
+  "numeric_cells": 56,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 56,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {
+   "within_rounding": 8
+  },
+  "cold_ms": 18698.7,
+  "warm_ms_median": null,
+  "peak_rss_mb": null,
+  "dir": "runs/auto_verify/auto/elecom_p8",
+  "issues": [
+   "unassigned_numeric_tokens"
+  ],
+  "backend_used": "auto",
+  "routing": [
+   "docling agrees with native on all compared cells"
+  ]
+ },
+ {
+  "config": "auto_verify",
+  "doc": "daiwabo",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 3,
+  "rows": 21,
+  "numeric_cells": 63,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 63,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {
+   "pass": 14,
+   "within_rounding": 5
+  },
+  "cold_ms": 17530.8,
+  "warm_ms_median": null,
+  "peak_rss_mb": null,
+  "dir": "runs/auto_verify/auto/daiwabo_p9",
+  "issues": [
+   "checker_differs_native_glyphs_kept",
+   "unassigned_numeric_tokens"
+  ],
+  "backend_used": "auto",
+  "routing": [
+   "native_v2 disagrees with native_grid (9 mismatches, 1 vs 3 tables); v2 labels contain amounts (false assurance)",
+   "docling differs but every docling token is explained by the text layer; native kept (status unchanged)"
+  ]
+ }
+]

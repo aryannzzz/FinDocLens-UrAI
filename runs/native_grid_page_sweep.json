@@ -1,0 +1,714 @@
+{
+ "elecom": {
+  "pages": 21,
+  "pages_with_tables": [
+   0,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   19
+  ],
+  "detail": [
+   {
+    "page": 0,
+    "status": "ok",
+    "tables": [
+     {
+      "rows": 3,
+      "cols": 8,
+      "unit": null,
+      "issues": [
+       "hierarchy_not_inferred",
+       "partial_data_row",
+       "unit_not_detected"
+      ]
+     }
+    ],
+    "unassigned_numeric_tokens": 61
+   },
+   {
+    "page": 1,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 36
+   },
+   {
+    "page": 2,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 25
+   },
+   {
+    "page": 3,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 3
+   },
+   {
+    "page": 4,
+    "status": "ok",
+    "tables": [
+     {
+      "rows": 6,
+      "cols": 5,
+      "unit": "百万円",
+      "issues": [
+       "hierarchy_not_inferred"
+      ]
+     }
+    ],
+    "unassigned_numeric_tokens": 3
+   },
+   {
+    "page": 5,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 3
+   },
+   {
+    "page": 6,
+    "status": "ok",
+    "tables": [
+     {
+      "rows": 6,
+      "cols": 5,
+      "unit": "百万円",
+      "issues": [
+       "hierarchy_not_inferred"
+      ]
+     }
+    ],
+    "unassigned_numeric_tokens": 7
+   },
+   {
+    "page": 7,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 3
+   },
+   {
+    "page": 8,
+    "status": "ok",
+    "tables": [
+     {
+      "rows": 34,
+      "cols": 2,
+      "unit": "百万円",
+      "issues": []
+     }
+    ],
+    "unassigned_numeric_tokens": 3
+   },
+   {
+    "page": 9,
+    "status": "ok",
+    "tables": [
+     {
+      "rows": 35,
+      "cols": 2,
+      "unit": "百万円",
+      "issues": []
+     }
+    ],
+    "unassigned_numeric_tokens": 3
+   },
+   {
+    "page": 10,
+    "status": "ok",
+    "tables": [
+     {
+      "rows": 44,
+      "cols": 2,
+      "unit": "百万円",
+      "issues": []
+     }
+    ],
+    "unassigned_numeric_tokens": 3
+   },
+   {
+    "page": 11,
+    "status": "ok",
+    "tables": [
+     {
+      "rows": 11,
+      "cols": 2,
+      "unit": "百万円",
+      "issues": []
+     }
+    ],
+    "unassigned_numeric_tokens": 3
+   },
+   {
+    "page": 12,
+    "status": "ok",
+    "tables": [
+     {
+      "rows": 11,
+      "cols": 5,
+      "unit": "百万円",
+      "issues": [
+       "partial_data_row"
+      ]
+     },
+     {
+      "rows": 12,
+      "cols": 8,
+      "unit": null,
+      "issues": [
+       "partial_data_row",
+       "unit_not_detected"
+      ]
+     }
+    ],
+    "unassigned_numeric_tokens": 3
+   },
+   {
+    "page": 13,
+    "status": "ok",
+    "tables": [
+     {
+      "rows": 11,
+      "cols": 5,
+      "unit": "百万円",
+      "issues": [
+       "partial_data_row"
+      ]
+     },
+     {
+      "rows": 12,
+      "cols": 8,
+      "unit": null,
+      "issues": [
+       "partial_data_row",
+       "unit_not_detected"
+      ]
+     }
+    ],
+    "unassigned_numeric_tokens": 3
+   },
+   {
+    "page": 14,
+    "status": "ok",
+    "tables": [
+     {
+      "rows": 37,
+      "cols": 2,
+      "unit": "百万円",
+      "issues": []
+     }
+    ],
+    "unassigned_numeric_tokens": 3
+   },
+   {
+    "page": 15,
+    "status": "ok",
+    "tables": [
+     {
+      "rows": 13,
+      "cols": 2,
+      "unit": "百万円",
+      "issues": []
+     }
+    ],
+    "unassigned_numeric_tokens": 3
+   },
+   {
+    "page": 16,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 4
+   },
+   {
+    "page": 17,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 10
+   },
+   {
+    "page": 18,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 19
+   },
+   {
+    "page": 19,
+    "status": "ok",
+    "tables": [
+     {
+      "rows": 12,
+      "cols": 2,
+      "unit": null,
+      "issues": [
+       "no_header_cells_found",
+       "row_without_label",
+       "unit_not_detected"
+      ]
+     }
+    ],
+    "unassigned_numeric_tokens": 5
+   },
+   {
+    "page": 20,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 3
+   }
+  ]
+ },
+ "daiwabo": {
+  "pages": 56,
+  "pages_with_tables": [
+   4,
+   7,
+   8,
+   9,
+   10,
+   19,
+   25
+  ],
+  "detail": [
+   {
+    "page": 0,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 0
+   },
+   {
+    "page": 1,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 2
+   },
+   {
+    "page": 2,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 3,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 4,
+    "status": "ok",
+    "tables": [
+     {
+      "rows": 6,
+      "cols": 4,
+      "unit": "百万円",
+      "issues": [
+       "hierarchy_not_inferred",
+       "partial_data_row",
+       "row_without_label"
+      ]
+     }
+    ],
+    "unassigned_numeric_tokens": 10
+   },
+   {
+    "page": 5,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 26
+   },
+   {
+    "page": 6,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 15
+   },
+   {
+    "page": 7,
+    "status": "ok",
+    "tables": [
+     {
+      "rows": 10,
+      "cols": 4,
+      "unit": null,
+      "issues": [
+       "partial_data_row",
+       "unit_not_detected"
+      ]
+     }
+    ],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 8,
+    "status": "ok",
+    "tables": [
+     {
+      "rows": 7,
+      "cols": 4,
+      "unit": null,
+      "issues": [
+       "hierarchy_not_inferred",
+       "unit_not_detected"
+      ]
+     }
+    ],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 9,
+    "status": "ok",
+    "tables": [
+     {
+      "rows": 8,
+      "cols": 3,
+      "unit": "百万円",
+      "issues": [
+       "hierarchy_not_inferred"
+      ]
+     },
+     {
+      "rows": 9,
+      "cols": 3,
+      "unit": null,
+      "issues": [
+       "hierarchy_not_inferred",
+       "unit_not_detected"
+      ]
+     },
+     {
+      "rows": 4,
+      "cols": 3,
+      "unit": null,
+      "issues": [
+       "hierarchy_not_inferred",
+       "no_header_cells_found",
+       "unit_not_detected"
+      ]
+     }
+    ],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 10,
+    "status": "ok",
+    "tables": [
+     {
+      "rows": 9,
+      "cols": 6,
+      "unit": null,
+      "issues": [
+       "partial_data_row",
+       "unit_not_detected"
+      ]
+     }
+    ],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 11,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 12,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 15
+   },
+   {
+    "page": 13,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 16
+   },
+   {
+    "page": 14,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 19
+   },
+   {
+    "page": 15,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 22
+   },
+   {
+    "page": 16,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 21
+   },
+   {
+    "page": 17,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 14
+   },
+   {
+    "page": 18,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 19,
+    "status": "ok",
+    "tables": [
+     {
+      "rows": 3,
+      "cols": 4,
+      "unit": null,
+      "issues": [
+       "hierarchy_not_inferred",
+       "partial_data_row",
+       "row_without_label",
+       "unit_not_detected"
+      ]
+     }
+    ],
+    "unassigned_numeric_tokens": 5
+   },
+   {
+    "page": 20,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 21,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 44
+   },
+   {
+    "page": 22,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 22
+   },
+   {
+    "page": 23,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 24,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 4
+   },
+   {
+    "page": 25,
+    "status": "ok",
+    "tables": [
+     {
+      "rows": 4,
+      "cols": 3,
+      "unit": null,
+      "issues": [
+       "unit_not_detected"
+      ]
+     },
+     {
+      "rows": 3,
+      "cols": 3,
+      "unit": null,
+      "issues": [
+       "hierarchy_not_inferred",
+       "unit_not_detected"
+      ]
+     }
+    ],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 26,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 15
+   },
+   {
+    "page": 27,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 17
+   },
+   {
+    "page": 28,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 29,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 6
+   },
+   {
+    "page": 30,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 31,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 32,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 33,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 34,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 35,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 12
+   },
+   {
+    "page": 36,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 8
+   },
+   {
+    "page": 37,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 5
+   },
+   {
+    "page": 38,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 2
+   },
+   {
+    "page": 39,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 40,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 41,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 25
+   },
+   {
+    "page": 42,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 3
+   },
+   {
+    "page": 43,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 12
+   },
+   {
+    "page": 44,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 19
+   },
+   {
+    "page": 45,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 10
+   },
+   {
+    "page": 46,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 3
+   },
+   {
+    "page": 47,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 10
+   },
+   {
+    "page": 48,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 49,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 49
+   },
+   {
+    "page": 50,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 41
+   },
+   {
+    "page": 51,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 70
+   },
+   {
+    "page": 52,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 55
+   },
+   {
+    "page": 53,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 7
+   },
+   {
+    "page": 54,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 1
+   },
+   {
+    "page": 55,
+    "status": "no_tables",
+    "tables": [],
+    "unassigned_numeric_tokens": 1
+   }
+  ]
+ }
+}

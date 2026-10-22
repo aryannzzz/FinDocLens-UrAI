@@ -1,0 +1,35 @@
+{
+ "document_id": "source_raster200",
+ "source_sha256": "a62ee265b8d98024b336e04d454631538152b14e20ebaeaceaafaee66306b0e3",
+ "backend": "native_grid",
+ "model_revision": "findoclens native_grid 0.1, PyMuPDF 1.27.2.3",
+ "page": 0,
+ "page_bbox": [
+  0.0,
+  0.0,
+  595.2,
+  841.8
+ ],
+ "tables": [],
+ "status": "failed",
+ "issues": [
+  {
+   "severity": "error",
+   "code": "needs_visual_fallback",
+   "message": "only 0 extractable glyphs; OCR/visual backend required"
+  }
+ ],
+ "capabilities": {
+  "cell_bbox": true,
+  "headers": "text+period+role+colspan",
+  "multi_table": true,
+  "ocr": false,
+  "n_columns": "any (right-aligned numeric)",
+  "hierarchy": "indentation heuristic, optional"
+ },
+ "meta": {
+  "native_glyph_count": 0,
+  "elapsed_ms": 22.3
+ },
+ "schema_version": "findoclens-0.1"
+}

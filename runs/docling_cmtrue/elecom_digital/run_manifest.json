@@ -1,0 +1,97 @@
+{
+ "run_id": "859ed72f25f2",
+ "timestamp_utc": "2026-10-22T10:19:02+00:00",
+ "git_commit": "a76d46c366f42f666a38309c7460fd76b9394100+dirty",
+ "source_url": "https://www2.jpx.co.jp/disc/67500/140120260331594026.pdf",
+ "source_sha256": "4bdb7bb0022a63e459ec35ef4e571a8fcf4796b0b776b5fe2f7e4ee217fb0d78",
+ "page_index": 8,
+ "split_label": "independent-issuer holdout (no tuning on gold; gold owned by Codex track)",
+ "backend": "docling",
+ "model_revision": null,
+ "options": {
+  "cell_matching": true
+ },
+ "tag": "cmtrue",
+ "package_versions": {
+  "PyMuPDF": "1.28.2",
+  "docling": "2.141.0",
+  "docling-core": "2.103.1",
+  "docling-ibm-models": "4.0.4",
+  "docling-parse": "7.22.4",
+  "torch": "2.14.1+cpu",
+  "torchvision": "0.29.1+cpu",
+  "rapidocr": "3.10.0",
+  "onnxruntime": "1.31.0",
+  "easyocr": null,
+  "paddleocr": null,
+  "paddlepaddle": null,
+  "transformers": "5.20.2",
+  "numpy": "2.5.4",
+  "pdfplumber": "0.11.10"
+ },
+ "hardware": {
+  "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+  "cpu_threads": 12,
+  "mem_MB": {
+   "MemTotal": 15676,
+   "MemFree": 1047,
+   "MemAvailable": 2800
+  },
+  "gpu": {
+   "nvidia_smi": "unavailable (exit 9): NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running."
+  },
+  "platform": "Linux-7.0.11-76070011-generic-x86_64-with-glibc2.35",
+  "python": "3.12.13"
+ },
+ "device": "cpu",
+ "timings": [
+  {
+   "run": 1,
+   "kind": "cold",
+   "time_ms": 17469.2
+  },
+  {
+   "run": 2,
+   "kind": "warm",
+   "time_ms": 11051.3
+  },
+  {
+   "run": 3,
+   "kind": "warm",
+   "time_ms": 9675.5
+  }
+ ],
+ "cold_time_ms": 17469.2,
+ "warm_time_ms_median": 11051.3,
+ "peak_memory_mb": {
+  "process_peak_rss_mb": 1341.1,
+  "gpu_peak_allocated_mb": null
+ },
+ "status": "ok",
+ "error_text": null,
+ "prediction_path": "runs/docling_cmtrue/elecom_digital/prediction.json",
+ "metrics_path": null,
+ "human_audit_status": "none: automatic extraction, not human-verified",
+ "backend_meta": {
+  "device": "cpu",
+  "converter_load_ms": 0.0,
+  "convert_ms": 9663.2,
+  "versions": {
+   "docling": "2.141.0",
+   "docling-core": "2.103.1",
+   "docling-ibm-models": "4.0.4",
+   "docling-parse": "7.22.4",
+   "torch": "2.14.1+cpu",
+   "rapidocr": "3.10.0"
+  },
+  "table_structure_mode": "accurate",
+  "do_cell_matching": true,
+  "ocr_engine": null,
+  "docling_status": "ConversionStatus.SUCCESS",
+  "raw_artifacts": [
+   "docling_document.json",
+   "docling_tables.md"
+  ],
+  "elapsed_ms": 9675.1
+ }
+}

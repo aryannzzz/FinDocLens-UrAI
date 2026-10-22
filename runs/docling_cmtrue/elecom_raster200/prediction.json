@@ -1,0 +1,83 @@
+{
+ "document_id": "elecom_raster200",
+ "source_sha256": "088c5215f90e8d640dcb83eb0c5893718f472ed34a8a97f05cd8ddd3f8c2b03f",
+ "backend": "docling",
+ "model_revision": null,
+ "page": 0,
+ "page_bbox": [
+  0.0,
+  0.0,
+  595.28,
+  841.89
+ ],
+ "tables": [
+  {
+   "table_id": "t0",
+   "bbox": [
+    54.21,
+    99.54,
+    522.96,
+    542.97
+   ],
+   "reading_order": 0,
+   "headers": [],
+   "rows": [],
+   "issues": [
+    {
+     "severity": "warning",
+     "code": "no_header_cells_found"
+    }
+   ],
+   "unit": null,
+   "n_data_columns": 0,
+   "capabilities": {
+    "cell_bbox": true,
+    "headers": "tableformer column_header flags",
+    "raw_grid": "0x0"
+   },
+   "checks": [],
+   "grid": []
+  }
+ ],
+ "status": "failed",
+ "issues": [
+  {
+   "severity": "error",
+   "code": "table_without_numeric_cells",
+   "tables": [
+    "t0"
+   ]
+  }
+ ],
+ "capabilities": {
+  "cell_bbox": true,
+  "headers": "tableformer column_header flags",
+  "multi_table": true,
+  "ocr": false,
+  "n_columns": "any",
+  "cell_matching": true
+ },
+ "meta": {
+  "device": "cpu",
+  "converter_load_ms": 0.0,
+  "convert_ms": 9539.5,
+  "versions": {
+   "docling": "2.141.0",
+   "docling-core": "2.103.1",
+   "docling-ibm-models": "4.0.4",
+   "docling-parse": "7.22.4",
+   "torch": "2.14.1+cpu",
+   "rapidocr": "3.10.0"
+  },
+  "table_structure_mode": "accurate",
+  "do_cell_matching": true,
+  "ocr_engine": null,
+  "docling_status": "ConversionStatus.SUCCESS",
+  "raw_artifacts": [
+   "docling_document.json",
+   "docling_tables.md"
+  ],
+  "elapsed_ms": 9557.6
+ },
+ "schema_version": "findoclens-0.1"
+}

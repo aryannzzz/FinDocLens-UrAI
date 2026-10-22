@@ -112,6 +112,36 @@ class Perturbations(unittest.TestCase):
             self.assertEqual(s["cells_correct"], 74)
 
 
+class Router(unittest.TestCase):
+    def test_raster_without_models_needs_visual_review_and_invents_nothing(self):
+        from findoclens.router import route
+        pdf = raster_pdf(SRC, 0, 100, "unit_test_router_raster")
+        d = route(pdf, 0, "runs/_test", allow_models=False)
+        self.assertEqual(d["status"], "needs_visual_review")
+        self.assertEqual(n_numeric_cells(d), 0)
+        self.assertTrue(any("raster_like" in x for x in d["meta"]["routing"]["decisions"]))
+
+    def test_clean_native_page_is_accepted_without_models(self):
+        from findoclens.router import route
+        d = route(SRC, 0, "runs/_test", allow_models=False)
+        self.assertEqual(d["status"], "ok")
+        self.assertTrue(any("native_accept" in x for x in d["meta"]["routing"]["decisions"]))
+
+    def test_text_layer_reference_ignores_page_number_footer(self):
+        from findoclens.compare import text_layer_reference
+        ref = text_layer_reference(SRC, 0)
+        self.assertEqual(sum(ref.values()), 74)
+
+
+@unittest.skipUnless(DAIWA.exists(), "Daiwabo holdout PDF not downloaded")
+class RouterDaiwabo(unittest.TestCase):
+    def test_v2_false_assurance_is_logged(self):
+        from findoclens.router import route
+        d = route(DAIWA, 9, "runs/_test", allow_models=False)
+        self.assertEqual(len(d["tables"]), 3)
+        self.assertTrue(any("false assurance" in x for x in d["meta"]["routing"]["decisions"]))
+
+
 @unittest.skipUnless(ELECOM.exists(), "ELECOM holdout PDF not downloaded")
 class Elecom(unittest.TestCase):
     def test_two_columns_hierarchy_and_unit(self):

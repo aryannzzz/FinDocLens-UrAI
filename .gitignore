@@ -7,3 +7,4 @@ data/variants/
 runs/**/evidence*.png
 baseline_v2/tests/generated/
 .cache/
+runs/_test/
