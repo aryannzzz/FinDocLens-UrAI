@@ -125,6 +125,17 @@ class OneColumnTables(unittest.TestCase):
         left, right = n["tables"]
         self.assertLess(left["bbox"][2], right["bbox"][0], "tables must not overlap or merge")
 
+    def test_one_column_table_left_of_right_adjacent_and_below_a_two_column_table(self):
+        one = lambda x0, **kw: dict(x0=x0, ncol=1, headers=["2025/3"], rows=default_rows(1), **kw)
+        for name, tables, kinds in [("adj_right", [two_col(), one(345)], [2, 1]), ("one_left", [one(25), dict(two_col(), x0=330)], [1, 2]),
+                                    ("stacked", [two_col(), one(25, y_first=420)], [2, 1])]:
+            p = Path(TMP.name) / f"{name}.pdf"
+            make_pdf(p, tables, width=900, height=800)
+            n = native_grid.extract(p).to_dict()
+            self.assertEqual([t["n_data_columns"] for t in n["tables"]], kinds, name)
+            self.assertEqual([len(t["rows"]) for t in n["tables"]], [4, 4], name)
+            self.assertFalse([i for i in n["issues"] if i["severity"] == "warning"], name)
+
     def test_single_value_row_inside_two_column_table_stays_in_that_table(self):
         rows = default_rows(2)
         rows[2] = (rows[2][0], [rows[2][1][1]])         # one value printed in the right column only
@@ -193,6 +204,28 @@ class RouterCompleteness(unittest.TestCase):
         r = route(p, allow_models=False)
         self.assertEqual(r["status"], "ok")
         self.assertEqual(len(r["tables"]), 2)
+
+
+class CellPeriodConsistency(unittest.TestCase):
+    """Found while re-scoring stored predictions with the structure axes: the adapter inferred the change column's header period
+    (`later_vs_earlier`) but left every cell of that column with period null, so header and cells disagreed."""
+
+    def test_cell_period_follows_the_inferred_header_period(self):
+        from tests.test_adapters import CTX, cell as acell, header, native, row
+        n = native([header(0, "2025/3", [0], period="2025-03"), header(1, "2025/12", [1], period="2025-12"),
+                    header(2, "増減", [2], role="change_amount")],
+                   [row(0, "現金", [acell(0, "10", 10, "observed", period="2025-03"), acell(1, "12", 12, "observed", period="2025-12"),
+                                    acell(2, "+2", 2, "observed", role="change_amount", period=None)])], ncols=3)
+        out = convert(n, CTX, backend="b")
+        leaf = next(h for h in out["tables"][0]["headers"] if h["kind"] == "leaf" and h["column_index"] == 2)
+        self.assertEqual(leaf["period"], "2025-12-31_vs_2025-03-31")
+        self.assertEqual([c["period"] for c in out["tables"][0]["rows"][0]["cells"]],
+                         ["2025-03-31", "2025-12-31", "2025-12-31_vs_2025-03-31"])
+
+    def test_cells_without_any_header_period_stay_null(self):
+        from tests.test_adapters import CTX, cell as acell, header, native, row
+        n = native([header(0, "科目計", [0], period=None)], [row(0, "現金", [acell(0, "10", 10, "observed", period=None)])], ncols=1)
+        self.assertIsNone(convert(n, CTX, backend="b")["tables"][0]["rows"][0]["cells"][0]["period"])
 
 
 # --------------------------------------------------------------------------------------------------------------- finding 2

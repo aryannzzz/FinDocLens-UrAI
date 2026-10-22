@@ -1,0 +1,23 @@
+{
+  "mode": "warm_same_process",
+  "iteration": 1,
+  "status": "abstained",
+  "error": null,
+  "device": "cpu",
+  "model_revision": null,
+  "checkpoint_id": null,
+  "model_metadata": {},
+  "stages": {
+    "load_ms": 0.0,
+    "render_ms": 4.442887962795794,
+    "inference_ms": 1.1121269781142473,
+    "normalization_ms": 0.019332976080477238,
+    "serialize_ms": 0.30584901105612516
+  },
+  "time_ms": 5.890449974685907,
+  "cold_image_export_included": false,
+  "peak_memory_mb": 72.68359375,
+  "memory_method": "Linux ru_maxrss: process lifetime high-water RSS; warm peaks are cumulative, not deltas",
+  "peak_gpu_allocation_mb": null,
+  "gpu_memory_status": "unmeasured: worker does not import or reset framework GPU allocator"
+}

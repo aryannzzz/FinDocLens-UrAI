@@ -1,0 +1,180 @@
+{
+  "run_id": "p0fix1_raster",
+  "timestamp": "2026-10-22T17:22:12.250250+00:00",
+  "git_commit": "f56a2ce77dafbe0390ef1788bb821ac544d92549",
+  "worktree_dirty": true,
+  "code_sha256": {
+    "benchmark/__init__.py": "fa453c993a1ebd7c31cb5233ef10dfa38624305fa4d6a4346cd0bff87cd33010",
+    "benchmark/adversarial.py": "016444e7d72119013cf86632d5e2c85d8d73923de672482c77c3a0b90d6afa9a",
+    "benchmark/annotate.py": "dbe9d88caed95f26542ecd86229ee17d4830e1490e6330707e1477c7574b260c",
+    "benchmark/check.py": "732094ba955c293ce51f21cd74352f38123c15cff3264fb9a58a99719ff453ae",
+    "benchmark/common.py": "2b469cd6cafa5012f14b357d0a8d37dfa6ed444f8817bcd819def19e7a84eeb3",
+    "benchmark/compat.py": "97b7298b517ad23169ffe8a3c860b3f2f2188c6bde644092a17dbb1e0dbf32f4",
+    "benchmark/dataset.py": "d423f2066956ebf11942a893ed4aa44c597daf6c765e89dc7fe9b47b31132f44",
+    "benchmark/diagnostics.py": "eaa5d6400c10dd23eb243acbb32b6ef836445af4e47abe9cd1a9ab099f3e56b2",
+    "benchmark/evaluate.py": "51ffa9d42d00228cd6eba45932b045b07362d88d71a6c30bcca5aef0ef507009",
+    "benchmark/raster_variants.py": "c56ecdf6e47db69bb87d64a84ed1769bd07b450785c41c2e4ec741579715aea8",
+    "benchmark/report.py": "dc26db5807189ba5a2277d5a2cdbac9eef08e5f883ec170faedb4994f8d57118",
+    "benchmark/review.py": "109e7e072988efa73042cbc7caf59f68fa09895ddacd3a42e105421afd69ef3f",
+    "benchmark/run.py": "926d63af323140e792e940adbf81068d5409a4cd6fa73884b82c0cd401b35a10",
+    "benchmark/validate.py": "7adfac5a56fde740cb44b4c23d688100684df0009bbe63dc2e7b195cc493e65d",
+    "benchmark/worker.py": "bc0aa0d4a775ceb4f6c077a7592fef63ae12666f29de2047c022a47046c6311e"
+  },
+  "source": {
+    "document_id": "elecom_p9_scan200",
+    "company": "ELECOM",
+    "source_url": null,
+    "source_page_index": 0,
+    "page": 1,
+    "source_sha256": "25beb3d17a0d0215e5b7352749e4c0a3beb4419284e889f8bc521f3793c80848",
+    "input_sha256": "25beb3d17a0d0215e5b7352749e4c0a3beb4419284e889f8bc521f3793c80848",
+    "input_path": "benchmark/data/raster/elecom_p9_scan200/page.pdf",
+    "gold_path": "benchmark/gold/raster/elecom_p9_scan200.json",
+    "source_kind": "source_derivative",
+    "source_family": "ELECOM",
+    "issuer_relation": "independent_issuer",
+    "split": "holdout",
+    "domain": "financial_statement",
+    "status": "available",
+    "human_audit_status": "ai_draft",
+    "human_checked_cells": 0,
+    "difficulty": "200dpi raster scan of an independent-issuer page",
+    "visual_truth": "visible content retained through 200dpi rasterization; all native text removed; not pixel-identical",
+    "license_note": "Local synthetic derivative; source-family rights apply",
+    "derived_from_document": "elecom_p9"
+  },
+  "backend": "native_v2",
+  "backend_version": "external_callable",
+  "model_revision": null,
+  "checkpoint_id": null,
+  "environment": {
+    "platform": "Linux-7.0.11-76070011-generic-x86_64-with-glibc2.35",
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:09:02) [GCC 11.2.0]",
+    "python_executable": "/home/aryannzzz/ur_ai_RnD_agent_starter/.venv/bin/python",
+    "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+    "logical_cpus": 12,
+    "packages": {
+      "PyMuPDF": "1.27.2.3",
+      "pdfplumber": null,
+      "numpy": "2.2.6",
+      "Pillow": "12.0.0",
+      "torch": "2.8.0",
+      "docling": null,
+      "transformers": "4.49.0"
+    },
+    "ram_mb": 15676.2890625,
+    "gpu_probe": {
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,uuid,driver_version,memory.total",
+        "--format=csv,noheader"
+      ],
+      "returncode": 9,
+      "stdout": "NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.\n\n",
+      "stderr": ""
+    }
+  },
+  "warm_requested": 1,
+  "backend_source_sha256": null,
+  "model_kind": "specified_by_external_backend",
+  "timeout_seconds": 3000.0,
+  "human_audit_status": "ai_draft",
+  "command": [
+    "/home/aryannzzz/ur_ai_RnD_agent_starter/.venv/bin/python",
+    "-m",
+    "benchmark.worker",
+    "--input",
+    "/home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/data/raster/elecom_p9_scan200/page.pdf",
+    "--document-id",
+    "elecom_p9_scan200",
+    "--source-sha256",
+    "25beb3d17a0d0215e5b7352749e4c0a3beb4419284e889f8bc521f3793c80848",
+    "--source-page-index",
+    "0",
+    "--out",
+    "/home/aryannzzz/ur_ai_RnD_agent_starter/runs/native_v2/elecom_p9_scan200/p0fix1_raster",
+    "--warm",
+    "1",
+    "--entrypoint",
+    "adapters.native_v2:extract"
+  ],
+  "returncode": 0,
+  "worker_status": "completed",
+  "process_wall_ms": 354.73300504963845,
+  "measurements": [
+    {
+      "mode": "cold_process",
+      "iteration": 0,
+      "status": "abstained",
+      "error": null,
+      "device": "cpu",
+      "model_revision": null,
+      "checkpoint_id": null,
+      "model_metadata": {
+        "device": "cpu",
+        "backend_version": "findoclens-0.1 (native_v2)",
+        "model_revision": null,
+        "checkpoint_id": null,
+        "null_reason": "rule-based native backend: no model checkpoint",
+        "findoclens_packages": {
+          "PyMuPDF": "1.27.2.3"
+        }
+      },
+      "backend_version": "findoclens-0.1 (native_v2)",
+      "stages": {
+        "load_ms": 80.30793897341937,
+        "render_ms": 66.84264197247103,
+        "inference_ms": 67.1826449688524,
+        "normalization_ms": 0.025995017495006323,
+        "serialize_ms": 0.14524097787216306
+      },
+      "time_ms": 214.51444196281955,
+      "cold_image_export_included": true,
+      "peak_memory_mb": 111.8359375,
+      "memory_method": "Linux ru_maxrss: process lifetime high-water RSS; warm peaks are cumulative, not deltas",
+      "peak_gpu_allocation_mb": null,
+      "gpu_memory_status": "unmeasured: worker does not import or reset framework GPU allocator"
+    },
+    {
+      "mode": "warm_same_process",
+      "iteration": 1,
+      "status": "abstained",
+      "error": null,
+      "device": "cpu",
+      "model_revision": null,
+      "checkpoint_id": null,
+      "model_metadata": {
+        "device": "cpu",
+        "backend_version": "findoclens-0.1 (native_v2)",
+        "model_revision": null,
+        "checkpoint_id": null,
+        "null_reason": "rule-based native backend: no model checkpoint",
+        "findoclens_packages": {
+          "PyMuPDF": "1.27.2.3"
+        }
+      },
+      "backend_version": "findoclens-0.1 (native_v2)",
+      "stages": {
+        "load_ms": 0.0,
+        "render_ms": 24.093443003948778,
+        "inference_ms": 57.9790830379352,
+        "normalization_ms": 0.027726986445486546,
+        "serialize_ms": 0.2614589757286012
+      },
+      "time_ms": 82.37099298276007,
+      "cold_image_export_included": false,
+      "peak_memory_mb": 134.921875,
+      "memory_method": "Linux ru_maxrss: process lifetime high-water RSS; warm peaks are cumulative, not deltas",
+      "peak_gpu_allocation_mb": null,
+      "gpu_memory_status": "unmeasured: worker does not import or reset framework GPU allocator"
+    }
+  ],
+  "status": "abstained",
+  "cold_time_ms": 214.51444196281955,
+  "warm_median_ms": null,
+  "warm_completed": 1,
+  "metrics_path": "runs/native_v2/elecom_p9_scan200/p0fix1_raster/cold/metrics.json",
+  "reference_status": "ai_draft",
+  "timing_scope": "200dpi evidence render (cold also saves PNG) + backend load/inference + evaluation projection + JSON serialization. Acquisition and scoring excluded; process_wall_ms also includes interpreter startup.",
+  "warm_definition": "same interpreter and loaded backend; PDF reopened/rendered each repetition"
+}

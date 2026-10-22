@@ -1,0 +1,458 @@
+{
+  "document_id": "daiwabo_p10",
+  "evaluated_at": "2026-10-22T17:22:24.649627+00:00",
+  "evaluator_version": 2,
+  "reference_status": "ai_draft",
+  "human_checked_cells": 0,
+  "scope": {
+    "tables_complete": true,
+    "rows_complete": true,
+    "cells_complete": true,
+    "note": "Selected page only. Completeness and hierarchy are AI draft assertions pending human verification."
+  },
+  "run_status": "partial",
+  "whitespace_policy": "remove Unicode whitespace only; preserve glyphs, signs, punctuation and decimals",
+  "matching_policy": "One-to-one evaluation with fixed gold denominators and explicit failures.\n\nOnly whitespace is removed for label/raw matching. Raw tokens are never rewritten.\nTable matching uses page + bbox IoU >= .1 (maximum weight assignment). Rows\nrequire equal whitespace-normalized labels; geometry/context/order break ties.\nFinancial cells align by physical column_index, never by predicted value or role.\n",
+  "metrics": {
+    "tables": {
+      "matched": 3,
+      "gold": 3,
+      "predicted": 3,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "extra_tables": 0,
+    "unlocalizable_predicted_tables": 0,
+    "rows": {
+      "matched": 21,
+      "gold": 21,
+      "predicted": 21,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "missed_rows": 0,
+    "spurious_rows": 0,
+    "raw_label_exact": {
+      "correct": 21,
+      "total": 21,
+      "rate": 1.0
+    },
+    "extraneous_row_rate": {
+      "correct": 0,
+      "total": 21,
+      "rate": 0.0
+    },
+    "row_order_accuracy": {
+      "correct": 21,
+      "total": 21,
+      "rate": 1.0
+    },
+    "cell_coverage": {
+      "correct": 67,
+      "total": 67,
+      "rate": 1.0
+    },
+    "raw_cell_exact": {
+      "correct": 63,
+      "total": 67,
+      "rate": 0.9402985074626866
+    },
+    "raw_precision_on_matched": {
+      "correct": 63,
+      "total": 67,
+      "rate": 0.9402985074626866
+    },
+    "raw_precision_all_predicted": {
+      "correct": 63,
+      "total": 67,
+      "rate": 0.9402985074626866
+    },
+    "semantic_cell_exact": {
+      "correct": 63,
+      "total": 67,
+      "rate": 0.9402985074626866
+    },
+    "numeric_raw_exact": {
+      "correct": 63,
+      "total": 63,
+      "rate": 1.0
+    },
+    "numeric_semantic_exact": {
+      "correct": 63,
+      "total": 63,
+      "rate": 1.0
+    },
+    "header_role_accuracy": {
+      "correct": 6,
+      "total": 10,
+      "rate": 0.6
+    },
+    "header_role_precision": {
+      "correct": 6,
+      "total": 9,
+      "rate": 0.6666666666666666
+    },
+    "grouped_headers": {
+      "matched": 0,
+      "gold": 0,
+      "predicted": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "header_parent_accuracy": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "hierarchy_edges": {
+      "matched": 0,
+      "gold": 7,
+      "predicted": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "abstention_rate": {
+      "correct": 0,
+      "total": 67,
+      "rate": 0.0
+    },
+    "correct_abstention": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "missing_cells": {
+      "correct": 0,
+      "total": 67,
+      "rate": 0.0
+    },
+    "silent_omission_rate": {
+      "correct": 0,
+      "total": 67,
+      "rate": 0.0
+    },
+    "invalid_matched_cells": 0,
+    "cell_period_accuracy": {
+      "correct": 34,
+      "total": 63,
+      "rate": 0.5396825396825397
+    },
+    "cell_role_accuracy": {
+      "correct": 63,
+      "total": 63,
+      "rate": 1.0
+    },
+    "cell_header_link_accuracy": {
+      "correct": 63,
+      "total": 63,
+      "rate": 1.0
+    },
+    "cell_structure_exact": {
+      "correct": 34,
+      "total": 63,
+      "rate": 0.5396825396825397
+    },
+    "cell_evidence_localization": {
+      "correct": 66,
+      "total": 67,
+      "rate": 0.9850746268656716
+    },
+    "unscoped_omission_warnings": 0,
+    "false_assurance": false,
+    "false_assurance_reasons": [],
+    "warnings": [
+      {
+        "severity": "info",
+        "code": "unassigned_numeric_tokens",
+        "count": 1,
+        "tokens": [
+          {
+            "raw": "9",
+            "bbox": [
+              915.61,
+              517.76,
+              926.42,
+              541.83
+            ]
+          }
+        ],
+        "isolated_count": 0
+      }
+    ],
+    "gold_cells": 67,
+    "predicted_cells": 67
+  },
+  "errors": [
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r001",
+      "label": "現金及び預金",
+      "column_index": 3,
+      "expected_raw": "主に商品在庫の増加に伴う減少",
+      "expected_status": "observed",
+      "bbox": [
+        622.83642578125,
+        419.076416015625,
+        832.83642578125,
+        441.576416015625
+      ],
+      "kind": "cell_mismatch",
+      "predicted_raw": "→主に商品在庫の増加に伴う減少",
+      "predicted_value": "→主に商品在庫の増加に伴う減少",
+      "predicted_status": "observed"
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r002",
+      "label": "受取手形及び売掛金",
+      "column_index": 3,
+      "expected_raw": "DISの売上債権の増加",
+      "expected_status": "observed",
+      "bbox": [
+        622.83642578125,
+        445.4764099121094,
+        769.596435546875,
+        467.9764099121094
+      ],
+      "kind": "cell_mismatch",
+      "predicted_raw": "→ DISの売上債権の増加",
+      "predicted_value": "→ DISの売上債権の増加",
+      "predicted_status": "observed"
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r003",
+      "label": "商品及び製品",
+      "column_index": 3,
+      "expected_raw": "主にGIGAスクール向け商品増加",
+      "expected_status": "observed",
+      "bbox": [
+        622.83642578125,
+        471.87640380859375,
+        840.8764038085938,
+        494.37640380859375
+      ],
+      "kind": "cell_mismatch",
+      "predicted_raw": "→主にGIGAスクール向け商品増加",
+      "predicted_value": "→主にGIGAスクール向け商品増加",
+      "predicted_status": "observed"
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r004",
+      "label": "借入金",
+      "column_index": 3,
+      "expected_raw": "運転資本として",
+      "expected_status": "observed",
+      "bbox": [
+        622.83642578125,
+        498.2763977050781,
+        727.83642578125,
+        520.7763671875
+      ],
+      "kind": "cell_mismatch",
+      "predicted_raw": "→運転資本として",
+      "predicted_value": "→運転資本として",
+      "predicted_status": "observed"
+    }
+  ],
+  "alignment": [
+    {
+      "table_id": "assets",
+      "row_id": "assets_r001",
+      "predicted_row_index": 0,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r002",
+      "predicted_row_index": 1,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r003",
+      "predicted_row_index": 2,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r004",
+      "predicted_row_index": 3,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r005",
+      "predicted_row_index": 4,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r006",
+      "predicted_row_index": 5,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r007",
+      "predicted_row_index": 6,
+      "matched": true
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r008",
+      "predicted_row_index": 7,
+      "matched": true
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r001",
+      "predicted_row_index": 0,
+      "matched": true
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r002",
+      "predicted_row_index": 1,
+      "matched": true
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r003",
+      "predicted_row_index": 2,
+      "matched": true
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r004",
+      "predicted_row_index": 3,
+      "matched": true
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r005",
+      "predicted_row_index": 4,
+      "matched": true
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r006",
+      "predicted_row_index": 5,
+      "matched": true
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r007",
+      "predicted_row_index": 6,
+      "matched": true
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r008",
+      "predicted_row_index": 7,
+      "matched": true
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r009",
+      "predicted_row_index": 8,
+      "matched": true
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r001",
+      "predicted_row_index": 0,
+      "matched": true
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r002",
+      "predicted_row_index": 1,
+      "matched": true
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r003",
+      "predicted_row_index": 2,
+      "matched": true
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r004",
+      "predicted_row_index": 3,
+      "matched": true
+    }
+  ],
+  "gold_sha256": "b700644f50dc23f7c4a738c8d711f5386c77f5d2a7d0618d898c3a66b17917b2",
+  "prediction_sha256": "ed472cf815be4ad25a07fd60b8bd6dd87027eede68af4bdbd5b29cb51773929e",
+  "prediction_path": "runs/auto/daiwabo_p10/p0fix1_main/cold/prediction.json",
+  "source": {
+    "document_id": "daiwabo_p10",
+    "company": "Daiwabo Holdings",
+    "source_url": "https://www2.jpx.co.jp/disc/31070/140120260206550180.pdf",
+    "source_page_index": 9,
+    "page": 1,
+    "split": "holdout",
+    "issuer_relation": "independent_issuer",
+    "source_kind": "source",
+    "source_family": "Daiwabo Holdings",
+    "domain": "financial_slide",
+    "difficulty": "side-by-side tables and lower explanatory table; three numeric columns",
+    "license_note": "Public access; redistribution permission unreviewed. Full PDF and derived images local only.",
+    "human_audit_status": "ai_draft",
+    "human_checked_cells": 0,
+    "source_sha256": "b8d238aed3ec8deeb80675dcb1d6442ef9a89e3d876c42ade44543e2166125e8",
+    "input_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+    "input_path": "benchmark/data/daiwabo_p10/page.pdf",
+    "page_bbox": [
+      0.0,
+      0.0,
+      960.0,
+      540.0
+    ],
+    "original_page_count": 56,
+    "status": "available",
+    "error": null,
+    "download_metadata": "benchmark/sources/daiwabo_p10.json",
+    "acquisition_warnings": "format error: No common ancestor in structure tree\nstructure tree broken, assume tree is missing",
+    "acquisition_elapsed_ms": 168.288
+  },
+  "measurement": {
+    "mode": "cold_process",
+    "iteration": 0,
+    "status": "partial",
+    "error": null,
+    "device": "cpu",
+    "model_revision": "on demand: see provenance.backend_meta.routing",
+    "checkpoint_id": null,
+    "model_metadata": {
+      "device": "cpu",
+      "backend_version": "findoclens-0.1 router (native_grid, native_v2; Docling / Docling+RapidOCR on demand)",
+      "model_revision": "on demand: see provenance.backend_meta.routing",
+      "checkpoint_id": null,
+      "null_reason": "router; model checkpoints (when invoked) are those of docling / docling_rapidocr",
+      "findoclens_packages": {
+        "PyMuPDF": "1.27.2.3"
+      }
+    },
+    "backend_version": "findoclens-0.1 router (native_grid, native_v2; Docling / Docling+RapidOCR on demand)",
+    "stages": {
+      "load_ms": 86.133393982891,
+      "render_ms": 85.97150800051168,
+      "inference_ms": 53.299654042348266,
+      "normalization_ms": 0.48095500096678734,
+      "serialize_ms": 0.7667519967071712
+    },
+    "time_ms": 226.66212596232072,
+    "cold_image_export_included": true,
+    "peak_memory_mb": 85.75,
+    "memory_method": "Linux ru_maxrss: process lifetime high-water RSS; warm peaks are cumulative, not deltas",
+    "peak_gpu_allocation_mb": null,
+    "gpu_memory_status": "unmeasured: worker does not import or reset framework GPU allocator"
+  }
+}

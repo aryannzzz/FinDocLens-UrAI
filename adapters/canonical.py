@@ -114,6 +114,9 @@ def convert(native, context, *, backend, page_bbox=None, provenance=None):
         # Docling-style tables may have header-less columns: keep the physical index from the cells
         ncols = max([ncols] + [k + 1 for k in col_meta])
         headers = _leaf_and_groups(t, ncols, col_meta)
+        # a cell carries the period of the header it links to; where the header period was inferred here (change column:
+        # later_vs_earlier) the cells must say the same, otherwise header and cells disagree about the period
+        leaf_period = {h["column_index"]: h["period"] for h in headers if h["kind"] == "leaf" and h.get("period")}
         out_rows = []
         for r in rows:
             cells, extra = [], []
@@ -121,6 +124,8 @@ def convert(native, context, *, backend, page_bbox=None, provenance=None):
                 cell = {k: c[k] for k in ("column_index", "header_id", "period", "role", "raw", "value", "status",
                                           "bbox", "backend", "evidence_kind")}
                 cell["period"] = month_end(cell["period"])
+                if cell["column_index"] >= 0 and cell["period"] is None:
+                    cell["period"] = leaf_period.get(cell["column_index"])
                 if cell["column_index"] >= 0:
                     cell["header_id"] = f"{t['table_id']}_c{cell['column_index']}"
                     if c.get("notes"):

@@ -1,0 +1,35 @@
+{
+ "document_id": "page",
+ "source_sha256": "25beb3d17a0d0215e5b7352749e4c0a3beb4419284e889f8bc521f3793c80848",
+ "backend": "native_grid",
+ "model_revision": "findoclens native_grid 0.1, PyMuPDF 1.27.2.3",
+ "page": 0,
+ "page_bbox": [
+  0.0,
+  0.0,
+  595.28,
+  841.89
+ ],
+ "tables": [],
+ "status": "failed",
+ "issues": [
+  {
+   "severity": "error",
+   "code": "needs_visual_fallback",
+   "message": "only 0 extractable glyphs; OCR/visual backend required"
+  }
+ ],
+ "capabilities": {
+  "cell_bbox": true,
+  "headers": "text+period+role+colspan",
+  "multi_table": true,
+  "ocr": false,
+  "n_columns": "any (right-aligned numeric)",
+  "hierarchy": "indentation heuristic, optional"
+ },
+ "meta": {
+  "native_glyph_count": 0,
+  "elapsed_ms": 0.9
+ },
+ "schema_version": "findoclens-0.1"
+}

@@ -1,0 +1,33 @@
+{
+  "mode": "warm_same_process",
+  "iteration": 2,
+  "status": "partial",
+  "error": null,
+  "device": "cpu",
+  "model_revision": null,
+  "checkpoint_id": null,
+  "model_metadata": {
+    "device": "cpu",
+    "backend_version": "findoclens-0.1 (native_v2)",
+    "model_revision": null,
+    "checkpoint_id": null,
+    "null_reason": "rule-based native backend: no model checkpoint",
+    "findoclens_packages": {
+      "PyMuPDF": "1.27.2.3"
+    }
+  },
+  "backend_version": "findoclens-0.1 (native_v2)",
+  "stages": {
+    "load_ms": 0.0,
+    "render_ms": 12.931167031638324,
+    "inference_ms": 10.405731038190424,
+    "normalization_ms": 0.5970770143903792,
+    "serialize_ms": 0.999041018076241
+  },
+  "time_ms": 24.942956981249154,
+  "cold_image_export_included": false,
+  "peak_memory_mb": 80.66015625,
+  "memory_method": "Linux ru_maxrss: process lifetime high-water RSS; warm peaks are cumulative, not deltas",
+  "peak_gpu_allocation_mb": null,
+  "gpu_memory_status": "unmeasured: worker does not import or reset framework GPU allocator"
+}

@@ -1,0 +1,1443 @@
+{
+  "document_id": "daiwabo_p10_scan200",
+  "evaluated_at": "2026-10-22T17:22:13.023164+00:00",
+  "evaluator_version": 2,
+  "reference_status": "ai_draft",
+  "human_checked_cells": 0,
+  "scope": {
+    "tables_complete": true,
+    "rows_complete": true,
+    "cells_complete": true,
+    "note": "Selected page only. Completeness and hierarchy are AI draft assertions pending human verification."
+  },
+  "run_status": "abstained",
+  "whitespace_policy": "remove Unicode whitespace only; preserve glyphs, signs, punctuation and decimals",
+  "matching_policy": "One-to-one evaluation with fixed gold denominators and explicit failures.\n\nOnly whitespace is removed for label/raw matching. Raw tokens are never rewritten.\nTable matching uses page + bbox IoU >= .1 (maximum weight assignment). Rows\nrequire equal whitespace-normalized labels; geometry/context/order break ties.\nFinancial cells align by physical column_index, never by predicted value or role.\n",
+  "metrics": {
+    "tables": {
+      "matched": 0,
+      "gold": 3,
+      "predicted": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "extra_tables": 0,
+    "unlocalizable_predicted_tables": 0,
+    "rows": {
+      "matched": 0,
+      "gold": 21,
+      "predicted": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "missed_rows": 21,
+    "spurious_rows": 0,
+    "raw_label_exact": {
+      "correct": 0,
+      "total": 21,
+      "rate": 0.0
+    },
+    "extraneous_row_rate": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "row_order_accuracy": {
+      "correct": 0,
+      "total": 21,
+      "rate": 0.0
+    },
+    "cell_coverage": {
+      "correct": 0,
+      "total": 67,
+      "rate": 0.0
+    },
+    "raw_cell_exact": {
+      "correct": 0,
+      "total": 67,
+      "rate": 0.0
+    },
+    "raw_precision_on_matched": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "raw_precision_all_predicted": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "semantic_cell_exact": {
+      "correct": 0,
+      "total": 67,
+      "rate": 0.0
+    },
+    "numeric_raw_exact": {
+      "correct": 0,
+      "total": 63,
+      "rate": 0.0
+    },
+    "numeric_semantic_exact": {
+      "correct": 0,
+      "total": 63,
+      "rate": 0.0
+    },
+    "header_role_accuracy": {
+      "correct": 0,
+      "total": 10,
+      "rate": 0.0
+    },
+    "header_role_precision": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "grouped_headers": {
+      "matched": 0,
+      "gold": 0,
+      "predicted": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    "header_parent_accuracy": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "hierarchy_edges": {
+      "matched": 0,
+      "gold": 7,
+      "predicted": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "abstention_rate": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "correct_abstention": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "missing_cells": {
+      "correct": 67,
+      "total": 67,
+      "rate": 1.0
+    },
+    "silent_omission_rate": {
+      "correct": 0,
+      "total": 67,
+      "rate": 0.0
+    },
+    "invalid_matched_cells": 0,
+    "cell_period_accuracy": {
+      "correct": 0,
+      "total": 63,
+      "rate": 0.0
+    },
+    "cell_role_accuracy": {
+      "correct": 0,
+      "total": 63,
+      "rate": 0.0
+    },
+    "cell_header_link_accuracy": {
+      "correct": 0,
+      "total": 63,
+      "rate": 0.0
+    },
+    "cell_structure_exact": {
+      "correct": 0,
+      "total": 63,
+      "rate": 0.0
+    },
+    "cell_evidence_localization": {
+      "correct": 0,
+      "total": 67,
+      "rate": 0.0
+    },
+    "unscoped_omission_warnings": 0,
+    "false_assurance": false,
+    "false_assurance_reasons": [],
+    "warnings": [
+      {
+        "source": "native_v2",
+        "severity": "error",
+        "code": "needs_visual_fallback",
+        "message": "No stable native text columns: OCR/VLM is required and not run."
+      },
+      {
+        "code": "empty_extraction",
+        "severity": "error"
+      }
+    ],
+    "gold_cells": 67,
+    "predicted_cells": 0
+  },
+  "errors": [
+    {
+      "table_id": "assets",
+      "row_id": "assets_r001",
+      "label": "流動資産",
+      "column_index": 0,
+      "expected_raw": "407,778",
+      "expected_status": "observed",
+      "bbox": [
+        206.8341064453125,
+        105.43658447265625,
+        272.0594482421875,
+        129.3765869140625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r001",
+      "label": "流動資産",
+      "column_index": 1,
+      "expected_raw": "425,204",
+      "expected_status": "observed",
+      "bbox": [
+        292.068115234375,
+        103.5802001953125,
+        371.4534606933594,
+        130.7241973876953
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r001",
+      "label": "流動資産",
+      "column_index": 2,
+      "expected_raw": "+17,426",
+      "expected_status": "observed",
+      "bbox": [
+        391.04071044921875,
+        105.43658447265625,
+        459.1484680175781,
+        129.3765869140625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r002",
+      "label": "現金及び預金",
+      "column_index": 0,
+      "expected_raw": "55,421",
+      "expected_status": "observed",
+      "bbox": [
+        216.79409790039062,
+        140.38128662109375,
+        272.06201171875,
+        164.3212890625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r002",
+      "label": "現金及び預金",
+      "column_index": 1,
+      "expected_raw": "12,410",
+      "expected_status": "observed",
+      "bbox": [
+        304.1881103515625,
+        138.52490234375,
+        371.4540710449219,
+        165.6688995361328
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r002",
+      "label": "現金及び預金",
+      "column_index": 2,
+      "expected_raw": "△43,010",
+      "expected_status": "observed",
+      "bbox": [
+        387.9206848144531,
+        140.38128662109375,
+        459.1485900878906,
+        164.3212890625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r003",
+      "label": "受取手形及び売掛金",
+      "column_index": 0,
+      "expected_raw": "288,495",
+      "expected_status": "observed",
+      "bbox": [
+        206.8341064453125,
+        175.32598876953125,
+        272.0594482421875,
+        199.2659912109375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r003",
+      "label": "受取手形及び売掛金",
+      "column_index": 1,
+      "expected_raw": "319,626",
+      "expected_status": "observed",
+      "bbox": [
+        292.068115234375,
+        173.4696044921875,
+        371.4534606933594,
+        200.6136016845703
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r003",
+      "label": "受取手形及び売掛金",
+      "column_index": 2,
+      "expected_raw": "+31,130",
+      "expected_status": "observed",
+      "bbox": [
+        391.04071044921875,
+        175.32598876953125,
+        459.1484680175781,
+        199.2659912109375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r004",
+      "label": "商品及び製品",
+      "column_index": 0,
+      "expected_raw": "45,495",
+      "expected_status": "observed",
+      "bbox": [
+        216.79409790039062,
+        210.27078247070312,
+        272.06201171875,
+        234.21078491210938
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r004",
+      "label": "商品及び製品",
+      "column_index": 1,
+      "expected_raw": "68,303",
+      "expected_status": "observed",
+      "bbox": [
+        304.1881103515625,
+        208.414306640625,
+        371.4540710449219,
+        235.5583038330078
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r004",
+      "label": "商品及び製品",
+      "column_index": 2,
+      "expected_raw": "+22,808",
+      "expected_status": "observed",
+      "bbox": [
+        391.04071044921875,
+        210.27078247070312,
+        459.1484680175781,
+        234.21078491210938
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r005",
+      "label": "有形固定資産",
+      "column_index": 0,
+      "expected_raw": "11,252",
+      "expected_status": "observed",
+      "bbox": [
+        216.79409790039062,
+        245.21548461914062,
+        272.06201171875,
+        269.1554870605469
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r005",
+      "label": "有形固定資産",
+      "column_index": 1,
+      "expected_raw": "12,532",
+      "expected_status": "observed",
+      "bbox": [
+        304.1881103515625,
+        243.3590087890625,
+        371.4540710449219,
+        270.5030212402344
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r005",
+      "label": "有形固定資産",
+      "column_index": 2,
+      "expected_raw": "+1,280",
+      "expected_status": "observed",
+      "bbox": [
+        401.0007019042969,
+        245.21548461914062,
+        459.1478271484375,
+        269.1554870605469
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r006",
+      "label": "無形固定資産",
+      "column_index": 0,
+      "expected_raw": "4,973",
+      "expected_status": "observed",
+      "bbox": [
+        226.7541046142578,
+        280.16021728515625,
+        272.0629577636719,
+        304.1002197265625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r006",
+      "label": "無形固定資産",
+      "column_index": 1,
+      "expected_raw": "6,528",
+      "expected_status": "observed",
+      "bbox": [
+        316.30810546875,
+        278.3038024902344,
+        371.4546813964844,
+        305.44781494140625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r006",
+      "label": "無形固定資産",
+      "column_index": 2,
+      "expected_raw": "+1,554",
+      "expected_status": "observed",
+      "bbox": [
+        401.0007019042969,
+        280.16021728515625,
+        459.1478271484375,
+        304.1002197265625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r007",
+      "label": "投資その他の資産",
+      "column_index": 0,
+      "expected_raw": "16,117",
+      "expected_status": "observed",
+      "bbox": [
+        216.79409790039062,
+        315.10491943359375,
+        272.06201171875,
+        339.044921875
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r007",
+      "label": "投資その他の資産",
+      "column_index": 1,
+      "expected_raw": "15,011",
+      "expected_status": "observed",
+      "bbox": [
+        304.1881103515625,
+        313.2485046386719,
+        371.4540710449219,
+        340.39251708984375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r007",
+      "label": "投資その他の資産",
+      "column_index": 2,
+      "expected_raw": "△1,106",
+      "expected_status": "observed",
+      "bbox": [
+        397.8807067871094,
+        315.10491943359375,
+        459.1479797363281,
+        339.044921875
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r008",
+      "label": "資産合計",
+      "column_index": 0,
+      "expected_raw": "440,122",
+      "expected_status": "observed",
+      "bbox": [
+        206.8341064453125,
+        384.994384765625,
+        272.0594482421875,
+        408.93438720703125
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r008",
+      "label": "資産合計",
+      "column_index": 1,
+      "expected_raw": "459,277",
+      "expected_status": "observed",
+      "bbox": [
+        292.068115234375,
+        383.13800048828125,
+        371.4534606933594,
+        410.2820129394531
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r008",
+      "label": "資産合計",
+      "column_index": 2,
+      "expected_raw": "+19,155",
+      "expected_status": "observed",
+      "bbox": [
+        391.04071044921875,
+        384.994384765625,
+        459.1484680175781,
+        408.93438720703125
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r001",
+      "label": "流動負債",
+      "column_index": 0,
+      "expected_raw": "267,779",
+      "expected_status": "observed",
+      "bbox": [
+        636.9722900390625,
+        105.57778930664062,
+        702.1976318359375,
+        129.51779174804688
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r001",
+      "label": "流動負債",
+      "column_index": 1,
+      "expected_raw": "282,903",
+      "expected_status": "observed",
+      "bbox": [
+        736.3662719726562,
+        103.72140502929688,
+        815.7515869140625,
+        130.8654022216797
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r001",
+      "label": "流動負債",
+      "column_index": 2,
+      "expected_raw": "+15,124",
+      "expected_status": "observed",
+      "bbox": [
+        835.3521118164062,
+        105.57778930664062,
+        903.4597778320312,
+        129.51779174804688
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r002",
+      "label": "支払手形及び買掛金",
+      "column_index": 0,
+      "expected_raw": "228,422",
+      "expected_status": "observed",
+      "bbox": [
+        636.9722900390625,
+        140.50588989257812,
+        702.1976318359375,
+        164.44589233398438
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r002",
+      "label": "支払手形及び買掛金",
+      "column_index": 1,
+      "expected_raw": "213,595",
+      "expected_status": "observed",
+      "bbox": [
+        736.3662719726562,
+        138.64950561523438,
+        815.7515869140625,
+        165.7935028076172
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r002",
+      "label": "支払手形及び買掛金",
+      "column_index": 2,
+      "expected_raw": "△14,827",
+      "expected_status": "observed",
+      "bbox": [
+        832.2321166992188,
+        140.50588989257812,
+        903.4600219726562,
+        164.44589233398438
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r003",
+      "label": "短期借入金",
+      "column_index": 0,
+      "expected_raw": "8,904",
+      "expected_status": "observed",
+      "bbox": [
+        656.8922729492188,
+        175.43399047851562,
+        702.2011108398438,
+        199.37399291992188
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r003",
+      "label": "短期借入金",
+      "column_index": 1,
+      "expected_raw": "42,704",
+      "expected_status": "observed",
+      "bbox": [
+        748.486328125,
+        173.57760620117188,
+        815.7522583007812,
+        200.7216033935547
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r003",
+      "label": "短期借入金",
+      "column_index": 2,
+      "expected_raw": "+33,800",
+      "expected_status": "observed",
+      "bbox": [
+        835.3521118164062,
+        175.43399047851562,
+        903.4597778320312,
+        199.37399291992188
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r004",
+      "label": "固定負債",
+      "column_index": 0,
+      "expected_raw": "20,032",
+      "expected_status": "observed",
+      "bbox": [
+        646.9323120117188,
+        210.36209106445312,
+        702.2001953125,
+        234.30209350585938
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r004",
+      "label": "固定負債",
+      "column_index": 1,
+      "expected_raw": "15,653",
+      "expected_status": "observed",
+      "bbox": [
+        748.486328125,
+        208.50570678710938,
+        815.7522583007812,
+        235.6497039794922
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r004",
+      "label": "固定負債",
+      "column_index": 2,
+      "expected_raw": "△4,379",
+      "expected_status": "observed",
+      "bbox": [
+        842.1920776367188,
+        210.36209106445312,
+        903.4593505859375,
+        234.30209350585938
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r005",
+      "label": "長期借入金",
+      "column_index": 0,
+      "expected_raw": "11,799",
+      "expected_status": "observed",
+      "bbox": [
+        646.9323120117188,
+        245.29019165039062,
+        702.2001953125,
+        269.2301940917969
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r005",
+      "label": "長期借入金",
+      "column_index": 1,
+      "expected_raw": "8,232",
+      "expected_status": "observed",
+      "bbox": [
+        760.6063232421875,
+        243.43380737304688,
+        815.7528686523438,
+        270.57781982421875
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r005",
+      "label": "長期借入金",
+      "column_index": 2,
+      "expected_raw": "△3,567",
+      "expected_status": "observed",
+      "bbox": [
+        842.1920776367188,
+        245.29019165039062,
+        903.4593505859375,
+        269.2301940917969
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r006",
+      "label": "負債合計",
+      "column_index": 0,
+      "expected_raw": "287,811",
+      "expected_status": "observed",
+      "bbox": [
+        636.9722900390625,
+        280.2182922363281,
+        702.1976318359375,
+        304.1582946777344
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r006",
+      "label": "負債合計",
+      "column_index": 1,
+      "expected_raw": "298,557",
+      "expected_status": "observed",
+      "bbox": [
+        736.3662719726562,
+        278.3619079589844,
+        815.7515869140625,
+        305.50592041015625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r006",
+      "label": "負債合計",
+      "column_index": 2,
+      "expected_raw": "+10,745",
+      "expected_status": "observed",
+      "bbox": [
+        835.3521118164062,
+        280.2182922363281,
+        903.4597778320312,
+        304.1582946777344
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r007",
+      "label": "純資産合計",
+      "column_index": 0,
+      "expected_raw": "152,310",
+      "expected_status": "observed",
+      "bbox": [
+        636.9722900390625,
+        315.146484375,
+        702.1976318359375,
+        339.08648681640625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r007",
+      "label": "純資産合計",
+      "column_index": 1,
+      "expected_raw": "160,719",
+      "expected_status": "observed",
+      "bbox": [
+        736.3662719726562,
+        313.2900085449219,
+        815.7515869140625,
+        340.43402099609375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r007",
+      "label": "純資産合計",
+      "column_index": 2,
+      "expected_raw": "+8,409",
+      "expected_status": "observed",
+      "bbox": [
+        845.3120727539062,
+        315.146484375,
+        903.4591064453125,
+        339.08648681640625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r008",
+      "label": "自己株式",
+      "column_index": 0,
+      "expected_raw": "△15,088",
+      "expected_status": "observed",
+      "bbox": [
+        630.9722900390625,
+        350.0745849609375,
+        702.2001953125,
+        374.01458740234375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r008",
+      "label": "自己株式",
+      "column_index": 1,
+      "expected_raw": "△2,667",
+      "expected_status": "observed",
+      "bbox": [
+        742.6063232421875,
+        348.21820068359375,
+        815.7528686523438,
+        375.3622131347656
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r008",
+      "label": "自己株式",
+      "column_index": 2,
+      "expected_raw": "+12,420",
+      "expected_status": "observed",
+      "bbox": [
+        835.3521118164062,
+        350.0745849609375,
+        903.4597778320312,
+        374.01458740234375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r009",
+      "label": "負債純資産合計",
+      "column_index": 0,
+      "expected_raw": "440,122",
+      "expected_status": "observed",
+      "bbox": [
+        636.9722900390625,
+        385.002685546875,
+        702.1976318359375,
+        408.94268798828125
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r009",
+      "label": "負債純資産合計",
+      "column_index": 1,
+      "expected_raw": "459,277",
+      "expected_status": "observed",
+      "bbox": [
+        736.3662719726562,
+        383.14630126953125,
+        815.7515869140625,
+        410.2903137207031
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r009",
+      "label": "負債純資産合計",
+      "column_index": 2,
+      "expected_raw": "+19,155",
+      "expected_status": "observed",
+      "bbox": [
+        835.3521118164062,
+        385.002685546875,
+        903.4597778320312,
+        408.94268798828125
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r001",
+      "label": "現金及び預金",
+      "column_index": 0,
+      "expected_raw": "55,421",
+      "expected_status": "observed",
+      "bbox": [
+        316.30224609375,
+        417.5805969238281,
+        371.5701599121094,
+        441.5205993652344
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r001",
+      "label": "現金及び預金",
+      "column_index": 1,
+      "expected_raw": "12,410",
+      "expected_status": "observed",
+      "bbox": [
+        440.2475891113281,
+        417.4529113769531,
+        499.79119873046875,
+        441.5205993652344
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r001",
+      "label": "現金及び預金",
+      "column_index": 2,
+      "expected_raw": "△43,010",
+      "expected_status": "observed",
+      "bbox": [
+        527.2455444335938,
+        417.5805969238281,
+        598.4734497070312,
+        441.5205993652344
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r001",
+      "label": "現金及び預金",
+      "column_index": 3,
+      "expected_raw": "主に商品在庫の増加に伴う減少",
+      "expected_status": "observed",
+      "bbox": [
+        622.83642578125,
+        419.076416015625,
+        832.83642578125,
+        441.576416015625
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r002",
+      "label": "受取手形及び売掛金",
+      "column_index": 0,
+      "expected_raw": "288,495",
+      "expected_status": "observed",
+      "bbox": [
+        306.33111572265625,
+        444.69879150390625,
+        371.5564880371094,
+        468.6387939453125
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r002",
+      "label": "受取手形及び売掛金",
+      "column_index": 1,
+      "expected_raw": "319,626",
+      "expected_status": "observed",
+      "bbox": [
+        429.43060302734375,
+        444.57110595703125,
+        499.7791442871094,
+        468.6387939453125
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r002",
+      "label": "受取手形及び売掛金",
+      "column_index": 2,
+      "expected_raw": "+31,130",
+      "expected_status": "observed",
+      "bbox": [
+        530.345703125,
+        443.9805908203125,
+        598.453369140625,
+        467.92059326171875
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r002",
+      "label": "受取手形及び売掛金",
+      "column_index": 3,
+      "expected_raw": "DISの売上債権の増加",
+      "expected_status": "observed",
+      "bbox": [
+        622.83642578125,
+        445.4764099121094,
+        769.596435546875,
+        467.9764099121094
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r003",
+      "label": "商品及び製品",
+      "column_index": 0,
+      "expected_raw": "45,495",
+      "expected_status": "observed",
+      "bbox": [
+        316.30224609375,
+        471.0987854003906,
+        371.5701599121094,
+        495.0387878417969
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r003",
+      "label": "商品及び製品",
+      "column_index": 1,
+      "expected_raw": "68,303",
+      "expected_status": "observed",
+      "bbox": [
+        440.2475891113281,
+        470.2528991699219,
+        499.79119873046875,
+        494.3205871582031
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r003",
+      "label": "商品及び製品",
+      "column_index": 2,
+      "expected_raw": "+22,808",
+      "expected_status": "observed",
+      "bbox": [
+        530.3737182617188,
+        471.0987854003906,
+        598.4813842773438,
+        495.0387878417969
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r003",
+      "label": "商品及び製品",
+      "column_index": 3,
+      "expected_raw": "主にGIGAスクール向け商品増加",
+      "expected_status": "observed",
+      "bbox": [
+        622.83642578125,
+        471.87640380859375,
+        840.8764038085938,
+        494.37640380859375
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r004",
+      "label": "借入金",
+      "column_index": 0,
+      "expected_raw": "20,703",
+      "expected_status": "observed",
+      "bbox": [
+        316.30609130859375,
+        497.498779296875,
+        371.5740051269531,
+        521.4387817382812
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r004",
+      "label": "借入金",
+      "column_index": 1,
+      "expected_raw": "50,936",
+      "expected_status": "observed",
+      "bbox": [
+        440.2514343261719,
+        496.65289306640625,
+        499.7950439453125,
+        520.7205810546875
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r004",
+      "label": "借入金",
+      "column_index": 2,
+      "expected_raw": "+30,233",
+      "expected_status": "observed",
+      "bbox": [
+        530.3775634765625,
+        497.498779296875,
+        598.4852294921875,
+        521.4387817382812
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r004",
+      "label": "借入金",
+      "column_index": 3,
+      "expected_raw": "運転資本として",
+      "expected_status": "observed",
+      "bbox": [
+        622.83642578125,
+        498.2763977050781,
+        727.83642578125,
+        520.7763671875
+      ],
+      "kind": "missing_cell",
+      "predicted_raw": null
+    }
+  ],
+  "alignment": [
+    {
+      "table_id": "assets",
+      "row_id": "assets_r001",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r002",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r003",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r004",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r005",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r006",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r007",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "assets",
+      "row_id": "assets_r008",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r001",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r002",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r003",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r004",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r005",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r006",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r007",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r008",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r009",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r001",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r002",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r003",
+      "predicted_row_index": null,
+      "matched": false
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r004",
+      "predicted_row_index": null,
+      "matched": false
+    }
+  ],
+  "gold_sha256": "7441c2c5224000f7cebbf3f9903708844883d42ddea6c49ef05f1a4ac1962603",
+  "prediction_sha256": "def3560f146ca15253d5eb06da5c2638ac3570eb865d6f7f826722f4d7dd71ea",
+  "prediction_path": "runs/native_v2/daiwabo_p10_scan200/p0fix1_raster/cold/prediction.json",
+  "source": {
+    "document_id": "daiwabo_p10_scan200",
+    "company": "Daiwabo Holdings",
+    "source_url": null,
+    "source_page_index": 0,
+    "page": 1,
+    "source_sha256": "87bacae538ff048d3fba1361a3cd84cb7f2c55318c577fee20ad7553850132cd",
+    "input_sha256": "87bacae538ff048d3fba1361a3cd84cb7f2c55318c577fee20ad7553850132cd",
+    "input_path": "benchmark/data/raster/daiwabo_p10_scan200/page.pdf",
+    "gold_path": "benchmark/gold/raster/daiwabo_p10_scan200.json",
+    "source_kind": "source_derivative",
+    "source_family": "Daiwabo Holdings",
+    "issuer_relation": "independent_issuer",
+    "split": "holdout",
+    "domain": "financial_slide",
+    "status": "available",
+    "human_audit_status": "ai_draft",
+    "human_checked_cells": 0,
+    "difficulty": "200dpi raster scan of an independent-issuer page",
+    "visual_truth": "visible content retained through 200dpi rasterization; all native text removed; not pixel-identical",
+    "license_note": "Local synthetic derivative; source-family rights apply",
+    "derived_from_document": "daiwabo_p10"
+  },
+  "measurement": {
+    "mode": "cold_process",
+    "iteration": 0,
+    "status": "abstained",
+    "error": null,
+    "device": "cpu",
+    "model_revision": null,
+    "checkpoint_id": null,
+    "model_metadata": {
+      "device": "cpu",
+      "backend_version": "findoclens-0.1 (native_v2)",
+      "model_revision": null,
+      "checkpoint_id": null,
+      "null_reason": "rule-based native backend: no model checkpoint",
+      "findoclens_packages": {
+        "PyMuPDF": "1.27.2.3"
+      }
+    },
+    "backend_version": "findoclens-0.1 (native_v2)",
+    "stages": {
+      "load_ms": 67.69295403501019,
+      "render_ms": 80.10826399549842,
+      "inference_ms": 79.08719504484907,
+      "normalization_ms": 0.027265981771051884,
+      "serialize_ms": 0.1596480142325163
+    },
+    "time_ms": 227.0859780255705,
+    "cold_image_export_included": true,
+    "peak_memory_mb": 115.30078125,
+    "memory_method": "Linux ru_maxrss: process lifetime high-water RSS; warm peaks are cumulative, not deltas",
+    "peak_gpu_allocation_mb": null,
+    "gpu_memory_status": "unmeasured: worker does not import or reset framework GPU allocator"
+  }
+}
