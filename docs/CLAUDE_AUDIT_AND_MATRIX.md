@@ -1,5 +1,7 @@
 # Track B — technical audit and experiment matrix (written before backend work, 2026-10-22)
 
+> Plan document. Outcome and measured numbers: `CLAUDE_RESULTS.md`. Deviations from this plan: PaddleOCR-VL got a disk/RAM preflight only (no install/run); OMRON could not be downloaded; the `auto` and `docling_cmtrue`-on-raster cells were added; ‘expect fail-closed’ for Docling-without-OCR on raster turned out to be *table found, no text* (marked `failed`).
+
 ## Machine audit (measured, `findoclens.runinfo.hardware()` + shell)
 | item | observed |
 |---|---|
