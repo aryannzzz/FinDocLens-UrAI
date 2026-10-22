@@ -1,0 +1,8 @@
+data/pdfs/*
+!data/pdfs/.gitkeep
+.venv*/
+runs/**/*.png
+__pycache__/
+data/variants/
+runs/**/evidence*.png
+baseline_v2/tests/generated/
