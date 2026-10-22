@@ -41,7 +41,8 @@ def code_state():
     """Commit of the extraction code and whether code paths (not run artifacts) have uncommitted edits."""
     try:
         head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
-        dirty = subprocess.check_output(["git", "status", "--porcelain", "--", "findoclens", "adapters", "benchmark", "baseline_v2", "tests"],
+        dirty = subprocess.check_output(["git", "status", "--porcelain", "--", "findoclens", "adapters", "benchmark", "baseline_v2", "tests",
+                                         ":(exclude)benchmark/reports", ":(exclude)benchmark/review"],
                                         cwd=ROOT, text=True).strip()
         return dict(commit=head, code_dirty=bool(dirty), code_dirty_paths=dirty.splitlines()[:20])
     except Exception as exc:       # recorded, never silent
