@@ -1,0 +1,17 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "REPLACE",
+  "source_sha256": null,
+  "input_sha256": null,
+  "source_page_index": null,
+  "annotation_status": "ai_draft",
+  "human_checked_cells": 0,
+  "verification": {"reviewer": null, "date": null, "evidence": null},
+  "scope": {"tables_complete": false, "rows_complete": false, "cells_complete": false},
+  "tables": [{
+    "table_id": "t0", "page": 1, "bbox": null, "status": "requires_source_review", "reading_order": 0,
+    "headers": [{"header_id": "c0", "kind": "leaf", "column_index": 0, "text": null, "period": null, "role": "amount", "bbox": null, "colspan": 1, "rowspan": 1, "status": "requires_source_review"}],
+    "rows": [{"row_id": "r0", "row_index": 0, "raw_label": "", "label": "", "parent_path": [], "type": "item", "bbox": null,
+      "cells": [{"column_index": 0, "header_id": "c0", "period": null, "role": "amount", "raw": null, "value": null, "status": "uncertain", "bbox": null, "evidence_kind": "human", "backend": "annotation"}]}]
+  }]
+}

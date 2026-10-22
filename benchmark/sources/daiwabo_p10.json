@@ -1,0 +1,19 @@
+{
+  "requested_url": "https://www2.jpx.co.jp/disc/31070/140120260206550180.pdf",
+  "final_url": "https://www2.jpx.co.jp/disc/31070/140120260206550180.pdf",
+  "http_status": 200,
+  "headers": {
+    "Server": "Cosminexus HTTP Server",
+    "Last-Modified": "Fri, 06 Feb 2026 16:03:31 GMT",
+    "ETag": "\"8d310e-64a29ee379ac0\"",
+    "Accept-Ranges": "bytes",
+    "Content-Length": "9253134",
+    "Content-Type": "application/pdf",
+    "Cache-Control": "private, max-age=1002",
+    "Date": "Thu, 22 Oct 2026 09:11:36 GMT",
+    "Connection": "close"
+  },
+  "downloaded_at": "2026-10-22T09:11:37.032628+00:00",
+  "byte_count": 9253134,
+  "source_sha256": "b8d238aed3ec8deeb80675dcb1d6442ef9a89e3d876c42ade44543e2166125e8"
+}

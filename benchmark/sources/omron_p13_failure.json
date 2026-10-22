@@ -1,0 +1,21 @@
+{
+  "document_id": "omron_p13",
+  "company": "OMRON",
+  "source_url": "https://www.omron.com/jp/ja/ir/irlib/pdfs/20260513_tanshin.pdf",
+  "source_page_index": 12,
+  "page": 1,
+  "split": "holdout",
+  "issuer_relation": "independent_issuer",
+  "source_kind": "source",
+  "source_family": "OMRON",
+  "domain": "financial_statement",
+  "difficulty": "grouped period/amount/composition headers; five financial columns; multiline labels",
+  "license_note": "Public access; redistribution permission unreviewed. Full PDF and derived images local only.",
+  "human_audit_status": "ai_draft",
+  "human_checked_cells": 0,
+  "status": "unavailable",
+  "error": "RuntimeError: HTTPError: HTTP Error 403: Forbidden",
+  "attempted_at": "2026-10-22T09:35:19.391403+00:00",
+  "source_sha256": null,
+  "input_path": null
+}

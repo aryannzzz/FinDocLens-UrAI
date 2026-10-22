@@ -1,0 +1,1955 @@
+{
+  "schema_version": "benchmark-1.0",
+  "document_id": "daiwabo_p10",
+  "source_sha256": "b8d238aed3ec8deeb80675dcb1d6442ef9a89e3d876c42ade44543e2166125e8",
+  "input_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+  "source_page_index": 9,
+  "page": 1,
+  "page_bbox": [
+    0.0,
+    0.0,
+    960.0,
+    540.0
+  ],
+  "annotation_status": "ai_draft",
+  "human_checked_cells": 0,
+  "annotation_method": "AI-selected regions and hierarchy; source-native token bootstrap; AI visual inspection; no holdout predictions read",
+  "created_at": "2026-10-22T09:23:21.637129+00:00",
+  "verification": {
+    "reviewer": null,
+    "date": null,
+    "evidence": null
+  },
+  "scope": {
+    "tables_complete": true,
+    "rows_complete": true,
+    "cells_complete": true,
+    "note": "Selected page only. Completeness and hierarchy are AI draft assertions pending human verification."
+  },
+  "unit": "million_JPY",
+  "tables": [
+    {
+      "table_id": "assets",
+      "page": 1,
+      "bbox": [
+        50,
+        67,
+        467,
+        416
+      ],
+      "body_bbox": [
+        50,
+        101,
+        467,
+        413
+      ],
+      "reading_order": 0,
+      "headers": [
+        {
+          "header_id": "c0",
+          "column_index": 0,
+          "period": "2025-03-31",
+          "role": "amount",
+          "text": "2025/3",
+          "bbox": [
+            205,
+            73,
+            273,
+            98
+          ],
+          "kind": "leaf",
+          "colspan": 1,
+          "rowspan": 1,
+          "annotation_status": "ai_draft"
+        },
+        {
+          "header_id": "c1",
+          "column_index": 1,
+          "period": "2025-12-31",
+          "role": "amount",
+          "text": "2025/12",
+          "bbox": [
+            291,
+            73,
+            372,
+            98
+          ],
+          "kind": "leaf",
+          "colspan": 1,
+          "rowspan": 1,
+          "annotation_status": "ai_draft"
+        },
+        {
+          "header_id": "c2",
+          "column_index": 2,
+          "period": "2025-12-31_vs_2025-03-31",
+          "role": "change_amount",
+          "text": "増減",
+          "bbox": [
+            389,
+            73,
+            460,
+            98
+          ],
+          "kind": "leaf",
+          "colspan": 1,
+          "rowspan": 1,
+          "annotation_status": "ai_draft"
+        }
+      ],
+      "issues": [],
+      "rows": [
+        {
+          "row_id": "assets_r001",
+          "row_index": 0,
+          "raw_label": "流動資産",
+          "label": "流動資産",
+          "label_bbox": [
+            57.05267333984375,
+            106.91378784179688,
+            113.21267700195312,
+            128.0861053466797
+          ],
+          "bbox": [
+            57.05267333984375,
+            103.5802001953125,
+            459.1484680175781,
+            130.7241973876953
+          ],
+          "parent_path": [],
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "407,778",
+              "value": 407778,
+              "status": "observed",
+              "bbox": [
+                206.8341064453125,
+                105.43658447265625,
+                272.0594482421875,
+                129.3765869140625
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "425,204",
+              "value": 425204,
+              "status": "observed",
+              "bbox": [
+                292.068115234375,
+                103.5802001953125,
+                371.4534606933594,
+                130.7241973876953
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "+17,426",
+              "value": 17426,
+              "status": "observed",
+              "bbox": [
+                391.04071044921875,
+                105.43658447265625,
+                459.1484680175781,
+                129.3765869140625
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        },
+        {
+          "row_id": "assets_r002",
+          "row_index": 1,
+          "raw_label": "現金及び預金",
+          "label": "現金及び預金",
+          "label_bbox": [
+            106.50180053710938,
+            142.94630432128906,
+            184.26182556152344,
+            162.38629150390625
+          ],
+          "bbox": [
+            106.50180053710938,
+            138.52490234375,
+            459.1485900878906,
+            165.6688995361328
+          ],
+          "parent_path": [
+            "流動資産"
+          ],
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "55,421",
+              "value": 55421,
+              "status": "observed",
+              "bbox": [
+                216.79409790039062,
+                140.38128662109375,
+                272.06201171875,
+                164.3212890625
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "12,410",
+              "value": 12410,
+              "status": "observed",
+              "bbox": [
+                304.1881103515625,
+                138.52490234375,
+                371.4540710449219,
+                165.6688995361328
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "△43,010",
+              "value": -43010,
+              "status": "observed",
+              "bbox": [
+                387.9206848144531,
+                140.38128662109375,
+                459.1485900878906,
+                164.3212890625
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        },
+        {
+          "row_id": "assets_r003",
+          "row_index": 2,
+          "raw_label": "受取手形及び売掛金",
+          "label": "受取手形及び売掛金",
+          "label_bbox": [
+            67.6218032836914,
+            177.89100646972656,
+            184.26182556152344,
+            197.33099365234375
+          ],
+          "bbox": [
+            67.6218032836914,
+            173.4696044921875,
+            459.1484680175781,
+            200.6136016845703
+          ],
+          "parent_path": [
+            "流動資産"
+          ],
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "288,495",
+              "value": 288495,
+              "status": "observed",
+              "bbox": [
+                206.8341064453125,
+                175.32598876953125,
+                272.0594482421875,
+                199.2659912109375
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "319,626",
+              "value": 319626,
+              "status": "observed",
+              "bbox": [
+                292.068115234375,
+                173.4696044921875,
+                371.4534606933594,
+                200.6136016845703
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "+31,130",
+              "value": 31130,
+              "status": "observed",
+              "bbox": [
+                391.04071044921875,
+                175.32598876953125,
+                459.1484680175781,
+                199.2659912109375
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        },
+        {
+          "row_id": "assets_r004",
+          "row_index": 3,
+          "raw_label": "商品及び製品",
+          "label": "商品及び製品",
+          "label_bbox": [
+            106.50180053710938,
+            212.83570861816406,
+            184.26182556152344,
+            232.27569580078125
+          ],
+          "bbox": [
+            106.50180053710938,
+            208.414306640625,
+            459.1484680175781,
+            235.5583038330078
+          ],
+          "parent_path": [
+            "流動資産"
+          ],
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "45,495",
+              "value": 45495,
+              "status": "observed",
+              "bbox": [
+                216.79409790039062,
+                210.27078247070312,
+                272.06201171875,
+                234.21078491210938
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "68,303",
+              "value": 68303,
+              "status": "observed",
+              "bbox": [
+                304.1881103515625,
+                208.414306640625,
+                371.4540710449219,
+                235.5583038330078
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "+22,808",
+              "value": 22808,
+              "status": "observed",
+              "bbox": [
+                391.04071044921875,
+                210.27078247070312,
+                459.1484680175781,
+                234.21078491210938
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        },
+        {
+          "row_id": "assets_r005",
+          "row_index": 4,
+          "raw_label": "有形固定資産",
+          "label": "有形固定資産",
+          "label_bbox": [
+            57.061798095703125,
+            246.68829345703125,
+            141.3018035888672,
+            267.8606262207031
+          ],
+          "bbox": [
+            57.061798095703125,
+            243.3590087890625,
+            459.1478271484375,
+            270.5030212402344
+          ],
+          "parent_path": [],
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "11,252",
+              "value": 11252,
+              "status": "observed",
+              "bbox": [
+                216.79409790039062,
+                245.21548461914062,
+                272.06201171875,
+                269.1554870605469
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "12,532",
+              "value": 12532,
+              "status": "observed",
+              "bbox": [
+                304.1881103515625,
+                243.3590087890625,
+                371.4540710449219,
+                270.5030212402344
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "+1,280",
+              "value": 1280,
+              "status": "observed",
+              "bbox": [
+                401.0007019042969,
+                245.21548461914062,
+                459.1478271484375,
+                269.1554870605469
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        },
+        {
+          "row_id": "assets_r006",
+          "row_index": 5,
+          "raw_label": "無形固定資産",
+          "label": "無形固定資産",
+          "label_bbox": [
+            57.061798095703125,
+            281.6330871582031,
+            141.3018035888672,
+            302.805419921875
+          ],
+          "bbox": [
+            57.061798095703125,
+            278.3038024902344,
+            459.1478271484375,
+            305.44781494140625
+          ],
+          "parent_path": [],
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "4,973",
+              "value": 4973,
+              "status": "observed",
+              "bbox": [
+                226.7541046142578,
+                280.16021728515625,
+                272.0629577636719,
+                304.1002197265625
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "6,528",
+              "value": 6528,
+              "status": "observed",
+              "bbox": [
+                316.30810546875,
+                278.3038024902344,
+                371.4546813964844,
+                305.44781494140625
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "+1,554",
+              "value": 1554,
+              "status": "observed",
+              "bbox": [
+                401.0007019042969,
+                280.16021728515625,
+                459.1478271484375,
+                304.1002197265625
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        },
+        {
+          "row_id": "assets_r007",
+          "row_index": 6,
+          "raw_label": "投資その他の資産",
+          "label": "投資その他の資産",
+          "label_bbox": [
+            57.061798095703125,
+            316.5777893066406,
+            169.3817901611328,
+            337.7501220703125
+          ],
+          "bbox": [
+            57.061798095703125,
+            313.2485046386719,
+            459.1479797363281,
+            340.39251708984375
+          ],
+          "parent_path": [],
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "16,117",
+              "value": 16117,
+              "status": "observed",
+              "bbox": [
+                216.79409790039062,
+                315.10491943359375,
+                272.06201171875,
+                339.044921875
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "15,011",
+              "value": 15011,
+              "status": "observed",
+              "bbox": [
+                304.1881103515625,
+                313.2485046386719,
+                371.4540710449219,
+                340.39251708984375
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "△1,106",
+              "value": -1106,
+              "status": "observed",
+              "bbox": [
+                397.8807067871094,
+                315.10491943359375,
+                459.1479797363281,
+                339.044921875
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        },
+        {
+          "row_id": "assets_r008",
+          "row_index": 7,
+          "raw_label": "資産合計",
+          "label": "資産合計",
+          "label_bbox": [
+            92.6229019165039,
+            386.4671936035156,
+            148.78289794921875,
+            407.6395263671875
+          ],
+          "bbox": [
+            92.6229019165039,
+            383.13800048828125,
+            459.1484680175781,
+            410.2820129394531
+          ],
+          "parent_path": [],
+          "type": "total",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "440,122",
+              "value": 440122,
+              "status": "observed",
+              "bbox": [
+                206.8341064453125,
+                384.994384765625,
+                272.0594482421875,
+                408.93438720703125
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "459,277",
+              "value": 459277,
+              "status": "observed",
+              "bbox": [
+                292.068115234375,
+                383.13800048828125,
+                371.4534606933594,
+                410.2820129394531
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "+19,155",
+              "value": 19155,
+              "status": "observed",
+              "bbox": [
+                391.04071044921875,
+                384.994384765625,
+                459.1484680175781,
+                408.93438720703125
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        }
+      ]
+    },
+    {
+      "table_id": "liabilities_equity",
+      "page": 1,
+      "bbox": [
+        480,
+        67,
+        912,
+        416
+      ],
+      "body_bbox": [
+        480,
+        101,
+        912,
+        413
+      ],
+      "reading_order": 1,
+      "headers": [
+        {
+          "header_id": "c0",
+          "column_index": 0,
+          "period": "2025-03-31",
+          "role": "amount",
+          "text": "2025/3",
+          "bbox": [
+            635,
+            73,
+            703,
+            98
+          ],
+          "kind": "leaf",
+          "colspan": 1,
+          "rowspan": 1,
+          "annotation_status": "ai_draft"
+        },
+        {
+          "header_id": "c1",
+          "column_index": 1,
+          "period": "2025-12-31",
+          "role": "amount",
+          "text": "2025/12",
+          "bbox": [
+            735,
+            73,
+            816,
+            98
+          ],
+          "kind": "leaf",
+          "colspan": 1,
+          "rowspan": 1,
+          "annotation_status": "ai_draft"
+        },
+        {
+          "header_id": "c2",
+          "column_index": 2,
+          "period": "2025-12-31_vs_2025-03-31",
+          "role": "change_amount",
+          "text": "増減",
+          "bbox": [
+            831,
+            73,
+            904,
+            98
+          ],
+          "kind": "leaf",
+          "colspan": 1,
+          "rowspan": 1,
+          "annotation_status": "ai_draft"
+        }
+      ],
+      "issues": [],
+      "rows": [
+        {
+          "row_id": "liabilities_equity_r001",
+          "row_index": 0,
+          "raw_label": "流動負債",
+          "label": "流動負債",
+          "label_bbox": [
+            487.20489501953125,
+            107.05755615234375,
+            543.3648681640625,
+            128.22987365722656
+          ],
+          "bbox": [
+            487.20489501953125,
+            103.72140502929688,
+            903.4597778320312,
+            130.8654022216797
+          ],
+          "parent_path": [],
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "267,779",
+              "value": 267779,
+              "status": "observed",
+              "bbox": [
+                636.9722900390625,
+                105.57778930664062,
+                702.1976318359375,
+                129.51779174804688
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "282,903",
+              "value": 282903,
+              "status": "observed",
+              "bbox": [
+                736.3662719726562,
+                103.72140502929688,
+                815.7515869140625,
+                130.8654022216797
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "+15,124",
+              "value": 15124,
+              "status": "observed",
+              "bbox": [
+                835.3521118164062,
+                105.57778930664062,
+                903.4597778320312,
+                129.51779174804688
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        },
+        {
+          "row_id": "liabilities_equity_r002",
+          "row_index": 1,
+          "raw_label": "支払手形及び買掛金",
+          "label": "支払手形及び買掛金",
+          "label_bbox": [
+            497.760009765625,
+            143.07090759277344,
+            614.400146484375,
+            162.51089477539062
+          ],
+          "bbox": [
+            497.760009765625,
+            138.64950561523438,
+            903.4600219726562,
+            165.7935028076172
+          ],
+          "parent_path": [
+            "流動負債"
+          ],
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "228,422",
+              "value": 228422,
+              "status": "observed",
+              "bbox": [
+                636.9722900390625,
+                140.50588989257812,
+                702.1976318359375,
+                164.44589233398438
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "213,595",
+              "value": 213595,
+              "status": "observed",
+              "bbox": [
+                736.3662719726562,
+                138.64950561523438,
+                815.7515869140625,
+                165.7935028076172
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "△14,827",
+              "value": -14827,
+              "status": "observed",
+              "bbox": [
+                832.2321166992188,
+                140.50588989257812,
+                903.4600219726562,
+                164.44589233398438
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        },
+        {
+          "row_id": "liabilities_equity_r003",
+          "row_index": 2,
+          "raw_label": "短期借入金",
+          "label": "短期借入金",
+          "label_bbox": [
+            549.5999755859375,
+            177.99900817871094,
+            614.4000854492188,
+            197.43899536132812
+          ],
+          "bbox": [
+            549.5999755859375,
+            173.57760620117188,
+            903.4597778320312,
+            200.7216033935547
+          ],
+          "parent_path": [
+            "流動負債"
+          ],
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "8,904",
+              "value": 8904,
+              "status": "observed",
+              "bbox": [
+                656.8922729492188,
+                175.43399047851562,
+                702.2011108398438,
+                199.37399291992188
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "42,704",
+              "value": 42704,
+              "status": "observed",
+              "bbox": [
+                748.486328125,
+                173.57760620117188,
+                815.7522583007812,
+                200.7216033935547
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "+33,800",
+              "value": 33800,
+              "status": "observed",
+              "bbox": [
+                835.3521118164062,
+                175.43399047851562,
+                903.4597778320312,
+                199.37399291992188
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        },
+        {
+          "row_id": "liabilities_equity_r004",
+          "row_index": 3,
+          "raw_label": "固定負債",
+          "label": "固定負債",
+          "label_bbox": [
+            487.20001220703125,
+            211.83499145507812,
+            543.3599853515625,
+            233.00730895996094
+          ],
+          "bbox": [
+            487.20001220703125,
+            208.50570678710938,
+            903.4593505859375,
+            235.6497039794922
+          ],
+          "parent_path": [],
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "20,032",
+              "value": 20032,
+              "status": "observed",
+              "bbox": [
+                646.9323120117188,
+                210.36209106445312,
+                702.2001953125,
+                234.30209350585938
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "15,653",
+              "value": 15653,
+              "status": "observed",
+              "bbox": [
+                748.486328125,
+                208.50570678710938,
+                815.7522583007812,
+                235.6497039794922
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "△4,379",
+              "value": -4379,
+              "status": "observed",
+              "bbox": [
+                842.1920776367188,
+                210.36209106445312,
+                903.4593505859375,
+                234.30209350585938
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        },
+        {
+          "row_id": "liabilities_equity_r005",
+          "row_index": 4,
+          "raw_label": "長期借入金",
+          "label": "長期借入金",
+          "label_bbox": [
+            549.5999755859375,
+            247.85520935058594,
+            614.4000854492188,
+            267.2951965332031
+          ],
+          "bbox": [
+            549.5999755859375,
+            243.43380737304688,
+            903.4593505859375,
+            270.57781982421875
+          ],
+          "parent_path": [
+            "固定負債"
+          ],
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "11,799",
+              "value": 11799,
+              "status": "observed",
+              "bbox": [
+                646.9323120117188,
+                245.29019165039062,
+                702.2001953125,
+                269.2301940917969
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "8,232",
+              "value": 8232,
+              "status": "observed",
+              "bbox": [
+                760.6063232421875,
+                243.43380737304688,
+                815.7528686523438,
+                270.57781982421875
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "△3,567",
+              "value": -3567,
+              "status": "observed",
+              "bbox": [
+                842.1920776367188,
+                245.29019165039062,
+                903.4593505859375,
+                269.2301940917969
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        },
+        {
+          "row_id": "liabilities_equity_r006",
+          "row_index": 5,
+          "raw_label": "負債合計",
+          "label": "負債合計",
+          "label_bbox": [
+            522.760986328125,
+            281.6911926269531,
+            578.9208984375,
+            302.863525390625
+          ],
+          "bbox": [
+            522.760986328125,
+            278.3619079589844,
+            903.4597778320312,
+            305.50592041015625
+          ],
+          "parent_path": [],
+          "type": "total",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "287,811",
+              "value": 287811,
+              "status": "observed",
+              "bbox": [
+                636.9722900390625,
+                280.2182922363281,
+                702.1976318359375,
+                304.1582946777344
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "298,557",
+              "value": 298557,
+              "status": "observed",
+              "bbox": [
+                736.3662719726562,
+                278.3619079589844,
+                815.7515869140625,
+                305.50592041015625
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "+10,745",
+              "value": 10745,
+              "status": "observed",
+              "bbox": [
+                835.3521118164062,
+                280.2182922363281,
+                903.4597778320312,
+                304.1582946777344
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        },
+        {
+          "row_id": "liabilities_equity_r007",
+          "row_index": 6,
+          "raw_label": "純資産合計",
+          "label": "純資産合計",
+          "label_bbox": [
+            515.6810913085938,
+            316.6192932128906,
+            585.8809814453125,
+            337.7916259765625
+          ],
+          "bbox": [
+            515.6810913085938,
+            313.2900085449219,
+            903.4591064453125,
+            340.43402099609375
+          ],
+          "parent_path": [],
+          "type": "total",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "152,310",
+              "value": 152310,
+              "status": "observed",
+              "bbox": [
+                636.9722900390625,
+                315.146484375,
+                702.1976318359375,
+                339.08648681640625
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "160,719",
+              "value": 160719,
+              "status": "observed",
+              "bbox": [
+                736.3662719726562,
+                313.2900085449219,
+                815.7515869140625,
+                340.43402099609375
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "+8,409",
+              "value": 8409,
+              "status": "observed",
+              "bbox": [
+                845.3120727539062,
+                315.146484375,
+                903.4591064453125,
+                339.08648681640625
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        },
+        {
+          "row_id": "liabilities_equity_r008",
+          "row_index": 7,
+          "raw_label": "自己株式",
+          "label": "自己株式",
+          "label_bbox": [
+            562.5599975585938,
+            352.63958740234375,
+            614.4000854492188,
+            372.07958984375
+          ],
+          "bbox": [
+            562.5599975585938,
+            348.21820068359375,
+            903.4597778320312,
+            375.3622131347656
+          ],
+          "parent_path": [
+            "純資産合計"
+          ],
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "△15,088",
+              "value": -15088,
+              "status": "observed",
+              "bbox": [
+                630.9722900390625,
+                350.0745849609375,
+                702.2001953125,
+                374.01458740234375
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "△2,667",
+              "value": -2667,
+              "status": "observed",
+              "bbox": [
+                742.6063232421875,
+                348.21820068359375,
+                815.7528686523438,
+                375.3622131347656
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "+12,420",
+              "value": 12420,
+              "status": "observed",
+              "bbox": [
+                835.3521118164062,
+                350.0745849609375,
+                903.4597778320312,
+                374.01458740234375
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        },
+        {
+          "row_id": "liabilities_equity_r009",
+          "row_index": 8,
+          "raw_label": "負債純資産合計",
+          "label": "負債純資産合計",
+          "label_bbox": [
+            501.64111328125,
+            386.4755859375,
+            599.9209594726562,
+            407.6479187011719
+          ],
+          "bbox": [
+            501.64111328125,
+            383.14630126953125,
+            903.4597778320312,
+            410.2903137207031
+          ],
+          "parent_path": [],
+          "type": "total",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "440,122",
+              "value": 440122,
+              "status": "observed",
+              "bbox": [
+                636.9722900390625,
+                385.002685546875,
+                702.1976318359375,
+                408.94268798828125
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "459,277",
+              "value": 459277,
+              "status": "observed",
+              "bbox": [
+                736.3662719726562,
+                383.14630126953125,
+                815.7515869140625,
+                410.2903137207031
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "+19,155",
+              "value": 19155,
+              "status": "observed",
+              "bbox": [
+                835.3521118164062,
+                385.002685546875,
+                903.4597778320312,
+                408.94268798828125
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        }
+      ]
+    },
+    {
+      "table_id": "explanation",
+      "page": 1,
+      "bbox": [
+        58,
+        417,
+        930,
+        522
+      ],
+      "body_bbox": [
+        58,
+        417,
+        930,
+        522
+      ],
+      "reading_order": 2,
+      "headers": [
+        {
+          "header_id": "c0",
+          "column_index": 0,
+          "period": "2025-03-31",
+          "role": "amount",
+          "text": null,
+          "bbox": null,
+          "kind": "leaf",
+          "colspan": 1,
+          "rowspan": 1,
+          "annotation_status": "ai_draft",
+          "status": "implicit_unprinted; period association AI-drafted from upper tables"
+        },
+        {
+          "header_id": "c1",
+          "column_index": 1,
+          "period": "2025-12-31",
+          "role": "amount",
+          "text": null,
+          "bbox": null,
+          "kind": "leaf",
+          "colspan": 1,
+          "rowspan": 1,
+          "annotation_status": "ai_draft",
+          "status": "implicit_unprinted; period association AI-drafted from upper tables"
+        },
+        {
+          "header_id": "c2",
+          "column_index": 2,
+          "period": "2025-12-31_vs_2025-03-31",
+          "role": "change_amount",
+          "text": null,
+          "bbox": null,
+          "kind": "leaf",
+          "colspan": 1,
+          "rowspan": 1,
+          "annotation_status": "ai_draft",
+          "status": "implicit_unprinted; period association AI-drafted from upper tables"
+        },
+        {
+          "header_id": "c3",
+          "column_index": 3,
+          "period": null,
+          "role": "other",
+          "text": null,
+          "bbox": null,
+          "kind": "leaf",
+          "colspan": 1,
+          "rowspan": 1,
+          "annotation_status": "ai_draft",
+          "status": "implicit_unprinted; period association AI-drafted from upper tables"
+        }
+      ],
+      "issues": [],
+      "rows": [
+        {
+          "row_id": "explanation_r001",
+          "row_index": 0,
+          "raw_label": "現金及び預金",
+          "label": "現金及び預金",
+          "label_bbox": [
+            129.07550048828125,
+            418.2987976074219,
+            224.83554077148438,
+            442.2388000488281
+          ],
+          "bbox": [
+            129.07550048828125,
+            417.4529113769531,
+            832.83642578125,
+            442.2388000488281
+          ],
+          "parent_path": [],
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "55,421",
+              "value": 55421,
+              "status": "observed",
+              "bbox": [
+                316.30224609375,
+                417.5805969238281,
+                371.5701599121094,
+                441.5205993652344
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "12,410",
+              "value": 12410,
+              "status": "observed",
+              "bbox": [
+                440.2475891113281,
+                417.4529113769531,
+                499.79119873046875,
+                441.5205993652344
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "△43,010",
+              "value": -43010,
+              "status": "observed",
+              "bbox": [
+                527.2455444335938,
+                417.5805969238281,
+                598.4734497070312,
+                441.5205993652344
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 3,
+              "header_id": "c3",
+              "period": null,
+              "role": "other",
+              "raw": "主に商品在庫の増加に伴う減少",
+              "value": "主に商品在庫の増加に伴う減少",
+              "status": "observed",
+              "bbox": [
+                622.83642578125,
+                419.076416015625,
+                832.83642578125,
+                441.576416015625
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        },
+        {
+          "row_id": "explanation_r002",
+          "row_index": 1,
+          "raw_label": "受取手形及び売掛金",
+          "label": "受取手形及び売掛金",
+          "label_bbox": [
+            105.07550048828125,
+            444.69879150390625,
+            248.71554565429688,
+            468.6387939453125
+          ],
+          "bbox": [
+            105.07550048828125,
+            443.9805908203125,
+            769.596435546875,
+            468.6387939453125
+          ],
+          "parent_path": [],
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "288,495",
+              "value": 288495,
+              "status": "observed",
+              "bbox": [
+                306.33111572265625,
+                444.69879150390625,
+                371.5564880371094,
+                468.6387939453125
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "319,626",
+              "value": 319626,
+              "status": "observed",
+              "bbox": [
+                429.43060302734375,
+                444.57110595703125,
+                499.7791442871094,
+                468.6387939453125
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "+31,130",
+              "value": 31130,
+              "status": "observed",
+              "bbox": [
+                530.345703125,
+                443.9805908203125,
+                598.453369140625,
+                467.92059326171875
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 3,
+              "header_id": "c3",
+              "period": null,
+              "role": "other",
+              "raw": "DISの売上債権の増加",
+              "value": "DISの売上債権の増加",
+              "status": "observed",
+              "bbox": [
+                622.83642578125,
+                445.4764099121094,
+                769.596435546875,
+                467.9764099121094
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        },
+        {
+          "row_id": "explanation_r003",
+          "row_index": 2,
+          "raw_label": "商品及び製品",
+          "label": "商品及び製品",
+          "label_bbox": [
+            129.07550048828125,
+            471.0987854003906,
+            224.83554077148438,
+            495.0387878417969
+          ],
+          "bbox": [
+            129.07550048828125,
+            470.2528991699219,
+            840.8764038085938,
+            495.0387878417969
+          ],
+          "parent_path": [],
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "45,495",
+              "value": 45495,
+              "status": "observed",
+              "bbox": [
+                316.30224609375,
+                471.0987854003906,
+                371.5701599121094,
+                495.0387878417969
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "68,303",
+              "value": 68303,
+              "status": "observed",
+              "bbox": [
+                440.2475891113281,
+                470.2528991699219,
+                499.79119873046875,
+                494.3205871582031
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "+22,808",
+              "value": 22808,
+              "status": "observed",
+              "bbox": [
+                530.3737182617188,
+                471.0987854003906,
+                598.4813842773438,
+                495.0387878417969
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 3,
+              "header_id": "c3",
+              "period": null,
+              "role": "other",
+              "raw": "主にGIGAスクール向け商品増加",
+              "value": "主にGIGAスクール向け商品増加",
+              "status": "observed",
+              "bbox": [
+                622.83642578125,
+                471.87640380859375,
+                840.8764038085938,
+                494.37640380859375
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        },
+        {
+          "row_id": "explanation_r004",
+          "row_index": 3,
+          "raw_label": "借入金",
+          "label": "借入金",
+          "label_bbox": [
+            152.95550537109375,
+            497.498779296875,
+            200.8355255126953,
+            521.4387817382812
+          ],
+          "bbox": [
+            152.95550537109375,
+            496.65289306640625,
+            727.83642578125,
+            521.4387817382812
+          ],
+          "parent_path": [],
+          "type": "item",
+          "cells": [
+            {
+              "column_index": 0,
+              "header_id": "c0",
+              "period": "2025-03-31",
+              "role": "amount",
+              "raw": "20,703",
+              "value": 20703,
+              "status": "observed",
+              "bbox": [
+                316.30609130859375,
+                497.498779296875,
+                371.5740051269531,
+                521.4387817382812
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 1,
+              "header_id": "c1",
+              "period": "2025-12-31",
+              "role": "amount",
+              "raw": "50,936",
+              "value": 50936,
+              "status": "observed",
+              "bbox": [
+                440.2514343261719,
+                496.65289306640625,
+                499.7950439453125,
+                520.7205810546875
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 2,
+              "header_id": "c2",
+              "period": "2025-12-31_vs_2025-03-31",
+              "role": "change_amount",
+              "raw": "+30,233",
+              "value": 30233,
+              "status": "observed",
+              "bbox": [
+                530.3775634765625,
+                497.498779296875,
+                598.4852294921875,
+                521.4387817382812
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            },
+            {
+              "column_index": 3,
+              "header_id": "c3",
+              "period": null,
+              "role": "other",
+              "raw": "運転資本として",
+              "value": "運転資本として",
+              "status": "observed",
+              "bbox": [
+                622.83642578125,
+                498.2763977050781,
+                727.83642578125,
+                520.7763671875
+              ],
+              "backend": "annotation_native_bootstrap",
+              "evidence_kind": "native_pdf",
+              "annotation_status": "ai_draft"
+            }
+          ],
+          "annotation_status": "ai_draft"
+        }
+      ]
+    }
+  ]
+}
