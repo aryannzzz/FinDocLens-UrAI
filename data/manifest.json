@@ -1,0 +1,16 @@
+{
+  "_note": "Source manifest for track-B experiments. PDFs are NOT redistributed in git (data/pdfs is gitignored); re-download from URL and verify sha256. Public availability is not redistribution permission.",
+  "documents": {
+    "source": {"path": "baseline_v2/source.pdf", "source_url": null, "page_index": 0, "split": "development (original Ur AI sample)",
+               "sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea", "download_status": "bundled"},
+    "elecom": {"path": "data/pdfs/elecom.pdf", "source_url": "https://www2.jpx.co.jp/disc/67500/140120260331594026.pdf", "page_index": 8,
+               "split": "independent-issuer holdout (no tuning on gold; gold owned by Codex track)",
+               "sha256": "4bdb7bb0022a63e459ec35ef4e571a8fcf4796b0b776b5fe2f7e4ee217fb0d78", "download_status": "ok 2026-10-22 (HTTP 200, 21 pages)"},
+    "daiwabo": {"path": "data/pdfs/daiwabo.pdf", "source_url": "https://www2.jpx.co.jp/disc/31070/140120260206550180.pdf", "page_index": 9,
+                "split": "independent-issuer holdout (3 tables/page)",
+                "sha256": "b8d238aed3ec8deeb80675dcb1d6442ef9a89e3d876c42ade44543e2166125e8", "download_status": "ok 2026-10-22 (HTTP 200, 56 pages)"},
+    "omron": {"path": "data/pdfs/omron.pdf", "source_url": "https://www.omron.com/jp/ja/ir/irlib/pdfs/20260513_tanshin.pdf", "page_index": 12,
+              "split": "independent-issuer holdout", "sha256": null,
+              "download_status": "BLOCKED 2026-10-22: server returned Akamai 'Access Denied' HTML (saved only as data/pdfs/omron.ACCESS_DENIED.html, not a PDF). Two attempts (default curl, then one retry with a browser-like User-Agent) both denied; no further access attempts made. Applicant must download manually."}
+  }
+}

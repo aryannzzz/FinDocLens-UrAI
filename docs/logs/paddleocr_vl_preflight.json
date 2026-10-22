@@ -1,0 +1,90 @@
+{
+ "timestamp_utc": "2026-10-22T10:05:39+00:00",
+ "hardware": {
+  "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+  "cpu_threads": 12,
+  "mem_MB": {
+   "MemTotal": 15676,
+   "MemFree": 586,
+   "MemAvailable": 2346
+  },
+  "gpu": {
+   "nvidia_smi": "unavailable (exit 9): NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running."
+  },
+  "platform": "Linux-7.0.11-76070011-generic-x86_64-with-glibc2.35",
+  "python": "3.13.5"
+ },
+ "repos": {
+  "PaddlePaddle/PaddleOCR-VL-1.6": {
+   "files": 20,
+   "total_bytes": 1930462423,
+   "largest": [
+    [
+     "model.safetensors",
+     1917255968
+    ],
+    [
+     "tokenizer.json",
+     11189060
+    ]
+   ],
+   "lastModified": "2026-08-08T14:32:21.000Z"
+  },
+  "PaddlePaddle/PP-DocLayoutV3": {
+   "files": 5,
+   "total_bytes": 132018611,
+   "largest": [
+    [
+     "inference.pdiparams",
+     130806572
+    ],
+    [
+     "inference.json",
+     1196890
+    ]
+   ],
+   "lastModified": "2026-09-30T04:59:24.000Z"
+  },
+  "PaddlePaddle/PP-DocLayoutV2": {
+   "files": 6,
+   "total_bytes": 213773841,
+   "largest": [
+    [
+     "inference.pdiparams",
+     212170944
+    ],
+    [
+     "inference.json",
+     1592566
+    ]
+   ],
+   "lastModified": "2026-01-29T08:21:29.000Z"
+  }
+ },
+ "pypi": {
+  "paddlepaddle": {
+   "version": "3.3.1",
+   "wheels": [
+    [
+     "paddlepaddle-3.3.1-cp312-cp312-manylinux1_x86_64.whl",
+     194839332
+    ]
+   ]
+  },
+  "paddleocr": {
+   "version": "3.7.0",
+   "wheels": [
+    [
+     "paddleocr-3.7.0-py3-none-any.whl",
+     146750
+    ]
+   ]
+  }
+ },
+ "disk": {
+  "free_bytes": 1858187264,
+  "needed_lower_bound_bytes": 2257320366,
+  "fits_on_disk": false
+ },
+ "verdict": "BLOCKED: install+weights would not fit on disk with a safe margin"
+}

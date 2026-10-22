@@ -1,0 +1,11 @@
+# Optional model-backend environment (kept OUT of the system/conda Python). See docs/SETUP_MODELS.md.
+# Install with the CPU-only torch wheel (this laptop's NVIDIA driver is not usable; the system driver is never touched):
+#   uv venv .venv-docling --python 3.12
+#   uv pip install --python .venv-docling/bin/python --extra-index-url https://download.pytorch.org/whl/cpu \
+#       --index-strategy unsafe-best-match -r requirements-models.txt
+torch
+torchvision
+docling
+pymupdf>=1.24,<2
+pdfplumber>=0.11,<1
+onnxruntime

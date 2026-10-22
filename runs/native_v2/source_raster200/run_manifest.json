@@ -1,0 +1,85 @@
+{
+ "run_id": "a2eca975f1c6",
+ "timestamp_utc": "2026-10-22T10:16:38+00:00",
+ "git_commit": "a76d46c366f42f666a38309c7460fd76b9394100+dirty",
+ "source_url": null,
+ "source_sha256": "80e422e144ebfbd5fc764ec3d06f1268f2dcd9911ee58861b997afe9b47a79cc",
+ "page_index": 0,
+ "split_label": null,
+ "backend": "native_v2",
+ "model_revision": "baseline_v2 (tag v2-frozen), PyMuPDF 1.27.2.3",
+ "options": {},
+ "tag": null,
+ "package_versions": {
+  "PyMuPDF": "1.27.2.3",
+  "docling": null,
+  "docling-core": null,
+  "docling-ibm-models": null,
+  "docling-parse": null,
+  "torch": "2.8.0",
+  "torchvision": "0.23.0",
+  "rapidocr": null,
+  "onnxruntime": "1.27.0",
+  "easyocr": null,
+  "paddleocr": null,
+  "paddlepaddle": null,
+  "transformers": "4.49.0",
+  "numpy": "2.2.6",
+  "pdfplumber": null
+ },
+ "hardware": {
+  "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+  "cpu_threads": 12,
+  "mem_MB": {
+   "MemTotal": 15676,
+   "MemFree": 1626,
+   "MemAvailable": 3391
+  },
+  "gpu": {
+   "nvidia_smi": "unavailable (exit 9): NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running."
+  },
+  "platform": "Linux-7.0.11-76070011-generic-x86_64-with-glibc2.35",
+  "python": "3.13.5"
+ },
+ "device": "cpu",
+ "timings": [
+  {
+   "run": 1,
+   "kind": "cold",
+   "time_ms": 150.0
+  },
+  {
+   "run": 2,
+   "kind": "warm",
+   "time_ms": 126.7
+  },
+  {
+   "run": 3,
+   "kind": "warm",
+   "time_ms": 128.1
+  }
+ ],
+ "cold_time_ms": 150.0,
+ "warm_time_ms_median": 128.1,
+ "peak_memory_mb": {
+  "process_peak_rss_mb": 143.8,
+  "gpu_peak_allocated_mb": null
+ },
+ "status": "failed",
+ "error_text": null,
+ "prediction_path": "runs/native_v2/source_raster200/prediction.json",
+ "metrics_path": null,
+ "human_audit_status": "none: automatic extraction, not human-verified",
+ "backend_meta": {
+  "native_result_summary": {
+   "column_anchors": null,
+   "periods": [],
+   "unit": null,
+   "anchor_diagnostics": {
+    "reason": "insufficient_tabular_evidence",
+    "candidate_rows": 0
+   }
+  },
+  "elapsed_ms": 128.0
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "run_id": "5f946f383f9a",
+ "timestamp_utc": "2026-10-22T10:27:58+00:00",
+ "git_commit": "a76d46c366f42f666a38309c7460fd76b9394100+dirty",
+ "source_url": null,
+ "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+ "page_index": 0,
+ "split_label": "development (original Ur AI sample)",
+ "backend": "docling",
+ "model_revision": null,
+ "options": {},
+ "tag": null,
+ "package_versions": {
+  "PyMuPDF": "1.28.2",
+  "docling": "2.141.0",
+  "docling-core": "2.103.1",
+  "docling-ibm-models": "4.0.4",
+  "docling-parse": "7.22.4",
+  "torch": "2.14.1+cpu",
+  "torchvision": "0.29.1+cpu",
+  "rapidocr": "3.10.0",
+  "onnxruntime": "1.31.0",
+  "easyocr": null,
+  "paddleocr": null,
+  "paddlepaddle": null,
+  "transformers": "5.20.2",
+  "numpy": "2.5.4",
+  "pdfplumber": "0.11.10"
+ },
+ "hardware": {
+  "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+  "cpu_threads": 12,
+  "mem_MB": {
+   "MemTotal": 15676,
+   "MemFree": 1215,
+   "MemAvailable": 2873
+  },
+  "gpu": {
+   "nvidia_smi": "unavailable (exit 9): NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running."
+  },
+  "platform": "Linux-7.0.11-76070011-generic-x86_64-with-glibc2.35",
+  "python": "3.12.13"
+ },
+ "device": "cpu",
+ "timings": [
+  {
+   "run": 1,
+   "kind": "cold",
+   "time_ms": 19410.3
+  }
+ ],
+ "cold_time_ms": 19410.3,
+ "warm_time_ms_median": null,
+ "peak_memory_mb": {
+  "process_peak_rss_mb": 1276.8,
+  "gpu_peak_allocated_mb": null
+ },
+ "status": "ok",
+ "error_text": null,
+ "prediction_path": "runs/auto_verify/docling/source_p0/prediction.json",
+ "metrics_path": null,
+ "human_audit_status": "none: automatic extraction, not human-verified",
+ "backend_meta": {
+  "device": "cpu",
+  "converter_load_ms": 4130.9,
+  "convert_ms": 15065.9,
+  "versions": {
+   "docling": "2.141.0",
+   "docling-core": "2.103.1",
+   "docling-ibm-models": "4.0.4",
+   "docling-parse": "7.22.4",
+   "torch": "2.14.1+cpu",
+   "rapidocr": "3.10.0"
+  },
+  "table_structure_mode": "accurate",
+  "do_cell_matching": true,
+  "ocr_engine": null,
+  "docling_status": "ConversionStatus.SUCCESS",
+  "raw_artifacts": [
+   "docling_document.json",
+   "docling_tables.md"
+  ],
+  "elapsed_ms": 19410.3
+ }
+}
