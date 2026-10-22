@@ -1,6 +1,6 @@
 """Run one backend on one page, write artifacts + run manifest to runs/<backend>/<doc_id>/.
 
-    python -m findoclens.runner <backend> <pdf> <page_index> [--out runs] [--repeat N] [--tag cold|warm] [-o key=val]
+    python -m findoclens.runner <backend> <pdf> <page_index> [--out runs] [--repeat N] [--tag suffix] [--doc-id id] [-o key=val]
 
 `--repeat N` runs extract N times in the same process: run 1 is the cold run (includes model load),
 runs 2..N are warm. All timings are wall-clock `perf_counter`; peak RSS is process `ru_maxrss`.
@@ -24,12 +24,12 @@ PKGS = ["PyMuPDF", "docling", "docling-core", "docling-ibm-models", "docling-par
         "onnxruntime", "easyocr", "paddleocr", "paddlepaddle", "transformers", "numpy", "pdfplumber"]
 
 
-def run_backend(backend, pdf, page_index, out_root="runs", repeat=1, opts=None, doc_id=None):
-    opts = opts or {}
+def run_backend(backend, pdf, page_index, out_root="runs", repeat=1, opts=None, doc_id=None, tag=None):
+    """Artifacts go to runs/<backend>[_<tag>]/<doc_id>/ (doc_id should already encode page/variant)."""
+    opts = dict(opts or {})
     pdf = str(pdf)
-    doc_id = doc_id or Path(pdf).stem
-    out = Path(out_root) / backend / (doc_id + (f"_p{page_index}" if page_index else "")) \
-        if opts.get("variant") is None else Path(out_root) / backend / f"{doc_id}__{opts['variant']}"
+    doc_id = doc_id or f"{Path(pdf).stem}_p{page_index}"
+    out = Path(out_root) / (backend + (f"_{tag}" if tag else "")) / doc_id
     out.mkdir(parents=True, exist_ok=True)
     fn = backends.get(backend)
     timings, pred, err = [], None, None
@@ -51,7 +51,7 @@ def run_backend(backend, pdf, page_index, out_root="runs", repeat=1, opts=None, 
         "run_id": uuid.uuid4().hex[:12], "timestamp_utc": utc_now(), "git_commit": git_commit(),
         "source_url": src.get("source_url"), "source_sha256": d["source_sha256"], "page_index": page_index,
         "split_label": src.get("split"), "backend": backend, "model_revision": d["model_revision"],
-        "options": {k: v for k, v in opts.items() if k != "out_dir"}, "package_versions": pkg_versions(PKGS),
+        "options": {k: v for k, v in opts.items() if k != "out_dir"}, "tag": tag, "package_versions": pkg_versions(PKGS),
         "hardware": hardware(), "device": d["meta"].get("device", "cpu"), "timings": timings,
         "cold_time_ms": timings[0]["time_ms"], "warm_time_ms_median": (sorted(t["time_ms"] for t in timings[1:])[len(timings[1:]) // 2]
                                                                          if len(timings) > 1 else None),
@@ -74,6 +74,7 @@ def main(argv=None):
     ap.add_argument("--out", default="runs")
     ap.add_argument("--repeat", type=int, default=1)
     ap.add_argument("--doc-id")
+    ap.add_argument("--tag", help="suffix for the run directory, e.g. cmtrue / cmfalse")
     ap.add_argument("-o", "--opt", action="append", default=[], help="backend option key=value (json-parsed)")
     a = ap.parse_args(argv)
     opts = {}
@@ -83,7 +84,7 @@ def main(argv=None):
             opts[k] = json.loads(v)
         except json.JSONDecodeError:
             opts[k] = v
-    d, m, out = run_backend(a.backend, a.pdf, a.page, a.out, a.repeat, opts, a.doc_id)
+    d, m, out = run_backend(a.backend, a.pdf, a.page, a.out, a.repeat, opts, a.doc_id, a.tag)
     print(json.dumps({"out": str(out), "status": d["status"], "tables": len(d["tables"]), "timings": m["timings"],
                       "peak_rss_mb": m["peak_memory_mb"]["process_peak_rss_mb"]}, ensure_ascii=False))
     return 0

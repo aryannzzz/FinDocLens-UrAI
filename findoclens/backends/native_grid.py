@@ -136,6 +136,20 @@ def cluster_edges(values, tol):
     return [{"edge": statistics.median(g), "n": len(g)} for g in groups]
 
 
+def _header_between(rows, cols, y0, y1, colset):
+    """True if a row strictly between y0 and y1 has non-numeric text centred over the data columns."""
+    edges = sorted(cols[j]["edge"] for j in colset)
+    step = edges[1] - edges[0] if len(edges) > 1 else 60
+    lo, hi = edges[0] - step * .45, edges[-1] + 12
+    for r in rows:
+        if y0 + 1 < r["cy"] < y1 - 1:
+            hw = [w for w in r["words"] if not w["numeric"] and lo <= (w["bbox"][0] + w["bbox"][2]) / 2 <= hi
+                  and w["bbox"][0] >= lo - step * .5 and LETTER.search(w["text"])]
+            if hw and not any(w["numeric"] for w in r["words"]):
+                return True
+    return False
+
+
 def extract(pdf, page_index=0, **_):
     t0 = time.perf_counter()
     pdf = str(pdf)
@@ -187,8 +201,15 @@ def extract(pdf, page_index=0, **_):
             x0, x1 = seg_x(s)
             best = None
             for t in tables:
-                if r["cy"] - t["last_y"] > pitch_guess * 3.5 or r["cy"] < t["last_y"]:
+                if r["cy"] < t["last_y"]:
                     continue
+                gap = r["cy"] - t["last_y"]
+                if gap > pitch_guess * 3.5:
+                    # sparse wide tables (equity statements): identical >=4-column set may bridge a long run of
+                    # single-value rows, but never across a header-like text line (that starts a new table)
+                    if not (cs == t["cols"] and len(cs) >= 4 and gap <= pitch_guess * 14
+                            and not _header_between(rows, cols, t["last_y"], r["cy"], cs)):
+                        continue
                 if not (x0 <= t["x1"] + 5 and x1 >= t["x0"] - 5):
                     continue
                 if cs <= t["cols"] or cs > t["cols"]:
@@ -204,14 +225,9 @@ def extract(pdf, page_index=0, **_):
                 tables.append(t)
             t["rows"].append((r, s))
             t["last_y"] = r["cy"]
-    # drop incidental tables with <3 data rows (record, never silently)
-    kept = []
-    for t in tables:
-        if len(t["rows"]) >= 3:
-            kept.append(t)
-        else:
-            pred.issues.append({"severity": "info", "code": "discarded_small_candidate",
-                                "rows": len(t["rows"]), "bbox": [round(t["x0"], 1), round(t["first_y"], 1), round(t["x1"], 1), round(t["last_y"], 1)]})
+    # keep candidates with >=3 seed rows, or a single wide (>=4 column) seed row that pass 2 may extend;
+    # candidates are re-checked (>=3 rows) after attachment and every drop is reported, never silent
+    kept = [t for t in tables if len(t["rows"]) >= 3 or (len(t["cols"]) >= 4 and len(t["rows"]) >= 1)]
     tables = sorted(kept, key=lambda t: (round(t["first_y"] / (pitch_guess * 2)), t["x0"]))
     # ---- pass 2: attach other rows (single-value rows, label-only rows) that fall inside the table body
     used_ids = {id(s) for t in tables for _, s in t["rows"]}
@@ -239,7 +255,16 @@ def extract(pdf, page_index=0, **_):
                 used_ids.add(id(s))
         t["rows"].sort(key=lambda rs: rs[0]["cy"])
         t["first_y"], t["last_y"] = t["rows"][0][0]["cy"], t["rows"][-1][0]["cy"]
-    tables.sort(key=lambda t: (round(t["first_y"] / (pitch_guess * 2)), t["x0"]))
+        ys = [r["cy"] for r, _ in t["rows"]]
+        t["pitch"] = statistics.median([b - a for a, b in zip(ys, ys[1:]) if b - a > 2] or [pitch])   # all rows, not just seeds
+    final = []
+    for t in tables:
+        if len(t["rows"]) >= 3:
+            final.append(t)
+        else:
+            pred.issues.append({"severity": "info", "code": "discarded_small_candidate", "rows": len(t["rows"]),
+                                "bbox": [round(t["x0"], 1), round(t["first_y"], 1), round(t["x1"], 1), round(t["last_y"], 1)]})
+    tables = sorted(final, key=lambda t: (round(t["first_y"] / (pitch_guess * 2)), t["x0"]))
     # unassigned numerics are reported, never dropped silently
     assigned = {id(n) for t in tables for _, s in t["rows"] for n in s["nums"]}
     stray = [{"raw": n["text"], "bbox": [round(v, 2) for v in n["bbox"]]} for n in nums if id(n) not in assigned]
@@ -362,9 +387,10 @@ def build_table(t, ti, rows, cols, words, all_tables, W):
             x0 = min(w["bbox"][0] for w in sg["label"])
             owned = any(o is not t and o["x0"] - 5 <= x0 <= o["x1"] + 5 and o["first_y"] - pitch <= r["cy"] <= o["last_y"] + pitch
                         for o in all_tables)
-            if not owned and x0 < bounds[0] and not UNIT_CTX.search(_join([w["text"] for w in sg["label"]])):
+            x1 = max(w["bbox"][2] for w in sg["label"])
+            if not owned and x0 < bounds[0] and x1 <= bounds[0] + 2 and not UNIT_CTX.search(_join([w["text"] for w in sg["label"]])):
                 pre.append((r, sg))
-    body = pre + body
+    body = _merge_wrapped(sorted(pre + body, key=lambda rs: rs[0]["cy"]), pitch)
     label_x = []
     for ri, (r, s) in enumerate(body):
         label = _join([w["text"] for w in s["label"]])
@@ -421,6 +447,34 @@ def build_table(t, ti, rows, cols, words, all_tables, W):
     _hierarchy(tbl, label_x)
     tbl.bbox = _union([r.bbox for r in tbl.rows] + [h.bbox for h in tbl.headers])
     return tbl
+
+
+def _merge_wrapped(body, pitch):
+    """Attach label-only lines to the nearest number-bearing line when closer than 0.75 pitch.
+    Wrapped labels (two text lines) have their numbers vertically centred on the cell, so the label lines can sit
+    above *and* below the numeric line; distance, not reading order, decides. Ties go to the following row."""
+    numeric = [(r, sg) for r, sg in body if sg["nums"]]
+    if not numeric:
+        return body
+    extra = {id(sg): [] for _, sg in numeric}
+    keep = []
+    for r, sg in body:
+        if sg["nums"]:
+            keep.append((r, sg))
+            continue
+        best = min(numeric, key=lambda rs: (abs(rs[0]["cy"] - r["cy"]), -rs[0]["cy"]))
+        if abs(best[0]["cy"] - r["cy"]) < pitch * .75 and sg["label"]:
+            extra[id(best[1])].append(sg)
+        else:
+            keep.append((r, sg))
+    out = []
+    for r, sg in keep:
+        if sg["nums"] and extra[id(sg)]:
+            words = sg["label"] + [w for e in extra[id(sg)] for w in e["label"]]
+            sg = {"label": sorted(words, key=lambda w: (round(w["cy"], 0), w["bbox"][0])), "nums": sg["nums"],
+                  "notes": sg["notes"], "wrapped": True}
+        out.append((r, sg))
+    return out
 
 
 def _hierarchy(tbl, label_x):

@@ -1,0 +1,108 @@
+{
+ "run_id": "5a9380aa76e6",
+ "timestamp_utc": "2026-10-22T09:18:29+00:00",
+ "git_commit": "741b4c07b2f49891e38f3b7c6420827cf7f20c69+dirty",
+ "source_url": null,
+ "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+ "page_index": 0,
+ "split_label": "development (original Ur AI sample)",
+ "backend": "native_v2",
+ "model_revision": "baseline_v2 (tag v2-frozen), PyMuPDF 1.27.2.3",
+ "options": {},
+ "tag": null,
+ "package_versions": {
+  "PyMuPDF": "1.27.2.3",
+  "docling": null,
+  "docling-core": null,
+  "docling-ibm-models": null,
+  "docling-parse": null,
+  "torch": "2.8.0",
+  "torchvision": "0.23.0",
+  "rapidocr": null,
+  "onnxruntime": "1.27.0",
+  "easyocr": null,
+  "paddleocr": null,
+  "paddlepaddle": null,
+  "transformers": "4.49.0",
+  "numpy": "2.2.6",
+  "pdfplumber": null
+ },
+ "hardware": {
+  "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+  "cpu_threads": 12,
+  "mem_MB": {
+   "MemTotal": 15676,
+   "MemFree": 878,
+   "MemAvailable": 3928
+  },
+  "gpu": {
+   "nvidia_smi": "unavailable (exit 9): NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running."
+  },
+  "platform": "Linux-7.0.11-76070011-generic-x86_64-with-glibc2.35",
+  "python": "3.13.5"
+ },
+ "device": "cpu",
+ "timings": [
+  {
+   "run": 1,
+   "kind": "cold",
+   "time_ms": 19.7
+  },
+  {
+   "run": 2,
+   "kind": "warm",
+   "time_ms": 8.6
+  },
+  {
+   "run": 3,
+   "kind": "warm",
+   "time_ms": 8.4
+  }
+ ],
+ "cold_time_ms": 19.7,
+ "warm_time_ms_median": 8.6,
+ "peak_memory_mb": {
+  "process_peak_rss_mb": 58.1,
+  "gpu_peak_allocated_mb": null
+ },
+ "status": "ok",
+ "error_text": null,
+ "prediction_path": "runs/native_v2/source_digital/prediction.json",
+ "metrics_path": null,
+ "human_audit_status": "none: automatic extraction, not human-verified",
+ "backend_meta": {
+  "native_result_summary": {
+   "column_anchors": [
+    397.51,
+    522.55
+   ],
+   "periods": [
+    "2025-03-31",
+    "2026-03-31"
+   ],
+   "unit": "thousand_JPY",
+   "anchor_diagnostics": {
+    "candidate_rows": 38,
+    "endpoint_clusters": [
+     [
+      37,
+      522.55
+     ],
+     [
+      37,
+      397.51
+     ],
+     [
+      1,
+      485.93
+     ],
+     [
+      1,
+      360.89
+     ]
+    ]
+   }
+  },
+  "elapsed_ms": 8.3
+ }
+}

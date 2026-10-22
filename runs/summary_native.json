@@ -1,0 +1,352 @@
+[
+ {
+  "config": "native_v2",
+  "doc": "source",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 1,
+  "rows": 37,
+  "numeric_cells": 74,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 74,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {
+   "within_rounding": 5,
+   "skipped": 2
+  },
+  "cold_ms": 19.7,
+  "warm_ms_median": 8.6,
+  "peak_rss_mb": 58.1,
+  "dir": "runs/native_v2/source_digital",
+  "issues": [],
+  "dev_gold_cells_correct": "74/74"
+ },
+ {
+  "config": "native_v2",
+  "doc": "source",
+  "variant": "raster200",
+  "status": "failed",
+  "tables": 0,
+  "rows": 0,
+  "numeric_cells": 0,
+  "token_recall": 0.0,
+  "token_precision": 0.0,
+  "ref_tokens": 74,
+  "missing_sample": [
+   "1,019,663",
+   "1,123",
+   "1,123",
+   "1,352,610",
+   "1,429,094",
+   "1,670,426",
+   "1,757,841",
+   "1,880,082"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 91.6,
+  "warm_ms_median": 90.4,
+  "peak_rss_mb": 143.8,
+  "dir": "runs/native_v2/source_raster200",
+  "issues": [
+   "needs_visual_fallback"
+  ],
+  "dev_gold_cells_correct": "0/74"
+ },
+ {
+  "config": "native_v2",
+  "doc": "elecom",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 1,
+  "rows": 28,
+  "numeric_cells": 56,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 56,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {
+   "within_rounding": 8,
+   "violation": 2
+  },
+  "cold_ms": 29.3,
+  "warm_ms_median": 8.9,
+  "peak_rss_mb": 92.4,
+  "dir": "runs/native_v2/elecom_digital",
+  "issues": [
+   "arithmetic_violation",
+   "financial_reconciliation_failure",
+   "unit_not_detected"
+  ]
+ },
+ {
+  "config": "native_v2",
+  "doc": "elecom",
+  "variant": "raster200",
+  "status": "failed",
+  "tables": 0,
+  "rows": 0,
+  "numeric_cells": 0,
+  "token_recall": 0.0,
+  "token_precision": 0.0,
+  "ref_tokens": 56,
+  "missing_sample": [
+   "1,149",
+   "1,180",
+   "1,277",
+   "1,453",
+   "1,454",
+   "1,462",
+   "1,558",
+   "1,603"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 82.9,
+  "warm_ms_median": 80.0,
+  "peak_rss_mb": 143.1,
+  "dir": "runs/native_v2/elecom_raster200",
+  "issues": [
+   "needs_visual_fallback"
+  ]
+ },
+ {
+  "config": "native_v2",
+  "doc": "daiwabo",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 1,
+  "rows": 9,
+  "numeric_cells": 18,
+  "token_recall": 0.3,
+  "token_precision": 1.0,
+  "ref_tokens": 60,
+  "missing_sample": [
+   "+1,280",
+   "+1,554",
+   "+10,745",
+   "+12,420",
+   "+15,124",
+   "+17,426",
+   "+19,155",
+   "+19,155"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 44.7,
+  "warm_ms_median": 30.5,
+  "peak_rss_mb": 92.5,
+  "dir": "runs/native_v2/daiwabo_digital",
+  "issues": [
+   "missing_period_header",
+   "unit_not_detected"
+  ]
+ },
+ {
+  "config": "native_v2",
+  "doc": "daiwabo",
+  "variant": "raster200",
+  "status": "failed",
+  "tables": 0,
+  "rows": 0,
+  "numeric_cells": 0,
+  "token_recall": 0.0,
+  "token_precision": 0.0,
+  "ref_tokens": 60,
+  "missing_sample": [
+   "+1,280",
+   "+1,554",
+   "+10,745",
+   "+12,420",
+   "+15,124",
+   "+17,426",
+   "+19,155",
+   "+19,155"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 86.2,
+  "warm_ms_median": 79.9,
+  "peak_rss_mb": 146.9,
+  "dir": "runs/native_v2/daiwabo_raster200",
+  "issues": [
+   "needs_visual_fallback"
+  ]
+ },
+ {
+  "config": "native_grid",
+  "doc": "source",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 1,
+  "rows": 37,
+  "numeric_cells": 74,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 74,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {
+   "within_rounding": 5,
+   "skipped": 1
+  },
+  "cold_ms": 11.9,
+  "warm_ms_median": 11.9,
+  "peak_rss_mb": 97.1,
+  "dir": "runs/native_grid/source_digital",
+  "issues": [
+   "unassigned_numeric_tokens"
+  ],
+  "dev_gold_cells_correct": "74/74"
+ },
+ {
+  "config": "native_grid",
+  "doc": "source",
+  "variant": "raster200",
+  "status": "failed",
+  "tables": 0,
+  "rows": 0,
+  "numeric_cells": 0,
+  "token_recall": 0.0,
+  "token_precision": 0.0,
+  "ref_tokens": 74,
+  "missing_sample": [
+   "1,019,663",
+   "1,123",
+   "1,123",
+   "1,352,610",
+   "1,429,094",
+   "1,670,426",
+   "1,757,841",
+   "1,880,082"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 19.1,
+  "warm_ms_median": 15.4,
+  "peak_rss_mb": 97.1,
+  "dir": "runs/native_grid/source_raster200",
+  "issues": [
+   "needs_visual_fallback"
+  ],
+  "dev_gold_cells_correct": "0/74"
+ },
+ {
+  "config": "native_grid",
+  "doc": "elecom",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 1,
+  "rows": 28,
+  "numeric_cells": 56,
+  "token_recall": 1.0,
+  "token_precision": 1.0,
+  "ref_tokens": 56,
+  "missing_sample": [],
+  "spurious_sample": [],
+  "checks": {
+   "within_rounding": 8
+  },
+  "cold_ms": 26.6,
+  "warm_ms_median": 5.7,
+  "peak_rss_mb": 97.1,
+  "dir": "runs/native_grid/elecom_digital",
+  "issues": [
+   "unassigned_numeric_tokens"
+  ]
+ },
+ {
+  "config": "native_grid",
+  "doc": "elecom",
+  "variant": "raster200",
+  "status": "failed",
+  "tables": 0,
+  "rows": 0,
+  "numeric_cells": 0,
+  "token_recall": 0.0,
+  "token_precision": 0.0,
+  "ref_tokens": 56,
+  "missing_sample": [
+   "1,149",
+   "1,180",
+   "1,277",
+   "1,453",
+   "1,454",
+   "1,462",
+   "1,558",
+   "1,603"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 18.6,
+  "warm_ms_median": 14.4,
+  "peak_rss_mb": 97.1,
+  "dir": "runs/native_grid/elecom_raster200",
+  "issues": [
+   "needs_visual_fallback"
+  ]
+ },
+ {
+  "config": "native_grid",
+  "doc": "daiwabo",
+  "variant": "digital",
+  "status": "ok",
+  "tables": 3,
+  "rows": 21,
+  "numeric_cells": 63,
+  "token_recall": 1.0,
+  "token_precision": 0.9524,
+  "ref_tokens": 60,
+  "missing_sample": [],
+  "spurious_sample": [
+   "+30,233",
+   "20,703",
+   "50,936"
+  ],
+  "checks": {
+   "pass": 14,
+   "within_rounding": 5
+  },
+  "cold_ms": 35.7,
+  "warm_ms_median": 32.1,
+  "peak_rss_mb": 97.1,
+  "dir": "runs/native_grid/daiwabo_digital",
+  "issues": [
+   "unassigned_numeric_tokens"
+  ]
+ },
+ {
+  "config": "native_grid",
+  "doc": "daiwabo",
+  "variant": "raster200",
+  "status": "failed",
+  "tables": 0,
+  "rows": 0,
+  "numeric_cells": 0,
+  "token_recall": 0.0,
+  "token_precision": 0.0,
+  "ref_tokens": 60,
+  "missing_sample": [
+   "+1,280",
+   "+1,554",
+   "+10,745",
+   "+12,420",
+   "+15,124",
+   "+17,426",
+   "+19,155",
+   "+19,155"
+  ],
+  "spurious_sample": [],
+  "checks": {},
+  "cold_ms": 15.8,
+  "warm_ms_median": 14.1,
+  "peak_rss_mb": 100.6,
+  "dir": "runs/native_grid/daiwabo_raster200",
+  "issues": [
+   "needs_visual_fallback"
+  ]
+ }
+]

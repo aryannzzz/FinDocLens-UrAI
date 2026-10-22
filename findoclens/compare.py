@@ -124,3 +124,14 @@ def compare_pair(a, b):
                                           "cells_equal": n_eq, "rows_unmatched": n_unmatched, "rows_a": len(ra), "rows_b": len(rb)})
     summary["n_value_mismatch"] = sum(d["kind"] in ("value_mismatch", "column_count", "row_not_found_in_checker") for d in summary["disagreements"])
     return summary
+
+
+def text_layer_reference(pdf, page_index, footer_frac=0.06):
+    """Independent-of-table-assembly reference: every numeric word in the PDF text layer except the bottom
+    `footer_frac` of the page (page-number zone; declared policy). Valid for digital pages and for
+    rasterisations of them. NOT human gold: it says nothing about structure, labels, roles or hierarchy."""
+    import fitz
+    from .backends.native_grid import read_words
+    page = fitz.open(str(pdf))[page_index]
+    H = page.rect.height
+    return Counter(norm_raw(w["text"]) for w in read_words(page) if w["numeric"] and w["bbox"][3] < H * (1 - footer_frac))

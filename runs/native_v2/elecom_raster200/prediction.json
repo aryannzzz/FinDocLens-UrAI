@@ -1,0 +1,44 @@
+{
+ "document_id": "elecom_raster200",
+ "source_sha256": "597aaf0e73ab6cc24004b5ed388f51b32507b647c9b28033806e02d0e9e4f790",
+ "backend": "native_v2",
+ "model_revision": "baseline_v2 (tag v2-frozen), PyMuPDF 1.27.2.3",
+ "page": 0,
+ "page_bbox": [
+  0.0,
+  0.0,
+  595.28,
+  841.89
+ ],
+ "tables": [],
+ "status": "failed",
+ "issues": [
+  {
+   "source": "native_v2",
+   "severity": "error",
+   "code": "needs_visual_fallback",
+   "message": "No stable native text columns: OCR/VLM is required and not run."
+  }
+ ],
+ "capabilities": {
+  "cell_bbox": true,
+  "headers": "dates_only",
+  "multi_table": false,
+  "ocr": false,
+  "n_columns": "exactly_2",
+  "unit_detection": "thousand_JPY_only"
+ },
+ "meta": {
+  "native_result_summary": {
+   "column_anchors": null,
+   "periods": [],
+   "unit": null,
+   "anchor_diagnostics": {
+    "reason": "insufficient_tabular_evidence",
+    "candidate_rows": 0
+   }
+  },
+  "elapsed_ms": 80.0
+ },
+ "schema_version": "findoclens-0.1"
+}
