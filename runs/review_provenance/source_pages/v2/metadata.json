@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-10-23T08:52:50.792723+00:00",
+  "code_commit": "7713d1c5ee4841464f1bf43debbb2ece98aefbfc",
+  "branch": "fix/review-provenance-v2",
+  "code_sha256": {
+    "benchmark/review_provenance.py": "f22a275de158b3e712028f56b26e1d69c35afd68e6be159b21e17dafa143c240",
+    "benchmark/review_scoring.py": "eff90719fbbec169aa588a92fe00e91885b3fa74c7a316b01c91aa3aeb7b9cf5",
+    "scripts/report_review_provenance.py": "27fcead9abeef34a3eedb9fea44e681c0ce3683245f02e2843e133a79d9e8f4d",
+    "tests/test_review_provenance.py": "9c82bf9d2cee6a0b9951811800a748babd22415380c00957e320a827171d380a"
+  },
+  "commands": [
+    ".venv/bin/python -m benchmark.review_provenance --check benchmark/human_gold/v2",
+    ".venv/bin/python -m benchmark.review_scoring --reference benchmark/human_gold/v2 --config review/human_signoff/evaluation_v2.json --out results/human_v2 --verify",
+    ".venv/bin/python -m unittest tests.test_review_provenance -v",
+    ".venv/bin/python -m unittest discover -s tests -v",
+    ".venv/bin/python -m benchmark.validate",
+    ".venv/bin/python scripts/report_review_provenance.py --out docs/HUMAN_REVIEW_RESULTS.md"
+  ],
+  "device": "cpu",
+  "python": "3.13.5",
+  "package_versions": {
+    "PyMuPDF": "1.27.2.3",
+    "Pillow": "12.0.0"
+  },
+  "model_revision": null,
+  "checkpoint_id": null,
+  "inference_executed": false,
+  "elapsed_ms": 1233.2183929975145,
+  "timing_scope": "Pure reference-provenance replay and stored JSON comparison; not backend inference",
+  "peak_cpu_rss_mb": 25.93359375,
+  "memory_method": "Linux ru_maxrss process lifetime high-water RSS",
+  "peak_gpu_allocation_mb": null,
+  "gpu_memory_status": "not used; no model/GPU invoked",
+  "export_sha256": "a930cc5a4d5f38454f86caf78855b0c454b7785dbdb217b2270d7c0b2f573ac9",
+  "base_v1_reference_lock_sha256": "747247846632b444de12908bfda8d5b961f64fe0d4cbe88d00800bf2234e90c1",
+  "base_v1_scores_lock_sha256": "0a8faf163f382afa3b2f89a97f5860bd600eb552d58bbb8f49686c363377426a",
+  "reference_lock_sha256": "704dbe2e53f34d2d2b0977c2c6cdf3a3639f9a721d6ae2638ad10b31d5fdcd69",
+  "scores_lock_sha256": "77b596b0cb5e3e9ddd3727054f9f259d6293a7595650825bd16ff6b710dcd05c",
+  "class_counts": {
+    "bulk_user_approved_ai_cross_checked": 146,
+    "individually_human_reviewed": 51
+  },
+  "source_predictions": 48,
+  "comparison_scopes": 3,
+  "focused_tests": 10,
+  "full_tests": 159,
+  "status": "pass",
+  "frozen_mismatches": [],
+  "original_export_unchanged": true,
+  "original_ledger_unchanged": true,
+  "ai_audit_note": "Source field source_sha256 hashes the selected one-page PDF. Initial rejected build used full-filing identity; corrected checker validates selected input hashes. The failed initial build log is retained; no reference was written on that rejected attempt."
+}

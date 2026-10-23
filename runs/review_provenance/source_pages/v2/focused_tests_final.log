@@ -1,0 +1,15 @@
+test_bulk_cells_have_no_individual_fields_or_invented_review_times (tests.test_review_provenance.CorrectedReviewProvenance.test_bulk_cells_have_no_individual_fields_or_invented_review_times) ... ok
+test_bulk_value_errors_do_not_change_individually_reviewed_accuracy (tests.test_review_provenance.CorrectedReviewProvenance.test_bulk_value_errors_do_not_change_individually_reviewed_accuracy) ... ok
+test_class_counts_and_individual_keys_follow_export_not_bulk_attestation (tests.test_review_provenance.CorrectedReviewProvenance.test_class_counts_and_individual_keys_follow_export_not_bulk_attestation) ... ok
+test_full_comparison_values_are_preserved_but_confidence_is_renamed (tests.test_review_provenance.CorrectedReviewProvenance.test_full_comparison_values_are_preserved_but_confidence_is_renamed) ... ok
+test_missing_predictions_keep_individual_denominator_and_daiwabo_is_not_100_percent (tests.test_review_provenance.CorrectedReviewProvenance.test_missing_predictions_keep_individual_denominator_and_daiwabo_is_not_100_percent) ... ok
+test_one_reviewed_cell_does_not_certify_the_other_cell_in_its_row (tests.test_review_provenance.CorrectedReviewProvenance.test_one_reviewed_cell_does_not_certify_the_other_cell_in_its_row) ... ok
+test_original_export_and_v1_ledger_are_unchanged (tests.test_review_provenance.CorrectedReviewProvenance.test_original_export_and_v1_ledger_are_unchanged) ... ok
+test_reference_and_all_scores_reproduce_without_inference (tests.test_review_provenance.CorrectedReviewProvenance.test_reference_and_all_scores_reproduce_without_inference) ... ok
+test_structure_and_daiwabo_periods_remain_unreviewed (tests.test_review_provenance.CorrectedReviewProvenance.test_structure_and_daiwabo_periods_remain_unreviewed) ... ok
+test_wrong_ai_evidence_cannot_support_bulk_ai_cross_check_claim (tests.test_review_provenance.CorrectedReviewProvenance.test_wrong_ai_evidence_cannot_support_bulk_ai_cross_check_claim) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 2.105s
+
+OK

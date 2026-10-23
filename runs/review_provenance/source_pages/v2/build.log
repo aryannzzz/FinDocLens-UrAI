@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/review_provenance.py", line 203, in <module>
+    main()
+    ~~~~^^
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/review_provenance.py", line 198, in main
+    docs, catalog = build(args.clarification, args.out)
+                    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/review_provenance.py", line 143, in build
+    docs, catalog = classify(base, export, audit, clarification)
+                    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/review_provenance.py", line 67, in classify
+    raise ValueError(f'Bulk AI cross-check evidence does not match: {key}')
+ValueError: Bulk AI cross-check evidence does not match: daiwabo_p10:assets_r001:0
