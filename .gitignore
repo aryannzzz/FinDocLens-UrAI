@@ -19,3 +19,7 @@ runs/**/evidence*.png
 viewer/pages/
 viewer/data.js
 docs/gallery/
+
+# Final delivery ZIPs and extracted validation copies
+/dist/
+/submission/delivery_validation/

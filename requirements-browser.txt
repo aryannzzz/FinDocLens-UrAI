@@ -1,0 +1,2 @@
+# Optional real-browser smoke checks only; installed Chrome/Chromium required.
+websocket-client==1.9.0

@@ -1,0 +1,31 @@
+9a6ebcb 2026-10-23T16:04:15+05:30 Attach v3 replay, frozen-history and real-browser verification evidence
+d4d750b 2026-10-23T16:01:59+05:30 Record author visual verification of 197 cell contents in immutable v3
+5658f72 2026-10-23T14:22:50+05:30 Record provenance-correction validation and committed-code replay
+7713d1c 2026-10-23T14:21:18+05:30 Separate individual source review from bulk user approval in provenance v2
+ac32b13 2026-10-23T12:43:58+05:30 Record human-reference tests and committed-code replay provenance
+acabf01 2026-10-23T12:43:09+05:30 Version human-reviewed content and rescore stored predictions without inference
+8e05f58 2026-10-23T00:44:31+05:30 Label initial browser background-target diagnostic as inconclusive
+4ff1c29 2026-10-23T00:44:07+05:30 Restore offline source review with checked images, zoom and decision export
+bc9df9a 2026-10-22T23:50:06+05:30 P0 report: docs/P0_FIXES.md, RESULTS banner, manual-review item B9, p0fix2/p0fix3 run records and logs
+91426a2 2026-10-22T23:48:32+05:30 Fix label duplication from column-spanned label cells (found on Docling cm=False Daiwabo re-run); p0fix2 evidence, before/after table, exposure record, comparison scripts
+0803f65 2026-10-22T22:54:18+05:30 Cells inherit the inferred header period; adjacency tests for one-column tables; rescoring script and fin1 rescore; note on aborted p0fix1
+f56a2ce 2026-10-22T22:51:42+05:30 P0 fixes: year-like amounts, one-column tables, source-token coverage + router reconciliation, evaluator structure axes and scoped omission alerts, Docling merged-cell flags, nested equal-span headers
+18b642e 2026-10-22T22:44:19+05:30 Add failing P0 regression tests for the independent review's high-severity findings (26 of 36 fail on 3695030+fb8481d)
+90f5e50 2026-10-22T22:19:26+05:30 Record independent research review and reproducibility evidence
+fb8481d 2026-10-22T21:50:39+05:30 Fix clean-checkout raster and direct-script reproduction
+3695030 2026-10-22T19:01:10+05:30 Add RESULTS, technical memo, review queue, failure gallery, environment docs, router adapter, analysis scripts and README
+a5738da 2026-10-22T19:01:10+05:30 Record integration runs: int1 (pre-fix, partly interrupted) and fin1 (final) for all backends, ablations and router
+afcfb56 2026-10-22T18:14:35+05:30 Exclude run reports from code-dirty probe
+81f05e9 2026-10-22T18:14:28+05:30 Integrate backends with benchmark harness: adapters, contract check, raster derivatives, native_grid and Docling fixes, viewer
+ccbcf45 2026-10-22T17:46:20+05:30 Merge claude-backends into integration-v1 (union .gitignore)
+a36e867 2026-10-22T17:44:54+05:30 Integrate benchmark framework
+36088e5 2026-10-22T17:14:26+05:30 Record measured independent and adversarial runs with review evidence
+7369ec3 2026-10-22T16:07:10+05:30 Add independent source benchmark, frozen draft references and red-team harness
+f53dd9a 2026-10-22T16:04:01+05:30 Note plan deviations in audit doc
+a8c4925 2026-10-22T16:03:52+05:30 Add handoff doc and adapters pointer
+57e8026 2026-10-22T16:03:24+05:30 Add results, memo, evidence crops, run matrix outputs, demo script
+a76d46c 2026-10-22T15:46:36+05:30 Docling backend mapping, OCR backend, router text-layer cross-check, matrix runner
+ac89535 2026-10-22T14:51:49+05:30 Add perturbation tests and partial_data_row issue to native_grid
+bba8039 2026-10-22T14:51:14+05:30 native_grid: wrapped labels, sparse wide tables; run_matrix script; docling backend draft
+741b4c0 2026-10-22T14:46:46+05:30 Add findoclens package: schema, native_v2 adapter, native_grid generalized backend, validator, router, CLI, tests
+cd27035 2026-10-22T14:33:49+05:30 Freeze v2 baseline and agent sprint instructions

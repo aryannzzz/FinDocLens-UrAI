@@ -1,5 +1,7 @@
 # FinDocLens — Japanese financial-statement table extraction prototype (Ur AI take-home)
 
+**Final delivery:** start with [START_HERE.md](START_HERE.md) and the concise [FINAL_REPORT.md](FINAL_REPORT.md). The commands below retain the historical integration workflow; the final evaluator guide offers a small offline path.
+
 A small, auditable research prototype: it extracts balance-sheet-style tables from single PDF pages into one schema
 (exact printed glyphs + typed value + explicit status + source boxes), with five interchangeable backends, one independent evaluator
 and a lightweight viewer. **No model was trained. Original benchmark references remain immutable AI drafts.**

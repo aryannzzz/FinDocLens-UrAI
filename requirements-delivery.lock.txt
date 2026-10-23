@@ -1,0 +1,5 @@
+# Native CLI, tests, snapshot replay and source rendering. No models.
+# Native experiment interpreter: Python 3.13.5. Optional model interpreter: 3.12.13.
+PyMuPDF==1.27.2.3
+Pillow==12.0.0
+numpy==2.2.6

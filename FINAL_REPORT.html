@@ -1,0 +1,125 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>FinDocLens — Final Technical Report</title><style>body{max-width:960px;margin:32px auto;padding:0 24px;font:15px/1.48 system-ui,sans-serif;color:#172b3a}h1{font-size:26px}h2{font-size:19px;margin-top:24px}table{border-collapse:collapse;font-size:13px;width:100%}th,td{border:1px solid #bbc7cf;padding:5px 8px;text-align:left}code{font-size:.9em}a{color:#15577e}@media print{body{margin:0;padding:0;font-size:10px}h1{font-size:20px}h2{font-size:14px;margin-top:12px}table{font-size:9px}tr{break-inside:avoid}@page{size:A4;margin:14mm}}</style><h1>FinDocLens: auditable Japanese financial-table extraction</h1>
+<p>Aryan Jain · Ur AI Document Intelligence &amp; VLM R&amp;D internship take-home · 23 October 2026</p>
+<h2>Problem and conclusion</h2>
+<p>The assignment supplies a Japanese consolidated balance-sheet page and asks for a parser and a defensible definition of correctness. FinDocLens is a reusable single-page prototype with native PDF geometry, pretrained document models and explicit source evidence. No model was trained and no VLM was executed.</p>
+<p>The narrow finding is that separating table regions and financial columns matters more than recovering digits alone. On three development-exposed source pages, native-grid matches <strong>193/197 human-reviewed cell contents</strong>, compared with <strong>181/197</strong> for native proposals plus Docling and <strong>132/197</strong> for the frozen baseline. This supports an in-sample engineering improvement, not blind generalization or complete table reconstruction.</p>
+<h2>Architecture and implementation</h2>
+<p><code>findoclens/</code> implements extraction and routing; <code>adapters/</code> projects backend outputs into <code>benchmark-1.0</code>; <code>benchmark/</code> handles fixed references, scoring and resource measurement. CLI JSON/Markdown and a local evidence viewer expose results, warnings and coordinates. Native/model predictions are retained separately from references.</p>
+<p>Each cell preserves its exact <code>raw</code> glyph string, typed <code>value</code>, explicit <code>status</code>, page/table/row/column identity and evidence box. <code>△0</code> retains negative-zero status; <code>－</code> is null/not_reported, not zero. Arithmetic checks warn without rewriting amounts. Empty/failed extraction does not count as success.</p>
+<p><strong>Native-grid.</strong> PyMuPDF words are grouped by text-line geometry; adjacent signs are joined with numeric tokens. Repeated right, left or centre edges identify financial columns, with right alignment winning ties. A nonnumeric segment after amounts starts a new label segment, separating side-by-side tables. Rows attach to column-pattern table proposals; header lines above the body provide periods/roles and candidate spans. Ambiguous inferred spans and missing content are flagged. The frozen baseline assumes one two-period table; native-grid supports multiple regions and variable columns, including one-column cases covered by subsequent regression fixes. These are geometric heuristics, not learned structure or guaranteed arbitrary-layout support.</p>
+<p><strong>Docling/TableFormer and OCR.</strong> The pretrained layout model proposes table regions; TableFormer ACCURATE predicts grids. Experiments compare cell matching on/off, RapidOCR Japanese recognition for rendered pages, and native region proposals followed by Docling per region. Raw backend output is kept before normalization. Model checkpoints, package pins and options are recorded in <code>docs/ENVIRONMENT.md</code> and <code>requirements-models.lock.txt</code>.</p>
+<p><strong>Hybrid router.</strong> Logged text/image-density signals, native-grid versus baseline disagreement, amount-like labels, missing slots, completeness warnings and arithmetic alarms guide routing. Clean native pages avoid model calls; raster-like pages require OCR; suspicious native output can be cross-checked by Docling. Native glyphs are not silently replaced by model guesses. Disagreement remains reviewable. These rules are not calibrated confidence; agreement is not proof of correctness.</p>
+<h2>Evaluation and V3 provenance</h2>
+<p>The three sources are the supplied page, ELECOM PDF page 9 and Daiwabo PDF page 10. ELECOM and Daiwabo are independent issuers but were exposed during development. Original derivatives remain in the same source-family cohort; synthetic layouts are separate controls. OMRON acquisition failed and contributes no score. There is no genuinely unseen test set.</p>
+<p>The author personally compared <strong>all 197 annotated cell contents</strong> with original PDF images and declared them correct: 74 original, 56 ELECOM, 67 Daiwabo. Decisions were <strong>bulk recorded from this explicit declaration</strong>, without inventing dropdown events or per-cell inspection times. V3 is a separate locked snapshot; original AI drafts, v1/v2 decisions and experimental outputs are preserved. One author reviewing existing drafts carries confirmation-bias limitations.</p>
+<p>The denominator is <strong>193 financial-column slots plus 4 explanatory text cells</strong>. One-to-one matching uses table geometry, normalized row label and physical column, never values to choose a row. Missing/abstained cells stay in the denominator. Raw comparison removes whitespace only; typed accuracy compares value and status. Token recall is a separate diagnostic: the baseline finds 18/63 Daiwabo numeric tokens but places only 2/63 financial cells correctly.</p>
+<table>
+<thead>
+<tr>
+<th>Backend</th>
+<th style="text-align: right;">Raw content</th>
+<th style="text-align: right;">Value/status</th>
+<th style="text-align: right;">Financial raw</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frozen v2 / native_v2</td>
+<td style="text-align: right;">132/197 (67.01%)</td>
+<td style="text-align: right;">132/197</td>
+<td style="text-align: right;">132/193</td>
+</tr>
+<tr>
+<td>Native-grid / auto</td>
+<td style="text-align: right;"><strong>193/197 (97.97%)</strong></td>
+<td style="text-align: right;">193/197</td>
+<td style="text-align: right;"><strong>193/193</strong></td>
+</tr>
+<tr>
+<td>Docling, matching on</td>
+<td style="text-align: right;">130/197 (65.99%)</td>
+<td style="text-align: right;">130/197</td>
+<td style="text-align: right;">130/193</td>
+</tr>
+<tr>
+<td>Docling, matching off</td>
+<td style="text-align: right;">130/197 (65.99%)</td>
+<td style="text-align: right;">130/197</td>
+<td style="text-align: right;">130/193</td>
+</tr>
+<tr>
+<td>Docling + RapidOCR, digital pages</td>
+<td style="text-align: right;">130/197 (65.99%)</td>
+<td style="text-align: right;">130/197</td>
+<td style="text-align: right;">130/193</td>
+</tr>
+<tr>
+<td>Native proposals + Docling regions</td>
+<td style="text-align: right;"><strong>181/197 (91.88%)</strong></td>
+<td style="text-align: right;">181/197</td>
+<td style="text-align: right;">181/193</td>
+</tr>
+</tbody>
+</table>
+<p>Both stored fin1 and post-fix selections yield these content counts; V3 rescoring invokes no inference. All paths match original 74/74 and ELECOM 56/56. Daiwabo accounts for the differences: native-grid 63/67, regions 51/67, baseline 2/67, page Docling paths 0/67. The four native-grid mismatches are <strong>explanatory text/arrow placement</strong>, not financial digit errors.</p>
+<p>Content accuracy is conditional on the retained label/geometry alignment context. It does <strong>not</strong> certify segmentation, hierarchy, header links, row/column spans, units, roles or completeness. All 14 header annotations, 193 numeric period associations and 82 hierarchy edges remain structurally unreviewed. Twelve Daiwabo lower-table numeric periods are inferred/unprinted; 17 upper change intervals are inferred semantics. Historical structural scores remain AI-draft diagnostics, never human-certified accuracy. TEDS/GriTS were not claimed without suitable grid/span gold.</p>
+<h2>Resource measurements and ablations</h2>
+<p>Historical fin1 CPU measurements used an Intel i5-12450H, 15.7 GiB RAM and constrained available memory. GPU/VRAM results are N/A: no GPU was usable. Cold means the first call in a fresh worker, including model loading, rendering, extraction and serialization; warm is repeated calls in that worker with reopening/rerendering. OS caches were not flushed. Main-page runs used three warm repetitions; there is one cold sample per page and no confidence interval. The rows below are medians over the three source pages; RSS is the maximum worker peak over pages.</p>
+<table>
+<thead>
+<tr>
+<th>Backend</th>
+<th style="text-align: right;">Cold</th>
+<th style="text-align: right;">Warm</th>
+<th style="text-align: right;">Peak worker RSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frozen v2</td>
+<td style="text-align: right;">160 ms</td>
+<td style="text-align: right;">31 ms</td>
+<td style="text-align: right;">84 MB</td>
+</tr>
+<tr>
+<td>Native-grid</td>
+<td style="text-align: right;">173 ms</td>
+<td style="text-align: right;">34 ms</td>
+<td style="text-align: right;">85 MB</td>
+</tr>
+<tr>
+<td>Docling matching on / off</td>
+<td style="text-align: right;">11.7 / 13.6 s</td>
+<td style="text-align: right;">7.5 / 6.6 s</td>
+<td style="text-align: right;">1427 / 1422 MB</td>
+</tr>
+<tr>
+<td>Docling + RapidOCR</td>
+<td style="text-align: right;">17.2 s</td>
+<td style="text-align: right;">10.3 s</td>
+<td style="text-align: right;">2080 MB</td>
+</tr>
+<tr>
+<td>Native regions + Docling</td>
+<td style="text-align: right;">13.5 s</td>
+<td style="text-align: right;">7.3 s</td>
+<td style="text-align: right;">1367 MB</td>
+</tr>
+<tr>
+<td>Auto</td>
+<td style="text-align: right;">271 ms</td>
+<td style="text-align: right;">69 ms</td>
+<td style="text-align: right;">85 MB</td>
+</tr>
+</tbody>
+</table>
+<p>Timings are not new V3 measurements. Model calls use a separate CPU environment; router child-process memory is recorded separately and is not represented by the 85 MB native-only main-page number. Background load varied; speed ratios are descriptive, not controlled hardware-wide claims.</p>
+<p>Region proposals improve Daiwabo from 0/63 to 51/63 financial matches for Docling; the unruled lower table remains missing and explicitly warned. This implicates page-level region detection, without proving TableFormer correct on every crop. Matching-off failures trace to whole-row PDF text lines not fitting individual cell rectangles. A larger Japanese OCR model added 139 MB of weights and was about five times slower without materially resolving kanji-label errors. Raster scores are from clean PDF renders, not real noisy scans; their references remain derived AI drafts, outside V3's 197-cell human scope.</p>
+<h2>Failure analysis and limits</h2>
+<ul>
+<li><strong>Silent omission:</strong> the baseline drops 65/67 Daiwabo cells while returning partial output. Native-grid still fragments vertically stacked Japanese labels on <code>vertical_spacing</code>, losing 16/16 strictly aligned cells despite retaining numbers. This known regression remains visible.</li>
+<li><strong>Structure:</strong> wide left-aligned headers can create ambiguous spans. Real merged-cell/grouped-header coverage is limited; numeric body spans are flagged rather than replicated. Lower-table periods must not be guessed into gold.</li>
+<li><strong>OCR:</strong> digits can be recovered while Japanese labels differ. A lone <code>－</code> may have no detection box. Ink-based warnings flag possible dropped placeholders without guessing a glyph, with false positives on flattened structural slots.</li>
+<li><strong>Evaluation/reliability:</strong> fixed denominators prevent success by omission, but matching depends on draft structure. Partial-status/warning conventions affect silent-omission and false-assurance rates; they are not calibrated safety probabilities. Independent AI review found flaws, prompted scoped fixes, and did not independently certify the gold.</li>
+</ul>
+<p>The submission is an auditable research prototype, suitable for technical discussion, with explicit unsupported cases. It does not establish unseen-layout accuracy, full structural correctness, real-scan robustness, GPU performance or VLM capability. Implementation is frozen for delivery; no further research is required to reproduce the packaged evidence. See <code>START_HERE.md</code>, <code>docs/HUMAN_REVIEW_RESULTS.md</code>, <code>RESULTS.md</code> and the independent review reports for commands, exact counts and history.</p></html>

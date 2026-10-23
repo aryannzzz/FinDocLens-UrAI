@@ -16,7 +16,19 @@ import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from benchmark.common import commit, sha256, utc
+from benchmark.common import sha256, utc
+
+
+def revision_info():
+    result = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT,
+                            capture_output=True, text=True)
+    if result.returncode == 0:
+        return dict(git_commit=result.stdout.strip(), revision_basis='git_checkout')
+    build = ROOT/'submission/BUILD.json'
+    if build.exists():
+        return dict(git_commit=json.loads(build.read_text())['source_commit'],
+                    revision_basis='packaged_build_manifest')
+    return dict(git_commit=None, revision_basis='unavailable_no_git_or_build_manifest')
 
 
 def run(url, out, expect_broken=False, expect_declaration=False):
@@ -87,7 +99,7 @@ def run(url, out, expect_broken=False, expect_declaration=False):
 
                 call('Emulation.setDeviceMetricsOverride', dict(width=1440, height=1080, deviceScaleFactor=1, mobile=False))
                 wait('document.readyState === "complete"')
-                report = dict(timestamp=utc(), git_commit=commit(), url=url, browser=call('Browser.getVersion'),
+                report = dict(timestamp=utc(), **revision_info(), url=url, browser=call('Browser.getVersion'),
                               test_decisions='AUTOMATED_UI_TEST_NOT_HUMAN; isolated profile, temporary download deleted',
                               human_review_performed_by_test=False,
                               tested_files={name: sha256(ROOT/name) for name in (

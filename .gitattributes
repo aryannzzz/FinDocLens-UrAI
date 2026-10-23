@@ -1,0 +1,3 @@
+# Keep generated CLI Markdown byte-for-byte, including the existing formatter's
+# blank warning-message suffix. This is raw output, not manually edited prose.
+submission/sample_outputs/**/tables.md whitespace=-blank-at-eol

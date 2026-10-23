@@ -1,6 +1,6 @@
 # Remaining submission requirements — evidence checked 23 October 2026
 
-This checklist uses the repository's `00_START_HERE.md`, `TASKS/01_CODEX_BENCHMARK.md`, `TASKS/03_REVIEW_AND_INTEGRATE.md`, `AGENTS.md` and `docs/EVAL_PROTOCOL.md`. The original applicant email is not present here. Its deadline, submission address/platform, archive/link format and any email-specific deliverables must be checked against that email; they are not invented below.
+This checklist uses the repository's `00_START_HERE.md`, `TASKS/01_CODEX_BENCHMARK.md`, `TASKS/03_REVIEW_AND_INTEGRATE.md`, `AGENTS.md` and `docs/EVAL_PROTOCOL.md`. The original applicant email was read during final delivery; its requirements are transcribed in `docs/ORIGINAL_ASSIGNMENT.md`. Deadline: 23 October 2026, 11:59 PM IST. It asks for the work and complete AI chat log, explicitly accepts an incomplete solution, and does not mandate video or a VLM run. Reply to its existing recipient/CC context; no message has been sent.
 
 ## Completed content-review requirement — v3
 
@@ -29,3 +29,7 @@ The original export, v1/v2 decisions and earlier 51/146 confidence classificatio
 - Original exported decisions, old ledgers and v1/v2 snapshots preserved for audit; v3 adds the completed personal-review declaration. No parser output or frozen baseline changed during this correction.
 
 Passing tests and available artifacts do not silently close the human-review or blind-evaluation gates above. A credible final narrative should state exactly which requirements are met, which remain unverified, and which are optional or email-dependent.
+
+## Final delivery status
+
+Implementation is frozen at `9a6ebcb`; structural/blind-evaluation gaps above are disclosed research limitations, not requests to continue research before this deadline. `START_HERE.md` and `FINAL_REPORT.md` lead the final delivery, with a portable offline viewer, source-restoration instructions, a compact deterministic ZIP builder and integrity checks. The final archive checksum, clean-extraction checks and delivery recommendation are recorded in the external `submission/DELIVERY_RECEIPT.json` (repository/alongside the final delivery artifacts, excluded from the ZIP to avoid self-reference) after the build. Complete AI transcript attachments and sending the actual submission remain applicant actions. `submission/VALIDATION.md` records the tested delivery entrypoints.

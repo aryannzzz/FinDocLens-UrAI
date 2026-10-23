@@ -32,3 +32,9 @@ agents worked in separate sessions that this file cannot see (see "Not visible f
 ## Not visible from this session
 The chat transcripts of the ChatGPT session that wrote `baseline_v2`, of the Codex session and of the earlier Claude Code session
 are not available here. Whatever they did that is not reflected in git history or in the files cannot be reported.
+
+## Final delivery disclosure
+
+Codex prepared the final technical report, evaluator guide, source-restoration and compact-packaging scripts, package validation and delivery checklist. It verified the assignment requirements from the original email read-only; it did not send a submission. The core parser, adapters, evaluator, V3 source values and all previous experiment records were frozen at `9a6ebcb`. Only small native CLI smoke checks and stored-result replay were run for delivery; no model inference or weights/source downloads were performed. The author, not the AI, performed the personal source-image verification declared in V3.
+
+Complete ChatGPT, Claude Code and Codex transcript exports remain separate manual attachments. No complete logs were invented or substituted by this disclosure. See `submission/TRANSCRIPT_CHECKLIST.md`.
