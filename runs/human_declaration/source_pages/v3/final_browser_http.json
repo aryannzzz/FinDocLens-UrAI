@@ -1,0 +1,79 @@
+{
+  "timestamp": "2026-10-23T10:32:15.489459+00:00",
+  "git_commit": "d4d750bde66c96760732f94b74d857a949959a26",
+  "url": "http://127.0.0.1:8765/benchmark/review/index.html",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/150.0.7871.46",
+    "revision": "@5b586c06e0d27582900f17e2d59c5370d8d6e0bb",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36",
+    "jsVersion": "15.0.245.13"
+  },
+  "test_decisions": "AUTOMATED_UI_TEST_NOT_HUMAN; isolated profile, temporary download deleted",
+  "human_review_performed_by_test": false,
+  "tested_files": {
+    "benchmark/review/index.html": "1ed649f794e83034bd2a09129553fe7875484692ee26a9f0b1f9de929eea7acc",
+    "benchmark/review_ui.html": "a30677f045e8d094df29d3027d9207bdb4e660c3980e1470becc6cee5604ef95",
+    "benchmark/review_site.py": "b2979fa3eb0addd3c9759a134bf1870775fc7d32e149aa08cf8d0caedd2ebd43",
+    "scripts/check_review_browser.py": "ba0658d31cfed75bc5e7d859c023148f192a7e9e1ec002c6f85248c0b80ff650"
+  },
+  "pages": [
+    {
+      "src": "http://127.0.0.1:8765/benchmark/review/assets/original_page.png",
+      "width": 1654,
+      "height": 2339,
+      "detailWidth": 60,
+      "detailHeight": 48,
+      "pageZoom": "125%",
+      "detailZoom": "200%",
+      "highlight": "block",
+      "screenshot": "runs/human_declaration/source_pages/v3/final_browser_http_original.png",
+      "document_id": "original",
+      "raw_inspected": "△0"
+    },
+    {
+      "src": "http://127.0.0.1:8765/benchmark/review/assets/elecom_p9_page.png",
+      "width": 1654,
+      "height": 2339,
+      "detailWidth": 61,
+      "detailHeight": 48,
+      "pageZoom": "125%",
+      "detailZoom": "200%",
+      "highlight": "block",
+      "screenshot": "runs/human_declaration/source_pages/v3/final_browser_http_elecom_p9.png",
+      "document_id": "elecom_p9",
+      "raw_inspected": "△4"
+    },
+    {
+      "src": "http://127.0.0.1:8765/benchmark/review/assets/daiwabo_p10_page.png",
+      "width": 2667,
+      "height": 1500,
+      "detailWidth": 221,
+      "detailHeight": 90,
+      "pageZoom": "125%",
+      "detailZoom": "200%",
+      "highlight": "block",
+      "screenshot": "runs/human_declaration/source_pages/v3/final_browser_http_daiwabo_p10.png",
+      "document_id": "daiwabo_p10",
+      "raw_inspected": "△43,010"
+    }
+  ],
+  "checks": {
+    "japanese_row_zoom": true,
+    "dash_zoom": true,
+    "draft_survives_reload": true,
+    "declared_197_accepted": true,
+    "all_document_dropdowns_accepted": true,
+    "json_download": true,
+    "original_glyphs_preserved": true,
+    "no_fabricated_cell_times": true,
+    "historical_draft_preserved": true,
+    "export_declaration_bound": true,
+    "later_draft_edit_persists_without_changing_seed": true,
+    "missing_image_visible_and_decisions_disabled": true
+  },
+  "japanese_row_screenshot": "runs/human_declaration/source_pages/v3/final_browser_http_japanese_row.png",
+  "dash_screenshot": "runs/human_declaration/source_pages/v3/final_browser_http_dash.png",
+  "elapsed_ms": 4487.352643045597,
+  "status": "pass"
+}

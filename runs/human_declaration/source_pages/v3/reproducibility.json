@@ -1,0 +1,295 @@
+{
+  "recorded_at": "2026-10-23T10:32:37.804639+00:00",
+  "code_commit": "d4d750bde66c96760732f94b74d857a949959a26",
+  "device": "CPU; metadata/checks only",
+  "inference_run": false,
+  "downloads": false,
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:09:02) [GCC 11.2.0]",
+  "platform": "Linux-7.0.11-76070011-generic-x86_64-with-glibc2.35",
+  "packages": {
+    "PyMuPDF": "1.27.2.3",
+    "Pillow": "12.0.0",
+    "websocket-client": "1.9.0"
+  },
+  "peak_cpu_memory": "not measured",
+  "gpu_memory": "not applicable; no inference",
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "benchmark.human_declaration",
+        "--check",
+        "benchmark/human_gold/v3"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 128.44737799605355
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "benchmark.declared_scoring",
+        "--reference",
+        "benchmark/human_gold/v3",
+        "--config",
+        "review/human_signoff/evaluation_v3.json",
+        "--out",
+        "results/human_v3",
+        "--verify"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 415.3854169999249
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/report_human_declaration.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 575.9726379765198
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "benchmark.review",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 357.1553350193426
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "benchmark.review_provenance",
+        "--check",
+        "benchmark/human_gold/v2"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 100.49543803324923
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "benchmark.review_scoring",
+        "--reference",
+        "benchmark/human_gold/v2",
+        "--config",
+        "review/human_signoff/evaluation_v2.json",
+        "--out",
+        "results/human_v2",
+        "--verify"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 844.0197230083868
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "benchmark.validate"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 58.247302018571645
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "5658f72",
+        "--exit-code",
+        "--",
+        "baseline_v2",
+        "benchmark/gold",
+        "benchmark/human_gold/v1",
+        "benchmark/human_gold/v2",
+        "results/human_v1",
+        "results/human_v2",
+        "review/human_signoff/human_review_decisions.json",
+        "review/human_signoff/attestation_v1.json",
+        "review/human_signoff/clarification_v2.json",
+        "review/human_signoff/provenance_v1.json",
+        "review/human_signoff/provenance_v2.json",
+        "findoclens",
+        "adapters"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 8.613454003352672
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 6.625094043556601
+    }
+  ],
+  "reference_lock_sha256": "1a89b290cac32f69cc8cbe7fe50f37cead6bf2f0a600543f9cfb6e9c62f29a6b",
+  "selection_sha256": "acb85080c4caa75a0abe376dba513314c537b63a514bdcc07f428d3b28ad4948",
+  "baseline_and_history_diff_empty": true,
+  "original_export_sha256": "a930cc5a4d5f38454f86caf78855b0c454b7785dbdb217b2270d7c0b2f573ac9",
+  "tests": {
+    "command": ".venv/bin/python -m unittest discover -s tests -v",
+    "exit_code": 0,
+    "count": 165,
+    "elapsed_seconds": 11.663,
+    "output": "tests_full.log",
+    "frozen_baseline_subprocess": true
+  },
+  "browser_tests": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_review_browser.py",
+        "--url",
+        "http://127.0.0.1:8765/benchmark/review/index.html",
+        "--expect-declaration",
+        "--out",
+        "runs/human_declaration/source_pages/v3/final_browser_http.json"
+      ],
+      "exit_code": 0,
+      "report": "final_browser_http.json",
+      "sha256": "7eeddfcba4f3bedaa845523ce98b2ccf526b98c5dc517375b1625a838e113478",
+      "checks": {
+        "japanese_row_zoom": true,
+        "dash_zoom": true,
+        "draft_survives_reload": true,
+        "declared_197_accepted": true,
+        "all_document_dropdowns_accepted": true,
+        "json_download": true,
+        "original_glyphs_preserved": true,
+        "no_fabricated_cell_times": true,
+        "historical_draft_preserved": true,
+        "export_declaration_bound": true,
+        "later_draft_edit_persists_without_changing_seed": true,
+        "missing_image_visible_and_decisions_disabled": true
+      }
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_review_browser.py",
+        "--url",
+        "file:///home/aryannzzz/ur_ai_RnD_agent_starter/benchmark/review/index.html",
+        "--expect-declaration",
+        "--out",
+        "runs/human_declaration/source_pages/v3/final_browser_file.json"
+      ],
+      "exit_code": 0,
+      "report": "final_browser_file.json",
+      "sha256": "233ce494bf77ce35a008399344ac24e9fd0aba2bdd46639ad4c4274514ed87ea",
+      "checks": {
+        "japanese_row_zoom": true,
+        "dash_zoom": true,
+        "draft_survives_reload": true,
+        "declared_197_accepted": true,
+        "all_document_dropdowns_accepted": true,
+        "json_download": true,
+        "original_glyphs_preserved": true,
+        "no_fabricated_cell_times": true,
+        "historical_draft_preserved": true,
+        "export_declaration_bound": true,
+        "later_draft_edit_persists_without_changing_seed": true
+      }
+    }
+  ],
+  "completed_at": "2026-10-23T10:34:15.808568+00:00",
+  "changed_files": [
+    "AI_COLLABORATION.md",
+    "README.md",
+    "RESULTS.md",
+    "benchmark/README.md",
+    "benchmark/declared_scoring.py",
+    "benchmark/human_declaration.py",
+    "benchmark/human_gold/CURRENT.json",
+    "benchmark/human_gold/README.md",
+    "benchmark/human_gold/v3/SHA256.json",
+    "benchmark/human_gold/v3/accepted_decisions.json",
+    "benchmark/human_gold/v3/cell_catalog.json",
+    "benchmark/human_gold/v3/daiwabo_p10.json",
+    "benchmark/human_gold/v3/elecom_p9.json",
+    "benchmark/human_gold/v3/manifest.json",
+    "benchmark/human_gold/v3/original.json",
+    "benchmark/review/README.md",
+    "benchmark/review/index.html",
+    "benchmark/review_site.py",
+    "benchmark/review_ui.html",
+    "docs/HUMAN_REVIEW_RESULTS.md",
+    "docs/MANUAL_REVIEW_QUEUE.md",
+    "docs/SCREENCAST_SCRIPT.md",
+    "docs/SUBMISSION_STATUS.md",
+    "docs/TECHNICAL_MEMO.md",
+    "docs/USER_SIGNOFF.md",
+    "docs/history/HUMAN_REVIEW_RESULTS_v2.md",
+    "docs/history/README.md",
+    "docs/history/SUBMISSION_STATUS_v2.md",
+    "docs/history/USER_SIGNOFF_v2.md",
+    "docs/templates/RESULTS.template.md",
+    "results/human_v3/SHA256.json",
+    "results/human_v3/reports/fin1/auto/daiwabo_p10.json",
+    "results/human_v3/reports/fin1/auto/elecom_p9.json",
+    "results/human_v3/reports/fin1/auto/original.json",
+    "results/human_v3/reports/fin1/docling_cmfalse/daiwabo_p10.json",
+    "results/human_v3/reports/fin1/docling_cmfalse/elecom_p9.json",
+    "results/human_v3/reports/fin1/docling_cmfalse/original.json",
+    "results/human_v3/reports/fin1/docling_cmtrue/daiwabo_p10.json",
+    "results/human_v3/reports/fin1/docling_cmtrue/elecom_p9.json",
+    "results/human_v3/reports/fin1/docling_cmtrue/original.json",
+    "results/human_v3/reports/fin1/docling_rapidocr/daiwabo_p10.json",
+    "results/human_v3/reports/fin1/docling_rapidocr/elecom_p9.json",
+    "results/human_v3/reports/fin1/docling_rapidocr/original.json",
+    "results/human_v3/reports/fin1/docling_regions/daiwabo_p10.json",
+    "results/human_v3/reports/fin1/docling_regions/elecom_p9.json",
+    "results/human_v3/reports/fin1/docling_regions/original.json",
+    "results/human_v3/reports/fin1/native_grid/daiwabo_p10.json",
+    "results/human_v3/reports/fin1/native_grid/elecom_p9.json",
+    "results/human_v3/reports/fin1/native_grid/original.json",
+    "results/human_v3/reports/fin1/native_v2/daiwabo_p10.json",
+    "results/human_v3/reports/fin1/native_v2/elecom_p9.json",
+    "results/human_v3/reports/fin1/native_v2/original.json",
+    "results/human_v3/reports/fin1/v2/daiwabo_p10.json",
+    "results/human_v3/reports/fin1/v2/elecom_p9.json",
+    "results/human_v3/reports/fin1/v2/original.json",
+    "results/human_v3/reports/postfix/auto/daiwabo_p10.json",
+    "results/human_v3/reports/postfix/auto/elecom_p9.json",
+    "results/human_v3/reports/postfix/auto/original.json",
+    "results/human_v3/reports/postfix/docling_cmfalse/daiwabo_p10.json",
+    "results/human_v3/reports/postfix/docling_cmfalse/elecom_p9.json",
+    "results/human_v3/reports/postfix/docling_cmfalse/original.json",
+    "results/human_v3/reports/postfix/docling_cmtrue/daiwabo_p10.json",
+    "results/human_v3/reports/postfix/docling_cmtrue/elecom_p9.json",
+    "results/human_v3/reports/postfix/docling_cmtrue/original.json",
+    "results/human_v3/reports/postfix/docling_rapidocr/daiwabo_p10.json",
+    "results/human_v3/reports/postfix/docling_rapidocr/elecom_p9.json",
+    "results/human_v3/reports/postfix/docling_rapidocr/original.json",
+    "results/human_v3/reports/postfix/docling_regions/daiwabo_p10.json",
+    "results/human_v3/reports/postfix/docling_regions/elecom_p9.json",
+    "results/human_v3/reports/postfix/docling_regions/original.json",
+    "results/human_v3/reports/postfix/native_grid/daiwabo_p10.json",
+    "results/human_v3/reports/postfix/native_grid/elecom_p9.json",
+    "results/human_v3/reports/postfix/native_grid/original.json",
+    "results/human_v3/reports/postfix/native_v2/daiwabo_p10.json",
+    "results/human_v3/reports/postfix/native_v2/elecom_p9.json",
+    "results/human_v3/reports/postfix/native_v2/original.json",
+    "results/human_v3/reports/postfix/v2/daiwabo_p10.json",
+    "results/human_v3/reports/postfix/v2/elecom_p9.json",
+    "results/human_v3/reports/postfix/v2/original.json",
+    "results/human_v3/summary.json",
+    "review/human_signoff/README.md",
+    "review/human_signoff/declaration_v3.json",
+    "review/human_signoff/evaluation_v3.json",
+    "scripts/check_review_browser.py",
+    "scripts/report_human_declaration.py",
+    "tests/test_human_declaration.py",
+    "tests/test_review_provenance.py"
+  ],
+  "disk_check": "df -h /: 97G total, 90G used, 2.2G available, 98%; before and after verification",
+  "human_review_performed_by_automation": false,
+  "reference_verification_basis": "Explicit user/project-author declaration of completed personal source-image review; bulk recording only"
+}

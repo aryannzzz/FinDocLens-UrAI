@@ -1,0 +1,16 @@
+$ .venv/bin/python -m benchmark.human_declaration --check benchmark/human_gold/v3
+Verified 197 declared human-reviewed cell contents; structure unreviewed
+$ .venv/bin/python -m benchmark.declared_scoring --reference benchmark/human_gold/v3 --config review/human_signoff/evaluation_v3.json --out results/human_v3 --verify
+{'human_visually_verified_by_explicit_declaration': 197}
+$ .venv/bin/python scripts/report_human_declaration.py --check
+PASS: v3 report reproduces
+$ .venv/bin/python -m benchmark.review --check
+PASS: review images, source/reference hashes and offline UI assets
+$ .venv/bin/python -m benchmark.review_provenance --check benchmark/human_gold/v2
+{'bulk_user_approved_ai_cross_checked': 146, 'individually_human_reviewed': 51}
+$ .venv/bin/python -m benchmark.review_scoring --reference benchmark/human_gold/v2 --config review/human_signoff/evaluation_v2.json --out results/human_v2 --verify
+{'bulk_user_approved_ai_cross_checked': 146, 'individually_human_reviewed': 51}
+$ .venv/bin/python -m benchmark.validate
+PASS: frozen v2, reference hashes, complete reference cell slots, evidence boxes, source-family split isolation
+$ git diff 5658f72 --exit-code -- baseline_v2 benchmark/gold benchmark/human_gold/v1 benchmark/human_gold/v2 results/human_v1 results/human_v2 review/human_signoff/human_review_decisions.json review/human_signoff/attestation_v1.json review/human_signoff/clarification_v2.json review/human_signoff/provenance_v1.json review/human_signoff/provenance_v2.json findoclens adapters
+$ git diff --check
