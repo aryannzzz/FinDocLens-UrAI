@@ -1,104 +1,63 @@
-# Review provenance correction v2 — 23 October 2026
+# Human visual verification v3
 
-**51 cells were individually reviewed by Aryan Jain against source images. The other 146 were bulk user-approved AI-drafted annotations that had an AI visual cross-check. They are not 197 independently human-verified ground-truth cells.**
+**Aryan Jain, the user/project author, explicitly declares completed personal visual comparison of all 197 annotated cell contents against the original PDF images. All 197 decisions are accepted.**
 
-The earlier v1 wording conflated approval with individual review. v1 JSON and its original audit ledger remain frozen for replay, with deprecation notices. The original export, its per-cell decisions/timestamps, the earlier attestation, AI references, stored predictions and frozen baseline are unchanged. The correction is a separately versioned classification, not a fabricated review event.
+Verification method: direct visual comparison with original source PDF images. Recording method: **bulk entry based on explicit user declaration**, not 197 dropdown clicks. No new per-cell click events or inspection timestamps are asserted. The declaration has a repository recording time; the actual inspection times were not supplied.
 
-Current manifest: [`benchmark/human_gold/v2/manifest.json`](../benchmark/human_gold/v2/manifest.json). Reviewer clarification: [`clarification_v2.json`](../review/human_signoff/clarification_v2.json). Exact CSV: [`individually_reviewed_cells.csv`](../benchmark/human_gold/v2/individually_reviewed_cells.csv). Full cell catalog: [`cell_catalog.json`](../benchmark/human_gold/v2/cell_catalog.json).
+This is a new completed-review declaration. The earlier export (51 accepted / 146 unreviewed), v1 approval ledger, v2 clarification (51 personally reviewed / 146 bulk-approved at that stage), AI drafts, predictions and frozen baseline are unchanged. Their historical statements remain valid for that stage. See the [archived v2 report](history/HUMAN_REVIEW_RESULTS_v2.md).
 
-## Confidence classes and exact denominators
+Current [manifest](../benchmark/human_gold/v3/manifest.json), [reviewer declaration](../review/human_signoff/declaration_v3.json), [all accepted decisions](../benchmark/human_gold/v3/accepted_decisions.json), and [exact cell catalog](../benchmark/human_gold/v3/cell_catalog.json). The catalog identifies every document, table, row label/ID, column, raw/value/status and source identity.
 
-| Source | Individually reviewed cells | Bulk-approved AI-checked cells | Full user-approved comparison | Individually reviewed row contexts |
-|---|---:|---:|---:|---:|
-| original | 31 | 43 | 74 | 16 |
-| elecom_p9 | 20 | 36 | 56 | 10 |
-| daiwabo_p10 | 0 | 67 | 67 | 0 |
-| **Total** | **51** | **146** | **197** | **26** |
+## Exact content denominator
 
-The 51-cell accuracy denominator contains **51 financial cells, 0 explanatory text cells**. The 146-cell bulk agreement denominator contains **142 financial cells + 4 text cells**. The full agreement denominator is **193 financial cells + 4 text cells = 197**. Printed dash placeholders count as financial-column slots with null/not_reported semantics, never as zero.
-
-**Daiwabo has 0 individually reviewed cells. Its individual accuracy is N/A (0/0, rate null), not 100%.** No Daiwabo reconstruction or complex-table accuracy claim is established by the 51-cell sample. Original and ELECOM are development-exposed too; all results here are in-sample source-page evidence, not blind holdouts.
-
-The 51 inspections were one reviewer accepting existing AI-drafted cells, not a blind second transcription or a randomly selected test sample. All-backend 51/51 agreement should be interpreted with that selection and confirmation-bias limit.
-
-The previous **98-label user attestation** is preserved separately. The export contains no standalone per-label review decisions, so v2 reports **0 individually documented label-review decisions** and does not publish 98/98 as independent human label accuracy. The 26 row contexts below identify where reviewed cells sit; they are not a new structural sign-off.
-
-All **14 header annotations** (10 printed, 4 implicit/unprinted), **193 numeric period associations**, hierarchy, units, geometry and completeness remain structurally unreviewed. In particular, the **12 Daiwabo lower-table numeric periods** are inferred from context; their values are bulk-approved, and their period assignments are not human-observed headers. The 17 upper-table change intervals are inferred semantic constructions too. None enters human period accuracy.
-
-The archived [AI visual audit](../review/second_ai_visual_audit/README.md) is explicitly AI-only and not blinded; its model/version was not recorded. Its field named `source_sha256` hashes the selected one-page PDF, and v2 checks it against the benchmark input hash. It cannot increase human review counts.
-
-## Metrics: individual accuracy versus approved-reference agreement
-
-Only stored predictions are read. Matching remains one-to-one by table geometry, reviewed/approved label context and physical column; values are not used to find rows. Geometry and structure remain AI-derived alignment context. Raw matching removes whitespace only; typed content means value + status, not correct period/role/header semantics.
-
-The fin1 and post-fix selections have identical content scores in all three confidence strata. Counts below apply per backend per selection; repeated backend comparisons do not create additional reviewed source cells.
-
-| Backend | Individual raw accuracy | Individual value/status accuracy | Bulk raw agreement | Full 197-cell raw agreement | Full financial raw agreement |
+| Source | Human-verified contents | Financial slots | Explanatory text | Row contexts with cells | Source PDF page |
 |---|---:|---:|---:|---:|---:|
-| v2 | 51/51 | 51/51 | 81/146 | 132/197 | 132/193 |
-| native_v2 | 51/51 | 51/51 | 81/146 | 132/197 | 132/193 |
-| native_grid | 51/51 | 51/51 | 142/146 | 193/197 | 193/193 |
-| docling_cmtrue | 51/51 | 51/51 | 79/146 | 130/197 | 130/193 |
-| docling_cmfalse | 51/51 | 51/51 | 79/146 | 130/197 | 130/193 |
-| docling_rapidocr | 51/51 | 51/51 | 79/146 | 130/197 | 130/193 |
-| docling_regions | 51/51 | 51/51 | 130/146 | 181/197 | 181/193 |
-| auto | 51/51 | 51/51 | 142/146 | 193/197 | 193/193 |
+| daiwabo_p10 | 67 | 63 | 4 | 21 | 10 |
+| elecom_p9 | 56 | 56 | 0 | 28 | 9 |
+| original | 74 | 74 | 0 | 37 | 1 |
 
-**All eight backends score 51/51 on the individually reviewed sample.** This sample is restricted to two comparatively simple native pages and is not evidence that all eight handle Daiwabo correctly. The existing 197-cell numbers are retained as **agreement with user-approved references**, not fully human-verified accuracy. Four native explanation-string disagreements involve arrow placement; they remain disagreements with the approved draft, not errors established by individual human inspection.
+**197 = 193 financial-column slots + 4 explanatory text cells.** Dash placeholders are included with null/not_reported semantics; `－` is not zero, and `△0` remains negative_zero. Repeated backend/run comparisons do not increase the 197-cell source denominator.
 
-Machine-readable scores: [`results/human_v2/summary.json`](../results/human_v2/summary.json). Every one of 48 stored page/backend predictions has three separately named scope reports. Post-fix selection remains p0fix2, except Docling matching-off Daiwabo uses the explicitly pinned p0fix3 prediction. No inference, source value edit, parser-output edit, or latency remeasurement occurred. Old results/human_v1 numeric comparisons remain unchanged.
+## Stored-prediction content accuracy
 
-## Exact individually reviewed rows and cells
+Both fin1 and post-fix selections have the same scores below. These are source-page, development-exposed results, **not blind holdouts**. Human review improves reference confidence; it does not change exposure or establish independent blind transcription. One project-author reviewer verified existing AI drafts, with the associated confirmation-bias limitation.
 
-The following table lists every selected cell, grouped into 26 row contexts. Column indexes are zero-based physical columns. A cell in the same row is not accepted into the individual subset merely because its neighbor was checked; **original assets_r016 column 0 remains bulk-approved while column 1 is individually reviewed**. No Daiwabo row appears.
+| Backend | Raw content | Value/status | Financial raw | Text raw |
+|---|---:|---:|---:|---:|
+| v2 | 132/197 (67.01%) | 132/197 (67.01%) | 132/193 (68.39%) | 0/4 (0.00%) |
+| native_v2 | 132/197 (67.01%) | 132/197 (67.01%) | 132/193 (68.39%) | 0/4 (0.00%) |
+| native_grid | 193/197 (97.97%) | 193/197 (97.97%) | 193/193 (100.00%) | 0/4 (0.00%) |
+| docling_cmtrue | 130/197 (65.99%) | 130/197 (65.99%) | 130/193 (67.36%) | 0/4 (0.00%) |
+| docling_cmfalse | 130/197 (65.99%) | 130/197 (65.99%) | 130/193 (67.36%) | 0/4 (0.00%) |
+| docling_rapidocr | 130/197 (65.99%) | 130/197 (65.99%) | 130/193 (67.36%) | 0/4 (0.00%) |
+| docling_regions | 181/197 (91.88%) | 181/197 (91.88%) | 181/193 (93.78%) | 0/4 (0.00%) |
+| auto | 193/197 (97.97%) | 193/197 (97.97%) | 193/193 (100.00%) | 0/4 (0.00%) |
 
-| Source | Table / row ID | Source row label | Column 0 individually reviewed raw | Column 1 individually reviewed raw |
-|---|---|---|---|---|
-| original | assets / assets_r003 | 現金及び預金 | `2,002,429` | `608,281` |
-| original | assets / assets_r004 | 受取手形 | `20,659` | `26,333` |
-| original | assets / assets_r005 | 売掛金 | `2,019,476` | `884,339` |
-| original | assets / assets_r006 | 電子記録債権 | `564,667` | `370,468` |
-| original | assets / assets_r007 | 商品及び製品 | `589,488` | `1,019,663` |
-| original | assets / assets_r008 | 仕掛品 | `186,748` | `55,344` |
-| original | assets / assets_r009 | 原材料及び貯蔵品 | `370,403` | `136,082` |
-| original | assets / assets_r010 | 短期貸付金 | `7,530` | `30,000` |
-| original | assets / assets_r011 | その他 | `105,260` | `246,895` |
-| original | assets / assets_r012 | 貸倒引当金 | `△2,979` | `△0` |
-| original | assets / assets_r013 | 流動資産合計 | `5,863,684` | `3,377,407` |
-| original | assets / assets_r016 | 建物及び構築物 | (not individually reviewed) | `1,880,082` |
-| original | assets / assets_r017 | 減価償却累計額 | `△1,923,585` | `△1,640,253` |
-| original | assets / assets_r018 | 建物及び構築物（純額） | `197,775` | `239,828` |
-| original | assets / assets_r019 | 機械装置及び運搬具 | `4,024,922` | `2,250,799` |
-| original | assets / assets_r020 | 減価償却累計額 | `△3,634,165` | `△1,914,091` |
-| elecom_p9 | assets / assets_r003 | 現金及び預金 | `43,718` | `58,497` |
-| elecom_p9 | assets / assets_r004 | 受取手形及び売掛金 | `21,033` | `27,294` |
-| elecom_p9 | assets / assets_r005 | 有価証券 | `11,199` | `12,387` |
-| elecom_p9 | assets / assets_r006 | 商品及び製品 | `11,937` | `15,339` |
-| elecom_p9 | assets / assets_r007 | 仕掛品 | `498` | `662` |
-| elecom_p9 | assets / assets_r008 | 原材料及び貯蔵品 | `1,603` | `2,190` |
-| elecom_p9 | assets / assets_r009 | 返品資産 | `380` | `378` |
-| elecom_p9 | assets / assets_r010 | 為替予約 | `2,292` | `2,782` |
-| elecom_p9 | assets / assets_r011 | その他 | `1,558` | `1,769` |
-| elecom_p9 | assets / assets_r012 | 流動資産合計 | `94,222` | `121,302` |
+All backends match original 74/74 and ELECOM 56/56 cell contents. On Daiwabo, native_grid/auto match **63/63 financial cells but 63/67 total contents**; frozen v2/native_v2 match 2/63 financial cells (2/67 total), Docling page paths 0/63 (0/67 total), and docling_regions 51/63 (51/67 total). Four native explanation-string errors involve arrow placement; reference strings and predictions remain unchanged.
 
-The CSV additionally preserves each exact key (`document:row:column`), review timestamp, raw string, typed value/status, and source page index. Source page indexes are zero-based (original 0, ELECOM 8); the export hash is `a930cc5a4d5f38454f86caf78855b0c454b7785dbdb217b2270d7c0b2f573ac9`.
+Matching is one-to-one by table geometry, normalized row label and physical column, without using values to locate rows. Missing cells remain in the denominator, including abstentions. Raw comparison removes whitespace only. Value/status does not verify roles, periods or header semantics. AI-derived label/geometry context supports alignment but is not newly certified structure. Scores are cell-content accuracy, not full table reconstruction accuracy.
 
-## Reproduce without inference
+[Machine-readable summary](../results/human_v3/summary.json) and 48 page/backend reports pin the same prediction paths and SHA-256 hashes as v2. Post-fix uses p0fix2, except matching-off Docling Daiwabo uses the pinned p0fix3. No inference or latency remeasurement occurred. The historical [v2 full 197-cell approved-reference agreement](../results/human_v2/summary.json) is preserved; v3 changes confidence provenance, not its numerical counts.
+
+## Structural annotations remain unreviewed
+
+The declaration verifies cell contents only. It does **not** certify the 14 header annotations (10 printed, 4 implicit), 193 numeric period associations, 82 hierarchy edges, 5 table-like regions, label hierarchy, header links, merged-cell spans, units, geometry, roles or completeness. Prior 98-label attestation remains separate; no additional individual label-review events or structural scores are invented.
+
+**Daiwabo lower-table 12 numeric period assignments remain inferred/unprinted**, separately from verified values and printed headers. The 17 upper-table change intervals are also inferred semantics. Even the 164 printed-header associations remain unreviewed links. Their diagnostic scores are explicitly unverified context and are excluded from human structural accuracy.
+
+## Review UI and reproducibility
+
+The original `benchmark/review/index.html` embeds the v3 accepted decisions while retaining the original AI annotation tables unchanged. A declaration-specific browser draft namespace prevents earlier unreviewed browser states overriding the new declaration; the old namespace is preserved. Later edits persist in the new namespace and export as decisions without rewriting snapshots.
 
 ```bash
-.venv/bin/python -m benchmark.review_provenance --check benchmark/human_gold/v2
-.venv/bin/python -m benchmark.review_scoring --reference benchmark/human_gold/v2 --config review/human_signoff/evaluation_v2.json --out results/human_v2 --verify
-.venv/bin/python -m unittest tests.test_review_provenance -v
-.venv/bin/python -m unittest discover -s tests -v
-.venv/bin/python -m benchmark.validate
+.venv/bin/python -m benchmark.human_declaration --check benchmark/human_gold/v3
+.venv/bin/python -m benchmark.declared_scoring --reference benchmark/human_gold/v3 --config review/human_signoff/evaluation_v3.json --out results/human_v3 --verify
+.venv/bin/python scripts/report_human_declaration.py --check
+.venv/bin/python -m benchmark.review --check
+.venv/bin/python -m unittest tests.test_human_declaration tests.test_review_provenance tests.test_human_reference tests.test_review_site -v
+.venv/bin/python -m benchmark.review --serve --port 8765
 ```
 
-To rebuild in fresh directories, run `benchmark.review_provenance --clarification review/human_signoff/clarification_v2.json --out /tmp/new-review/v2`, then `benchmark.review_scoring --reference /tmp/new-review/v2 --config review/human_signoff/evaluation_v2.json --out /tmp/new-review-scores`. Versions/score outputs are create-only. Tests compare regenerated references and scores byte-for-byte, check the original ledger/export hashes, enforce the 51/146 split, and preserve missing-cell denominators. Original AI reference hashes and the frozen baseline remain unchanged.
+Open **http://127.0.0.1:8765/benchmark/review/index.html**. All 197 decisions restore as accepted by default; the header explains their declaration basis and structural limits. JSON export includes the declaration and export creation time, without fabricating per-cell inspection times. Source assets are reused from cached PDFs; no network/model download is needed.
 
-Verification completed: **10 focused tests and 159 full tests passed**, including the frozen baseline subprocess tests. Provenance/scoring replay and original reference hash checks passed. Commands, package/code versions and pure-CPU verification metadata are retained under `runs/review_provenance/source_pages/v2/`; no inference was invoked.
-
-## Remaining submission work
-
-See [`SUBMISSION_STATUS.md`](SUBMISSION_STATUS.md) for requirement-by-requirement evidence. The main validation gaps are **0 individually checked Daiwabo values**, **31 of 37 high-risk sign/dash/plus/negative-zero cells still only bulk-approved**, and unreviewed structure/inferred periods. The entire 146-cell bulk set is not required to be individually reviewed just to report approval agreement, but it cannot be relabeled human-verified without actual source inspection.
-
-The complete AI chat transcripts are separately required by the project instructions; `AI_COLLABORATION.md` and reports are not substitutes. No complete transcript exports were found in the repository. The original application email is not included, so deadline, upload format and any additional email-specific requirements must be confirmed with that email. A screencast script exists; an actual recording is not evidenced and is optional under the local integration task unless the email says otherwise.
+Create-only regeneration into a fresh destination uses `benchmark.human_declaration --declaration review/human_signoff/declaration_v3.json --out /tmp/REFERENCE/v3`, then `benchmark.declared_scoring --reference /tmp/REFERENCE/v3 --config review/human_signoff/evaluation_v3.json --out /tmp/SCORES`. Existing versions are never overwritten. See [submission status](SUBMISSION_STATUS.md) for remaining research/packaging requirements.

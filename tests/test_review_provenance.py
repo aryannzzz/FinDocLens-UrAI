@@ -127,7 +127,7 @@ class CorrectedReviewProvenance(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'create-only'):
                 build(CLARIFICATION, rebuilt)
             from scripts.report_review_provenance import render
-            self.assertEqual(render(REF, ROOT/'results/human_v2'), (ROOT/'docs/HUMAN_REVIEW_RESULTS.md').read_text())
+            self.assertEqual(render(REF, ROOT/'results/human_v2'), (ROOT/'docs/history/HUMAN_REVIEW_RESULTS_v2.md').read_text())
 
 
 if __name__ == '__main__':

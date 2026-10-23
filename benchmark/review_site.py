@@ -1,5 +1,6 @@
 """Offline review assets and integrity checks. Never writes references or decisions."""
 from html.parser import HTMLParser
+from copy import deepcopy
 import json
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -8,6 +9,34 @@ import os
 import fitz
 
 from benchmark.common import ROOT, read_json, sha256, write_json
+
+
+def restored_review(documents, decisions):
+    """Restore an explicit current declaration; never infer review from AI gold."""
+    current = ROOT/'benchmark/human_gold/CURRENT.json'
+    if not current.exists() or read_json(current).get('current_version') != 'v3':
+        return None
+    pointer = read_json(current)
+    manifest_path = current.parent/pointer['manifest']
+    if sha256(manifest_path) != pointer['manifest_sha256']:
+        raise ValueError('Current human reference manifest changed')
+    from benchmark.human_declaration import check as check_v3
+    docs, _ = check_v3(manifest_path.parent)
+    manifest = read_json(manifest_path)
+    seed = read_json(manifest_path.parent/manifest['review_decisions'])
+    by_key = {d['key']: d for d in seed['decisions']}
+    if set(by_key) != {d['key'] for d in decisions}:
+        raise ValueError('Declared review does not cover exactly these review cells')
+    for decision in decisions:
+        accepted = by_key[decision['key']]
+        if any(accepted[k] != decision[k] for k in decision if k not in {'decision', 'correction'}):
+            raise ValueError(f'Declared review identity/content mismatch: {decision["key"]}')
+        decision.update(accepted)
+    for doc in documents:
+        doc['human_verified_cell_contents'] = docs[doc['id']]['human_checked_cells']
+    return dict(**{k: v for k, v in seed.items() if k != 'decisions'},
+                reference_lock_sha256=sha256(manifest_path.parent/'SHA256.json'),
+                details=read_json(ROOT/manifest['declaration']['path']))
 
 
 def build(entries, folder=None):
@@ -74,17 +103,21 @@ def build(entries, folder=None):
                                           decision='unreviewed', correction=None))
     if not documents:
         raise ValueError('No available source PDFs with matching references')
+    # Preserve the unreviewed template; declared acceptances are a separate record.
+    write_json(folder/'audit_template.json', dict(reviewer=None, decisions=decisions,
+                                                note='Unreviewed template; never a human verification record'))
+    declaration = restored_review(documents, decisions)
     data = dict(documents=documents, unavailable=unavailable, decisions=decisions)
+    if declaration:
+        data['review_declaration'] = declaration
     template = (ROOT/'benchmark/review_ui.html').read_text(encoding='utf-8')
     embedded = json.dumps(data, ensure_ascii=False).replace('<', '\\u003c')
     (folder/'index.html').write_text(template.replace('<!-- REVIEW_DATA -->', embedded), encoding='utf-8')
     write_json(folder/'asset_manifest.json', dict(version=1, documents=records))
-    write_json(folder/'audit_template.json', dict(reviewer=None, decisions=decisions,
-                                                note='Unreviewed template; never a human verification record'))
     problems = check(folder)
     if problems:
         raise ValueError('\n'.join(problems))
-    print(f'Review ready: {len(documents)} source pages, {len(decisions)} unreviewed cells; assets verified')
+    print(f'Review ready: {len(documents)} source pages, {len(decisions)} cells; declared acceptances={len(decisions) if declaration else 0}; assets verified')
     return data
 
 
@@ -136,6 +169,25 @@ def check(folder=None):
                 errors.append(f'{did}: embedded annotations differ from the reference')
         if embedded_docs:
             errors.append('Embedded source pages are missing from the asset manifest')
+        # Reconstruct default decisions from the original AI annotations, then
+        # validate their declaration binding as well as the displayed contents.
+        originals = []
+        for doc in embedded['documents']:
+            for table in doc['tables']:
+                for row in table['rows']:
+                    for cell in row['cells']:
+                        originals.append(dict(key=f"{doc['id']}:{row['row_id']}:{cell['column_index']}",
+                            document_id=doc['id'], source_sha256=doc['source_sha256'], input_sha256=doc['input_sha256'],
+                            gold_sha256=doc['gold_sha256'], source_page_index=doc['source_page_index'], selected_page_index=0,
+                            table_id=table['table_id'], row_id=row['row_id'], column_index=cell['column_index'],
+                            bbox=cell.get('bbox'), evidence=doc['image'], expected_raw=cell['raw'],
+                            expected_value=cell['value'], expected_status=cell['status'], decision='unreviewed', correction=None))
+        expected_documents = deepcopy(embedded['documents'])
+        declaration = restored_review(expected_documents, originals)
+        if declaration != embedded.get('review_declaration') or originals != embedded['decisions']:
+            errors.append('Embedded decisions/declaration differ from the current review record')
+        if expected_documents != embedded['documents']:
+            errors.append('Embedded human content counts differ from the current review record')
         links = Links()
         links.feed(html)
         for url in links.urls:

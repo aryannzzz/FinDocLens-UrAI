@@ -9,7 +9,7 @@
 </style>
 <header>
 <h1>Source reference review</h1>
-<p>Compare each annotation with the actual PDF image. These references remain AI drafts until you review them personally.</p>
+<p id="review-basis">Compare each annotation with the actual PDF image. These references remain AI drafts until you review them personally.</p>
 <p>Click a row, raw value, or header to highlight its source region. Zoom and scroll both image panels to inspect Japanese glyphs, △, －, signs, and digits.</p>
 </header>
 <div class="controls">
@@ -38,14 +38,18 @@ const data=JSON.parse(document.getElementById('review-data').textContent);
 const $=id=>document.getElementById(id);
 const documents=data.documents, images={}, imageErrors={}, changes={};
 let current=documents[0], selectedBox=null, pageScale=1, detailBaseWidth=1;
-const storeKey='findoclens-source-review-v1:'+documents.map(d=>d.gold_sha256+':'+d.input_sha256).join('|');
+const legacyStoreKey='findoclens-source-review-v1:'+documents.map(d=>d.gold_sha256+':'+d.input_sha256).join('|');
+// A new declaration has its own draft namespace. Earlier drafts remain stored.
+const storeKey=data.review_declaration?legacyStoreKey+':declaration:'+data.review_declaration.declaration.sha256:legacyStoreKey;
+const baseDecisions=Object.fromEntries(data.decisions.map(d=>[d.key,d]));
+if(data.review_declaration){$('reviewer').value=data.review_declaration.reviewer;$('scope').value='Cell contents only; structure and inferred periods unreviewed';$('review-basis').textContent=`${data.review_declaration.reviewer}: all ${data.decisions.length} cell contents personally compared with original PDF images. Bulk recorded from explicit user declaration; no per-cell click events or inspection timestamps asserted. Structure, header links, spans and inferred periods remain unreviewed.`;}
 const labels={original:'Original · source page 1',elecom_p9:'ELECOM · source page 9',daiwabo_p10:'Daiwabo · source page 10'};
 function el(tag,text,className){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(className)n.className=className;return n;}
 function keyFor(doc,row,cell){return doc.id+':'+row.row_id+':'+cell.column_index;}
 function storageWarning(){ $('storage-error').hidden=false;$('storage-error').textContent='Browser draft storage is unavailable. Export JSON before closing this page; references are never changed.'; }
 function persist(){try{localStorage.setItem(storeKey,JSON.stringify({reviewer:$('reviewer').value,scope:$('scope').value,changes}));}catch(_){storageWarning();}}
 try{const saved=JSON.parse(localStorage.getItem(storeKey)||'null');if(saved){$('reviewer').value=saved.reviewer||'';$('scope').value=saved.scope||'';Object.assign(changes,saved.changes||{});}}catch(_){storageWarning();}
-function progress(){const counts={accepted:0,correction_needed:0,unreadable:0};for(const base of data.decisions){const s=changes[base.key]?.decision;if(Object.hasOwn(counts,s))counts[s]++;}const n=Object.values(counts).reduce((a,b)=>a+b,0);$('progress').textContent=`${n} / ${data.decisions.length} decisions recorded · ${counts.accepted} accepted · ${counts.correction_needed} corrections · ${counts.unreadable} unreadable`;}
+function progress(){const counts={accepted:0,correction_needed:0,unreadable:0};for(const base of data.decisions){const s=changes[base.key]?.decision??base.decision;if(Object.hasOwn(counts,s))counts[s]++;}const n=Object.values(counts).reduce((a,b)=>a+b,0);$('progress').textContent=`${n} / ${data.decisions.length} decisions recorded · ${counts.accepted} accepted · ${counts.correction_needed} corrections · ${counts.unreadable} unreadable`;}
 function showErrors(){const failed=Object.entries(imageErrors);$('image-error').hidden=!failed.length;if(failed.length)$('image-error').textContent='Missing/unreadable source image: '+failed.map(([id,url])=>id+' ('+url+')').join(', ')+'. Run .venv/bin/python -m benchmark.review --serve from the repository root. Decisions for unavailable evidence are disabled.';}
 function rotatedBox(box){if(!box)return current.page_bbox;const [x0,y0,x1,y1]=box,W=current.page_bbox[2],H=current.page_bbox[3];if(current.rotation===90)return [W-y1,x0,W-y0,x1];if(current.rotation===180)return [W-x1,H-y1,W-x0,H-y0];if(current.rotation===270)return [y0,H-x1,y1,H-x0];return box;}
 function highlight(){const b=$('selection-box');if(!selectedBox||!images[current.id]?.naturalWidth){b.style.display='none';return;}const r=rotatedBox(selectedBox),im=images[current.id],sx=im.naturalWidth/current.page_bbox[2]*pageScale,sy=im.naturalHeight/current.page_bbox[3]*pageScale;b.style.display='block';b.style.left=r[0]*sx+'px';b.style.top=r[1]*sy+'px';b.style.width=(r[2]-r[0])*sx+'px';b.style.height=(r[3]-r[1])*sy+'px';}
@@ -61,7 +65,7 @@ function focusEvidence(box,title,cellKey=null){
  $('detail-viewport').scrollLeft=0;$('detail-viewport').scrollTop=0;
 }
 function renderAnnotations(){
- const host=$('annotations');host.replaceChildren();host.append(el('h2',labels[current.id]||current.id));host.append(el('p',`${current.annotation_status} · human_checked_cells=${current.human_checked_cells}`,'badge'));
+ const host=$('annotations');host.replaceChildren();host.append(el('h2',labels[current.id]||current.id));host.append(el('p',`Original draft: ${current.annotation_status} · human-verified cell contents: ${current.human_verified_cell_contents??0} · structure unreviewed`,'badge'));
  host.append(el('p',`Original PDF page ${current.source_page_index+1} (index ${current.source_page_index}); selected PDF page 1. Unit annotation: ${current.unit??'not specified'}.`,'small'));
  const meta=el('details');meta.append(el('summary','Source and reference identity'));meta.append(el('p',`Source SHA-256: ${current.source_sha256}\nSelected PDF SHA-256: ${current.input_sha256}\nReference SHA-256: ${current.gold_sha256}`,'metadata'));host.append(meta);
  for(const table of current.tables){
@@ -71,9 +75,9 @@ function renderAnnotations(){
    const card=el('article',undefined,'row-card');const title=el('button',`${row.row_id} · ${row.raw_label}`,'row-title');title.onclick=()=>focusEvidence(row.bbox,'Row '+row.row_id+' · '+row.raw_label);card.append(title,el('div',`${row.type} · Parent: ${row.parent_path.join(' / ')||'(root)'}`,'row-meta'));
    if(!row.cells.length)card.append(el('p','Section label; no annotated values. Record label/structure corrections in scope notes.','row-meta'));
    for(const cell of row.cells){
-    const key=keyFor(current,row,cell),change=changes[key]||{};const item=el('div',undefined,'cell');item.dataset.key=key;const info=el('div');const raw=el('button',cell.raw===null?'null':String(cell.raw),'cell-raw');raw.setAttribute('aria-label','Inspect source '+key);raw.onclick=()=>focusEvidence(cell.bbox||row.bbox,`${row.raw_label} · column ${cell.column_index} · raw ${cell.raw}`,key);info.append(raw,el('div',`Column ${cell.column_index} · ${cell.period??'period null'}\n${cell.role} · typed ${JSON.stringify(cell.value)} · ${cell.status}`,'cell-info'));
+    const key=keyFor(current,row,cell),change=changes[key]||baseDecisions[key]||{};const item=el('div',undefined,'cell');item.dataset.key=key;const info=el('div');const raw=el('button',cell.raw===null?'null':String(cell.raw),'cell-raw');raw.setAttribute('aria-label','Inspect source '+key);raw.onclick=()=>focusEvidence(cell.bbox||row.bbox,`${row.raw_label} · column ${cell.column_index} · raw ${cell.raw}`,key);info.append(raw,el('div',`Column ${cell.column_index} · ${cell.period??'period null'}\n${cell.role} · typed ${JSON.stringify(cell.value)} · ${cell.status}`,'cell-info'));
     const fields=el('div',undefined,'decision-fields'),select=el('select');select.setAttribute('aria-label','Decision '+key);for(const v of ['unreviewed','accepted','correction_needed','unreadable']){const option=el('option',v);option.value=v;select.append(option);}select.value=change.decision||'unreviewed';select.disabled=!images[current.id]?.naturalWidth;const label=el('label','Your decision');label.append(select);const note=el('input');note.type='text';note.placeholder='Correction / reason / note';note.setAttribute('aria-label','Correction '+key);note.value=change.correction||'';
-    function update(){changes[key]={decision:select.value,correction:note.value||null,reviewed_at:select.value==='unreviewed'?null:new Date().toISOString()};persist();progress();}
+    function update(){changes[key]={decision:select.value,correction:note.value||null,decision_recorded_at:new Date().toISOString(),recording_method:'interactive_ui_decision'};persist();progress();}
     select.onchange=update;note.oninput=update;fields.append(label,note);item.append(info,fields);card.append(item);
    }host.append(card);
   }
@@ -87,7 +91,7 @@ function selectDocument(id){
 function sourceReady(){const im=images[current.id];const ready=Boolean(im?.naturalWidth);$('source-page').hidden=!ready;$('empty-source').hidden=ready;$('source-status').textContent=ready?`${current.id}: source image loaded · ${im.naturalWidth} × ${im.naturalHeight} · 200 dpi`:'Loading source image…';if(imageErrors[current.id])$('source-status').textContent='Source image failed to load';if(ready){fitPage();const first=current.tables[0];focusEvidence(first.bbox,'Table '+first.table_id);$('page-viewport').scrollTop=0;$('page-viewport').scrollLeft=0;}else{$('detail').width=1;$('detail').height=1;$('detail-title').textContent='Source region unavailable until the image loads';}}
 function exportDecisions(){
  const reviewer=$('reviewer').value.trim();if(!reviewer){alert('Enter your reviewer name before exporting.');$('reviewer').focus();return;}
- const out={reviewer,reviewed_at:new Date().toISOString(),type:'human_review_decisions',human_verification_applied:false,scope_note:$('scope').value,note:'Export records decisions only. Gold and human verification counts are unchanged. Unreviewed cells are not certified.',decisions:data.decisions.map(d=>({...d,...(changes[d.key]||{})}))};
+ const out={reviewer,export_created_at:new Date().toISOString(),review_declaration:data.review_declaration||null,type:'human_review_decisions',human_verification_applied:false,scope_note:$('scope').value,note:'Export records effective decisions and any explicit source-review declaration. Export time is not an inspection time. Editing this draft does not change versioned references. Structure remains unreviewed.',decisions:data.decisions.map(d=>({...d,...(changes[d.key]||{})}))};
  const a=el('a');const url=URL.createObjectURL(new Blob([JSON.stringify(out,null,2)+'\n'],{type:'application/json'}));a.href=url;a.download='human_review_decisions.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);persist();
 }
 for(const doc of documents){const option=el('option',labels[doc.id]||doc.id);option.value=doc.id;$('document').append(option);const im=new Image();images[doc.id]=im;im.onload=()=>{delete imageErrors[doc.id];showErrors();if(current.id===doc.id){renderAnnotations();sourceReady();}};im.onerror=()=>{imageErrors[doc.id]=doc.image;showErrors();if(current.id===doc.id){renderAnnotations();sourceReady();}};im.src=doc.image;}

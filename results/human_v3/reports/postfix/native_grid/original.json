@@ -1,0 +1,390 @@
+{
+  "document_id": "original",
+  "backend": "native_grid",
+  "prediction_path": "runs/native_grid/original/p0fix2_main/cold/prediction.json",
+  "prediction_sha256": "6305d5a1ff47749c5ca65ece3c11fa953e63f57066f6f47662311eba732bc567",
+  "source_run_id": "p0fix2_main",
+  "reference_sha256": "a9cc69f4d27c5c229f4fc7c2e6660cee20e9cba8158a14da7ceabfa63ae4671a",
+  "evaluator_version": "declared-content-evaluator-3",
+  "scopes": {
+    "human_verified_content_accuracy": {
+      "document_id": "original",
+      "reference_status": "human_verified_cell_contents_structure_unreviewed",
+      "source_kind": "source",
+      "issuer_relation": "same_issuer",
+      "source_family": "ur_ai_original",
+      "run_status": "success",
+      "blind_test": false,
+      "cohort": "development_exposed_source",
+      "metrics": {
+        "raw_content": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "value_status": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "numeric_raw": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "numeric_value_status": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        },
+        "text_raw": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "text_value_status": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "cell_coverage": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        }
+      },
+      "missing_reviewed_cells": 0,
+      "errors": [],
+      "unverified_period_diagnostics": {
+        "printed_header_association": {
+          "correct": 74,
+          "total": 74,
+          "rate": 1.0
+        }
+      },
+      "unscored_human_axes": {
+        "header_accuracy": {
+          "total": 0,
+          "reason": "No explicit header verification"
+        },
+        "period_accuracy": {
+          "total": 0,
+          "reason": "No period verification; inferred lower-table periods are not observed gold"
+        },
+        "hierarchy_accuracy": {
+          "total": 0,
+          "reason": "Label acceptance does not verify parent paths"
+        },
+        "detection_accuracy": {
+          "total": 0,
+          "reason": "Completeness and table boundaries remain AI context"
+        }
+      },
+      "matching_policy": "One-to-one table IoU >= .1; normalized label equality; row geometry/order break ties; physical column. Geometry is inherited AI context, not a human localization score.",
+      "whitespace_policy": "Remove Unicode whitespace only for raw/normalized labels; preserve monetary glyphs, punctuation and signs",
+      "provenance_scope": "human_verified_content_accuracy",
+      "interpretation": "Accuracy against personally source-verified cell contents, bulk recorded by explicit user declaration; structure unreviewed",
+      "evaluation_status": "scored",
+      "individually_documented_label_decisions": 0,
+      "alignment_context_rows": [
+        {
+          "table_id": "assets",
+          "row_id": "assets_r003",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r004",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r005",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r006",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r007",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r008",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r009",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r010",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r011",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r012",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r013",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r016",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r017",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r018",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r019",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r020",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r021",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r022",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r023",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r024",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r025",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r026",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r027",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r028",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r029",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r030",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r032",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r033",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r034",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r036",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r037",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r038",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r039",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r040",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r041",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r042",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r043",
+          "column_indices": [
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  },
+  "blind_test": false
+}

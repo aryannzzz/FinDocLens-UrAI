@@ -1,8 +1,8 @@
 {
-  "current_version": "v2",
-  "manifest": "v2/manifest.json",
-  "manifest_sha256": "1916a5b0b3f8c10c59ec47daf254aaf00bd806ca91a6f25e080328b6af24aff8",
-  "confidence": "51 individually human-reviewed cells; 146 bulk user-approved AI-checked cells; structure unreviewed",
-  "superseded_version": "v1",
-  "superseded_reason": "v1 conflated bulk approval with individual human verification; frozen only for audit replay"
+  "current_version": "v3",
+  "manifest": "v3/manifest.json",
+  "manifest_sha256": "e6d5f95030e5fd0ae820a1890731ae4f1dacb993e053167c2b5304c5469e5107",
+  "confidence": "197 cell contents personally source-verified by explicit author declaration; bulk recorded; structure unreviewed",
+  "superseded_version": "v2",
+  "superseded_reason": "New completed personal visual-verification declaration; earlier 51/146 history remains unchanged"
 }

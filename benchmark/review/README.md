@@ -12,8 +12,8 @@ The launcher validates the selected PDF hashes against the manifest/reference id
 
 1. Select a document. Its source page, original page number, reference status, source/reference hashes and annotations are available in the interface.
 2. Click a row label, raw value, table extent, or header. The left panel highlights the corresponding source region and shows a magnified detail. Use either zoom slider and scroll the source/detail panes. “Fit page width” returns to the top of the source; “Open image” and “Open selected PDF” provide independent full-size views.
-3. Enter your name. Select `accepted`, `correction_needed`, or `unreadable` per cell; leave untouched cells `unreviewed`. Use the correction/reason field for proposed changes and scope notes for labels, hierarchy, headers, units and table boundaries. Reference values are read-only.
-4. Export `human_review_decisions.json`. The export includes every cell's decision, exact original raw/value/status, source and reference hashes, original page index, table/row/column identity, and evidence bbox. Export records decisions only; it never edits gold or applies human verification counts. Browser drafts are keyed by reference/input hashes and normally survive reload; the JSON download is your portable copy. No decisions are sent to the server.
+3. The v3 author declaration restores all 197 accepted decisions and the reviewer name. Its banner distinguishes personally verified contents from unreviewed structure, with bulk recording and no invented per-cell clicks/times. For any later changes, select `accepted`, `correction_needed`, or `unreadable` per cell; review edits do not silently change the frozen v3 snapshot. Use the correction/reason field for proposed changes and scope notes for labels, hierarchy, headers, units and table boundaries. Reference values are read-only.
+4. Export `human_review_decisions.json`. The export includes every cell's decision, exact original raw/value/status, source and reference hashes, original page index, table/row/column identity, and evidence bbox. Export records decisions only; it never edits gold or applies human verification counts. Browser drafts are keyed by reference/input hashes plus the v3 declaration hash (older drafts remain separately stored) and normally survive reload; the JSON download is your portable copy. No decisions are sent to the server.
 
 To build without a server or check without writing:
 
@@ -32,7 +32,7 @@ Tests:
 .venv/bin/python -m unittest tests.test_review_site -v
 # Optional actual-browser smoke test: installed Chrome + websocket-client; no browser download.
 .venv/bin/python scripts/check_review_browser.py \
-  --out /tmp/source-review-browser-check.json
+  --expect-declaration --out /tmp/source-review-browser-check.json
 ```
 
 The browser test uses an isolated temporary profile and explicitly marked dummy decisions. It verifies all three images, region highlights, zoom, draft restoration, JSON download and missing-image handling; its test decisions are deleted. It does not perform human verification. Use a new output filename when repeating it.

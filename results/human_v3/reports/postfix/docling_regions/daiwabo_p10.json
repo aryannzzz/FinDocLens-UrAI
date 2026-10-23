@@ -1,0 +1,490 @@
+{
+  "document_id": "daiwabo_p10",
+  "backend": "docling_regions",
+  "prediction_path": "runs/docling_regions/daiwabo_p10/p0fix2_main/cold/prediction.json",
+  "prediction_sha256": "61ce1c93f87305b9f9b328f8df7909b2c4047b2b5dd7be84e04757bf014a1cec",
+  "source_run_id": "p0fix2_main",
+  "reference_sha256": "21fbf636fb2ce3b400553e701162e1eb835c0fa8ebdfd76ac91998f51766a005",
+  "evaluator_version": "declared-content-evaluator-3",
+  "scopes": {
+    "human_verified_content_accuracy": {
+      "document_id": "daiwabo_p10",
+      "reference_status": "human_verified_cell_contents_structure_unreviewed",
+      "source_kind": "source",
+      "issuer_relation": "independent_issuer",
+      "source_family": "Daiwabo Holdings",
+      "run_status": "partial",
+      "blind_test": false,
+      "cohort": "development_exposed_source",
+      "metrics": {
+        "raw_content": {
+          "correct": 51,
+          "total": 67,
+          "rate": 0.7611940298507462
+        },
+        "value_status": {
+          "correct": 51,
+          "total": 67,
+          "rate": 0.7611940298507462
+        },
+        "numeric_raw": {
+          "correct": 51,
+          "total": 63,
+          "rate": 0.8095238095238095
+        },
+        "numeric_value_status": {
+          "correct": 51,
+          "total": 63,
+          "rate": 0.8095238095238095
+        },
+        "text_raw": {
+          "correct": 0,
+          "total": 4,
+          "rate": 0.0
+        },
+        "text_value_status": {
+          "correct": 0,
+          "total": 4,
+          "rate": 0.0
+        },
+        "cell_coverage": {
+          "correct": 51,
+          "total": 67,
+          "rate": 0.7611940298507462
+        }
+      },
+      "missing_reviewed_cells": 16,
+      "errors": [
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r001",
+          "column_index": 0,
+          "kind": "missing_reviewed_cell",
+          "expected_raw": "55,421",
+          "expected_value": 55421,
+          "expected_status": "observed",
+          "predicted_raw": null,
+          "predicted_value": null,
+          "predicted_status": null
+        },
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r001",
+          "column_index": 1,
+          "kind": "missing_reviewed_cell",
+          "expected_raw": "12,410",
+          "expected_value": 12410,
+          "expected_status": "observed",
+          "predicted_raw": null,
+          "predicted_value": null,
+          "predicted_status": null
+        },
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r001",
+          "column_index": 2,
+          "kind": "missing_reviewed_cell",
+          "expected_raw": "△43,010",
+          "expected_value": -43010,
+          "expected_status": "observed",
+          "predicted_raw": null,
+          "predicted_value": null,
+          "predicted_status": null
+        },
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r001",
+          "column_index": 3,
+          "kind": "missing_reviewed_cell",
+          "expected_raw": "主に商品在庫の増加に伴う減少",
+          "expected_value": "主に商品在庫の増加に伴う減少",
+          "expected_status": "observed",
+          "predicted_raw": null,
+          "predicted_value": null,
+          "predicted_status": null
+        },
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r002",
+          "column_index": 0,
+          "kind": "missing_reviewed_cell",
+          "expected_raw": "288,495",
+          "expected_value": 288495,
+          "expected_status": "observed",
+          "predicted_raw": null,
+          "predicted_value": null,
+          "predicted_status": null
+        },
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r002",
+          "column_index": 1,
+          "kind": "missing_reviewed_cell",
+          "expected_raw": "319,626",
+          "expected_value": 319626,
+          "expected_status": "observed",
+          "predicted_raw": null,
+          "predicted_value": null,
+          "predicted_status": null
+        },
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r002",
+          "column_index": 2,
+          "kind": "missing_reviewed_cell",
+          "expected_raw": "+31,130",
+          "expected_value": 31130,
+          "expected_status": "observed",
+          "predicted_raw": null,
+          "predicted_value": null,
+          "predicted_status": null
+        },
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r002",
+          "column_index": 3,
+          "kind": "missing_reviewed_cell",
+          "expected_raw": "DISの売上債権の増加",
+          "expected_value": "DISの売上債権の増加",
+          "expected_status": "observed",
+          "predicted_raw": null,
+          "predicted_value": null,
+          "predicted_status": null
+        },
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r003",
+          "column_index": 0,
+          "kind": "missing_reviewed_cell",
+          "expected_raw": "45,495",
+          "expected_value": 45495,
+          "expected_status": "observed",
+          "predicted_raw": null,
+          "predicted_value": null,
+          "predicted_status": null
+        },
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r003",
+          "column_index": 1,
+          "kind": "missing_reviewed_cell",
+          "expected_raw": "68,303",
+          "expected_value": 68303,
+          "expected_status": "observed",
+          "predicted_raw": null,
+          "predicted_value": null,
+          "predicted_status": null
+        },
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r003",
+          "column_index": 2,
+          "kind": "missing_reviewed_cell",
+          "expected_raw": "+22,808",
+          "expected_value": 22808,
+          "expected_status": "observed",
+          "predicted_raw": null,
+          "predicted_value": null,
+          "predicted_status": null
+        },
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r003",
+          "column_index": 3,
+          "kind": "missing_reviewed_cell",
+          "expected_raw": "主にGIGAスクール向け商品増加",
+          "expected_value": "主にGIGAスクール向け商品増加",
+          "expected_status": "observed",
+          "predicted_raw": null,
+          "predicted_value": null,
+          "predicted_status": null
+        },
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r004",
+          "column_index": 0,
+          "kind": "missing_reviewed_cell",
+          "expected_raw": "20,703",
+          "expected_value": 20703,
+          "expected_status": "observed",
+          "predicted_raw": null,
+          "predicted_value": null,
+          "predicted_status": null
+        },
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r004",
+          "column_index": 1,
+          "kind": "missing_reviewed_cell",
+          "expected_raw": "50,936",
+          "expected_value": 50936,
+          "expected_status": "observed",
+          "predicted_raw": null,
+          "predicted_value": null,
+          "predicted_status": null
+        },
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r004",
+          "column_index": 2,
+          "kind": "missing_reviewed_cell",
+          "expected_raw": "+30,233",
+          "expected_value": 30233,
+          "expected_status": "observed",
+          "predicted_raw": null,
+          "predicted_value": null,
+          "predicted_status": null
+        },
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r004",
+          "column_index": 3,
+          "kind": "missing_reviewed_cell",
+          "expected_raw": "運転資本として",
+          "expected_value": "運転資本として",
+          "expected_status": "observed",
+          "predicted_raw": null,
+          "predicted_value": null,
+          "predicted_status": null
+        }
+      ],
+      "unverified_period_diagnostics": {
+        "inferred_change_interval": {
+          "correct": 17,
+          "total": 17,
+          "rate": 1.0
+        },
+        "inferred_unprinted_header": {
+          "correct": 0,
+          "total": 12,
+          "rate": 0.0
+        },
+        "printed_header_association": {
+          "correct": 34,
+          "total": 34,
+          "rate": 1.0
+        }
+      },
+      "unscored_human_axes": {
+        "header_accuracy": {
+          "total": 0,
+          "reason": "No explicit header verification"
+        },
+        "period_accuracy": {
+          "total": 0,
+          "reason": "No period verification; inferred lower-table periods are not observed gold"
+        },
+        "hierarchy_accuracy": {
+          "total": 0,
+          "reason": "Label acceptance does not verify parent paths"
+        },
+        "detection_accuracy": {
+          "total": 0,
+          "reason": "Completeness and table boundaries remain AI context"
+        }
+      },
+      "matching_policy": "One-to-one table IoU >= .1; normalized label equality; row geometry/order break ties; physical column. Geometry is inherited AI context, not a human localization score.",
+      "whitespace_policy": "Remove Unicode whitespace only for raw/normalized labels; preserve monetary glyphs, punctuation and signs",
+      "provenance_scope": "human_verified_content_accuracy",
+      "interpretation": "Accuracy against personally source-verified cell contents, bulk recorded by explicit user declaration; structure unreviewed",
+      "evaluation_status": "scored",
+      "individually_documented_label_decisions": 0,
+      "alignment_context_rows": [
+        {
+          "table_id": "assets",
+          "row_id": "assets_r001",
+          "column_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r002",
+          "column_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r003",
+          "column_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r004",
+          "column_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r005",
+          "column_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r006",
+          "column_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r007",
+          "column_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r008",
+          "column_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "table_id": "liabilities_equity",
+          "row_id": "liabilities_equity_r001",
+          "column_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "table_id": "liabilities_equity",
+          "row_id": "liabilities_equity_r002",
+          "column_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "table_id": "liabilities_equity",
+          "row_id": "liabilities_equity_r003",
+          "column_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "table_id": "liabilities_equity",
+          "row_id": "liabilities_equity_r004",
+          "column_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "table_id": "liabilities_equity",
+          "row_id": "liabilities_equity_r005",
+          "column_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "table_id": "liabilities_equity",
+          "row_id": "liabilities_equity_r006",
+          "column_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "table_id": "liabilities_equity",
+          "row_id": "liabilities_equity_r007",
+          "column_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "table_id": "liabilities_equity",
+          "row_id": "liabilities_equity_r008",
+          "column_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "table_id": "liabilities_equity",
+          "row_id": "liabilities_equity_r009",
+          "column_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r001",
+          "column_indices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r002",
+          "column_indices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r003",
+          "column_indices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "table_id": "explanation",
+          "row_id": "explanation_r004",
+          "column_indices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    }
+  },
+  "blind_test": false
+}

@@ -19,7 +19,7 @@ sys.path.insert(0, str(ROOT))
 from benchmark.common import commit, sha256, utc
 
 
-def run(url, out, expect_broken=False):
+def run(url, out, expect_broken=False, expect_declaration=False):
     import websocket
     chrome = shutil.which('google-chrome') or shutil.which('chromium')
     if not chrome:
@@ -89,6 +89,10 @@ def run(url, out, expect_broken=False):
                 wait('document.readyState === "complete"')
                 report = dict(timestamp=utc(), git_commit=commit(), url=url, browser=call('Browser.getVersion'),
                               test_decisions='AUTOMATED_UI_TEST_NOT_HUMAN; isolated profile, temporary download deleted',
+                              human_review_performed_by_test=False,
+                              tested_files={name: sha256(ROOT/name) for name in (
+                                  'benchmark/review/index.html', 'benchmark/review_ui.html',
+                                  'benchmark/review_site.py', 'scripts/check_review_browser.py')},
                               pages=[], checks={})
                 if expect_broken:
                     report['broken_images'] = js('[...document.images].filter(i=>!i.naturalWidth).map(i=>i.getAttribute("src"))')
@@ -96,6 +100,12 @@ def run(url, out, expect_broken=False):
                     report['screenshot'] = screenshot('broken')
                 else:
                     wait('!!window.reviewApp && Object.values(reviewApp.images).every(i=>i.complete && i.naturalWidth>0)')
+                    expect_declaration = expect_declaration or js('Boolean(data.review_declaration)')
+                    if expect_declaration:
+                        assert js('document.getElementById("progress").textContent') == '197 / 197 decisions recorded · 197 accepted · 0 corrections · 0 unreadable'
+                        # Preserve a historical draft in its old namespace and show it cannot
+                        # override the newly declared review. No old key is deleted.
+                        js('localStorage.setItem(legacyStoreKey,JSON.stringify({reviewer:"HISTORICAL_TEST_DRAFT",changes:{"original:assets_r012:1":{decision:"unreviewed"}}}))')
                     cases = [('original', 'assets_r012', 1, '△0', 'accepted'),
                              ('elecom_p9', 'assets_r031', 0, '△4', 'correction_needed'),
                              ('daiwabo_p10', 'assets_r002', 2, '△43,010', 'unreadable')]
@@ -117,10 +127,14 @@ def run(url, out, expect_broken=False):
                         source['document_id'], source['raw_inspected'] = did, raw
                         report['pages'].append(source)
                         selector = json.dumps(f'select[aria-label="Decision {key}"]')
-                        js(f'document.querySelector({selector}).value={json.dumps(decision)};document.querySelector({selector}).dispatchEvent(new Event("change"))')
-                        if decision == 'correction_needed':
-                            note = json.dumps(f'input[aria-label="Correction {key}"]')
-                            js(f'document.querySelector({note}).value="AUTOMATED_UI_TEST: dummy note, not a correction";document.querySelector({note}).dispatchEvent(new Event("input"))')
+                        if expect_declaration:
+                            assert js(f'document.querySelector({selector}).value') == 'accepted'
+                            assert js('[...document.querySelectorAll(".decision-fields select")].every(s=>s.value==="accepted")')
+                        else:
+                            js(f'document.querySelector({selector}).value={json.dumps(decision)};document.querySelector({selector}).dispatchEvent(new Event("change"))')
+                            if decision == 'correction_needed':
+                                note = json.dumps(f'input[aria-label="Correction {key}"]')
+                                js(f'document.querySelector({note}).value="AUTOMATED_UI_TEST: dummy note, not a correction";document.querySelector({note}).dispatchEvent(new Event("input"))')
                     js('reviewApp.selectDocument("original");[...document.querySelectorAll(".row-title")].find(n=>n.textContent.startsWith("assets_r026 ")).click()')
                     assert js('document.getElementById("detail-title").textContent.includes("建設仮勘定")')
                     assert js('document.getElementById("detail").width > 500')
@@ -129,9 +143,11 @@ def run(url, out, expect_broken=False):
                     assert js('document.getElementById("detail-title").textContent.includes("－")')
                     report['dash_screenshot'] = screenshot('dash')
                     report['checks'].update(japanese_row_zoom=True, dash_zoom=True)
-                    js('document.getElementById("reviewer").value="AUTOMATED_UI_TEST_NOT_HUMAN";document.getElementById("reviewer").dispatchEvent(new Event("input"));document.getElementById("scope").value="Automated interface test only, no human verification";document.getElementById("scope").dispatchEvent(new Event("input"))')
+                    if not expect_declaration:
+                        js('document.getElementById("reviewer").value="AUTOMATED_UI_TEST_NOT_HUMAN";document.getElementById("reviewer").dispatchEvent(new Event("input"));document.getElementById("scope").value="Automated interface test only, no human verification";document.getElementById("scope").dispatchEvent(new Event("input"))')
                     call('Page.reload')
-                    wait('!!window.reviewApp && document.getElementById("progress").textContent.startsWith("3 / 197")')
+                    expected_progress = '197 / 197' if expect_declaration else '3 / 197'
+                    wait(f'!!window.reviewApp && document.getElementById("progress").textContent.startsWith({json.dumps(expected_progress)})')
                     report['checks']['draft_survives_reload'] = True
                     call('Browser.setDownloadBehavior', dict(behavior='allow', downloadPath=str(downloads)))
                     js('document.getElementById("export").click()')
@@ -140,18 +156,43 @@ def run(url, out, expect_broken=False):
                     while not download.exists() and time.monotonic() < deadline:
                         time.sleep(.1)
                     exported = json.loads(download.read_text())
-                    assert exported['reviewer'] == 'AUTOMATED_UI_TEST_NOT_HUMAN'
-                    assert exported['human_verification_applied'] is False
-                    assert len(exported['decisions']) == 197
-                    changed = [d for d in exported['decisions'] if d['decision'] != 'unreviewed']
-                    assert {d['decision'] for d in changed} == {'accepted', 'correction_needed', 'unreadable'}
-                    assert {d['expected_raw'] for d in changed} == {'△0', '△4', '△43,010'}
-                    dash = next(d for d in exported['decisions'] if d['key'] == 'original:assets_r026:0')
-                    assert (dash['expected_raw'], dash['expected_value'], dash['expected_status'], dash['decision']) == ('－', None, 'not_reported', 'unreviewed')
-                    assert all(d['gold_sha256'] and d['source_sha256'] and d['bbox'] for d in changed)
-                    report['checks'].update(json_download=True, all_197_cells_exported=True, all_decision_types=True,
-                                            original_glyphs_preserved=True, evidence_identity_exported=True,
-                                            human_verification_applied=False)
+                    if expect_declaration:
+                        assert exported['reviewer'] == 'Aryan Jain'
+                        assert exported['review_declaration']['recording_method'] == 'bulk_entry_based_on_explicit_user_declaration'
+                        assert len(exported['decisions']) == 197
+                        assert len({d['key'] for d in exported['decisions']}) == 197
+                        assert all(d['decision'] == 'accepted' and 'reviewed_at' not in d for d in exported['decisions'])
+                        assert all(d['declaration'] == exported['review_declaration']['declaration'] for d in exported['decisions'])
+                        assert 'export_created_at' in exported and 'reviewed_at' not in exported
+                        assert js('JSON.parse(localStorage.getItem(legacyStoreKey)).reviewer') == 'HISTORICAL_TEST_DRAFT'
+                        dash = next(d for d in exported['decisions'] if d['key'] == 'original:assets_r026:0')
+                        assert (dash['expected_raw'], dash['expected_value'], dash['expected_status']) == ('－', None, 'not_reported')
+                        report['checks'].update(declared_197_accepted=True, all_document_dropdowns_accepted=True,
+                            json_download=True, original_glyphs_preserved=True, no_fabricated_cell_times=True,
+                            historical_draft_preserved=True, export_declaration_bound=True)
+                        # Test a subsequent edit in the declaration-specific draft,
+                        # then remove this automated change. No source review occurs.
+                        js('reviewApp.selectDocument("original");const s=document.querySelector(\'select[aria-label="Decision original:assets_r026:0"]\');s.value="unreadable";s.dispatchEvent(new Event("change"))')
+                        call('Page.reload')
+                        wait('!!window.reviewApp && document.getElementById("progress").textContent.endsWith("1 unreadable")')
+                        assert js('document.querySelector(\'select[aria-label="Decision original:assets_r026:0"]\').value') == 'unreadable'
+                        js('delete changes["original:assets_r026:0"];persist()')
+                        call('Page.reload')
+                        wait('!!window.reviewApp && document.getElementById("progress").textContent.includes("197 accepted")')
+                        report['checks']['later_draft_edit_persists_without_changing_seed'] = True
+                    else:
+                        assert exported['reviewer'] == 'AUTOMATED_UI_TEST_NOT_HUMAN'
+                        assert exported['human_verification_applied'] is False
+                        assert len(exported['decisions']) == 197
+                        changed = [d for d in exported['decisions'] if d['decision'] != 'unreviewed']
+                        assert {d['decision'] for d in changed} == {'accepted', 'correction_needed', 'unreadable'}
+                        assert {d['expected_raw'] for d in changed} == {'△0', '△4', '△43,010'}
+                        dash = next(d for d in exported['decisions'] if d['key'] == 'original:assets_r026:0')
+                        assert (dash['expected_raw'], dash['expected_value'], dash['expected_status'], dash['decision']) == ('－', None, 'not_reported', 'unreviewed')
+                        assert all(d['gold_sha256'] and d['source_sha256'] and d['bbox'] for d in changed)
+                        report['checks'].update(json_download=True, all_197_cells_exported=True, all_decision_types=True,
+                                                original_glyphs_preserved=True, evidence_identity_exported=True,
+                                                human_verification_applied=False)
                     if url.startswith('http'):
                         call('Network.enable')
                         call('Network.setCacheDisabled', dict(cacheDisabled=True))
@@ -177,5 +218,6 @@ if __name__ == '__main__':
     parser.add_argument('--url', default='http://127.0.0.1:8765/benchmark/review/')
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--expect-broken', action='store_true')
+    parser.add_argument('--expect-declaration', action='store_true')
     args = parser.parse_args()
-    run(args.url, args.out, args.expect_broken)
+    run(args.url, args.out, args.expect_broken, args.expect_declaration)

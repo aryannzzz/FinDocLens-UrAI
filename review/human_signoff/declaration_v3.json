@@ -1,0 +1,61 @@
+{
+  "declaration_id": "author-source-visual-verification-v3",
+  "reviewer": "Aryan Jain",
+  "reviewer_role": "user/project author",
+  "statement": "I have now personally and visually verified every single one of the 197 annotated cells against the actual original PDF images for all three documents: the Ur AI balance sheet, ELECOM, and Daiwabo. I confirm that all 197 cell contents are correct. I did not individually click accepted for every cell in the review interface because that would have been unnecessarily repetitive, but I performed the visual verification myself.",
+  "verification_method": "direct_visual_comparison_with_original_source_pdf_images",
+  "recording_method": "bulk_entry_based_on_explicit_user_declaration",
+  "recorded_at": "2026-10-23T10:22:38.902334+00:00",
+  "recorded_at_meaning": "Time this declaration was entered into repository provenance; not the time of source inspection.",
+  "verification_completed_at": null,
+  "per_cell_review_timestamps_provided": false,
+  "per_cell_click_events_asserted": false,
+  "scope": {
+    "cell_count": 197,
+    "financial_cells": 193,
+    "text_cells": 4,
+    "verified_fields": [
+      "raw",
+      "value",
+      "status"
+    ],
+    "documents": {
+      "daiwabo_p10": {
+        "cell_count": 67,
+        "input_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+        "source_sha256": "b8d238aed3ec8deeb80675dcb1d6442ef9a89e3d876c42ade44543e2166125e8",
+        "source_page_index": 9
+      },
+      "elecom_p9": {
+        "cell_count": 56,
+        "input_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+        "source_sha256": "4bdb7bb0022a63e459ec35ef4e571a8fcf4796b0b776b5fe2f7e4ee217fb0d78",
+        "source_page_index": 8
+      },
+      "original": {
+        "cell_count": 74,
+        "input_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+        "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+        "source_page_index": 0
+      }
+    }
+  },
+  "structural_annotations_verified": false,
+  "excluded_scope": [
+    "hierarchy",
+    "header links",
+    "merged-cell spans",
+    "period assignments",
+    "inferred Daiwabo periods",
+    "geometry",
+    "units",
+    "row/table completeness",
+    "new label certification"
+  ],
+  "base_reference": "benchmark/human_gold/v2",
+  "base_reference_lock_sha256": "704dbe2e53f34d2d2b0977c2c6cdf3a3639f9a721d6ae2638ad10b31d5fdcd69",
+  "original_export": "review/human_signoff/human_review_decisions.json",
+  "original_export_sha256": "a930cc5a4d5f38454f86caf78855b0c454b7785dbdb217b2270d7c0b2f573ac9",
+  "history_note": "This new completed-review declaration supersedes current v2 confidence status prospectively. It does not change the accuracy of the earlier 51-reviewed/146-bulk-approved record or invent further dropdown events.",
+  "blind_test": false
+}

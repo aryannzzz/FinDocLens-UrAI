@@ -1,0 +1,122 @@
+{
+  "schema_version": "human-visual-declaration-3",
+  "version": "v3",
+  "declaration": {
+    "path": "review/human_signoff/declaration_v3.json",
+    "sha256": "fb097d97d7c2eff82d3640a5e7e82aa01e12debcab367ad19bebe0d8c7bc6095"
+  },
+  "base_reference": "benchmark/human_gold/v2",
+  "original_export_preserved": true,
+  "original_decision_ledgers_preserved": true,
+  "human_checked_cells": 197,
+  "verification_method": "direct_visual_comparison_with_original_source_pdf_images",
+  "recording_method": "bulk_entry_based_on_explicit_user_declaration",
+  "verification_completed_at": null,
+  "structural_annotations_human_verified": false,
+  "blind_test": false,
+  "class_counts": {
+    "human_visually_verified_by_explicit_declaration": 197
+  },
+  "user_attested_labels": 98,
+  "individually_documented_label_decisions": 0,
+  "documents": {
+    "daiwabo_p10": {
+      "path": "daiwabo_p10.json",
+      "cell_count": 67,
+      "input_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "counts": {
+        "human_verified_cell_contents": 67,
+        "numeric": 63,
+        "text": 4,
+        "historical_v2_counts": {
+          "individually_human_reviewed": 0,
+          "bulk_user_approved_ai_cross_checked": 67,
+          "full_user_approved": 67,
+          "individually_documented_label_decisions": 0,
+          "user_attested_labels": 21,
+          "individual_numeric": 0,
+          "bulk_numeric": 63,
+          "bulk_text": 4,
+          "unreviewed_header_annotations": 10,
+          "unreviewed_period_assignments": 63,
+          "inferred_unprinted_period_assignments": 12,
+          "human_headers": 0,
+          "human_periods": 0,
+          "human_hierarchy_edges": 0
+        },
+        "unreviewed_header_annotations": 10,
+        "unreviewed_period_assignments": 63,
+        "inferred_unprinted_period_assignments": 12,
+        "human_headers": 0,
+        "human_periods": 0,
+        "human_hierarchy_edges": 0
+      }
+    },
+    "elecom_p9": {
+      "path": "elecom_p9.json",
+      "cell_count": 56,
+      "input_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "counts": {
+        "human_verified_cell_contents": 56,
+        "numeric": 56,
+        "text": 0,
+        "historical_v2_counts": {
+          "individually_human_reviewed": 20,
+          "bulk_user_approved_ai_cross_checked": 36,
+          "full_user_approved": 56,
+          "individually_documented_label_decisions": 0,
+          "user_attested_labels": 34,
+          "individual_numeric": 20,
+          "bulk_numeric": 36,
+          "bulk_text": 0,
+          "unreviewed_header_annotations": 2,
+          "unreviewed_period_assignments": 56,
+          "inferred_unprinted_period_assignments": 0,
+          "human_headers": 0,
+          "human_periods": 0,
+          "human_hierarchy_edges": 0
+        },
+        "unreviewed_header_annotations": 2,
+        "unreviewed_period_assignments": 56,
+        "inferred_unprinted_period_assignments": 0,
+        "human_headers": 0,
+        "human_periods": 0,
+        "human_hierarchy_edges": 0
+      }
+    },
+    "original": {
+      "path": "original.json",
+      "cell_count": 74,
+      "input_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "counts": {
+        "human_verified_cell_contents": 74,
+        "numeric": 74,
+        "text": 0,
+        "historical_v2_counts": {
+          "individually_human_reviewed": 31,
+          "bulk_user_approved_ai_cross_checked": 43,
+          "full_user_approved": 74,
+          "individually_documented_label_decisions": 0,
+          "user_attested_labels": 43,
+          "individual_numeric": 31,
+          "bulk_numeric": 43,
+          "bulk_text": 0,
+          "unreviewed_header_annotations": 2,
+          "unreviewed_period_assignments": 74,
+          "inferred_unprinted_period_assignments": 0,
+          "human_headers": 0,
+          "human_periods": 0,
+          "human_hierarchy_edges": 0
+        },
+        "unreviewed_header_annotations": 2,
+        "unreviewed_period_assignments": 74,
+        "inferred_unprinted_period_assignments": 0,
+        "human_headers": 0,
+        "human_periods": 0,
+        "human_hierarchy_edges": 0
+      }
+    }
+  },
+  "cell_catalog": "cell_catalog.json",
+  "review_decisions": "accepted_decisions.json"
+}
