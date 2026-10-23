@@ -1,0 +1,78 @@
+[
+  {
+    "label": "offline_replay",
+    "command": [
+      "PYTHON",
+      "scripts/submission_check.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.33365931402659044
+  },
+  {
+    "label": "native_controls",
+    "command": [
+      "PYTHON",
+      "-m",
+      "benchmark.adversarial",
+      "--materialize"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.724042599031236
+  },
+  {
+    "label": "offline_tests",
+    "command": [
+      "PYTHON",
+      "-m",
+      "unittest",
+      "tests.test_frozen",
+      "tests.test_benchmark",
+      "tests.test_adapters",
+      "tests.test_p0_regressions",
+      "-v"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 1.1859058510162868
+  },
+  {
+    "label": "cli_native",
+    "command": [
+      "PYTHON",
+      "-m",
+      "findoclens",
+      "parse",
+      "baseline_v2/source.pdf",
+      "--page",
+      "0",
+      "--backend",
+      "native_grid",
+      "--format",
+      "json,md,png",
+      "--out",
+      "runs/evaluator_demo"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.38225873600458726
+  },
+  {
+    "label": "cli_router",
+    "command": [
+      "PYTHON",
+      "-m",
+      "findoclens",
+      "parse",
+      "baseline_v2/source.pdf",
+      "--page",
+      "0",
+      "--backend",
+      "auto",
+      "--no-models",
+      "--format",
+      "json,md",
+      "--out",
+      "runs/evaluator_router"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.20582592894788831
+  }
+]

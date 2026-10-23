@@ -1,0 +1,10 @@
+{
+ "out": "runs/evaluator_demo/native_grid/source_p0",
+ "backend": "native_grid",
+ "status": "ok",
+ "tables": 1,
+ "rows": 43,
+ "issues": [
+  "unassigned_numeric_tokens"
+ ]
+}

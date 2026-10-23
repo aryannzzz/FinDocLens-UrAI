@@ -1,0 +1,2 @@
+PASS: frozen baseline; original and V1/V2/V3 locks; declaration; 48 stored V3 comparisons (197 cells each backend/set); package hashes if present
+No inference/download. PDF-backed import/asset validation requires optional issuer source restoration.

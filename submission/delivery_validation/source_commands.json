@@ -1,0 +1,94 @@
+[
+  {
+    "label": "source_restore",
+    "command": [
+      "PYTHON",
+      "scripts/restore_submission_sources.py",
+      "--cache",
+      "EXISTING_CACHE"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.1484677050029859
+  },
+  {
+    "label": "rasters",
+    "command": [
+      "PYTHON",
+      "-m",
+      "benchmark.raster_variants",
+      "--materialize"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.5160853620036505
+  },
+  {
+    "label": "reference_validate",
+    "command": [
+      "PYTHON",
+      "-m",
+      "benchmark.validate"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.04848728695651516
+  },
+  {
+    "label": "v3_source_import",
+    "command": [
+      "PYTHON",
+      "-m",
+      "benchmark.human_declaration",
+      "--check",
+      "benchmark/human_gold/v3"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.08970177202718332
+  },
+  {
+    "label": "v3_source_scores",
+    "command": [
+      "PYTHON",
+      "-m",
+      "benchmark.declared_scoring",
+      "--reference",
+      "benchmark/human_gold/v3",
+      "--config",
+      "review/human_signoff/evaluation_v3.json",
+      "--out",
+      "results/human_v3",
+      "--verify"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.3058231550385244
+  },
+  {
+    "label": "report_reproduction",
+    "command": [
+      "PYTHON",
+      "scripts/report_human_declaration.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.3105865410179831
+  },
+  {
+    "label": "review_build",
+    "command": [
+      "PYTHON",
+      "-m",
+      "benchmark.review"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.5259096929803491
+  },
+  {
+    "label": "review_assets",
+    "command": [
+      "PYTHON",
+      "-m",
+      "benchmark.review",
+      "--check"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.24792338401312009
+  }
+]

@@ -1,0 +1,103 @@
+{
+  "schema_version": "ur-ai-final-delivery-1",
+  "verified_at": "2026-10-23T11:09:45.332113+00:00",
+  "zip": {
+    "path": "dist/Ur_AI_Aryan_Jain_Final_2026-10-23.zip",
+    "bytes": 7117205,
+    "mib": 6.7874956130981445,
+    "sha256": "e1e6433674b766eefc414b2d6afad12ea6fe52562eae4f425dcb7932a6457c6e",
+    "member_count": 2111,
+    "crc_pass": true,
+    "two_builds_byte_identical": true
+  },
+  "source_commit": "9f54c2d03bc632b7fc768de5e278b412d143b507",
+  "build_tag": "ur-ai-final-submission-20261023",
+  "implementation_v3_freeze": "9a6ebcb5c24ed80caaed59092ebb6f1608547016",
+  "reproduction": "Check out ur-ai-final-submission-20261023 in the original repository, then run .venv/bin/python scripts/package_submission.py --out dist/Ur_AI_Aryan_Jain_Final_2026-10-23.zip in a fresh output location.",
+  "tests": {
+    "full_tests.log": {
+      "run": 170,
+      "passed": 170,
+      "skipped": 0,
+      "elapsed_seconds": 8.746
+    },
+    "offline_tests.log": {
+      "run": 90,
+      "passed": 90,
+      "skipped": 0,
+      "elapsed_seconds": 1.008
+    },
+    "selected_pages_tests.log": {
+      "run": 170,
+      "passed": 163,
+      "skipped": 7,
+      "elapsed_seconds": 6.353
+    }
+  },
+  "cli": {
+    "native_original_raw_and_typed": "74/74",
+    "auto_no_models_original_raw_and_typed": "74/74",
+    "json_markdown_evidence_pass": true
+  },
+  "viewer": {
+    "pages": 5,
+    "backend_views": 35,
+    "all_images_and_switches_pass": true,
+    "javascript_errors": []
+  },
+  "source_review": {
+    "available_documents": 3,
+    "restored_accepted_decisions": 197,
+    "json_export_pass": true,
+    "source_images_load": true,
+    "zoom_pass": true,
+    "bulk_declaration_recorded_without_fabricated_cell_times": true
+  },
+  "v3": {
+    "verified_contents": 197,
+    "financial_slots": 193,
+    "text_cells": 4,
+    "native_grid": "193/197",
+    "docling_regions": "181/197",
+    "frozen_baseline": "132/197",
+    "mismatch_explanation": "Four native-grid Daiwabo explanatory text/arrow-placement mismatches",
+    "structural_annotations_human_verified": false,
+    "blind_test": false
+  },
+  "integrity": {
+    "protected_paths_unchanged": [
+      "baseline_v2",
+      "findoclens",
+      "adapters",
+      "benchmark",
+      "results",
+      "review"
+    ],
+    "credential_format_hits": 0,
+    "credential_valued_field_heuristic_hits": 0,
+    "runtime_home_path_hits": 0,
+    "historical_inert_path_locations": 3245,
+    "payload_hashes_pass": true
+  },
+  "dependencies": {
+    "native_python": "3.13.5",
+    "validated_installed_native_packages": {
+      "PyMuPDF": "1.27.2.3",
+      "Pillow": "12.0.0",
+      "numpy": "2.2.6"
+    },
+    "browser_dependency": "optional requirements-browser.txt plus installed Chrome; no downloads performed",
+    "clean_tree_scope": "Archive extracted outside Git and run with the existing pinned native interpreter; a fresh online pip installation was not performed"
+  },
+  "inference_run": false,
+  "model_or_source_downloads": false,
+  "existing_code_change_for_delivery": "Optional scripts/check_review_browser.py reads package BUILD.json for revision provenance without .git; parser/adapters/evaluator frozen. Viewer receives a historical-metrics/current-V3 notice.",
+  "source_assets": "Added issuer PDFs and filing renders excluded. Full source-backed tests used verified existing local cache and temporary hardlinks outside the ZIP. Supplied assignment PDF and original-derived/synthetic assets included.",
+  "complete_ai_transcripts_included": false,
+  "remaining_manual_actions": [
+    "Export and attach COMPLETE relevant ChatGPT, Claude Code and Codex conversations, including this delivery session; disclose any unavailable parts or redactions without inventing them.",
+    "Attach the unchanged ZIP and .sha256 file, or supply accessible links; verify recipient access.",
+    "Reply to the original assignment email preserving its recipient/CC context before 2026-10-23 23:59 IST (18:29 UTC). No submission was sent by the agent."
+  ],
+  "recommendation": "GO for the technically scoped prototype package. Sending remains conditional on attaching the complete AI chat logs required by the assignment. Structural/blind-evaluation limits are disclosed research limitations; no further experiments are required before delivery."
+}

@@ -1,0 +1,14 @@
+{
+ "out": "runs/evaluator_router/auto/source_p0",
+ "backend": "auto",
+ "status": "ok",
+ "tables": 1,
+ "rows": 43,
+ "issues": [
+  "unassigned_numeric_tokens"
+ ],
+ "routing": [
+  "native_grid clean: accepted without model backend (route=native_accept)",
+  "coverage check: 74/77 source numeric tokens in cells/headers; 3 isolated unassigned"
+ ]
+}
