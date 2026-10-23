@@ -1,0 +1,150 @@
+{
+  "document_id": "daiwabo_p10",
+  "reference_status": "partially_human_verified",
+  "source_kind": "source",
+  "issuer_relation": "independent_issuer",
+  "source_family": "Daiwabo Holdings",
+  "run_status": "partial",
+  "blind_test": false,
+  "cohort": "development_exposed_source",
+  "metrics": {
+    "raw_content": {
+      "correct": 63,
+      "total": 67,
+      "rate": 0.9402985074626866
+    },
+    "value_status": {
+      "correct": 63,
+      "total": 67,
+      "rate": 0.9402985074626866
+    },
+    "numeric_raw": {
+      "correct": 63,
+      "total": 63,
+      "rate": 1.0
+    },
+    "numeric_value_status": {
+      "correct": 63,
+      "total": 63,
+      "rate": 1.0
+    },
+    "text_raw": {
+      "correct": 0,
+      "total": 4,
+      "rate": 0.0
+    },
+    "text_value_status": {
+      "correct": 0,
+      "total": 4,
+      "rate": 0.0
+    },
+    "cell_coverage": {
+      "correct": 67,
+      "total": 67,
+      "rate": 1.0
+    },
+    "reviewed_label_recall": {
+      "correct": 21,
+      "total": 21,
+      "rate": 1.0
+    },
+    "reviewed_raw_label_exact": {
+      "correct": 21,
+      "total": 21,
+      "rate": 1.0
+    }
+  },
+  "missing_reviewed_cells": 0,
+  "errors": [
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r001",
+      "column_index": 3,
+      "kind": "reviewed_content_mismatch",
+      "expected_raw": "主に商品在庫の増加に伴う減少",
+      "expected_value": "主に商品在庫の増加に伴う減少",
+      "expected_status": "observed",
+      "predicted_raw": "→主に商品在庫の増加に伴う減少",
+      "predicted_value": "→主に商品在庫の増加に伴う減少",
+      "predicted_status": "observed"
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r002",
+      "column_index": 3,
+      "kind": "reviewed_content_mismatch",
+      "expected_raw": "DISの売上債権の増加",
+      "expected_value": "DISの売上債権の増加",
+      "expected_status": "observed",
+      "predicted_raw": "→ DISの売上債権の増加",
+      "predicted_value": "→ DISの売上債権の増加",
+      "predicted_status": "observed"
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r003",
+      "column_index": 3,
+      "kind": "reviewed_content_mismatch",
+      "expected_raw": "主にGIGAスクール向け商品増加",
+      "expected_value": "主にGIGAスクール向け商品増加",
+      "expected_status": "observed",
+      "predicted_raw": "→主にGIGAスクール向け商品増加",
+      "predicted_value": "→主にGIGAスクール向け商品増加",
+      "predicted_status": "observed"
+    },
+    {
+      "table_id": "explanation",
+      "row_id": "explanation_r004",
+      "column_index": 3,
+      "kind": "reviewed_content_mismatch",
+      "expected_raw": "運転資本として",
+      "expected_value": "運転資本として",
+      "expected_status": "observed",
+      "predicted_raw": "→運転資本として",
+      "predicted_value": "→運転資本として",
+      "predicted_status": "observed"
+    }
+  ],
+  "unverified_period_diagnostics": {
+    "inferred_change_interval": {
+      "correct": 0,
+      "total": 17,
+      "rate": 0.0
+    },
+    "inferred_unprinted_header": {
+      "correct": 0,
+      "total": 12,
+      "rate": 0.0
+    },
+    "printed_header_association": {
+      "correct": 34,
+      "total": 34,
+      "rate": 1.0
+    }
+  },
+  "unscored_human_axes": {
+    "header_accuracy": {
+      "total": 0,
+      "reason": "No explicit header verification"
+    },
+    "period_accuracy": {
+      "total": 0,
+      "reason": "No period verification; inferred lower-table periods are not observed gold"
+    },
+    "hierarchy_accuracy": {
+      "total": 0,
+      "reason": "Label acceptance does not verify parent paths"
+    },
+    "detection_accuracy": {
+      "total": 0,
+      "reason": "Completeness and table boundaries remain AI context"
+    }
+  },
+  "matching_policy": "One-to-one table IoU >= .1; normalized label equality; row geometry/order break ties; physical column. Geometry is inherited AI context, not a human localization score.",
+  "whitespace_policy": "Remove Unicode whitespace only for raw/normalized labels; preserve monetary glyphs, punctuation and signs",
+  "prediction_path": "runs/auto/daiwabo_p10/fin1_main/cold/prediction.json",
+  "prediction_sha256": "0270d85b1a86ae7a0001e74f83caed22379f386e1bcaf236422b9d6eb5737c07",
+  "source_run_id": "fin1_main",
+  "reference_sha256": "08ce667d82d74e4a915f0f97d8d66c191808aa243992b345d18dffe918dd4625",
+  "evaluator_version": "human-field-mask-1"
+}

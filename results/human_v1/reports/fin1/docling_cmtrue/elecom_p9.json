@@ -1,0 +1,91 @@
+{
+  "document_id": "elecom_p9",
+  "reference_status": "partially_human_verified",
+  "source_kind": "source",
+  "issuer_relation": "independent_issuer",
+  "source_family": "ELECOM",
+  "run_status": "partial",
+  "blind_test": false,
+  "cohort": "development_exposed_source",
+  "metrics": {
+    "raw_content": {
+      "correct": 56,
+      "total": 56,
+      "rate": 1.0
+    },
+    "value_status": {
+      "correct": 56,
+      "total": 56,
+      "rate": 1.0
+    },
+    "numeric_raw": {
+      "correct": 56,
+      "total": 56,
+      "rate": 1.0
+    },
+    "numeric_value_status": {
+      "correct": 56,
+      "total": 56,
+      "rate": 1.0
+    },
+    "text_raw": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "text_value_status": {
+      "correct": 0,
+      "total": 0,
+      "rate": null
+    },
+    "cell_coverage": {
+      "correct": 56,
+      "total": 56,
+      "rate": 1.0
+    },
+    "reviewed_label_recall": {
+      "correct": 34,
+      "total": 34,
+      "rate": 1.0
+    },
+    "reviewed_raw_label_exact": {
+      "correct": 34,
+      "total": 34,
+      "rate": 1.0
+    }
+  },
+  "missing_reviewed_cells": 0,
+  "errors": [],
+  "unverified_period_diagnostics": {
+    "printed_header_association": {
+      "correct": 56,
+      "total": 56,
+      "rate": 1.0
+    }
+  },
+  "unscored_human_axes": {
+    "header_accuracy": {
+      "total": 0,
+      "reason": "No explicit header verification"
+    },
+    "period_accuracy": {
+      "total": 0,
+      "reason": "No period verification; inferred lower-table periods are not observed gold"
+    },
+    "hierarchy_accuracy": {
+      "total": 0,
+      "reason": "Label acceptance does not verify parent paths"
+    },
+    "detection_accuracy": {
+      "total": 0,
+      "reason": "Completeness and table boundaries remain AI context"
+    }
+  },
+  "matching_policy": "One-to-one table IoU >= .1; normalized label equality; row geometry/order break ties; physical column. Geometry is inherited AI context, not a human localization score.",
+  "whitespace_policy": "Remove Unicode whitespace only for raw/normalized labels; preserve monetary glyphs, punctuation and signs",
+  "prediction_path": "runs/docling_cmtrue/elecom_p9/fin1_main/cold/prediction.json",
+  "prediction_sha256": "9e774761b479bbb8bb2b5f2cd99d2ff7d99b18a5a60e3112641bd3e43f1c27bf",
+  "source_run_id": "fin1_main",
+  "reference_sha256": "966dc58bcdb6dac346c4546f6c095a448f4abb30091b4c827dba10cb13b35f5c",
+  "evaluator_version": "human-field-mask-1"
+}

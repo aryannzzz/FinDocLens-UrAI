@@ -1,5 +1,7 @@
 # Manual review queue for the AI-drafted references
 
+> **23 Oct update:** this is the historical queue for the unchanged AI snapshots. Aryan Jain has now accepted 197 content cells and 98 row labels in a [separate human-reviewed v1](HUMAN_REVIEW_RESULTS.md). The archived export and later bulk acceptance are preserved separately. Header/period/role associations, units, hierarchy, boxes and completeness are not certified by this import; in particular, the 12 lower-table Daiwabo periods remain inferred/unreviewed. The old draft files and their counts remain unchanged.
+
 **Status of every reference: `ai_draft`, `human_checked_cells = 0`.** Nothing below was verified by a person, and this queue was generated, not reviewed. Open `benchmark/review/index.html` (regenerate with `python -m benchmark.review`), enter your name, inspect the rendered crops, export decisions, and tick the matching lines in `docs/USER_SIGNOFF.md` only for what you actually inspected. Do not edit a reference to match a model: record a versioned correction with crop, old/new token and reason (see `benchmark/README.md`).
 
 ## A. Must check: signs, dashes, plus signs, negative zero (project gate: negative-sign/dash fidelity)

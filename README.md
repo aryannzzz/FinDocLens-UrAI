@@ -2,7 +2,8 @@
 
 A small, auditable research prototype: it extracts balance-sheet-style tables from single PDF pages into one schema
 (exact printed glyphs + typed value + explicit status + source boxes), with five interchangeable backends, one independent evaluator
-and a lightweight viewer. **No model was trained. All references are AI drafts with zero human-verified cells.**
+and a lightweight viewer. **No model was trained. Original benchmark references remain immutable AI drafts.**
+A separate [human-reviewed v1](docs/HUMAN_REVIEW_RESULTS.md) now accepts **197 content cells and 98 row labels** on the three development-exposed source pages; headers, periods, hierarchy and completeness remain uncertified.
 The measured results, their limits and the failure analysis are in [`RESULTS.md`](RESULTS.md); what a human must still check is in
 [`docs/MANUAL_REVIEW_QUEUE.md`](docs/MANUAL_REVIEW_QUEUE.md).
 
@@ -45,6 +46,8 @@ Single page, any backend: `python -m findoclens parse <pdf> --page <zero-based> 
 
 Run `.venv/bin/python -m benchmark.review --serve` from the repository root, then open **http://127.0.0.1:8765/benchmark/review/**.
 The launcher regenerates/checks local source images from the cached PDFs; it downloads nothing. View the original, ELECOM and Daiwabo pages beside their annotations, click rows/cells to zoom, record decisions, and export JSON. Neither generation nor export changes references or human verification counts. Images are intentionally Git-ignored, so use this launcher after switching worktrees. See [`benchmark/review/README.md`](benchmark/review/README.md).
+
+Accepted decisions and the reviewer's later bulk-acceptance statement are archived under `review/human_signoff/`. The field-scoped references live in `benchmark/human_gold/v1/`; stored-prediction scores are in `results/human_v1/`. Verify without inference with `.venv/bin/python -m benchmark.human_reference --check benchmark/human_gold/v1` and the commands in [`docs/HUMAN_REVIEW_RESULTS.md`](docs/HUMAN_REVIEW_RESULTS.md). Human verification does not turn these design-exposed documents into blind holdouts.
 
 ## P0 correctness pass (after the independent review)
 Silent-loss, evaluator, merged-cell and exposure fixes with before/after evidence: [`docs/P0_FIXES.md`](docs/P0_FIXES.md); the generated table is

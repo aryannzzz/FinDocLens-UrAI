@@ -1,7 +1,7 @@
 # RESULTS — FinDocLens integrated evaluation (22 Oct 2026)
 
-> **Read first.** Every reference is an AI draft (`ai_draft`, **0 human-verified cells**). Scores are *agreement with unverified drafts*, never
-> "accuracy". Human-verified scores: **none exist** (so that table is empty by construction); AI-draft scores are reported throughout and labelled as such.
+> **Read first.** The historical `fin1` tables below use immutable AI-drafted references (`ai_draft`, **0 human-verified cells at measurement time**). Their scores remain agreement with those drafts.
+> **Human review update, 23 Oct:** a separately versioned content/label reference now covers **193 financial cells + 4 text cells = 197 cells, and 98 row labels**. Of the cells, 51 were accepted in the export and 146 by the reviewer's later explicit bulk-acceptance statement; exported states remain preserved. Stored predictions were rescored without inference: see [`docs/HUMAN_REVIEW_RESULTS.md`](docs/HUMAN_REVIEW_RESULTS.md) and `results/human_v1/`. These are **development-exposed source pages, not blind tests**. Inferred Daiwabo lower-table periods remain unreviewed; no header/period/hierarchy/completeness certification is implied. Original references, measurements and tables below are unchanged.
 > CPU only; **no GPU measurement exists**. OMRON could not be downloaded and is absent. No model was trained; no VLM / PaddleOCR-VL was run.
 > **P0 pass (after the independent review).** The tables below are the pre-fix `fin1` development record and are unchanged. Four review findings were addressed afterwards
 > (silent loss of year-like amounts and one-column tables, evaluator blind spots, merged-cell mapping; finding 3, independent validation, remains open): see

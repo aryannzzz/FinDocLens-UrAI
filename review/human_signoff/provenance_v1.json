@@ -1,0 +1,98 @@
+{
+  "schema_version": "human-signoff-provenance-1",
+  "reviewer": "Aryan Jain",
+  "export_reviewed_at": "2026-10-23T06:51:52.884Z",
+  "export_sha256": "a930cc5a4d5f38454f86caf78855b0c454b7785dbdb217b2270d7c0b2f573ac9",
+  "original_user_file": "human_review_decisions.json",
+  "archived_export": "review/human_signoff/human_review_decisions.json",
+  "archive_preserves_original_bytes": true,
+  "attestation_path": "review/human_signoff/attestation_v1.json",
+  "attestation_sha256": "dbac0c11eb9bce9377896f8a44f8395bf9bb7ee98c9441bf8333a20ce5728c52",
+  "exported_decision_counts": {
+    "accepted": 51,
+    "unreviewed": 146
+  },
+  "effective_decision_counts": {
+    "accepted": 197
+  },
+  "accepted_by_ui": 51,
+  "accepted_by_bulk_attestation": 146,
+  "field_scope": {
+    "cells": [
+      "raw",
+      "value",
+      "status"
+    ],
+    "labels": [
+      "label",
+      "raw_label"
+    ],
+    "not_certified": [
+      "headers",
+      "periods",
+      "roles",
+      "header_links",
+      "units",
+      "hierarchy",
+      "geometry",
+      "completeness"
+    ]
+  },
+  "evidence_base": "benchmark/review/",
+  "documents": {
+    "daiwabo_p10": {
+      "source_kind": "source",
+      "issuer_relation": "independent_issuer",
+      "source_family": "Daiwabo Holdings",
+      "blind_test": false,
+      "source_sha256": "b8d238aed3ec8deeb80675dcb1d6442ef9a89e3d876c42ade44543e2166125e8",
+      "source_page_index": 9,
+      "image_path": "benchmark/review/assets/daiwabo_p10_page.png",
+      "image_sha256": "a6d53ae58cf9e2a6934fe1aaf77395e223e477104ed41d37f7f82de244ec7eff",
+      "selected_pdf": "benchmark/data/daiwabo_p10/page.pdf",
+      "selected_pdf_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "original_ai_reference": "benchmark/gold/daiwabo_p10.json",
+      "original_ai_reference_sha256": "b700644f50dc23f7c4a738c8d711f5386c77f5d2a7d0618d898c3a66b17917b2",
+      "human_reference": "benchmark/human_gold/v1/daiwabo_p10.json",
+      "human_reference_sha256": "08ce667d82d74e4a915f0f97d8d66c191808aa243992b345d18dffe918dd4625",
+      "reviewed_cells": 67,
+      "reviewed_labels": 21
+    },
+    "elecom_p9": {
+      "source_kind": "source",
+      "issuer_relation": "independent_issuer",
+      "source_family": "ELECOM",
+      "blind_test": false,
+      "source_sha256": "4bdb7bb0022a63e459ec35ef4e571a8fcf4796b0b776b5fe2f7e4ee217fb0d78",
+      "source_page_index": 8,
+      "image_path": "benchmark/review/assets/elecom_p9_page.png",
+      "image_sha256": "872502824951e45d45ed4b2f025809cac81f9d785037454ff1a4780e10b88565",
+      "selected_pdf": "benchmark/data/elecom_p9/page.pdf",
+      "selected_pdf_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "original_ai_reference": "benchmark/gold/elecom_p9.json",
+      "original_ai_reference_sha256": "6a1baa82b9fefdeaae075a21ad03491ce5b377a9ed527fd260da685906f897b5",
+      "human_reference": "benchmark/human_gold/v1/elecom_p9.json",
+      "human_reference_sha256": "966dc58bcdb6dac346c4546f6c095a448f4abb30091b4c827dba10cb13b35f5c",
+      "reviewed_cells": 56,
+      "reviewed_labels": 34
+    },
+    "original": {
+      "source_kind": "source",
+      "issuer_relation": "same_issuer",
+      "source_family": "ur_ai_original",
+      "blind_test": false,
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "source_page_index": 0,
+      "image_path": "benchmark/review/assets/original_page.png",
+      "image_sha256": "eae758c836fffc252b92157c878b7692592d47f9bb89fdeac5f3af052b525183",
+      "selected_pdf": "baseline_v2/source.pdf",
+      "selected_pdf_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "original_ai_reference": "benchmark/gold/original.json",
+      "original_ai_reference_sha256": "c9b802301e59416405340dcb047d62d02623cba9ad0648ed8606d178ddd6acd7",
+      "human_reference": "benchmark/human_gold/v1/original.json",
+      "human_reference_sha256": "1de05fa4c2f61decf929fff2672fb93fb6f96aed542166cb531d3f977c6f1744",
+      "reviewed_cells": 74,
+      "reviewed_labels": 43
+    }
+  }
+}

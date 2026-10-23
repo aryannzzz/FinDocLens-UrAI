@@ -1,0 +1,42 @@
+{
+  "schema_version": "human-attestation-1",
+  "reviewer": "Aryan Jain",
+  "export_sha256": "a930cc5a4d5f38454f86caf78855b0c454b7785dbdb217b2270d7c0b2f573ac9",
+  "recorded_at": "2026-10-23T06:57:02.355205+00:00",
+  "basis": "Direct statements by the reviewer in this conversation; not inferred from model output",
+  "document_ids": [
+    "original",
+    "elecom_p9",
+    "daiwabo_p10"
+  ],
+  "accept_all_row_labels": true,
+  "accept_exported_unreviewed_cell_values": true,
+  "reviewed_cell_fields": [
+    "raw",
+    "value",
+    "status"
+  ],
+  "excluded_fields": [
+    "period",
+    "role",
+    "header_id",
+    "headers",
+    "units",
+    "hierarchy",
+    "table_boundaries",
+    "source_boxes",
+    "completeness"
+  ],
+  "statements": [
+    {
+      "kind": "label_acceptance",
+      "quote": "I have reviewed every single label, so mark the unlabelled labels as accepted because clicking accepted to each cell after a point seemed like grunt work."
+    },
+    {
+      "kind": "cell_scope_clarification",
+      "quote": "Also accept all unmarked cell values I reviewed",
+      "question": "Does your blanket acceptance cover Japanese row labels only, or also the unmarked numeric/text cell values?"
+    }
+  ],
+  "policy": "Bulk acceptance covers exported unreviewed cell content and all row labels in these documents. Preserve the original exported decision per cell. Never override unreadable, correction_needed, unresolved, or missing export entries. Header/period/hierarchy/geometry assertions are not certified."
+}

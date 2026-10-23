@@ -1,0 +1,90 @@
+{
+  "schema_version": "human-content-subset-1",
+  "version": "v1",
+  "export_path": "review/human_signoff/human_review_decisions.json",
+  "export_sha256": "a930cc5a4d5f38454f86caf78855b0c454b7785dbdb217b2270d7c0b2f573ac9",
+  "attestation_path": "review/human_signoff/attestation_v1.json",
+  "attestation_sha256": "dbac0c11eb9bce9377896f8a44f8395bf9bb7ee98c9441bf8333a20ce5728c52",
+  "documents": {
+    "daiwabo_p10": {
+      "path": "daiwabo_p10.json",
+      "cells": 67,
+      "labels": 21,
+      "source_kind": "source",
+      "source_family": "Daiwabo Holdings",
+      "issuer_relation": "independent_issuer",
+      "counts": {
+        "exported_decisions": {
+          "unreviewed": 67
+        },
+        "effective_decisions": {
+          "accepted": 67
+        },
+        "human_numeric_cells": 63,
+        "human_text_cells": 4,
+        "human_headers": 0,
+        "human_periods": 0,
+        "human_hierarchy_edges": 0,
+        "period_context": {
+          "printed_header_association": 34,
+          "inferred_change_interval": 17,
+          "inferred_unprinted_header": 12,
+          "no_period": 4
+        }
+      },
+      "blind_test": false
+    },
+    "elecom_p9": {
+      "path": "elecom_p9.json",
+      "cells": 56,
+      "labels": 34,
+      "source_kind": "source",
+      "source_family": "ELECOM",
+      "issuer_relation": "independent_issuer",
+      "counts": {
+        "exported_decisions": {
+          "accepted": 20,
+          "unreviewed": 36
+        },
+        "effective_decisions": {
+          "accepted": 56
+        },
+        "human_numeric_cells": 56,
+        "human_text_cells": 0,
+        "human_headers": 0,
+        "human_periods": 0,
+        "human_hierarchy_edges": 0,
+        "period_context": {
+          "printed_header_association": 56
+        }
+      },
+      "blind_test": false
+    },
+    "original": {
+      "path": "original.json",
+      "cells": 74,
+      "labels": 43,
+      "source_kind": "source",
+      "source_family": "ur_ai_original",
+      "issuer_relation": "same_issuer",
+      "counts": {
+        "exported_decisions": {
+          "accepted": 31,
+          "unreviewed": 43
+        },
+        "effective_decisions": {
+          "accepted": 74
+        },
+        "human_numeric_cells": 74,
+        "human_text_cells": 0,
+        "human_headers": 0,
+        "human_periods": 0,
+        "human_hierarchy_edges": 0,
+        "period_context": {
+          "printed_header_association": 74
+        }
+      },
+      "blind_test": false
+    }
+  }
+}
