@@ -1,0 +1,67 @@
+{
+  "daiwabo_p10": {
+    "cells": 67,
+    "labels": 21,
+    "counts": {
+      "exported_decisions": {
+        "unreviewed": 67
+      },
+      "effective_decisions": {
+        "accepted": 67
+      },
+      "human_numeric_cells": 63,
+      "human_text_cells": 4,
+      "human_headers": 0,
+      "human_periods": 0,
+      "human_hierarchy_edges": 0,
+      "period_context": {
+        "printed_header_association": 34,
+        "inferred_change_interval": 17,
+        "inferred_unprinted_header": 12,
+        "no_period": 4
+      }
+    }
+  },
+  "elecom_p9": {
+    "cells": 56,
+    "labels": 34,
+    "counts": {
+      "exported_decisions": {
+        "accepted": 20,
+        "unreviewed": 36
+      },
+      "effective_decisions": {
+        "accepted": 56
+      },
+      "human_numeric_cells": 56,
+      "human_text_cells": 0,
+      "human_headers": 0,
+      "human_periods": 0,
+      "human_hierarchy_edges": 0,
+      "period_context": {
+        "printed_header_association": 56
+      }
+    }
+  },
+  "original": {
+    "cells": 74,
+    "labels": 43,
+    "counts": {
+      "exported_decisions": {
+        "accepted": 31,
+        "unreviewed": 43
+      },
+      "effective_decisions": {
+        "accepted": 74
+      },
+      "human_numeric_cells": 74,
+      "human_text_cells": 0,
+      "human_headers": 0,
+      "human_periods": 0,
+      "human_hierarchy_edges": 0,
+      "period_context": {
+        "printed_header_association": 74
+      }
+    }
+  }
+}

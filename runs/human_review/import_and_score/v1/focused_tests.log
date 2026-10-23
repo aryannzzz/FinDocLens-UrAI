@@ -1,0 +1,21 @@
+test_automated_test_exports_and_inconsistent_attestations_are_rejected (tests.test_human_reference.HumanImport.test_automated_test_exports_and_inconsistent_attestations_are_rejected) ... ok
+test_blanket_acceptance_preserves_exported_unreviewed_states_and_glyphs (tests.test_human_reference.HumanImport.test_blanket_acceptance_preserves_exported_unreviewed_states_and_glyphs) ... ok
+test_correction_cannot_turn_dash_into_null_observed_value (tests.test_human_reference.HumanImport.test_correction_cannot_turn_dash_into_null_observed_value) ... ok
+test_duplicate_and_unknown_cells_are_rejected (tests.test_human_reference.HumanImport.test_duplicate_and_unknown_cells_are_rejected) ... ok
+test_missing_export_entries_are_not_bulk_accepted (tests.test_human_reference.HumanImport.test_missing_export_entries_are_not_bulk_accepted) ... ok
+test_only_explicit_acceptance_without_bulk_attestation (tests.test_human_reference.HumanImport.test_only_explicit_acceptance_without_bulk_attestation) ... ok
+test_stale_source_reference_coordinates_and_raw_are_rejected (tests.test_human_reference.HumanImport.test_stale_source_reference_coordinates_and_raw_are_rejected) ... ok
+test_unreadable_unresolved_and_pending_corrections_survive_blanket_acceptance (tests.test_human_reference.HumanImport.test_unreadable_unresolved_and_pending_corrections_survive_blanket_acceptance) ... ok
+test_unreviewed_correction_note_is_not_silently_accepted (tests.test_human_reference.HumanImport.test_unreviewed_correction_note_is_not_silently_accepted) ... ok
+test_zero_resolved_content_is_not_called_human_verified (tests.test_human_reference.HumanImport.test_zero_resolved_content_is_not_called_human_verified) ... ok
+test_actual_version_and_scores_rebuild_byte_for_byte_without_inference (tests.test_human_reference.HumanSubsetMetrics.test_actual_version_and_scores_rebuild_byte_for_byte_without_inference) ... ok
+test_daiwabo_inferred_periods_are_separate_and_not_human_period_gold (tests.test_human_reference.HumanSubsetMetrics.test_daiwabo_inferred_periods_are_separate_and_not_human_period_gold) ... ok
+test_flattened_daiwabo_table_cannot_get_full_reconstruction_credit (tests.test_human_reference.HumanSubsetMetrics.test_flattened_daiwabo_table_cannot_get_full_reconstruction_credit) ... ok
+test_human_content_does_not_certify_periods_or_full_semantics (tests.test_human_reference.HumanSubsetMetrics.test_human_content_does_not_certify_periods_or_full_semantics) ... ok
+test_missing_cells_and_failed_predictions_keep_full_denominators (tests.test_human_reference.HumanSubsetMetrics.test_missing_cells_and_failed_predictions_keep_full_denominators) ... ok
+test_negative_zero_and_dash_status_are_not_repaired (tests.test_human_reference.HumanSubsetMetrics.test_negative_zero_and_dash_status_are_not_repaired) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.429s
+
+OK
