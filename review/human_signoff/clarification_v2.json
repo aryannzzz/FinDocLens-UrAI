@@ -1,0 +1,23 @@
+{
+  "schema_version": "review-provenance-clarification-2",
+  "reviewer": "Aryan Jain",
+  "recorded_at": "2026-10-23T08:33:53.015314+00:00",
+  "export_sha256": "a930cc5a4d5f38454f86caf78855b0c454b7785dbdb217b2270d7c0b2f573ac9",
+  "base_reference": "benchmark/human_gold/v1",
+  "base_reference_lock_sha256": "747247846632b444de12908bfda8d5b961f64fe0d4cbe88d00800bf2234e90c1",
+  "ai_audit": "review/second_ai_visual_audit/ai_visual_check_per_cell.json",
+  "ai_audit_sha256": "af1abf481eafd4c7d2e99ec10bf0a0f62e09a14e22ba4cb57b61a6c1b0b36724",
+  "expected_individually_reviewed_cells": 51,
+  "expected_bulk_user_approved_cells": 146,
+  "statements": [
+    "Of the 197 accepted cells, I individually reviewed 51 using the source images.",
+    "For the remaining 146, I explicitly instructed you to bulk-accept the AI-drafted annotations, rather than inspecting every cell individually."
+  ],
+  "policy": {
+    "individual": "Only exported accepted/corrected per-cell decisions count as individually human reviewed.",
+    "bulk": "Previously AI visually cross-checked and bulk user-approved; not independently human verified.",
+    "structure": "Headers, periods, roles, units, hierarchy, geometry and completeness remain unreviewed.",
+    "labels": "Preserve the prior 98-label user attestation; there are no exported individual label-review decisions, so do not report individually verified label accuracy.",
+    "preserve": "Keep original export, v1 decisions and ledger unchanged; this clarification supersedes their previous confidence labels."
+  }
+}

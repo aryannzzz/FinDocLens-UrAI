@@ -3,7 +3,7 @@
 A small, auditable research prototype: it extracts balance-sheet-style tables from single PDF pages into one schema
 (exact printed glyphs + typed value + explicit status + source boxes), with five interchangeable backends, one independent evaluator
 and a lightweight viewer. **No model was trained. Original benchmark references remain immutable AI drafts.**
-A separate [human-reviewed v1](docs/HUMAN_REVIEW_RESULTS.md) now accepts **197 content cells and 98 row labels** on the three development-exposed source pages; headers, periods, hierarchy and completeness remain uncertified.
+The [current provenance v2](docs/HUMAN_REVIEW_RESULTS.md) distinguishes **51 individually source-reviewed cells** from **146 bulk user-approved, AI-visually-cross-checked cells**. The full 197-cell comparison is approved-reference agreement, not fully human-verified accuracy. Structure and inferred periods remain unreviewed; these source pages are development-exposed.
 The measured results, their limits and the failure analysis are in [`RESULTS.md`](RESULTS.md); what a human must still check is in
 [`docs/MANUAL_REVIEW_QUEUE.md`](docs/MANUAL_REVIEW_QUEUE.md).
 
@@ -47,7 +47,7 @@ Single page, any backend: `python -m findoclens parse <pdf> --page <zero-based> 
 Run `.venv/bin/python -m benchmark.review --serve` from the repository root, then open **http://127.0.0.1:8765/benchmark/review/**.
 The launcher regenerates/checks local source images from the cached PDFs; it downloads nothing. View the original, ELECOM and Daiwabo pages beside their annotations, click rows/cells to zoom, record decisions, and export JSON. Neither generation nor export changes references or human verification counts. Images are intentionally Git-ignored, so use this launcher after switching worktrees. See [`benchmark/review/README.md`](benchmark/review/README.md).
 
-Accepted decisions and the reviewer's later bulk-acceptance statement are archived under `review/human_signoff/`. The field-scoped references live in `benchmark/human_gold/v1/`; stored-prediction scores are in `results/human_v1/`. Verify without inference with `.venv/bin/python -m benchmark.human_reference --check benchmark/human_gold/v1` and the commands in [`docs/HUMAN_REVIEW_RESULTS.md`](docs/HUMAN_REVIEW_RESULTS.md). Human verification does not turn these design-exposed documents into blind holdouts.
+The unchanged export, earlier bulk-acceptance statement and later provenance clarification are archived under `review/human_signoff/`. Current classified references are in `benchmark/human_gold/v2/`; stratified scores are in `results/human_v2/`. The exact 51-cell list is `benchmark/human_gold/v2/individually_reviewed_cells.csv`. Verify without inference with `.venv/bin/python -m benchmark.review_provenance --check benchmark/human_gold/v2` and the commands in [`docs/HUMAN_REVIEW_RESULTS.md`](docs/HUMAN_REVIEW_RESULTS.md). v1 is retained only as a superseded audit snapshot. See [`docs/SUBMISSION_STATUS.md`](docs/SUBMISSION_STATUS.md) for remaining requirements.
 
 ## P0 correctness pass (after the independent review)
 Silent-loss, evaluator, merged-cell and exposure fixes with before/after evidence: [`docs/P0_FIXES.md`](docs/P0_FIXES.md); the generated table is

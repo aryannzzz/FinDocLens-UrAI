@@ -1,4 +1,8 @@
-"""Create/check an immutable, field-scoped human reference; never edit AI gold.
+"""LEGACY v1 import/replay; its confidence labels are superseded by v2.
+
+Bulk user approval in v1 was conflated with individual human verification.
+Use benchmark.review_provenance and benchmark.review_scoring for current claims.
+This module remains available to reproduce the unchanged historical ledger.
 
 Free-text correction_needed notes are unresolved. A corrected decision must carry
 an explicit {raw,value,status} correction object. Bulk attestations only accept
@@ -241,6 +245,8 @@ def check(folder):
 
 
 def main():
+    import sys
+    print('LEGACY v1 provenance: bulk approval is NOT individual human verification. Use benchmark.review_provenance / benchmark.review_scoring for current counts.', file=sys.stderr)
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--decisions', type=Path)
     parser.add_argument('--attestation', type=Path)

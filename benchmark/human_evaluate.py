@@ -1,4 +1,7 @@
-"""Score stored predictions only on human-accepted fields; never run inference.
+"""LEGACY v1 comparison, retained for replay; not all included cells are human-verified.
+
+For individually reviewed accuracy versus bulk user-approved agreement, use
+benchmark.review_scoring with provenance v2. Never run inference here.
 
 Does not promote AI table boundaries/header periods/hierarchy to human gold.
 One-to-one table/row matching uses inherited source geometry as declared context.
@@ -176,6 +179,8 @@ def verify(reference, config_path, out):
 
 
 def main():
+    import sys
+    print('LEGACY v1: the 197-cell comparison is user-approved reference agreement, not 197 individually human-verified cells. Use benchmark.review_scoring.', file=sys.stderr)
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--reference', type=Path, required=True)
     parser.add_argument('--config', type=Path, required=True)

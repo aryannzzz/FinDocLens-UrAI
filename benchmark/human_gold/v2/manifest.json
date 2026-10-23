@@ -1,0 +1,90 @@
+{
+  "schema_version": "review-provenance-2",
+  "version": "v2",
+  "clarification_path": "review/human_signoff/clarification_v2.json",
+  "clarification_sha256": "e6fa9f1fb9d4ea5c2f81de8451d48457917de6cd24a07f936109d4e6547a9330",
+  "base_reference": "benchmark/human_gold/v1",
+  "original_export_preserved": true,
+  "original_decision_ledgers_preserved": true,
+  "ai_audit_hash_kind": "selected_pdf_input_sha256",
+  "class_counts": {
+    "bulk_user_approved_ai_cross_checked": 146,
+    "individually_human_reviewed": 51
+  },
+  "human_checked_cells": 51,
+  "user_approved_cells": 197,
+  "individually_documented_label_decisions": 0,
+  "user_attested_labels": 98,
+  "structural_annotations_human_verified": false,
+  "blind_test": false,
+  "cell_catalog": "cell_catalog.json",
+  "individual_cell_list": "individually_reviewed_cells.csv",
+  "documents": {
+    "daiwabo_p10": {
+      "path": "daiwabo_p10.json",
+      "counts": {
+        "individually_human_reviewed": 0,
+        "bulk_user_approved_ai_cross_checked": 67,
+        "full_user_approved": 67,
+        "individually_documented_label_decisions": 0,
+        "user_attested_labels": 21,
+        "individual_numeric": 0,
+        "bulk_numeric": 63,
+        "bulk_text": 4,
+        "unreviewed_header_annotations": 10,
+        "unreviewed_period_assignments": 63,
+        "inferred_unprinted_period_assignments": 12,
+        "human_headers": 0,
+        "human_periods": 0,
+        "human_hierarchy_edges": 0
+      },
+      "source_kind": "source",
+      "issuer_relation": "independent_issuer",
+      "source_family": "Daiwabo Holdings"
+    },
+    "elecom_p9": {
+      "path": "elecom_p9.json",
+      "counts": {
+        "individually_human_reviewed": 20,
+        "bulk_user_approved_ai_cross_checked": 36,
+        "full_user_approved": 56,
+        "individually_documented_label_decisions": 0,
+        "user_attested_labels": 34,
+        "individual_numeric": 20,
+        "bulk_numeric": 36,
+        "bulk_text": 0,
+        "unreviewed_header_annotations": 2,
+        "unreviewed_period_assignments": 56,
+        "inferred_unprinted_period_assignments": 0,
+        "human_headers": 0,
+        "human_periods": 0,
+        "human_hierarchy_edges": 0
+      },
+      "source_kind": "source",
+      "issuer_relation": "independent_issuer",
+      "source_family": "ELECOM"
+    },
+    "original": {
+      "path": "original.json",
+      "counts": {
+        "individually_human_reviewed": 31,
+        "bulk_user_approved_ai_cross_checked": 43,
+        "full_user_approved": 74,
+        "individually_documented_label_decisions": 0,
+        "user_attested_labels": 43,
+        "individual_numeric": 31,
+        "bulk_numeric": 43,
+        "bulk_text": 0,
+        "unreviewed_header_annotations": 2,
+        "unreviewed_period_assignments": 74,
+        "inferred_unprinted_period_assignments": 0,
+        "human_headers": 0,
+        "human_periods": 0,
+        "human_hierarchy_edges": 0
+      },
+      "source_kind": "source",
+      "issuer_relation": "same_issuer",
+      "source_family": "ur_ai_original"
+    }
+  }
+}

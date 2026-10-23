@@ -1,0 +1,54 @@
+{
+  "schema_version": "human-signoff-provenance-2",
+  "reviewer": "Aryan Jain",
+  "supersedes": "review/human_signoff/provenance_v1.json",
+  "export_path": "review/human_signoff/human_review_decisions.json",
+  "export_sha256": "a930cc5a4d5f38454f86caf78855b0c454b7785dbdb217b2270d7c0b2f573ac9",
+  "original_export_preserved": true,
+  "original_ledger_preserved": true,
+  "clarification_path": "review/human_signoff/clarification_v2.json",
+  "clarification_sha256": "e6fa9f1fb9d4ea5c2f81de8451d48457917de6cd24a07f936109d4e6547a9330",
+  "reference_manifest": "benchmark/human_gold/v2/manifest.json",
+  "reference_manifest_sha256": "1916a5b0b3f8c10c59ec47daf254aaf00bd806ca91a6f25e080328b6af24aff8",
+  "class_counts": {
+    "bulk_user_approved_ai_cross_checked": 146,
+    "individually_human_reviewed": 51
+  },
+  "individual_cell_list": "benchmark/human_gold/v2/individually_reviewed_cells.csv",
+  "individual_cell_list_sha256": "6171303ecf156bd4d934d54e847e78341b4ae3f420ed2d2a89e535468b8e005b",
+  "ai_cross_check": "review/second_ai_visual_audit/ai_visual_check_per_cell.json",
+  "ai_cross_check_sha256": "af1abf481eafd4c7d2e99ec10bf0a0f62e09a14e22ba4cb57b61a6c1b0b36724",
+  "ai_audit_is_human_verification": false,
+  "prior_label_attestation": {
+    "user_attested_labels": 98,
+    "individually_exported_label_decisions": 0,
+    "interpretation": "Preserved user attestation; no independent 98-label accuracy claim"
+  },
+  "structural_annotations_and_periods_human_verified": false,
+  "documents": {
+    "daiwabo_p10": {
+      "individually_reviewed_cells": 0,
+      "bulk_user_approved_cells": 67,
+      "full_user_approved_cells": 67,
+      "source_kind": "source",
+      "issuer_relation": "independent_issuer",
+      "blind_test": false
+    },
+    "elecom_p9": {
+      "individually_reviewed_cells": 20,
+      "bulk_user_approved_cells": 36,
+      "full_user_approved_cells": 56,
+      "source_kind": "source",
+      "issuer_relation": "independent_issuer",
+      "blind_test": false
+    },
+    "original": {
+      "individually_reviewed_cells": 31,
+      "bulk_user_approved_cells": 43,
+      "full_user_approved_cells": 74,
+      "source_kind": "source",
+      "issuer_relation": "same_issuer",
+      "blind_test": false
+    }
+  }
+}

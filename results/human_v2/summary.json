@@ -1,0 +1,2154 @@
+{
+  "schema_version": "review-strata-evaluator-2",
+  "reference_version": "v2",
+  "reference_lock_sha256": "704dbe2e53f34d2d2b0977c2c6cdf3a3639f9a721d6ae2638ad10b31d5fdcd69",
+  "selection_sha256": "bbb1b2ff4946ed1dc17f2b6af429b4eb7d66b97a5871468bde05c36d6b1320d2",
+  "clarification_sha256": "e6fa9f1fb9d4ea5c2f81de8451d48457917de6cd24a07f936109d4e6547a9330",
+  "class_counts": {
+    "bulk_user_approved_ai_cross_checked": 146,
+    "individually_human_reviewed": 51
+  },
+  "individually_documented_label_decisions": 0,
+  "user_attested_labels": 98,
+  "documents": {
+    "daiwabo_p10": {
+      "counts": {
+        "individually_human_reviewed": 0,
+        "bulk_user_approved_ai_cross_checked": 67,
+        "full_user_approved": 67,
+        "individually_documented_label_decisions": 0,
+        "user_attested_labels": 21,
+        "individual_numeric": 0,
+        "bulk_numeric": 63,
+        "bulk_text": 4,
+        "unreviewed_header_annotations": 10,
+        "unreviewed_period_assignments": 63,
+        "inferred_unprinted_period_assignments": 12,
+        "human_headers": 0,
+        "human_periods": 0,
+        "human_hierarchy_edges": 0
+      },
+      "source_kind": "source",
+      "issuer_relation": "independent_issuer",
+      "blind_test": false
+    },
+    "elecom_p9": {
+      "counts": {
+        "individually_human_reviewed": 20,
+        "bulk_user_approved_ai_cross_checked": 36,
+        "full_user_approved": 56,
+        "individually_documented_label_decisions": 0,
+        "user_attested_labels": 34,
+        "individual_numeric": 20,
+        "bulk_numeric": 36,
+        "bulk_text": 0,
+        "unreviewed_header_annotations": 2,
+        "unreviewed_period_assignments": 56,
+        "inferred_unprinted_period_assignments": 0,
+        "human_headers": 0,
+        "human_periods": 0,
+        "human_hierarchy_edges": 0
+      },
+      "source_kind": "source",
+      "issuer_relation": "independent_issuer",
+      "blind_test": false
+    },
+    "original": {
+      "counts": {
+        "individually_human_reviewed": 31,
+        "bulk_user_approved_ai_cross_checked": 43,
+        "full_user_approved": 74,
+        "individually_documented_label_decisions": 0,
+        "user_attested_labels": 43,
+        "individual_numeric": 31,
+        "bulk_numeric": 43,
+        "bulk_text": 0,
+        "unreviewed_header_annotations": 2,
+        "unreviewed_period_assignments": 74,
+        "inferred_unprinted_period_assignments": 0,
+        "human_headers": 0,
+        "human_periods": 0,
+        "human_hierarchy_edges": 0
+      },
+      "source_kind": "source",
+      "issuer_relation": "same_issuer",
+      "blind_test": false
+    }
+  },
+  "scores": {
+    "fin1": {
+      "individually_reviewed_accuracy": {
+        "auto": {
+          "raw_content": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_raw": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "cell_coverage": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          }
+        },
+        "docling_cmfalse": {
+          "raw_content": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_raw": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "cell_coverage": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          }
+        },
+        "docling_cmtrue": {
+          "raw_content": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_raw": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "cell_coverage": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          }
+        },
+        "docling_rapidocr": {
+          "raw_content": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_raw": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "cell_coverage": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          }
+        },
+        "docling_regions": {
+          "raw_content": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_raw": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "cell_coverage": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          }
+        },
+        "native_grid": {
+          "raw_content": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_raw": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "cell_coverage": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          }
+        },
+        "native_v2": {
+          "raw_content": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_raw": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "cell_coverage": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          }
+        },
+        "v2": {
+          "raw_content": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_raw": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "cell_coverage": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          }
+        }
+      },
+      "bulk_user_approved_agreement": {
+        "auto": {
+          "raw_content": {
+            "correct": 142,
+            "total": 146,
+            "rate": 0.9726027397260274
+          },
+          "value_status": {
+            "correct": 142,
+            "total": 146,
+            "rate": 0.9726027397260274
+          },
+          "numeric_raw": {
+            "correct": 142,
+            "total": 142,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 142,
+            "total": 142,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 146,
+            "total": 146,
+            "rate": 1.0
+          }
+        },
+        "docling_cmfalse": {
+          "raw_content": {
+            "correct": 79,
+            "total": 146,
+            "rate": 0.541095890410959
+          },
+          "value_status": {
+            "correct": 79,
+            "total": 146,
+            "rate": 0.541095890410959
+          },
+          "numeric_raw": {
+            "correct": 79,
+            "total": 142,
+            "rate": 0.5563380281690141
+          },
+          "numeric_value_status": {
+            "correct": 79,
+            "total": 142,
+            "rate": 0.5563380281690141
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 79,
+            "total": 146,
+            "rate": 0.541095890410959
+          }
+        },
+        "docling_cmtrue": {
+          "raw_content": {
+            "correct": 79,
+            "total": 146,
+            "rate": 0.541095890410959
+          },
+          "value_status": {
+            "correct": 79,
+            "total": 146,
+            "rate": 0.541095890410959
+          },
+          "numeric_raw": {
+            "correct": 79,
+            "total": 142,
+            "rate": 0.5563380281690141
+          },
+          "numeric_value_status": {
+            "correct": 79,
+            "total": 142,
+            "rate": 0.5563380281690141
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 79,
+            "total": 146,
+            "rate": 0.541095890410959
+          }
+        },
+        "docling_rapidocr": {
+          "raw_content": {
+            "correct": 79,
+            "total": 146,
+            "rate": 0.541095890410959
+          },
+          "value_status": {
+            "correct": 79,
+            "total": 146,
+            "rate": 0.541095890410959
+          },
+          "numeric_raw": {
+            "correct": 79,
+            "total": 142,
+            "rate": 0.5563380281690141
+          },
+          "numeric_value_status": {
+            "correct": 79,
+            "total": 142,
+            "rate": 0.5563380281690141
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 79,
+            "total": 146,
+            "rate": 0.541095890410959
+          }
+        },
+        "docling_regions": {
+          "raw_content": {
+            "correct": 130,
+            "total": 146,
+            "rate": 0.8904109589041096
+          },
+          "value_status": {
+            "correct": 130,
+            "total": 146,
+            "rate": 0.8904109589041096
+          },
+          "numeric_raw": {
+            "correct": 130,
+            "total": 142,
+            "rate": 0.9154929577464789
+          },
+          "numeric_value_status": {
+            "correct": 130,
+            "total": 142,
+            "rate": 0.9154929577464789
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 130,
+            "total": 146,
+            "rate": 0.8904109589041096
+          }
+        },
+        "native_grid": {
+          "raw_content": {
+            "correct": 142,
+            "total": 146,
+            "rate": 0.9726027397260274
+          },
+          "value_status": {
+            "correct": 142,
+            "total": 146,
+            "rate": 0.9726027397260274
+          },
+          "numeric_raw": {
+            "correct": 142,
+            "total": 142,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 142,
+            "total": 142,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 146,
+            "total": 146,
+            "rate": 1.0
+          }
+        },
+        "native_v2": {
+          "raw_content": {
+            "correct": 81,
+            "total": 146,
+            "rate": 0.5547945205479452
+          },
+          "value_status": {
+            "correct": 81,
+            "total": 146,
+            "rate": 0.5547945205479452
+          },
+          "numeric_raw": {
+            "correct": 81,
+            "total": 142,
+            "rate": 0.5704225352112676
+          },
+          "numeric_value_status": {
+            "correct": 81,
+            "total": 142,
+            "rate": 0.5704225352112676
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 81,
+            "total": 146,
+            "rate": 0.5547945205479452
+          }
+        },
+        "v2": {
+          "raw_content": {
+            "correct": 81,
+            "total": 146,
+            "rate": 0.5547945205479452
+          },
+          "value_status": {
+            "correct": 81,
+            "total": 146,
+            "rate": 0.5547945205479452
+          },
+          "numeric_raw": {
+            "correct": 81,
+            "total": 142,
+            "rate": 0.5704225352112676
+          },
+          "numeric_value_status": {
+            "correct": 81,
+            "total": 142,
+            "rate": 0.5704225352112676
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 81,
+            "total": 146,
+            "rate": 0.5547945205479452
+          }
+        }
+      },
+      "full_user_approved_agreement": {
+        "auto": {
+          "raw_content": {
+            "correct": 193,
+            "total": 197,
+            "rate": 0.9796954314720813
+          },
+          "value_status": {
+            "correct": 193,
+            "total": 197,
+            "rate": 0.9796954314720813
+          },
+          "numeric_raw": {
+            "correct": 193,
+            "total": 193,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 193,
+            "total": 193,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 197,
+            "total": 197,
+            "rate": 1.0
+          }
+        },
+        "docling_cmfalse": {
+          "raw_content": {
+            "correct": 130,
+            "total": 197,
+            "rate": 0.6598984771573604
+          },
+          "value_status": {
+            "correct": 130,
+            "total": 197,
+            "rate": 0.6598984771573604
+          },
+          "numeric_raw": {
+            "correct": 130,
+            "total": 193,
+            "rate": 0.6735751295336787
+          },
+          "numeric_value_status": {
+            "correct": 130,
+            "total": 193,
+            "rate": 0.6735751295336787
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 130,
+            "total": 197,
+            "rate": 0.6598984771573604
+          }
+        },
+        "docling_cmtrue": {
+          "raw_content": {
+            "correct": 130,
+            "total": 197,
+            "rate": 0.6598984771573604
+          },
+          "value_status": {
+            "correct": 130,
+            "total": 197,
+            "rate": 0.6598984771573604
+          },
+          "numeric_raw": {
+            "correct": 130,
+            "total": 193,
+            "rate": 0.6735751295336787
+          },
+          "numeric_value_status": {
+            "correct": 130,
+            "total": 193,
+            "rate": 0.6735751295336787
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 130,
+            "total": 197,
+            "rate": 0.6598984771573604
+          }
+        },
+        "docling_rapidocr": {
+          "raw_content": {
+            "correct": 130,
+            "total": 197,
+            "rate": 0.6598984771573604
+          },
+          "value_status": {
+            "correct": 130,
+            "total": 197,
+            "rate": 0.6598984771573604
+          },
+          "numeric_raw": {
+            "correct": 130,
+            "total": 193,
+            "rate": 0.6735751295336787
+          },
+          "numeric_value_status": {
+            "correct": 130,
+            "total": 193,
+            "rate": 0.6735751295336787
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 130,
+            "total": 197,
+            "rate": 0.6598984771573604
+          }
+        },
+        "docling_regions": {
+          "raw_content": {
+            "correct": 181,
+            "total": 197,
+            "rate": 0.9187817258883249
+          },
+          "value_status": {
+            "correct": 181,
+            "total": 197,
+            "rate": 0.9187817258883249
+          },
+          "numeric_raw": {
+            "correct": 181,
+            "total": 193,
+            "rate": 0.9378238341968912
+          },
+          "numeric_value_status": {
+            "correct": 181,
+            "total": 193,
+            "rate": 0.9378238341968912
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 181,
+            "total": 197,
+            "rate": 0.9187817258883249
+          }
+        },
+        "native_grid": {
+          "raw_content": {
+            "correct": 193,
+            "total": 197,
+            "rate": 0.9796954314720813
+          },
+          "value_status": {
+            "correct": 193,
+            "total": 197,
+            "rate": 0.9796954314720813
+          },
+          "numeric_raw": {
+            "correct": 193,
+            "total": 193,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 193,
+            "total": 193,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 197,
+            "total": 197,
+            "rate": 1.0
+          }
+        },
+        "native_v2": {
+          "raw_content": {
+            "correct": 132,
+            "total": 197,
+            "rate": 0.6700507614213198
+          },
+          "value_status": {
+            "correct": 132,
+            "total": 197,
+            "rate": 0.6700507614213198
+          },
+          "numeric_raw": {
+            "correct": 132,
+            "total": 193,
+            "rate": 0.6839378238341969
+          },
+          "numeric_value_status": {
+            "correct": 132,
+            "total": 193,
+            "rate": 0.6839378238341969
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 132,
+            "total": 197,
+            "rate": 0.6700507614213198
+          }
+        },
+        "v2": {
+          "raw_content": {
+            "correct": 132,
+            "total": 197,
+            "rate": 0.6700507614213198
+          },
+          "value_status": {
+            "correct": 132,
+            "total": 197,
+            "rate": 0.6700507614213198
+          },
+          "numeric_raw": {
+            "correct": 132,
+            "total": 193,
+            "rate": 0.6839378238341969
+          },
+          "numeric_value_status": {
+            "correct": 132,
+            "total": 193,
+            "rate": 0.6839378238341969
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 132,
+            "total": 197,
+            "rate": 0.6700507614213198
+          }
+        }
+      }
+    },
+    "postfix": {
+      "individually_reviewed_accuracy": {
+        "auto": {
+          "raw_content": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_raw": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "cell_coverage": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          }
+        },
+        "docling_cmfalse": {
+          "raw_content": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_raw": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "cell_coverage": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          }
+        },
+        "docling_cmtrue": {
+          "raw_content": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_raw": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "cell_coverage": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          }
+        },
+        "docling_rapidocr": {
+          "raw_content": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_raw": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "cell_coverage": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          }
+        },
+        "docling_regions": {
+          "raw_content": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_raw": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "cell_coverage": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          }
+        },
+        "native_grid": {
+          "raw_content": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_raw": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "cell_coverage": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          }
+        },
+        "native_v2": {
+          "raw_content": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_raw": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "cell_coverage": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          }
+        },
+        "v2": {
+          "raw_content": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_raw": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 0,
+            "rate": null
+          },
+          "cell_coverage": {
+            "correct": 51,
+            "total": 51,
+            "rate": 1.0
+          }
+        }
+      },
+      "bulk_user_approved_agreement": {
+        "auto": {
+          "raw_content": {
+            "correct": 142,
+            "total": 146,
+            "rate": 0.9726027397260274
+          },
+          "value_status": {
+            "correct": 142,
+            "total": 146,
+            "rate": 0.9726027397260274
+          },
+          "numeric_raw": {
+            "correct": 142,
+            "total": 142,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 142,
+            "total": 142,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 146,
+            "total": 146,
+            "rate": 1.0
+          }
+        },
+        "docling_cmfalse": {
+          "raw_content": {
+            "correct": 79,
+            "total": 146,
+            "rate": 0.541095890410959
+          },
+          "value_status": {
+            "correct": 79,
+            "total": 146,
+            "rate": 0.541095890410959
+          },
+          "numeric_raw": {
+            "correct": 79,
+            "total": 142,
+            "rate": 0.5563380281690141
+          },
+          "numeric_value_status": {
+            "correct": 79,
+            "total": 142,
+            "rate": 0.5563380281690141
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 79,
+            "total": 146,
+            "rate": 0.541095890410959
+          }
+        },
+        "docling_cmtrue": {
+          "raw_content": {
+            "correct": 79,
+            "total": 146,
+            "rate": 0.541095890410959
+          },
+          "value_status": {
+            "correct": 79,
+            "total": 146,
+            "rate": 0.541095890410959
+          },
+          "numeric_raw": {
+            "correct": 79,
+            "total": 142,
+            "rate": 0.5563380281690141
+          },
+          "numeric_value_status": {
+            "correct": 79,
+            "total": 142,
+            "rate": 0.5563380281690141
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 79,
+            "total": 146,
+            "rate": 0.541095890410959
+          }
+        },
+        "docling_rapidocr": {
+          "raw_content": {
+            "correct": 79,
+            "total": 146,
+            "rate": 0.541095890410959
+          },
+          "value_status": {
+            "correct": 79,
+            "total": 146,
+            "rate": 0.541095890410959
+          },
+          "numeric_raw": {
+            "correct": 79,
+            "total": 142,
+            "rate": 0.5563380281690141
+          },
+          "numeric_value_status": {
+            "correct": 79,
+            "total": 142,
+            "rate": 0.5563380281690141
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 79,
+            "total": 146,
+            "rate": 0.541095890410959
+          }
+        },
+        "docling_regions": {
+          "raw_content": {
+            "correct": 130,
+            "total": 146,
+            "rate": 0.8904109589041096
+          },
+          "value_status": {
+            "correct": 130,
+            "total": 146,
+            "rate": 0.8904109589041096
+          },
+          "numeric_raw": {
+            "correct": 130,
+            "total": 142,
+            "rate": 0.9154929577464789
+          },
+          "numeric_value_status": {
+            "correct": 130,
+            "total": 142,
+            "rate": 0.9154929577464789
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 130,
+            "total": 146,
+            "rate": 0.8904109589041096
+          }
+        },
+        "native_grid": {
+          "raw_content": {
+            "correct": 142,
+            "total": 146,
+            "rate": 0.9726027397260274
+          },
+          "value_status": {
+            "correct": 142,
+            "total": 146,
+            "rate": 0.9726027397260274
+          },
+          "numeric_raw": {
+            "correct": 142,
+            "total": 142,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 142,
+            "total": 142,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 146,
+            "total": 146,
+            "rate": 1.0
+          }
+        },
+        "native_v2": {
+          "raw_content": {
+            "correct": 81,
+            "total": 146,
+            "rate": 0.5547945205479452
+          },
+          "value_status": {
+            "correct": 81,
+            "total": 146,
+            "rate": 0.5547945205479452
+          },
+          "numeric_raw": {
+            "correct": 81,
+            "total": 142,
+            "rate": 0.5704225352112676
+          },
+          "numeric_value_status": {
+            "correct": 81,
+            "total": 142,
+            "rate": 0.5704225352112676
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 81,
+            "total": 146,
+            "rate": 0.5547945205479452
+          }
+        },
+        "v2": {
+          "raw_content": {
+            "correct": 81,
+            "total": 146,
+            "rate": 0.5547945205479452
+          },
+          "value_status": {
+            "correct": 81,
+            "total": 146,
+            "rate": 0.5547945205479452
+          },
+          "numeric_raw": {
+            "correct": 81,
+            "total": 142,
+            "rate": 0.5704225352112676
+          },
+          "numeric_value_status": {
+            "correct": 81,
+            "total": 142,
+            "rate": 0.5704225352112676
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 81,
+            "total": 146,
+            "rate": 0.5547945205479452
+          }
+        }
+      },
+      "full_user_approved_agreement": {
+        "auto": {
+          "raw_content": {
+            "correct": 193,
+            "total": 197,
+            "rate": 0.9796954314720813
+          },
+          "value_status": {
+            "correct": 193,
+            "total": 197,
+            "rate": 0.9796954314720813
+          },
+          "numeric_raw": {
+            "correct": 193,
+            "total": 193,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 193,
+            "total": 193,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 197,
+            "total": 197,
+            "rate": 1.0
+          }
+        },
+        "docling_cmfalse": {
+          "raw_content": {
+            "correct": 130,
+            "total": 197,
+            "rate": 0.6598984771573604
+          },
+          "value_status": {
+            "correct": 130,
+            "total": 197,
+            "rate": 0.6598984771573604
+          },
+          "numeric_raw": {
+            "correct": 130,
+            "total": 193,
+            "rate": 0.6735751295336787
+          },
+          "numeric_value_status": {
+            "correct": 130,
+            "total": 193,
+            "rate": 0.6735751295336787
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 130,
+            "total": 197,
+            "rate": 0.6598984771573604
+          }
+        },
+        "docling_cmtrue": {
+          "raw_content": {
+            "correct": 130,
+            "total": 197,
+            "rate": 0.6598984771573604
+          },
+          "value_status": {
+            "correct": 130,
+            "total": 197,
+            "rate": 0.6598984771573604
+          },
+          "numeric_raw": {
+            "correct": 130,
+            "total": 193,
+            "rate": 0.6735751295336787
+          },
+          "numeric_value_status": {
+            "correct": 130,
+            "total": 193,
+            "rate": 0.6735751295336787
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 130,
+            "total": 197,
+            "rate": 0.6598984771573604
+          }
+        },
+        "docling_rapidocr": {
+          "raw_content": {
+            "correct": 130,
+            "total": 197,
+            "rate": 0.6598984771573604
+          },
+          "value_status": {
+            "correct": 130,
+            "total": 197,
+            "rate": 0.6598984771573604
+          },
+          "numeric_raw": {
+            "correct": 130,
+            "total": 193,
+            "rate": 0.6735751295336787
+          },
+          "numeric_value_status": {
+            "correct": 130,
+            "total": 193,
+            "rate": 0.6735751295336787
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 130,
+            "total": 197,
+            "rate": 0.6598984771573604
+          }
+        },
+        "docling_regions": {
+          "raw_content": {
+            "correct": 181,
+            "total": 197,
+            "rate": 0.9187817258883249
+          },
+          "value_status": {
+            "correct": 181,
+            "total": 197,
+            "rate": 0.9187817258883249
+          },
+          "numeric_raw": {
+            "correct": 181,
+            "total": 193,
+            "rate": 0.9378238341968912
+          },
+          "numeric_value_status": {
+            "correct": 181,
+            "total": 193,
+            "rate": 0.9378238341968912
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 181,
+            "total": 197,
+            "rate": 0.9187817258883249
+          }
+        },
+        "native_grid": {
+          "raw_content": {
+            "correct": 193,
+            "total": 197,
+            "rate": 0.9796954314720813
+          },
+          "value_status": {
+            "correct": 193,
+            "total": 197,
+            "rate": 0.9796954314720813
+          },
+          "numeric_raw": {
+            "correct": 193,
+            "total": 193,
+            "rate": 1.0
+          },
+          "numeric_value_status": {
+            "correct": 193,
+            "total": 193,
+            "rate": 1.0
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 197,
+            "total": 197,
+            "rate": 1.0
+          }
+        },
+        "native_v2": {
+          "raw_content": {
+            "correct": 132,
+            "total": 197,
+            "rate": 0.6700507614213198
+          },
+          "value_status": {
+            "correct": 132,
+            "total": 197,
+            "rate": 0.6700507614213198
+          },
+          "numeric_raw": {
+            "correct": 132,
+            "total": 193,
+            "rate": 0.6839378238341969
+          },
+          "numeric_value_status": {
+            "correct": 132,
+            "total": 193,
+            "rate": 0.6839378238341969
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 132,
+            "total": 197,
+            "rate": 0.6700507614213198
+          }
+        },
+        "v2": {
+          "raw_content": {
+            "correct": 132,
+            "total": 197,
+            "rate": 0.6700507614213198
+          },
+          "value_status": {
+            "correct": 132,
+            "total": 197,
+            "rate": 0.6700507614213198
+          },
+          "numeric_raw": {
+            "correct": 132,
+            "total": 193,
+            "rate": 0.6839378238341969
+          },
+          "numeric_value_status": {
+            "correct": 132,
+            "total": 193,
+            "rate": 0.6839378238341969
+          },
+          "text_raw": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "text_value_status": {
+            "correct": 0,
+            "total": 4,
+            "rate": 0.0
+          },
+          "cell_coverage": {
+            "correct": 132,
+            "total": 197,
+            "rate": 0.6700507614213198
+          }
+        }
+      }
+    }
+  },
+  "unverified_period_diagnostics": {
+    "fin1": {
+      "v2": {
+        "inferred_change_interval": {
+          "correct": 0,
+          "total": 17,
+          "rate": 0.0
+        },
+        "inferred_unprinted_header": {
+          "correct": 0,
+          "total": 12,
+          "rate": 0.0
+        },
+        "printed_header_association": {
+          "correct": 130,
+          "total": 164,
+          "rate": 0.7926829268292683
+        }
+      },
+      "native_v2": {
+        "inferred_change_interval": {
+          "correct": 0,
+          "total": 17,
+          "rate": 0.0
+        },
+        "inferred_unprinted_header": {
+          "correct": 0,
+          "total": 12,
+          "rate": 0.0
+        },
+        "printed_header_association": {
+          "correct": 130,
+          "total": 164,
+          "rate": 0.7926829268292683
+        }
+      },
+      "native_grid": {
+        "inferred_change_interval": {
+          "correct": 0,
+          "total": 17,
+          "rate": 0.0
+        },
+        "inferred_unprinted_header": {
+          "correct": 0,
+          "total": 12,
+          "rate": 0.0
+        },
+        "printed_header_association": {
+          "correct": 164,
+          "total": 164,
+          "rate": 1.0
+        }
+      },
+      "docling_cmtrue": {
+        "inferred_change_interval": {
+          "correct": 0,
+          "total": 17,
+          "rate": 0.0
+        },
+        "inferred_unprinted_header": {
+          "correct": 0,
+          "total": 12,
+          "rate": 0.0
+        },
+        "printed_header_association": {
+          "correct": 130,
+          "total": 164,
+          "rate": 0.7926829268292683
+        }
+      },
+      "docling_cmfalse": {
+        "inferred_change_interval": {
+          "correct": 0,
+          "total": 17,
+          "rate": 0.0
+        },
+        "inferred_unprinted_header": {
+          "correct": 0,
+          "total": 12,
+          "rate": 0.0
+        },
+        "printed_header_association": {
+          "correct": 130,
+          "total": 164,
+          "rate": 0.7926829268292683
+        }
+      },
+      "docling_rapidocr": {
+        "inferred_change_interval": {
+          "correct": 0,
+          "total": 17,
+          "rate": 0.0
+        },
+        "inferred_unprinted_header": {
+          "correct": 0,
+          "total": 12,
+          "rate": 0.0
+        },
+        "printed_header_association": {
+          "correct": 130,
+          "total": 164,
+          "rate": 0.7926829268292683
+        }
+      },
+      "docling_regions": {
+        "inferred_change_interval": {
+          "correct": 0,
+          "total": 17,
+          "rate": 0.0
+        },
+        "inferred_unprinted_header": {
+          "correct": 0,
+          "total": 12,
+          "rate": 0.0
+        },
+        "printed_header_association": {
+          "correct": 164,
+          "total": 164,
+          "rate": 1.0
+        }
+      },
+      "auto": {
+        "inferred_change_interval": {
+          "correct": 0,
+          "total": 17,
+          "rate": 0.0
+        },
+        "inferred_unprinted_header": {
+          "correct": 0,
+          "total": 12,
+          "rate": 0.0
+        },
+        "printed_header_association": {
+          "correct": 164,
+          "total": 164,
+          "rate": 1.0
+        }
+      }
+    },
+    "postfix": {
+      "v2": {
+        "inferred_change_interval": {
+          "correct": 0,
+          "total": 17,
+          "rate": 0.0
+        },
+        "inferred_unprinted_header": {
+          "correct": 0,
+          "total": 12,
+          "rate": 0.0
+        },
+        "printed_header_association": {
+          "correct": 130,
+          "total": 164,
+          "rate": 0.7926829268292683
+        }
+      },
+      "native_v2": {
+        "inferred_change_interval": {
+          "correct": 0,
+          "total": 17,
+          "rate": 0.0
+        },
+        "inferred_unprinted_header": {
+          "correct": 0,
+          "total": 12,
+          "rate": 0.0
+        },
+        "printed_header_association": {
+          "correct": 130,
+          "total": 164,
+          "rate": 0.7926829268292683
+        }
+      },
+      "native_grid": {
+        "inferred_change_interval": {
+          "correct": 17,
+          "total": 17,
+          "rate": 1.0
+        },
+        "inferred_unprinted_header": {
+          "correct": 0,
+          "total": 12,
+          "rate": 0.0
+        },
+        "printed_header_association": {
+          "correct": 164,
+          "total": 164,
+          "rate": 1.0
+        }
+      },
+      "docling_cmtrue": {
+        "inferred_change_interval": {
+          "correct": 0,
+          "total": 17,
+          "rate": 0.0
+        },
+        "inferred_unprinted_header": {
+          "correct": 0,
+          "total": 12,
+          "rate": 0.0
+        },
+        "printed_header_association": {
+          "correct": 130,
+          "total": 164,
+          "rate": 0.7926829268292683
+        }
+      },
+      "docling_cmfalse": {
+        "inferred_change_interval": {
+          "correct": 0,
+          "total": 17,
+          "rate": 0.0
+        },
+        "inferred_unprinted_header": {
+          "correct": 0,
+          "total": 12,
+          "rate": 0.0
+        },
+        "printed_header_association": {
+          "correct": 130,
+          "total": 164,
+          "rate": 0.7926829268292683
+        }
+      },
+      "docling_rapidocr": {
+        "inferred_change_interval": {
+          "correct": 0,
+          "total": 17,
+          "rate": 0.0
+        },
+        "inferred_unprinted_header": {
+          "correct": 0,
+          "total": 12,
+          "rate": 0.0
+        },
+        "printed_header_association": {
+          "correct": 130,
+          "total": 164,
+          "rate": 0.7926829268292683
+        }
+      },
+      "docling_regions": {
+        "inferred_change_interval": {
+          "correct": 17,
+          "total": 17,
+          "rate": 1.0
+        },
+        "inferred_unprinted_header": {
+          "correct": 0,
+          "total": 12,
+          "rate": 0.0
+        },
+        "printed_header_association": {
+          "correct": 164,
+          "total": 164,
+          "rate": 1.0
+        }
+      },
+      "auto": {
+        "inferred_change_interval": {
+          "correct": 17,
+          "total": 17,
+          "rate": 1.0
+        },
+        "inferred_unprinted_header": {
+          "correct": 0,
+          "total": 12,
+          "rate": 0.0
+        },
+        "printed_header_association": {
+          "correct": 164,
+          "total": 164,
+          "rate": 1.0
+        }
+      }
+    }
+  },
+  "inference_run": false,
+  "cohort": "development_exposed_source",
+  "blind_test": false,
+  "caveat": "Only 51 cells have individual human source-review evidence. Bulk AI-checked/user-approved content is agreement, not independently verified ground truth. All structure and inferred periods remain unreviewed. No individual label-review events were exported."
+}

@@ -1,0 +1,329 @@
+{
+  "schema_version": "review-evaluation-selection-2",
+  "reference_export_sha256": "a930cc5a4d5f38454f86caf78855b0c454b7785dbdb217b2270d7c0b2f573ac9",
+  "blind_test": false,
+  "cohort": "development_exposed_source",
+  "sets": [
+    {
+      "name": "fin1",
+      "backends": [
+        "v2",
+        "native_v2",
+        "native_grid",
+        "docling_cmtrue",
+        "docling_cmfalse",
+        "docling_rapidocr",
+        "docling_regions",
+        "auto"
+      ],
+      "note": "Original fin1 snapshots, unchanged",
+      "predictions": [
+        {
+          "backend": "v2",
+          "document_id": "original",
+          "path": "runs/v2/original/fin1_main/cold/prediction.json",
+          "sha256": "a3a8a1c25fa737426b177e0f6cd566d92c07b4b56579c647cfcc61f513fd3bf6"
+        },
+        {
+          "backend": "v2",
+          "document_id": "elecom_p9",
+          "path": "runs/v2/elecom_p9/fin1_main/cold/prediction.json",
+          "sha256": "94517437a02f338f8ed8089886d67e2b36b90af14135535caca7a686fac58fd9"
+        },
+        {
+          "backend": "v2",
+          "document_id": "daiwabo_p10",
+          "path": "runs/v2/daiwabo_p10/fin1_main/cold/prediction.json",
+          "sha256": "7f2af3a7a1c016267f45b1f342d8c0479c294ae8924e7e4a8239bc7bab903d5b"
+        },
+        {
+          "backend": "native_v2",
+          "document_id": "original",
+          "path": "runs/native_v2/original/fin1_main/cold/prediction.json",
+          "sha256": "0ca227c21cf29b704615af78e726a99490e3a23465d745359cfb5a47fe6b2723"
+        },
+        {
+          "backend": "native_v2",
+          "document_id": "elecom_p9",
+          "path": "runs/native_v2/elecom_p9/fin1_main/cold/prediction.json",
+          "sha256": "2c4b77028cd14c1130499a6d59085799b78a41c4e1b44464180c535c979acf42"
+        },
+        {
+          "backend": "native_v2",
+          "document_id": "daiwabo_p10",
+          "path": "runs/native_v2/daiwabo_p10/fin1_main/cold/prediction.json",
+          "sha256": "5d33720242af025929a1e131d3631ff9322598938ad9afa88946f8038150b9fa"
+        },
+        {
+          "backend": "native_grid",
+          "document_id": "original",
+          "path": "runs/native_grid/original/fin1_main/cold/prediction.json",
+          "sha256": "5602bfb53005069b96c37df6c48a124d4a26def6fe04a5e83b0727fa71abda73"
+        },
+        {
+          "backend": "native_grid",
+          "document_id": "elecom_p9",
+          "path": "runs/native_grid/elecom_p9/fin1_main/cold/prediction.json",
+          "sha256": "6320ac1963592acd5b38703324f2916ce338ef2fb7cc4d19e8480954c392fa0a"
+        },
+        {
+          "backend": "native_grid",
+          "document_id": "daiwabo_p10",
+          "path": "runs/native_grid/daiwabo_p10/fin1_main/cold/prediction.json",
+          "sha256": "4a55ed3ee0dba6a16d8910e6c9286b7b6d75cb501d6ab35843bad8b81bc3f435"
+        },
+        {
+          "backend": "docling_cmtrue",
+          "document_id": "original",
+          "path": "runs/docling_cmtrue/original/fin1_main/cold/prediction.json",
+          "sha256": "279f31df712354823072ff0afa494f381881db42126f5d080f6c7ac60a8b89eb"
+        },
+        {
+          "backend": "docling_cmtrue",
+          "document_id": "elecom_p9",
+          "path": "runs/docling_cmtrue/elecom_p9/fin1_main/cold/prediction.json",
+          "sha256": "9e774761b479bbb8bb2b5f2cd99d2ff7d99b18a5a60e3112641bd3e43f1c27bf"
+        },
+        {
+          "backend": "docling_cmtrue",
+          "document_id": "daiwabo_p10",
+          "path": "runs/docling_cmtrue/daiwabo_p10/fin1_main/cold/prediction.json",
+          "sha256": "9f847bf7e59a448752a3e4300bc7345dbd0fe830e14379d18d03822e6137c996"
+        },
+        {
+          "backend": "docling_cmfalse",
+          "document_id": "original",
+          "path": "runs/docling_cmfalse/original/fin1_main/cold/prediction.json",
+          "sha256": "6f0bd77e2b2cbf424fa459db823036dfda6719e08da4b8deb375b2f4910d16a4"
+        },
+        {
+          "backend": "docling_cmfalse",
+          "document_id": "elecom_p9",
+          "path": "runs/docling_cmfalse/elecom_p9/fin1_main/cold/prediction.json",
+          "sha256": "5c5d43690fe5521d5cfcca4e88a17aebe719bd18b177fb4b969b069cc39b813c"
+        },
+        {
+          "backend": "docling_cmfalse",
+          "document_id": "daiwabo_p10",
+          "path": "runs/docling_cmfalse/daiwabo_p10/fin1_main/cold/prediction.json",
+          "sha256": "f2d83932fd7ac491e8c6d0c9299f3bd810143f0f38f4987426fb2ddfd7089faa"
+        },
+        {
+          "backend": "docling_rapidocr",
+          "document_id": "original",
+          "path": "runs/docling_rapidocr/original/fin1_main/cold/prediction.json",
+          "sha256": "b0422b685391a315f180799f5d23a7db8d3034268ca6ddcb71d9d63b08b84b55"
+        },
+        {
+          "backend": "docling_rapidocr",
+          "document_id": "elecom_p9",
+          "path": "runs/docling_rapidocr/elecom_p9/fin1_main/cold/prediction.json",
+          "sha256": "c52a7c97715277c87ffb8527ac47e6eda02fd24cf8a33a695e01df7e7be150ad"
+        },
+        {
+          "backend": "docling_rapidocr",
+          "document_id": "daiwabo_p10",
+          "path": "runs/docling_rapidocr/daiwabo_p10/fin1_main/cold/prediction.json",
+          "sha256": "719918686ac716800d450c2718851bc066d83e5eb331fd46819d321e088cbc50"
+        },
+        {
+          "backend": "docling_regions",
+          "document_id": "original",
+          "path": "runs/docling_regions/original/fin1_main/cold/prediction.json",
+          "sha256": "cdfe9f955f32bf2ca676bc2c2a1458ac0c303eb6bc5b199536c24a1d3f7b37c5"
+        },
+        {
+          "backend": "docling_regions",
+          "document_id": "elecom_p9",
+          "path": "runs/docling_regions/elecom_p9/fin1_main/cold/prediction.json",
+          "sha256": "180204ecf8d7c1d689c21cf2012d013132a918411188a1a86eaf60b4d528e079"
+        },
+        {
+          "backend": "docling_regions",
+          "document_id": "daiwabo_p10",
+          "path": "runs/docling_regions/daiwabo_p10/fin1_main/cold/prediction.json",
+          "sha256": "95eda0eb00c2ca74d901994dddbae63855dd3c63e1a4105612c0b1a1dc7152b3"
+        },
+        {
+          "backend": "auto",
+          "document_id": "original",
+          "path": "runs/auto/original/fin1_main/cold/prediction.json",
+          "sha256": "0f4141f66489862d506d24997f37bfe8d7641a48212628f956f8f6db3c81d084"
+        },
+        {
+          "backend": "auto",
+          "document_id": "elecom_p9",
+          "path": "runs/auto/elecom_p9/fin1_main/cold/prediction.json",
+          "sha256": "3b27b803225b216b10baed1faa8b17415a75151452565f4a3667e54b0a54cc71"
+        },
+        {
+          "backend": "auto",
+          "document_id": "daiwabo_p10",
+          "path": "runs/auto/daiwabo_p10/fin1_main/cold/prediction.json",
+          "sha256": "0270d85b1a86ae7a0001e74f83caed22379f386e1bcaf236422b9d6eb5737c07"
+        }
+      ]
+    },
+    {
+      "name": "postfix",
+      "backends": [
+        "v2",
+        "native_v2",
+        "native_grid",
+        "docling_cmtrue",
+        "docling_cmfalse",
+        "docling_rapidocr",
+        "docling_regions",
+        "auto"
+      ],
+      "note": "Stored cold predictions only. Postfix uses p0fix2_main except docling_cmfalse Daiwabo p0fix3_main (mapper label-duplication correction); this selection is explicit, not an inferred latest run.",
+      "predictions": [
+        {
+          "backend": "v2",
+          "document_id": "original",
+          "path": "runs/v2/original/p0fix2_main/cold/prediction.json",
+          "sha256": "a3a8a1c25fa737426b177e0f6cd566d92c07b4b56579c647cfcc61f513fd3bf6"
+        },
+        {
+          "backend": "v2",
+          "document_id": "elecom_p9",
+          "path": "runs/v2/elecom_p9/p0fix2_main/cold/prediction.json",
+          "sha256": "94517437a02f338f8ed8089886d67e2b36b90af14135535caca7a686fac58fd9"
+        },
+        {
+          "backend": "v2",
+          "document_id": "daiwabo_p10",
+          "path": "runs/v2/daiwabo_p10/p0fix2_main/cold/prediction.json",
+          "sha256": "7f2af3a7a1c016267f45b1f342d8c0479c294ae8924e7e4a8239bc7bab903d5b"
+        },
+        {
+          "backend": "native_v2",
+          "document_id": "original",
+          "path": "runs/native_v2/original/p0fix2_main/cold/prediction.json",
+          "sha256": "669632002adf30f2cd81d2bae79984f4069e3cbc40bc3f3a644aa33188745c2b"
+        },
+        {
+          "backend": "native_v2",
+          "document_id": "elecom_p9",
+          "path": "runs/native_v2/elecom_p9/p0fix2_main/cold/prediction.json",
+          "sha256": "bae2297e88270cd71c62ca3c9248bdfc34da987229c2a3a6d4a980fecef920ce"
+        },
+        {
+          "backend": "native_v2",
+          "document_id": "daiwabo_p10",
+          "path": "runs/native_v2/daiwabo_p10/p0fix2_main/cold/prediction.json",
+          "sha256": "7e1ec7a2524ba2d76c7e326032236ab638e2b7d0c16afcbb4143cbe529e23336"
+        },
+        {
+          "backend": "native_grid",
+          "document_id": "original",
+          "path": "runs/native_grid/original/p0fix2_main/cold/prediction.json",
+          "sha256": "6305d5a1ff47749c5ca65ece3c11fa953e63f57066f6f47662311eba732bc567"
+        },
+        {
+          "backend": "native_grid",
+          "document_id": "elecom_p9",
+          "path": "runs/native_grid/elecom_p9/p0fix2_main/cold/prediction.json",
+          "sha256": "56a794b8050669a2d7106497968c3baa7140541eaa14c9beef16faaee73b378e"
+        },
+        {
+          "backend": "native_grid",
+          "document_id": "daiwabo_p10",
+          "path": "runs/native_grid/daiwabo_p10/p0fix2_main/cold/prediction.json",
+          "sha256": "c7457a95eb59c1936b2d02ec6ec76b97e5816a5b23609dcef374ae2cdd0857a7"
+        },
+        {
+          "backend": "docling_cmtrue",
+          "document_id": "original",
+          "path": "runs/docling_cmtrue/original/p0fix2_main/cold/prediction.json",
+          "sha256": "18a6540d50f933b45124a9bd2e26efa465db8008e9cea59be0ad3c4478116212"
+        },
+        {
+          "backend": "docling_cmtrue",
+          "document_id": "elecom_p9",
+          "path": "runs/docling_cmtrue/elecom_p9/p0fix2_main/cold/prediction.json",
+          "sha256": "1fe4db1a5bda4a4e265e949c97871af3135a7a07de2a3dfcb3bb08f7b946df33"
+        },
+        {
+          "backend": "docling_cmtrue",
+          "document_id": "daiwabo_p10",
+          "path": "runs/docling_cmtrue/daiwabo_p10/p0fix2_main/cold/prediction.json",
+          "sha256": "98561441e0591ba7af73c334d28292814f50e2fa55d156233dd34f194455ae44"
+        },
+        {
+          "backend": "docling_cmfalse",
+          "document_id": "original",
+          "path": "runs/docling_cmfalse/original/p0fix2_main/cold/prediction.json",
+          "sha256": "d4b57eb02e2a31778b70661df4d11c4ac1f948b228adb350b2bb7023537f3730"
+        },
+        {
+          "backend": "docling_cmfalse",
+          "document_id": "elecom_p9",
+          "path": "runs/docling_cmfalse/elecom_p9/p0fix2_main/cold/prediction.json",
+          "sha256": "e054eed6ce768a07cee800f4b845705e84542fe420c7e0bfac7ebe541dca098a"
+        },
+        {
+          "backend": "docling_cmfalse",
+          "document_id": "daiwabo_p10",
+          "path": "runs/docling_cmfalse/daiwabo_p10/p0fix3_main/cold/prediction.json",
+          "sha256": "06a9b455672c372752c186d14f8495d86f4fe483240c7c1b6dfd124ae3f81863"
+        },
+        {
+          "backend": "docling_rapidocr",
+          "document_id": "original",
+          "path": "runs/docling_rapidocr/original/p0fix2_main/cold/prediction.json",
+          "sha256": "53fbbd12aaaca3385ba19e3555300ded253af19034ca15aca7c0f0e342064946"
+        },
+        {
+          "backend": "docling_rapidocr",
+          "document_id": "elecom_p9",
+          "path": "runs/docling_rapidocr/elecom_p9/p0fix2_main/cold/prediction.json",
+          "sha256": "23e5f19851293ad2c92b1b25295ab0d52f1f5df9cbc30d0bfc18c26199686923"
+        },
+        {
+          "backend": "docling_rapidocr",
+          "document_id": "daiwabo_p10",
+          "path": "runs/docling_rapidocr/daiwabo_p10/p0fix2_main/cold/prediction.json",
+          "sha256": "c593fae047a1cc6c040af1ab7d2ee17e81809cb8e0dba24be19b77770df0b0d6"
+        },
+        {
+          "backend": "docling_regions",
+          "document_id": "original",
+          "path": "runs/docling_regions/original/p0fix2_main/cold/prediction.json",
+          "sha256": "a7e5a9ede0febb7d4433ba40683e3166fe76507e7d1884166d1d766025e01fef"
+        },
+        {
+          "backend": "docling_regions",
+          "document_id": "elecom_p9",
+          "path": "runs/docling_regions/elecom_p9/p0fix2_main/cold/prediction.json",
+          "sha256": "7e9f8fa4d35c10ff83410eab826bef1d735c3a0c730f2c81938fe9b2c4fe4b28"
+        },
+        {
+          "backend": "docling_regions",
+          "document_id": "daiwabo_p10",
+          "path": "runs/docling_regions/daiwabo_p10/p0fix2_main/cold/prediction.json",
+          "sha256": "61ce1c93f87305b9f9b328f8df7909b2c4047b2b5dd7be84e04757bf014a1cec"
+        },
+        {
+          "backend": "auto",
+          "document_id": "original",
+          "path": "runs/auto/original/p0fix2_main/cold/prediction.json",
+          "sha256": "aee76df901e5b7cd736c5b1ebb8b6a57f2f73f34300c0c7c1c8b5bab2bb30a3b"
+        },
+        {
+          "backend": "auto",
+          "document_id": "elecom_p9",
+          "path": "runs/auto/elecom_p9/p0fix2_main/cold/prediction.json",
+          "sha256": "8b64d6a618f961a2829495725eec60bf1ae4ea9768c6a87bfe5ee8d84c352090"
+        },
+        {
+          "backend": "auto",
+          "document_id": "daiwabo_p10",
+          "path": "runs/auto/daiwabo_p10/p0fix2_main/cold/prediction.json",
+          "sha256": "223646b7243c6f90ca86e1cf6dd9adbf9a1d1d7168bd8153abdf7ed4a8f20752"
+        }
+      ]
+    }
+  ],
+  "reference_clarification_sha256": "e6fa9f1fb9d4ea5c2f81de8451d48457917de6cd24a07f936109d4e6547a9330"
+}

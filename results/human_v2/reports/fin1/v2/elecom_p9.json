@@ -1,0 +1,706 @@
+{
+  "document_id": "elecom_p9",
+  "backend": "v2",
+  "prediction_path": "runs/v2/elecom_p9/fin1_main/cold/prediction.json",
+  "prediction_sha256": "94517437a02f338f8ed8089886d67e2b36b90af14135535caca7a686fac58fd9",
+  "source_run_id": "fin1_main",
+  "reference_sha256": "5b9aa77c8f453cf68b32fb372c9e51c300b663465ab6ce7469654cab14bace57",
+  "evaluator_version": "review-strata-evaluator-2",
+  "scopes": {
+    "individually_reviewed_accuracy": {
+      "document_id": "elecom_p9",
+      "reference_status": "mixed_individual_review_and_user_approval",
+      "source_kind": "source",
+      "issuer_relation": "independent_issuer",
+      "source_family": "ELECOM",
+      "run_status": "partial",
+      "blind_test": false,
+      "cohort": "development_exposed_source",
+      "metrics": {
+        "raw_content": {
+          "correct": 20,
+          "total": 20,
+          "rate": 1.0
+        },
+        "value_status": {
+          "correct": 20,
+          "total": 20,
+          "rate": 1.0
+        },
+        "numeric_raw": {
+          "correct": 20,
+          "total": 20,
+          "rate": 1.0
+        },
+        "numeric_value_status": {
+          "correct": 20,
+          "total": 20,
+          "rate": 1.0
+        },
+        "text_raw": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "text_value_status": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "cell_coverage": {
+          "correct": 20,
+          "total": 20,
+          "rate": 1.0
+        }
+      },
+      "missing_reviewed_cells": 0,
+      "errors": [],
+      "unverified_period_diagnostics": {
+        "printed_header_association": {
+          "correct": 20,
+          "total": 20,
+          "rate": 1.0
+        }
+      },
+      "unscored_human_axes": {
+        "header_accuracy": {
+          "total": 0,
+          "reason": "No explicit header verification"
+        },
+        "period_accuracy": {
+          "total": 0,
+          "reason": "No period verification; inferred lower-table periods are not observed gold"
+        },
+        "hierarchy_accuracy": {
+          "total": 0,
+          "reason": "Label acceptance does not verify parent paths"
+        },
+        "detection_accuracy": {
+          "total": 0,
+          "reason": "Completeness and table boundaries remain AI context"
+        }
+      },
+      "matching_policy": "One-to-one table IoU >= .1; normalized label equality; row geometry/order break ties; physical column. Geometry is inherited AI context, not a human localization score.",
+      "whitespace_policy": "Remove Unicode whitespace only for raw/normalized labels; preserve monetary glyphs, punctuation and signs",
+      "provenance_scope": "individually_reviewed_accuracy",
+      "interpretation": "Accuracy against individually source-reviewed content",
+      "evaluation_status": "scored",
+      "individually_documented_label_decisions": 0,
+      "alignment_context_rows": [
+        {
+          "table_id": "assets",
+          "row_id": "assets_r003",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r004",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r005",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r006",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r007",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r008",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r009",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r010",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r011",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r012",
+          "column_indices": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "bulk_user_approved_agreement": {
+      "document_id": "elecom_p9",
+      "reference_status": "mixed_individual_review_and_user_approval",
+      "source_kind": "source",
+      "issuer_relation": "independent_issuer",
+      "source_family": "ELECOM",
+      "run_status": "partial",
+      "blind_test": false,
+      "cohort": "development_exposed_source",
+      "metrics": {
+        "raw_content": {
+          "correct": 36,
+          "total": 36,
+          "rate": 1.0
+        },
+        "value_status": {
+          "correct": 36,
+          "total": 36,
+          "rate": 1.0
+        },
+        "numeric_raw": {
+          "correct": 36,
+          "total": 36,
+          "rate": 1.0
+        },
+        "numeric_value_status": {
+          "correct": 36,
+          "total": 36,
+          "rate": 1.0
+        },
+        "text_raw": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "text_value_status": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "cell_coverage": {
+          "correct": 36,
+          "total": 36,
+          "rate": 1.0
+        }
+      },
+      "missing_reviewed_cells": 0,
+      "errors": [],
+      "unverified_period_diagnostics": {
+        "printed_header_association": {
+          "correct": 36,
+          "total": 36,
+          "rate": 1.0
+        }
+      },
+      "unscored_human_axes": {
+        "header_accuracy": {
+          "total": 0,
+          "reason": "No explicit header verification"
+        },
+        "period_accuracy": {
+          "total": 0,
+          "reason": "No period verification; inferred lower-table periods are not observed gold"
+        },
+        "hierarchy_accuracy": {
+          "total": 0,
+          "reason": "Label acceptance does not verify parent paths"
+        },
+        "detection_accuracy": {
+          "total": 0,
+          "reason": "Completeness and table boundaries remain AI context"
+        }
+      },
+      "matching_policy": "One-to-one table IoU >= .1; normalized label equality; row geometry/order break ties; physical column. Geometry is inherited AI context, not a human localization score.",
+      "whitespace_policy": "Remove Unicode whitespace only for raw/normalized labels; preserve monetary glyphs, punctuation and signs",
+      "provenance_scope": "bulk_user_approved_agreement",
+      "interpretation": "Agreement with user-approved references; not independently human-verified ground truth",
+      "evaluation_status": "scored",
+      "individually_documented_label_decisions": 0,
+      "alignment_context_rows": [
+        {
+          "table_id": "assets",
+          "row_id": "assets_r015",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r016",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r017",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r018",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r019",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r020",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r022",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r023",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r024",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r025",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r026",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r028",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r029",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r030",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r031",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r032",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r033",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r034",
+          "column_indices": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "full_user_approved_agreement": {
+      "document_id": "elecom_p9",
+      "reference_status": "mixed_individual_review_and_user_approval",
+      "source_kind": "source",
+      "issuer_relation": "independent_issuer",
+      "source_family": "ELECOM",
+      "run_status": "partial",
+      "blind_test": false,
+      "cohort": "development_exposed_source",
+      "metrics": {
+        "raw_content": {
+          "correct": 56,
+          "total": 56,
+          "rate": 1.0
+        },
+        "value_status": {
+          "correct": 56,
+          "total": 56,
+          "rate": 1.0
+        },
+        "numeric_raw": {
+          "correct": 56,
+          "total": 56,
+          "rate": 1.0
+        },
+        "numeric_value_status": {
+          "correct": 56,
+          "total": 56,
+          "rate": 1.0
+        },
+        "text_raw": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "text_value_status": {
+          "correct": 0,
+          "total": 0,
+          "rate": null
+        },
+        "cell_coverage": {
+          "correct": 56,
+          "total": 56,
+          "rate": 1.0
+        }
+      },
+      "missing_reviewed_cells": 0,
+      "errors": [],
+      "unverified_period_diagnostics": {
+        "printed_header_association": {
+          "correct": 56,
+          "total": 56,
+          "rate": 1.0
+        }
+      },
+      "unscored_human_axes": {
+        "header_accuracy": {
+          "total": 0,
+          "reason": "No explicit header verification"
+        },
+        "period_accuracy": {
+          "total": 0,
+          "reason": "No period verification; inferred lower-table periods are not observed gold"
+        },
+        "hierarchy_accuracy": {
+          "total": 0,
+          "reason": "Label acceptance does not verify parent paths"
+        },
+        "detection_accuracy": {
+          "total": 0,
+          "reason": "Completeness and table boundaries remain AI context"
+        }
+      },
+      "matching_policy": "One-to-one table IoU >= .1; normalized label equality; row geometry/order break ties; physical column. Geometry is inherited AI context, not a human localization score.",
+      "whitespace_policy": "Remove Unicode whitespace only for raw/normalized labels; preserve monetary glyphs, punctuation and signs",
+      "provenance_scope": "full_user_approved_agreement",
+      "interpretation": "Agreement with user-approved references; not independently human-verified ground truth",
+      "evaluation_status": "scored",
+      "individually_documented_label_decisions": 0,
+      "alignment_context_rows": [
+        {
+          "table_id": "assets",
+          "row_id": "assets_r003",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r004",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r005",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r006",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r007",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r008",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r009",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r010",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r011",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r012",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r015",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r016",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r017",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r018",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r019",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r020",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r022",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r023",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r024",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r025",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r026",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r028",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r029",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r030",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r031",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r032",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r033",
+          "column_indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "table_id": "assets",
+          "row_id": "assets_r034",
+          "column_indices": [
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  },
+  "blind_test": false
+}

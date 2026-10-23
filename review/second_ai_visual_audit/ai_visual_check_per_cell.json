@@ -1,0 +1,3968 @@
+{
+  "audit_type": "independent_second_ai_visual_review",
+  "human_verified": false,
+  "reference_mutated": false,
+  "scope": "All 197 visible table cells transcribed against pixels in separate script; 98 source row labels including 12 section labels inspected; no new issuer and the existing gold was previously seen, so not blind/independent human ground truth",
+  "counts": {
+    "original": {
+      "all_cells_second_ai_visual_pass": 74,
+      "section_rows_second_ai_visual_pass": 6,
+      "number_sign_tokens": 12,
+      "table_count": 1
+    },
+    "elecom_p9": {
+      "all_cells_second_ai_visual_pass": 56,
+      "section_rows_second_ai_visual_pass": 6,
+      "number_sign_tokens": 2,
+      "table_count": 1
+    },
+    "daiwabo_p10": {
+      "all_cells_second_ai_visual_pass": 67,
+      "section_rows_second_ai_visual_pass": 0,
+      "number_sign_tokens": 23,
+      "table_count": 3
+    }
+  },
+  "cells": [
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r003",
+      "row_label": "現金及び預金",
+      "column_index": 0,
+      "raw": "2,002,429",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        356.8800048828125,
+        172.23794555664062,
+        397.51580810546875,
+        181.23794555664062
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r003",
+      "row_label": "現金及び預金",
+      "column_index": 1,
+      "raw": "608,281",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        490.9200134277344,
+        172.23794555664062,
+        522.5531616210938,
+        181.23794555664062
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r004",
+      "row_label": "受取手形",
+      "column_index": 0,
+      "raw": "20,659",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        370.44000244140625,
+        184.23794555664062,
+        397.5101318359375,
+        193.23794555664062
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r004",
+      "row_label": "受取手形",
+      "column_index": 1,
+      "raw": "26,333",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        495.4800109863281,
+        184.23794555664062,
+        522.5501708984375,
+        193.23794555664062
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r005",
+      "row_label": "売掛金",
+      "column_index": 0,
+      "raw": "2,019,476",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        356.8800048828125,
+        196.23794555664062,
+        397.51580810546875,
+        205.23794555664062
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r005",
+      "row_label": "売掛金",
+      "column_index": 1,
+      "raw": "884,339",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        490.9200134277344,
+        196.23794555664062,
+        522.5531616210938,
+        205.23794555664062
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r006",
+      "row_label": "電子記録債権",
+      "column_index": 0,
+      "raw": "564,667",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        365.8800048828125,
+        208.23794555664062,
+        397.51312255859375,
+        217.23794555664062
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r006",
+      "row_label": "電子記録債権",
+      "column_index": 1,
+      "raw": "370,468",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        490.9200134277344,
+        208.23794555664062,
+        522.5531616210938,
+        217.23794555664062
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r007",
+      "row_label": "商品及び製品",
+      "column_index": 0,
+      "raw": "589,488",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        365.8800048828125,
+        220.23794555664062,
+        397.51312255859375,
+        229.23794555664062
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r007",
+      "row_label": "商品及び製品",
+      "column_index": 1,
+      "raw": "1,019,663",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        481.9200134277344,
+        220.23794555664062,
+        522.5558471679688,
+        229.23794555664062
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r008",
+      "row_label": "仕掛品",
+      "column_index": 0,
+      "raw": "186,748",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        365.8800048828125,
+        232.23794555664062,
+        397.51312255859375,
+        241.23794555664062
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r008",
+      "row_label": "仕掛品",
+      "column_index": 1,
+      "raw": "55,344",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        495.4800109863281,
+        232.23794555664062,
+        522.5501708984375,
+        241.23794555664062
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r009",
+      "row_label": "原材料及び貯蔵品",
+      "column_index": 0,
+      "raw": "370,403",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        365.8800048828125,
+        244.23794555664062,
+        397.51312255859375,
+        253.23794555664062
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r009",
+      "row_label": "原材料及び貯蔵品",
+      "column_index": 1,
+      "raw": "136,082",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        490.9200134277344,
+        244.23794555664062,
+        522.5531616210938,
+        253.23794555664062
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r010",
+      "row_label": "短期貸付金",
+      "column_index": 0,
+      "raw": "7,530",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        374.8800048828125,
+        256.2379455566406,
+        397.5095520019531,
+        265.2379455566406
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r010",
+      "row_label": "短期貸付金",
+      "column_index": 1,
+      "raw": "30,000",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        495.4800109863281,
+        256.2379455566406,
+        522.5501708984375,
+        265.2379455566406
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r011",
+      "row_label": "その他",
+      "column_index": 0,
+      "raw": "105,260",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        365.8800048828125,
+        268.2379455566406,
+        397.51312255859375,
+        277.2379455566406
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r011",
+      "row_label": "その他",
+      "column_index": 1,
+      "raw": "246,895",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        490.9200134277344,
+        268.2379455566406,
+        522.5531616210938,
+        277.2379455566406
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r012",
+      "row_label": "貸倒引当金",
+      "column_index": 0,
+      "raw": "△2,979",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        365.8800048828125,
+        280.2379455566406,
+        397.5095520019531,
+        289.2379455566406
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r012",
+      "row_label": "貸倒引当金",
+      "column_index": 1,
+      "raw": "△0",
+      "status": "negative_zero",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        508.9200134277344,
+        280.2379455566406,
+        522.4199829101562,
+        289.2379455566406
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r013",
+      "row_label": "流動資産合計",
+      "column_index": 0,
+      "raw": "5,863,684",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        356.8800048828125,
+        292.9579162597656,
+        397.51580810546875,
+        301.9579162597656
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r013",
+      "row_label": "流動資産合計",
+      "column_index": 1,
+      "raw": "3,377,407",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        481.9200134277344,
+        292.9579162597656,
+        522.5558471679688,
+        301.9579162597656
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r016",
+      "row_label": "建物及び構築物",
+      "column_index": 0,
+      "raw": "2,121,360",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        356.8800048828125,
+        329.7979431152344,
+        397.51580810546875,
+        338.7979431152344
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r016",
+      "row_label": "建物及び構築物",
+      "column_index": 1,
+      "raw": "1,880,082",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        481.9200134277344,
+        329.7979431152344,
+        522.5558471679688,
+        338.7979431152344
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r017",
+      "row_label": "減価償却累計額",
+      "column_index": 0,
+      "raw": "△1,923,585",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        347.8800048828125,
+        341.7979431152344,
+        397.51580810546875,
+        350.7979431152344
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r017",
+      "row_label": "減価償却累計額",
+      "column_index": 1,
+      "raw": "△1,640,253",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        472.9200134277344,
+        341.7979431152344,
+        522.5558471679688,
+        350.7979431152344
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r018",
+      "row_label": "建物及び構築物（純額）",
+      "column_index": 0,
+      "raw": "197,775",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        365.8800048828125,
+        354.5179443359375,
+        397.51312255859375,
+        363.5179443359375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r018",
+      "row_label": "建物及び構築物（純額）",
+      "column_index": 1,
+      "raw": "239,828",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        490.9200134277344,
+        354.5179443359375,
+        522.5531616210938,
+        363.5179443359375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r019",
+      "row_label": "機械装置及び運搬具",
+      "column_index": 0,
+      "raw": "4,024,922",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        356.8800048828125,
+        367.2379455566406,
+        397.51580810546875,
+        376.2379455566406
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r019",
+      "row_label": "機械装置及び運搬具",
+      "column_index": 1,
+      "raw": "2,250,799",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        481.9200134277344,
+        367.2379455566406,
+        522.5558471679688,
+        376.2379455566406
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r020",
+      "row_label": "減価償却累計額",
+      "column_index": 0,
+      "raw": "△3,634,165",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        347.8800048828125,
+        379.2379455566406,
+        397.51580810546875,
+        388.2379455566406
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r020",
+      "row_label": "減価償却累計額",
+      "column_index": 1,
+      "raw": "△1,914,091",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        472.9200134277344,
+        379.2379455566406,
+        522.5558471679688,
+        388.2379455566406
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r021",
+      "row_label": "機械装置及び運搬具（純額）",
+      "column_index": 0,
+      "raw": "390,757",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        365.8800048828125,
+        391.95794677734375,
+        397.51312255859375,
+        400.95794677734375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r021",
+      "row_label": "機械装置及び運搬具（純額）",
+      "column_index": 1,
+      "raw": "336,708",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        490.9200134277344,
+        391.95794677734375,
+        522.5531616210938,
+        400.95794677734375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r022",
+      "row_label": "土地",
+      "column_index": 0,
+      "raw": "768,976",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        365.8800048828125,
+        404.7979431152344,
+        397.51312255859375,
+        413.7979431152344
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r022",
+      "row_label": "土地",
+      "column_index": 1,
+      "raw": "705,403",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        490.9200134277344,
+        404.7979431152344,
+        522.5531616210938,
+        413.7979431152344
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r023",
+      "row_label": "リース資産",
+      "column_index": 0,
+      "raw": "210,746",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        365.8800048828125,
+        416.7979431152344,
+        397.51312255859375,
+        425.7979431152344
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r023",
+      "row_label": "リース資産",
+      "column_index": 1,
+      "raw": "213,939",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        490.9200134277344,
+        416.7979431152344,
+        522.5531616210938,
+        425.7979431152344
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r024",
+      "row_label": "減価償却累計額",
+      "column_index": 0,
+      "raw": "△147,599",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        356.8800048828125,
+        428.7979431152344,
+        397.51312255859375,
+        437.7979431152344
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r024",
+      "row_label": "減価償却累計額",
+      "column_index": 1,
+      "raw": "△172,066",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        481.9200134277344,
+        428.7979431152344,
+        522.5531616210938,
+        437.7979431152344
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r025",
+      "row_label": "リース資産（純額）",
+      "column_index": 0,
+      "raw": "63,146",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        370.44000244140625,
+        441.5179443359375,
+        397.5101318359375,
+        450.5179443359375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r025",
+      "row_label": "リース資産（純額）",
+      "column_index": 1,
+      "raw": "41,872",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        495.4800109863281,
+        441.5179443359375,
+        522.5501708984375,
+        450.5179443359375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r026",
+      "row_label": "建設仮勘定",
+      "column_index": 0,
+      "raw": "－",
+      "status": "not_reported",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        388.44000244140625,
+        454.2379455566406,
+        397.44000244140625,
+        463.2379455566406
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r026",
+      "row_label": "建設仮勘定",
+      "column_index": 1,
+      "raw": "4,553",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        499.9200134277344,
+        454.2379455566406,
+        522.5496215820312,
+        463.2379455566406
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r027",
+      "row_label": "その他",
+      "column_index": 0,
+      "raw": "848,814",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        365.8800048828125,
+        466.95794677734375,
+        397.51312255859375,
+        475.95794677734375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r027",
+      "row_label": "その他",
+      "column_index": 1,
+      "raw": "446,126",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        490.9200134277344,
+        466.95794677734375,
+        522.5531616210938,
+        475.95794677734375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r028",
+      "row_label": "減価償却累計額",
+      "column_index": 0,
+      "raw": "△840,375",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        356.8800048828125,
+        478.95794677734375,
+        397.51312255859375,
+        487.95794677734375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r028",
+      "row_label": "減価償却累計額",
+      "column_index": 1,
+      "raw": "△421,883",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        481.9200134277344,
+        478.95794677734375,
+        522.5531616210938,
+        487.95794677734375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r029",
+      "row_label": "その他（純額）",
+      "column_index": 0,
+      "raw": "8,439",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        374.8800048828125,
+        491.7979431152344,
+        397.5095520019531,
+        500.7979431152344
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r029",
+      "row_label": "その他（純額）",
+      "column_index": 1,
+      "raw": "24,243",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        495.4800109863281,
+        491.7979431152344,
+        522.5501708984375,
+        500.7979431152344
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r030",
+      "row_label": "有形固定資産合計",
+      "column_index": 0,
+      "raw": "1,429,094",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        356.8800048828125,
+        504.5179748535156,
+        397.51580810546875,
+        513.5180053710938
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r030",
+      "row_label": "有形固定資産合計",
+      "column_index": 1,
+      "raw": "1,352,610",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        481.9200134277344,
+        504.5179748535156,
+        522.5558471679688,
+        513.5180053710938
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r032",
+      "row_label": "リース資産",
+      "column_index": 0,
+      "raw": "34,190",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        370.44000244140625,
+        529.2379760742188,
+        397.5101318359375,
+        538.2379760742188
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r032",
+      "row_label": "リース資産",
+      "column_index": 1,
+      "raw": "21,402",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        495.4800109863281,
+        529.2379760742188,
+        522.5501708984375,
+        538.2379760742188
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r033",
+      "row_label": "その他",
+      "column_index": 0,
+      "raw": "10,070",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        370.44000244140625,
+        541.2379760742188,
+        397.5101318359375,
+        550.2379760742188
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r033",
+      "row_label": "その他",
+      "column_index": 1,
+      "raw": "14,466",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        495.4800109863281,
+        541.2379760742188,
+        522.5501708984375,
+        550.2379760742188
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r034",
+      "row_label": "無形固定資産合計",
+      "column_index": 0,
+      "raw": "44,261",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        370.44000244140625,
+        553.9579467773438,
+        397.5101318359375,
+        562.9579467773438
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r034",
+      "row_label": "無形固定資産合計",
+      "column_index": 1,
+      "raw": "35,869",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        495.4800109863281,
+        553.9579467773438,
+        522.5501708984375,
+        562.9579467773438
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r036",
+      "row_label": "投資有価証券",
+      "column_index": 0,
+      "raw": "44,180",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        370.44000244140625,
+        578.7979736328125,
+        397.5101318359375,
+        587.7979736328125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r036",
+      "row_label": "投資有価証券",
+      "column_index": 1,
+      "raw": "218,836",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        490.9200134277344,
+        578.7979736328125,
+        522.5531616210938,
+        587.7979736328125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r037",
+      "row_label": "関係会社株式",
+      "column_index": 0,
+      "raw": "1,123",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        374.8800048828125,
+        590.7979736328125,
+        397.5095520019531,
+        599.7979736328125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r037",
+      "row_label": "関係会社株式",
+      "column_index": 1,
+      "raw": "1,123",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        499.9200134277344,
+        590.7979736328125,
+        522.5496215820312,
+        599.7979736328125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r038",
+      "row_label": "長期貸付金",
+      "column_index": 0,
+      "raw": "－",
+      "status": "not_reported",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        388.44000244140625,
+        602.7979736328125,
+        397.44000244140625,
+        611.7979736328125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r038",
+      "row_label": "長期貸付金",
+      "column_index": 1,
+      "raw": "62,000",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        495.4800109863281,
+        602.7979736328125,
+        522.5501708984375,
+        611.7979736328125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r039",
+      "row_label": "退職給付に係る資産",
+      "column_index": 0,
+      "raw": "18,404",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        370.44000244140625,
+        614.7979736328125,
+        397.5101318359375,
+        623.7979736328125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r039",
+      "row_label": "退職給付に係る資産",
+      "column_index": 1,
+      "raw": "16,435",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        495.4800109863281,
+        614.7979736328125,
+        522.5501708984375,
+        623.7979736328125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r040",
+      "row_label": "その他",
+      "column_index": 0,
+      "raw": "133,361",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        365.8800048828125,
+        626.7979736328125,
+        397.51312255859375,
+        635.7979736328125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r040",
+      "row_label": "その他",
+      "column_index": 1,
+      "raw": "70,967",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        495.4800109863281,
+        626.7979736328125,
+        522.5501708984375,
+        635.7979736328125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r041",
+      "row_label": "投資その他の資産合計",
+      "column_index": 0,
+      "raw": "197,069",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        365.8800048828125,
+        639.5179443359375,
+        397.51312255859375,
+        648.5179443359375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r041",
+      "row_label": "投資その他の資産合計",
+      "column_index": 1,
+      "raw": "369,362",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        490.9200134277344,
+        639.5179443359375,
+        522.5531616210938,
+        648.5179443359375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r042",
+      "row_label": "固定資産合計",
+      "column_index": 0,
+      "raw": "1,670,426",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        356.8800048828125,
+        652.2379760742188,
+        397.51580810546875,
+        661.2379760742188
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r042",
+      "row_label": "固定資産合計",
+      "column_index": 1,
+      "raw": "1,757,841",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        481.9200134277344,
+        652.2379760742188,
+        522.5558471679688,
+        661.2379760742188
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r043",
+      "row_label": "資産合計",
+      "column_index": 0,
+      "raw": "7,534,110",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        356.8800048828125,
+        664.9579467773438,
+        397.51580810546875,
+        673.9579467773438
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "original",
+      "table_id": "assets",
+      "row_id": "assets_r043",
+      "row_label": "資産合計",
+      "column_index": 1,
+      "raw": "5,135,249",
+      "status": "observed",
+      "source_sha256": "350bafb45bb8561ff23f7762fca58d6cb82f4f68d8058dcfb6d1ab3b1d09cbea",
+      "page": 1,
+      "source_cell_bbox": [
+        481.9200134277344,
+        664.9579467773438,
+        522.5558471679688,
+        673.9579467773438
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r003",
+      "row_label": "現金及び預金",
+      "column_index": 0,
+      "raw": "43,718",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        369.05621337890625,
+        154.5677490234375,
+        395.9339294433594,
+        163.5267333984375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r003",
+      "row_label": "現金及び預金",
+      "column_index": 1,
+      "raw": "58,497",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        493.49005126953125,
+        154.5677490234375,
+        520.3677368164062,
+        163.5267333984375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r004",
+      "row_label": "受取手形及び売掛金",
+      "column_index": 0,
+      "raw": "21,033",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        369.05621337890625,
+        166.51312255859375,
+        395.9339294433594,
+        175.47210693359375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r004",
+      "row_label": "受取手形及び売掛金",
+      "column_index": 1,
+      "raw": "27,294",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        493.49005126953125,
+        166.51312255859375,
+        520.3677368164062,
+        175.47210693359375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r005",
+      "row_label": "有価証券",
+      "column_index": 0,
+      "raw": "11,199",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        369.05621337890625,
+        178.45843505859375,
+        395.9339294433594,
+        187.41741943359375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r005",
+      "row_label": "有価証券",
+      "column_index": 1,
+      "raw": "12,387",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        493.49005126953125,
+        178.45843505859375,
+        520.3677368164062,
+        187.41741943359375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r006",
+      "row_label": "商品及び製品",
+      "column_index": 0,
+      "raw": "11,937",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        369.05621337890625,
+        190.40380859375,
+        395.9339294433594,
+        199.36279296875
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r006",
+      "row_label": "商品及び製品",
+      "column_index": 1,
+      "raw": "15,339",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        493.49005126953125,
+        190.40380859375,
+        520.3677368164062,
+        199.36279296875
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r007",
+      "row_label": "仕掛品",
+      "column_index": 0,
+      "raw": "498",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        382.49505615234375,
+        202.34906005859375,
+        395.93389892578125,
+        211.30804443359375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r007",
+      "row_label": "仕掛品",
+      "column_index": 1,
+      "raw": "662",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        506.92889404296875,
+        202.34906005859375,
+        520.3677368164062,
+        211.30804443359375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r008",
+      "row_label": "原材料及び貯蔵品",
+      "column_index": 0,
+      "raw": "1,603",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        373.53582763671875,
+        214.29437255859375,
+        395.9339294433594,
+        223.25335693359375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r008",
+      "row_label": "原材料及び貯蔵品",
+      "column_index": 1,
+      "raw": "2,190",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        497.96966552734375,
+        214.29437255859375,
+        520.3677368164062,
+        223.25335693359375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r009",
+      "row_label": "返品資産",
+      "column_index": 0,
+      "raw": "380",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        382.49505615234375,
+        226.23968505859375,
+        395.93389892578125,
+        235.19866943359375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r009",
+      "row_label": "返品資産",
+      "column_index": 1,
+      "raw": "378",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        506.92889404296875,
+        226.23968505859375,
+        520.3677368164062,
+        235.19866943359375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r010",
+      "row_label": "為替予約",
+      "column_index": 0,
+      "raw": "2,292",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        373.53582763671875,
+        238.18499755859375,
+        395.9339294433594,
+        247.14398193359375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r010",
+      "row_label": "為替予約",
+      "column_index": 1,
+      "raw": "2,782",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        497.96966552734375,
+        238.18499755859375,
+        520.3677368164062,
+        247.14398193359375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r011",
+      "row_label": "その他",
+      "column_index": 0,
+      "raw": "1,558",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        373.53582763671875,
+        250.1302490234375,
+        395.9339294433594,
+        259.0892333984375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r011",
+      "row_label": "その他",
+      "column_index": 1,
+      "raw": "1,769",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        497.96966552734375,
+        250.1302490234375,
+        520.3677368164062,
+        259.0892333984375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r012",
+      "row_label": "流動資産合計",
+      "column_index": 0,
+      "raw": "94,222",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        369.05621337890625,
+        262.82220458984375,
+        395.9339294433594,
+        271.78118896484375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r012",
+      "row_label": "流動資産合計",
+      "column_index": 1,
+      "raw": "121,302",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        489.01043701171875,
+        262.82220458984375,
+        520.3677368164062,
+        271.78118896484375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r015",
+      "row_label": "建物及び構築物（純額）",
+      "column_index": 0,
+      "raw": "4,311",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        373.53582763671875,
+        299.40478515625,
+        395.9339294433594,
+        308.36376953125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r015",
+      "row_label": "建物及び構築物（純額）",
+      "column_index": 1,
+      "raw": "4,617",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        497.96966552734375,
+        299.40478515625,
+        520.3677368164062,
+        308.36376953125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r016",
+      "row_label": "機械装置及び運搬具（純額）",
+      "column_index": 0,
+      "raw": "2,578",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        373.53582763671875,
+        311.35009765625,
+        395.9339294433594,
+        320.30908203125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r016",
+      "row_label": "機械装置及び運搬具（純額）",
+      "column_index": 1,
+      "raw": "2,236",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        497.96966552734375,
+        311.35009765625,
+        520.3677368164062,
+        320.30908203125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r017",
+      "row_label": "土地",
+      "column_index": 0,
+      "raw": "1,829",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        373.53582763671875,
+        323.29534912109375,
+        395.9339294433594,
+        332.25433349609375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r017",
+      "row_label": "土地",
+      "column_index": 1,
+      "raw": "2,269",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        497.96966552734375,
+        323.29534912109375,
+        520.3677368164062,
+        332.25433349609375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r018",
+      "row_label": "建設仮勘定",
+      "column_index": 0,
+      "raw": "491",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        382.4950866699219,
+        335.2406921386719,
+        395.9339294433594,
+        344.1996765136719
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r018",
+      "row_label": "建設仮勘定",
+      "column_index": 1,
+      "raw": "2,945",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        497.96966552734375,
+        335.2406921386719,
+        520.3677368164062,
+        344.1996765136719
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r019",
+      "row_label": "その他（純額）",
+      "column_index": 0,
+      "raw": "2,390",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        373.53582763671875,
+        347.18597412109375,
+        395.9339294433594,
+        356.14495849609375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r019",
+      "row_label": "その他（純額）",
+      "column_index": 1,
+      "raw": "1,996",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        497.96966552734375,
+        347.18597412109375,
+        520.3677368164062,
+        356.14495849609375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r020",
+      "row_label": "有形固定資産合計",
+      "column_index": 0,
+      "raw": "11,602",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        369.05621337890625,
+        359.8778991699219,
+        395.9339294433594,
+        368.8368835449219
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r020",
+      "row_label": "有形固定資産合計",
+      "column_index": 1,
+      "raw": "14,065",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        493.49005126953125,
+        359.8778991699219,
+        520.3677368164062,
+        368.8368835449219
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r022",
+      "row_label": "ソフトウエア",
+      "column_index": 0,
+      "raw": "1,454",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        373.53582763671875,
+        384.51513671875,
+        395.9339294433594,
+        393.47412109375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r022",
+      "row_label": "ソフトウエア",
+      "column_index": 1,
+      "raw": "1,149",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        497.96966552734375,
+        384.51513671875,
+        520.3677368164062,
+        393.47412109375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r023",
+      "row_label": "ソフトウエア仮勘定",
+      "column_index": 0,
+      "raw": "101",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        382.4950866699219,
+        396.4604187011719,
+        395.9339294433594,
+        405.4194030761719
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r023",
+      "row_label": "ソフトウエア仮勘定",
+      "column_index": 1,
+      "raw": "122",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        506.92889404296875,
+        396.4604187011719,
+        520.3677368164062,
+        405.4194030761719
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r024",
+      "row_label": "のれん",
+      "column_index": 0,
+      "raw": "1,277",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        373.53582763671875,
+        408.40570068359375,
+        395.9339294433594,
+        417.36468505859375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r024",
+      "row_label": "のれん",
+      "column_index": 1,
+      "raw": "842",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        506.92889404296875,
+        408.40570068359375,
+        520.3677368164062,
+        417.36468505859375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r025",
+      "row_label": "その他",
+      "column_index": 0,
+      "raw": "530",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        382.4950866699219,
+        420.35101318359375,
+        395.9339294433594,
+        429.30999755859375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r025",
+      "row_label": "その他",
+      "column_index": 1,
+      "raw": "453",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        506.92889404296875,
+        420.35101318359375,
+        520.3677368164062,
+        429.30999755859375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r026",
+      "row_label": "無形固定資産合計",
+      "column_index": 0,
+      "raw": "3,364",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        373.53582763671875,
+        433.04290771484375,
+        395.9339294433594,
+        442.00189208984375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r026",
+      "row_label": "無形固定資産合計",
+      "column_index": 1,
+      "raw": "2,567",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        497.96966552734375,
+        433.04290771484375,
+        520.3677368164062,
+        442.00189208984375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r028",
+      "row_label": "投資有価証券",
+      "column_index": 0,
+      "raw": "2,639",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        373.53582763671875,
+        457.6801452636719,
+        395.9339294433594,
+        466.6391296386719
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r028",
+      "row_label": "投資有価証券",
+      "column_index": 1,
+      "raw": "4,481",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        497.96966552734375,
+        457.6801452636719,
+        520.3677368164062,
+        466.6391296386719
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r029",
+      "row_label": "繰延税金資産",
+      "column_index": 0,
+      "raw": "1,462",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        373.53582763671875,
+        469.6254577636719,
+        395.9339294433594,
+        478.5844421386719
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r029",
+      "row_label": "繰延税金資産",
+      "column_index": 1,
+      "raw": "1,180",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        497.96966552734375,
+        469.6254577636719,
+        520.3677368164062,
+        478.5844421386719
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r030",
+      "row_label": "その他",
+      "column_index": 0,
+      "raw": "1,453",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        373.53582763671875,
+        481.57073974609375,
+        395.9339294433594,
+        490.52972412109375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r030",
+      "row_label": "その他",
+      "column_index": 1,
+      "raw": "1,612",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        497.96966552734375,
+        481.57073974609375,
+        520.3677368164062,
+        490.52972412109375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r031",
+      "row_label": "貸倒引当金",
+      "column_index": 0,
+      "raw": "△4",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        382.4950866699219,
+        493.51605224609375,
+        395.9339294433594,
+        502.47503662109375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r031",
+      "row_label": "貸倒引当金",
+      "column_index": 1,
+      "raw": "△4",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        506.92889404296875,
+        493.51605224609375,
+        520.3677368164062,
+        502.47503662109375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r032",
+      "row_label": "投資その他の資産合計",
+      "column_index": 0,
+      "raw": "5,551",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        373.53582763671875,
+        506.2079162597656,
+        395.9339294433594,
+        515.1669311523438
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r032",
+      "row_label": "投資その他の資産合計",
+      "column_index": 1,
+      "raw": "7,270",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        497.96966552734375,
+        506.2079162597656,
+        520.3677368164062,
+        515.1669311523438
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r033",
+      "row_label": "固定資産合計",
+      "column_index": 0,
+      "raw": "20,518",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        369.05621337890625,
+        518.8998413085938,
+        395.9339294433594,
+        527.8588256835938
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r033",
+      "row_label": "固定資産合計",
+      "column_index": 1,
+      "raw": "23,903",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        493.4901428222656,
+        518.8998413085938,
+        520.3677978515625,
+        527.8588256835938
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r034",
+      "row_label": "資産合計",
+      "column_index": 0,
+      "raw": "114,740",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        364.57659912109375,
+        531.591796875,
+        395.9339294433594,
+        540.55078125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "elecom_p9",
+      "table_id": "assets",
+      "row_id": "assets_r034",
+      "row_label": "資産合計",
+      "column_index": 1,
+      "raw": "145,205",
+      "status": "observed",
+      "source_sha256": "03a052cb2b4a3cec14323bf84c7757b71d791e10b37e2dc6ca08b45855fa2799",
+      "page": 1,
+      "source_cell_bbox": [
+        489.01043701171875,
+        531.591796875,
+        520.3677368164062,
+        540.55078125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r001",
+      "row_label": "流動資産",
+      "column_index": 0,
+      "raw": "407,778",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        206.8341064453125,
+        105.43658447265625,
+        272.0594482421875,
+        129.3765869140625
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r001",
+      "row_label": "流動資産",
+      "column_index": 1,
+      "raw": "425,204",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        292.068115234375,
+        103.5802001953125,
+        371.4534606933594,
+        130.7241973876953
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r001",
+      "row_label": "流動資産",
+      "column_index": 2,
+      "raw": "+17,426",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        391.04071044921875,
+        105.43658447265625,
+        459.1484680175781,
+        129.3765869140625
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r002",
+      "row_label": "現金及び預金",
+      "column_index": 0,
+      "raw": "55,421",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        216.79409790039062,
+        140.38128662109375,
+        272.06201171875,
+        164.3212890625
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r002",
+      "row_label": "現金及び預金",
+      "column_index": 1,
+      "raw": "12,410",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        304.1881103515625,
+        138.52490234375,
+        371.4540710449219,
+        165.6688995361328
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r002",
+      "row_label": "現金及び預金",
+      "column_index": 2,
+      "raw": "△43,010",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        387.9206848144531,
+        140.38128662109375,
+        459.1485900878906,
+        164.3212890625
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r003",
+      "row_label": "受取手形及び売掛金",
+      "column_index": 0,
+      "raw": "288,495",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        206.8341064453125,
+        175.32598876953125,
+        272.0594482421875,
+        199.2659912109375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r003",
+      "row_label": "受取手形及び売掛金",
+      "column_index": 1,
+      "raw": "319,626",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        292.068115234375,
+        173.4696044921875,
+        371.4534606933594,
+        200.6136016845703
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r003",
+      "row_label": "受取手形及び売掛金",
+      "column_index": 2,
+      "raw": "+31,130",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        391.04071044921875,
+        175.32598876953125,
+        459.1484680175781,
+        199.2659912109375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r004",
+      "row_label": "商品及び製品",
+      "column_index": 0,
+      "raw": "45,495",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        216.79409790039062,
+        210.27078247070312,
+        272.06201171875,
+        234.21078491210938
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r004",
+      "row_label": "商品及び製品",
+      "column_index": 1,
+      "raw": "68,303",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        304.1881103515625,
+        208.414306640625,
+        371.4540710449219,
+        235.5583038330078
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r004",
+      "row_label": "商品及び製品",
+      "column_index": 2,
+      "raw": "+22,808",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        391.04071044921875,
+        210.27078247070312,
+        459.1484680175781,
+        234.21078491210938
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r005",
+      "row_label": "有形固定資産",
+      "column_index": 0,
+      "raw": "11,252",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        216.79409790039062,
+        245.21548461914062,
+        272.06201171875,
+        269.1554870605469
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r005",
+      "row_label": "有形固定資産",
+      "column_index": 1,
+      "raw": "12,532",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        304.1881103515625,
+        243.3590087890625,
+        371.4540710449219,
+        270.5030212402344
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r005",
+      "row_label": "有形固定資産",
+      "column_index": 2,
+      "raw": "+1,280",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        401.0007019042969,
+        245.21548461914062,
+        459.1478271484375,
+        269.1554870605469
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r006",
+      "row_label": "無形固定資産",
+      "column_index": 0,
+      "raw": "4,973",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        226.7541046142578,
+        280.16021728515625,
+        272.0629577636719,
+        304.1002197265625
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r006",
+      "row_label": "無形固定資産",
+      "column_index": 1,
+      "raw": "6,528",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        316.30810546875,
+        278.3038024902344,
+        371.4546813964844,
+        305.44781494140625
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r006",
+      "row_label": "無形固定資産",
+      "column_index": 2,
+      "raw": "+1,554",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        401.0007019042969,
+        280.16021728515625,
+        459.1478271484375,
+        304.1002197265625
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r007",
+      "row_label": "投資その他の資産",
+      "column_index": 0,
+      "raw": "16,117",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        216.79409790039062,
+        315.10491943359375,
+        272.06201171875,
+        339.044921875
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r007",
+      "row_label": "投資その他の資産",
+      "column_index": 1,
+      "raw": "15,011",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        304.1881103515625,
+        313.2485046386719,
+        371.4540710449219,
+        340.39251708984375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r007",
+      "row_label": "投資その他の資産",
+      "column_index": 2,
+      "raw": "△1,106",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        397.8807067871094,
+        315.10491943359375,
+        459.1479797363281,
+        339.044921875
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r008",
+      "row_label": "資産合計",
+      "column_index": 0,
+      "raw": "440,122",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        206.8341064453125,
+        384.994384765625,
+        272.0594482421875,
+        408.93438720703125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r008",
+      "row_label": "資産合計",
+      "column_index": 1,
+      "raw": "459,277",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        292.068115234375,
+        383.13800048828125,
+        371.4534606933594,
+        410.2820129394531
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "assets",
+      "row_id": "assets_r008",
+      "row_label": "資産合計",
+      "column_index": 2,
+      "raw": "+19,155",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        391.04071044921875,
+        384.994384765625,
+        459.1484680175781,
+        408.93438720703125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r001",
+      "row_label": "流動負債",
+      "column_index": 0,
+      "raw": "267,779",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        636.9722900390625,
+        105.57778930664062,
+        702.1976318359375,
+        129.51779174804688
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r001",
+      "row_label": "流動負債",
+      "column_index": 1,
+      "raw": "282,903",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        736.3662719726562,
+        103.72140502929688,
+        815.7515869140625,
+        130.8654022216797
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r001",
+      "row_label": "流動負債",
+      "column_index": 2,
+      "raw": "+15,124",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        835.3521118164062,
+        105.57778930664062,
+        903.4597778320312,
+        129.51779174804688
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r002",
+      "row_label": "支払手形及び買掛金",
+      "column_index": 0,
+      "raw": "228,422",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        636.9722900390625,
+        140.50588989257812,
+        702.1976318359375,
+        164.44589233398438
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r002",
+      "row_label": "支払手形及び買掛金",
+      "column_index": 1,
+      "raw": "213,595",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        736.3662719726562,
+        138.64950561523438,
+        815.7515869140625,
+        165.7935028076172
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r002",
+      "row_label": "支払手形及び買掛金",
+      "column_index": 2,
+      "raw": "△14,827",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        832.2321166992188,
+        140.50588989257812,
+        903.4600219726562,
+        164.44589233398438
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r003",
+      "row_label": "短期借入金",
+      "column_index": 0,
+      "raw": "8,904",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        656.8922729492188,
+        175.43399047851562,
+        702.2011108398438,
+        199.37399291992188
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r003",
+      "row_label": "短期借入金",
+      "column_index": 1,
+      "raw": "42,704",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        748.486328125,
+        173.57760620117188,
+        815.7522583007812,
+        200.7216033935547
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r003",
+      "row_label": "短期借入金",
+      "column_index": 2,
+      "raw": "+33,800",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        835.3521118164062,
+        175.43399047851562,
+        903.4597778320312,
+        199.37399291992188
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r004",
+      "row_label": "固定負債",
+      "column_index": 0,
+      "raw": "20,032",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        646.9323120117188,
+        210.36209106445312,
+        702.2001953125,
+        234.30209350585938
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r004",
+      "row_label": "固定負債",
+      "column_index": 1,
+      "raw": "15,653",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        748.486328125,
+        208.50570678710938,
+        815.7522583007812,
+        235.6497039794922
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r004",
+      "row_label": "固定負債",
+      "column_index": 2,
+      "raw": "△4,379",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        842.1920776367188,
+        210.36209106445312,
+        903.4593505859375,
+        234.30209350585938
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r005",
+      "row_label": "長期借入金",
+      "column_index": 0,
+      "raw": "11,799",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        646.9323120117188,
+        245.29019165039062,
+        702.2001953125,
+        269.2301940917969
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r005",
+      "row_label": "長期借入金",
+      "column_index": 1,
+      "raw": "8,232",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        760.6063232421875,
+        243.43380737304688,
+        815.7528686523438,
+        270.57781982421875
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r005",
+      "row_label": "長期借入金",
+      "column_index": 2,
+      "raw": "△3,567",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        842.1920776367188,
+        245.29019165039062,
+        903.4593505859375,
+        269.2301940917969
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r006",
+      "row_label": "負債合計",
+      "column_index": 0,
+      "raw": "287,811",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        636.9722900390625,
+        280.2182922363281,
+        702.1976318359375,
+        304.1582946777344
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r006",
+      "row_label": "負債合計",
+      "column_index": 1,
+      "raw": "298,557",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        736.3662719726562,
+        278.3619079589844,
+        815.7515869140625,
+        305.50592041015625
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r006",
+      "row_label": "負債合計",
+      "column_index": 2,
+      "raw": "+10,745",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        835.3521118164062,
+        280.2182922363281,
+        903.4597778320312,
+        304.1582946777344
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r007",
+      "row_label": "純資産合計",
+      "column_index": 0,
+      "raw": "152,310",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        636.9722900390625,
+        315.146484375,
+        702.1976318359375,
+        339.08648681640625
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r007",
+      "row_label": "純資産合計",
+      "column_index": 1,
+      "raw": "160,719",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        736.3662719726562,
+        313.2900085449219,
+        815.7515869140625,
+        340.43402099609375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r007",
+      "row_label": "純資産合計",
+      "column_index": 2,
+      "raw": "+8,409",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        845.3120727539062,
+        315.146484375,
+        903.4591064453125,
+        339.08648681640625
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r008",
+      "row_label": "自己株式",
+      "column_index": 0,
+      "raw": "△15,088",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        630.9722900390625,
+        350.0745849609375,
+        702.2001953125,
+        374.01458740234375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r008",
+      "row_label": "自己株式",
+      "column_index": 1,
+      "raw": "△2,667",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        742.6063232421875,
+        348.21820068359375,
+        815.7528686523438,
+        375.3622131347656
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r008",
+      "row_label": "自己株式",
+      "column_index": 2,
+      "raw": "+12,420",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        835.3521118164062,
+        350.0745849609375,
+        903.4597778320312,
+        374.01458740234375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r009",
+      "row_label": "負債純資産合計",
+      "column_index": 0,
+      "raw": "440,122",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        636.9722900390625,
+        385.002685546875,
+        702.1976318359375,
+        408.94268798828125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r009",
+      "row_label": "負債純資産合計",
+      "column_index": 1,
+      "raw": "459,277",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        736.3662719726562,
+        383.14630126953125,
+        815.7515869140625,
+        410.2903137207031
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "liabilities_equity",
+      "row_id": "liabilities_equity_r009",
+      "row_label": "負債純資産合計",
+      "column_index": 2,
+      "raw": "+19,155",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        835.3521118164062,
+        385.002685546875,
+        903.4597778320312,
+        408.94268798828125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "explanation",
+      "row_id": "explanation_r001",
+      "row_label": "現金及び預金",
+      "column_index": 0,
+      "raw": "55,421",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        316.30224609375,
+        417.5805969238281,
+        371.5701599121094,
+        441.5205993652344
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "explanation",
+      "row_id": "explanation_r001",
+      "row_label": "現金及び預金",
+      "column_index": 1,
+      "raw": "12,410",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        440.2475891113281,
+        417.4529113769531,
+        499.79119873046875,
+        441.5205993652344
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "explanation",
+      "row_id": "explanation_r001",
+      "row_label": "現金及び預金",
+      "column_index": 2,
+      "raw": "△43,010",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        527.2455444335938,
+        417.5805969238281,
+        598.4734497070312,
+        441.5205993652344
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "explanation",
+      "row_id": "explanation_r001",
+      "row_label": "現金及び預金",
+      "column_index": 3,
+      "raw": "主に商品在庫の増加に伴う減少",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        622.83642578125,
+        419.076416015625,
+        832.83642578125,
+        441.576416015625
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "explanation",
+      "row_id": "explanation_r002",
+      "row_label": "受取手形及び売掛金",
+      "column_index": 0,
+      "raw": "288,495",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        306.33111572265625,
+        444.69879150390625,
+        371.5564880371094,
+        468.6387939453125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "explanation",
+      "row_id": "explanation_r002",
+      "row_label": "受取手形及び売掛金",
+      "column_index": 1,
+      "raw": "319,626",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        429.43060302734375,
+        444.57110595703125,
+        499.7791442871094,
+        468.6387939453125
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "explanation",
+      "row_id": "explanation_r002",
+      "row_label": "受取手形及び売掛金",
+      "column_index": 2,
+      "raw": "+31,130",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        530.345703125,
+        443.9805908203125,
+        598.453369140625,
+        467.92059326171875
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "explanation",
+      "row_id": "explanation_r002",
+      "row_label": "受取手形及び売掛金",
+      "column_index": 3,
+      "raw": "DISの売上債権の増加",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        622.83642578125,
+        445.4764099121094,
+        769.596435546875,
+        467.9764099121094
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "explanation",
+      "row_id": "explanation_r003",
+      "row_label": "商品及び製品",
+      "column_index": 0,
+      "raw": "45,495",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        316.30224609375,
+        471.0987854003906,
+        371.5701599121094,
+        495.0387878417969
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "explanation",
+      "row_id": "explanation_r003",
+      "row_label": "商品及び製品",
+      "column_index": 1,
+      "raw": "68,303",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        440.2475891113281,
+        470.2528991699219,
+        499.79119873046875,
+        494.3205871582031
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "explanation",
+      "row_id": "explanation_r003",
+      "row_label": "商品及び製品",
+      "column_index": 2,
+      "raw": "+22,808",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        530.3737182617188,
+        471.0987854003906,
+        598.4813842773438,
+        495.0387878417969
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "explanation",
+      "row_id": "explanation_r003",
+      "row_label": "商品及び製品",
+      "column_index": 3,
+      "raw": "主にGIGAスクール向け商品増加",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        622.83642578125,
+        471.87640380859375,
+        840.8764038085938,
+        494.37640380859375
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "explanation",
+      "row_id": "explanation_r004",
+      "row_label": "借入金",
+      "column_index": 0,
+      "raw": "20,703",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        316.30609130859375,
+        497.498779296875,
+        371.5740051269531,
+        521.4387817382812
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "explanation",
+      "row_id": "explanation_r004",
+      "row_label": "借入金",
+      "column_index": 1,
+      "raw": "50,936",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        440.2514343261719,
+        496.65289306640625,
+        499.7950439453125,
+        520.7205810546875
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "explanation",
+      "row_id": "explanation_r004",
+      "row_label": "借入金",
+      "column_index": 2,
+      "raw": "+30,233",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        530.3775634765625,
+        497.498779296875,
+        598.4852294921875,
+        521.4387817382812
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": true
+    },
+    {
+      "document": "daiwabo_p10",
+      "table_id": "explanation",
+      "row_id": "explanation_r004",
+      "row_label": "借入金",
+      "column_index": 3,
+      "raw": "運転資本として",
+      "status": "observed",
+      "source_sha256": "b1681d4f1316b6a08d1b0354827f30b869f4d4646e12e97e76fa815cd4f46618",
+      "page": 1,
+      "source_cell_bbox": [
+        622.83642578125,
+        498.2763977050781,
+        727.83642578125,
+        520.7763671875
+      ],
+      "independent_visual_check": "matches_rendered_source",
+      "model_review_not_human": true,
+      "is_sign_or_placeholder": false
+    }
+  ]
+}
